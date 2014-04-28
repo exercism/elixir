@@ -25,17 +25,17 @@ defmodule AnagramTest do
   end
 
   test "do not detect anagram subsets" do
-    # matches = Anagram.match "good", %w(dog goody)
+    # matches = Anagram.match "good", ~w(dog goody)
     # assert matches == []
   end
 
   test "detect anagram" do
-    # matches = Anagram.match "listen", %w(enlists google inlets banana)
+    # matches = Anagram.match "listen", ~w(enlists google inlets banana)
     # assert matches == ["inlets"]
   end
 
   test "multiple anagrams" do
-    # matches = Anagram.match "allergy", %w(gallery ballerina regally clergy largely leading)
+    # matches = Anagram.match "allergy", ~w(gallery ballerina regally clergy largely leading)
     # assert matches == ["gallery", "regally", "largely"]
   end
 
@@ -45,12 +45,12 @@ defmodule AnagramTest do
   end
 
   test "detect anagrams with case-insensitive subject" do
-    # matches = Anagram.match "Orchestra", %w(cashregister carthorse radishes)
+    # matches = Anagram.match "Orchestra", ~w(cashregister carthorse radishes)
     # assert matches == ["carthorse"]
   end
 
   test "detect anagrams with case-insensitive candidate" do
-    # matches = Anagram.match "orchestra", %w(cashregister Carthorse radishes)
+    # matches = Anagram.match "orchestra", ~w(cashregister Carthorse radishes)
     # assert matches == ["Carthorse"]
   end
 
