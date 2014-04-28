@@ -14,7 +14,7 @@ defmodule Atbash do
   end
 
   defp normalize(input) do
-    Regex.replace(%r{\W}, String.downcase(input), "")
+    Regex.replace(~r{\W}, String.downcase(input), "")
   end
 
   defp cipher(plaintext) do
@@ -29,6 +29,6 @@ defmodule Atbash do
   end
 
   defp chunk(input) do
-    Regex.scan(%r(.{1,5}), input) |> List.flatten
+    Regex.scan(~r(.{1,5}), input) |> List.flatten
   end
 end
