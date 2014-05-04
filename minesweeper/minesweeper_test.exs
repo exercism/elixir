@@ -14,33 +14,33 @@ defmodule MinesweeperTest do
 
   test "zero size board" do
     b = []
-    assert b == Minesweeper.annotate(clean(b))
+    assert Minesweeper.annotate(clean(b)) == b
   end
 
   test "empty board" do
     b = ["   ",
          "   ",
          "   "]
-    assert b == Minesweeper.annotate(clean(b))
+    assert Minesweeper.annotate(clean(b)) == b
   end
 
   test "board full of mines" do
     b = ["***",
          "***",
          "***"]
-    assert b == Minesweeper.annotate(clean(b))
+    assert Minesweeper.annotate(clean(b)) == b
   end
 
   test "surrounded" do
     b = ["***",
          "*8*",
          "***"]
-    assert b == Minesweeper.annotate(clean(b))
+    assert Minesweeper.annotate(clean(b)) == b
   end
 
   test "horizontal line" do
     b = ["1*2*1"]
-    assert b == Minesweeper.annotate(clean(b))
+    assert Minesweeper.annotate(clean(b)) == b
   end
 
   test "vertical line" do
@@ -49,7 +49,7 @@ defmodule MinesweeperTest do
          "2",
          "*",
          "1"]
-    assert b == Minesweeper.annotate(clean(b))
+    assert Minesweeper.annotate(clean(b)) == b
   end
 
   test "cross" do
@@ -58,6 +58,6 @@ defmodule MinesweeperTest do
          "*****",
          "25*52",
          " 2*2 "]
-    assert b == Minesweeper.annotate(clean(b))
+    assert Minesweeper.annotate(clean(b)) == b
   end        
 end

@@ -11,36 +11,36 @@ defmodule AtbashTest do
   doctest Atbash
 
   test "encode no" do
-    assert "ml" == Atbash.encode("no")
+    assert Atbash.encode("no") == "ml"
   end
 
   test "encode yes" do
-    assert "bvh" == Atbash.encode("yes")
+    assert Atbash.encode("yes") == "bvh"
   end
 
   test "encode OMG" do
-    assert "lnt" == Atbash.encode("OMG")
+    assert Atbash.encode("OMG") == "lnt"
   end
 
   test "encode O M G" do
-    assert "lnt" == Atbash.encode("O M G")
+    assert Atbash.encode("O M G") == "lnt"
   end
 
   test "encode long word" do
-    assert "nrmwy oldrm tob" == Atbash.encode("mindblowingly")
+    assert Atbash.encode("mindblowingly") == "nrmwy oldrm tob"
   end
 
   test "encode numbers" do
-    assert "gvhgr mt123 gvhgr mt" == Atbash.encode("Testing, 1 2 3, testing.")
+    assert Atbash.encode("Testing, 1 2 3, testing.") == "gvhgr mt123 gvhgr mt"
   end
 
   test "encode sentence" do
-    assert "gifgs rhurx grlm" == Atbash.encode("Truth is fiction.")
+    assert Atbash.encode("Truth is fiction.") == "gifgs rhurx grlm"
   end
 
   test "encode all the things" do
     plaintext = "The quick brown fox jumps over the lazy dog."
     cipher = "gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt"
-    assert cipher == Atbash.encode(plaintext)
+    assert Atbash.encode(plaintext) == cipher
   end
 end

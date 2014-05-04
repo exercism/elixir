@@ -11,74 +11,74 @@ defmodule RomanTest do
   doctest Roman
 
   test "1" do
-    assert "I" == Roman.numerals(1)
+    assert Roman.numerals(1) == "I"
   end
 
   test "2" do
-    assert "II" == Roman.numerals(2)
+    assert Roman.numerals(2) == "II"
   end
 
   test "3" do
-    assert "III" == Roman.numerals(3)
+    assert Roman.numerals(3) == "III"
   end
 
   test "4" do
-    assert "IV" == Roman.numerals(4)
+    assert Roman.numerals(4) == "IV"
   end
 
   test "5" do
-    assert "V" == Roman.numerals(5)
+    assert Roman.numerals(5) == "V"
   end
 
   test "6" do
-    assert "VI" == Roman.numerals(6)
+    assert Roman.numerals(6) == "VI"
   end
 
   test "9" do
-    assert "IX" == Roman.numerals(9)
+    assert Roman.numerals(9) == "IX"
   end
 
   test "27" do
-    assert "XXVII" == Roman.numerals(27)
+    assert Roman.numerals(27) == "XXVII"
   end
 
   test "48" do
-    assert "XLVIII" == Roman.numerals(48)
+    assert Roman.numerals(48) == "XLVIII"
   end
 
   test "59" do
-    assert "LIX" == Roman.numerals(59)
+    assert Roman.numerals(59) == "LIX"
   end
 
   test "93" do
-    assert "XCIII" == Roman.numerals(93)
+    assert Roman.numerals(93) == "XCIII"
   end
 
   test "141" do
-    assert "CXLI" == Roman.numerals(141)
+    assert Roman.numerals(141) == "CXLI"
   end
 
   test "163" do
-    assert "CLXIII" == Roman.numerals(163)
+    assert Roman.numerals(163) == "CLXIII"
   end
 
   test "402" do
-    assert "CDII" == Roman.numerals(402)
+    assert Roman.numerals(402) == "CDII"
   end
 
   test "575" do
-    assert "DLXXV" == Roman.numerals(575)
+    assert Roman.numerals(575) == "DLXXV"
   end
 
   test "911" do
-    assert "CMXI" == Roman.numerals(911)
+    assert Roman.numerals(911) == "CMXI"
   end
 
   test "1024" do
-    assert "MXXIV" == Roman.numerals(1024)
+    assert Roman.numerals(1024) == "MXXIV"
   end
 
   test "3000" do
-    assert "MMM" == Roman.numerals(3000)
+    assert Roman.numerals(3000) == "MMM"
   end
 end
