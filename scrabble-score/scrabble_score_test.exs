@@ -11,34 +11,34 @@ defmodule ScrabbleScoreTest do
   doctest Scrabble
 
   test "empty word scores zero" do
-    assert 0 == Scrabble.score("")
+    assert Scrabble.score("") == 0
   end
 
   test "whitespace scores zero" do
-    assert 0 == Scrabble.score(" \t\n")
+    assert Scrabble.score(" \t\n") == 0
   end
 
   test "scores very short word" do
-    assert 1 == Scrabble.score("a")
+    assert Scrabble.score("a") == 1
   end
 
   test "scores other very short word" do
-    assert 4 == Scrabble.score("f")
+    assert Scrabble.score("f") == 4
   end
 
   test "simple word scores the number of letters" do
-    assert 6 == Scrabble.score("street")
+    assert Scrabble.score("street") == 6
   end
 
   test "complicated word scores more" do
-    assert 22 == Scrabble.score("quirky")
+    assert Scrabble.score("quirky") == 22
   end
 
   test "scores are case insensitive" do
-    assert 20 == Scrabble.score("MULTIBILLIONAIRE")
+    assert Scrabble.score("MULTIBILLIONAIRE") == 20
   end
 
   test "convenient scoring" do
-    assert 13 == Scrabble.score("alacrity")
+    assert Scrabble.score("alacrity") == 13
   end
 end

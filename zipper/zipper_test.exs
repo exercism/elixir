@@ -38,34 +38,34 @@ defmodule ZipperTest do
                      bt(6, leaf(7), leaf(8)))
 
   test "data is retained" do
-    assert t1 == (t1 |> from_tree |> to_tree)
+    assert (t1 |> from_tree |> to_tree) == t1
   end
   
   test "left, right and value" do
-    assert 3 == (t1 |> from_tree |> left |> right |> value)
+    assert (t1 |> from_tree |> left |> right |> value) == 3
   end
   
   test "dead end" do
-    assert nil == (t1 |> from_tree |> left |> left)
+    assert (t1 |> from_tree |> left |> left) == nil
   end
 
   test "tree from deep focus" do
-    assert t1 == (t1 |> from_tree |> left |> right |> to_tree)
+    assert (t1 |> from_tree |> left |> right |> to_tree) == t1
   end
 
   test "set_value" do
-    assert t2 == (t1 |> from_tree |> left |> set_value(5) |> to_tree)
+    assert (t1 |> from_tree |> left |> set_value(5) |> to_tree) == t2
   end
   
   test "set_left with leaf" do
-    assert t3 == (t1 |> from_tree |> left |> set_left(leaf(5)) |> to_tree)
+    assert (t1 |> from_tree |> left |> set_left(leaf(5)) |> to_tree) == t3
   end
   
   test "set_right with nil" do
-    assert t4 == (t1 |> from_tree |> left |> set_right(nil) |> to_tree)
+    assert (t1 |> from_tree |> left |> set_right(nil) |> to_tree) == t4
   end
   
   test "set_right with subtree" do
-    assert t5 == (t1 |> from_tree |> set_right(bt(6, leaf(7), leaf(8))) |> to_tree)
+    assert (t1 |> from_tree |> set_right(bt(6, leaf(7), leaf(8))) |> to_tree) == t5
   end
 end

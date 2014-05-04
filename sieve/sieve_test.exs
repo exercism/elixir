@@ -10,7 +10,7 @@ defmodule SieveTest do
   use ExUnit.Case, async: true
 
   test "a few primes" do
-    assert [2, 3, 5, 7] == Sieve.primes_to(10)
+    assert Sieve.primes_to(10) == [2, 3, 5, 7]
   end
 
   test "primes to 1000" do
@@ -32,7 +32,7 @@ defmodule SieveTest do
     811, 821, 823, 827, 829, 839, 853, 857, 859,
     863, 877, 881, 883, 887, 907, 911, 919, 929,
     937, 941, 947, 953, 967, 971, 977, 983, 991, 997]
-    assert result == Sieve.primes_to(1000)
+    assert Sieve.primes_to(1000) == result
   end
 
 end

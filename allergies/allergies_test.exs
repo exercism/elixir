@@ -12,35 +12,35 @@ defmodule AllergiesTest do
   doctest Allergies
 
   test "no_allergies_at_all" do
-    assert [] == Allergies.list(0)
+    assert Allergies.list(0) == []
   end
 
   test "allergic_to_just_eggs" do
-    assert ["eggs"] == Allergies.list(1)
+    assert Allergies.list(1) == ["eggs"]
   end
 
   test "allergic_to_just_peanuts" do
-    assert ["peanuts"] == Allergies.list(2)
+    assert Allergies.list(2) == ["peanuts"]
   end
 
   test "allergic_to_just_strawberries" do
-    assert ["strawberries"] == Allergies.list(8)
+    assert Allergies.list(8) == ["strawberries"]
   end
 
   test "allergic_to_eggs_and_peanuts" do
-    assert ["eggs", "peanuts"] == Allergies.list(3)
+    assert Allergies.list(3) == ["eggs", "peanuts"]
   end
 
   test "allergic_to_more_than_eggs_but_not_peanuts" do
-    assert ["eggs", "shellfish"] == Allergies.list(5)
+    assert Allergies.list(5) == ["eggs", "shellfish"]
   end
 
   test "allergic_to_lots_of_stuff" do
-    assert ["strawberries", "tomatoes", "chocolate", "pollen", "cats"] == Allergies.list(248)
+    assert Allergies.list(248) == ["strawberries", "tomatoes", "chocolate", "pollen", "cats"]
   end
 
   test "allergic_to_everything" do
-    assert ["eggs", "peanuts", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"] == Allergies.list(255)
+    assert Allergies.list(255) == ["eggs", "peanuts", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"]
   end
 
   test "no_allergies_means_not_allergic" do
@@ -58,6 +58,6 @@ defmodule AllergiesTest do
   end
 
   test "ignore_non_allergen_score_parts" do
-    assert ["eggs", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"] == Allergies.list(509)
+    assert Allergies.list(509) == ["eggs", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"]
   end
 end

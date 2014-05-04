@@ -11,66 +11,66 @@ defmodule RaindropsTest do
   doctest Raindrops
 
   test "1" do
-    assert "1" == Raindrops.convert(1)
+    assert Raindrops.convert(1) == "1"
   end
 
   test "3" do
-    assert "Pling" == Raindrops.convert(3)
+    assert Raindrops.convert(3) == "Pling"
   end
 
   test "5" do
-    assert "Plang" == Raindrops.convert(5)
+    assert Raindrops.convert(5) == "Plang"
   end
 
   test "7" do
-    assert "Plong" == Raindrops.convert(7)
+    assert Raindrops.convert(7) == "Plong"
   end
 
   test "6" do
-    assert "Pling" == Raindrops.convert(6)
+    assert Raindrops.convert(6) == "Pling"
   end
 
   test "9" do
-    assert "Pling" == Raindrops.convert(9)
+    assert Raindrops.convert(9) == "Pling"
   end
 
   test "10" do
-    assert "Plang" == Raindrops.convert(10)
+    assert Raindrops.convert(10) == "Plang"
   end
 
   test "14" do
-    assert "Plong" == Raindrops.convert(14)
+    assert Raindrops.convert(14) == "Plong"
   end
 
   test "15" do
-    assert "PlingPlang" == Raindrops.convert(15)
+    assert Raindrops.convert(15) == "PlingPlang"
   end
 
   test "21" do
-    assert "PlingPlong" == Raindrops.convert(21)
+    assert Raindrops.convert(21) == "PlingPlong"
   end
 
   test "25" do
-    assert "Plang" == Raindrops.convert(25)
+    assert Raindrops.convert(25) == "Plang"
   end
 
   test "35" do
-    assert "PlangPlong" == Raindrops.convert(35)
+    assert Raindrops.convert(35) == "PlangPlong"
   end
 
   test "49" do
-    assert "Plong" == Raindrops.convert(49)
+    assert Raindrops.convert(49) == "Plong"
   end
 
   test "52" do
-    assert "52" == Raindrops.convert(52)
+    assert Raindrops.convert(52) == "52"
   end
 
   test "105" do
-    assert "PlingPlangPlong" == Raindrops.convert(105)
+    assert Raindrops.convert(105) == "PlingPlangPlong"
   end
 
   test "12121" do
-    assert "12121" == Raindrops.convert(12121)
+    assert Raindrops.convert(12121) == "12121"
   end
 end
