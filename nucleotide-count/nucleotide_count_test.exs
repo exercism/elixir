@@ -16,29 +16,29 @@ defmodule DNATest do
 
   test "empty dna string has no nucleotides" do
     expected = HashDict.new [{?A, 0}, {?T, 0}, {?C, 0}, {?G, 0}]
-    assert expected == DNA.nucleotide_counts('')
+    assert DNA.nucleotide_counts('') == expected
   end
 
   test "repetitive cytidine gets counted" do
-    assert 5 == DNA.count('CCCCC', ?C)
+    assert DNA.count('CCCCC', ?C) == 5
   end
 
   test "repetitive sequence has only guanosine" do
     expected = HashDict.new [{?A, 0}, {?T, 0}, {?C, 0}, {?G, 8}]
-    assert expected == DNA.nucleotide_counts('GGGGGGGG')
+    assert DNA.nucleotide_counts('GGGGGGGG') == expected
   end
 
   test "counts only thymidine" do
-    assert 1 == DNA.count('GGGGGTAACCCGG', ?T)
+    assert DNA.count('GGGGGTAACCCGG', ?T) == 1
   end
 
   test "dna has no uracil" do
-    assert 0 == DNA.count('GATTACA', ?U)
+    assert DNA.count('GATTACA', ?U) == 0
   end
 
   test "counts all nucleotides" do
     s = 'AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC'
     expected = HashDict.new [{?A, 20}, {?T, 21}, {?C, 12}, {?G, 17}]
-    assert expected == DNA.nucleotide_counts(s)
+    assert DNA.nucleotide_counts(s) == expected
   end
 end

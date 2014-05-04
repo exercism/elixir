@@ -45,7 +45,7 @@ defmodule SchoolTest do
   end
 
   test "get students in a non existant grade" do
-    # assert [] == School.grade(db, 1)
+    # assert School.grade(db, 1) == []
   end
 
   test "sort school by grade and by student name" do
@@ -62,7 +62,7 @@ defmodule SchoolTest do
     #   {6, ["Kareem"]}
     # ]
     #
-    # assert expected == actual
+    # assert actual == expected
   end
 
 end

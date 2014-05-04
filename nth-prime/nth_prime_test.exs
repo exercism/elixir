@@ -10,19 +10,19 @@ defmodule NthPrimeTest do
   use ExUnit.Case, async: true
 
   test "first prime" do
-    assert 2 == Prime.nth(1)
+    assert Prime.nth(1) == 2
   end
 
   test "second prime" do
-    assert 3 == Prime.nth(2)
+    assert Prime.nth(2) == 3
   end
 
   test "sixth prime" do
-    assert 13 == Prime.nth(6)
+    assert Prime.nth(6) == 13
   end
 
   test "100th prime" do
-    assert 541 == Prime.nth(100)
+    assert Prime.nth(100) == 541
   end
 
   test "weird case" do
