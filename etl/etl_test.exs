@@ -14,14 +14,14 @@ defmodule TransformTest do
     old = HashDict.new [{1, ["WORLD"]}]
     expected = HashDict.new [{"world", 1}]
 
-    assert expected == ETL.transform(old)
+    assert ETL.transform(old) == expected
   end
 
   test "transform more values" do
     old = HashDict.new [{1, ["WORLD", "GSCHOOLERS"]}]
     expected = HashDict.new [{"world", 1}, {"gschoolers", 1}]
 
-    assert expected == ETL.transform(old)
+    assert ETL.transform(old) == expected
   end
 
   test "more keys" do
@@ -33,7 +33,7 @@ defmodule TransformTest do
       {"ballerina", 2}
     ]
 
-    assert expected == ETL.transform(old)
+    assert ETL.transform(old) == expected
   end
 
   test "full dataset" do
@@ -56,6 +56,6 @@ defmodule TransformTest do
       {"z", 10}
     ]
 
-    assert expected == ETL.transform(old)
+    assert ETL.transform(old) == expected
   end
 end

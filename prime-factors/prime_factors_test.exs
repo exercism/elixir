@@ -11,46 +11,46 @@ defmodule PrimeFactorsTest do
   doctest PrimeFactors
 
   test "1" do
-    assert [] == PrimeFactors.factors_for(1)
+    assert PrimeFactors.factors_for(1) == []
   end
 
   test "2" do
-    assert [2] == PrimeFactors.factors_for(2)
+    assert PrimeFactors.factors_for(2) == [2]
   end
 
   test "3" do
-    assert [3] == PrimeFactors.factors_for(3)
+    assert PrimeFactors.factors_for(3) == [3]
   end
 
   test "4" do
-    assert [2, 2] == PrimeFactors.factors_for(4)
+    assert PrimeFactors.factors_for(4) == [2, 2]
   end
 
   test "6" do
-    assert [2, 3] == PrimeFactors.factors_for(6)
+    assert PrimeFactors.factors_for(6) == [2, 3]
   end
 
   test "8" do
-    assert [2, 2, 2] == PrimeFactors.factors_for(8)
+    assert PrimeFactors.factors_for(8) == [2, 2, 2]
   end
 
   test "9" do
-    assert [3, 3] == PrimeFactors.factors_for(9)
+    assert PrimeFactors.factors_for(9) == [3, 3]
   end
 
   test "27" do
-    assert [3, 3, 3] == PrimeFactors.factors_for(27)
+    assert PrimeFactors.factors_for(27) == [3, 3, 3]
   end
 
   test "625" do
-    assert [5, 5, 5, 5] == PrimeFactors.factors_for(625)
+    assert PrimeFactors.factors_for(625) == [5, 5, 5, 5]
   end
 
   test "901255" do
-    assert [5, 17, 23, 461] == PrimeFactors.factors_for(901255)
+    assert PrimeFactors.factors_for(901255) == [5, 17, 23, 461]
   end
 
   test "93819012551" do
-    assert [11, 9539, 894119] == PrimeFactors.factors_for(93819012551)
+    assert PrimeFactors.factors_for(93819012551) == [11, 9539, 894119]
   end
 end

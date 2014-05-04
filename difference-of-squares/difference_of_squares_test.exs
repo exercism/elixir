@@ -10,39 +10,39 @@ defmodule DifferenceOfSquaresTest do
   use ExUnit.Case, async: true
 
   test "square of sums to 5" do
-    assert 225 == Squares.square_of_sums(5)
+    assert Squares.square_of_sums(5) == 225
   end
 
   test "sum of squares to 5" do
-    assert 55 == Squares.sum_of_squares(5)
+    assert Squares.sum_of_squares(5) == 55
   end
 
   test "difference of sums to 5" do
-    assert 170 == Squares.difference(5)
+    assert Squares.difference(5) == 170
   end
 
   test "square of sums to 10" do
-    assert 3025 == Squares.square_of_sums(10)
+    assert Squares.square_of_sums(10) == 3025
   end
 
   test "sum of squares to 10" do
-    assert 385 == Squares.sum_of_squares(10)
+    assert Squares.sum_of_squares(10) == 385
   end
 
   test "difference of sums to 10" do
-    assert 2640 == Squares.difference(10)
+    assert Squares.difference(10) == 2640
   end
 
   test "square of sums to 100" do
-    assert 25502500 == Squares.square_of_sums(100)
+    assert Squares.square_of_sums(100) == 25502500
   end
 
   test "sum of squares to 100" do
-    assert 338350 == Squares.sum_of_squares(100)
+    assert Squares.sum_of_squares(100) == 338350
   end
 
   test "difference of sums to 100" do
-    assert 25164150 == Squares.difference(100)
+    assert Squares.difference(100) == 25164150
   end
 
 end

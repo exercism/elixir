@@ -11,34 +11,34 @@ defmodule PhoneTest do
   doctest Phone
 
   test "cleans number" do
-    assert "1234567890" == Phone.number("(123) 456-7890")
+    assert Phone.number("(123) 456-7890") == "1234567890"
   end
 
   test "cleans number with dots" do
-    # assert "1234567890" == Phone.number("123.456.7890")
+    # assert Phone.number("123.456.7890") == "1234567890"
   end
 
   test "valid when 11 digits and first is 1" do
-    # assert "1234567890" == Phone.number("11234567890")
+    # assert Phone.number("11234567890") == "1234567890"
   end
 
   test "invalid when 11 digits" do
-    # assert "0000000000" == Phone.number("21234567890")
+    # assert Phone.number("21234567890") == "0000000000"
   end
 
   test "invalid when 9 digits" do
-    # assert "0000000000" == Phone.number("123456789")
+    # assert Phone.number("123456789") == "0000000000"
   end
 
   test "area code" do
-    # assert "123" == Phone.area_code("1234567890")
+    # assert Phone.area_code("1234567890") == "123"
   end
 
   test "pretty print" do
-    # assert "(123) 456-7890" == Phone.pretty("1234567890")
+    # assert Phone.pretty("1234567890") == "(123) 456-7890"
   end
 
   test "pretty print with full us phone number" do
-    # assert "(123) 456-7890" == Phone.pretty("11234567890")
+    # assert Phone.pretty("11234567890") == "(123) 456-7890"
   end
 end
