@@ -42,5 +42,8 @@
     "custom-set",
     "nth-prime",
     "forth"
+  ],
+  "ignore": [
+
   ]
 }
