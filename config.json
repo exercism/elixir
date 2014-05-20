@@ -43,6 +43,9 @@
     "nth-prime",
     "forth"
   ],
+  "deprecated": [
+
+  ],
   "ignore": [
 
   ]
