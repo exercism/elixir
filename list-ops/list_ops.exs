@@ -4,7 +4,7 @@ defmodule ListOps do
   # yourself.
   # 
   # Note that `++` is a function from an external module (Kernel, which is
-  # automatically important`) and so shouldn't be used either.
+  # automatically imported) and so shouldn't be used either.
  
   @spec count(list) :: non_neg_integer
   def count(l) do
