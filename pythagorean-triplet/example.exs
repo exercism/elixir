@@ -37,10 +37,10 @@ defmodule Triplet do
   """
   @spec generate(non_neg_integer, non_neg_integer) :: [list(non_neg_integer)]
   def generate(min, max) do
-    lc x inlist Enum.to_list(min..max), 
-    y inlist Enum.to_list(x..max), 
-    z inlist Enum.to_list(y..max), 
-    select?([x, y, z]), do: [x, y, z]
+    for x <- Enum.to_list(min..max),
+        y <- Enum.to_list(x..max),
+        z <- Enum.to_list(y..max),
+        select?([x, y, z]), do: [x, y, z]
   end
 
   @doc """
@@ -48,9 +48,9 @@ defmodule Triplet do
   """
   @spec generate(non_neg_integer, non_neg_integer, non_neg_integer) :: [list(non_neg_integer)]
   def generate(min, max, sum) do
-    lc x inlist Enum.to_list(min..max), 
-    y inlist Enum.to_list(x..max), 
-    z inlist Enum.to_list(y..max), 
-    select?([x, y, z], sum), do: [x, y, z]
+    for x <- Enum.to_list(min..max),
+        y <- Enum.to_list(x..max),
+        z <- Enum.to_list(y..max),
+        select?([x, y, z], sum), do: [x, y, z]
   end
 end

@@ -23,11 +23,11 @@ defmodule Frequency do
   end
 
   defp count_text(string) do
+    String.downcase(string)
+    |> String.graphemes()
     # At the time of writing Elixir doesn't yet have a way to determine if a
     # character is a letter. So use a workaround with Regex.
-    String.replace(string, ~r/\P{L}+/, "") # \P{L} = anything but a letter
-    |> String.downcase()
-    |> String.graphemes()
+    |> Enum.filter(&(Regex.match?(~r/\p{L}/, &1)))
     |> Enum.reduce(%{}, fn c, acc -> Dict.update(acc, c, 1, &(&1+1)) end)
   end
 
