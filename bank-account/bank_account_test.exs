@@ -25,7 +25,6 @@ ExUnit.start
 
 defmodule BankAccountTest do
   use ExUnit.Case, async: false # Tests should not overlap in execution.
-  doctest BankAccount
 
   setup do
     account = BankAccount.open_bank()
@@ -50,7 +49,7 @@ defmodule BankAccountTest do
   test "incrementing balance from another process then checking it from test process", context do
     assert BankAccount.balance(context[:account]) == 0
     this = self()
-    Process.spawn(fn ->
+    spawn(fn ->
       BankAccount.update(context[:account], 20)
       send(this, :continue)
     end)

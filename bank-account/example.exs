@@ -3,7 +3,7 @@ defmodule BankAccount do
   A bank account that supports access from multiple processes.
   """
 
-  use GenServer.Behaviour
+  use GenServer
   
   ## Callbacks
   

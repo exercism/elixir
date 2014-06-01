@@ -8,7 +8,6 @@ ExUnit.start
 
 defmodule AtbashTest do
   use ExUnit.Case, async: true
-  doctest Atbash
 
   test "encode no" do
     assert "ml" == Atbash.encode("no")

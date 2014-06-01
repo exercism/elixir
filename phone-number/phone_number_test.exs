@@ -8,7 +8,6 @@ ExUnit.start
 
 defmodule PhoneTest do
   use ExUnit.Case, async: true
-  doctest Phone
 
   test "cleans number" do
     assert "1234567890" == Phone.number("(123) 456-7890")

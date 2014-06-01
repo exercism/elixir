@@ -7,14 +7,14 @@ defmodule CustomSet do
   # approaches, but simple.
 
   # Wrapper for the internal list
-  defrecordp :set, __MODULE__, list: []
+  defstruct list: []
 
   def new() do
-    set()
+    %CustomSet{} 
   end
 
   def new(coll) do
-    Enum.reduce(coll, set(), fn x, s -> put(s, x) end)
+    Enum.reduce(coll, %CustomSet{}, fn x, s -> put(s, x) end)
   end
 
   ## Set callbacks
@@ -31,7 +31,7 @@ defmodule CustomSet do
   end
 
   def empty(_) do
-    set() 
+    new()
   end
 
   def equal?(a, b) do
@@ -87,11 +87,11 @@ defmodule CustomSet do
   @compile { :inline, wrap: 1, unwrap: 1 }
     
   defp wrap(l) do
-    set(list: l)
+    %CustomSet{list: l}
   end
 
   defp unwrap(s) do
-    set(s, :list)
+    s.list
   end
 
   defp diff(a, b) do
