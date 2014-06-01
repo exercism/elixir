@@ -11,7 +11,6 @@ defmodule Palindromes do
         if palindrome?(x * y), do: add_factor(products, x, y), else: products
       end)
     end)
-    |> Enum.sort
   end
 
   defp palindrome?(number) do

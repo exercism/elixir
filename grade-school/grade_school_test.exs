@@ -9,7 +9,7 @@ ExUnit.start
 defmodule SchoolTest do
   use ExUnit.Case, async: true
 
-  def db, do: HashDict.new
+  def db, do: %{}
 
   test "add student" do
     actual = School.add(db, "Aimee", 2)
