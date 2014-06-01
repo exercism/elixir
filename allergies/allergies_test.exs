@@ -9,7 +9,6 @@ ExUnit.start
 
 defmodule AllergiesTest do
   use ExUnit.Case, async: true
-  doctest Allergies
 
   test "no_allergies_at_all" do
     assert [] == Allergies.list(0)

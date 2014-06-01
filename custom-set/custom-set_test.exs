@@ -8,7 +8,6 @@ ExUnit.start
 
 defmodule CustomSetTest do
   use ExUnit.Case
-  doctest CustomSet
 
   # Tip: to make your set work with the Set module be sure that your set value
   # is a tuple with as first element `CustomSet`. A record with tag `CustomSet`

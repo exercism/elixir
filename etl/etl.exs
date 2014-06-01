@@ -4,10 +4,10 @@ defmodule ETL do
 
   ## Examples
 
-  iex> ETL.transform(HashDict.new [{"a", ["ABILITY", "AARDVARK"]}, {"b", ["BALLAST", "BEAUTY"]}])
-  HashDict.new [{"ability", "a"},{"aardvark","a"},{"ballast","b"},{"beauty","b"}]
+  iex> ETL.transform(%{"a" => ["ABILITY", "AARDVARK"]}, "b" => ["BALLAST", "BEAUTY"]})
+  %{"ability" => "a", "aardvark" => "a", "ballast" => "b", "beauty" =>"b"}
   """
-  @spec transform(Dict.t) :: HashDict.t
+  @spec transform(Dict.t) :: map() 
   def transform(input) do
 
   end

@@ -8,7 +8,6 @@ ExUnit.start
 
 defmodule TeenagerTest do
   use ExUnit.Case, async: true
-  doctest Sublist
 
   test "empty equals empty" do
     assert Sublist.compare([], []) == :equal

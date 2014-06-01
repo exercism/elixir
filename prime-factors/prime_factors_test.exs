@@ -8,7 +8,6 @@ ExUnit.start
 
 defmodule PrimeFactorsTest do
   use ExUnit.Case, async: true
-  doctest PrimeFactors
 
   test "1" do
     assert [] == PrimeFactors.factors_for(1)

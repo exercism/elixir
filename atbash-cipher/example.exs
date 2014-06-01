@@ -1,5 +1,5 @@
 defmodule Atbash do
-  @key HashDict.new Enum.zip ?a..?z, ?z..?a
+  @key Enum.zip(?a..?z, ?z..?a) |> Enum.into(%{})
 
   @doc """
   Encode a given plaintext to the corresponding ciphertext
@@ -14,21 +14,21 @@ defmodule Atbash do
   end
 
   defp normalize(input) do
-    Regex.replace(%r{\W}, String.downcase(input), "")
+    Regex.replace(~r{\W}, String.downcase(input), "")
   end
 
   defp cipher(plaintext) do
     plaintext
-      |> String.to_char_list!
+      |> String.to_char_list
       |> Enum.map(&convert/1)
-      |> String.from_char_list!
+      |> List.to_string 
   end
 
   defp convert(character) do
-    HashDict.get @key, character, character
+    Dict.get(@key, character, character)
   end
 
   defp chunk(input) do
-    Regex.scan(%r(.{1,5}), input) |> List.flatten
+    Regex.scan(~r(.{1,5}), input) |> List.flatten
   end
 end
