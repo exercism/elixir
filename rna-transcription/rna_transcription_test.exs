@@ -8,7 +8,6 @@ ExUnit.start
 
 defmodule DNATest do
   use ExUnit.Case, async: true
-  doctest DNA
 
   test "transcribes guanine to cytosine" do
     assert DNA.to_rna('G') == 'C'

@@ -12,12 +12,12 @@ defmodule Phone do
   """
   @spec number(String.t) :: String.t
   def number(str) do
-    r = String.to_char_list!(str)
+    r = String.to_char_list(str)
         |> Enum.filter(&(&1 >= ?0 and &1 <= ?9))
         |> do_number()
     case r do
       nil -> @bad_result
-      l   -> String.from_char_list!(l)
+      l   -> to_string(l)
     end
   end
 

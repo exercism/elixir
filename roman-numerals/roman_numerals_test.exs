@@ -8,7 +8,6 @@ ExUnit.start
 
 defmodule RomanTest do
   use ExUnit.Case, async: true
-  doctest Roman
 
   test "1" do
     assert Roman.numerals(1) == "I"

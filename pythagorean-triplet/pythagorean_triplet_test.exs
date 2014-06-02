@@ -43,6 +43,4 @@ defmodule PythagoreanTripletTest do
     triplets = Triplet.generate(1, 100, 180)
     assert Enum.map(triplets, &Triplet.product/1) == [118080, 168480, 202500]
   end
-
-
 end

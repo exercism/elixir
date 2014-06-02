@@ -1,4 +1,6 @@
-defrecord Graph, attrs: [], nodes: [], edges: []
+defmodule Graph do
+  defstruct attrs: [], nodes: [], edges: []
+end
 
 defmodule Dot do
   defmacro graph(ast) do

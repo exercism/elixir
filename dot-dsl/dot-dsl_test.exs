@@ -9,7 +9,6 @@ ExUnit.start
 defmodule DotTest do
   use ExUnit.Case, async: true
   require Dot
-  doctest Dot
 
   # Expand at RunTime, used to avoid invalid macro calls preventing compilation
   # of the tests.
@@ -23,34 +22,34 @@ defmodule DotTest do
   end
 
   test "empty graph" do
-    assert Graph[] == exprt(Dot.graph do end)
+    assert %Graph{} == exprt(Dot.graph do end)
   end
   
   test "graph with one node" do
-    assert Graph[nodes: [{:a, []}]] == exprt(Dot.graph do a end)
+    assert %Graph{nodes: [{:a, []}]} == exprt(Dot.graph do a end)
   end
   
   test "graph with one node with keywords" do
-    assert Graph[nodes: [{:a, [color: :green]}]] == exprt(Dot.graph do a [color: :green] end)
+    assert %Graph{nodes: [{:a, [color: :green]}]} == exprt(Dot.graph do a [color: :green] end)
   end
 
   test "graph with one edge" do
-    assert Graph[edges: [{:a, :b, []}]] == exprt(Dot.graph do a -- b end)
+    assert %Graph{edges: [{:a, :b, []}]} == exprt(Dot.graph do a -- b end)
   end
 
   test "graph with just attribute" do
-    assert Graph[attrs: [foo: 1]] == exprt(Dot.graph do graph [foo: 1] end)
+    assert %Graph{attrs: [foo: 1]} == exprt(Dot.graph do graph [foo: 1] end)
   end
   
   test "graph with attributes" do
-    assert Graph[
+    assert %Graph{
       attrs: [bar: true, foo: 1, title: "Testing Attrs"],
       nodes: [{:a, [color: :green]},
               {:b, [label: "Beta!"]},
               {:c, []}],
       edges: [{:a, :b, [color: :blue]},
               {:b, :c, []}]
-    ] == exprt(Dot.graph do
+    } == exprt(Dot.graph do
       graph [foo: 1]
       graph [title: "Testing Attrs"]
       graph []

@@ -12,7 +12,6 @@ ExUnit.start
 
 defmodule SpageAgeTest do
   use ExUnit.Case, async: true
-  doctest SpaceAge
 
   test "age in earth years" do
     input =  1_000_000_000

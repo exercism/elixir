@@ -8,7 +8,6 @@ ExUnit.start
 
 defmodule MeetupTest do
   use ExUnit.Case, async: false
-  doctest Meetup
 
   test "monteenth of may 2013" do
     assert Meetup.meetup(2013, 5, :monday, :teenth) == {2013, 5, 13}

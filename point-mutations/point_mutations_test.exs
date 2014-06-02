@@ -8,7 +8,6 @@ ExUnit.start
 
 defmodule DNATest do
   use ExUnit.Case, async: true
-  doctest DNA
 
   test "no difference between empty strands" do
     assert DNA.hamming_distance('', '') == 0
