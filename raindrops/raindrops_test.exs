@@ -8,7 +8,6 @@ ExUnit.start
 
 defmodule RaindropsTest do
   use ExUnit.Case, async: true
-  doctest Raindrops
 
   test "1" do
     assert Raindrops.convert(1) == "1"

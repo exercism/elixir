@@ -4,15 +4,15 @@ defmodule ETL do
 
   ## Examples
 
-  iex> ETL.transform(HashDict.new [{"a", ["ABILITY", "AARDVARK"]}, {"b", ["BALLAST", "BEAUTY"]}])
-  HashDict.new [{"ability", "a"},{"aardvark","a"},{"ballast","b"},{"beauty","b"}]
+  iex> ETL.transform(%{"a" => ["ABILITY", "AARDVARK"], "b" => ["BALLAST", "BEAUTY"]])
+  %{"ability" => "a","aardvark" =>"a","ballast" =>"b","beauty" =>"b"]
   """
   def transform(input) do
     input
-      |> HashDict.to_list
+      |> Dict.to_list
       |> invert
       |> List.flatten
-      |> HashDict.new
+      |> Enum.into(%{})
   end
 
   defp invert(pairs) do

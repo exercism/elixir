@@ -8,7 +8,6 @@ ExUnit.start
 
 defmodule MinesweeperTest do
   use ExUnit.Case, async: true
-  doctest Minesweeper 
 
   defp clean(b), do: Enum.map(b, &String.replace(&1, ~r/[^*]/, " "))
 

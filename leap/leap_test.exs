@@ -8,7 +8,6 @@ ExUnit.start
 
 defmodule LeapTest do
   use ExUnit.Case, async: true
-  doctest Year
 
   test "vanilla leap year" do
     assert Year.leap_year?(1996)

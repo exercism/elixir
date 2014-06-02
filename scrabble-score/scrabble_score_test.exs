@@ -8,7 +8,6 @@ ExUnit.start
 
 defmodule ScrabbleScoreTest do
   use ExUnit.Case, async: true
-  doctest Scrabble
 
   test "empty word scores zero" do
     assert Scrabble.score("") == 0

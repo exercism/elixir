@@ -11,7 +11,7 @@ ExUnit.start
 
 defmodule FrequencyTest do
   use ExUnit.Case, async: true
- 
+
   # Poem by Friedrich Schiller. The corresponding music is the European Anthem.
   @ode_an_die_freude """
   Freude schöner Götterfunken
@@ -51,29 +51,29 @@ defmodule FrequencyTest do
   # Returns the frequencies in a sorted list. This means it doesn't matter if
   # your frequency() function returns a list of pairs or some dictionary, the
   # testing code will handle it.
-  defp freq(texts, workers // 4) do
-    Frequency.frequency(texts, workers) |> Enum.sort()
+  defp freq(texts, workers \\ 4) do
+    Frequency.frequency(texts, workers) |> Enum.sort() |> Enum.into(%{})
   end
 
   test "no texts mean no letters" do
-    assert freq([]) == []
+    assert freq([]) == %{}
   end
 
   test "one letter" do
-    assert freq(["a"]) == [{"a", 1}]
+    assert freq(["a"]) == %{"a" => 1}
   end
 
   test "case insensitivity" do
-    assert freq(["aA"]) == [{"a", 2}]
+    assert freq(["aA"]) == %{"a" => 2}
   end
 
   test "many empty texts still mean no letters" do
-    assert freq(List.duplicate("  ", 10000)) == []
+    assert freq(List.duplicate("  ", 10000)) == %{}
   end
-  
+
   test "many times the same text gives a predictable result" do
     assert freq(List.duplicate("abc", 1000))
-         == [{"a", 1000}, {"b", 1000}, {"c", 1000}]
+         == %{"a" => 1000, "b" => 1000, "c" => 1000}
   end
 
   test "punctuation doesn't count" do
@@ -83,14 +83,14 @@ defmodule FrequencyTest do
   test "numbers don't count" do
     assert freq(["Testing, 1, 2, 3"])["1"] == nil
   end
-  
+
   test "all three anthems, together, 1 worker" do
     freqs = freq([@ode_an_die_freude, @wilhelmus, @star_spangled_banner], 1)
     assert freqs["a"] == 49
     assert freqs["t"] == 56
     assert freqs["ü"] == 2
   end
-  
+
   test "all three anthems, together, 4 workers" do
     freqs = freq([@ode_an_die_freude, @wilhelmus, @star_spangled_banner], 4)
     assert freqs["a"] == 49

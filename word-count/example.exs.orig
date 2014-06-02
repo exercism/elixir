@@ -1,5 +1,5 @@
 defmodule Words do
-  @ascii_punctuation ~r/!|"|\#|\$|%|&|'|\(|\)|\*|\+|,|\.|\/|:|;|<|=|>|\?|@|\[|\\|]|\^|_|`|\{|\||}|~/
+  @ascii_punctuation ~r/!|"|\#|\$|%|&|'|\(|\)|\*|\+|,|\.|\/|:|;|<|=|>|\?|@|\[|\\|]|\^|_|`|\{|\||}|~/u
 
   def count(sentence) do
     sentence
@@ -11,7 +11,7 @@ defmodule Words do
 
   defp remove_punctuation(string), do: String.replace(string, @ascii_punctuation, " ")
 
-  defp to_words(sentence), do: List.flatten String.split(sentence)
+  defp to_words(sentence), do: List.flatten Regex.scan(~r/[\p{L}\p{N}-]+/, sentence)
 
   defp summarize(words) do
     Enum.reduce(words, %{}, &add_count/2)

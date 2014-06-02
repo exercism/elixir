@@ -37,8 +37,5 @@ defmodule PalindromeProductsTest do
     palindromes = Palindromes.generate(999, 100)
     assert palindromes |> Dict.keys |> Enum.sort |> hd == 10201
     assert palindromes[10201] == [[101, 101]]
-
   end
-
-
 end

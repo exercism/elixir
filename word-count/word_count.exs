@@ -4,7 +4,7 @@ defmodule Words do
 
   Words are compared case-insensitively.
   """
-  @spec count(String.t) :: HashDict.t
+  @spec count(String.t) :: map() 
   def count(sentence) do
   
   end

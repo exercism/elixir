@@ -28,6 +28,6 @@ defmodule DNA do
   """
 
   def nucleotide_counts(strand) do
-    HashDict.new @nucleotides, &{&1, count(strand, &1)}
+    Enum.map(@nucleotides, &{&1, count(strand, &1)}) |> Enum.into(%{})
   end
 end
