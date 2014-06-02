@@ -114,7 +114,7 @@ defmodule Forth do
   end
 
   defp tokenize(s) do
-    Regex.scan(~r/[\p{L}\p{N}\p{S}\p{P}]+/, s)
+    Regex.scan(~r/[\p{L}\p{N}\p{S}\p{P}]+/u, s)
     |> Stream.map(&hd/1)
     |> Enum.map(fn t ->
          case Integer.parse(t) do
