@@ -11,7 +11,7 @@ defmodule Phone do
   "1234567890"
 
   iex> Phone.number("+1 (303) 555-1212")
-  "13035551212"
+  "3035551212"
 
   iex> Phone.number("867.5309")
   "0000000000"
