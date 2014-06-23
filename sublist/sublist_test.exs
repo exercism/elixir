@@ -6,7 +6,7 @@ end
 
 ExUnit.start
 
-defmodule TeenagerTest do
+defmodule SublistTest do
   use ExUnit.Case, async: true
 
   test "empty equals empty" do
