@@ -6,7 +6,7 @@ end
 
 ExUnit.start
 
-defmodule TeenagerTest do
+defmodule SublistTest do
   use ExUnit.Case, async: true
 
   test "empty equals empty" do
@@ -35,9 +35,9 @@ defmodule TeenagerTest do
   end
 
   test "sublist in middle" do
-    assert Sublist.compare([3,2,1],[5,4,3,2,1]) == :sublist
+    assert Sublist.compare([4,3,2],[5,4,3,2,1]) == :sublist
   end
-  
+
   test "sublist at end" do
     assert Sublist.compare([3,4,5],[1,2,3,4,5]) == :sublist
   end
@@ -49,25 +49,25 @@ defmodule TeenagerTest do
   test "sublist early in huge list" do
     assert Sublist.compare([3,4,5], Enum.to_list(1..1_000_000)) == :sublist
   end
-  
+
   test "huge sublist not in huge list" do
     assert Sublist.compare(Enum.to_list(10..1_000_001),
                            Enum.to_list(1..1_000_000))
            == :unequal
   end
-  
+
   test "superlist at start" do
     assert Sublist.compare([1,2,3,4,5],[1,2,3]) == :superlist
   end
 
   test "superlist in middle" do
-    assert Sublist.compare([5,4,3,2,1],[3,2,1]) == :superlist
+    assert Sublist.compare([5,4,3,2,1],[4,3,2]) == :superlist
   end
-  
+
   test "superlist at end" do
     assert Sublist.compare([1,2,3,4,5],[3,4,5]) == :superlist
   end
-  
+
   test "partially matching superlist at start" do
     assert Sublist.compare([1,1,1,2], [1,1,2]) == :superlist
   end
