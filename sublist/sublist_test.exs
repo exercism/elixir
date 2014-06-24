@@ -35,7 +35,7 @@ defmodule SublistTest do
   end
 
   test "sublist in middle" do
-    assert Sublist.compare([3,2,1],[5,4,3,2,1]) == :sublist
+    assert Sublist.compare([4,3,2],[5,4,3,2,1]) == :sublist
   end
 
   test "sublist at end" do
@@ -61,7 +61,7 @@ defmodule SublistTest do
   end
 
   test "superlist in middle" do
-    assert Sublist.compare([5,4,3,2,1],[3,2,1]) == :superlist
+    assert Sublist.compare([5,4,3,2,1],[4,3,2]) == :superlist
   end
 
   test "superlist at end" do
