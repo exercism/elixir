@@ -9,7 +9,7 @@ defmodule Sublist do
         if is_sublist(a, b, la, lb), do: :sublist, else: :unequal
       { la, lb } when la > lb ->
         if is_sublist(b, a, lb, la), do: :superlist, else: :unequal
-      _ -> 
+      _ ->
         if a == b, do: :equal, else: :unequal
     end
   end
