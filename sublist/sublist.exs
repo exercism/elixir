@@ -4,6 +4,6 @@ defmodule Sublist do
   and if not whether it is equal or unequal to the second list.
   """
   def compare(a, b) do
-  
+
   end
 end
