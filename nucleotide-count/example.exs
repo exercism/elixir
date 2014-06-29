@@ -24,7 +24,7 @@ defmodule DNA do
   ## Examples
 
   iex> DNA.nucleotide_counts('AATAA')
-  HashDict.new [{?A, 4}, {?T, 1}, {?C, 0}, {?G, 0}]
+  %{?A => 4, ?T => 1, ?C => 0, ?G => 0}
   """
 
   def nucleotide_counts(strand) do
