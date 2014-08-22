@@ -11,19 +11,19 @@ defmodule Phone do
   Returns 0000000000 if the phone number is bad.
   """
   @spec number(String.t) :: String.t
-  def number(str) do
-    r = String.to_char_list(str)
-        |> Enum.filter(&(&1 >= ?0 and &1 <= ?9))
-        |> do_number()
-    case r do
-      nil -> @bad_result
-      l   -> to_string(l)
-    end
+  def number(raw) do
+    raw
+    |> numeric
+    |> String.graphemes
+    |> do_number
+    |> to_string
   end
 
-  defp do_number(l) when length(l) == 10, do: l
-  defp do_number([?1|l]) when length(l) == 10, do: l
-  defp do_number(_), do: nil
+  defp numeric(input), do: String.replace(input, ~r/[^0-9]*/, "")
+
+  defp do_number(input) when length(input) == 10, do: input
+  defp do_number(["1"|input]) when length(input) == 10, do: input
+  defp do_number(_), do: @bad_result
 
   @doc """
   Get the area code of a phone number.
