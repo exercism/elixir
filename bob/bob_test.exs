@@ -14,7 +14,7 @@ defmodule TeenagerTest do
   end
 
   test "shouting" do
-    # assert Teenager.hey("WATCH OUT!") == "Whoaa, chill out!"
+    # assert Teenager.hey("WATCH OUT!") == "Whoa, chill out!"
   end
 
   test "asking a question" do
