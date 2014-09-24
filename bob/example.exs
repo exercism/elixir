@@ -11,7 +11,7 @@ defmodule Teenager do
   "Sure."
 
   iex> Teenager.hey("HELLO!")
-  "Woah, chill out!"
+  "Whoa, chill out!"
 
   iex> Teenager.hey("Coding is cool.")
   "Whatever."
@@ -20,7 +20,7 @@ defmodule Teenager do
   def hey(input) do
     cond do
       silent?(input)   -> "Fine. Be that way!"
-      shouting?(input) -> "Woah, chill out!"
+      shouting?(input) -> "Whoa, chill out!"
       question?(input) -> "Sure."
       true             -> "Whatever."
     end
