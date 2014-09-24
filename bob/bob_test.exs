@@ -14,7 +14,7 @@ defmodule TeenagerTest do
   end
 
   test "shouting" do
-    # assert Teenager.hey("WATCH OUT!") == "Woah, chill out!"
+    # assert Teenager.hey("WATCH OUT!") == "Whoaa, chill out!"
   end
 
   test "asking a question" do
@@ -30,15 +30,15 @@ defmodule TeenagerTest do
   end
 
   test "shouting numbers" do
-    # assert Teenager.hey("1, 2, 3 GO!") == "Woah, chill out!"
+    # assert Teenager.hey("1, 2, 3 GO!") == "Whoa, chill out!"
   end
 
   test "shouting with special characters" do
-    # assert Teenager.hey("ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!") == "Woah, chill out!"
+    # assert Teenager.hey("ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!") == "Whoa, chill out!"
   end
 
   test "shouting with no exclamation mark" do
-    # assert Teenager.hey("I HATE YOU") == "Woah, chill out!"
+    # assert Teenager.hey("I HATE YOU") == "Whoa, chill out!"
   end
 
   test "statement containing question mark" do
@@ -63,6 +63,6 @@ defmodule TeenagerTest do
 
   test "shouting in Russian" do
     # Hopefully this is Russian for "get out"
-    # assert Teenager.hey("УХОДИТЬ") == "Woah, chill out!"
+    # assert Teenager.hey("УХОДИТЬ") == "Whoa, chill out!"
   end
 end
