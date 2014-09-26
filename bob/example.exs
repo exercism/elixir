@@ -50,7 +50,7 @@ end
 #   def hey(input) do
 #     cond do
 #       silent?(input)   -> "Fine. Be that way!"
-#       shouting?(input) -> "Woah, chill out!"
+#       shouting?(input) -> "Whoa, chill out!"
 #       question?(input) -> "Sure."
 #       true             -> "Whatever."
 #     end
