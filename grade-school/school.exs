@@ -8,7 +8,7 @@ defmodule School do
   @doc """
   Add a student to a particular grade in school.
   """
-  @spec add(Dict.t, string, pos_integer) :: Dict.t
+  @spec add(Dict.t, String.t, pos_integer) :: Dict.t
   def add(db, name, grade) do
 
   end
