@@ -33,7 +33,7 @@ defmodule SchoolTest do
     # assert actual == %{3 => ["Chelsea"], 7 => ["Logan"]}
   end
 
-  test "get students in a grade sorted alphabetically" do
+  test "get students in a grade" do
     # actual = db
     #   |> School.add("Bradley", 5)
     #   |> School.add("Franklin", 5)
