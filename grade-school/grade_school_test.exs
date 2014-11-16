@@ -21,7 +21,7 @@ defmodule SchoolTest do
     #   |> School.add("James", 2)
     #   |> School.add("Blair", 2)
     #   |> School.add("Paul", 2)
-    # 
+    #
     # assert Enum.sort(actual[2]) == ["Blair", "James", "Paul"]
   end
 
@@ -29,7 +29,7 @@ defmodule SchoolTest do
     # actual = db
     #   |> School.add("Chelsea", 3)
     #   |> School.add("Logan", 7)
-    # 
+    #
     # assert actual == %{3 => ["Chelsea"], 7 => ["Logan"]}
   end
 
@@ -39,7 +39,7 @@ defmodule SchoolTest do
     #   |> School.add("Franklin", 5)
     #   |> School.add("Jeff", 1)
     #   |> School.grade(5)
-    # 
+    #
     # assert Enum.sort(actual) == ["Bradley", "Franklin"]
   end
 
@@ -54,13 +54,13 @@ defmodule SchoolTest do
     #   |> School.add("Kareem", 6)
     #   |> School.add("Kyle", 3)
     #   |> School.sort
-    # 
+    #
     # expected = %{
     #   3 => ["Kyle"],
     #   4 => ["Christopher", "Jennifer"],
     #   6 => ["Kareem"]
     # }
-    # 
+    #
     # assert expected == actual
   end
 
