@@ -1,23 +1,17 @@
 defmodule Grains do
+  @doc """
+  Calculate two to the power of the input minus one.
+  """
+  @spec square(pos_integer) :: pos_integer
+  def square(number) do
 
-	@doc """
-	Calculate two to the power of the input minus one.
-	"""
+  end
 
-	@spec square(pos_integer) :: pos_integer
+  @doc """
+  Adds square of each number from 1 to 64.
+  """
+  @spec total :: pos_integer
+  def total do
 
-	def square(number) do
-
-	end
-
-	@doc """
-	Adds square of each number from 1 to 64.
-	"""
-
-	@spec total :: pos_integer
-
-	def total do
-		
-	end
-
+  end
 end
