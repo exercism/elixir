@@ -28,12 +28,8 @@ defmodule BankAccountTest do
 
   setup do
     account = BankAccount.open_bank()
+    on_exit fn -> BankAccount.close_bank(account) end
     { :ok, [ account: account ] }
-  end
-
-  teardown context do
-    BankAccount.close_bank(context[:account])
-    :ok
   end
 
   test "initial balance is 0", context do
