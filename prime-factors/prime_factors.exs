@@ -7,8 +7,8 @@ defmodule PrimeFactors do
 
   The prime factors of 'number' will be ordered lowest to highest. 
   """
-  @spec for(pos_integer) :: [pos_integer]
-  def for(number) do
+  @spec factors_for(pos_integer) :: [pos_integer]
+  def factors_for(number) do
 
   end
 end
