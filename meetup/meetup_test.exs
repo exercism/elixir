@@ -317,6 +317,10 @@ defmodule MeetupTest do
     assert Meetup.meetup(2013, 4, :sunday, :fourth) == {2013, 4, 28}
   end
 
+  test "fifth monday of march 2015" do
+    assert Meetup.meetup(2015, 3, :monday, :fifth) == {2015, 3, 30}
+  end
+
   test "last monday of march 2013" do
     assert Meetup.meetup(2013, 3, :monday, :last) == {2013, 3, 25}
   end
@@ -372,5 +376,16 @@ defmodule MeetupTest do
   test "last sunday of april 2013" do
     assert Meetup.meetup(2013, 4, :sunday, :last) == {2013, 4, 28}
   end
-end
 
+  test "fifth monday of februari 2015 doesn't exist" do
+    catch_error Meetup.meetup(2015, 2, :monday, :fifth)
+  end
+
+  test "invalid month" do
+    catch_error Meetup.meetup(2015, 13, :monday, :last)
+  end
+
+  test "invalid year" do
+    catch_error Meetup.meetup(2015.5, 12, :monday, :last)
+  end
+end

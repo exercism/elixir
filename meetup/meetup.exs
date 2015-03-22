@@ -7,7 +7,7 @@ defmodule Meetup do
       :monday | :tuesday | :wednesday
     | :thursday | :friday | :saturday | :sunday
 
-  @type schedule :: :first | :second | :third | :fourth | :last | :teenth
+  @type schedule :: :first | :second | :third | :fourth | :fifth | :last | :teenth
 
   @doc """
   Calculate a meetup date.
