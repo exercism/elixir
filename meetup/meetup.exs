@@ -2,7 +2,7 @@ defmodule Meetup do
   @moduledoc """
   Calculate meetup dates.
   """
-  
+
   @type weekday ::
       :monday | :tuesday | :wednesday
     | :thursday | :friday | :saturday | :sunday
@@ -17,6 +17,6 @@ defmodule Meetup do
   """
   @spec meetup(pos_integer, pos_integer, weekday, schedule) :: :calendar.date
   def meetup(year, month, weekday, schedule) do
-  
+
   end
 end
