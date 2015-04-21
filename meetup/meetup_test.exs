@@ -81,7 +81,7 @@ defmodule MeetupTest do
     assert Meetup.meetup(2013, 10, :saturday, :teenth) == {2013, 10, 19}
   end
 
-  test "sunteenth of map 2013" do
+  test "sunteenth of may 2013" do
     assert Meetup.meetup(2013, 5, :sunday, :teenth) == {2013, 5, 19}
   end
 
