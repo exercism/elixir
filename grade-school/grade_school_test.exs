@@ -49,6 +49,7 @@ defmodule SchoolTest do
 
   test "sort school by grade and by student name" do
     # actual = db
+    #   |> School.add("Bart", 4)
     #   |> School.add("Jennifer", 4)
     #   |> School.add("Christopher", 4)
     #   |> School.add("Kareem", 6)
@@ -57,7 +58,7 @@ defmodule SchoolTest do
     # 
     # expected = %{
     #   3 => ["Kyle"],
-    #   4 => ["Christopher", "Jennifer"],
+    #   4 => ["Bart", "Christopher", "Jennifer"],
     #   6 => ["Kareem"]
     # }
     # 
