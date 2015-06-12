@@ -28,7 +28,6 @@ defmodule BankAccountTest do
 
   setup do
     account = BankAccount.open_bank()
-    on_exit fn -> BankAccount.close_bank(account) end
     { :ok, [ account: account ] }
   end
 
@@ -55,13 +54,5 @@ defmodule BankAccountTest do
       1000 -> flunk("Timeout") 
     end
     assert BankAccount.balance(context[:account]) == 20
-  end
-
-  ## Workarounds
-
-  # This deals with the deprecation of the send operator.
-  # It makes this code work both pre-0.12.2 and post-0.12.3
-  unless { :send, 2 } in Kernel.__info__(:functions) do
-    defp send(to, what), do: to <- what
   end
 end

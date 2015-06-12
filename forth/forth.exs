@@ -25,20 +25,24 @@ defmodule Forth do
   def format_stack(ev) do
   
   end
-end
 
-defexception Forth.StackUnderflow do
-  def message(_), do: "stack underflow"
-end
+  defmodule StackUnderflow do
+    defexception []
+    def exception(_), do: "stack underflow"
+  end
 
-defexception Forth.InvalidWord, word: nil do
-  def message(e), do: "invalid word: #{inspect e.word}"
-end
+  defmodule InvalidWord do
+    defexception [:word]
+    def exception(e), do: "invalid word: #{inspect e.word}"
+  end
 
-defexception Forth.UnknownWord, word: nil do
-  def message(e), do: "unknown word: #{inspect e.word}"
-end
+  defmodule UnknownWord do
+    defexception [:word]
+    def exception(e), do: "unknown word: #{inspect e.word}"
+  end
 
-defexception Forth.DivisionByZero do
-  def message(_), do: "division by zero"
+  defmodule DivisionByZero do
+    defexception []
+    def exception(_), do: "division by zero"
+  end
 end

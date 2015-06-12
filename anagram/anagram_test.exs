@@ -15,52 +15,52 @@ defmodule AnagramTest do
   end
 
   test "detect simple anagram" do
-    # matches = Anagram.match "ant", ["tan", "stand", "at"]
-    # assert matches == ["tan"]
+    matches = Anagram.match "ant", ["tan", "stand", "at"]
+    assert matches == ["tan"]
   end
 
   test "detect multiple anagrams" do
-    # matches = Anagram.match "master", ["stream", "pigeon", "maters"]
-    # assert matches == ["stream", "maters"]
+    matches = Anagram.match "master", ["stream", "pigeon", "maters"]
+    assert matches == ["stream", "maters"]
   end
 
   test "do not detect anagram subsets" do
-    # matches = Anagram.match "good", ~w(dog goody)
-    # assert matches == []
+    matches = Anagram.match "good", ~w(dog goody)
+    assert matches == []
   end
 
   test "detect anagram" do
-    # matches = Anagram.match "listen", ~w(enlists google inlets banana)
-    # assert matches == ["inlets"]
+    matches = Anagram.match "listen", ~w(enlists google inlets banana)
+    assert matches == ["inlets"]
   end
 
   test "multiple anagrams" do
-    # matches = Anagram.match "allergy", ~w(gallery ballerina regally clergy largely leading)
-    # assert matches == ["gallery", "regally", "largely"]
+    matches = Anagram.match "allergy", ~w(gallery ballerina regally clergy largely leading)
+    assert matches == ["gallery", "regally", "largely"]
   end
 
   test "anagrams must use all letters exactly once" do
-    # matches = Anagram.match "patter", ["tapper"]
-    # assert matches == []
+    matches = Anagram.match "patter", ["tapper"]
+    assert matches == []
   end
 
   test "detect anagrams with case-insensitive subject" do
-    # matches = Anagram.match "Orchestra", ~w(cashregister carthorse radishes)
-    # assert matches == ["carthorse"]
+    matches = Anagram.match "Orchestra", ~w(cashregister carthorse radishes)
+    assert matches == ["carthorse"]
   end
 
   test "detect anagrams with case-insensitive candidate" do
-    # matches = Anagram.match "orchestra", ~w(cashregister Carthorse radishes)
-    # assert matches == ["Carthorse"]
+    matches = Anagram.match "orchestra", ~w(cashregister Carthorse radishes)
+    assert matches == ["Carthorse"]
   end
 
   test "anagrams must not be the source word" do
-    # matches = Anagram.match "corn", ["corn", "dark", "Corn", "rank", "CORN", "cron", "park"]
-    # assert matches == ["cron"]
+    matches = Anagram.match "corn", ["corn", "dark", "Corn", "rank", "CORN", "cron", "park"]
+    assert matches == ["cron"]
   end
 
   test "do not detect words based on checksum" do
-    # matches = Anagram.match "mass", ["last"]
-    # assert matches == []
+    matches = Anagram.match "mass", ["last"]
+    assert matches == []
   end
 end

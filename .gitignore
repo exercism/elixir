@@ -3,4 +3,6 @@
 .DS_Store
 tmp
 bin/configlet
-bin/configlet.exe
+bin/configlet*
+deps
+_build

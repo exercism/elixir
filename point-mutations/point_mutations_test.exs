@@ -14,19 +14,19 @@ defmodule DNATest do
   end
 
   test "no difference between identical strands" do
-    # assert DNA.hamming_distance('GGACTGA', 'GGACTGA') == 0
+    assert DNA.hamming_distance('GGACTGA', 'GGACTGA') == 0
   end
 
   test "small hamming distance in middle somewhere" do
-    # assert DNA.hamming_distance('GGACG', 'GGTCG') == 1
+    assert DNA.hamming_distance('GGACG', 'GGTCG') == 1
   end
 
   test "larger distance" do
-    # assert DNA.hamming_distance('ACCAGGG', 'ACTATGG') == 2
+    assert DNA.hamming_distance('ACCAGGG', 'ACTATGG') == 2
   end
 
   test "hamming distance is undefined for strands of different lengths" do
-    # assert DNA.hamming_distance('AAAC', 'TAGGGGAGGCTAGCGGTAGGAC') == nil
-    # assert DNA.hamming_distance('GACTACGGACAGGACACC', 'GACATCGC') == nil
+    assert DNA.hamming_distance('AAAC', 'TAGGGGAGGCTAGCGGTAGGAC') == nil
+    assert DNA.hamming_distance('GACTACGGACAGGACACC', 'GACATCGC') == nil
   end
 end
