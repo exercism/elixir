@@ -11,35 +11,35 @@ defmodule AllergiesTest do
   use ExUnit.Case, async: true
 
   test "no_allergies_at_all" do
-    assert Allergies.list(0) == []
+    Allergies.list(0) |> assert_is_a_set_containing []
   end
 
   test "allergic_to_just_eggs" do
-    assert Allergies.list(1) == ["eggs"]
+    Allergies.list(1) |> assert_is_a_set_containing ["eggs"]
   end
 
   test "allergic_to_just_peanuts" do
-    assert Allergies.list(2) == ["peanuts"]
+    Allergies.list(2) |> assert_is_a_set_containing ["peanuts"]
   end
 
   test "allergic_to_just_strawberries" do
-    assert Allergies.list(8) == ["strawberries"]
+    Allergies.list(8) |> assert_is_a_set_containing ["strawberries"]
   end
 
   test "allergic_to_eggs_and_peanuts" do
-    assert Allergies.list(3) == ["eggs", "peanuts"]
+    Allergies.list(3) |> assert_is_a_set_containing ["eggs", "peanuts"]
   end
 
   test "allergic_to_more_than_eggs_but_not_peanuts" do
-    assert Allergies.list(5) == ["eggs", "shellfish"]
+    Allergies.list(5) |> assert_is_a_set_containing ["eggs", "shellfish"]
   end
 
   test "allergic_to_lots_of_stuff" do
-    assert Allergies.list(248) == ["strawberries", "tomatoes", "chocolate", "pollen", "cats"]
+    Allergies.list(248) |> assert_is_a_set_containing ["strawberries", "tomatoes", "chocolate", "pollen", "cats"]
   end
 
   test "allergic_to_everything" do
-    assert Allergies.list(255) == ["eggs", "peanuts", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"]
+    Allergies.list(255) |> assert_is_a_set_containing ["eggs", "peanuts", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"]
   end
 
   test "no_allergies_means_not_allergic" do
@@ -57,6 +57,15 @@ defmodule AllergiesTest do
   end
 
   test "ignore_non_allergen_score_parts" do
-    assert Allergies.list(509) == ["eggs", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"]
+    Allergies.list(509) |> assert_is_a_set_containing ["eggs", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"]
   end
+
+  defp assert_is_a_set_containing(set, to_contain) do
+    same_contents = to_contain
+      |> Enum.into(HashSet.new)
+      |> Set.equal?(set)
+    assert same_contents,
+           "Expected a set with: #{inspect to_contain} got #{inspect set |> Set.to_list}"
+  end
+
 end
