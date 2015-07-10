@@ -16,34 +16,34 @@ defmodule GrainsTest do
   use ExUnit.Case
 
   test "square 1" do
-    assert Grains.square(1) == 1
+    assert Grains.square(1) === 1
   end
 
   test "square 2" do
-    assert Grains.square(2) == 2
+    assert Grains.square(2) === 2
   end
 
   test "square 3" do
-    assert Grains.square(3) == 4
+    assert Grains.square(3) === 4
   end
 
   test "square 4" do
-    assert Grains.square(4) == 8
+    assert Grains.square(4) === 8
   end
 
   test "square 16" do
-    assert Grains.square(16) == 32768
+    assert Grains.square(16) === 32768
   end
 
   test "square 32" do
-    assert Grains.square(32) == 2147483648
+    assert Grains.square(32) === 2147483648
   end
 
   test "square 64" do
-    assert Grains.square(64) == 9223372036854775808
+    assert Grains.square(64) === 9223372036854775808
   end
 
   test "total grains" do
-    assert Grains.total == 18446744073709551615
+    assert Grains.total === 18446744073709551615
   end
 end
