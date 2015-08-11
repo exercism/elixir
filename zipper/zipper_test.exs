@@ -17,18 +17,18 @@ defmodule ZipperTest do
   defimpl Inspect, for: BT do
     import Inspect.Algebra
 
-    def inspect(BinTree[value: v, left: l, right: r], opts) do
-      concat ["(", Kernel.inspect(v, opts),
-              ":", (if l, do: Kernel.inspect(l, opts), else: ""),
-              ":", (if r, do: Kernel.inspect(r, opts), else: ""),
+    def inspect(%BinTree{value: v, left: l, right: r}, opts) do
+      concat ["(", to_doc(v, opts),
+              ":", (if l, do: to_doc(l, opts), else: ""),
+              ":", (if r, do: to_doc(r, opts), else: ""),
               ")"]
     end
   end
 
   use ExUnit.Case, async: false
   
-  defp bt(value, left, right), do: BT[value: value, left: left, right: right]
-  defp leaf(value), do: BT[value: value]
+  defp bt(value, left, right), do: %BT{value: value, left: left, right: right}
+  defp leaf(value), do: %BT{value: value}
 
   defp t1, do: bt(1, bt(2, nil,     leaf(3)), leaf(4))
   defp t2, do: bt(1, bt(5, nil,     leaf(3)), leaf(4))

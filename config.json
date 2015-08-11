@@ -47,7 +47,9 @@
 
   ],
   "ignored": [
-    "docs"
+    "docs",
+    "deps",
+    "test"
   ],
   "foregone": [
     "robot-name"

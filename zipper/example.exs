@@ -1,4 +1,4 @@
-defrecord BinTree, value: nil, left: nil, right: nil do
+defmodule BinTree do
   @moduledoc """
   A node in a binary tree.
 
@@ -6,10 +6,11 @@ defrecord BinTree, value: nil, left: nil, right: nil do
   `left` is the left subtree (nil if no subtree).
   `right` is the right subtree (nil if no subtree).
   """
-  record_type value: any, left: BinTree.t | nil, right: BinTree.t | nil
+  @type t :: %BinTree{ value: any, left: BinTree.t | nil, right: BinTree.t | nil }
+  defstruct value: nil, left: nil, right: nil
 end
 
-defrecord BinTree.Zipper, value: nil, left: nil, right: nil, trail: [] do
+defmodule BinTree.Zipper do
   @moduledoc """
   A binary tree zipper.
 
@@ -21,10 +22,13 @@ defrecord BinTree.Zipper, value: nil, left: nil, right: nil, trail: [] do
   The trail stores the path that a zipper has taken into the tree from the root
   and the alternative branches.
   """
-  record_type value: any,
-              left: BinTree.Zipper.t | nil,
-              right: BinTree.Zipper.t | nil,
-              trail: [{ :left, any, BinTree.t } | { :right, any, BinTree.t }]
+  @type t :: %BinTree.Zipper{
+      value: any,
+      left: BinTree.Zipper.t | nil,
+      right: BinTree.Zipper.t | nil,
+      trail: [{ :left, any, BinTree.t } | { :right, any, BinTree.t }]
+    }
+  defstruct value: nil, left: nil, right: nil, trail: []
 end
 
 defmodule Zipper do
@@ -35,65 +39,65 @@ defmodule Zipper do
   Get a zipper focussed on the root node.
   """
   @spec from_tree(BT.t) :: Z.t
-  def from_tree(BT[value: v, left: l, right: r]) do
-    Z[value: v, left: l, right: r, trail: []]
+  def from_tree(%BT{ value: v, left: l, right: r}) do
+    %Z{value: v, left: l, right: r, trail: []}
   end
 
   @doc """
   Get the complete tree from a zipper.
   """
   @spec to_tree(Z.t) :: BT.t
-  def to_tree(Z[value: v, left: l, right: r, trail: t]) do
-    do_to_tree(BT[value: v, left: l, right: r], t)
+  def to_tree(%Z{value: v, left: l, right: r, trail: t}) do
+    do_to_tree(%BT{value: v, left: l, right: r}, t)
   end
 
   defp do_to_tree(b, []) do
     b
   end
   defp do_to_tree(b, [{ :left, pv, pr } | pt]) do
-    do_to_tree(BT[value: pv, left: b, right: pr], pt)
+    do_to_tree(%BT{value: pv, left: b, right: pr}, pt)
   end
   defp do_to_tree(b, [{ :right, pv, pl } | pt]) do
-    do_to_tree(BT[value: pv, left: pl, right: b], pt)
+    do_to_tree(%BT{value: pv, left: pl, right: b}, pt)
   end
 
   @doc """
   Get the value of the focus node.
   """
   @spec value(Z.t) :: any
-  def value(Z[value: v]), do: v
+  def value(%Z{ value: v }), do: v
 
   @doc """
   Get the left child of the focus node, if any.
   """
   @spec left(Z.t) :: Z.t | nil
-  def left(Z[left: nil]), do: nil
-  def left(Z[value: v, left: BT[value: lv, left: ll, right: lr], 
-             right: r, trail: zt]) do
-    Z[value: lv, left: ll, right: lr, trail: [{ :left, v, r } | zt]]
+  def left(%Z{ left: nil }), do: nil
+  def left(%Z{ value: v, left: %BT{value: lv, left: ll, right: lr},
+             right: r, trail: zt}) do
+    %Z{ value: lv, left: ll, right: lr, trail: [{ :left, v, r } | zt] }
   end
   
   @doc """
   Get the right child of the focus node, if any.
   """
   @spec right(Z.t) :: Z.t | nil
-  def right(Z[right: nil]), do: nil
-  def right(Z[value: v, left: l, 
-              right: BT[value: rv, left: rl, right: rr], trail: zt]) do
-    Z[value: rv, left: rl, right: rr, trail: [{ :right, v, l } | zt]]
+  def right(%Z{ right: nil }), do: nil
+  def right(%Z{ value: v, left: l,
+              right: %BT{value: rv, left: rl, right: rr}, trail: zt }) do
+    %Z{ value: rv, left: rl, right: rr, trail: [{ :right, v, l } | zt] }
   end
 
   @doc """
   Get the parent of the focus node, if any.
   """
   @spec up(Z.t) :: Z.t
-  def up(Z[value: v, left: l, right: r, trail: t]) do
+  def up(%Z{ value: v, left: l, right: r, trail: t }) do
     case t do
       []                        -> nil
       [{ :left, pv, pr } | zt]  ->
-        Z[value: pv, left: BT[value: v, left: l, right: r], right: pr, trail: zt]
+        %Z{ value: pv, left: %BT{value: v, left: l, right: r}, right: pr, trail: zt }
       [{ :right, pv, pl } | zt] ->
-        Z[value: pv, left: pl, right: BT[value: v, left: l, right: r], trail: zt]
+        %Z{ value: pv, left: pl, right: %BT{value: v, left: l, right: r}, trail: zt }
     end
   end
 
@@ -101,17 +105,17 @@ defmodule Zipper do
   Set the value of the focus node.
   """
   @spec set_value(Z.t, any) :: Z.t
-  def set_value(z = Z[], v), do: z.value(v)
+  def set_value(z, v), do: %{z | value: v}
   
   @doc """
   Replace the left child tree of the focus node. 
   """
   @spec set_left(Z.t, BT.t) :: Z.t
-  def set_left(z = Z[], l), do: z.left(l)
+  def set_left(z, l), do: %{z | left: l}
   
   @doc """
   Replace the right child tree of the focus node. 
   """
   @spec set_right(Z.t, BT.t) :: Z.t
-  def set_right(z = Z[], r), do: z.right(r)
+  def set_right(z, r), do: %{z | right: r}
 end

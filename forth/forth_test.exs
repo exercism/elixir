@@ -24,7 +24,7 @@ defmodule ForthTest do
   test "non-word characters are separators" do
     # Note the Ogham Space Mark ( ), this is a spacing character.
     s = Forth.new
-        |> Forth.eval("1\0002\0013\n4\r5 6\t7")
+        |> Forth.eval("1\x{000}2\x{001}3\n4\r5 6\t7")
         |> Forth.format_stack
     assert s == "1 2 3 4 5 6 7"
   end

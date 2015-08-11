@@ -10,7 +10,7 @@ defmodule Series do
 
   def digits(number_string) do
     String.split(number_string, "", trim: true)
-    |> Enum.reduce([], fn(char, acc) -> [binary_to_integer(char)|acc] end)
+    |> Enum.reduce([], fn(char, acc) -> [String.to_integer(char)|acc] end)
     |> Enum.reverse
   end
 

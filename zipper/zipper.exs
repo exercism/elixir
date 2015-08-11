@@ -1,4 +1,4 @@
-defrecord BinTree, value: nil, left: nil, right: nil do
+defmodule BinTree do
   @moduledoc """
   A node in a binary tree.
 
@@ -6,61 +6,80 @@ defrecord BinTree, value: nil, left: nil, right: nil do
   `left` is the left subtree (nil if no subtree).
   `right` is the right subtree (nil if no subtree).
   """
-  record_type value: any, left: BinTree.t | nil, right: BinTree.t | nil
+  @type t :: %BinTree{ value: any, left: BinTree.t | nil, right: BinTree.t | nil }
+  defstruct value: nil, left: nil, right: nil
 end
 
 defmodule Zipper do
   @doc """
-  Get a zipper focussed on the root node.
+  Get a zipper focused on the root node.
   """
   @spec from_tree(BT.t) :: Z.t
-  def from_tree(bt)
+  def from_tree(bt) do
+
+  end
 
   @doc """
   Get the complete tree from a zipper.
   """
   @spec to_tree(Z.t) :: BT.t
-  def to_tree(z)
+  def to_tree(z) do
+
+  end
 
   @doc """
   Get the value of the focus node.
   """
   @spec value(Z.t) :: any
-  def value(z)
+  def value(z) do
+
+  end
 
   @doc """
   Get the left child of the focus node, if any.
   """
   @spec left(Z.t) :: Z.t | nil
-  def left(z)
+  def left(z) do
+
+  end
   
   @doc """
   Get the right child of the focus node, if any.
   """
   @spec right(Z.t) :: Z.t | nil
-  def right(z)
+  def right(z) do
+
+  end
 
   @doc """
   Get the parent of the focus node, if any.
   """
   @spec up(Z.t) :: Z.t
-  def up(z)
+  def up(z) do
+
+  end
 
   @doc """
   Set the value of the focus node.
   """
   @spec set_value(Z.t, any) :: Z.t
-  def set_value(z, v)
+  def set_value(z, v) do
+
+  end
   
   @doc """
   Replace the left child tree of the focus node. 
   """
   @spec set_left(Z.t, BT.t) :: Z.t
-  def set_left(z, l)
+  def set_left(z, l) do
+
+  end
   
   @doc """
   Replace the right child tree of the focus node. 
   """
   @spec set_right(Z.t, BT.t) :: Z.t
-  def set_right(z, r)
+  def set_right(z, r) do
+
+  end
 end

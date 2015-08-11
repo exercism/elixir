@@ -6,7 +6,7 @@ defmodule Minesweeper do
   def annotate([]), do: []
   def annotate(board) do
     h = length(board)
-    w = size(hd(board)) # Only 7-bit ASCII in the board, so this is safe
+    w = String.length(hd(board)) # Only 7-bit ASCII in the board, so this is safe
     annotations =
       Enum.reduce(Stream.with_index(board), %{}, fn { line, y }, acc ->
         Enum.reduce(Stream.with_index(String.to_char_list(line)), acc, fn 
