@@ -60,7 +60,8 @@ defmodule AllergiesTest do
     Allergies.list(509) |> assert_is_a_set_containing ["eggs", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"]
   end
 
-  defp assert_is_a_set_containing(set, to_contain) do
+  defp assert_is_a_set_containing(list, to_contain) do
+    set = Enum.into(list, HashSet.new)
     same_contents = to_contain
       |> Enum.into(HashSet.new)
       |> Set.equal?(set)

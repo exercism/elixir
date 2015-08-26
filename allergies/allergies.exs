@@ -1,9 +1,6 @@
 defmodule Allergies do
   @doc """
   List the allergies for which the corresponding flag bit is true.
-
-  Allergies should be ordered, starting with the allergie with the least
-  significant bit ("eggs").
   """
   @spec list(non_neg_integer) :: [String.t]
   def list(flags) do
