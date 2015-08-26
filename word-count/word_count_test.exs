@@ -5,6 +5,7 @@ else
 end
 
 ExUnit.start
+ExUnit.configure(exclude: :pending)
 
 defmodule WordsTest do
   use ExUnit.Case
