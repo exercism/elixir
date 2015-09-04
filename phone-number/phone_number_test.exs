@@ -33,6 +33,11 @@ defmodule PhoneTest do
   test "invalid when 9 digits" do
     assert Phone.number("123456789") == "0000000000"
   end
+
+  @tag :pending
+  test "invalid when proper number of digits but letters mixed in" do
+    assert Phone.number("1a2a3a4a5a6a7a8a9a0a") == "0000000000"
+  end
   
   @tag :pending
   test "area code" do
