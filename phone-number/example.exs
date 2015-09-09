@@ -13,17 +13,14 @@ defmodule Phone do
   @spec number(String.t) :: String.t
   def number(raw) do
     raw
-    |> numeric
-    |> String.graphemes
-    |> do_number
+    |> to_parts
     |> to_string
   end
 
-  defp numeric(input), do: String.replace(input, ~r/[^0-9]*/, "")
-
-  defp do_number(input) when length(input) == 10, do: input
-  defp do_number(["1"|input]) when length(input) == 10, do: input
-  defp do_number(_), do: @bad_result
+  @spec to_parts(String.t) :: [String.t]
+  defp to_parts(raw) do
+    Regex.run(~r/^\D*?1?\D*?(\d{3})\D*(\d{3})\D*(\d{4})$/, raw, [capture: :all_but_first]) || ["000", "000", "0000"]
+  end
 
   @doc """
   Get the area code of a phone number.
@@ -32,7 +29,23 @@ defmodule Phone do
   """
   @spec area_code(String.t) :: String.t
   def area_code(str) do
-    number(str) |> String.slice(0, 3)
+    str
+    |> to_parts
+    |> List.first
+  end
+
+  @spec prefix(String.t) :: String.t
+  def prefix(str) do
+    str
+    |> to_parts
+    |> Enum.at(1)
+  end
+
+  @spec line(String.t) :: String.t
+  def line(str) do
+    str
+    |> to_parts
+    |> List.last
   end
 
   @doc """
@@ -40,7 +53,6 @@ defmodule Phone do
   """
   @spec pretty(String.t) :: String.t
   def pretty(str) do
-    c = number(str)
-    "(#{String.slice(c, 0, 3)}) #{String.slice(c, 3, 3)}-#{String.slice(c,6,4)}"
+    "(#{area_code(str)}) #{prefix(str)}-#{line(str)}"
   end
 end
