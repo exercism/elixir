@@ -76,7 +76,7 @@ defmodule TeenagerTest do
 
   @tag :pending
   test "shouting in Russian" do
-    # Hopefully this is Russian for "get out"
+    # Hopefully this is Russian for "GET OUT"
     assert Teenager.hey("УХОДИТЬ") == "Whoa, chill out!"
   end
 end
