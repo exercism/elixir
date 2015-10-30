@@ -5,7 +5,7 @@ else
 end
 
 ExUnit.start
-ExUnit.configure
+ExUnit.configure exclude: :pending
 
 defmodule DNATest do
   use ExUnit.Case, async: true
