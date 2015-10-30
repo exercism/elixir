@@ -5,11 +5,12 @@ else
 end
 
 ExUnit.start
+ExUnit.configure exclude: :pending
 
 defmodule ZipperTest do
   alias BinTree, as: BT
   import Zipper
- 
+
   # A custom inspect instance purely for the tests, this makes error messages
   # much more readable.
   #
@@ -26,7 +27,7 @@ defmodule ZipperTest do
   end
 
   use ExUnit.Case, async: false
-  
+
   defp bt(value, left, right), do: %BT{value: value, left: left, right: right}
   defp leaf(value), do: %BT{value: value}
 
@@ -37,34 +38,42 @@ defmodule ZipperTest do
   defp t5, do: bt(1, bt(2, nil, leaf(3)),
                      bt(6, leaf(7), leaf(8)))
 
+  # @tag :pending
   test "data is retained" do
     assert (t1 |> from_tree |> to_tree) == t1
   end
-  
+
+  @tag :pending
   test "left, right and value" do
     assert (t1 |> from_tree |> left |> right |> value) == 3
   end
-  
+
+  @tag :pending
   test "dead end" do
     assert (t1 |> from_tree |> left |> left) == nil
   end
 
+  @tag :pending
   test "tree from deep focus" do
     assert (t1 |> from_tree |> left |> right |> to_tree) == t1
   end
 
+  @tag :pending
   test "set_value" do
     assert (t1 |> from_tree |> left |> set_value(5) |> to_tree) == t2
   end
-  
+
+  @tag :pending
   test "set_left with leaf" do
     assert (t1 |> from_tree |> left |> set_left(leaf(5)) |> to_tree) == t3
   end
-  
+
+  @tag :pending
   test "set_right with nil" do
     assert (t1 |> from_tree |> left |> set_right(nil) |> to_tree) == t4
   end
-  
+
+  @tag :pending
   test "set_right with subtree" do
     assert (t1 |> from_tree |> set_right(bt(6, leaf(7), leaf(8))) |> to_tree) == t5
   end

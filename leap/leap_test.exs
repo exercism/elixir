@@ -5,23 +5,28 @@ else
 end
 
 ExUnit.start
+ExUnit.configure exclude: :pending
 
 defmodule LeapTest do
   use ExUnit.Case, async: true
 
+  # @tag :pending
   test "vanilla leap year" do
     assert Year.leap_year?(1996)
   end
 
+  @tag :pending
   test "any old year" do
-    # assert ! Year.leap_year?(1997)
+    refute Year.leap_year?(1997), "1997 is not a leap year."
   end
 
+  @tag :pending
   test "century" do
-    # assert ! Year.leap_year?(1900)
+    refute Year.leap_year?(1900), "1900 is not a leap year."
   end
 
+  @tag :pending
   test "exceptional century" do
-    # assert Year.leap_year?(2400)
+    assert Year.leap_year?(2400)
   end
 end
