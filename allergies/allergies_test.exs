@@ -6,56 +6,69 @@ end
 
 
 ExUnit.start
+ExUnit.configure exclude: :pending
 
 defmodule AllergiesTest do
   use ExUnit.Case, async: true
 
+  # @tag :pending
   test "no_allergies_at_all" do
     Allergies.list(0) |> assert_is_a_set_containing []
   end
 
+  @tag :pending
   test "allergic_to_just_eggs" do
     Allergies.list(1) |> assert_is_a_set_containing ["eggs"]
   end
 
+  @tag :pending
   test "allergic_to_just_peanuts" do
     Allergies.list(2) |> assert_is_a_set_containing ["peanuts"]
   end
 
+  @tag :pending
   test "allergic_to_just_strawberries" do
     Allergies.list(8) |> assert_is_a_set_containing ["strawberries"]
   end
 
+  @tag :pending
   test "allergic_to_eggs_and_peanuts" do
     Allergies.list(3) |> assert_is_a_set_containing ["eggs", "peanuts"]
   end
 
+  @tag :pending
   test "allergic_to_more_than_eggs_but_not_peanuts" do
     Allergies.list(5) |> assert_is_a_set_containing ["eggs", "shellfish"]
   end
 
+  @tag :pending
   test "allergic_to_lots_of_stuff" do
     Allergies.list(248) |> assert_is_a_set_containing ["strawberries", "tomatoes", "chocolate", "pollen", "cats"]
   end
 
+  @tag :pending
   test "allergic_to_everything" do
     Allergies.list(255) |> assert_is_a_set_containing ["eggs", "peanuts", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"]
   end
 
+  @tag :pending
   test "no_allergies_means_not_allergic" do
     assert ! Allergies.allergic_to?(0, "peanuts")
     assert ! Allergies.allergic_to?(0, "cats")
     assert ! Allergies.allergic_to?(0, "strawberries")
   end
 
+  @tag :pending
   test "is_allergic_to_eggs" do
     assert Allergies.allergic_to?(1, "eggs")
   end
 
+  @tag :pending
   test "allergic_to_eggs_in_addition_to_other_stuff" do
     assert Allergies.allergic_to?(5, "eggs")
   end
 
+  @tag :pending
   test "ignore_non_allergen_score_parts" do
     Allergies.list(509) |> assert_is_a_set_containing ["eggs", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"]
   end
