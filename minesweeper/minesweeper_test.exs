@@ -5,7 +5,7 @@ else
 end
 
 ExUnit.start
-ExUnit.configure exclude: :pending
+ExUnit.configure exclude: :pending, trace: true
 
 defmodule MinesweeperTest do
   use ExUnit.Case, async: true

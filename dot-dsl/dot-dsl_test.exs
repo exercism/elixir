@@ -5,7 +5,7 @@ else
 end
 
 ExUnit.start
-ExUnit.configure exclude: :pending
+ExUnit.configure exclude: :pending, trace: true
 
 defmodule DotTest do
   use ExUnit.Case, async: true

@@ -5,7 +5,7 @@ else
 end
 
 ExUnit.start
-ExUnit.configure exclude: :pending
+ExUnit.configure exclude: :pending, trace: true
 
 defmodule ForthTest do
   use ExUnit.Case

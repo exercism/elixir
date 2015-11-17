@@ -6,7 +6,7 @@ end
 
 
 ExUnit.start
-ExUnit.configure exclude: :pending
+ExUnit.configure exclude: :pending, trace: true
 
 defmodule AllergiesTest do
   use ExUnit.Case, async: true
