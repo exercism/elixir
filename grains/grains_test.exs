@@ -5,7 +5,7 @@ else
 end
 
 ExUnit.start
-ExUnit.configure exclude: :pending
+ExUnit.configure exclude: :pending, trace: true
 
 # NOTE: :math.pow/2 doesn't do what you'd expect:
 # `:math.pow(2, 64) == :math.pow(2, 64) - 1` is true.

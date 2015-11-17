@@ -5,7 +5,7 @@ else
 end
 
 ExUnit.start
-ExUnit.configure exclude: :pending
+ExUnit.configure exclude: :pending, trace: true
 
 # Your code should contain a frequency(texts, workers) function which accepts a
 # list of texts and the number of workers to use in parallel.
