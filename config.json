@@ -4,6 +4,7 @@
   "repository": "https://github.com/exercism/xelixir",
   "active": true,
   "problems": [
+    "hello-world",
     "bob",
     "word-count",
     "list-ops",
