@@ -21,3 +21,4 @@ Arch Linux: Elixir is available on AUR via `yaourt -S elixir`
 ### Installing from Source
 
 Get [Erlang R16B](http://www.erlang.org/download.html), then [download a precompiled package](https://github.com/elixir-lang/elixir/releases/latest).
+
