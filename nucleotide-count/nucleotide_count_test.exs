@@ -38,14 +38,30 @@ defmodule DNATest do
   end
 
   @tag :pending
-  test "dna has no uracil" do
-    assert DNA.count('GATTACA', ?U) == 0
-  end
-
-  @tag :pending
   test "counts all nucleotides" do
     s = 'AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC'
     expected = %{?A => 20, ?T => 21, ?C => 12, ?G => 17}
     assert DNA.nucleotide_counts(s) == expected
+  end
+
+  @tag :pending
+  test "count validates the nucleotide" do
+    assert_raise ArgumentError, fn ->
+      DNA.count('', ?U)
+    end
+  end
+
+  @tag :pending
+  test "count validates the strand" do
+    assert_raise ArgumentError, fn ->
+      DNA.count('JOHNNYAPPLESEED', ?A)
+    end
+  end
+
+  @tag :pending
+  test "nucleotide_counts validates the strand" do
+    assert_raise ArgumentError, fn ->
+      DNA.nucleotide_counts('JOHNNYAPPLESEED')
+    end
   end
 end

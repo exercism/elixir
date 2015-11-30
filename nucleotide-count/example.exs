@@ -13,10 +13,11 @@ defmodule DNA do
   1
   """
 
-  def count(strand, nucleotide) do
+  def count(strand, nucleotide) when nucleotide in(@nucleotides) do
+    validate!(strand)
     Enum.count strand, &(&1 == nucleotide)
   end
-
+  def count(_strand, _nucleotide), do: raise ArgumentError
 
   @doc """
   Returns a summary of counts by nucleotide.
@@ -29,5 +30,9 @@ defmodule DNA do
 
   def nucleotide_counts(strand) do
     Enum.map(@nucleotides, &{&1, count(strand, &1)}) |> Enum.into(%{})
+  end
+
+  defp validate!(strand) do
+    unless Enum.all?(strand, &(&1 in @nucleotides)), do: raise ArgumentError
   end
 end
