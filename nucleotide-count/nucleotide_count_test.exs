@@ -38,11 +38,6 @@ defmodule DNATest do
   end
 
   @tag :pending
-  test "dna has no uracil" do
-    assert DNA.count('GATTACA', ?U) == 0
-  end
-
-  @tag :pending
   test "counts all nucleotides" do
     s = 'AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC'
     expected = %{?A => 20, ?T => 21, ?C => 12, ?G => 17}
