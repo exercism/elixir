@@ -26,6 +26,11 @@ defmodule SumOfMultiplesTest do
   end
 
   @tag :pending
+  test "sum to 20" do
+    assert SumOfMultiples.to(20) == 78
+  end
+
+  @tag :pending
   test "sum to 1000" do
     assert SumOfMultiples.to(1000) == 233168
   end
