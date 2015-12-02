@@ -1,19 +1,19 @@
-defmodule Teenager do
+defmodule Bob do
   @doc """
   Answers to `hey` like a teenager.
 
   ## Examples
 
-  iex> Teenager.hey("")
+  iex> Bob.hey("")
   "Fine. Be that way!"
 
-  iex> Teenager.hey("Do you like math?")
+  iex> Bob.hey("Do you like math?")
   "Sure."
 
-  iex> Teenager.hey("HELLO!")
+  iex> Bob.hey("HELLO!")
   "Whoa, chill out!"
 
-  iex> Teenager.hey("Coding is cool.")
+  iex> Bob.hey("Coding is cool.")
   "Whatever."
   """
 
@@ -32,8 +32,8 @@ defmodule Teenager do
   defp letters?(input),  do: Regex.match?(~r/\p{L}+/, input)
 end
 
-# Another approach which abstracts knowing about string categories 
-# away from Teenager and into a single responsibility module.
+# Another approach which abstracts knowing about string categories
+# away from Bob and into a single responsibility module.
 # (This has been commented out to avoid raising a needless "redefinition"
 # warning)
 
@@ -43,10 +43,10 @@ end
 #   def question?(input), do: String.ends_with?(input, "?")
 #   defp letters?(input), do: Regex.match?(~r/\p{L}+/, input)
 # end
-# 
-# defmodule Teenager do
+#
+# defmodule Bob do
 #   import Message, only: [silent?: 1, shouting?: 1, question?: 1]
-# 
+#
 #   def hey(input) do
 #     cond do
 #       silent?(input)   -> "Fine. Be that way!"
