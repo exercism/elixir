@@ -28,7 +28,7 @@ defmodule DNA do
   %{?A => 4, ?T => 1, ?C => 0, ?G => 0}
   """
 
-  def nucleotide_counts(strand) do
+  def histogram(strand) do
     Enum.map(@nucleotides, &{&1, count(strand, &1)}) |> Enum.into(%{})
   end
 
