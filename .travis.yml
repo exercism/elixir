@@ -1,7 +1,7 @@
+---
 language: elixir
-
 script:
-  - bin/fetch-configlet
-  - bin/configlet .
-  - mix deps.get
-  - EXERCISM_TEST_EXAMPLES=true mix test
+- bin/fetch-configlet
+- bin/configlet .
+- mix deps.get
+- EXERCISM_TEST_EXAMPLES=true mix test
