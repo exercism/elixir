@@ -21,7 +21,7 @@ For example:
 ```elixir
 # @tag :pending
 test "shouting" do
-  assert Teenager.hey("WATCH OUT!") == "Whoa, chill out!"
+  assert Bob.hey("WATCH OUT!") == "Whoa, chill out!"
 end
 ```
 
