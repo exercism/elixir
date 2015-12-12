@@ -14,6 +14,6 @@ There is no "conversion cost" for calling Erlang, meaning you can run Erlang cod
 
 Elixir has "First Class Documentation" meaning comments that can be attached to a function, making it easier to retrieve. Regular expressions are also given first class treatment so that you don't have to escape the escape of strings etc.
 
-[whatsapp.com](https://www.whatsapp.com/) is built upon Erlang and touts that it has been able to handle more than 2 Million users *concurrently* on a single server node. Elixir programmers have been able to acieve similar results, showing that Elixir compiles down without losing the power of Erlang.
+[whatsapp.com](https://www.whatsapp.com/) is built upon Erlang and touts that it has been able to handle more than 2 Million users *concurrently* on a single server node. Elixir programmers have been able to achieve similar results, showing that Elixir compiles down without losing the power of Erlang.
 
 The [Phoenix framework](http://www.phoenixframework.org/) helps structure Elixir applications for the web.  
