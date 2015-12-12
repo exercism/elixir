@@ -1,0 +1,19 @@
+[*Elixir*](http://elixir-lang.org/) extends upon the already robust features of Erlang while also being easier for beginners to access, read, and write. Ruby strongly influences the syntax, testing, and structure. Unlike Ruby, everything in Elixir is an *expression*. Clojure users will recognize features like protocols.
+
+Elixir actually compiles down to [bytecode](https://en.wikipedia.org/wiki/Bytecode) and then run on the [BEAM Erlang Virtual Machine](https://erlangcentral.org/euc-2014-robert-virding-hitchhikers-tour-of-the-beam/#.VmsIIBorJE4).
+
+The asynchronous communication implementation allows the code to be lightweight, yet incorporate high-volume concurrency.
+
+Jose' Valim, the creator of Elixir, explains [here](https://vimeo.com/53221562) how he built the language for applications to be:
+1) Distributed
+2) Fault-Tolerant
+3) Soft-Real-Time
+4) Hot-Code-Swapped (can introduce new code without stopping the sever)
+
+There is no "conversion cost" for calling Erlang, meaning you can run Erlang code right next to Elixir code.
+
+Elixir has "First Class Documentation" meaning comments that can be attached to a function, making it easier to retrieve. Regular expressions are also given first class treatment so that you don't have to escape the escape of strings etc.
+
+[whatsapp.com](https://www.whatsapp.com/) is built upon Erlang and touts that it has been able to handle more than 2 Million users *concurrently* on a single server node. Elixir programmers have been able to acieve similar results, showing that Elixir compiles down without losing the power of Erlang.
+
+The [Phoenix framework](http://www.phoenixframework.org/) helps structure Elixir applications for the web.  
