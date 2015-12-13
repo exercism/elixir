@@ -4,7 +4,7 @@ Elixir actually compiles down to [bytecode](https://en.wikipedia.org/wiki/Byteco
 
 The asynchronous communication implementation allows the code to be lightweight, yet incorporate high-volume concurrency.
 
-Jose' Valim, the creator of Elixir, explains [here](https://vimeo.com/53221562) how he built the language for applications to be:
+José Valim, the creator of Elixir, explains [here](https://vimeo.com/53221562) how he built the language for applications to be:
 1) Distributed
 2) Fault-Tolerant
 3) Soft-Real-Time
@@ -12,8 +12,8 @@ Jose' Valim, the creator of Elixir, explains [here](https://vimeo.com/53221562) 
 
 There is no "conversion cost" for calling Erlang, meaning you can run Erlang code right next to Elixir code.
 
-Elixir has "First Class Documentation" meaning comments that can be attached to a function, making it easier to retrieve. Regular expressions are also given first class treatment so that you don't have to escape the escape of strings etc.
+Elixir has "First Class Documentation" meaning comments that can be attached to a function, making it easier to retrieve. Regular expressions are also given first class treatment, removing awkward escaping within strings.
 
-[whatsapp.com](https://www.whatsapp.com/) is built upon Erlang and touts that it has been able to handle more than 2 Million users *concurrently* on a single server node. Elixir programmers have been able to achieve similar results, showing that Elixir compiles down without losing the power of Erlang.
+Elixir programmers have been able to achieve handle thousands of requests and responses *concurrently* on a single server node. It has been used successfully for microservices that need to consume and serve a multitude of APIs rapidly. 
 
 The [Phoenix framework](http://www.phoenixframework.org/) helps structure Elixir applications for the web.  
