@@ -1,4 +1,4 @@
-[*Elixir*](http://elixir-lang.org/) extends upon the already robust features of Erlang while also being easier for beginners to access, read, and write. Ruby strongly influences the syntax, testing, and structure. Unlike Ruby, everything in Elixir is an *expression*. Clojure users will recognize features like protocols.
+[*Elixir*](http://elixir-lang.org/), initially released in 2012, extends upon the already robust features of Erlang while also being easier for beginners to access, read, test, and write. Everything in Elixir is an expression.
 
 Elixir actually compiles down to [bytecode](https://en.wikipedia.org/wiki/Bytecode) and then run on the [BEAM Erlang Virtual Machine](https://erlangcentral.org/euc-2014-robert-virding-hitchhikers-tour-of-the-beam/#.VmsIIBorJE4).
 
@@ -14,6 +14,6 @@ There is no "conversion cost" for calling Erlang, meaning you can run Erlang cod
 
 Elixir has "First Class Documentation" meaning comments that can be attached to a function, making it easier to retrieve. Regular expressions are also given first class treatment, removing awkward escaping within strings.
 
-Elixir programmers have been able to achieve handle thousands of requests and responses *concurrently* on a single server node. It has been used successfully for microservices that need to consume and serve a multitude of APIs rapidly. 
+Programmers use Elixir to handle thousands of requests and responses *concurrently* on a single server node. It has been used successfully for microservices that need to consume and serve a multitude of APIs rapidly. 
 
 The [Phoenix framework](http://www.phoenixframework.org/) helps structure Elixir applications for the web.  
