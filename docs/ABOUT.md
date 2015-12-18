@@ -1,0 +1,4 @@
+"Elixir is a functional, concurrent, general-purpose programming language that runs on the Erlang virtual machine (BEAM). Elixir builds on top of Erlang to provide distributed, fault-tolerant, soft real-time, non-stop applications but also extends it to support metaprogramming with macros and polymorphism via protocols." -
+[https://en.wikipedia.org/wiki/Elixir_(programming_language)](https://en.wikipedia.org/wiki/Elixir_(programming_language))
+
+Created by José Valim, a core contributor to Rails (of Ruby on Rails fame), Elixir strives to combine the benefits of a modern functional programming language with a powerful concurrency model, similar to that found in Go, and the beautiful syntax and productivity of a language like Ruby. In short, it offers [the power of Erlang with the joy of Ruby](https://www.youtube.com/watch?v=lww1aZ-ldz0).
