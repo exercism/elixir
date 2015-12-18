@@ -1,10 +1,10 @@
-José Valim, the creator of Elixir, explains [here](https://vimeo.com/53221562) how he built the language for applications to be:
-1) Distributed
-2) Fault-Tolerant
-3) Soft-Real-Time
-4) Hot-Code-Swapped (can introduce new code without stopping the sever)
-
 [Elixir](http://elixir-lang.org/), initially released in 2012, extends upon the already robust features of Erlang while also being easier for beginners to access, read, test, and write.
+
+José Valim, the creator of Elixir, explains [here](https://vimeo.com/53221562) how he built the language for applications to be:
+  1. Distributed
+  2. Fault-Tolerant
+  3. Soft-Real-Time
+  4. Hot-Code-Swapped (can introduce new code without stopping the sever)
 
 Elixir actually compiles down to [bytecode](https://en.wikipedia.org/wiki/Bytecode) and then run on the [BEAM Erlang Virtual Machine](https://erlangcentral.org/euc-2014-robert-virding-hitchhikers-tour-of-the-beam/#.VmsIIBorJE4).
 
