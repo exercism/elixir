@@ -76,7 +76,6 @@ defmodule BobTest do
 
   @tag :pending
   test "shouting in Russian" do
-    # Hopefully this is Russian for "GET OUT"
-    assert Bob.hey("УХОДИТЬ") == "Whoa, chill out!"
+    assert Bob.hey("УХОДИ") == "Whoa, chill out!"
   end
 end
