@@ -5,3 +5,4 @@ script:
 - bin/configlet .
 - mix deps.get
 - EXERCISM_TEST_EXAMPLES=true mix test
+sudo: false
