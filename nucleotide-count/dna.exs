@@ -27,7 +27,7 @@ defmodule DNA do
   %{?A => 4, ?T => 1, ?C => 0, ?G => 0}
   """
   @spec histogram([char]) :: Dict.t
-  def nucleotide_counts(strand) do
+  def histogram(strand) do
 
   end
 end
