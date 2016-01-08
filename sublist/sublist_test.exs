@@ -83,6 +83,11 @@ defmodule SublistTest do
   end
 
   @tag :pending
+  test "1 and 2 does not contain 3" do
+    assert Sublist.compare([1,2], [3]) == :unequal
+  end
+
+  @tag :pending
   test "partially matching superlist at start" do
     assert Sublist.compare([1,1,1,2], [1,1,2]) == :superlist
   end
