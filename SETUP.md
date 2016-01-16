@@ -33,4 +33,4 @@ Or, you can enable all the tests by commenting out the
 ```
 
 For more detailed information about the Elixir track, please
-see the [help page](http://help.exercism.io/getting-started-with-elixir.html).
+see the [help page](http://exercism.io/languages/elixir).
