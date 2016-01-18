@@ -1,6 +1,10 @@
 defmodule Binary do
   def to_decimal(string) do
-    string |> bits |> Enum.reverse |> Enum.with_index |> sum
+    if !String.match?(string, ~r{[^10]}) do
+      string |> bits |> Enum.reverse |> Enum.with_index |> sum
+    else
+      0
+    end
   end
 
   defp bits(string), do: Enum.map(Regex.scan(~r{[10]}, string), &(&1 == ["1"]))
