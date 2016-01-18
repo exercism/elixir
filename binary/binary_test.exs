@@ -49,4 +49,14 @@ defmodule BinaryTest do
   test "invalid binary is decimal 0" do
     assert Binary.to_decimal("carrot") == 0
   end
+  
+  @tag :pending
+  test "invalid binary is decimal 0 II" do
+    assert Binary.to_decimal("convert01") == 0
+  end
+  
+  @tag :pending
+  test "invalid binary is decimal 0 III" do
+    assert Binary.to_decimal("10convert") == 0
+  end
 end
