@@ -1,8 +1,13 @@
 ---
 language: elixir
+elixir:
+  - 1.2.0-rc.0
+otp_release:
+  - 18.1
+
 script:
 - bin/fetch-configlet
 - bin/configlet .
 - mix deps.get
-- EXERCISM_TEST_EXAMPLES=true mix test --include pending
+- EXERCISM_TEST_EXAMPLES=true mix test --include pending **/*_test.exs
 sudo: false
