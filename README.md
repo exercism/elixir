@@ -1,5 +1,7 @@
 # xElixir
 
+![build status](https://travis-ci.org/exercism/xelixir.svg?branch=master)
+
 Exercism exercises in Elixir
 
 ## Contributing Guide
