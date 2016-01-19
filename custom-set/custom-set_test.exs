@@ -121,11 +121,11 @@ defmodule CustomSetTest do
 
   @tag :pending
   test "inspect" do
-    assert inspect(CustomSet.new) == "#<CustomSet []>"
-    assert inspect(CustomSet.new([1,3,2])) == "#<CustomSet [1, 2, 3]>"
+    assert inspect(CustomSet.new) == "%CustomSet{list: []}"
+    assert inspect(CustomSet.new([1,3,2])) == "%CustomSet{list: [1, 2, 3]}"
     # Weird ordering due to how Elixir/Erlang considers binaries, numbers and
     # atoms to be ordered.
-    assert inspect(CustomSet.new(["A",:b,?C])) == "#<CustomSet [67, :b, \"A\"]>"
+    assert inspect(CustomSet.new(["A",:b,?C])) == "%CustomSet{list: [67, :b, \"A\"]}"
   end
 end
 
