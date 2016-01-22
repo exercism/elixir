@@ -1,11 +1,5 @@
-if System.get_env("EXERCISM_TEST_EXAMPLES") do
-  Code.load_file("example.exs")
-else
-  Code.load_file("hello_world.exs")
-end
-
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+Code.load_file("../file_loader.ex", __DIR__)
+FileLoader.load("hello_world", __DIR__)
 
 defmodule HelloWorldTest do
   use ExUnit.Case, async: true

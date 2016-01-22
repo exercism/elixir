@@ -1,11 +1,5 @@
-if System.get_env("EXERCISM_TEST_EXAMPLES") do
-  Code.load_file("example.exs")
-else
-  Code.load_file("school.exs")
-end
-
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+Code.load_file("../file_loader.ex", __DIR__)
+FileLoader.load("school", __DIR__)
 
 defmodule SchoolTest do
   use ExUnit.Case, async: true
