@@ -101,7 +101,12 @@ defmodule LargestSeriesProductTest do
   end
 
   @tag :pending
-  test "identity" do
+  test "identity with empty string" do
     assert Series.largest_product("", 0) == 1
+  end
+
+  @tag :pending
+  test "identity with non-empty string" do
+    assert Series.largest_product("123", 0) == 1
   end
 end
