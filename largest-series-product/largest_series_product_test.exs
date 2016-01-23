@@ -101,6 +101,16 @@ defmodule LargestSeriesProductTest do
   end
 
   @tag :pending
+  test "number with all zeroes" do
+    assert Series.largest_product("0000", 2) == 0
+  end
+
+  @tag :pending
+  test "number where all products are zero" do
+    assert Series.largest_product("99099", 3) == 0
+  end
+
+  @tag :pending
   test "identity with empty string" do
     assert Series.largest_product("", 0) == 1
   end
