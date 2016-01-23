@@ -32,6 +32,7 @@ defmodule Series do
   end
 
   def largest_product(number_string, size) do
+    if size > String.length(number_string), do: raise ArgumentError
     slices = slices(number_string, size)
     Enum.map(slices, &Enum.reduce(&1, fn(x, acc) -> x * acc end))
     |> Enum.max
