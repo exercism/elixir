@@ -27,11 +27,12 @@ defmodule Series do
   Finds the largest product of a given number of consecutive numbers in a given string of numbers.
   """
   @spec largest_product(String.t, non_neg_integer) :: non_neg_integer
-  def largest_product("", _) do
+  def largest_product(_, 0) do
     1
   end
 
   def largest_product(number_string, size) do
+    if size > String.length(number_string), do: raise ArgumentError
     slices = slices(number_string, size)
     Enum.map(slices, &Enum.reduce(&1, fn(x, acc) -> x * acc end))
     |> Enum.max

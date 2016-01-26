@@ -101,7 +101,36 @@ defmodule LargestSeriesProductTest do
   end
 
   @tag :pending
-  test "identity" do
+  test "number with all zeroes" do
+    assert Series.largest_product("0000", 2) == 0
+  end
+
+  @tag :pending
+  test "number where all products are zero" do
+    assert Series.largest_product("99099", 3) == 0
+  end
+
+  @tag :pending
+  test "identity with empty string" do
     assert Series.largest_product("", 0) == 1
+  end
+
+  @tag :pending
+  test "identity with non-empty string" do
+    assert Series.largest_product("123", 0) == 1
+  end
+
+  @tag :pending
+  test "raises if span is too large" do
+    assert_raise ArgumentError, fn ->
+      Series.largest_product("123", 4)
+    end
+  end
+
+  @tag :pending
+  test "raises with empty string but non-zero span size" do
+    assert_raise ArgumentError, fn ->
+      Series.largest_product("", 1)
+    end
   end
 end
