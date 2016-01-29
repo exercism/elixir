@@ -4,7 +4,7 @@ José Valim, the creator of Elixir, explains [here](https://vimeo.com/53221562) 
   1. Distributed
   2. Fault-Tolerant
   3. Soft-Real-Time
-  4. Hot-Code-Swapped (can introduce new code without stopping the sever)
+  4. Hot-Code-Swapped (can introduce new code without stopping the server)
 
 Elixir actually compiles down to [bytecode](https://en.wikipedia.org/wiki/Bytecode) and then run on the [BEAM Erlang Virtual Machine](https://erlangcentral.org/euc-2014-robert-virding-hitchhikers-tour-of-the-beam/#.VmsIIBorJE4).
 
