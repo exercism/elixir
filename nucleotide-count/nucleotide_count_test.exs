@@ -45,7 +45,7 @@ defmodule DNATest do
   end
 
   @tag :pending
-  test "nucleotide_counts validates the strand" do
+  test "histogram validates the strand" do
     assert_raise ArgumentError, fn ->
       DNA.histogram('JOHNNYAPPLESEED')
     end
