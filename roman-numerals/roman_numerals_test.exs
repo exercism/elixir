@@ -1,11 +1,5 @@
-if System.get_env("EXERCISM_TEST_EXAMPLES") do
-  Code.load_file("example.exs")
-else
-  Code.load_file("roman.exs")
-end
-
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+Code.load_file("../file_loader.ex", __DIR__)
+FileLoader.load("roman", __DIR__)
 
 defmodule RomanTest do
   use ExUnit.Case, async: true

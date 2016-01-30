@@ -32,5 +32,17 @@ Or, you can enable all the tests by commenting out the
 # ExUnit.configure exclude: :pending, trace: true
 ```
 
+
+
+## Run all tests
+```bash
+
+# with your implementation
+$ mix run test/test_helper.exs
+
+# with example implementation
+$ EXERCISM_TEST_EXAMPLES=true mix run test/test_helper.exs
+```
+
 For more detailed information about the Elixir track, please
 see the [help page](http://exercism.io/languages/elixir).
