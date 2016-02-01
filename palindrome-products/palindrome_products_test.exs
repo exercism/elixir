@@ -8,7 +8,7 @@ ExUnit.start
 ExUnit.configure exclude: :pending, trace: true
 
 defmodule PalindromeProductsTest do
-  use ExUnit.Case, async: true
+  use ExUnit.Case
 
   # @tag :pending
   test "largest palindrome from single digit factors" do

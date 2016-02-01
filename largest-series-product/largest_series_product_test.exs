@@ -8,7 +8,7 @@ ExUnit.start
 ExUnit.configure exclude: :pending, trace: true
 
 defmodule LargestSeriesProductTest do
-  use ExUnit.Case, async: false
+  use ExUnit.Case
 
   # @tag :pending
   test "digits" do

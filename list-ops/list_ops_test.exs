@@ -10,7 +10,7 @@ ExUnit.configure exclude: :pending, trace: true
 defmodule ListOpsTest do
   alias ListOps, as: L
 
-  use ExUnit.Case, async: true
+  use ExUnit.Case
 
   defp odd?(n), do: rem(n, 2) == 1
 

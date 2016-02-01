@@ -8,7 +8,7 @@ ExUnit.start
 ExUnit.configure exclude: :pending, trace: true
 
 defmodule HelloWorldTest do
-  use ExUnit.Case, async: true
+  use ExUnit.Case
 
   test "says hello with no name" do
     assert HelloWorld.hello() == "Hello, World!"

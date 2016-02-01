@@ -8,7 +8,7 @@ ExUnit.start
 ExUnit.configure exclude: :pending, trace: true
 
 defmodule SumOfMultiplesTest do
-  use ExUnit.Case, async: true
+  use ExUnit.Case
 
   # @tag :pending
   test "sum to 1" do

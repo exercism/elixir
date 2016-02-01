@@ -8,7 +8,7 @@ ExUnit.start
 ExUnit.configure exclude: :pending, trace: true
 
 defmodule TransformTest do
-  use ExUnit.Case, async: true
+  use ExUnit.Case
 
   # @tag :pending
   test "transform one value" do

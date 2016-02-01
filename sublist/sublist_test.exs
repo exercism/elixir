@@ -8,7 +8,7 @@ ExUnit.start
 ExUnit.configure exclude: :pending, trace: true
 
 defmodule SublistTest do
-  use ExUnit.Case, async: true
+  use ExUnit.Case
 
   test "empty equals empty" do
     assert Sublist.compare([], []) == :equal
