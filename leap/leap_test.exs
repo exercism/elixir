@@ -8,7 +8,7 @@ ExUnit.start
 ExUnit.configure exclude: :pending, trace: true
 
 defmodule LeapTest do
-  use ExUnit.Case, async: true
+  use ExUnit.Case
 
   # @tag :pending
   test "vanilla leap year" do

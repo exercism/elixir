@@ -8,7 +8,7 @@ ExUnit.start
 ExUnit.configure exclude: :pending, trace: true
 
 defmodule DotTest do
-  use ExUnit.Case, async: true
+  use ExUnit.Case
   require Dot
 
   # Expand at RunTime, used to avoid invalid macro calls preventing compilation

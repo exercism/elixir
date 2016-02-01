@@ -8,7 +8,7 @@ ExUnit.start
 ExUnit.configure exclude: :pending, trace: true
 
 defmodule SchoolTest do
-  use ExUnit.Case, async: true
+  use ExUnit.Case
 
   def db, do: %{}
 

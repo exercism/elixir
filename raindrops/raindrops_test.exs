@@ -8,7 +8,7 @@ ExUnit.start
 ExUnit.configure exclude: :pending, trace: true
 
 defmodule RaindropsTest do
-  use ExUnit.Case, async: true
+  use ExUnit.Case
 
   # @tag :pending
   test "1" do

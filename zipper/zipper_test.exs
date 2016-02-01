@@ -26,7 +26,7 @@ defmodule ZipperTest do
     end
   end
 
-  use ExUnit.Case, async: false
+  use ExUnit.Case
 
   defp bt(value, left, right), do: %BT{value: value, left: left, right: right}
   defp leaf(value), do: %BT{value: value}

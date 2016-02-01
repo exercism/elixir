@@ -9,7 +9,7 @@ ExUnit.start
 ExUnit.configure exclude: :pending, trace: true
 
 defmodule AllergiesTest do
-  use ExUnit.Case, async: true
+  use ExUnit.Case
 
   # @tag :pending
   test "no_allergies_at_all" do

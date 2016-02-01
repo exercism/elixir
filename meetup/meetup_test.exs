@@ -8,7 +8,7 @@ ExUnit.start
 ExUnit.configure exclude: :pending, trace: true
 
 defmodule MeetupTest do
-  use ExUnit.Case, async: false
+  use ExUnit.Case
 
   # @tag :pending
   test "monteenth of may 2013" do

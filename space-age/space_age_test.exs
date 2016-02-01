@@ -12,7 +12,7 @@ ExUnit.configure exclude: :pending, trace: true
 # on that planet as a floating point number.
 
 defmodule SpageAgeTest do
-  use ExUnit.Case, async: true
+  use ExUnit.Case
 
   # @tag :pending
   test "age on Earth" do

@@ -25,7 +25,7 @@ ExUnit.configure exclude: :pending, trace: true
 # The initial value of the bank account should be 0.
 
 defmodule BankAccountTest do
-  use ExUnit.Case, async: false # Tests should not overlap in execution.
+  use ExUnit.Case
 
   setup do
     account = BankAccount.open_bank()
