@@ -66,7 +66,7 @@ defmodule Forth do
 
     defp push(s, x), do: %{s | stack: [x|s.stack]}
   end
-  
+
   @doc """
   Create a new evaluator.
   """

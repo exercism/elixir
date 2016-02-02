@@ -19,7 +19,7 @@ defmodule Palindromes do
 
   defp add_factor(dict, x, y) do
     product = x * y
-    Dict.update(dict, product, 
+    Dict.update(dict, product,
       [[x, y]], fn(val) -> Enum.concat(val, [[x, y]]) end)
   end
 

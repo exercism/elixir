@@ -21,7 +21,7 @@ defmodule Atbash do
     plaintext
       |> String.to_char_list
       |> Enum.map(&convert/1)
-      |> List.to_string 
+      |> List.to_string
   end
 
   defp convert(character) do
