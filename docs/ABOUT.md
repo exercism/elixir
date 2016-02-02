@@ -6,7 +6,7 @@ José Valim, the creator of Elixir, explains [here](https://vimeo.com/53221562) 
   3. Soft-Real-Time
   4. Hot-Code-Swapped (can introduce new code without stopping the server)
 
-Elixir actually compiles down to [bytecode](https://en.wikipedia.org/wiki/Bytecode) and then run on the [BEAM Erlang Virtual Machine](https://erlangcentral.org/euc-2014-robert-virding-hitchhikers-tour-of-the-beam/#.VmsIIBorJE4).
+Elixir actually compiles down to [bytecode](https://en.wikipedia.org/wiki/Bytecode) and then runs on the [BEAM Erlang Virtual Machine](https://erlangcentral.org/euc-2014-robert-virding-hitchhikers-tour-of-the-beam/#.VmsIIBorJE4).
 
 There is no "conversion cost" for calling Erlang, meaning you can run Erlang code right next to Elixir code.
 
