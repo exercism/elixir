@@ -23,6 +23,10 @@ Please keep the following in mind:
 
 - Please open an issue before creating a PR that makes significant (breaking) changes to an existing exercise or makes changes across many exercises. It is best to discuss these changes before doing the work.
 
+- Follow the coding standards found in [The Elixir Style Guide](https://github.com/niftyn8/elixir_style_guide).
+
+- Watch out for trailing spaces, extra blank lines, and spaces in blank lines.
+
 - Each exercise must stand on its own. Do not reference files outside the exercise directory. They will not be included when the user fetches the exercise.
 
 - Please do not add a README or README.md file to the exercise directory. The READMEs are constructed using shared metadata, which lives in the
@@ -30,6 +34,8 @@ Please keep the following in mind:
 
 - Each problem should have a test suite, an example solution, and a template file for the real implementation.
 The example solution should be named `example.exs`.
+
+- Use typespecs in the example and template files as described [here](http://elixir-lang.org/getting-started/typespecs-and-behaviours.html).
 
 - Each test file should have code like the following at the top of the file. This allows the tests to be run on CI and configures tests to be skipped with the `:pending` flag.
 
@@ -45,7 +51,6 @@ ExUnit.configure exclude: :pending, trace: true
 ```
 
 - All but the intial test for each exercise should be tagged `:pending`.
-
 
 ```elixir
 @tag :pending
