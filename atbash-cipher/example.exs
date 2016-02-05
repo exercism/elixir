@@ -10,7 +10,7 @@ defmodule Atbash do
   "xlnko vgvob rmhvx fiv"
   """
   def encode(plaintext) do
-    plaintext |> normalize |> cipher |> chunk |> Enum.join " "
+    plaintext |> normalize |> cipher |> chunk |> Enum.join(" ")
   end
 
   defp normalize(input) do
