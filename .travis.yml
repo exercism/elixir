@@ -9,5 +9,5 @@ script:
 - bin/fetch-configlet
 - bin/configlet .
 - mix deps.get
-- EXERCISM_TEST_EXAMPLES=true mix test --include pending **/*_test.exs
+- EXERCISM_TEST_EXAMPLES=true mix test --include pending **/**/*_test.exs
 sudo: false
