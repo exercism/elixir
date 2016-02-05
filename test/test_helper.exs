@@ -6,7 +6,8 @@ active_problems = "config.json"
 |> Dict.get("problems")
 
 Enum.each active_problems, fn dir ->
-    File.cd! dir
+    Path.join(["exercises", dir])
+    |> File.cd!
     IO.puts "loading tests for " <> dir
     "*test.ex*" |> Path.wildcard |> List.first |> Code.require_file
     File.cd! project_root
