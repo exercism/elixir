@@ -18,7 +18,7 @@ defmodule Allergies do
   end
 
   def allergic_to?(flags, item) do
-    Enum.member? list(flags), item
+    Enum.member?(list(flags), item)
   end
 
   defp flagged?(flags, {_, index}) do

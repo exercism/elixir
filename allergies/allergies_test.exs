@@ -13,42 +13,42 @@ defmodule AllergiesTest do
 
   # @tag :pending
   test "no_allergies_at_all" do
-    Allergies.list(0) |> assert_is_a_set_containing []
+    Allergies.list(0) |> assert_is_a_set_containing([])
   end
 
   @tag :pending
   test "allergic_to_just_eggs" do
-    Allergies.list(1) |> assert_is_a_set_containing ~w[eggs]
+    Allergies.list(1) |> assert_is_a_set_containing(~w[eggs])
   end
 
   @tag :pending
   test "allergic_to_just_peanuts" do
-    Allergies.list(2) |> assert_is_a_set_containing ~w[peanuts]
+    Allergies.list(2) |> assert_is_a_set_containing(~w[peanuts])
   end
 
   @tag :pending
   test "allergic_to_just_strawberries" do
-    Allergies.list(8) |> assert_is_a_set_containing ~w[strawberries]
+    Allergies.list(8) |> assert_is_a_set_containing(~w[strawberries])
   end
 
   @tag :pending
   test "allergic_to_eggs_and_peanuts" do
-    Allergies.list(3) |> assert_is_a_set_containing ~w[eggs peanuts]
+    Allergies.list(3) |> assert_is_a_set_containing(~w[eggs peanuts])
   end
 
   @tag :pending
   test "allergic_to_more_than_eggs_but_not_peanuts" do
-    Allergies.list(5) |> assert_is_a_set_containing ~w[eggs shellfish]
+    Allergies.list(5) |> assert_is_a_set_containing(~w[eggs shellfish])
   end
 
   @tag :pending
   test "allergic_to_lots_of_stuff" do
-    Allergies.list(248) |> assert_is_a_set_containing ~w[strawberries tomatoes chocolate pollen cats]
+    Allergies.list(248) |> assert_is_a_set_containing(~w[strawberries tomatoes chocolate pollen cats])
   end
 
   @tag :pending
   test "allergic_to_everything" do
-    Allergies.list(255) |> assert_is_a_set_containing ~w[eggs peanuts shellfish strawberries tomatoes chocolate pollen cats]
+    Allergies.list(255) |> assert_is_a_set_containing(~w[eggs peanuts shellfish strawberries tomatoes chocolate pollen cats])
   end
 
   @tag :pending
@@ -70,7 +70,7 @@ defmodule AllergiesTest do
 
   @tag :pending
   test "ignore_non_allergen_score_parts" do
-    Allergies.list(509) |> assert_is_a_set_containing ~w[eggs shellfish strawberries tomatoes chocolate pollen cats]
+    Allergies.list(509) |> assert_is_a_set_containing(~w[eggs shellfish strawberries tomatoes chocolate pollen cats])
   end
 
   defp assert_is_a_set_containing(list, to_contain) do

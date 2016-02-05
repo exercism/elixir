@@ -106,15 +106,15 @@ defmodule Zipper do
   """
   @spec set_value(Z.t, any) :: Z.t
   def set_value(z, v), do: %{z | value: v}
-  
+
   @doc """
-  Replace the left child tree of the focus node. 
+  Replace the left child tree of the focus node.
   """
   @spec set_left(Z.t, BT.t) :: Z.t
   def set_left(z, l), do: %{z | left: l}
-  
+
   @doc """
-  Replace the right child tree of the focus node. 
+  Replace the right child tree of the focus node.
   """
   @spec set_right(Z.t, BT.t) :: Z.t
   def set_right(z, r), do: %{z | right: r}

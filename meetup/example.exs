@@ -2,7 +2,7 @@ defmodule Meetup do
   @moduledoc """
   Calculate meetup dates.
   """
-  
+
   @type weekday ::
       :monday | :tuesday | :wednesday
     | :thursday | :friday | :saturday | :sunday
@@ -44,8 +44,8 @@ defmodule Meetup do
   defp weekday_num(:sunday),    do: 7
 
   defp schedule_start(:first),  do: 1
-  defp schedule_start(:second), do: 8 
-  defp schedule_start(:third),  do: 15 
-  defp schedule_start(:fourth), do: 22 
+  defp schedule_start(:second), do: 8
+  defp schedule_start(:third),  do: 15
+  defp schedule_start(:fourth), do: 22
   defp schedule_start(:teenth), do: 13
 end

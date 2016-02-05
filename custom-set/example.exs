@@ -10,7 +10,7 @@ defmodule CustomSet do
   defstruct list: []
 
   def new() do
-    %CustomSet{} 
+    %CustomSet{}
   end
 
   def new(coll) do
@@ -85,7 +85,7 @@ defmodule CustomSet do
   end
 
   @compile { :inline, wrap: 1, unwrap: 1 }
-    
+
   defp wrap(l) do
     %CustomSet{list: l}
   end

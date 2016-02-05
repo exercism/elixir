@@ -4,9 +4,9 @@ defmodule BankAccount do
   """
 
   use GenServer
-  
+
   ## Callbacks
-  
+
   def init(_args) do
     { :ok, 0 }
   end
@@ -23,9 +23,9 @@ defmodule BankAccount do
     # We stop normally and return :stopped to the caller.
     { :stop, :normal, :stopped, balance }
   end
-  
+
   ## Interface for tests
-  
+
   @typedoc """
   An account handle.
   """
@@ -53,9 +53,9 @@ defmodule BankAccount do
   """
   @spec balance(account) :: integer
   def balance(account) do
-    :gen_server.call(account, :balance) 
+    :gen_server.call(account, :balance)
   end
- 
+
   @doc """
   Update the account's balance by adding the given amount which may be negative.
   """

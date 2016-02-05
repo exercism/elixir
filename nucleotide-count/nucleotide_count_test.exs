@@ -14,12 +14,12 @@ defmodule DNATest do
   test "empty dna string has no adenosine" do
     assert DNA.count('', ?A) == 0
   end
-  
+
   @tag :pending
   test "repetitive cytidine gets counted" do
     assert DNA.count('CCCCC', ?C) == 5
   end
-  
+
   @tag :pending
   test "counts only thymidine" do
     assert DNA.count('GGGGGTAACCCGG', ?T) == 1
@@ -50,14 +50,14 @@ defmodule DNATest do
       DNA.histogram('JOHNNYAPPLESEED')
     end
   end
-    
+
   @tag :pending
   test "count validates the nucleotide" do
     assert_raise ArgumentError, fn ->
       DNA.count('', ?U)
     end
   end
-  
+
   @tag :pending
   test "count validates the strand" do
     assert_raise ArgumentError, fn ->

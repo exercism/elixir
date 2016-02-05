@@ -4,7 +4,7 @@ defmodule Allergies do
   """
   @spec list(non_neg_integer) :: [String.t]
   def list(flags) do
-  
+
   end
 
   @doc """
@@ -12,6 +12,6 @@ defmodule Allergies do
   """
   @spec allergic_to?(non_neg_integer, String.t) :: boolean
   def allergic_to?(flags, item) do
-  
+
   end
 end

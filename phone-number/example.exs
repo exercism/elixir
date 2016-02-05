@@ -24,7 +24,7 @@ defmodule Phone do
 
   @doc """
   Get the area code of a phone number.
-  
+
   The area code is the first three digits of a cleaned up phone number.
   """
   @spec area_code(String.t) :: String.t
