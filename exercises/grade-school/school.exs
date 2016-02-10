@@ -8,7 +8,7 @@ defmodule School do
   @doc """
   Add a student to a particular grade in school.
   """
-  @spec add([{atom, any}], String.t, atom) :: [{atom, any}]
+  @spec add(map, String.t, integer) :: map
   def add(db, name, grade) do
 
   end
@@ -16,7 +16,7 @@ defmodule School do
   @doc """
   Return the names of the students in a particular grade.
   """
-  @spec grade([{atom, any}], atom) :: any
+  @spec grade(map, integer) :: [String.t]
   def grade(db, grade) do
 
   end
@@ -24,7 +24,7 @@ defmodule School do
   @doc """
   Sorts the school by grade and name.
   """
-  @spec sort([{atom, any}]) :: [{atom, any}]
+  @spec sort(map) :: [{integer, [String.t]}]
   def sort(db) do
 
   end

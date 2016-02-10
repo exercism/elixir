@@ -10,62 +10,62 @@ ExUnit.configure exclude: :pending, trace: true
 defmodule SchoolTest do
   use ExUnit.Case
 
-  def db, do: []
+  def db, do: %{}
 
   test "add student" do
-    actual = School.add(db, "Aimee", :grade_2)
-    assert actual == [grade_2: ["Aimee"]]
+    actual = School.add(db, "Aimee", 2)
+    assert actual == %{2 =>["Aimee"]}
   end
 
   @tag :pending
   test "add more students in same class" do
     actual = db
-     |> School.add("James", :grade_2)
-     |> School.add("Blair", :grade_2)
-     |> School.add("Paul", :grade_2)
+     |> School.add("James", 2)
+     |> School.add("Blair", 2)
+     |> School.add("Paul", 2)
 
-    assert Enum.sort(actual[:grade_2]) == ["Blair", "James", "Paul"]
+    assert Enum.sort(actual[2]) == ["Blair", "James", "Paul"]
   end
 
   @tag :pending
   test "add students to different grades" do
     actual = db
-     |> School.add("Chelsea", :grade_3)
-     |> School.add("Logan", :grade_7)
+     |> School.add("Chelsea", 3)
+     |> School.add("Logan", 7)
 
-    assert actual == [grade_3: ["Chelsea"], grade_7: ["Logan"]]
+    assert actual == %{3 => ["Chelsea"], 7 => ["Logan"]}
   end
 
   @tag :pending
   test "get students in a grade" do
     actual = db
-     |> School.add("Bradley", :grade_5)
-     |> School.add("Franklin", :grade_5)
-     |> School.add("Jeff", :grade_1)
-     |> School.grade(:grade_5)
+     |> School.add("Bradley", 5)
+     |> School.add("Franklin", 5)
+     |> School.add("Jeff", 1)
+     |> School.grade(5)
 
     assert Enum.sort(actual) == ["Bradley", "Franklin"]
   end
 
   @tag :pending
   test "get students in a non existent grade" do
-    assert [] == School.grade(db, :grade_1)
+    assert [] == School.grade(db, 1)
   end
 
   @tag :pending
   test "sort school by grade and by student name" do
     actual = db
-     |> School.add("Bart", :grade_4)
-     |> School.add("Jennifer", :grade_4)
-     |> School.add("Christopher", :grade_4)
-     |> School.add("Kareem", :grade_6)
-     |> School.add("Kyle", :grade_3)
-     |> School.sort
+    |> School.add("Bart", 4)
+    |> School.add("Jennifer", 4)
+    |> School.add("Christopher", 4)
+    |> School.add("Kareem", 6)
+    |> School.add("Kyle", 3)
+    |> School.sort
 
     expected = [
-     grade_3: ["Kyle"],
-     grade_4: ["Bart", "Christopher", "Jennifer"],
-     grade_6: ["Kareem"]
+      {3, ["Kyle"]},
+      {4, ["Bart", "Christopher", "Jennifer"]},
+      {6, ["Kareem"]}
     ]
 
     assert expected == actual
