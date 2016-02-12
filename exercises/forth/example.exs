@@ -95,7 +95,7 @@ defmodule Forth do
       case Enum.split_while(t, &(&1 != ";")) do
         { _, [] }         -> s # ";" not found
         { ws, [";" | r] } ->
-          do_eval(%{s | defs: Dict.put(s.defs, w, ws), input: r})
+          do_eval(%{s | defs: Map.put(s.defs, w, ws), input: r})
       end
     else
       # User tried to define a number.

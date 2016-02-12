@@ -9,7 +9,7 @@ defmodule ETL do
   """
   def transform(input) do
     input
-      |> Dict.to_list
+      |> Map.to_list
       |> invert
       |> List.flatten
       |> Enum.into(%{})

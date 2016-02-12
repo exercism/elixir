@@ -31,7 +31,7 @@ defmodule Minesweeper do
     Enum.reduce(@adjacent_vecs, d, fn v, acc ->
       c1 = add_vec(c, v)
       if valid?(c1, bounds) do
-        Dict.update(acc, c1, 1, &(&1+1))
+        Map.update(acc, c1, 1, &(&1+1))
       else
         acc
       end

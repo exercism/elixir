@@ -30,12 +30,12 @@ defmodule Frequency do
     String.replace(string, ~r/\P{L}+/u, "") # \P{L} = anything but a letter
     |> String.downcase()
     |> String.graphemes()
-    |> Enum.reduce(%{}, fn c, acc -> Dict.update(acc, c, 1, &(&1+1)) end)
+    |> Enum.reduce(%{}, fn c, acc -> Map.update(acc, c, 1, &(&1+1)) end)
   end
 
   defp merge_freqs(dicts) do
     Enum.reduce(dicts, %{}, fn d, acc ->
-      Dict.merge(acc, d, fn _, a, b -> a+b end)
+      Map.merge(acc, d, fn _, a, b -> a+b end)
     end)
   end
 end

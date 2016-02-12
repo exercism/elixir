@@ -26,7 +26,7 @@ defmodule DNA do
   iex> DNA.histogram('AATAA')
   %{?A => 4, ?T => 1, ?C => 0, ?G => 0}
   """
-  @spec histogram([char]) :: Dict.t
+  @spec histogram([char]) :: Map
   def histogram(strand) do
 
   end
