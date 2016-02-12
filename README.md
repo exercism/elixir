@@ -1,7 +1,7 @@
 # xElixir
 ![build status](https://travis-ci.org/exercism/xelixir.svg?branch=master)
 
-Exercism Exercises in Elixir	
+Exercism Exercises in Elixir
 
 ## Setup
 
@@ -59,7 +59,7 @@ test "shouting" do
 end
 ```
 
-All the tests for xElixir exercises can be run from the top level of the repo with `EXERCISM_TEST_EXAMPLES=true mix test --include pending **/*_test.exs`. Please run this command before submitting your PR. Watch out for and correct any compiler warnings you may have introduced.
+All the tests for xElixir exercises can be run from the top level of the repo with `$ EXERCISM_TEST_EXAMPLES=true mix test --include pending exercises/**/*_test.exs`. Please run this command before submitting your PR. Watch out for and correct any compiler warnings you may have introduced.
 
 ## License
 
