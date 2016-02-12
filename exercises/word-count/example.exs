@@ -18,6 +18,6 @@ defmodule Words do
   end
 
   defp add_count(word, counts) do
-    Dict.update(counts, word, 1, &(&1 + 1))
+    Map.update(counts, word, 1, &(&1 + 1))
   end
 end

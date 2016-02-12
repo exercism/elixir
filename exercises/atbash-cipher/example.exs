@@ -25,7 +25,7 @@ defmodule Atbash do
   end
 
   defp convert(character) do
-    Dict.get(@key, character, character)
+    Map.get(@key, character, character)
   end
 
   defp chunk(input) do
