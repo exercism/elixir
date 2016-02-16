@@ -8,6 +8,7 @@
     "bob",
     "word-count",
     "acronym",
+    "run-length-encoding",
     "list-ops",
     "sublist",
     "anagram",
