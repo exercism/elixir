@@ -28,28 +28,28 @@ defmodule BankAccountTest do
   use ExUnit.Case
 
   setup do
-    account = BankAccount.open_bank()
-    { :ok, [ account: account ] }
+    account = BankAccount.open_bank
+    { :ok, account: account }
   end
 
   # @tag :pending
-  test "initial balance is 0", context do
-    assert BankAccount.balance(context[:account]) == 0
+  test "initial balance is 0", %{account: account} do
+    assert BankAccount.balance(account) == 0
   end
 
   @tag :pending
-  test "incrementing and checking balance", context do
-    assert BankAccount.balance(context[:account]) == 0
-    BankAccount.update(context[:account], 10)
-    assert BankAccount.balance(context[:account]) == 10
+  test "incrementing and checking balance", %{account: account} do
+    assert BankAccount.balance(account) == 0
+    BankAccount.update(account, 10)
+    assert BankAccount.balance(account) == 10
   end
 
   @tag :pending
-  test "incrementing balance from another process then checking it from test process", context do
-    assert BankAccount.balance(context[:account]) == 0
+  test "incrementing balance from another process then checking it from test process", %{account: account} do
+    assert BankAccount.balance(account) == 0
     this = self()
     spawn(fn ->
-      BankAccount.update(context[:account], 20)
+      BankAccount.update(account, 20)
       send(this, :continue)
     end)
     receive do
@@ -57,6 +57,6 @@ defmodule BankAccountTest do
     after
       1000 -> flunk("Timeout")
     end
-    assert BankAccount.balance(context[:account]) == 20
+    assert BankAccount.balance(account) == 20
   end
 end
