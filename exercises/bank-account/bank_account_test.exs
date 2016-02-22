@@ -43,6 +43,14 @@ defmodule BankAccountTest do
     BankAccount.update(account, 10)
     assert BankAccount.balance(account) == 10
   end
+  
+  @tag :pending
+  test "amount is added to balance", %{account: account} do
+    assert BankAccount.balance(account) == 0
+    BankAccount.update(account, 10)
+    BankAccount.update(account, 10)
+    assert BankAccount.balance(account) == 20
+  end
 
   @tag :pending
   test "incrementing balance from another process then checking it from test process", %{account: account} do
