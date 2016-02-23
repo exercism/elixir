@@ -11,7 +11,7 @@ defmodule RunLengthEncoder do
   
   end
 
-  @spec encode(string) :: String.t
+  @spec decode(string) :: String.t
   def decode(string) do
     
   end
