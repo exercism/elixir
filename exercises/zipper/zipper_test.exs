@@ -60,7 +60,7 @@ defmodule ZipperTest do
 
   @tag :pending
   test "traversing up from top" do
-    assert (t1 |> from_tree |> up |> up |> to_tree) == t1
+    assert (t1 |> from_tree |> up) == nil
   end
 
   @tag :pending
