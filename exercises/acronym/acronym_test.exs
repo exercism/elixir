@@ -7,7 +7,7 @@ end
 ExUnit.start
 ExUnit.configure exclude: :pending, trace: true
 
-defmodule AnagramTest do
+defmodule AcronymTest do
   use ExUnit.Case
 
   test "it produces acronyms from title case" do
