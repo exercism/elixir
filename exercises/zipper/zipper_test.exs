@@ -78,7 +78,6 @@ defmodule ZipperTest do
     assert (t1 |> from_tree |> left |> right |> up |> set_value(5) |> to_tree) == t2
   end
 
-
   @tag :pending
   test "set_left with leaf" do
     assert (t1 |> from_tree |> left |> set_left(leaf(5)) |> to_tree) == t3
