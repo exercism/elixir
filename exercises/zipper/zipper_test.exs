@@ -59,8 +59,23 @@ defmodule ZipperTest do
   end
 
   @tag :pending
+  test "traversing up from top" do
+    assert (t1 |> from_tree |> up) == nil
+  end
+
+  @tag :pending
+  test "left, right, and up" do
+    assert (t1 |> from_tree |> left |> up |> right |> up |> left |> right |> value) == 3
+  end
+
+  @tag :pending
   test "set_value" do
     assert (t1 |> from_tree |> left |> set_value(5) |> to_tree) == t2
+  end
+
+  @tag :pending
+  test "set_value after traversing up" do
+    assert (t1 |> from_tree |> left |> right |> up |> set_value(5) |> to_tree) == t2
   end
 
   @tag :pending
