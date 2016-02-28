@@ -1,10 +1,10 @@
 defmodule Frequency do
   @doc """
-  Count word frequency in parallel.
+  Count letter frequency in parallel.
 
   Returns a dict of characters to frequencies.
 
-  The number of worker processes to use can be set with 'workers'.
+  The number of worker processes to used can be set with 'workers'.
   """
   @spec frequency([String.t], pos_integer) :: Map
   def frequency(texts, workers) do
