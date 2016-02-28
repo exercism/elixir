@@ -1,6 +1,6 @@
 defmodule Frequency do
   @doc """
-  Count word frequency in parallel.
+  Count letter frequency in parallel.
 
   Returns a dict of characters to frequencies.
 
@@ -8,6 +8,6 @@ defmodule Frequency do
   """
   @spec frequency([String.t], pos_integer) :: Map
   def frequency(texts, workers) do
-  
+
   end
 end
