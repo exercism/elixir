@@ -1,6 +1,4 @@
-if System.get_env("EXERCISM_TEST_EXAMPLES") do
-  Code.load_file("example.exs")
-else
+if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("account.exs")
 end
 
@@ -43,7 +41,7 @@ defmodule BankAccountTest do
     BankAccount.update(account, 10)
     assert BankAccount.balance(account) == 10
   end
-  
+
   @tag :pending
   test "amount is added to balance", %{account: account} do
     assert BankAccount.balance(account) == 0

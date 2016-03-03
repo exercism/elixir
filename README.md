@@ -40,9 +40,7 @@ The example solution should be named `example.exs`.
 - Each test file should have code like the following at the top of the file. This allows the tests to be run on CI and configures tests to be skipped with the `:pending` flag.
 
 ```elixir
-if System.get_env("EXERCISM_TEST_EXAMPLES") do
-  Code.load_file("example.exs")
-else
+if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("bob.exs")
 end
 

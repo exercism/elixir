@@ -1,6 +1,4 @@
-if System.get_env("EXERCISM_TEST_EXAMPLES") do
-  Code.load_file("example.exs")
-else
+if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("meetup.exs")
 end
 
@@ -465,4 +463,3 @@ defmodule MeetupTest do
     assert Meetup.meetup(2013, 4, :sunday, :last) == {2013, 4, 28}
   end
 end
-

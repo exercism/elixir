@@ -42,7 +42,7 @@ defmodule Dot do
       raise_invalid_stmt(stmt)
     end
   end
-  defp do_stmt({:--, _, [{a, _, nil}, {b, _, nil}]}, g) 
+  defp do_stmt({:--, _, [{a, _, nil}, {b, _, nil}]}, g)
     when is_atom(a) and is_atom(b) do
     %{g | edges: [{a, b, []} | g.edges]}
   end
