@@ -57,7 +57,7 @@ test "shouting" do
 end
 ```
 
-All the tests for xElixir exercises can be run from the top level of the repo with `$ EXERCISM_TEST_EXAMPLES=true mix test --include pending exercises/**/*_test.exs`. Please run this command before submitting your PR. Watch out for and correct any compiler warnings you may have introduced.
+All the tests for xElixir exercises can be run from the top level of the repo with `$ mix test`. Please run this command before submitting your PR. Watch out for and correct any compiler warnings you may have introduced.
 
 ## License
 
