@@ -7,3 +7,4 @@ Exercism provides exercises and feedback but can be difficult to jump into for t
 * [Introducing Elixir](http://shop.oreilly.com/product/0636920030584.do), by Simon St. Laurent, J. David Eisenberg
 * [Etudes for Elixir](http://chimera.labs.oreilly.com/books/1234000001642), by J. David Eisenberg (exercise companion for Intro to Elixir)
 * [Elixir School](https://elixirschool.com)
+* [Elixir Examples](https://elixir-examples.github.io/)
