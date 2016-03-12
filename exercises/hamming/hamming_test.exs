@@ -24,6 +24,11 @@ defmodule DNATest do
   end
 
   @tag :pending
+  test "distance with same nucleotides in different locations" do
+    assert DNA.hamming_distance('TAG', 'GAT') == 2
+  end
+
+  @tag :pending
   test "larger distance" do
     assert DNA.hamming_distance('ACCAGGG', 'ACTATGG') == 2
   end
