@@ -1,6 +1,4 @@
-if System.get_env("EXERCISM_TEST_EXAMPLES") do
-  Code.load_file("example.exs")
-else
+if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("gigasecond.exs")
 end
 
@@ -32,4 +30,3 @@ defmodule GigasecondTest do
     # assert Gigasecond.from(your_birthday) == {{year2, month2, day2}, {hours, minutes, seconds}}
   end
 end
-

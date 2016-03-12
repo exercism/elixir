@@ -1,6 +1,4 @@
-if System.get_env("EXERCISM_TEST_EXAMPLES") do
-  Code.load_file("example.exs")
-else
+if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("custom_set.exs")
 end
 
@@ -128,4 +126,3 @@ defmodule CustomSetTest do
     assert inspect(CustomSet.new(["A",:b,?C])) == "%CustomSet{list: [67, :b, \"A\"]}"
   end
 end
-

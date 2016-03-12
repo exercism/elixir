@@ -40,9 +40,7 @@ The example solution should be named `example.exs`.
 - Each test file should have code like the following at the top of the file. This allows the tests to be run on CI and configures tests to be skipped with the `:pending` flag.
 
 ```elixir
-if System.get_env("EXERCISM_TEST_EXAMPLES") do
-  Code.load_file("example.exs")
-else
+if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("bob.exs")
 end
 
@@ -59,7 +57,7 @@ test "shouting" do
 end
 ```
 
-All the tests for xElixir exercises can be run from the top level of the repo with `$ EXERCISM_TEST_EXAMPLES=true mix test --include pending exercises/**/*_test.exs`. Please run this command before submitting your PR. Watch out for and correct any compiler warnings you may have introduced.
+All the tests for xElixir exercises can be run from the top level of the repo with `$ mix test`. Please run this command before submitting your PR. Watch out for and correct any compiler warnings you may have introduced.
 
 ## License
 

@@ -1,6 +1,4 @@
-if System.get_env("EXERCISM_TEST_EXAMPLES") do
-  Code.load_file("example.exs")
-else
+if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("triangle.exs")
 end
 
@@ -85,4 +83,3 @@ defmodule TriangleTest do
     assert Triangle.kind(7, 3, 2) == { :error, "side lengths violate triangle inequality" }
   end
 end
-
