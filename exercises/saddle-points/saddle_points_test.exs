@@ -1,6 +1,4 @@
-if System.get_env("EXERCISM_TEST_EXAMPLES") do
-  Code.load_file("example.exs")
-else
+if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("saddle_points.exs")
 end
 
