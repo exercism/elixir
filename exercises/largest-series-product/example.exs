@@ -4,11 +4,11 @@ defmodule Series do
   Splits up the given string of numbers into an array of integers.
   """
   @spec digits(String.t) :: [non_neg_integer]
-  def digits("") do
+  defp digits("") do
     []
   end
 
-  def digits(number_string) do
+  defp digits(number_string) do
     String.split(number_string, "", trim: true)
     |> Enum.reduce([], fn(char, acc) -> [String.to_integer(char)|acc] end)
     |> Enum.reverse
@@ -18,7 +18,7 @@ defmodule Series do
   Generates sublists of a given size from a given string of numbers.
   """
   @spec slices(String.t, non_neg_integer) :: [list(non_neg_integer)]
-  def slices(number_string, size) do
+  defp slices(number_string, size) do
     digits = digits(number_string)
     chunk(digits, size, 1)
   end
