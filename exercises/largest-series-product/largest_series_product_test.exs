@@ -131,4 +131,11 @@ defmodule LargestSeriesProductTest do
       Series.largest_product("", 1)
     end
   end
+
+  @tag :pending
+  test "raises with non-empty string and negative span size" do
+    assert_raise ArgumentError, fn ->
+      Series.largest_product("1234", -1)
+    end
+  end
 end
