@@ -6,13 +6,13 @@ defmodule Matrix do
   @spec rows(String.t()) :: [[integer]]
   def rows(str) do
     str
-    |> String.split("\n", trim: true)
+    |> String.split("\n")
     |> Enum.map(&parse_row/1)
   end
 
   defp parse_row(str) do
     str
-    |> String.split(" ", trim: true)
+    |> String.split(" ")
     |> Enum.map(&String.to_integer/1)
   end
 
