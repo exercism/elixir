@@ -34,7 +34,7 @@ defmodule SaddlePointsTest do
 
   @tag :pending
   test "extract a column" do
-    columns = Matrix.columns("1 2 3\n4 5 6\n7 8 9\n 8 7 6")
+    columns = Matrix.columns("1 2 3\n4 5 6\n7 8 9\n8 7 6")
     assert Enum.at(columns, 0) == [1, 4, 7, 8]
   end
 
