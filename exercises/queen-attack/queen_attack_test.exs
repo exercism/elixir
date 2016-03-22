@@ -23,6 +23,13 @@ defmodule QueenAttackTest do
   end
 
   @tag :pending
+  test "specific placement with keyword args swapped" do
+    queens = Queens.new(black: {6, 1}, white: {3, 7})
+    assert queens.white == {3, 7}
+    assert queens.black == {6, 1}
+  end
+
+  @tag :pending
   test "cannot occupy same space" do
     assert_raise ArgumentError, fn ->
       Queens.new(white: {2, 4}, black: {2, 4})
