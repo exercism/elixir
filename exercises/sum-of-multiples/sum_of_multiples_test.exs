@@ -10,32 +10,32 @@ defmodule SumOfMultiplesTest do
 
   # @tag :pending
   test "sum to 1" do
-    assert SumOfMultiples.to(1) == 0
+    assert SumOfMultiples.to(1, [3, 5]) == 0
   end
 
   @tag :pending
   test "sum to 3" do
-    assert SumOfMultiples.to(4) == 3
+    assert SumOfMultiples.to(4, [3, 5]) == 3
   end
 
   @tag :pending
   test "sum to 10" do
-    assert SumOfMultiples.to(10) == 23
+    assert SumOfMultiples.to(10, [3, 5]) == 23
   end
 
   @tag :pending
   test "sum to 20" do
-    assert SumOfMultiples.to(20) == 78
+    assert SumOfMultiples.to(20, [3, 5]) == 78
   end
 
   @tag :pending
   test "sum to 100" do
-    assert SumOfMultiples.to(100) == 2318
+    assert SumOfMultiples.to(100, [3, 5]) == 2318
   end
 
   @tag :pending
   test "sum to 1000" do
-    assert SumOfMultiples.to(1000) == 233168
+    assert SumOfMultiples.to(1000, [3, 5]) == 233168
   end
 
   @tag :pending
