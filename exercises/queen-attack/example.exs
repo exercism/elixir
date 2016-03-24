@@ -5,7 +5,7 @@ defmodule Queens do
   @doc """
   Creates a new set of Queens
   """
-  @spec new(nil | list, nil | list) :: Queens.t()
+  @spec new(nil | tuple, nil | tuple) :: Queens.t()
   def new(same, same), do: raise ArgumentError
   def new(white, black) do
     %Queens{white: white, black: black}
