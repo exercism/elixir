@@ -17,14 +17,7 @@ defmodule QueenAttackTest do
 
   @tag :pending
   test "specific placement" do
-    queens = Queens.new(white: {3, 7}, black: {6, 1})
-    assert queens.white == {3, 7}
-    assert queens.black == {6, 1}
-  end
-
-  @tag :pending
-  test "specific placement with keyword args swapped" do
-    queens = Queens.new(black: {6, 1}, white: {3, 7})
+    queens = Queens.new({3, 7}, {6, 1})
     assert queens.white == {3, 7}
     assert queens.black == {6, 1}
   end
@@ -32,13 +25,13 @@ defmodule QueenAttackTest do
   @tag :pending
   test "cannot occupy same space" do
     assert_raise ArgumentError, fn ->
-      Queens.new(white: {2, 4}, black: {2, 4})
+      Queens.new({2, 4}, {2, 4})
     end
   end
 
   @tag :pending
   test "string representation" do
-    queens = Queens.new(white: {2, 4}, black: {6, 6})
+    queens = Queens.new({2, 4}, {6, 6})
     board = String.strip """
 _ _ _ _ _ _ _ _
 _ _ _ _ _ _ _ _
@@ -54,7 +47,7 @@ _ _ _ _ _ _ _ _
 
   @tag :pending
   test "another string representation" do
-    queens = Queens.new(white: {7, 1}, black: {0, 0})
+    queens = Queens.new({7, 1}, {0, 0})
     board = String.strip """
 B _ _ _ _ _ _ _
 _ _ _ _ _ _ _ _
@@ -70,7 +63,7 @@ _ W _ _ _ _ _ _
 
   @tag :pending
   test "yet another string representation" do
-    queens = Queens.new(white: {4, 3}, black: {3, 4})
+    queens = Queens.new({4, 3}, {3, 4})
     board = String.strip """
 _ _ _ _ _ _ _ _
 _ _ _ _ _ _ _ _
@@ -86,43 +79,43 @@ _ _ _ _ _ _ _ _
 
   @tag :pending
   test "cannot attack" do
-    queens = Queens.new(white: {2, 3}, black: {4, 7})
+    queens = Queens.new({2, 3}, {4, 7})
     refute Queens.can_attack?(queens)
   end
 
   @tag :pending
   test "can attack on same row" do
-    queens = Queens.new(white: {2, 4}, black: {2, 7})
+    queens = Queens.new({2, 4}, {2, 7})
     assert Queens.can_attack?(queens)
   end
 
   @tag :pending
   test "can attack on same column" do
-    queens = Queens.new(white: {5, 4}, black: {2, 4})
+    queens = Queens.new({5, 4}, {2, 4})
     assert Queens.can_attack?(queens)
   end
 
   @tag :pending
   test "can attack on diagonal" do
-    queens = Queens.new(white: {1, 1}, black: {6, 6})
+    queens = Queens.new({1, 1}, {6, 6})
     assert Queens.can_attack?(queens)
   end
 
   @tag :pending
   test "can attack on other diagonal" do
-    queens = Queens.new(white: {0, 6}, black: {1, 7})
+    queens = Queens.new({0, 6}, {1, 7})
     assert Queens.can_attack?(queens)
   end
 
   @tag :pending
   test "can attack on yet another diagonal" do
-    queens = Queens.new(white: {4, 1}, black: {6, 3})
+    queens = Queens.new({4, 1}, {6, 3})
     assert Queens.can_attack?(queens)
   end
 
   @tag :pending
   test "can attack on a diagonal slanted the other way" do
-    queens = Queens.new(white: {6, 1}, black: {1, 6})
+    queens = Queens.new({6, 1}, {1, 6})
     assert Queens.can_attack?(queens)
   end
 end
