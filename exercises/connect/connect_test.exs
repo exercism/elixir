@@ -12,7 +12,7 @@ defmodule ConnectTest do
     Enum.map(rows, &String.replace(&1, " ", ""))
   end
 
-  @tag :pending
+  # @tag :pending
   test "empty board has no winner" do
     board = remove_spaces [
       ". . . . .",
