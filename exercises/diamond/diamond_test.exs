@@ -9,49 +9,25 @@ defmodule DiamondTest do
   use ExUnit.Case
 
   # @tag :pending
-  test "first row contain A" do
-    first_letter =
-      Diamond.build_shape(?E)
-      |> String.replace(" ", "")
-      |> String.split("\n", trim: true)
-      |> List.first
-    assert first_letter == "A"
+  test "letter A" do
+    shape = Diamond.build_shape(?A)
+    assert shape == "A\n"
   end
 
   @tag :pending
-  test "last row contain A" do
-    last_letter =
-      Diamond.build_shape(?E)
-      |> String.replace(" ", "")
-      |> String.split("\n", trim: true)
-      |> List.last
-    assert last_letter == "A"
+  test "letter C" do
+    shape = Diamond.build_shape(?C)
+    assert shape == """
+\s A  
+\sB B 
+ C   C
+\sB B 
+\s A  
+    """
   end
 
   @tag :pending
-  test "all rows, except the first and last, have exactly two identical letters" do
-    is_identical_letters =
-      Diamond.build_shape(?E)
-      |> String.replace(" ", "")
-      |> String.slice(2..-2)
-      |> String.split("\n", trim: true)
-      |> Enum.all?(fn x ->
-        String.length(x) == 2 and
-        x |> String.codepoints |> MapSet.new |> MapSet.size == 1
-      end)
-    assert is_identical_letters
-  end
-
-  @tag :pending
-  test "the diamond has a square shape (width equals height)" do
-    shape = Diamond.build_shape(?E) |> String.split("\n", trim: true)
-    width = shape |> List.first |> String.length
-    height = length(shape)
-    assert width == height
-  end
-
-  @tag :pending
-  test "letters form a diamond shape" do
+  test "letter E" do
     shape = Diamond.build_shape(?E)
     assert shape == """
 \s   A    
