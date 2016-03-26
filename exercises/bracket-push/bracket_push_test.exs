@@ -9,47 +9,57 @@ defmodule BracketPushTest do
   use ExUnit.Case
 
   # @tag :pending
-  test "checks for appropriate bracketing in a set of brackets" do
+  test "empty string" do
+    assert BracketPush.check_brackets("")
+  end
+
+  @tag :pending
+  test "appropriate bracketing in a set of brackets" do
     assert BracketPush.check_brackets("{}")
   end
 
   @tag :pending
-  test "test for unclosed brackets" do
+  test "unclosed brackets" do
     refute BracketPush.check_brackets("{{")
   end
 
   @tag :pending
-  test "test for more than one pair of brackets" do
+  test "more than one pair of brackets" do
     assert BracketPush.check_brackets("{}[]")
   end
 
   @tag :pending
-  test "test fo brackets are out of order" do
+  test "brackets are out of order" do
     refute BracketPush.check_brackets("}{")
-  end 
+  end
 
   @tag :pending
-  test "test for nested brackets" do
+  test "nested brackets" do
     assert BracketPush.check_brackets("{[()]}")
-  end  
+  end
 
   @tag :pending
-  test "test to unbalanced nested brackets" do
+  test "unbalanced nested brackets" do
     refute BracketPush.check_brackets("{[}]")
-  end  
+  end
 
   @tag :pending
-  test "checks bracket closure with deeper nesting" do
+  test "bracket closure with deeper nesting" do
     refute BracketPush.check_brackets("{[)][]}")
   end
 
   @tag :pending
-  test "checks bracket closure in a long string of brackets" do
+  test "bracket closure in a long string of brackets" do
     assert BracketPush.check_brackets("{[]([()])}")
-  end 
+  end
 
   @tag :pending
   test "should ignore non-bracket characters" do
     assert BracketPush.check_brackets("{hello[]([a()])b}c")
-  end 
+  end
+
+  @tag :pending
+  test "string with newlines" do
+    assert BracketPush.check_brackets("[]\n{()}\n[(({}))]\n")
+  end
 end

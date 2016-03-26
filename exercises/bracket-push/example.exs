@@ -20,11 +20,16 @@ defmodule BracketPush do
   defp check([], _), do: false
   defp check([h|t], acc) do
     cond do
-      Map.has_key?(@brackets, h) -> check(t, [Map.get(@brackets, h) | acc])
-      Enum.empty?(acc) and !Map.has_key?(@brackets, h) -> false
-      h != hd(acc) -> false
-      h == hd(acc) -> check(t, tl(acc))
-      true -> true
+      Map.has_key?(@brackets, h) ->
+        check(t, [Map.get(@brackets, h) | acc])
+      Enum.empty?(acc) and !Map.has_key?(@brackets, h) ->
+        false
+      h != hd(acc) ->
+        false
+      h == hd(acc) ->
+        check(t, tl(acc))
+      true ->
+        true
     end
   end
 end
