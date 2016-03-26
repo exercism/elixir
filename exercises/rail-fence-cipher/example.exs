@@ -7,7 +7,7 @@ defmodule RailFenceCipher do
   def encode(str, rails) do
     str
     |> String.codepoints
-    |> fence(rails)
+    |> fill_fence(rails)
     |> Enum.join
   end
 
@@ -17,30 +17,40 @@ defmodule RailFenceCipher do
   @spec decode(String.t, pos_integer) :: String.t
   def decode(str, 1), do: str
   def decode(str, rails) do
-    range = 0..String.length(str) - 1
-    pos = range |> Enum.to_list |> fence(rails)
-    range
-    |> Enum.reduce([], fn i, acc -> 
-         [String.at(str, Enum.find_index(pos, &(&1 == i))) | acc]
-       end)
-    |> Enum.reverse
+    0..String.length(str) - 1
+    |> Enum.to_list
+    |> fill_fence(rails)
+    |> extract_original(str)
+  end
+
+  defp extract_original(fence, str) do
+    0..String.length(str) - 1
+    |> Enum.map(fn i ->
+      String.at(str, Enum.find_index(fence, &(&1 == i)))
+    end)
     |> Enum.join
   end
 
-  defp fence(list_chars, rails) do
-    rail_indexes = Enum.concat(Enum.to_list(0..rails - 1), Enum.to_list(rails - 2..1))
-    fence = 0..rails - 1
-      |> Enum.reduce([], fn _, acc -> 
-           [List.duplicate(nil, length(list_chars)) | acc]
-         end)
-      |> Enum.reverse
+  defp fill_fence(list_chars, rails) do
+    rail_zigzag_indexes = Enum.concat(Enum.to_list(0..rails - 1), Enum.to_list(rails - 2..1))
+    create_empty_fence(rails, length(list_chars))
+    |> set_chars_to_fence(list_chars, rail_zigzag_indexes)
+  end
 
-    list_chars
+  defp create_empty_fence(rows, cols) do
+    0..rows - 1
+    |> Enum.map(fn _ ->
+      List.duplicate(nil, cols)
+    end)
+  end
+
+  defp set_chars_to_fence(fence, chars, pos_in_zigzag) do
+    chars
     |> Enum.with_index
-    |> Enum.reduce(fence, fn {v, i}, acc ->
-         num_rail = Enum.at(rail_indexes, rem(i, length(rail_indexes)))
-         List.update_at(acc, num_rail, &(List.update_at(&1, i, fn _ -> v end)))
-       end) 
+    |> Enum.reduce(fence, fn {char, index}, acc ->
+         rail_ind = Enum.at(pos_in_zigzag, rem(index, length(pos_in_zigzag)))
+         List.update_at(acc, rail_ind, &(List.update_at(&1, index, fn _ -> char end)))
+       end)
     |> List.flatten
     |> Enum.filter(&(&1 != nil))
   end
