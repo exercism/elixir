@@ -9,43 +9,20 @@ defmodule CryptoSquare do
   @spec encode(String.t) :: String.t
   def encode(""), do: ""
   def encode(str) do
-    letters = str |> normalize |> String.codepoints
-    cols = letters |> length |> :math.sqrt |> Float.ceil |> trunc
-    rest = letters 
-           |> Enum.reverse
-           |> Enum.slice(0, rem(length(letters), cols))
-           |> Enum.reverse
-    letters
-    |> Enum.chunk(cols)
-    |> Enum.concat([rest])
-    |> zip
+    normalized = normalize_string(str)
+    section_length = normalized |> byte_size |> :math.sqrt |> Float.ceil |> trunc
+
+    normalized
+    |> String.graphemes
+    |> Enum.chunk(section_length, section_length, List.duplicate("", section_length))
+    |> List.zip
+    |> Enum.map(&Tuple.to_list/1)
     |> Enum.join(" ")
   end
 
-  defp normalize(str) do
+  defp normalize_string(str) do
     str
     |> String.downcase
     |> String.replace(~r/[^a-z0-9]/, "")
-  end
-
-  defp zip(rows) do
-    0..length(Enum.at(rows, 0)) - 1
-    |> Enum.reduce([], fn col_ind, acc ->
-         rows
-         |> get_col(col_ind)
-         |> List.duplicate(1)
-         |> Enum.concat(acc)
-       end)
-    |> Enum.reverse
-  end
-
-  defp get_col(rows, index) do
-    Enum.reduce(rows, [], fn row, col ->
-      if length(row) - 1 < index do
-        col
-      else
-        [Enum.at(row, index) | col]
-      end
-    end) |> Enum.reverse
   end
 end
