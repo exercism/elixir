@@ -35,6 +35,7 @@ defmodule ZipperTest do
   defp t4, do: bt(1, leaf(2),                 leaf(4))
   defp t5, do: bt(1, bt(2, nil, leaf(3)),
                      bt(6, leaf(7), leaf(8)))
+  defp t6, do: bt(1, bt(2, nil,     leaf(5)), leaf(4))
 
   # @tag :pending
   test "data is retained" do
@@ -89,5 +90,10 @@ defmodule ZipperTest do
   @tag :pending
   test "set_right with subtree" do
     assert (t1 |> from_tree |> set_right(bt(6, leaf(7), leaf(8))) |> to_tree) == t5
+  end
+
+  @tag :pending
+  test "set_value on deep focus" do
+    assert (t1 |> from_tree |> left |> right |> set_value(5) |> to_tree) == t6
   end
 end
