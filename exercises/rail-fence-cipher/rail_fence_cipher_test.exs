@@ -8,7 +8,7 @@ ExUnit.configure exclude: :pending, trace: true
 defmodule RailFenceCipherTest do
   use ExUnit.Case
 
-  #@tag :pending
+  # @tag :pending
   test "encode with ending at the first rail" do
     assert RailFenceCipher.encode("XOXOXOXOXOXOXOXOXO", 2) == "XXXXXXXXXOOOOOOOOO"
   end
@@ -67,13 +67,13 @@ defmodule RailFenceCipherTest do
 
   @tag :pending
   test "decode letters of less than rails" do
-    assert "More rails than letters" == RailFenceCipher.decode("More rails than letters", 24)
+    assert RailFenceCipher.decode("More rails than letters", 24) == "More rails than letters"
   end
 
   @tag :pending
   test "decode a more diverse text" do
     msg = "The quick brown fox jumps over the lazy dog."
     cipher = RailFenceCipher.encode(msg, 4)
-    assert msg == RailFenceCipher.decode(cipher, 4)
+    assert RailFenceCipher.decode(cipher, 4) == msg
   end
 end
