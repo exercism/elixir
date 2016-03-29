@@ -12,6 +12,7 @@
     "list-ops",
     "sublist",
     "anagram",
+    "bracket-push",
     "nucleotide-count",
     "rna-transcription",
     "hamming",
