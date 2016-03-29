@@ -19,7 +19,7 @@ defmodule CryptoSquareTest do
   end
 
   @tag :pending
-  test "upcase string" do
+  test "uppercase string" do
     assert CryptoSquare.encode("ABCD") == "ac bd"
   end
 
