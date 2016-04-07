@@ -1,6 +1,6 @@
 defmodule Forth do
   @opaque evaluator :: any
-  
+
   @doc """
   Create a new evaluator.
   """
@@ -14,7 +14,7 @@ defmodule Forth do
   """
   @spec eval(evaluator, String.t) :: evaluator
   def eval(ev, s) do
-  
+
   end
 
   @doc """
@@ -23,26 +23,26 @@ defmodule Forth do
   """
   @spec format_stack(evaluator) :: String.t
   def format_stack(ev) do
-  
+
   end
 
   defmodule StackUnderflow do
     defexception []
-    def exception(_), do: "stack underflow"
+    def message(_), do: "stack underflow"
   end
 
   defmodule InvalidWord do
-    defexception [:word]
-    def exception(e), do: "invalid word: #{inspect e.word}"
+    defexception [word: nil]
+    def message(e), do: "invalid word: #{inspect e.word}"
   end
 
   defmodule UnknownWord do
-    defexception [:word]
-    def exception(e), do: "unknown word: #{inspect e.word}"
+    defexception [word: nil]
+    def message(e), do: "unknown word: #{inspect e.word}"
   end
 
   defmodule DivisionByZero do
     defexception []
-    def exception(_), do: "division by zero"
+    def message(_), do: "division by zero"
   end
 end

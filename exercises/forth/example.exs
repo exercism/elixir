@@ -15,7 +15,7 @@ defmodule Forth do
          "DUP" =>  &dup/1 ,
          "DROP" => &drop/1 ,
          "SWAP" => &swap/1 ,
-         "OVER" => &over/1 
+         "OVER" => &over/1
        }
     end
 
