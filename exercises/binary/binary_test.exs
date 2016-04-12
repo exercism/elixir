@@ -59,6 +59,11 @@ defmodule BinaryTest do
   end
 
   @tag :pending
+  test "invalid binary is decimal 0 IV" do
+    assert Binary.to_decimal("1carrot0") == 0
+  end
+
+  @tag :pending
   test "22 is not a binary number" do
     assert Binary.to_decimal("22") == 0
   end
