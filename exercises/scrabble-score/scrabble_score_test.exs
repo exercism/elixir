@@ -40,7 +40,7 @@ defmodule ScrabbleScoreTest do
 
   @tag :pending
   test "scores are case insensitive" do
-    assert Scrabble.score("MULTIBILLIONAIRE") == 20
+    assert Scrabble.score("OXYPHENBUTAZONE") == 41
   end
 
   @tag :pending
