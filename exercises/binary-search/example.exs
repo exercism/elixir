@@ -19,16 +19,16 @@ defmodule BinarySearch do
 
   @spec search(Enumerable.t, integer) :: {:ok, integer} | :not_found
   def search([], _key), do: :not_found
-  def search(list, key), do: _search(list, key, 0, length(list) - 1)
+  def search(list, key), do: do_search(list, key, 0, length(list) - 1)
 
-  defp _search(list, _key, low, high) when high < low, do: :not_found
-  defp _search(list, key, low, high) do
+  defp do_search(_list, _key, low, high) when high < low, do: :not_found
+  defp do_search(list, key, low, high) do
     middle = div(low + high, 2)
     middle_value = Enum.at(list, middle)
 
     cond do
-      key < middle_value -> _search(list, key, low, middle - 1)
-      key > middle_value -> _search(list, key, middle + 1, high)
+      key < middle_value -> do_search(list, key, low, middle - 1)
+      key > middle_value -> do_search(list, key, middle + 1, high)
       true               -> {:ok, middle}
     end
   end
