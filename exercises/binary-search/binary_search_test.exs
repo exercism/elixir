@@ -13,6 +13,13 @@ defmodule BinarySearchTest do
   end
 
   @tag :pending
+  test "raises ArgumentError for unsorted list" do
+    assert_raise ArgumentError, "expected list to be sorted", fn ->
+      BinarySearch.search([3, 2, 1], 2)
+    end
+  end
+
+  @tag :pending
   test "returns :not_found when key is not in the list" do
     assert BinarySearch.search([2, 4, 6], 3) == :not_found
   end

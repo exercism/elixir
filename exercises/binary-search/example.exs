@@ -19,7 +19,13 @@ defmodule BinarySearch do
 
   @spec search(Enumerable.t, integer) :: {:ok, integer} | :not_found
   def search([], _key), do: :not_found
-  def search(list, key), do: do_search(list, key, 0, length(list) - 1)
+  def search(list, key) do
+    if Enum.sort(list) != list do
+      raise ArgumentError, "expected list to be sorted"
+    end
+
+    do_search(list, key, 0, length(list) - 1)
+  end
 
   defp do_search(_list, _key, low, high) when high < low, do: :not_found
   defp do_search(list, key, low, high) do
