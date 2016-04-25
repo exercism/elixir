@@ -18,7 +18,7 @@ defmodule BinarySearch do
   """
 
   @spec search(Enumerable.t, integer) :: {:ok, integer} | :not_found
-  def search([], key) do
+  def search(list, key) do
 
   end
 end
