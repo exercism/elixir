@@ -15,6 +15,7 @@
     "bracket-push",
     "nucleotide-count",
     "rna-transcription",
+    "accumulate",
     "hamming",
     "phone-number",
     "grade-school",
