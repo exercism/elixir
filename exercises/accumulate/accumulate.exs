@@ -15,7 +15,7 @@ defmodule Accumulate do
 
   """
 
-  @spec accumulate(Enumerable.t, (any -> any)) :: list
+  @spec accumulate(list, (any -> any)) :: list
   def accumulate(list, fun) do
   end
 end
