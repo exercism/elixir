@@ -62,7 +62,8 @@
   "ignored": [
     "docs",
     "deps",
-    "test"
+    "test",
+    "_build"
   ],
   "foregone": [
     "robot-name"
