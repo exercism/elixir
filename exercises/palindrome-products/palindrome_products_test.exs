@@ -12,7 +12,7 @@ defmodule PalindromeProductsTest do
   test "largest palindrome from single digit factors" do
     palindromes = Palindromes.generate(9)
     assert (palindromes |> Map.keys |> Enum.sort |> List.last) == 9
-    assert palindromes[9] == [[1, 9], [3, 3]]
+    assert Enum.sort(palindromes[9]) == [[1, 9], [3, 3]]
   end
 
   @tag :pending
