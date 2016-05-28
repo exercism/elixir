@@ -24,7 +24,7 @@ defmodule LuhnTest do
 
   @tag :pending
   test "valid number" do
-    assert Luhn.valid?("8739567") == true
+    assert Luhn.valid?("8639567") == true
   end
 
   @tag :pending
