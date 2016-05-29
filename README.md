@@ -11,11 +11,11 @@ The exercises currently target Elixir 1.2. Detailed installation instructions ca
 
 Thank you so much for contributing! :tada:
 
-Please start by reading the general Exercism [contributing guide](https://github.com/exercism/x-api/blob/master/CONTRIBUTING.md#the-exercise-data).
-
 We welcome pull requests that provide fixes and improvements to existing exercises. If you're unsure, then go ahead and open a GitHub issue, and we'll discuss the change.
 
 Please keep the following in mind:
+
+- Please start by reading the general Exercism [contributing guide](https://github.com/exercism/x-api/blob/master/CONTRIBUTING.md#the-exercise-data).
 
 - Pull requests should be focused on a single exercise, issue, or change.
 
