@@ -3,7 +3,7 @@ defmodule Acronym do
   Generate an acronym from a string. 
   "This is a string" => "TIAS"
   """
-  @spec abbreviate(string) :: String.t()
+  @spec abbreviate(String.t()) :: String.t()
   def abbreviate(string) do
    
   end
