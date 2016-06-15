@@ -66,6 +66,7 @@
   "ignored": [
     "docs",
     "deps",
+    "img",
     "test",
     "_build"
   ],
