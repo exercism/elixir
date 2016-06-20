@@ -5,7 +5,7 @@ defmodule DNA do
   ## Examples
 
   iex> DNA.hamming_distance('AAGTCATA', 'TAGCGATC')
-  4
+  {:ok, 4}
   """
   def hamming_distance(strand1, strand2) when length(strand1) === length(strand2) do
     distance = pairs(strand1, strand2) |> count_mismatched
