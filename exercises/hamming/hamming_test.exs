@@ -9,45 +9,38 @@ defmodule DNATest do
   use ExUnit.Case
 
 #   @tag :pending
-  test "hamming distance for strands of same length returns :ok" do
-    {code, _} = DNA.hamming_distance('', '')
-    assert code == :ok
+  test "hamming distance for strands of the same length are ok" do
+    assert {:ok, _} = DNA.hamming_distance('', '')
   end
 
   @tag :pending
   test "hamming distance is undefined for strands of different lengths" do
-    assert DNA.hamming_distance('AAAC', 'TAGGGGAGGCTAGCGGTAGGAC') == {:error, "Lists must be the same length."}
-    assert DNA.hamming_distance('GACTACGGACAGGACACC', 'GACATCGC') == {:error, "Lists must be the same length."}
+    assert {:error, "Lists must be the same length."} = DNA.hamming_distance('AAAC', 'TAGGGGAGGCTAGCGGTAGGAC')
+    assert {:error, "Lists must be the same length."} = DNA.hamming_distance('GACTACGGACAGGACACC', 'GACATCGC')
   end
 
   @tag :pending
   test "no difference between empty strands" do
-    {:ok, distance} = DNA.hamming_distance('', '')
-    assert distance == 0
+    assert {:ok, 0} = DNA.hamming_distance('', '')
   end
 
   @tag :pending
   test "no difference between identical strands" do
-    {:ok, distance} = DNA.hamming_distance('GGACTGA', 'GGACTGA')
-    assert distance == 0
+    assert {:ok, 0} = DNA.hamming_distance('GGACTGA', 'GGACTGA')
   end
 
   @tag :pending
   test "small hamming distance in middle somewhere" do
-    {:ok, distance} = DNA.hamming_distance('GGACG', 'GGTCG')
-    assert distance == 1
+    assert {:ok, 1} = DNA.hamming_distance('GGACG', 'GGTCG')
   end
 
   @tag :pending
   test "distance with same nucleotides in different locations" do
-    {:ok, distance} = DNA.hamming_distance('TAG', 'GAT')
-    assert distance == 2
+    assert {:ok, 2} = DNA.hamming_distance('TAG', 'GAT')
   end
 
   @tag :pending
   test "larger distance" do
-    {:ok, distance} = DNA.hamming_distance('ACCAGGG', 'ACTATGG')
-    assert distance == 2
+    assert {:ok, 2} = DNA.hamming_distance('ACCAGGG', 'ACTATGG')
   end
-
 end
