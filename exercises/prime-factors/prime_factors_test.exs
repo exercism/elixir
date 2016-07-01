@@ -1,5 +1,5 @@
 if !System.get_env("EXERCISM_TEST_EXAMPLES") do
-  Code.load_file("prime_factors.exs")
+  Code.load_file("prime_factors.exs", __DIR__)
 end
 
 ExUnit.start

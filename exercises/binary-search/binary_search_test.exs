@@ -1,5 +1,5 @@
 if !System.get_env("EXERCISM_TEST_EXAMPLES") do
-  Code.load_file("binary_search.exs")
+  Code.load_file("binary_search.exs", __DIR__)
 end
 
 ExUnit.start

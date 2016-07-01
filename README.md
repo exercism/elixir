@@ -41,7 +41,7 @@ The example solution should be named `example.exs`.
 
 ```elixir
 if !System.get_env("EXERCISM_TEST_EXAMPLES") do
-  Code.load_file("bob.exs")
+  Code.load_file("bob.exs", __DIR__)
 end
 
 ExUnit.start
