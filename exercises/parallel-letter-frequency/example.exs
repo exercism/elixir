@@ -2,7 +2,7 @@ defmodule Frequency do
   @doc """
   Count word frequency in parallel.
 
-  Returns a dict of characters to frequencies.
+  Returns a map of characters to frequencies.
   """
   def frequency(texts, workers) do
     groups = Enum.map(0..(workers-1), &stripe(&1, texts, workers)) 
@@ -33,8 +33,8 @@ defmodule Frequency do
     |> Enum.reduce(%{}, fn c, acc -> Map.update(acc, c, 1, &(&1+1)) end)
   end
 
-  defp merge_freqs(dicts) do
-    Enum.reduce(dicts, %{}, fn d, acc ->
+  defp merge_freqs(map) do
+    Enum.reduce(map, %{}, fn d, acc ->
       Map.merge(acc, d, fn _, a, b -> a+b end)
     end)
   end
