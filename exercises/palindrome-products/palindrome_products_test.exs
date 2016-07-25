@@ -1,5 +1,5 @@
 if !System.get_env("EXERCISM_TEST_EXAMPLES") do
-  Code.load_file("palindrome_products.exs")
+  Code.load_file("palindrome_products.exs", __DIR__)
 end
 
 ExUnit.start

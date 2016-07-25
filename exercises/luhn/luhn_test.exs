@@ -1,5 +1,5 @@
 if !System.get_env("EXERCISM_TEST_EXAMPLES") do
-  Code.load_file("luhn.exs")
+  Code.load_file("luhn.exs", __DIR__)
 end
 
 ExUnit.start

@@ -1,5 +1,5 @@
 if !System.get_env("EXERCISM_TEST_EXAMPLES") do
-  Code.load_file("rail_fence_cipher.exs")
+  Code.load_file("rail_fence_cipher.exs", __DIR__)
 end
 
 ExUnit.start

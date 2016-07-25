@@ -1,5 +1,5 @@
 if !System.get_env("EXERCISM_TEST_EXAMPLES") do
-  Code.load_file("largest_series_product.exs")
+  Code.load_file("largest_series_product.exs", __DIR__)
 end
 
 ExUnit.start
