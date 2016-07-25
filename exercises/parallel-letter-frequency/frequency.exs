@@ -2,7 +2,7 @@ defmodule Frequency do
   @doc """
   Count letter frequency in parallel.
 
-  Returns a dict of characters to frequencies.
+  Returns a map of characters to frequencies.
 
   The number of worker processes to use can be set with 'workers'.
   """

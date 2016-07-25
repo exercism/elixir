@@ -6,8 +6,8 @@ defmodule Palindromes do
   @spec generate(non_neg_integer) :: map
   @spec generate(non_neg_integer, non_neg_integer) :: map
   def generate(max_factor, min_factor \\ 1) do
-    Enum.reduce(min_factor..max_factor, %{}, fn(x, dict) ->
-      Enum.reduce(x..max_factor, dict, fn(y, products) ->
+    Enum.reduce(min_factor..max_factor, %{}, fn(x, map) ->
+      Enum.reduce(x..max_factor, map, fn(y, products) ->
         if palindrome?(x * y), do: add_factor(products, x, y), else: products
       end)
     end)
@@ -17,9 +17,9 @@ defmodule Palindromes do
     String.reverse(to_string(number)) == to_string(number)
   end
 
-  defp add_factor(dict, x, y) do
+  defp add_factor(map, x, y) do
     product = x * y
-    Map.update(dict, product,
+    Map.update(map, product,
       [[x, y]], fn(val) -> Enum.concat(val, [[x, y]]) end)
   end
 

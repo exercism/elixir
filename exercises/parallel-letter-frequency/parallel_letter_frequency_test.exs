@@ -48,7 +48,7 @@ defmodule FrequencyTest do
   """
 
   # Returns the frequencies in a sorted list. This means it doesn't matter if
-  # your frequency() function returns a list of pairs or some dictionary, the
+  # your frequency() function returns a list of pairs or a map, the
   # testing code will handle it.
   defp freq(texts, workers \\ 4) do
     Frequency.frequency(texts, workers) |> Enum.sort() |> Enum.into(%{})
