@@ -1,5 +1,5 @@
 if !System.get_env("EXERCISM_TEST_EXAMPLES") do
-  Code.load_file("dna.exs", __DIR__)
+  Code.load_file("nucleotide_count.exs", __DIR__)
 end
 
 ExUnit.start
