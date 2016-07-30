@@ -28,7 +28,7 @@ defmodule AcronymTest do
   end
 
   @tag :pending
-  test "produces acronyms ignoring punctuation and casing" do
+  test "it produces acronyms ignoring punctuation and casing" do
     assert Acronym.abbreviate("Complementary Metal-Oxide semiconductor") === "CMOS"
   end
 end
