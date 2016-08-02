@@ -72,9 +72,9 @@ defmodule AllergiesTest do
   end
 
   defp assert_is_a_set_containing(list, to_contain) do
-    set = Enum.into(list, HashSet.new)
+    set = Enum.into(list, MapSet.new)
     same_contents = to_contain
-      |> Enum.into(HashSet.new)
+      |> Enum.into(MapSet.new)
       |> Set.equal?(set)
     assert same_contents,
            "Expected a set with: #{inspect to_contain} got #{inspect set |> Set.to_list}"
