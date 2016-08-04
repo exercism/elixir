@@ -6,6 +6,5 @@ defmodule Binary do
   """
   @spec to_decimal(String.t) :: non_neg_integer
   def to_decimal(string) do
-  
   end
 end

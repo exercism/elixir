@@ -18,7 +18,6 @@ defmodule Phone do
   """
   @spec number(String.t) :: String.t
   def number(raw) do
-
   end
 
   @doc """
@@ -40,7 +39,6 @@ defmodule Phone do
   """
   @spec area_code(String.t) :: String.t
   def area_code(raw) do
-  
   end
 
   @doc """
@@ -62,6 +60,5 @@ defmodule Phone do
   """
   @spec pretty(String.t) :: String.t
   def pretty(raw) do
-  
   end
 end

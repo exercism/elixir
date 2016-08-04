@@ -1,13 +1,14 @@
 ---
 language: elixir
 elixir:
-  - 1.2.0-rc.0
+  - 1.3.2
 otp_release:
-  - 18.1
+  - 19.0
 
 script:
 - bin/fetch-configlet
 - bin/configlet .
 - mix deps.get
 - mix test
+- "! git grep ' $' -- \\*.exs | grep -v -e 'exercises/diamond/diamond_test.exs'"
 sudo: false
