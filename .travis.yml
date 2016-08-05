@@ -16,5 +16,7 @@ script:
 - EXERCISM_TEST_EXAMPLES=true elixirc --warnings-as-errors **/example.exs **/*_test.exs -o ./tmp > /dev/null
 - rm -rf ./tmp
 
+- dialyzer --no_check_plt --plt $PLT_LOCATION
+
 - "! git grep ' $' -- \\*.exs | grep -v -e 'exercises/diamond/diamond_test.exs'"
 sudo: false
