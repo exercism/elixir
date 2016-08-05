@@ -1,13 +1,17 @@
 ---
 language: elixir
 elixir:
-  - 1.2.0-rc.0
+  - 1.3.0
 otp_release:
   - 18.1
-
+before_script:
+  - export PLT_FILENAME=elixir-${TRAVIS_ELIXIR_VERSION}_${TRAVIS_OTP_RELEASE}.plt
+  - export PLT_LOCATION=/home/travis/$PLT_FILENAME
+  - wget -O $PLT_LOCATION https://raw.github.com/danielberkompas/travis_elixir_plts/master/$PLT_FILENAME
 script:
-- bin/fetch-configlet
-- bin/configlet .
-- mix deps.get
-- mix test
+  - bin/fetch-configlet
+  - bin/configlet .
+  - mix deps.get
+  - mix test
+  - dialyzer --no_check_plt --plt $PLT_LOCATION
 sudo: false
