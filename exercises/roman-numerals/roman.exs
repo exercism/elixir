@@ -4,6 +4,5 @@ defmodule Roman do
   """
   @spec numerals(pos_integer) :: String.t
   def numerals(number) do
-  
   end
 end

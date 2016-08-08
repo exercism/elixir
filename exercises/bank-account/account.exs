@@ -13,7 +13,6 @@ defmodule BankAccount do
   """
   @spec open_bank() :: account
   def open_bank() do
-  
   end
 
   @doc """
@@ -21,7 +20,6 @@ defmodule BankAccount do
   """
   @spec close_bank(account) :: none
   def close_bank(account) do
-  
   end
 
   @doc """
@@ -29,14 +27,12 @@ defmodule BankAccount do
   """
   @spec balance(account) :: integer
   def balance(account) do
-  
   end
- 
+
   @doc """
   Update the account's balance by adding the given amount which may be negative.
   """
   @spec update(account, integer) :: any
   def update(account, amount) do
-  
   end
 end

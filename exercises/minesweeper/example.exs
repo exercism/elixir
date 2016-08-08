@@ -9,7 +9,7 @@ defmodule Minesweeper do
     w = String.length(hd(board)) # Only 7-bit ASCII in the board, so this is safe
     annotations =
       Enum.reduce(Stream.with_index(board), %{}, fn { line, y }, acc ->
-        Enum.reduce(Stream.with_index(String.to_char_list(line)), acc, fn 
+        Enum.reduce(Stream.with_index(String.to_char_list(line)), acc, fn
           { ?*, x }, acc -> add_adjacents(acc, { x, y }, { w, h })
           _, acc         -> acc
         end)

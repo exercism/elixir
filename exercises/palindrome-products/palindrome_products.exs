@@ -5,6 +5,5 @@ defmodule Palindromes do
   """
   @spec generate(non_neg_integer, non_neg_integer) :: map
   def generate(max_factor, min_factor \\ 1) do
-    
   end
 end

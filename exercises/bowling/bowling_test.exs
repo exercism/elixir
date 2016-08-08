@@ -163,7 +163,7 @@ defmodule BowlingTest do
     game = roll_reduce(game, rolls)
     assert Bowling.score(game) == 32
   end
-  
+
   @tag :pending
   test "fills out the last frame when there is a strike" do
     game = Bowling.start
@@ -249,7 +249,7 @@ defmodule BowlingTest do
     game = Bowling.start
     assert Bowling.roll(game, 11) == {:error, "Pins must have a value from 0 to 10"}
   end
-  
+
   @tag :pending
   test "does not allow consecutive rolls to be greater than a strike" do
     game = Bowling.start

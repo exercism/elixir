@@ -5,7 +5,7 @@ defmodule Frequency do
   Returns a map of characters to frequencies.
   """
   def frequency(texts, workers) do
-    groups = Enum.map(0..(workers-1), &stripe(&1, texts, workers)) 
+    groups = Enum.map(0..(workers-1), &stripe(&1, texts, workers))
     Enum.map(groups, &Frequency.count_texts/1)
     #:rpc.pmap({Frequency, :count_texts}, [], groups)
     |> merge_freqs()

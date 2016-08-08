@@ -76,7 +76,7 @@ defmodule Zipper do
              right: r, trail: zt}) do
     %Z{ value: lv, left: ll, right: lr, trail: [{ :left, v, r } | zt] }
   end
-  
+
   @doc """
   Get the right child of the focus node, if any.
   """

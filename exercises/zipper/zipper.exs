@@ -16,7 +16,6 @@ defmodule Zipper do
   """
   @spec from_tree(BT.t) :: Z.t
   def from_tree(bt) do
-
   end
 
   @doc """
@@ -24,7 +23,6 @@ defmodule Zipper do
   """
   @spec to_tree(Z.t) :: BT.t
   def to_tree(z) do
-
   end
 
   @doc """
@@ -32,7 +30,6 @@ defmodule Zipper do
   """
   @spec value(Z.t) :: any
   def value(z) do
-
   end
 
   @doc """
@@ -40,15 +37,13 @@ defmodule Zipper do
   """
   @spec left(Z.t) :: Z.t | nil
   def left(z) do
-
   end
-  
+
   @doc """
   Get the right child of the focus node, if any.
   """
   @spec right(Z.t) :: Z.t | nil
   def right(z) do
-
   end
 
   @doc """
@@ -56,7 +51,6 @@ defmodule Zipper do
   """
   @spec up(Z.t) :: Z.t
   def up(z) do
-
   end
 
   @doc """
@@ -64,22 +58,19 @@ defmodule Zipper do
   """
   @spec set_value(Z.t, any) :: Z.t
   def set_value(z, v) do
-
   end
-  
+
   @doc """
-  Replace the left child tree of the focus node. 
+  Replace the left child tree of the focus node.
   """
   @spec set_left(Z.t, BT.t) :: Z.t
   def set_left(z, l) do
-
   end
-  
+
   @doc """
-  Replace the right child tree of the focus node. 
+  Replace the right child tree of the focus node.
   """
   @spec set_right(Z.t, BT.t) :: Z.t
   def set_right(z, r) do
-
   end
 end
