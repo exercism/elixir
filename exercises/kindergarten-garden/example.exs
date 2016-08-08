@@ -47,7 +47,7 @@ defmodule Garden do
   defp add_to_map(map, current_name, letters) do
     letters = String.codepoints(letters)
     translated_list = Enum.map(letters, fn(letter) -> @letter_map[letter] end)
-    tuple = List.to_tuple(translated_list) 
+    tuple = List.to_tuple(translated_list)
     Map.put(map, current_name, tuple)
   end
 end
