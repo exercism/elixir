@@ -10,7 +10,7 @@ defmodule GardenTest do
 
   test "gets the garden for Alice with just her plants" do
     garden_info = Garden.info("RC\nGG")
-    assert garden_info.alice == {:radishes, :clover, :grass, :grass} 
+    assert garden_info.alice == {:radishes, :clover, :grass, :grass}
   end
 
   @tag :pending
