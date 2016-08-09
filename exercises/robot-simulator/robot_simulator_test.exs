@@ -5,73 +5,76 @@ end
 ExUnit.start
 ExUnit.configure exclude: :pending, trace: true
 
-defmodule RobotMacros do
-  defmacro __using__(_options) do
-    quote do
-      import unquote(__MODULE__)
-    end
-  end
-
-  defmacro ok_sim(direction, position) do
-    quote do
-      { :ok, %RobotSimulator{ direction: unquote(direction), position: unquote(position) } }
-    end
-  end
-end
-
 defmodule RobotSimulatorTest do
   use ExUnit.Case
-  use RobotMacros
 
   test "create has sensible defaults" do
-    assert RobotSimulator.create == ok_sim(:north, {0, 0})
+    robot = RobotSimulator.create
+    assert RobotSimulator.position(robot) == { 0, 0 }
+    assert RobotSimulator.direction(robot) == :north
   end
 
   @tag :pending
   test "create works with valid arguments" do
-    assert RobotSimulator.create(:north, {0, 0}) == ok_sim(:north, {0, 0})
-    assert RobotSimulator.create(:south, {-10, 0}) == ok_sim(:south, {-10, 0})
-    assert RobotSimulator.create(:east, {0, 10}) == ok_sim(:east, {0, 10})
-    assert RobotSimulator.create(:west, {100, -100}) == ok_sim(:west, {100, -100})
+    robot = RobotSimulator.create(:north, { 0, 0 })
+    assert RobotSimulator.position(robot) == { 0, 0 }
+    assert RobotSimulator.direction(robot) == :north
+
+    robot = RobotSimulator.create(:south, { -10, 0 })
+    assert RobotSimulator.position(robot) == { -10, 0 }
+    assert RobotSimulator.direction(robot) == :south
+
+    robot = RobotSimulator.create(:east, { 0, 10 })
+    assert RobotSimulator.position(robot) == { 0, 10 }
+    assert RobotSimulator.direction(robot) == :east
+
+    robot = RobotSimulator.create(:west, { 100, -100 })
+    assert RobotSimulator.position(robot) == { 100, -100 }
+    assert RobotSimulator.direction(robot) == :west
   end
 
   @tag :pending
   test "create errors if invalid direction given" do
-    assert RobotSimulator.create(:invalid, {0, 0}) == { :error, "invalid direction" }
-    assert RobotSimulator.create(0, {-10, 0}) == { :error, "invalid direction" }
-    assert RobotSimulator.create("east", {0, 10}) == { :error, "invalid direction" }
+    position = {0, 0}
+    invalid_direction = { :error, "invalid direction" }
+
+    assert RobotSimulator.create(:invalid, position) == invalid_direction
+    assert RobotSimulator.create(0, position) == invalid_direction
+    assert RobotSimulator.create("east", position) == invalid_direction
   end
 
   @tag :pending
   test "create errors if invalid position given" do
-    assert RobotSimulator.create(:north, "invalid") == { :error, "invalid position" }
-    assert RobotSimulator.create(:north, 0 ) == { :error, "invalid position" }
-    assert RobotSimulator.create(:north, [0, 0]) == { :error, "invalid position" }
-    assert RobotSimulator.create(:north, nil) == { :error, "invalid position" }
+    direction = :north
+    invalid_position = { :error, "invalid position" }
+
+    assert RobotSimulator.create(direction, { 0, 0, 0 }) == invalid_position
+    assert RobotSimulator.create(direction, { 0, :invalid }) == invalid_position
+    assert RobotSimulator.create(direction, { "0", 0 }) == invalid_position
+
+    assert RobotSimulator.create(direction, "invalid") == invalid_position
+    assert RobotSimulator.create(direction, 0 ) == invalid_position
+    assert RobotSimulator.create(direction, [0, 0]) == invalid_position
+    assert RobotSimulator.create(direction, nil) == invalid_position
   end
 
   @tag :pending
-  test "simulate single robot" do
-    { :ok, robot } = RobotSimulator.create(:east, { -2, 1 })
+  test "simulate robots" do
+    robot1 = RobotSimulator.create(:north, { 0, 0 }) |> RobotSimulator.simulate("LAAARALA")
+    assert RobotSimulator.direction(robot1) == :west
+    assert RobotSimulator.position(robot1) == { -4, 1 }
 
-    assert RobotSimulator.simulate(robot, "RLAALAL") == ok_sim(:west, { 0, 2 })
-  end
+    robot2 = RobotSimulator.create(:east, { 2, -7 }) |> RobotSimulator.simulate("RRAAAAALA")
+    assert RobotSimulator.direction(robot2) == :south
+    assert RobotSimulator.position(robot2) == { -3, -8 }
 
-  @tag :pending
-  test "simulate many robots" do
-    { :ok, robot1 } = RobotSimulator.create(:north, { 0, 0 })
-    { :ok, robot2 } = RobotSimulator.create(:east, { 2, -7 })
-    { :ok, robot3 } = RobotSimulator.create(:south, { 8, 4 })
-
-    assert RobotSimulator.simulate(robot1, "LAAARALA") == ok_sim(:west, { -4, 1 })
-    assert RobotSimulator.simulate(robot2, "RRAAAAALA") == ok_sim(:south, { -3, -8 })
-    assert RobotSimulator.simulate(robot3, "LAAARRRALLLL") == ok_sim(:north, { 11, 5 })
+    robot3 = RobotSimulator.create(:south, { 8, 4 }) |> RobotSimulator.simulate("LAAARRRALLLL")
+    assert RobotSimulator.direction(robot3) == :north
+    assert RobotSimulator.position(robot3) == { 11, 5 }
   end
 
   @tag :pending
   test "simulate errors on invalid instructions" do
-    { :ok, robot } = RobotSimulator.create
-
-    assert RobotSimulator.simulate(robot, "UUDDLRLRBASTART") == { :error, "invalid instruction" }
+    assert RobotSimulator.create |> RobotSimulator.simulate("UUDDLRLRBASTART") == { :error, "invalid instruction" }
   end
 end
