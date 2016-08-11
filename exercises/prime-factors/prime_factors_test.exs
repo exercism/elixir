@@ -62,4 +62,14 @@ defmodule PrimeFactorsTest do
   test "93819012551" do
     assert PrimeFactors.factors_for(93819012551) == [11, 9539, 894119]
   end
+
+  @tag :pending
+  # @tag timeout: 2000
+  #
+  # The timeout tag above will set the below test to fail unless it completes
+  # in under two sconds. Uncomment it if you want to test the efficiency of your
+  # solution.
+  test "10000000055" do
+    assert PrimeFactors.factors_for(10000000055) == [5, 2000000011]
+  end
 end
