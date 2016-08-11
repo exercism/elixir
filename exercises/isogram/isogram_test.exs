@@ -8,22 +8,22 @@ ExUnit.configure exclude: :pending, trace: true
 defmodule IsogramTest do
   use ExUnit.Case
 
-  test "isogram in lowercase" do
+  test "isogram lowercase" do
     assert Isogram.isogram?("subdermatoglyphic")
   end
 
   @tag :pending
-  test "not isogram in lowercase" do
+  test "not isogram lowercase " do
     refute Isogram.isogram?("eleven")
   end
 
   @tag :pending
-  test "isogram in uppercase" do
+  test "isogram uppercase" do
     assert Isogram.isogram?("DEMONSTRABLY")
   end
 
   @tag :pending
-  test "not isogram in uppercase" do
+  test "not isogram uppercase" do
     refute Isogram.isogram?("ALPHABET")
   end
 
