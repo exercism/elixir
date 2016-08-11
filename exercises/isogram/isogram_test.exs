@@ -9,32 +9,47 @@ defmodule IsogramTest do
   use ExUnit.Case
 
   test "isogram in lowercase" do
-    refute Isogram.isogram?("eleven")
-  end
-
-  @tag :pending
-  test "not isogram in lowercase" do
     assert Isogram.isogram?("subdermatoglyphic")
   end
 
   @tag :pending
-  test "not isogram in upper and lower case" do
-    refute Isogram.isogram?("Alphabet")
+  test "not isogram in lowercase" do
+    refute Isogram.isogram?("eleven")
+  end
+
+  @tag :pending
+  test "isogram in uppercase" do
+    assert Isogram.isogram?("DEMONSTRABLY")
+  end
+
+  @tag :pending
+  test "not isogram in uppercase" do
+    refute Isogram.isogram?("ALPHABET")
   end
 
   @tag :pending
   test "isogram with dash" do
-    assert Isogram.isogram?("thumbscrew-japingly")
+    assert Isogram.isogram?("hjelmqvist-gryb-zock-pfund-wax")
   end
 
   @tag :pending
-  test "isogram with dash in upper and lower case" do
-    assert Isogram.isogram?("Hjelmqvist-Gryb-Zock-Pfund-Wax")
+  test "not isogram with dash" do
+    refute Isogram.isogram?("twenty-five")
   end
 
   @tag :pending
-  test "isogram with utf-8 letters in upper and lower case" do
-    assert Isogram.isogram?("Heizölrückstoßabdämpfung")
+  test "isogram with utf-8 letters" do
+    assert Isogram.isogram?("heizölrückstoßabdämpfung")
+  end
+
+  @tag :pending
+  test "not isogram with utf-8 letters" do
+    refute Isogram.isogram?("éléphant")
+  end
+
+  @tag :pending
+  test "phrase is isogram" do
+    assert Isogram.isogram?("emily jung schwartzkopf")
   end
 
   @tag :pending
@@ -42,13 +57,4 @@ defmodule IsogramTest do
     refute Isogram.isogram?("the quick brown fox")
   end
 
-  @tag :pending
-  test "isogram is phrase in upper and lower case" do
-    assert Isogram.isogram?("Emily Jung Schwartzkopf")
-  end
-
-  @tag :pending
-  test "not isogram with utf-8 letter" do
-    refute Isogram.isogram?("éléphant")
-  end
 end
