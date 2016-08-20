@@ -1,136 +1,74 @@
 defmodule CustomSet do
-  # This lets the compiler check that all Set callback functions have been
-  # implemented.
-  @behaviour Set
+  defstruct map: Map.new
 
-  # Use a list as set implementation. This is horribly slow compared to other
-  # approaches, but simple.
+  @opaque t :: %__MODULE__{map: map}
 
-  # Wrapper for the internal list
-  defstruct list: []
-
-  def new() do
-    %CustomSet{}
+  @spec new(Enum.t) :: t
+  def new(enumerable) do
+    %CustomSet{map: Map.new(enumerable, fn (x) -> {x, true} end)}
   end
 
-  def new(coll) do
-    Enum.reduce(coll, %CustomSet{}, fn x, s -> put(s, x) end)
+  @spec empty?(t) :: boolean
+  def empty?(%CustomSet{map: map}) do
+    Map.keys(map) |> Enum.empty?
   end
 
-  ## Set callbacks
-  def delete(s, x) do
-    wrap(List.delete(unwrap(s), x))
+  @spec contains?(t, any) :: boolean
+  def contains?(%CustomSet{map: map}, element) do
+    Map.has_key?(map, element)
   end
 
-  def difference(a, b) do
-    wrap(Enum.filter_map(diff(a, b), &(match?({:a_only, _}, &1)), &(elem(&1, 1))))
-  end
-
-  def disjoint?(a, b) do
-    not Enum.any?(diff(a, b), &(match?({:both, _}, &1)))
-  end
-
-  def empty(_) do
-    new()
-  end
-
-  def equal?(a, b) do
-    unwrap(a) === unwrap(b)
-  end
-
-  def intersection(a, b) do
-    wrap(Enum.filter_map(diff(a, b), &(match?({:both, _}, &1)), &(elem(&1, 1))))
-  end
-
-  def member?(s, x) do
-    :lists.member(x, unwrap(s))
-  end
-
-  def put(s, x) do
-    case do_put(unwrap(s), x, []) do
-      nil -> s # Element already in list
-      l   -> wrap(l)
+  @spec subset?(t, t) :: boolean
+  def subset?(%CustomSet{map: map1}, %CustomSet{map: map2}) do
+    if map_size(map1) <= map_size(map2) do
+      Map.keys(map1) |> do_subset?(map2)
+    else
+      false
     end
   end
 
-  defp do_put([], x, acc) do
-    :lists.reverse([x|acc])
-  end
-  defp do_put(l = [h|t], x, acc) do
-    # Maintain a sorted order
-    cond do
-      x === h ->
-        nil
-      lt_strict(x, h) ->
-        :lists.reverse(acc) ++ [x|l]
-      true ->
-        do_put(t, x, [h|acc])
+  defp do_subset?([], _), do: true
+  defp do_subset?([key | rest], map2) do
+    if Map.has_key?(map2, key) do
+      do_subset?(rest, map2)
+    else
+      false
     end
   end
 
-  def size(s) do
-    length(unwrap(s))
+  @spec disjoint?(t, t) :: boolean
+  def disjoint?(%CustomSet{map: map1}, %CustomSet{map: map2}) do
+    total_size = map_size(map1) + map_size(map2)
+    merged_size = map_size(Map.merge(map1, map2))
+    total_size == merged_size
   end
 
-  def subset?(a, b) do
-    not Enum.any?(diff(a, b), &(match?({:a_only, _}, &1)))
+  @spec equal?(t, t) :: boolean
+  def equal?(%CustomSet{map: map1}, %CustomSet{map: map2}) do
+    Map.equal?(map1, map2)
   end
 
-  def to_list(s) do
-    unwrap(s)
+  @spec add(t, any) :: t
+  def add(%CustomSet{map: map}, element) do
+    %CustomSet{map: Map.put(map, element, true)}
   end
 
-  def union(a, b) do
-    wrap(Enum.sort(Enum.map(diff(a, b), &(elem(&1, 1)))))
+  @spec intersection(t, t) :: t
+  def intersection(%CustomSet{map: map1}, %CustomSet{map: map2}) do
+    {map1, map2} = order_by_size(map1, map2)
+    %CustomSet{map: Map.take(map2, Map.keys(map1))}
   end
 
-  @compile { :inline, wrap: 1, unwrap: 1 }
+  defp order_by_size(map1, map2) when map_size(map1) > map_size(map2), do: {map2, map1}
+  defp order_by_size(map1, map2), do: {map1, map2}
 
-  defp wrap(l) do
-    %CustomSet{list: l}
+  @spec difference(t, t) :: t
+  def difference(%CustomSet{map: map1}, %CustomSet{map: map2}) do
+    %CustomSet{map: Map.drop(map1, Map.keys(map2))}
   end
 
-  defp unwrap(s) do
-    s.list
-  end
-
-  defp diff(a, b) do
-    la = unwrap(a)
-    lb = unwrap(b)
-    do_diff(la, lb, [])
-  end
-
-  defp do_diff([], [], acc), do: :lists.reverse(acc)
-  defp do_diff([ha|ta], [], acc), do: do_diff(ta, [], [{:a_only, ha} | acc])
-  defp do_diff([], [hb|tb], acc), do: do_diff([], tb, [{:b_only, hb} | acc])
-  defp do_diff(a = [ha|ta], b = [hb|tb], acc) do
-    cond do
-      lt_strict(ha, hb) ->
-        do_diff(ta, b, [{:a_only, ha} | acc])
-      lt_strict(hb, ha) ->
-        do_diff(a, tb, [{:b_only, hb} | acc])
-      true ->
-        do_diff(ta, tb, [{:both, ha} | acc])
-    end
-  end
-
-  # Total version of ordering. Normally 1 < 1.0 and 1 > 1.0 are both false,
-  # which matches the fact that 1 == 1.0. However with strict comparison (===)
-  # 1 === 1.0 is false so one of 1 < 1.0 and 1 > 1.0 should be true. This
-  # provides for that.
-  defp lt_strict(a, b) when is_float(a) and is_integer(b), do: false
-  defp lt_strict(a, b) when is_integer(a) and is_float(b), do: true
-  defp lt_strict(a, b), do: a < b
-end
-
-defimpl Inspect, for: CustomSet do
-  import Kernel, except: [inspect: 2]
-  import Inspect.Algebra
-  # Deal with the deprecation of Kernel.to_doc
-  if not { :to_doc, 2 } in Inspect.Algebra.__info__(:functions) do
-    def to_doc(x, opts), do: Kernel.inspect(x, opts)
-  end
-  def inspect(s, opts) do
-    concat ["#<CustomSet ", to_doc(CustomSet.to_list(s), opts), ">"]
+  @spec union(t, t) :: t
+  def union(%CustomSet{map: map1}, %CustomSet{map: map2}) do
+    %CustomSet{map: Map.merge(map1, map2)}
   end
 end
