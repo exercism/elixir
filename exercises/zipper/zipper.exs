@@ -1,4 +1,5 @@
 defmodule BinTree do
+  import Inspect.Algebra
   @moduledoc """
   A node in a binary tree.
 
@@ -8,6 +9,17 @@ defmodule BinTree do
   """
   @type t :: %BinTree{ value: any, left: BinTree.t | nil, right: BinTree.t | nil }
   defstruct value: nil, left: nil, right: nil
+
+  # A custom inspect instance purely for the tests, this makes error messages
+  # much more readable.
+  #
+  # BT[value: 3, left: BT[value: 5, right: BT[value: 6]]] becomes (3:(5::(6::)):)
+  def inspect(%BinTree{value: v, left: l, right: r}, opts) do
+    concat ["(", to_doc(v, opts),
+            ":", (if l, do: to_doc(l, opts), else: ""),
+            ":", (if r, do: to_doc(r, opts), else: ""),
+            ")"]
+  end
 end
 
 defmodule Zipper do

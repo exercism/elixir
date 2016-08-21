@@ -5,31 +5,31 @@ end
 ExUnit.start
 ExUnit.configure exclude: :pending, trace: true
 
-defmodule DNATest do
+defmodule RNATranscriptionTest do
   use ExUnit.Case
 
   # @tag :pending
   test "transcribes guanine to cytosine" do
-    assert DNA.to_rna('G') == 'C'
+    assert RNATranscription.to_rna('G') == 'C'
   end
 
   @tag :pending
   test "transcribes cytosine to guanine" do
-    assert DNA.to_rna('C') == 'G'
+    assert RNATranscription.to_rna('C') == 'G'
   end
 
   @tag :pending
   test "transcribes thymidine to adenine" do
-    assert DNA.to_rna('T') == 'A'
+    assert RNATranscription.to_rna('T') == 'A'
   end
 
   @tag :pending
   test "transcribes adenine to uracil" do
-    assert DNA.to_rna('A') == 'U'
+    assert RNATranscription.to_rna('A') == 'U'
   end
 
   @tag :pending
   test "it transcribes all dna nucleotides to rna equivalents" do
-    assert DNA.to_rna('ACGTGGTCTTAA') == 'UGCACCAGAAUU'
+    assert RNATranscription.to_rna('ACGTGGTCTTAA') == 'UGCACCAGAAUU'
   end
 end

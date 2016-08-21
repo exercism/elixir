@@ -1,15 +1,15 @@
-defmodule DNA do
+defmodule NucleotideCount do
   @nucleotides [?A, ?C, ?G, ?T]
 
   @doc """
-  Counts individual nucleotides in a DNA strand.
+  Counts individual nucleotides in a NucleotideCount strand.
 
   ## Examples
 
-  iex> DNA.count('AATAA', ?A)
+  iex> NucleotideCount.count('AATAA', ?A)
   4
 
-  iex> DNA.count('AATAA', ?T)
+  iex> NucleotideCount.count('AATAA', ?T)
   1
   """
 
@@ -24,7 +24,7 @@ defmodule DNA do
 
   ## Examples
 
-  iex> DNA.nucleotide_counts('AATAA')
+  iex> NucleotideCount.nucleotide_counts('AATAA')
   %{?A => 4, ?T => 1, ?C => 0, ?G => 0}
   """
 

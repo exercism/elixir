@@ -5,7 +5,7 @@ end
 ExUnit.start
 ExUnit.configure exclude: :pending, trace: true
 
-defmodule ChangeTest do
+defmodule HexadecimalTest do
   use ExUnit.Case
 
   test "returns 1 when hex is 1" do
