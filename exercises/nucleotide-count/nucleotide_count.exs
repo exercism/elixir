@@ -1,15 +1,15 @@
-defmodule DNA do
+defmodule NucleotideCount do
   @nucleotides [?A, ?C, ?G, ?T]
 
   @doc """
-  Counts individual nucleotides in a DNA strand.
+  Counts individual nucleotides in a NucleotideCount strand.
 
   ## Examples
 
-  iex> DNA.count('AATAA', ?A)
+  iex> NucleotideCount.count('AATAA', ?A)
   4
 
-  iex> DNA.count('AATAA', ?T)
+  iex> NucleotideCount.count('AATAA', ?T)
   1
   """
   @spec count([char], char) :: non_neg_integer
@@ -23,7 +23,7 @@ defmodule DNA do
 
   ## Examples
 
-  iex> DNA.histogram('AATAA')
+  iex> NucleotideCount.histogram('AATAA')
   %{?A => 4, ?T => 1, ?C => 0, ?G => 0}
   """
   @spec histogram([char]) :: map

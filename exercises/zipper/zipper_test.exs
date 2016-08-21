@@ -8,22 +8,6 @@ ExUnit.configure exclude: :pending, trace: true
 defmodule ZipperTest do
   alias BinTree, as: BT
   import Zipper
-
-  # A custom inspect instance purely for the tests, this makes error messages
-  # much more readable.
-  #
-  # BT[value: 3, left: BT[value: 5, right: BT[value: 6]]] becomes (3:(5::(6::)):)
-  defimpl Inspect, for: BT do
-    import Inspect.Algebra
-
-    def inspect(%BinTree{value: v, left: l, right: r}, opts) do
-      concat ["(", to_doc(v, opts),
-              ":", (if l, do: to_doc(l, opts), else: ""),
-              ":", (if r, do: to_doc(r, opts), else: ""),
-              ")"]
-    end
-  end
-
   use ExUnit.Case
 
   defp bt(value, left, right), do: %BT{value: value, left: left, right: right}

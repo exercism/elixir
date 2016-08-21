@@ -1,13 +1,13 @@
-defmodule Flattener do
+defmodule FlattenArray do
   @doc """
     Accept a list and return the list flattened without nil values.
 
     ## Examples
 
-      iex> Flattener.flatten([1, [2], 3, nil])
+      iex> FlattenArray.flatten([1, [2], 3, nil])
       [1,2,3]
 
-      iex> Flattener.flatten([nil, nil])
+      iex> FlattenArray.flatten([nil, nil])
       []
 
   """
