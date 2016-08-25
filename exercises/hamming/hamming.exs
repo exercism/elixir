@@ -1,4 +1,4 @@
-defmodule DNA do
+defmodule Hamming do
   @doc """
   Returns number of differences between two strands of DNA, known as the Hamming Distance.
 
