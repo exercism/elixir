@@ -16,32 +16,21 @@ defmodule Change do
   """
 
   @spec generate(integer, list) :: {:ok, map} | :error
-  def generate(_amount, []), do: :error
   def generate(amount, values) do
-    sorted_values = values |> Enum.sort
-    reversed = sorted_values |> Enum.reverse
+    values |> Enum.sort(&(&2 < &1)) |> generate(amount, %{})
+  end
 
-    case do_generate(amount, reversed, []) do
-      :error -> :error
-      chosen_coins -> {:ok, display(sorted_values, chosen_coins)}
+  defp generate(_, 0, acc), do: {:ok, acc}
+  defp generate([], _, _), do: :error
+  defp generate(values = [h | t], amount, acc) do
+    if amount >= h && divisible?(amount - h, values) do
+      generate(values, amount - h, Map.update(acc, h, 1, &(&1 + 1)))
+    else
+      generate(t, amount, Map.put_new(acc, h, 0))
     end
   end
 
-  defp do_generate(0, [], coins), do: coins
-  defp do_generate(_amount, [], _coins), do: :error
-  defp do_generate(amount, [value|values], coins) do
-    quantity = div(amount, value)
-    amount_remaining = amount - (value * quantity)
-
-    do_generate(amount_remaining, values, [quantity|coins])
-  end
-
-  defp display(values, chosen_coins) do
-    [coins, _] = Enum.reduce(values, [%{}, 0], fn(value, [coins, index]) ->
-      quantity = Enum.at(chosen_coins, index)
-      [Map.put(coins, value, quantity), index + 1]
-    end)
-
-    coins
+  defp divisible?(num, values) do
+    Enum.any?(values, &(rem(num, &1) == 0))
   end
 end
