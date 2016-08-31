@@ -16,4 +16,8 @@ defmodule ExercismTestRunner.Mixfile do
   defp deps do
     [{:poison, "~> 1.4.0"}]
   end
+
+  defp aliases do
+    ["compile": ["compile --warnings-as-errors"]]
+  end
 end
