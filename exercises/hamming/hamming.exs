@@ -1,10 +1,10 @@
-defmodule DNA do
+defmodule Hamming do
   @doc """
   Returns number of differences between two strands of DNA, known as the Hamming Distance.
 
   ## Examples
 
-  iex> DNA.hamming_distance('AAGTCATA', 'TAGCGATC')
+  iex> Hamming.hamming_distance('AAGTCATA', 'TAGCGATC')
   {:ok, 4}
   """
   @spec hamming_distance([char], [char]) :: non_neg_integer

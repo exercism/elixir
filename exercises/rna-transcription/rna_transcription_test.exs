@@ -1,5 +1,5 @@
 if !System.get_env("EXERCISM_TEST_EXAMPLES") do
-  Code.load_file("dna.exs", __DIR__)
+  Code.load_file("rna_transcription.exs", __DIR__)
 end
 
 ExUnit.start
