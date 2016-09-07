@@ -5,7 +5,7 @@ Exercism Exercises in Elixir
 
 ## Setup
 
-The exercises currently target Elixir 1.2. Detailed installation instructions can be found at [http://elixir-lang.org/install.html](http://elixir-lang.org/install.html).
+The exercises currently target Elixir 1.3.2 and Erlang/OTP 19. Detailed installation instructions can be found at [http://elixir-lang.org/install.html](http://elixir-lang.org/install.html).
 
 ##Contributing
 
