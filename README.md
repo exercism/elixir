@@ -48,7 +48,7 @@ ExUnit.start
 ExUnit.configure exclude: :pending, trace: true
 ```
 
-- All but the intial test for each exercise should be tagged `:pending`.
+- All but the initial test for each exercise should be tagged `:pending`.
 
 ```elixir
 @tag :pending
