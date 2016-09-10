@@ -64,7 +64,8 @@
     "bowling",
     "dot-dsl",
     "custom-set",
-    "forth"
+    "forth",
+    "pangram"
   ],
   "exercises": [
     {
@@ -431,6 +432,14 @@
       "slug": "forth",
       "difficulty": 1,
       "topics": [
+      ]
+    },
+    {
+      "slug": "pangram",
+      "difficulty": 1,
+      "topics": [
+        "Strings",
+        "Enumerations"
       ]
     }
   ],
