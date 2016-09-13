@@ -6,7 +6,8 @@ defmodule ExercismTestRunner.Mixfile do
      version: "0.0.1",
      elixir: "~> 1.0",
      deps: deps,
-     test_paths: ["exercises"]]
+     test_paths: ["exercises"],
+     consolidate_protocols: false]
   end
 
   def application do

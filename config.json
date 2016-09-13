@@ -65,7 +65,8 @@
     "dot-dsl",
     "custom-set",
     "forth",
-    "pangram"
+    "pangram",
+    "clock"
   ],
   "exercises": [
     {
@@ -440,6 +441,17 @@
       "topics": [
         "Strings",
         "Enumerations"
+      ]
+    },
+    {
+      "slug": "clock",
+      "difficulty": 1,
+      "topics": [
+        "Protocols",
+        "Structs",
+        "Logic",
+        "Transforming",
+        "Integers"
       ]
     }
   ],
