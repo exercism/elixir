@@ -1,5 +1,5 @@
 if !System.get_env("EXERCISM_TEST_EXAMPLES") do
-  Code.load_file("flatten_array.exs")
+  Code.load_file("flatten_array.exs", __DIR__)
 end
 
 ExUnit.start
