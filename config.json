@@ -38,6 +38,7 @@
     "parallel-letter-frequency",
     "binary",
     "luhn",
+    "markdown",
     "gigasecond",
     "queen-attack",
     "pascals-triangle",
@@ -268,6 +269,12 @@
     },
     {
       "slug": "luhn",
+      "difficulty": 1,
+      "topics": [
+      ]
+    },
+    {
+      "slug": "markdown",
       "difficulty": 1,
       "topics": [
       ]
