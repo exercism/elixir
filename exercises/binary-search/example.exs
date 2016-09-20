@@ -17,24 +17,20 @@ defmodule BinarySearch do
 
   """
 
-  @spec search(Enumerable.t, integer) :: {:ok, integer} | :not_found
-  def search([], _key), do: :not_found
-  def search(list, key) do
-    if Enum.sort(list) != list do
-      raise ArgumentError, "expected list to be sorted"
-    end
-
-    do_search(list, key, 0, length(list) - 1)
+  @spec search(tuple, integer) :: {:ok, integer} | :not_found
+  def search({}, _key), do: :not_found
+  def search(numbers, key) do
+    do_search(numbers, key, 0, tuple_size(numbers) - 1)
   end
 
-  defp do_search(_list, _key, low, high) when high < low, do: :not_found
-  defp do_search(list, key, low, high) do
+  defp do_search(_numbers, _key, low, high) when high < low, do: :not_found
+  defp do_search(numbers, key, low, high) do
     middle = div(low + high, 2)
-    middle_value = Enum.at(list, middle)
+    middle_value = elem(numbers, middle)
 
     cond do
-      key < middle_value -> do_search(list, key, low, middle - 1)
-      key > middle_value -> do_search(list, key, middle + 1, high)
+      key < middle_value -> do_search(numbers, key, low, middle - 1)
+      key > middle_value -> do_search(numbers, key, middle + 1, high)
       true               -> {:ok, middle}
     end
   end
