@@ -28,9 +28,7 @@ defmodule RobotSimulator do
   end
 
   @doc """
-  Return the robot's direction.
-
-  Valid directions are: `:north`, `:east`, `:south`, `:west`
+  Return the robot's position.
   """
   @spec position(robot :: any) :: { integer, integer }
   def position(robot) do
