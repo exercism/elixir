@@ -41,25 +41,4 @@ defmodule NucleotideCountTest do
     expected = %{?A => 20, ?T => 21, ?C => 12, ?G => 17}
     assert NucleotideCount.histogram(s) == expected
   end
-
-  @tag :pending
-  test "histogram validates the strand" do
-    assert_raise ArgumentError, fn ->
-      NucleotideCount.histogram('JOHNNYAPPLESEED')
-    end
-  end
-
-  @tag :pending
-  test "count validates the nucleotide" do
-    assert_raise ArgumentError, fn ->
-      NucleotideCount.count('', ?U)
-    end
-  end
-
-  @tag :pending
-  test "count validates the strand" do
-    assert_raise ArgumentError, fn ->
-      NucleotideCount.count('JOHNNYAPPLESEED', ?A)
-    end
-  end
 end
