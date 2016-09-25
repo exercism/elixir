@@ -3,32 +3,32 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.configure trace: true
 
 defmodule NthPrimeTest do
   use ExUnit.Case
 
-  # @tag :pending
+  # @tag :skip
   test "first prime" do
     assert Prime.nth(1) == 2
   end
 
-  @tag :pending
+  @tag :skip
   test "second prime" do
     assert Prime.nth(2) == 3
   end
 
-  @tag :pending
+  @tag :skip
   test "sixth prime" do
     assert Prime.nth(6) == 13
   end
 
-  @tag :pending
+  @tag :skip
   test "100th prime" do
     assert Prime.nth(100) == 541
   end
 
-  @tag :pending
+  @tag :skip
   test "weird case" do
     catch_error Prime.nth(0)
   end

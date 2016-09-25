@@ -3,18 +3,18 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.configure trace: true
 
 defmodule DiamondTest do
   use ExUnit.Case
 
-  # @tag :pending
+  # @tag :skip
   test "letter A" do
     shape = Diamond.build_shape(?A)
     assert shape == "A\n"
   end
 
-  @tag :pending
+  @tag :skip
   test "letter C" do
     shape = Diamond.build_shape(?C)
     assert shape == """
@@ -26,7 +26,7 @@ defmodule DiamondTest do
     """
   end
 
-  @tag :pending
+  @tag :skip
   test "letter E" do
     shape = Diamond.build_shape(?E)
     assert shape == """

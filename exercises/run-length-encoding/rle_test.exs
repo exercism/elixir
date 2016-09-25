@@ -3,7 +3,7 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.configure trace: true
 
 defmodule RunLengthEncoderTest do
   use ExUnit.Case
@@ -12,27 +12,27 @@ defmodule RunLengthEncoderTest do
     assert RunLengthEncoder.encode("") === ""
   end
 
-  @tag :pending
+  @tag :skip
   test "simple string gets encoded" do
     assert RunLengthEncoder.encode("AAA") === "3A"
   end
 
-  @tag :pending
+  @tag :skip
   test "more complicated string" do
     assert RunLengthEncoder.encode("HORSE") == "1H1O1R1S1E"
   end
 
-  @tag :pending
+  @tag :skip
   test "an even more complex string" do
     assert RunLengthEncoder.encode("WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB") === "12W1B12W3B24W1B"
   end
 
-  @tag :pending
+  @tag :skip
   test "it decodes an encoded simple string" do
     assert RunLengthEncoder.decode("3A") === "AAA"
   end
 
-  @tag :pending
+  @tag :skip
   test "it decodes a more complicated string" do
     assert RunLengthEncoder.decode("12W1B12W3B24W1B") === "WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB"
   end

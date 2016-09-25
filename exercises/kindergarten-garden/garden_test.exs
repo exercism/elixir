@@ -3,7 +3,7 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.configure trace: true
 
 defmodule GardenTest do
   use ExUnit.Case
@@ -13,25 +13,25 @@ defmodule GardenTest do
     assert garden_info.alice == {:radishes, :clover, :grass, :grass}
   end
 
-  @tag :pending
+  @tag :skip
   test "gets another garden for Alice with just her plants" do
     garden_info = Garden.info("VC\nRC")
     assert garden_info.alice == {:violets, :clover, :radishes, :clover}
   end
 
-  @tag :pending
+  @tag :skip
   test "returns an empty tuple if the child has no plants" do
     garden_info = Garden.info("VC\nRC")
     assert garden_info.bob == {}
   end
 
-  @tag :pending
+  @tag :skip
   test "gets the garden for Bob" do
     garden_info = Garden.info("VVCG\nVVRC")
     assert garden_info.bob == {:clover, :grass, :radishes, :clover}
   end
 
-  @tag :pending
+  @tag :skip
   test "gets the garden for all students" do
     garden_info = Garden.info("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV")
     assert garden_info.alice == {:violets, :radishes, :violets, :radishes}
@@ -48,14 +48,14 @@ defmodule GardenTest do
     assert garden_info.larry == {:grass, :violets, :clover, :violets}
   end
 
-  @tag :pending
+  @tag :skip
   test "accepts custom child names" do
     garden_info = Garden.info("VC\nRC", [:nate, :maggie])
     assert garden_info.maggie == {:violets, :clover, :radishes, :clover}
     assert garden_info.nate == {}
   end
 
-  @tag :pending
+  @tag :skip
   test "gets the garden for all students with custom child names" do
     names = [:maggie, :nate, :xander, :ophelia, :pete, :reggie, :sylvia,
              :tanner, :ursula, :victor, :winnie, :ynold]

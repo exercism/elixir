@@ -3,7 +3,7 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.configure trace: true
 
 defmodule WordyTest do
   use ExUnit.Case
@@ -12,79 +12,79 @@ defmodule WordyTest do
     assert Wordy.answer("What is 1 plus 1?") == 2
   end
 
-  @tag :pending
+  @tag :skip
   test "more addition" do
     assert Wordy.answer("What is 53 plus 2?") == 55
   end
 
-  @tag :pending
+  @tag :skip
   test "addition with negative numbers" do
     assert Wordy.answer("What is -1 plus -10?") == -11
   end
 
-  @tag :pending
+  @tag :skip
   test "large addition" do
     assert Wordy.answer("What is 123 plus 45678?") == 45801
   end
 
-  @tag :pending
+  @tag :skip
   test "subtraction" do
     assert Wordy.answer("What is 4 minus -12?") == 16
   end
 
-  @tag :pending
+  @tag :skip
   test "multiplication" do
     assert Wordy.answer("What is -3 multiplied by 25?") == -75
   end
 
-  @tag :pending
+  @tag :skip
   test "division" do
     assert Wordy.answer("What is 33 divided by -3?") == -11
   end
 
-  @tag :pending
+  @tag :skip
   test "multiple additions" do
     assert Wordy.answer("What is 1 plus 1 plus 1?") == 3
   end
 
-  @tag :pending
+  @tag :skip
   test "addition and subtraction" do
     assert Wordy.answer("What is 1 plus 5 minus -2?") == 8
   end
 
-  @tag :pending
+  @tag :skip
   test "multiple subtraction" do
     assert Wordy.answer("What is 20 minus 4 minus 13?") == 3
   end
 
-  @tag :pending
+  @tag :skip
   test "subtraction then addition" do
     assert Wordy.answer("What is 17 minus 6 plus 3?") == 14
   end
 
-  @tag :pending
+  @tag :skip
   test "multiple multiplication" do
     assert Wordy.answer("What is 2 multiplied by -2 multiplied by 3?") == -12
   end
 
-  @tag :pending
+  @tag :skip
   test "addition and multiplication" do
     assert Wordy.answer("What is -3 plus 7 multiplied by -2?") == -8
   end
 
-  @tag :pending
+  @tag :skip
   test "multiple division" do
     assert Wordy.answer("What is -12 divided by 2 divided by -3?") == 2
   end
 
-  @tag :pending
+  @tag :skip
   test "unknown operation" do
     assert_raise ArgumentError, fn ->
       Wordy.answer("What is 52 cubed?")
     end
   end
 
-  @tag :pending
+  @tag :skip
   test "Non math question" do
     assert_raise ArgumentError, fn ->
       Wordy.answer("Who is the President of the United States?")

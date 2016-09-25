@@ -3,18 +3,18 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.configure trace: true
 
 defmodule ForthTest do
   use ExUnit.Case
 
-  # @tag :pending
+  # @tag :skip
   test "no input, no stack" do
     s = Forth.new |> Forth.format_stack
     assert s == ""
   end
 
-  @tag :pending
+  @tag :skip
   test "numbers just get pushed onto the stack" do
     s = Forth.new
         |> Forth.eval("1 2 3 4 5")
@@ -22,7 +22,7 @@ defmodule ForthTest do
     assert s == "1 2 3 4 5"
   end
 
-  @tag :pending
+  @tag :skip
   test "non-word characters are separators" do
     # Note the Ogham Space Mark ( ), this is a spacing character.
     s = Forth.new
@@ -31,7 +31,7 @@ defmodule ForthTest do
     assert s == "1 2 3 4 5 6 7"
   end
 
-  @tag :pending
+  @tag :skip
   test "basic arithmetic" do
     s = Forth.new
         |> Forth.eval("1 2 + 4 -")
@@ -43,14 +43,14 @@ defmodule ForthTest do
     assert s == "2"
   end
 
-  @tag :pending
+  @tag :skip
   test "division by zero" do
     assert_raise Forth.DivisionByZero, fn ->
       Forth.new |> Forth.eval("4 2 2 - /")
     end
   end
 
-  @tag :pending
+  @tag :skip
   test "dup" do
     s = Forth.new
         |> Forth.eval("1 DUP")
@@ -65,7 +65,7 @@ defmodule ForthTest do
     end
   end
 
-  @tag :pending
+  @tag :skip
   test "drop" do
     s = Forth.new
         |> Forth.eval("1 drop")
@@ -80,7 +80,7 @@ defmodule ForthTest do
     end
   end
 
-  @tag :pending
+  @tag :skip
   test "swap" do
     s = Forth.new
         |> Forth.eval("1 2 swap")
@@ -98,7 +98,7 @@ defmodule ForthTest do
     end
   end
 
-  @tag :pending
+  @tag :skip
   test "over" do
     s = Forth.new
         |> Forth.eval("1 2 over")
@@ -116,7 +116,7 @@ defmodule ForthTest do
     end
   end
 
-  @tag :pending
+  @tag :skip
   test "defining a new word" do
     s = Forth.new
         |> Forth.eval(": dup-twice dup dup ;")
@@ -125,7 +125,7 @@ defmodule ForthTest do
     assert s == "1 1 1"
   end
 
-  @tag :pending
+  @tag :skip
   test "redefining an existing word" do
     s = Forth.new
         |> Forth.eval(": foo dup ;")
@@ -135,7 +135,7 @@ defmodule ForthTest do
     assert s == "1 1 1"
   end
 
-  @tag :pending
+  @tag :skip
   test "redefining an existing built-in word" do
     s = Forth.new
         |> Forth.eval(": swap dup ;")
@@ -144,7 +144,7 @@ defmodule ForthTest do
     assert s == "1 1"
   end
 
-  @tag :pending
+  @tag :skip
   test "defining words with odd characters" do
     s = Forth.new
         |> Forth.eval(": € 220371 ; €")
@@ -152,14 +152,14 @@ defmodule ForthTest do
     assert s == "220371"
   end
 
-  @tag :pending
+  @tag :skip
   test "defining a number" do
     assert_raise Forth.InvalidWord, fn ->
       Forth.new |> Forth.eval(": 1 2 ;")
     end
   end
 
-  @tag :pending
+  @tag :skip
   test "calling a non-existing word" do
     assert_raise Forth.UnknownWord, fn ->
       Forth.new |> Forth.eval("1 foo")
