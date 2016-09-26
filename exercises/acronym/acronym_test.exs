@@ -3,7 +3,7 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.configure trace: true
 
 defmodule AcronymTest do
   use ExUnit.Case
@@ -12,22 +12,22 @@ defmodule AcronymTest do
     assert Acronym.abbreviate("Portable Networks Graphic") === "PNG"
   end
 
-  @tag :pending
+  @tag :skip
   test "it produces acronyms from lower case" do
     assert Acronym.abbreviate("Ruby on Rails") === "ROR"
   end
 
-  @tag :pending
+  @tag :skip
   test "it produces acronyms from inconsistent case" do
     assert Acronym.abbreviate("HyperText Markup Language") === "HTML"
   end
 
-  @tag :pending
+  @tag :skip
   test "it ignores punctuation" do
     assert Acronym.abbreviate("First in, First out") === "FIFO"
   end
 
-  @tag :pending
+  @tag :skip
   test "it produces acronyms ignoring punctuation and casing" do
     assert Acronym.abbreviate("Complementary Metal-Oxide semiconductor") === "CMOS"
   end

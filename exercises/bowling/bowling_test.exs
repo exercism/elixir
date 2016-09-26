@@ -3,7 +3,7 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.configure trace: true
 
 defmodule BowlingTest do
   use ExUnit.Case
@@ -28,7 +28,7 @@ defmodule BowlingTest do
     assert Bowling.score(game) == 0
   end
 
-  @tag :pending
+  @tag :skip
   test "can score an open frame" do
     game = Bowling.start
     rolls = [3, 4,
@@ -45,7 +45,7 @@ defmodule BowlingTest do
     assert Bowling.score(game) == 7
   end
 
-  @tag :pending
+  @tag :skip
   test "can score multiple frames" do
     game = Bowling.start
     rolls = [3, 4,
@@ -62,7 +62,7 @@ defmodule BowlingTest do
     assert Bowling.score(game) == 19
   end
 
-  @tag :pending
+  @tag :skip
   test "can score a game with all single pin rolls" do
     game = Bowling.start
     rolls = [1, 1,
@@ -79,7 +79,7 @@ defmodule BowlingTest do
     assert Bowling.score(game) == 20
   end
 
-  @tag :pending
+  @tag :skip
   test "can score a game with all open frames" do
     game = Bowling.start
     rolls = [3, 6,
@@ -96,7 +96,7 @@ defmodule BowlingTest do
     assert Bowling.score(game) == 90
   end
 
-  @tag :pending
+  @tag :skip
   test "can score a game with a strike not in the last frame" do
     game = Bowling.start
     rolls = [10,
@@ -113,7 +113,7 @@ defmodule BowlingTest do
     assert Bowling.score(game) == 26
   end
 
-  @tag :pending
+  @tag :skip
   test "can score a game with a spare not in the last frame" do
     game = Bowling.start
     rolls = [5, 5,
@@ -130,7 +130,7 @@ defmodule BowlingTest do
     assert Bowling.score(game) == 20
   end
 
-  @tag :pending
+  @tag :skip
   test "can score a game with multiple strikes in a row" do
     game = Bowling.start
     rolls = [10,
@@ -147,7 +147,7 @@ defmodule BowlingTest do
     assert Bowling.score(game) == 81
   end
 
-  @tag :pending
+  @tag :skip
   test "can score a game with multiple spares in a row" do
     game = Bowling.start
     rolls = [5, 5,
@@ -164,7 +164,7 @@ defmodule BowlingTest do
     assert Bowling.score(game) == 32
   end
 
-  @tag :pending
+  @tag :skip
   test "fills out the last frame when there is a strike" do
     game = Bowling.start
     rolls = [0, 0,
@@ -182,7 +182,7 @@ defmodule BowlingTest do
     assert Bowling.score(game) == 18
   end
 
-  @tag :pending
+  @tag :skip
   test "fills out the last frame when there is a spare" do
     game = Bowling.start
     rolls = [0, 0,
@@ -200,7 +200,7 @@ defmodule BowlingTest do
     assert Bowling.score(game) == 17
   end
 
-  @tag :pending
+  @tag :skip
   test "allows filled balls to be strikes" do
     game = Bowling.start
     rolls = [0, 0,
@@ -219,7 +219,7 @@ defmodule BowlingTest do
     assert Bowling.score(game) == 30
   end
 
-  @tag :pending
+  @tag :skip
   test "scores a perfect game correctly" do
     game = Bowling.start
     rolls = [10,
@@ -238,26 +238,26 @@ defmodule BowlingTest do
     assert Bowling.score(game) == 300
   end
 
-  @tag :pending
+  @tag :skip
   test "does not allow negative rolls" do
     game = Bowling.start
     assert Bowling.roll(game, -1) == {:error, "Pins must have a value from 0 to 10"}
   end
 
-  @tag :pending
+  @tag :skip
   test "does not allow rolls greater than a strike" do
     game = Bowling.start
     assert Bowling.roll(game, 11) == {:error, "Pins must have a value from 0 to 10"}
   end
 
-  @tag :pending
+  @tag :skip
   test "does not allow consecutive rolls to be greater than a strike" do
     game = Bowling.start
     game = Bowling.roll(game, 5)
     assert Bowling.roll(game, 6) == {:error, "Pin count exceeds pins on the lane"}
   end
 
-  @tag :pending
+  @tag :skip
   test "does not allow pin count to be exeeded in last frame" do
     game = Bowling.start
     rolls = [0, 0,
@@ -274,7 +274,7 @@ defmodule BowlingTest do
     assert Bowling.roll(game, 6) == {:error, "Pin count exceeds pins on the lane"}
   end
 
-  @tag :pending
+  @tag :skip
   test "score cannot be taken until the end of the game" do
     game = Bowling.start
     game = Bowling.roll(game, 0)

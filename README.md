@@ -37,7 +37,7 @@ The example solution should be named `example.exs`.
 
 - Use typespecs in the example and template files as described [here](http://elixir-lang.org/getting-started/typespecs-and-behaviours.html).
 
-- Each test file should have code like the following at the top of the file. This allows the tests to be run on CI and configures tests to be skipped with the `:pending` flag.
+- Each test file should have code like the following at the top of the file. This allows the tests to be run on CI and configures tests to be skipped with the `:skip` flag.
 
 ```elixir
 if !System.get_env("EXERCISM_TEST_EXAMPLES") do
@@ -45,13 +45,13 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.configure trace: true
 ```
 
-- All but the initial test for each exercise should be tagged `:pending`.
+- All but the initial test for each exercise should be tagged `:skip`.
 
 ```elixir
-@tag :pending
+@tag :skip
 test "shouting" do
   assert Bob.hey("WATCH OUT!") == "Whoa, chill out!"
 end

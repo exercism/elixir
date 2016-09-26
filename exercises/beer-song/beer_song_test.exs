@@ -3,7 +3,7 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.configure trace: true
 
 defmodule BeerSongTest do
   use ExUnit.Case
@@ -15,7 +15,7 @@ defmodule BeerSongTest do
     """
   end
 
-  @tag :pending
+  @tag :skip
   test "getting just the 99th verse" do
     assert BeerSong.verse(99) == """
     98 bottles of beer on the wall, 98 bottles of beer.
@@ -23,7 +23,7 @@ defmodule BeerSongTest do
     """
   end
 
-  @tag :pending
+  @tag :skip
   test "getting just the 2nd verse" do
     assert BeerSong.verse(2) == """
     1 bottle of beer on the wall, 1 bottle of beer.
@@ -31,7 +31,7 @@ defmodule BeerSongTest do
     """
   end
 
-  @tag :pending
+  @tag :skip
   test "getting just the 1st verse" do
     assert BeerSong.verse(1) == """
     No more bottles of beer on the wall, no more bottles of beer.
@@ -39,7 +39,7 @@ defmodule BeerSongTest do
     """
   end
 
-  @tag :pending
+  @tag :skip
   test "getting the last 4 verses" do
     assert BeerSong.lyrics(4..1) == """
     3 bottles of beer on the wall, 3 bottles of beer.
@@ -56,7 +56,7 @@ defmodule BeerSongTest do
     """
   end
 
-  @tag :pending
+  @tag :skip
   test "getting the whole song" do
     assert BeerSong.lyrics == """
     99 bottles of beer on the wall, 99 bottles of beer.

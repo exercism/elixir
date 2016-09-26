@@ -3,7 +3,7 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.configure trace: true
 
 defmodule HelloWorldTest do
   use ExUnit.Case
@@ -12,12 +12,12 @@ defmodule HelloWorldTest do
     assert HelloWorld.hello() == "Hello, World!"
   end
 
-  @tag :pending
+  @tag :skip
   test "says hello sample name" do
     assert HelloWorld.hello("Alice") == "Hello, Alice!"
   end
 
-  @tag :pending
+  @tag :skip
   test "says hello other sample name" do
     assert HelloWorld.hello("Bob") == "Hello, Bob!"
   end

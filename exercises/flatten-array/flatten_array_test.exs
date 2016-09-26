@@ -3,7 +3,7 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.configure trace: true
 
 defmodule FlattenArrayTest do
   use ExUnit.Case
@@ -12,27 +12,27 @@ defmodule FlattenArrayTest do
     assert FlattenArray.flatten([1, 2, 3]) ==  [1, 2, 3]
   end
 
-  @tag :pending
+  @tag :skip
   test "flattens an empty nested list" do
     assert FlattenArray.flatten([[]]) ==  []
   end
 
-  @tag :pending
+  @tag :skip
   test "flattens a nested list" do
     assert FlattenArray.flatten([1,[2,[3],4],5,[6,[7,8]]]) == [1, 2, 3, 4, 5, 6, 7, 8]
   end
 
-  @tag :pending
+  @tag :skip
   test "removes nil from list" do
     assert FlattenArray.flatten([1, nil, 2]) ==  [1, 2]
   end
 
-  @tag :pending
+  @tag :skip
   test "removes nil from a nested list" do
     assert FlattenArray.flatten([1, [2, nil, 4], 5]) ==  [1, 2, 4, 5]
   end
 
-  @tag :pending
+  @tag :skip
   test "returns an empty list if all values in nested list are nil" do
     assert FlattenArray.flatten([nil, [nil], [nil, [nil]]]) ==  []
   end

@@ -3,20 +3,20 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.configure trace: true
 
 defmodule MinesweeperTest do
   use ExUnit.Case
 
   defp clean(b), do: Enum.map(b, &String.replace(&1, ~r/[^*]/, " "))
 
-  # @tag :pending
+  # @tag :skip
   test "zero size board" do
     b = []
     assert Minesweeper.annotate(clean(b)) == b
   end
 
-  @tag :pending
+  @tag :skip
   test "empty board" do
     b = ["   ",
          "   ",
@@ -24,7 +24,7 @@ defmodule MinesweeperTest do
     assert Minesweeper.annotate(clean(b)) == b
   end
 
-  @tag :pending
+  @tag :skip
   test "board full of mines" do
     b = ["***",
          "***",
@@ -32,7 +32,7 @@ defmodule MinesweeperTest do
     assert Minesweeper.annotate(clean(b)) == b
   end
 
-  @tag :pending
+  @tag :skip
   test "surrounded" do
     b = ["***",
          "*8*",
@@ -40,13 +40,13 @@ defmodule MinesweeperTest do
     assert Minesweeper.annotate(clean(b)) == b
   end
 
-  @tag :pending
+  @tag :skip
   test "horizontal line" do
     b = ["1*2*1"]
     assert Minesweeper.annotate(clean(b)) == b
   end
 
-  @tag :pending
+  @tag :skip
   test "vertical line" do
     b = ["1",
          "*",
@@ -56,7 +56,7 @@ defmodule MinesweeperTest do
     assert Minesweeper.annotate(clean(b)) == b
   end
 
-  @tag :pending
+  @tag :skip
   test "cross" do
     b = [" 2*2 ",
          "25*52",

@@ -3,7 +3,7 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.configure trace: true
 
 defmodule ConnectTest do
   use ExUnit.Case
@@ -12,7 +12,7 @@ defmodule ConnectTest do
     Enum.map(rows, &String.replace(&1, " ", ""))
   end
 
-  # @tag :pending
+  # @tag :skip
   test "empty board has no winner" do
     board = remove_spaces [
       ". . . . .",
@@ -24,19 +24,19 @@ defmodule ConnectTest do
     assert Connect.result_for(board) == :none
   end
 
-  @tag :pending
+  @tag :skip
   test "1x1 board with black stone" do
     board = ["X"]
     assert Connect.result_for(board) == :black
   end
 
-  @tag :pending
+  @tag :skip
   test "1x1 board with white stone" do
     board = ["O"]
     assert Connect.result_for(board) == :white
   end
 
-  @tag :pending
+  @tag :skip
   test "convulted path" do
     board = remove_spaces [
       ". X X . .",
@@ -48,7 +48,7 @@ defmodule ConnectTest do
     assert Connect.result_for(board) == :black
   end
 
-  @tag :pending
+  @tag :skip
   test "rectangle, black wins" do
     board = remove_spaces [
       ". O . .",
@@ -60,7 +60,7 @@ defmodule ConnectTest do
     assert Connect.result_for(board) == :black
   end
 
-  @tag :pending
+  @tag :skip
   test "rectangle, white wins" do
     board = remove_spaces [
       ". O . .",
@@ -72,7 +72,7 @@ defmodule ConnectTest do
     assert Connect.result_for(board) == :white
   end
 
-  @tag :pending
+  @tag :skip
   test "spiral, black wins" do
     board = [
       "OXXXXXXXX",
@@ -88,7 +88,7 @@ defmodule ConnectTest do
     assert Connect.result_for(board) == :black
   end
 
-  @tag :pending
+  @tag :skip
   test "spiral, nobody wins" do
     board = [
       "OXXXXXXXX",

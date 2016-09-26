@@ -3,39 +3,39 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.configure trace: true
 
 defmodule NucleotideCountTest do
   use ExUnit.Case
 
-  # @tag :pending
+  # @tag :skip
   test "empty dna string has no adenosine" do
     assert NucleotideCount.count('', ?A) == 0
   end
 
-  @tag :pending
+  @tag :skip
   test "repetitive cytidine gets counted" do
     assert NucleotideCount.count('CCCCC', ?C) == 5
   end
 
-  @tag :pending
+  @tag :skip
   test "counts only thymidine" do
     assert NucleotideCount.count('GGGGGTAACCCGG', ?T) == 1
   end
 
-  @tag :pending
+  @tag :skip
   test "empty dna string has no nucleotides" do
     expected = %{?A => 0, ?T => 0, ?C => 0, ?G => 0}
     assert NucleotideCount.histogram('') == expected
   end
 
-  @tag :pending
+  @tag :skip
   test "repetitive sequence has only guanosine" do
     expected = %{?A => 0, ?T => 0, ?C => 0, ?G => 8}
     assert NucleotideCount.histogram('GGGGGGGG') == expected
   end
 
-  @tag :pending
+  @tag :skip
   test "counts all nucleotides" do
     s = 'AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC'
     expected = %{?A => 20, ?T => 21, ?C => 12, ?G => 17}
