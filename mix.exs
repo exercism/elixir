@@ -4,7 +4,7 @@ defmodule ExercismTestRunner.Mixfile do
   def project do
     [app: :tests,
      version: "0.0.1",
-     elixir: "~> 1.1",
+     elixir: "~> 1.3",
      deps: deps,
      test_paths: ["exercises"]]
   end
