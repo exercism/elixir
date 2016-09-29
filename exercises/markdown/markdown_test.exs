@@ -18,21 +18,21 @@ defmodule MarkdownTest do
   @tag :skip
   test "parsing italics" do
     input = "_This will be italic_"
-    expected = "<p><i>This will be italic</i></p>"
+    expected = "<p><em>This will be italic</em></p>"
     assert Markdown.parse(input) == expected
   end
 
   @tag :skip
   test "parsing bold text" do
     input = "__This will be bold__"
-    expected = "<p><em>This will be bold</em></p>"
+    expected = "<p><strong>This will be bold</strong></p>"
     assert Markdown.parse(input) == expected
   end
 
   @tag :skip
   test "mixed normal, italics and bold text" do
     input = "This will _be_ __mixed__"
-    expected = "<p>This will <i>be</i> <em>mixed</em></p>"
+    expected = "<p>This will <em>be</em> <strong>mixed</strong></p>"
     assert Markdown.parse(input) == expected
   end
 
@@ -67,7 +67,7 @@ defmodule MarkdownTest do
   @tag :skip
   test "with a little bit of everything" do
     input = "# Header!\n* __Bold Item__\n* _Italic Item_"
-    expected = "<h1>Header!</h1><ul><li><em>Bold Item</em></li><li><i>Italic Item</i></li></ul>"
+    expected = "<h1>Header!</h1><ul><li><strong>Bold Item</strong></li><li><em>Italic Item</em></li></ul>"
     assert Markdown.parse(input) == expected
   end
 end
