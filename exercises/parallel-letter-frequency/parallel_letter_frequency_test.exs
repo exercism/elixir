@@ -3,7 +3,7 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start
-ExUnit.configure trace: true
+ExUnit.configure exclude: :pending, trace: true
 
 # Your code should contain a frequency(texts, workers) function which accepts a
 # list of texts and the number of workers to use in parallel.
@@ -54,43 +54,43 @@ defmodule FrequencyTest do
     Frequency.frequency(texts, workers) |> Enum.sort() |> Enum.into(%{})
   end
 
-  # @tag :skip
+  # @tag :pending
   test "no texts mean no letters" do
     assert freq([]) == %{}
   end
 
-  @tag :skip
+  @tag :pending
   test "one letter" do
     assert freq(["a"]) == %{"a" => 1}
   end
 
-  @tag :skip
+  @tag :pending
   test "case insensitivity" do
     assert freq(["aA"]) == %{"a" => 2}
   end
 
-  @tag :skip
+  @tag :pending
   test "many empty texts still mean no letters" do
     assert freq(List.duplicate("  ", 10000)) == %{}
   end
 
-  @tag :skip
+  @tag :pending
   test "many times the same text gives a predictable result" do
     assert freq(List.duplicate("abc", 1000))
          == %{"a" => 1000, "b" => 1000, "c" => 1000}
   end
 
-  @tag :skip
+  @tag :pending
   test "punctuation doesn't count" do
     assert freq([@ode_an_die_freude])[","] == nil
   end
 
-  @tag :skip
+  @tag :pending
   test "numbers don't count" do
     assert freq(["Testing, 1, 2, 3"])["1"] == nil
   end
 
-  @tag :skip
+  @tag :pending
   test "all three anthems, together, 1 worker" do
     freqs = freq([@ode_an_die_freude, @wilhelmus, @star_spangled_banner], 1)
     assert freqs["a"] == 49
@@ -98,7 +98,7 @@ defmodule FrequencyTest do
     assert freqs["ü"] == 2
   end
 
-  @tag :skip
+  @tag :pending
   test "all three anthems, together, 4 workers" do
     freqs = freq([@ode_an_die_freude, @wilhelmus, @star_spangled_banner], 4)
     assert freqs["a"] == 49

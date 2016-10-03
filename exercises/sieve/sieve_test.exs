@@ -3,17 +3,17 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start
-ExUnit.configure trace: true
+ExUnit.configure exclude: :pending, trace: true
 
 defmodule SieveTest do
   use ExUnit.Case
 
-  # @tag :skip
+  # @tag :pending
   test "a few primes" do
     assert Sieve.primes_to(10) == [2, 3, 5, 7]
   end
 
-  @tag :skip
+  @tag :pending
   test "primes to 1000" do
     result = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37,
     41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83,

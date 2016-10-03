@@ -3,7 +3,7 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start
-ExUnit.configure trace: true
+ExUnit.configure exclude: :pending, trace: true
 
 defmodule SchoolTest do
   use ExUnit.Case
@@ -15,7 +15,7 @@ defmodule SchoolTest do
     assert actual == %{2 =>["Aimee"]}
   end
 
-  @tag :skip
+  @tag :pending
   test "add more students in same class" do
     actual = @db
     |> School.add("James", 2)
@@ -25,7 +25,7 @@ defmodule SchoolTest do
     assert Enum.sort(actual[2]) == ["Blair", "James", "Paul"]
   end
 
-  @tag :skip
+  @tag :pending
   test "add students to different grades" do
     actual = @db
     |> School.add("Chelsea", 3)
@@ -34,7 +34,7 @@ defmodule SchoolTest do
     assert actual == %{3 => ["Chelsea"], 7 => ["Logan"]}
   end
 
-  @tag :skip
+  @tag :pending
   test "get students in a grade" do
     actual = @db
     |> School.add("Bradley", 5)
@@ -45,12 +45,12 @@ defmodule SchoolTest do
     assert Enum.sort(actual) == ["Bradley", "Franklin"]
   end
 
-  @tag :skip
+  @tag :pending
   test "get students in a non existent grade" do
     assert [] == School.grade(@db, 1)
   end
 
-  @tag :skip
+  @tag :pending
   test "sort school by grade and by student name" do
     actual = @db
     |> School.add("Bart", 4)

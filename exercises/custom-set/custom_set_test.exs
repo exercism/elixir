@@ -3,12 +3,12 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start
-ExUnit.configure trace: true
+ExUnit.configure exclude: :pending, trace: true
 
 defmodule CustomSetTest do
   use ExUnit.Case
 
-  # @tag :skip
+  # @tag :pending
   describe "new" do
     test "returns a CustomSet struct" do
       assert CustomSet.new([]) == %CustomSet{}
@@ -21,7 +21,7 @@ defmodule CustomSetTest do
     end
   end
 
-  @tag :skip
+  @tag :pending
   describe "empty?" do
     test "sets with no elements are empty" do
       custom_set = CustomSet.new([])
@@ -34,7 +34,7 @@ defmodule CustomSetTest do
     end
   end
 
-  @tag :skip
+  @tag :pending
   describe "contains?" do
     test "nothing is contained in an empty set" do
       custom_set = CustomSet.new([])
@@ -52,7 +52,7 @@ defmodule CustomSetTest do
     end
   end
 
-  @tag :skip
+  @tag :pending
   describe "subset?" do
     test "empty set is a subset of another empty set" do
       custom_set_1 = CustomSet.new([])
@@ -91,7 +91,7 @@ defmodule CustomSetTest do
     end
   end
 
-  @tag :skip
+  @tag :pending
   describe "disjoint?" do
     test "the empty set is disjoint with itself" do
       custom_set_1 = CustomSet.new([])
@@ -124,7 +124,7 @@ defmodule CustomSetTest do
     end
   end
 
-  @tag :skip
+  @tag :pending
   describe "equal?" do
     test "empty sets are equal" do
       custom_set_1 = CustomSet.new([])
@@ -157,7 +157,7 @@ defmodule CustomSetTest do
     end
   end
 
-  @tag :skip
+  @tag :pending
   describe "add" do
     test "add to empty set" do
       custom_set = CustomSet.new([])
@@ -180,7 +180,7 @@ defmodule CustomSetTest do
     end
   end
 
-  @tag :skip
+  @tag :pending
   describe "intersection" do
     test "intersection of two empty sets is an empty set" do
       custom_set_1 = CustomSet.new([])
@@ -223,7 +223,7 @@ defmodule CustomSetTest do
     end
   end
 
-  @tag :skip
+  @tag :pending
   describe "difference" do
     test "difference of two empty sets is an empty set" do
       custom_set_1 = CustomSet.new([])
@@ -258,7 +258,7 @@ defmodule CustomSetTest do
     end
   end
 
-  @tag :skip
+  @tag :pending
   describe "union" do
     test "union of empty sets is an empty set" do
       custom_set_1 = CustomSet.new([])

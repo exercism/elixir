@@ -3,7 +3,7 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start
-ExUnit.configure trace: true
+ExUnit.configure exclude: :pending, trace: true
 
 # The BankAccount module should support four calls:
 #
@@ -30,19 +30,19 @@ defmodule BankAccountTest do
     { :ok, account: account }
   end
 
-  # @tag :skip
+  # @tag :pending
   test "initial balance is 0", %{account: account} do
     assert BankAccount.balance(account) == 0
   end
 
-  @tag :skip
+  @tag :pending
   test "incrementing and checking balance", %{account: account} do
     assert BankAccount.balance(account) == 0
     BankAccount.update(account, 10)
     assert BankAccount.balance(account) == 10
   end
 
-  @tag :skip
+  @tag :pending
   test "amount is added to balance", %{account: account} do
     assert BankAccount.balance(account) == 0
     BankAccount.update(account, 10)
@@ -50,7 +50,7 @@ defmodule BankAccountTest do
     assert BankAccount.balance(account) == 20
   end
 
-  @tag :skip
+  @tag :pending
   test "incrementing balance from another process then checking it from test process", %{account: account} do
     assert BankAccount.balance(account) == 0
     this = self()

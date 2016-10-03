@@ -3,27 +3,27 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start
-ExUnit.configure trace: true
+ExUnit.configure exclude: :pending, trace: true
 
 defmodule LeapTest do
   use ExUnit.Case
 
-  # @tag :skip
+  # @tag :pending
   test "vanilla leap year" do
     assert Year.leap_year?(1996)
   end
 
-  @tag :skip
+  @tag :pending
   test "any old year" do
     refute Year.leap_year?(1997), "1997 is not a leap year."
   end
 
-  @tag :skip
+  @tag :pending
   test "century" do
     refute Year.leap_year?(1900), "1900 is not a leap year."
   end
 
-  @tag :skip
+  @tag :pending
   test "exceptional century" do
     assert Year.leap_year?(2400)
   end
