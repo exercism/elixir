@@ -43,7 +43,7 @@ defmodule BankAccount do
   @doc """
   Close the bank. Makes the account unavailable.
   """
-  @spec close_bank(account) :: none
+  @spec close_bank(account) :: any
   def close_bank(account) do
     :gen_server.call(account, :close)
   end

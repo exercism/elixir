@@ -27,15 +27,14 @@ defmodule RobotSimulator do
   def direction(%RobotSimulator{direction: dir}), do: dir
 
   defp orient(%RobotSimulator{} = robot, direction) when direction in @valid_directions do
-    %RobotSimulator{ robot | direction: direction }
+    %{ robot | direction: direction }
   end
   defp orient({ :error, _ } = error, _), do: error
   defp orient(_, _), do: { :error, "invalid direction" }
 
   defp place(%RobotSimulator{} = robot, { x, y } = position) when is_integer(x) and is_integer(y) do
-    %RobotSimulator{ robot | position: position }
+    %{ robot | position: position }
   end
-  defp place({ :error, _ } = error, _), do: error
   defp place(_, _), do: { :error, "invalid position" }
 
   defp move("R", %RobotSimulator{ direction: direction } = robot), do: robot |> orient(direction |> rotate_right)
