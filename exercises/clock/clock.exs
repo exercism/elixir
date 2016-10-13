@@ -20,9 +20,4 @@ defmodule Clock do
   @spec add(Clock, integer) :: Clock
   def add(%Clock{hour: hour, minute: minute}, add_minute) do
   end
-
-  defimpl String.Chars, for: Clock do
-    def to_string(%Clock{hour: hour, minute: minute}) do
-    end
-  end
 end

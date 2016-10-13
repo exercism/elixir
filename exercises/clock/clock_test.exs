@@ -8,8 +8,23 @@ ExUnit.configure exclude: :pending, trace: true
 defmodule ClockTest do
   use ExUnit.Case
 
+  #@tag :pending
+  test "to_string" do
+    try do
+      to_string(%Clock{})
+    rescue
+      Protocol.UndefinedError ->
+        refute(true, """
+          Can't convert Clock to string.
+          Hint: implement the String.Chars protocol for Clock.
+          http://elixir-lang.org/getting-started/protocols.html
+          http://elixir-lang.org/docs/stable/elixir/String.Chars.html
+          """)
+    end
+  end
+
   describe "create" do
-    # @tag :pending
+    @tag :pending
     test "on the hour" do
       assert Clock.new(8, 0) |> to_string == "08:00"
     end
