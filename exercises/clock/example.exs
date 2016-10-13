@@ -1,5 +1,7 @@
 defmodule Clock do
   defstruct hour: 0, minute: 0
+  @type t :: %Clock{hour: integer, minute: integer}
+  @type t(hour, minute) :: %Clock{hour: hour, minute: minute}
 
   @doc """
   Returns a string representation of a clock:
@@ -7,7 +9,7 @@ defmodule Clock do
       iex> Clock.new(8, 9) |> to_string
       "08:09"
   """
-  @spec new(integer, integer) :: Clock
+  @spec new(integer, integer) :: Clock.t
   def new(hour, minute) do
     rollover(%Clock{hour: hour, minute: minute})
   end
@@ -18,7 +20,7 @@ defmodule Clock do
       iex> Clock.new(10, 0) |> Clock.add(3) |> to_string
       "10:03"
   """
-  @spec add(Clock, integer) :: Clock
+  @spec add(Clock.t, integer) :: Clock.t
   def add(%Clock{hour: hour, minute: minute}, add_minute) do
     new(hour, minute + add_minute)
   end

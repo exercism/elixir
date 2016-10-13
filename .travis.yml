@@ -16,5 +16,8 @@ script:
 - EXERCISM_TEST_EXAMPLES=true elixirc --warnings-as-errors **/example.exs **/*_test.exs -o ./tmp > /dev/null
 - rm -rf ./tmp
 
+- bin/dialyzer_check.sh
+
 - "! git grep ' $' -- \\*.exs | grep -v -e 'exercises/diamond/diamond_test.exs'"
+
 sudo: false

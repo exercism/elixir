@@ -1,10 +1,9 @@
 defmodule PrimeFactors do
   @spec factors_for(pos_integer) :: [pos_integer]
   def factors_for(number) do
-    do_factors(number)
+    do_factors(number, 2, [])
   end
 
-  defp do_factors(_, i \\ 2, acc \\ [])
   defp do_factors(1, _, acc),
     do: Enum.reverse(acc)
   defp do_factors(n, i, acc) when n < i * i,
