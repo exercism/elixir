@@ -16,7 +16,7 @@ defmodule BinarySearchTest do
   test "returns :not_found when key is not in the tuple" do
     assert BinarySearch.search({2, 4, 6}, 3) == :not_found
   end
-  
+
   @tag :pending
   test "returns :not_found when key is too high" do
     assert BinarySearch.search({2, 4, 6}, 9) == :not_found
