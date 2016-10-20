@@ -53,10 +53,39 @@ defmodule Bowling do
   end
 
   def score(game) do
-    if game.current_frame < 10 do
-      {:error, "Score cannot be taken until the end of the game"}
-    else
-      parse_scores(game.scores)
+    cond do
+      game.current_frame < 10 ->
+        {:error, "Score cannot be taken until the end of the game"}
+      bonus_roll_remaining?(game) ->
+        {:error, "Score cannot be taken until the end of the game"}
+      too_many_frames?(game) ->
+        {:error, "Invalid game: too many frames"}
+      true ->
+        parse_scores(game.scores)
+    end
+  end
+
+  defp bonus_roll_remaining?(game) do
+    final_frame = Enum.at(game.scores, 9)
+    cond do
+      strike?(final_frame) ->
+        cond do
+          strike?(Enum.at(game.scores, 10)) ->
+            game.current_frame == 12 && game.roll_in_frame == 1
+          true ->
+            game.current_frame < 12
+        end
+      spare?(final_frame) ->
+        game.current_frame == 11 && game.roll_in_frame == 1
+      true ->
+        false
+    end
+  end
+
+  defp too_many_frames?(game) do
+    final_frame = Enum.at(game.scores, 9)
+    unless strike?(final_frame) || spare?(final_frame) do
+      game.current_frame == 11 && game.roll_in_frame == 2
     end
   end
 
