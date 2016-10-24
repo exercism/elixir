@@ -18,11 +18,11 @@ defmodule DiamondTest do
   test "letter C" do
     shape = Diamond.build_shape(?C)
     assert shape == """
-\s A  
-\sB B 
+\s A \s
+\sB B\s
  C   C
-\sB B 
-\s A  
+\sB B\s
+\s A \s
     """
   end
 
@@ -30,15 +30,15 @@ defmodule DiamondTest do
   test "letter E" do
     shape = Diamond.build_shape(?E)
     assert shape == """
-\s   A    
-\s  B B   
-\s C   C  
-\sD     D 
+\s   A   \s
+\s  B B  \s
+\s C   C \s
+\sD     D\s
  E       E
-\sD     D 
-\s C   C  
-\s  B B   
-\s   A    
+\sD     D\s
+\s C   C \s
+\s  B B  \s
+\s   A   \s
     """
   end
 end
