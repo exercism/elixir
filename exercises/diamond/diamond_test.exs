@@ -38,7 +38,7 @@ defmodule DiamondTest do
 \sD     D\s
 \s C   C \s
 \s  B B  \s
-\s   A   \s  
+\s   A   \s
     """
   end
 end
