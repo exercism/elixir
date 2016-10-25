@@ -9,17 +9,17 @@ defmodule NucleotideCountTest do
   use ExUnit.Case
 
   # @tag :pending
-  test "empty dna string has no adenosine" do
+  test "empty dna string has no adenine" do
     assert NucleotideCount.count('', ?A) == 0
   end
 
   @tag :pending
-  test "repetitive cytidine gets counted" do
+  test "repetitive cytosine gets counted" do
     assert NucleotideCount.count('CCCCC', ?C) == 5
   end
 
   @tag :pending
-  test "counts only thymidine" do
+  test "counts only thymine" do
     assert NucleotideCount.count('GGGGGTAACCCGG', ?T) == 1
   end
 
@@ -30,7 +30,7 @@ defmodule NucleotideCountTest do
   end
 
   @tag :pending
-  test "repetitive sequence has only guanosine" do
+  test "repetitive sequence has only guanine" do
     expected = %{?A => 0, ?T => 0, ?C => 0, ?G => 8}
     assert NucleotideCount.histogram('GGGGGGGG') == expected
   end
