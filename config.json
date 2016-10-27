@@ -74,36 +74,49 @@
       "slug": "hello-world",
       "difficulty": 1,
       "topics": [
+        "strings"
       ]
     },
     {
       "slug": "nucleotide-count",
       "difficulty": 1,
       "topics": [
+        "maps",
+        "string processing",
+        "enumerables"
       ]
     },
     {
       "slug": "space-age",
       "difficulty": 1,
       "topics": [
+        "pattern matching",
+        "math"
       ]
     },
     {
       "slug": "bob",
       "difficulty": 1,
       "topics": [
+        "control flow",
+        "string processing"
       ]
     },
     {
       "slug": "word-count",
       "difficulty": 1,
       "topics": [
+        "maps",
+        "lists",
+        "reduce"
       ]
     },
     {
       "slug": "accumulate",
       "difficulty": 1,
       "topics": [
+        "reduce",
+        "recursion"
       ]
     },
     {
