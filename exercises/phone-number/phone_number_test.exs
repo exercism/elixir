@@ -38,6 +38,11 @@ defmodule PhoneTest do
   end
 
   @tag :pending
+  test "invalid with correct number of characters but some are letters" do
+    assert Phone.number("1a2a3a4a5a") == "0000000000"
+  end
+
+  @tag :pending
   test "area code" do
     assert Phone.area_code("1234567890") == "123"
   end
