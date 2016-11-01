@@ -394,6 +394,14 @@
         "Transforming",
         "Integers"
       ]
+    },
+    {
+      "slug": "grep",
+      "difficulty": 1,
+      "topics": [
+        "Strings",
+        "Enumerations"
+      ]
     }
   ],
   "deprecated": [
