@@ -1,6 +1,6 @@
 defmodule SpaceAge do
   @type planet :: :mercury | :venus | :earth | :mars | :jupiter
-                | :saturn | :neptune | :uranus
+                | :saturn | :uranus | :neptune
 
   @doc """
   Return the number of years a person that has lived for 'seconds' seconds is
