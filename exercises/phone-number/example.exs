@@ -3,8 +3,6 @@ defmodule Phone do
   Utilities to work with phone numbers.
   """
 
-  @bad_result "0000000000"
-
   @doc """
   Clean up a phone number.
 

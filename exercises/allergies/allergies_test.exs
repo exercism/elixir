@@ -75,9 +75,9 @@ defmodule AllergiesTest do
     set = Enum.into(list, MapSet.new)
     same_contents = to_contain
       |> Enum.into(MapSet.new)
-      |> Set.equal?(set)
+      |> MapSet.equal?(set)
     assert same_contents,
-           "Expected a set with: #{inspect to_contain} got #{inspect set |> Set.to_list}"
+           "Expected a set with: #{inspect to_contain} got #{inspect set |> MapSet.to_list}"
   end
 
 end
