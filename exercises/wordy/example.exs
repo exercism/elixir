@@ -16,7 +16,7 @@ defmodule Wordy do
   end
 
   defp tokenize(sentence) do
-    Regex.scan(~r/(#{all_matchers})/, sentence)
+    Regex.scan(~r/(#{all_matchers()})/, sentence)
     |> Enum.map(&(Enum.at(&1,0)))
   end
 
@@ -53,7 +53,7 @@ defmodule Wordy do
     end
 
     def match?(token) do
-      String.match?(token,~r/#{matcher}/)
+      String.match?(token,~r/#{matcher()}/)
     end
 
     def parse(token) do
@@ -67,7 +67,7 @@ defmodule Wordy do
     end
 
     def match?(token) do
-      String.match?(token,~r/#{matcher}/)
+      String.match?(token,~r/#{matcher()}/)
     end
 
     def parse(_) do
@@ -85,7 +85,7 @@ defmodule Wordy do
     end
 
     def match?(token) do
-      String.match?(token,~r/#{matcher}/)
+      String.match?(token,~r/#{matcher()}/)
     end
 
     def parse(_) do
@@ -103,7 +103,7 @@ defmodule Wordy do
     end
 
     def match?(token) do
-      String.match?(token,~r/#{matcher}/)
+      String.match?(token,~r/#{matcher()}/)
     end
 
     def parse(_) do
@@ -121,7 +121,7 @@ defmodule Wordy do
     end
 
     def match?(token) do
-      String.match?(token,~r/#{matcher}/)
+      String.match?(token,~r/#{matcher()}/)
     end
 
     def parse(_) do

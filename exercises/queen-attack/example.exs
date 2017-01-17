@@ -19,7 +19,7 @@ defmodule Queens do
   """
   @spec to_string(Queens.t()) :: String.t()
   def to_string(%Queens{ white: white, black: black }) do
-    generate_board
+    generate_board()
     |> insert_queen(white, "W")
     |> insert_queen(black, "B")
     |> Enum.map(&Enum.join(&1, " "))

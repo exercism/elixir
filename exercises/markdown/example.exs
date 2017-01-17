@@ -27,9 +27,9 @@ defmodule Markdown do
 
   defp process_md(text_with_md) do
     cond do
-      String.starts_with?(text_with_md, "#") -> parse_header_md_level(text_with_md) |> enclose_with_header_tag
-      String.starts_with?(text_with_md, "*") -> parse_list_md_level(text_with_md)
-      true                                   -> String.split(text_with_md) |> enclose_with_paragraph_tag
+      String.starts_with?(text_with_md, @header_md) -> parse_header_md_level(text_with_md) |> enclose_with_header_tag
+      String.starts_with?(text_with_md, @list_md)   -> parse_list_md_level(text_with_md)
+      true                                          -> String.split(text_with_md) |> enclose_with_paragraph_tag
     end
   end
 
