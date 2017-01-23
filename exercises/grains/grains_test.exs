@@ -53,4 +53,20 @@ defmodule GrainsTest do
   test "total grains" do
     assert Grains.total === 18446744073709551615
   end
+
+  @tag :pending
+  test "square greater than 64 raises an exception" do
+    catch_error Grains.square(65)
+  end
+
+  @tag :pending
+  test "negative square raises an exception" do
+    catch_error Grains.square(-1)
+  end
+
+  @tag :pending
+  test "square 0 raises an exception" do
+    catch_error Grains.square(0)
+  end
+
 end
