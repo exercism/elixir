@@ -55,17 +55,17 @@ defmodule GrainsTest do
   end
 
   @tag :pending
-  test "square greater than 64 raises an exception" do
+  test "square greater than 64 returns an error" do
     assert Grains.square(65) === { :error, "The requested square must be between 1 and 64 (inclusive)" }
   end
 
   @tag :pending
-  test "negative square raises an exception" do
+  test "negative square returns an error" do
     assert Grains.square(-1) === { :error, "The requested square must be between 1 and 64 (inclusive)" }
   end
 
   @tag :pending
-  test "square 0 raises an exception" do
+  test "square 0 returns an error" do
     assert Grains.square(0) === { :error, "The requested square must be between 1 and 64 (inclusive)" }
   end
 
