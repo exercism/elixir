@@ -8,32 +8,32 @@ ExUnit.configure exclude: :pending, trace: true
 defmodule BeerSongTest do
   use ExUnit.Case
 
-  test "getting just the 100th verse" do
-    assert BeerSong.verse(100) == """
+  test "getting the first verse (99 bottles)" do
+    assert BeerSong.verse(99) == """
     99 bottles of beer on the wall, 99 bottles of beer.
     Take one down and pass it around, 98 bottles of beer on the wall.
     """
   end
 
   @tag :pending
-  test "getting just the 99th verse" do
-    assert BeerSong.verse(99) == """
+  test "getting the second verse (98 bottles)" do
+    assert BeerSong.verse(98) == """
     98 bottles of beer on the wall, 98 bottles of beer.
     Take one down and pass it around, 97 bottles of beer on the wall.
     """
   end
 
   @tag :pending
-  test "getting just the 2nd verse" do
-    assert BeerSong.verse(2) == """
+  test "getting just the penultimate verse" do
+    assert BeerSong.verse(1) == """
     1 bottle of beer on the wall, 1 bottle of beer.
     Take it down and pass it around, no more bottles of beer on the wall.
     """
   end
 
   @tag :pending
-  test "getting just the 1st verse" do
-    assert BeerSong.verse(1) == """
+  test "getting just the last verse" do
+    assert BeerSong.verse(0) == """
     No more bottles of beer on the wall, no more bottles of beer.
     Go to the store and buy some more, 99 bottles of beer on the wall.
     """
@@ -41,7 +41,7 @@ defmodule BeerSongTest do
 
   @tag :pending
   test "getting the last 4 verses" do
-    assert BeerSong.lyrics(4..1) == """
+    assert BeerSong.lyrics(3..0) == """
     3 bottles of beer on the wall, 3 bottles of beer.
     Take one down and pass it around, 2 bottles of beer on the wall.
 
