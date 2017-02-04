@@ -18,13 +18,18 @@ defmodule RunLengthEncoderTest do
   end
 
   @tag :pending
-  test "more complicated string" do
-    assert RunLengthEncoder.encode("HORSE") == "1H1O1R1S1E"
+  test "string with no repeated letters" do
+    assert RunLengthEncoder.encode("HORSE") == "HORSE"
+  end
+
+  @tag :pending
+  test "string with some repeated letters" do
+    assert RunLengthEncoder.encode("MOOSE") == "M2OSE"
   end
 
   @tag :pending
   test "an even more complex string" do
-    assert RunLengthEncoder.encode("WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB") === "12W1B12W3B24W1B"
+    assert RunLengthEncoder.encode("WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB") === "12WB12W3B24WB"
   end
 
   @tag :pending
@@ -34,6 +39,6 @@ defmodule RunLengthEncoderTest do
 
   @tag :pending
   test "it decodes a more complicated string" do
-    assert RunLengthEncoder.decode("12W1B12W3B24W1B") === "WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB"
+    assert RunLengthEncoder.decode("12WB12W3B24WB") === "WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB"
   end
 end
