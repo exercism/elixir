@@ -8,32 +8,49 @@ ExUnit.configure exclude: :pending, trace: true
 defmodule RunLengthEncoderTest do
   use ExUnit.Case
 
-  test "empty string returns empty" do
+  test "encode empty string" do
     assert RunLengthEncoder.encode("") === ""
   end
 
   @tag :pending
-  test "simple string gets encoded" do
-    assert RunLengthEncoder.encode("AAA") === "3A"
+  test "encode single characters only" do
+    assert RunLengthEncoder.encode("XYZ") === "XYZ"
   end
 
   @tag :pending
-  test "more complicated string" do
-    assert RunLengthEncoder.encode("HORSE") == "1H1O1R1S1E"
+  test "decode empty string" do
+    assert RunLengthEncoder.decode("") === ""
   end
 
   @tag :pending
-  test "an even more complex string" do
-    assert RunLengthEncoder.encode("WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB") === "12W1B12W3B24W1B"
+  test "decode single characters only" do
+    assert RunLengthEncoder.decode("XYZ") === "XYZ"
   end
 
   @tag :pending
-  test "it decodes an encoded simple string" do
-    assert RunLengthEncoder.decode("3A") === "AAA"
+  test "encode simple" do
+    assert RunLengthEncoder.encode("AABBBCCCC") == "2A3B4C"
   end
 
   @tag :pending
-  test "it decodes a more complicated string" do
-    assert RunLengthEncoder.decode("12W1B12W3B24W1B") === "WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB"
+  test "decode simple" do
+    assert RunLengthEncoder.decode("2A3B4C") == "AABBBCCCC"
+  end
+
+  @tag :pending
+  test "encode with single values" do
+    assert RunLengthEncoder.encode("WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB") === "12WB12W3B24WB"
+  end
+
+  @tag :pending
+  test "decode with single values" do
+    assert RunLengthEncoder.decode("12WB12W3B24WB") === "WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB"
+  end
+
+  @tag :pending
+  test "decode(encode(...)) combination" do
+    original = "zzz ZZ  zZ"
+    encoded = RunLengthEncoder.encode(original)
+    assert RunLengthEncoder.decode(encoded) === original
   end
 end

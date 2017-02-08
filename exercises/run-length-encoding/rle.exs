@@ -1,10 +1,10 @@
 defmodule RunLengthEncoder do
   @doc """
   Generates a string where consecutive elements are represented as a data value and count.
-  "HORSE" => "1H1O1R1S1E"
+  "AABBBCCCC" => "2A3B4C"
   For this example, assume all input are strings, that are all uppercase letters.
   It should also be able to reconstruct the data into its original form.
-  "1H1O1R1S1E" => "HORSE"
+  "2A3B4C" => "AABBBCCCC"
   """
   @spec encode(String.t) :: String.t
   def encode(string) do
