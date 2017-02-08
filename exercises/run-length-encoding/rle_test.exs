@@ -47,15 +47,10 @@ defmodule RunLengthEncoderTest do
     assert RunLengthEncoder.decode("12WB12W3B24WB") === "WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB"
   end
 
-  # NB: test case commented out for now because the string contains
-  # non-uppercase-letter characters.
-  #
-  # See https://github.com/exercism/x-common/issues/537
-  #
-  # @tag :pending
-  # test "decode(encode(...)) combination" do
-  #   original = "zzz ZZ  zZ"
-  #   encoded = RunLengthEncoder.encode(original)
-  #   assert RunLengthEncoder.decode(encoded) === original
-  # end
+  @tag :pending
+  test "decode(encode(...)) combination" do
+    original = "zzz ZZ  zZ"
+    encoded = RunLengthEncoder.encode(original)
+    assert RunLengthEncoder.decode(encoded) === original
+  end
 end

@@ -2,11 +2,15 @@ defmodule RunLengthEncoder do
 
   @spec encode(String.t) :: String.t
   def encode(string) do
-    Regex.scan(~r/([A-Z])\1*/, string)
+    Regex.scan(~r/([a-zA-Z ])\1*/, string)
     |> Enum.map_join(fn([run, c]) ->
-      times = String.length(run)
-      number = if times == 1 do "" else times end
-      "#{number}#{c}"
+      if String.match?(run, ~r/\s+/) do
+        run
+      else
+        times = String.length(run)
+        number = if times == 1 do "" else times end
+          "#{number}#{c}"
+      end
     end)
   end
 
