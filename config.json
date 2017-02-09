@@ -60,6 +60,13 @@
       ]
     },
     {
+      "slug": "series",
+      "difficulty": 2,
+      "topics": [
+        "string processing"
+      ]
+    },
+    {
       "slug": "raindrops",
       "difficulty": 2,
       "topics": [
