@@ -4,7 +4,7 @@ defmodule StringSeries do
   of that size. If `size` is greater than the length of `s`, or less than 1,
   return an empty list.
   """
-  @spec slices(s :: String.t(), size :: integer) :: any
+  @spec slices(s :: String.t(), size :: integer) :: list(String.t())
   def slices(_s, _size) do
   end
 end
