@@ -435,6 +435,13 @@
         "Strings",
         "Enumerations"
       ]
+    },
+    {
+      "slug": "say",
+      "difficulty": 3,
+      "topics": [
+        "Pattern Matching"
+      ]
     }
   ],
   "deprecated": [
