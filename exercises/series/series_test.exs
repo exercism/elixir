@@ -8,6 +8,7 @@ ExUnit.configure exclude: :pending, trace: true
 defmodule StringSeriesTest do
   use ExUnit.Case
 
+  #@tag :pending
   test "slices of size 1" do
     assert StringSeries.slices("01234", 1) == ["0", "1", "2", "3", "4"]
   end
