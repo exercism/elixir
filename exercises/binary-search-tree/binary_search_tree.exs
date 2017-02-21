@@ -1,0 +1,2 @@
+defmodule BinarySearchTree do
+end
