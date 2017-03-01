@@ -22,15 +22,13 @@ defmodule Change do
 
   defp generate(_, 0, acc), do: {:ok, acc}
   defp generate([], _, _), do: :error
-  defp generate(values = [h | t], amount, acc) do
-    if amount >= h && divisible?(amount - h, values) do
-      generate(values, amount - h, Map.update(acc, h, 1, &(&1 + 1)))
-    else
-      generate(t, amount, Map.put_new(acc, h, 0))
-    end
+  defp generate([h | t], amount, acc) when h > amount do
+    generate(t, amount, Map.put_new(acc, h, 0))
   end
-
-  defp divisible?(num, values) do
-    Enum.any?(values, &(rem(num, &1) == 0))
+  defp generate(values = [h | t], amount, acc) do
+    case generate(values, amount - h, Map.update(acc, h, 1, &(&1 + 1))) do
+      :error -> generate(t, amount, Map.put_new(acc, h, 0))
+      ok -> ok
+    end
   end
 end
