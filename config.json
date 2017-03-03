@@ -401,6 +401,13 @@
       ]
     },
     {
+      "slug": "poker",
+      "difficulty": 7,
+      "topics": [
+        "sorting"
+      ]
+    },
+    {
       "slug": "bowling",
       "difficulty": 8,
       "topics": [
