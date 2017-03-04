@@ -105,6 +105,13 @@
       ]
     },
     {
+      "slug": "simple-linked-list",
+      "difficulty": 1,
+      "topics": [
+        "Recursion"
+      ]
+    },
+    {
       "slug": "anagram",
       "difficulty": 2,
       "topics": [
