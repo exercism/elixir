@@ -28,6 +28,14 @@
       ]
     },
     {
+      "slug": "protein-translation",
+      "difficulty": 2,
+      "topics": [
+        "pattern matching",
+        "string processing"
+      ]
+    },
+    {
       "slug": "space-age",
       "difficulty": 2,
       "topics": [
