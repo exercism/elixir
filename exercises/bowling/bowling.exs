@@ -10,7 +10,7 @@ defmodule Bowling do
   end
 
   @doc """
-    Records the number of pins knocked down on a single roll. Returns `:ok`
+    Records the number of pins knocked down on a single roll. Returns `any`
     unless there is something wrong with the given number of pins, in which
     case it returns a helpful message.
   """
