@@ -2,7 +2,7 @@ defmodule ProteinTranslation do
   @doc """
   Given an RNA string, return a list of proteins specified by codons, in order.
   """
-  @spec of_rna(String.t()) :: list(String.t())
+  @spec of_rna(String.t()) :: { atom,  list(String.t()) }
   def of_rna(rna) do
   end
 
@@ -27,7 +27,7 @@ defmodule ProteinTranslation do
   UAG -> STOP
   UGA -> STOP
   """
-  @spec of_codon(String.t()) :: String.t()
+  @spec of_codon(String.t()) :: { atom, String.t() }
   def of_codon(codon) do
   end
 end
