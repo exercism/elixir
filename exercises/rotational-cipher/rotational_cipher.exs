@@ -7,7 +7,7 @@ defmodule RotationalCipher do
   "Nggnpx ng qnja"
   """
   @spec rotate(text :: String.t(), shift :: integer) :: String.t()
-  def rotate(_text, _shift) do
+  def rotate(text, shift) do
   end
 end
 
