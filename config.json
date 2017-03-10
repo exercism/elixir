@@ -304,6 +304,13 @@
       ]
     },
     {
+      "slug": "diffie-hellman",
+      "difficulty": 4,
+      "topics": [
+        "math"
+      ]
+    },
+    {
       "slug": "sieve",
       "difficulty": 5,
       "topics": [
