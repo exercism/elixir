@@ -26,6 +26,9 @@ defmodule DiffieHellman do
   As long as their private keys are never lost or transmitted, only they know
   their private keys, so even if Eve has P, G, and both public keys, she can't
   do anything with them.
+
+  A video example is available at:
+  https://www.khanacademy.org/computing/computer-science/cryptography/modern-crypt/v/diffie-hellman-key-exchange-part-2
   """
 
   @doc """
