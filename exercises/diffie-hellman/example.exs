@@ -34,7 +34,7 @@ defmodule DiffieHellman do
   @doc """
   Given a prime integer `prime_p`, return a random integer between 1 and `prime_p` - 1
 
-  HINT: Erlang's `:rand.uniform` is good, `Enum.random` is better
+  HINT: Erlang's `:rand.uniform` or `Enum.random` are good places to start
   """
   @spec generate_private_key(prime_p :: integer) :: integer
   def generate_private_key(prime_p) do
@@ -46,10 +46,13 @@ defmodule DiffieHellman do
   generate a public key using the mathematical formula:
 
   (prime_g **  private_key) % prime_p
+
+  HINT: Erlang's :crypto module has a useful function for finding the modulus of a power,
+  particularly for enormous integers, but you might need :binary to decode it.
   """
   @spec generate_public_key(prime_p :: integer, prime_g :: integer, private_key :: integer) :: integer
   def generate_public_key(prime_p, prime_g, private_key) do
-    Helpers.mod_pow(prime_g, private_key, prime_p)
+    :crypto.mod_pow(prime_g, private_key, prime_p) |> :binary.decode_unsigned
   end
 
   @doc """
@@ -60,40 +63,7 @@ defmodule DiffieHellman do
   """
   @spec generate_shared_secret(prime_p :: integer, public_key_b :: integer, private_key_a :: integer) :: integer
   def generate_shared_secret(prime_p, public_key_b, private_key_a) do
-    Helpers.mod_pow(public_key_b, private_key_a, prime_p)
+    :crypto.mod_pow(public_key_b, private_key_a, prime_p) |> :binary.decode_unsigned
   end
-end
-
-defmodule Helpers do
-  use Bitwise
-
-  @moduledoc """
-  You'll have to do a couple of functions of the form `(A ** B) % C`.
-
-  If you're reading this far down, you've probably run into the fact that
-  while Elixir supports arbitrarily large integers, Erlang's `:math.pow`
-  fails at a surprisingly low exponent (try `:math.pow(2, 10000)`). Modern
-  cryptosystems typically deal with numbers in or over the 1024-bit range,
-  so a naive approach will take a LONG time.
-
-  Fortunately, smarter people have figured out the math necessary to do
-  modular exponentiation on enormous integers well before the heat death
-  of the universe:
-
-  https://en.wikipedia.org/wiki/Modular_exponentiation#Right-to-left_binary_method
-  """
-
-  @doc """
-  Raise `base` to the power `exp`, then modulus by `mod`.
-
-  Derived from pseudocode based on Applied Cryptography by Bruce Schneier, found
-  in the Wikipedia link above.
-  """
-  def mod_pow(_base, _exp, 1), do: 0
-  def mod_pow(base, exp, mod), do: do_mod_pow(rem(base, mod), exp, mod, 1)
-
-  defp do_mod_pow(_base, exp, _mod, result) when exp <= 0, do: result
-  defp do_mod_pow(base, exp, mod, result) when rem(exp, 2) == 1, do: do_mod_pow(rem(base*base, mod), exp >>> 1, mod, rem(result * base, mod))
-  defp do_mod_pow(base, exp, mod, result), do: do_mod_pow(rem(base*base, mod), exp >>> 1, mod, result)
 end
 
