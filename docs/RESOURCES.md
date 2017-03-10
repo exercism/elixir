@@ -17,3 +17,11 @@
 ## Slack
 
 * [Request an Invite](https://elixir-slackin.herokuapp.com/)
+
+## Exercism's BEAM Gitter Channel
+
+* [Gitter channel](https://gitter.im/exercism/xerlang)
+
+## Elixir Forum
+
+* [Elixir Forum](https://elixirforum.com/)
