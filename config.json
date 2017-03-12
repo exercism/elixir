@@ -415,6 +415,14 @@
         "Strings",
         "Enumerations"
       ]
+    },
+    {
+      "slug": "ocr-numbers",
+      "difficulty": 2,
+      "topics": [
+        "Strings",
+        "Enumerations"
+      ]
     }
   ],
   "deprecated": [
