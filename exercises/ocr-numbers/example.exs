@@ -15,7 +15,7 @@ defmodule OCRNumbers do
   def format_output(rows), do: _format_output(Enum.any?(rows, &_error?/1), rows)
   def _format_output(true, rows), do: Enum.find(rows, &_error?/1)
   def _format_output(false, output), do: {:ok, Enum.join(output, ",")}
-  def _error?({:error, _} = error), do: true
+  def _error?({:error, _}), do: true
   def _error?(_), do: false
 
   def _convert(_, {:error, _} = error), do: error
