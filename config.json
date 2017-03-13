@@ -21,6 +21,13 @@
       ]
     },
     {
+      "slug": "rotational-cipher",
+      "difficulty": 2,
+      "topics": [
+        "string processing"
+      ]
+    },
+    {
       "slug": "space-age",
       "difficulty": 2,
       "topics": [
