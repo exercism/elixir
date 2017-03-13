@@ -418,7 +418,7 @@
     },
     {
       "slug": "ocr-numbers",
-      "difficulty": 2,
+      "difficulty": 6,
       "topics": [
         "Strings",
         "Enumerations"

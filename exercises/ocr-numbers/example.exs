@@ -11,13 +11,15 @@ defmodule OCRNumbers do
     |> format_output()
   end
 
-  def format_output([]), do: -1
-  def format_output(rows), do: _format_output(Enum.any?(rows, fn a -> a == -1 end), rows)
-  def _format_output(true, _), do: -1
-  def _format_output(false, output), do: Enum.join(output, ",")
+  def format_output([]), do: {:error, 'invalid line count'}
+  def format_output(rows), do: _format_output(Enum.any?(rows, &_error?/1), rows)
+  def _format_output(true, rows), do: Enum.find(rows, &_error?/1)
+  def _format_output(false, output), do: {:ok, Enum.join(output, ",")}
+  def _error?({:error, _} = error), do: true
+  def _error?(_), do: false
 
-  def _convert(_, -1), do: -1
-  def _convert(input, _) when length(input) != 4, do: -1
+  def _convert(_, {:error, _} = error), do: error
+  def _convert(input, _) when length(input) != 4, do: {:error, 'invalid line count'}
   def _convert(["", "", "", ""], output), do: output
   def _convert(input, output) do
     split_strings = Enum.map(input, fn a -> String.split_at(a, 3) end)
@@ -29,7 +31,7 @@ defmodule OCRNumbers do
   end
 
   def update_output([3, 3, 3, 3], chars, output), do: output <> recognize_character(chars)
-  def update_output(_, _, _), do: -1
+  def update_output(_, _, _), do: {:error, 'invalid column count'}
 
   def recognize_character([" _ ", "| |", "|_|", "   "]), do: "0"
   def recognize_character(["   ", "  |", "  |", "   "]), do: "1"
