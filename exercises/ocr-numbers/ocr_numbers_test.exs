@@ -18,7 +18,7 @@ defmodule OCRNumbersTest do
         "   "
       ]
     )
-    assert number == "0"
+    assert number == {:ok, "0"}
   end
 
   @tag :pending
@@ -32,7 +32,7 @@ defmodule OCRNumbersTest do
       ]
     )
 
-    assert number == "1"
+    assert number == {:ok, "1"}
   end
 
   @tag :pending
@@ -46,7 +46,7 @@ defmodule OCRNumbersTest do
       ]
     )
 
-    assert number == "?"
+    assert number == {:ok, "?"}
   end
 
   @tag :pending
@@ -59,7 +59,7 @@ defmodule OCRNumbersTest do
       ]
     )
 
-    assert number == -1
+    assert number == {:error, 'invalid line count'}
   end
 
   @tag :pending
@@ -73,7 +73,7 @@ defmodule OCRNumbersTest do
       ]
     )
 
-    assert number == -1
+    assert number == {:error, 'invalid column count'}
   end
 
   @tag :pending
@@ -87,7 +87,7 @@ defmodule OCRNumbersTest do
       ]
     )
 
-    assert number == "110101100"
+    assert number == {:ok, "110101100"}
   end
 
   @tag :pending
@@ -101,7 +101,7 @@ defmodule OCRNumbersTest do
       ]
     )
 
-    assert number == "11?10?1?0"
+    assert number == {:ok, "11?10?1?0"}
   end
 
   @tag :pending
@@ -115,7 +115,7 @@ defmodule OCRNumbersTest do
       ]
     )
 
-    assert number == "2"
+    assert number == {:ok, "2"}
   end
 
   @tag :pending
@@ -129,7 +129,7 @@ defmodule OCRNumbersTest do
       ]
     )
 
-    assert number == "3"
+    assert number == {:ok, "3"}
   end
 
   @tag :pending
@@ -143,7 +143,7 @@ defmodule OCRNumbersTest do
       ]
     )
 
-    assert number == "4"
+    assert number == {:ok, "4"}
   end
 
   @tag :pending
@@ -157,7 +157,7 @@ defmodule OCRNumbersTest do
       ]
     )
 
-    assert number == "5"
+    assert number == {:ok, "5"}
   end
 
   @tag :pending
@@ -171,7 +171,7 @@ defmodule OCRNumbersTest do
       ]
     )
 
-    assert number == "6"
+    assert number == {:ok, "6"}
   end
 
   @tag :pending
@@ -185,7 +185,7 @@ defmodule OCRNumbersTest do
       ]
     )
 
-    assert number == "7"
+    assert number == {:ok, "7"}
   end
 
   @tag :pending
@@ -199,7 +199,7 @@ defmodule OCRNumbersTest do
       ]
     )
 
-    assert number == "8"
+    assert number == {:ok, "8"}
   end
 
   @tag :pending
@@ -213,7 +213,7 @@ defmodule OCRNumbersTest do
       ]
     )
 
-    assert number == "9"
+    assert number == {:ok, "9"}
   end
 
   @tag :pending
@@ -227,7 +227,7 @@ defmodule OCRNumbersTest do
       ]
     )
 
-    assert number == "1234567890"
+    assert number == {:ok, "1234567890"}
   end
 
   @tag :pending
@@ -249,6 +249,6 @@ defmodule OCRNumbersTest do
       ]
     )
 
-    assert number == "123,456,789"
+    assert number == {:ok, "123,456,789"}
   end
 end
