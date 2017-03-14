@@ -147,7 +147,7 @@ defmodule OCRNumbersTest do
   end
 
   @tag :pending
-  test "Recognized 5" do
+  test "Recognizes 5" do
     number = OCRNumbers.convert(
       [
         " _ ",
@@ -161,7 +161,7 @@ defmodule OCRNumbersTest do
   end
 
   @tag :pending
-  test "Recognized 6" do
+  test "Recognizes 6" do
     number = OCRNumbers.convert(
       [
         " _ ",
