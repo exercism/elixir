@@ -21,6 +21,21 @@
       ]
     },
     {
+      "slug": "rotational-cipher",
+      "difficulty": 2,
+      "topics": [
+        "string processing"
+      ]
+    },
+    {
+      "slug": "protein-translation",
+      "difficulty": 2,
+      "topics": [
+        "pattern matching",
+        "string processing"
+      ]
+    },
+    {
       "slug": "space-age",
       "difficulty": 2,
       "topics": [
@@ -57,6 +72,13 @@
       "slug": "acronym",
       "difficulty": 2,
       "topics": [
+      ]
+    },
+    {
+      "slug": "series",
+      "difficulty": 2,
+      "topics": [
+        "string processing"
       ]
     },
     {
@@ -98,6 +120,13 @@
       ]
     },
     {
+      "slug": "simple-linked-list",
+      "difficulty": 1,
+      "topics": [
+        "Recursion"
+      ]
+    },
+    {
       "slug": "anagram",
       "difficulty": 2,
       "topics": [
@@ -129,6 +158,12 @@
     },
     {
       "slug": "roman-numerals",
+      "difficulty": 2,
+      "topics": [
+      ]
+    },
+    {
+      "slug": "all-your-base",
       "difficulty": 2,
       "topics": [
       ]
@@ -374,6 +409,13 @@
       ]
     },
     {
+      "slug": "poker",
+      "difficulty": 7,
+      "topics": [
+        "sorting"
+      ]
+    },
+    {
       "slug": "bowling",
       "difficulty": 8,
       "topics": [
@@ -414,6 +456,13 @@
       "topics": [
         "Strings",
         "Enumerations"
+      ]
+    },
+    {
+      "slug": "say",
+      "difficulty": 3,
+      "topics": [
+        "Pattern Matching"
       ]
     },
     {
