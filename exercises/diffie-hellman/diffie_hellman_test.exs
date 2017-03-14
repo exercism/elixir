@@ -9,33 +9,34 @@ defmodule DiffieHellmanTest do
   use ExUnit.Case
 
   #@tag :pending
-  test "private key should be random between 1 and P-1, inclusive" do
+  test "private key should be between 1 and P-1, inclusive" do
     prime_p = 23
 
-    generated_private_keys = 1..100 |> Enum.map(fn _i -> DiffieHellman.generate_private_key(prime_p) end)
-
-    all_keys_in_range = generated_private_keys |> Enum.all?(fn pk -> pk > 0 and pk < prime_p end)
-
-    assert all_keys_in_range == true
-
-    # Due to the nature of random generators, there's a small chance it could generate
-    # the same numbers over an over, so this may fail, but the RNG should be good enough
-    # that 100 generated keys between 1 and 22 ought to be at least half unique.
-    min_expected_unique_keys = div(prime_p, 2)
-    actual_unique_keys = generated_private_keys |> Enum.uniq |> length
-
-    assert actual_unique_keys > min_expected_unique_keys
+    assert DiffieHellman.generate_private_key(prime_p) in Range.new(1, prime_p-1)
   end
 
   @tag :pending
   test "private key generator should support very large primes" do
     prime_p = 120227323036150778550155526710966921740030662694578947298423549235265759593711587341037426347114541533006628856300552706996143592240453345642869233562886752930249953227657883929905072620233073626594386072962776144691433658814261874113232461749035425712805067202910389407991986070558964461330091797026762932543
 
-    generated_private_keys = 1..100 |> Enum.map(fn _i -> DiffieHellman.generate_private_key(prime_p) end)
+    assert DiffieHellman.generate_private_key(prime_p) in Range.new(1, prime_p-1)
+  end
 
-    all_keys_in_range = generated_private_keys |> Enum.all?(fn pk -> pk > 0 and pk < prime_p end)
+  @tag :pending
+  test "private keys should be random" do
+    prime_p = 23
 
-    assert all_keys_in_range == true
+    # Due to the nature of random generators, there's a small chance it could generate
+    # the same numbers over an over, so this may fail, but the RNG should be good enough
+    # that 100 generated keys between 1 and 22 ought to be at least half unique.
+
+    unique_key_count = Stream.repeatedly(fn -> DiffieHellman.generate_private_key(prime_p) end)
+                       |> Enum.take(100)
+                       |> Enum.uniq
+                       |> length
+    min_expected_unique_keys = div(prime_p, 2)
+
+    assert unique_key_count > min_expected_unique_keys
   end
 
   @tag :pending
@@ -79,7 +80,7 @@ defmodule DiffieHellmanTest do
   end
 
   @tag :pending
-  test "exchanging public keys between Alice and Bob lets them calculate the same shared secret" do
+  test "exchanging public keys between Alice and Bob should calculate the same shared secret" do
     prime_p = 23
     prime_g = 5
 

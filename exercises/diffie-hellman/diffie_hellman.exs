@@ -33,8 +33,6 @@ defmodule DiffieHellman do
 
   @doc """
   Given a prime integer `prime_p`, return a random integer between 1 and `prime_p` - 1
-
-  HINT: Erlang's `:rand.uniform` or `Enum.random` are good places to start
   """
   @spec generate_private_key(prime_p :: integer) :: integer
   def generate_private_key(prime_p) do
@@ -45,9 +43,6 @@ defmodule DiffieHellman do
   generate a public key using the mathematical formula:
 
   (prime_g **  private_key) % prime_p
-
-  HINT: Erlang's :crypto module has a useful function for finding the modulus of a power,
-  particularly for enormous integers, but you might need :binary to decode it.
   """
   @spec generate_public_key(prime_p :: integer, prime_g :: integer, private_key :: integer) :: integer
   def generate_public_key(prime_p, prime_g, private_key) do
