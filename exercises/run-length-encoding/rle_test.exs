@@ -48,6 +48,16 @@ defmodule RunLengthEncoderTest do
   end
 
   @tag :pending
+  test "encode with whitespace kept intact" do
+    assert RunLengthEncoder.encode("AA BB  CDDD") === "2A 2B  C3D"
+  end
+
+  @tag :pending
+  test "decode with whitespace" do
+    assert RunLengthEncoder.decode("2A 2B  C3D") === "AA BB  CDDD"
+  end
+
+  @tag :pending
   test "decode(encode(...)) combination" do
     original = "zzz ZZ  zZ"
     encoded = RunLengthEncoder.encode(original)
