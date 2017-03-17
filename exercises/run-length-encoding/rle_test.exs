@@ -68,7 +68,7 @@ defmodule RunLengthEncoderTest do
   end
 
   @tag :pending
-  test "consistency encode followed by decode gives original string" do
+  test "encode followed by decode gives original string" do
     original = "zzz ZZ  zZ"
     encoded = RunLengthEncoder.encode(original)
     assert RunLengthEncoder.decode(encoded) === original
