@@ -36,6 +36,14 @@
       ]
     },
     {
+      "slug": "pig-latin",
+      "difficulty": 2,
+      "topics": [
+        "pattern matching",
+        "string processing"
+      ]
+    },
+    {
       "slug": "space-age",
       "difficulty": 2,
       "topics": [
