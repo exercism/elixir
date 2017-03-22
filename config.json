@@ -259,6 +259,14 @@
       ]
     },
     {
+      "slug": "scale-generator",
+      "difficulty": 5,
+      "topics": [
+        "enumerations",
+        "string processing"
+      ]
+    },
+    {
       "slug": "luhn",
       "difficulty": 5,
       "topics": [
