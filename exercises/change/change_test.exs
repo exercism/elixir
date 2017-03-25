@@ -8,43 +8,70 @@ ExUnit.configure exclude: :pending, trace: true
 defmodule ChangeTest do
   use ExUnit.Case
 
-  test "returns :error on empty list" do
-    assert Change.generate(1, []) == :error
+  # @tag :pending
+  test "no coins make 0 change" do
+      coins = [1, 5, 10, 21, 25]
+      expected = []
+      assert Change.generate(coins, 0) == {:ok, expected}
   end
 
   @tag :pending
-  test "generates the correct change when only one coin type is needed" do
-    change = %{1 => 5, 10 => 0}
-    assert Change.generate(5, [1, 10]) == {:ok, change}
+  test "cannot find negative change values" do
+      coins = [1, 2, 5]
+      assert Change.generate(coins, -5) == {:error, "cannot change"}
   end
 
   @tag :pending
-  test "generates the correct change when multiple coin types are needed" do
-    change = %{1 => 3, 5 => 1, 10 => 1}
-    assert Change.generate(18, [1, 5, 10]) == {:ok, change}
+  test "error testing for change smaller than the smallest of coins" do
+      coins = [5, 10]
+      assert Change.generate(coins, 3) == {:error, "cannot change"}
   end
 
   @tag :pending
-  test "returns :error when it is not possible to generate change" do
-    assert Change.generate(3, [5, 10, 25]) == :error
+  test "single coin change" do
+      coins = [1, 5, 10, 25, 100]
+      expected = [25]
+      assert Change.generate(coins, 25) == {:ok, expected}
   end
 
   @tag :pending
-  test "generates change using only small coins when it is not possible to combine them with larger coins" do
-    change = %{3 => 34, 100 => 0}
-    assert Change.generate(102, [3, 100]) == {:ok, change}
+  test "multiple coin change" do
+      coins = [1, 5, 10, 25, 100]
+      expected = [5, 10]
+      assert Change.generate(coins, 15) == {:ok, expected}
+  end
+
+   @tag :pending
+   test "possible change without unit coins available" do
+      coins = [2, 5, 10, 20, 50]
+      expected = [2, 2, 2, 5, 10]
+      assert Change.generate(coins, 21) == {:ok, expected}
+   end
+
+  @tag :pending
+  test "change with Lilliputian Coins" do
+      coins = [1, 4, 15, 20, 50]
+      expected = [4, 4, 15]
+      assert Change.generate(coins, 23) == {:ok, expected}
   end
 
   @tag :pending
-  test "generates the same change given any coin order" do
-    change = %{1 => 3, 5 => 1, 10 => 1}
-    assert Change.generate(18, [1, 5, 10]) == {:ok, change}
-    assert Change.generate(18, [10, 5, 1]) == {:ok, change}
+  test "change with Lower Elbonia Coins" do
+      coins = [1, 5, 10, 21, 25]
+      expected = [21, 21, 21]
+      assert Change.generate(coins, 63) == {:ok, expected}
   end
 
   @tag :pending
-  test "generates the correct change for large values with many coins" do
-    change = %{1 => 3, 5 => 1, 10 => 0, 25 => 1, 100 => 1}
-    assert Change.generate(133, [1, 5, 10, 25, 100]) == {:ok, change}
+  test "large target values" do
+      coins = [1, 2, 5, 10, 20, 50, 100]
+      expected = [2, 2, 5, 20, 20, 50, 100, 100, 100, 100, 100, 100, 100, 100, 100]
+      assert Change.generate(coins, 999) == {:ok, expected}
+  end
+
+  @tag :pending
+  test "error if no combination can add up to target" do
+      coins = [5, 10]
+      assert Change.generate(coins, 94) == {:error, "cannot change"}
   end
 end
