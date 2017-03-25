@@ -36,6 +36,12 @@ defmodule ChangeTest do
   end
 
   @tag :pending
+  test "generatings change using all coins" do
+    change = %{2 => 3, 5 => 1, 10 => 1}
+    assert Change.generate(21, [10, 2, 5]) == {:ok, change}
+  end
+
+  @tag :pending
   test "generates the same change given any coin order" do
     change = %{1 => 3, 5 => 1, 10 => 1}
     assert Change.generate(18, [1, 5, 10]) == {:ok, change}
