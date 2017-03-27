@@ -319,6 +319,12 @@
       ]
     },
     {
+      "slug": "perfect-numbers",
+      "difficulty": 3,
+      "topics": [
+      ]
+    },
+    {
       "slug": "diffie-hellman",
       "difficulty": 4,
       "topics": [
