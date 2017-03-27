@@ -3,7 +3,7 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.configure trace: true, exclude: :pending
 
 defmodule ScaleGeneratorTest do
   use ExUnit.Case
@@ -16,13 +16,31 @@ defmodule ScaleGeneratorTest do
   @phrygian_scale_pattern        "mMMMmMM"
   @locrian_scale_pattern         "mMMmMMM"
   @harmonic_minor_scale_pattern  "MmMMmAm"
+  @melodic_minor_scale_pattern   "MmMMMMm"
   @octatonic_scale_pattern       "MmMmMmMm"
   @hexatonic_scale_pattern       "MMMMMM"
   @pentatonic_scale_pattern      "MMAMA"
   @enigmatic_scale_pattern       "mAMMMmm"
 
-  describe "generate chromatic scale" do
+  describe "step to next note" do
     #@tag :pending
+    test "with half-tone interval" do
+      assert ScaleGenerator.step(~w(C C# D D# E F F# G G# A A# B), "C", "m") == "C#"
+    end
+
+    @tag :pending
+    test "with full tone interval" do
+      assert ScaleGenerator.step(~w(C C# D D# E F F# G G# A A# B), "C", "M") == "D"
+    end
+
+    @tag :pending
+    test "with accidental interval" do
+      assert ScaleGenerator.step(~w(C C# D D# E F F# G G# A A# B), "C", "A") == "D#"
+    end
+  end
+
+  describe "generate chromatic scale" do
+    @tag :pending
     test "starting with A" do
       assert ScaleGenerator.chromatic_scale("A") == ~w(A A# B C C# D D# E F F# G G#)
     end
@@ -184,23 +202,6 @@ defmodule ScaleGeneratorTest do
     end
   end
 
-  describe "step to next note" do
-    @tag :pending
-    test "with half-tone interval" do
-      assert ScaleGenerator.step(~w(C C# D D# E F F# G G# A A# B), "C", "m") == "C#"
-    end
-
-    @tag :pending
-    test "with full tone interval" do
-      assert ScaleGenerator.step(~w(C C# D D# E F F# G G# A A# B), "C", "M") == "D"
-    end
-
-    @tag :pending
-    test "with accidental interval" do
-      assert ScaleGenerator.step(~w(C C# D D# E F F# G G# A A# B), "C", "A") == "D#"
-    end
-  end
-
   describe "generate scale from tonic and pattern" do
     @tag :pending
     test "C Major scale" do
@@ -250,6 +251,11 @@ defmodule ScaleGeneratorTest do
     @tag :pending
     test "d Harmonic minor scale" do
       assert ScaleGenerator.scale("d", @harmonic_minor_scale_pattern) == ~w(D E F G A Bb Db D)
+    end
+
+    @tag :pending
+    test "C Melodic minor scale" do
+      assert ScaleGenerator.scale("C", @melodic_minor_scale_pattern) == ~w(C D D# F G A B C)
     end
 
     @tag :pending
