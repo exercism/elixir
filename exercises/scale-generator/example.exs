@@ -4,46 +4,75 @@ defmodule ScaleGenerator do
   @flat_keys ~w(F Bb Eb Ab Db Gb d g c f bb eb)
 
   @doc """
-  The chromatic scale is a musical scale with twelve pitches, each a semitone
+  Find the note a given interval (`step`) in `scale` after the `tonic`.
+
+  "m": one semitone
+  "M": two semitones (full tone)
+  "A": augmented second (three semitones)
+
+  Given the `tonic` "D" in the `scale` (C C# D D# E F F# G G# A A# B C), you
+  should return the following notes for the given `step`:
+
+  "m": D#
+  "M": E
+  "A": F
+  """
+  @spec step(scale :: list(String.t()), tonic :: String.t(), step :: String.t()) :: list(String.t())
+  def step(scale, tonic, step) do
+    scale |> rotate_chromatic(tonic) |> do_step(step)
+  end
+
+  defp do_step([_tonic, semitone, _full_tone | _], "m"), do: semitone
+  defp do_step([_tonic, _semitone, full_tone | _], "M"), do: full_tone
+  defp do_step([_tonic, _semitone, _full_tone, accidental | _], "A"), do: accidental
+
+  @doc """
+  The chromatic scale is a musical scale with thirteen pitches, each a semitone
   (half-tone) above or below another.
 
   Notes with a sharp (#) are a semitone higher than the note below them, where
   the next letter note is a full tone except in the case of B and E, which have
   no sharps.
 
-  Generate these 12 notes, starting with the given `tonic` and wrapping back
-  around to the note before it. If the `tonic` is lowercase, capitalize it.
+  Generate these notes, starting with the given `tonic` and wrapping back
+  around to the note before it, ending with the tonic an octave higher than the
+  original. If the `tonic` is lowercase, capitalize it.
 
-  "C" should generate: ~w(C C# D D# E F F# G G# A A# B)
+  "C" should generate: ~w(C C# D D# E F F# G G# A A# B C)
   """
   @spec chromatic_scale(tonic :: String.t()) :: list(String.t())
   def chromatic_scale(tonic \\ "C") do
-    tonic
-    |> String.capitalize
-    |> rotate_scale(@chromatic_scale)
+    rotate_chromatic(@chromatic_scale, tonic)
   end
 
   @doc """
   Sharp notes can also be considered the flat (b) note of the tone above them,
-  so the 12 notes can also be represented as:
+  so the notes can also be represented as:
 
   A Bb B C Db D Eb E F Gb G Ab
 
-  Generate these 12 notes, starting with the given `tonic` and wrapping back
-  around to the note before it. If the `tonic` is lowercase, capitalize it.
+  Generate these notes, starting with the given `tonic` and wrapping back
+  around to the note before it, ending with the tonic an octave higher than the
+  original. If the `tonic` is lowercase, capitalize it.
 
-  "C" should generate: ~w(C Db D Eb E F Gb G Ab A Bb B)
+  "C" should generate: ~w(C Db D Eb E F Gb G Ab A Bb B C)
   """
   @spec flat_chromatic_scale(tonic :: String.t()) :: list(String.t())
   def flat_chromatic_scale(tonic \\ "C") do
-    tonic
-    |> String.capitalize
-    |> rotate_scale(@flat_chromatic_scale)
+    rotate_chromatic(@flat_chromatic_scale, tonic)
   end
 
-  defp rotate_scale(tonic, scale, temp \\ [])
-  defp rotate_scale(tonic, [tonic | _] = scale_from_tonic, temp), do: scale_from_tonic ++ temp
-  defp rotate_scale(tonic, [head | tail], temp), do: rotate_scale(tonic, tail, temp ++ [head])
+  defp rotate_chromatic(scale, tonic) do
+    scale_length = length(scale)
+
+    scale
+    |> Stream.cycle
+    |> Enum.take(2 * scale_length)
+    |> rotate_chromatic(tonic |> String.capitalize, [])
+    |> Enum.take(scale_length + 1)
+  end
+  defp rotate_chromatic([tonic | _] = scale_from_tonic, tonic, results), do: scale_from_tonic ++ results
+  defp rotate_chromatic([head | tail], tonic, results), do: rotate_chromatic(tail, tonic, results ++ [head])
 
   @doc """
   Certain scales will require the use of the flat version, depending on the
@@ -62,22 +91,6 @@ defmodule ScaleGenerator do
   def find_chromatic_scale(tonic) do
     chromatic_scale(tonic)
   end
-
-  @doc """
-  Find the note a given interval (`step`) in `scale` after the `tonic`.
-
-  "m": one semitone
-  "M": two semitones (full tone)
-  "A": augmented second (three semitones)
-  """
-  @spec step(scale :: list(String.t()), tonic :: String.t(), step :: String.t()) :: list(String.t())
-  def step(scale, tonic, step) do
-    tonic |> rotate_scale(scale) |> do_step(step)
-  end
-
-  defp do_step([_tonic, semitone, _full_tone | _], "m"), do: semitone
-  defp do_step([_tonic, _semitone, full_tone | _], "M"), do: full_tone
-  defp do_step([_tonic, _semitone, _full_tone, accidental | _], "A"), do: accidental
 
   @doc """
   The `pattern` string will let you know how many steps to make for the next
