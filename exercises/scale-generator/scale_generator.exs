@@ -1,6 +1,6 @@
 defmodule ScaleGenerator do
   @doc """
-  Find the note a given interval (`step`) in `scale` after the `tonic`.
+  Find the note for a given interval (`step`) in a `scale` after the `tonic`.
 
   "m": one semitone
   "M": two semitones (full tone)

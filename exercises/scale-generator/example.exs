@@ -4,7 +4,7 @@ defmodule ScaleGenerator do
   @flat_keys ~w(F Bb Eb Ab Db Gb d g c f bb eb)
 
   @doc """
-  Find the note a given interval (`step`) in `scale` after the `tonic`.
+  Find the note for a given interval (`step`) in a `scale` after the `tonic`.
 
   "m": one semitone
   "M": two semitones (full tone)
