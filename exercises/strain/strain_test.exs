@@ -8,12 +8,13 @@ ExUnit.configure trace: true, exclude: :pending
 defmodule StrainTest do
   use ExUnit.Case
 
-  defp is_odd(n), do: rem(n, 2) == 1
-  defp is_even(n), do: rem(n, 2) == 0
+  defp is_odd?(n), do: rem(n, 2) == 1
+  defp is_even?(n), do: rem(n, 2) == 0
+  defp noop(_), do: true
 
   #@tag :pending
   test "empty keep" do
-    assert Strain.keep([], fn e -> e < 10 end) == []
+    assert Strain.keep([], &noop/1) == []
   end
 
   @tag :pending
@@ -23,12 +24,12 @@ defmodule StrainTest do
 
   @tag :pending
   test "keep first and last" do
-    assert Strain.keep([1, 2, 3], &is_odd/1) == [1, 3]
+    assert Strain.keep([1, 2, 3], &is_odd?/1) == [1, 3]
   end
 
   @tag :pending
   test "keep neither first nor last" do
-    assert Strain.keep([1, 2, 3, 4, 5], &is_even/1) == [2, 4]
+    assert Strain.keep([1, 2, 3, 4, 5], &is_even?/1) == [2, 4]
   end
 
   @tag :pending
@@ -54,7 +55,7 @@ defmodule StrainTest do
 
   @tag :pending
   test "empty discard" do
-    assert Strain.discard([], fn e -> e < 10 end) == []
+    assert Strain.discard([], &noop/1) == []
   end
 
   @tag :pending
@@ -64,12 +65,12 @@ defmodule StrainTest do
 
   @tag :pending
   test "discard first and last" do
-    assert Strain.discard([1, 2, 3], &is_odd/1) == [2]
+    assert Strain.discard([1, 2, 3], &is_odd?/1) == [2]
   end
 
   @tag :pending
   test "discard neither first nor last" do
-    assert Strain.discard([1, 2, 3, 4, 5], &is_even/1) == [1, 3, 5]
+    assert Strain.discard([1, 2, 3, 4, 5], &is_even?/1) == [1, 3, 5]
   end
 
   @tag :pending
