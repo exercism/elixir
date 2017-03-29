@@ -7,7 +7,7 @@ Exercism Exercises in Elixir
 
 The exercises currently target Elixir 1.3.2 and Erlang/OTP 19. Detailed installation instructions can be found at [http://elixir-lang.org/install.html](http://elixir-lang.org/install.html).
 
-##Contributing
+## Contributing
 
 Thank you so much for contributing! :tada:
 
