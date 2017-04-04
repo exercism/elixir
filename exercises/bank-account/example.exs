@@ -53,13 +53,21 @@ defmodule BankAccount do
   """
   @spec balance(account) :: integer
   def balance(account) do
-    :gen_server.call(account, :balance)
+    if Process.alive?(account) do
+      :gen_server.call(account, :balance)
+    else
+      { :error, :account_closed }
+    end
   end
 
   @doc """
   Update the account's balance by adding the given amount which may be negative.
   """
   def update(account, amount) do
-    :gen_server.call(account, { :update, amount })
+    if Process.alive?(account) do
+      :gen_server.call(account, { :update, amount })
+    else
+      { :error, :account_closed }
+    end
   end
 end
