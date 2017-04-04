@@ -21,6 +21,13 @@
       ]
     },
     {
+      "slug": "secret-handshake",
+      "difficulty": 2,
+      "topics": [
+        "binary representation"
+      ]
+    },
+    {
       "slug": "rotational-cipher",
       "difficulty": 2,
       "topics": [
