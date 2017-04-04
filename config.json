@@ -28,6 +28,13 @@
       ]
     },
     {
+      "slug": "strain",
+      "difficulty": 2,
+      "topics": [
+        "collections"
+      ]
+    },
+    {
       "slug": "protein-translation",
       "difficulty": 2,
       "topics": [
