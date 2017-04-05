@@ -9,57 +9,72 @@ defmodule BracketPushTest do
   use ExUnit.Case
 
   # @tag :pending
+  test "paired square brackets" do
+    assert BracketPush.check_brackets("[]")
+  end
+
+  @tag :pending
   test "empty string" do
     assert BracketPush.check_brackets("")
   end
 
   @tag :pending
-  test "appropriate bracketing in a set of brackets" do
-    assert BracketPush.check_brackets("{}")
+  test "unpaired brackets" do
+    refute BracketPush.check_brackets("[[")
   end
 
   @tag :pending
-  test "unclosed brackets" do
-    refute BracketPush.check_brackets("{{")
-  end
-
-  @tag :pending
-  test "more than one pair of brackets" do
-    assert BracketPush.check_brackets("{}[]")
-  end
-
-  @tag :pending
-  test "brackets are out of order" do
+  test "wrong ordered brackets" do
     refute BracketPush.check_brackets("}{")
   end
 
   @tag :pending
-  test "nested brackets" do
-    assert BracketPush.check_brackets("{[()]}")
+  test "wrong closing bracket" do
+    refute BracketPush.check_brackets("{]")
   end
 
   @tag :pending
-  test "unbalanced nested brackets" do
-    refute BracketPush.check_brackets("{[}]")
+  test "paired with whitespace" do
+    assert BracketPush.check_brackets("{ }")
   end
 
   @tag :pending
-  test "bracket closure with deeper nesting" do
+  test "simple nested brackets" do
+    assert BracketPush.check_brackets("{[]}")
+  end
+
+  @tag :pending
+  test "several paired brackets" do
+    assert BracketPush.check_brackets("{}[]")
+  end
+
+  @tag :pending
+  test "paired and nested brackets" do
+    assert BracketPush.check_brackets("([{}({}[])])")
+  end
+
+  @tag :pending
+  test "unopened closing brackets" do
     refute BracketPush.check_brackets("{[)][]}")
   end
 
   @tag :pending
-  test "bracket closure in a long string of brackets" do
-    assert BracketPush.check_brackets("{[]([()])}")
+  test "unpaired and nested brackets" do
+    refute BracketPush.check_brackets("([{])")
   end
 
   @tag :pending
-  test "should ignore non-bracket characters" do
-    assert BracketPush.check_brackets("{hello[]([a()])b}c")
+  test "paired and wrong nested brackets" do
+    refute BracketPush.check_brackets("[({]})")
   end
 
   @tag :pending
-  test "string with newlines" do
-    assert BracketPush.check_brackets("[]\n{()}\n[(({}))]\n")
+  test "math expression" do
+    assert BracketPush.check_brackets("(((185 + 223.85) * 15) - 543)/2")
+  end
+
+  @tag :pending
+  test "complex latex expression" do
+    assert BracketPush.check_brackets("\\left(\\begin{array}{cc} \\frac{1}{3} & x\\\\ \\mathrm{e}^{x} &... x^2 \\end{array}\\right)")
   end
 end
