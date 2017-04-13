@@ -378,6 +378,14 @@
       ]
     },
     {
+      "slug": "simple-cipher",
+      "difficulty": 3,
+      "topics": [
+        "string processing",
+        "encryption"
+      ]
+    },
+    {
       "slug": "bank-account",
       "difficulty": 7,
       "topics": [
