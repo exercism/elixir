@@ -20,17 +20,6 @@ defmodule SimpleCipher do
   defp decode_char({cipher, key}), do: decode_char(cipher, key)
 
   @doc """
-  Generate a random, 100-character key consisting of lowercase letters a-z.
-  """
-  def key do
-    Stream.repeatedly(&random_char/0)
-    |> Enum.take(100)
-    |> Enum.join
-  end
-
-  defp random_char, do: Enum.random(@alphabet)
-
-  @doc """
   Given a `plaintext` and `key`, encode each character of the `plaintext` by
   shifting it by the corresponding letter in the alphabet shifted by the number
   of letters represented by the `key` character, repeating the `key` if it is

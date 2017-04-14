@@ -1,11 +1,5 @@
 defmodule SimpleCipher do
   @doc """
-  Generate a random, 100-character key consisting of lowercase letters a-z.
-  """
-  def key do
-  end
-
-  @doc """
   Given a `plaintext` and `key`, encode each character of the `plaintext` by
   shifting it by the corresponding letter in the alphabet shifted by the number
   of letters represented by the `key` character, repeating the `key` if it is
