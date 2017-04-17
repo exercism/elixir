@@ -15,7 +15,7 @@ defmodule HelloWorld do
   function?
 
   Hint: look into argument defaults here:
-  http://elixir-lang.org/getting-started/modules.html#default-arguments
+  http://elixir-lang.org/getting-started/modules-and-functions.html#default-arguments
   """
 
   @doc """
