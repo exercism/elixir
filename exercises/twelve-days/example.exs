@@ -15,43 +15,10 @@ defmodule TwelveDays do
   ]
 
   for { { count, ordinal, gift }, number } <- @days |> Enum.with_index(1) do
-    def count(unquote(number)), do: unquote(count)
-    def ordinal(unquote(number)), do: unquote(ordinal)
-    def gift(unquote(number)), do: "#{count(unquote(number))} #{ unquote(gift) }"
+    defp count(unquote(number)), do: unquote(count)
+    defp ordinal(unquote(number)), do: unquote(ordinal)
+    defp gift(unquote(number)), do: "#{count(unquote(number))} #{ unquote(gift) }"
   end
-
-  @doc """
-  Given a `number`, return the word representation of it, or "a" for one.
-
-  1 => "a",
-  2 => "two",
-  3 => "three",
-  etc...
-  """
-  @spec count(number :: integer) :: String.t()
-  def count(_number), do: nil
-
-  @doc """
-  Given a `number`, return the ordinal representation of it.
-
-  1 => "first",
-  2 => "second",
-  3 => "third",
-  etc...
-  """
-  @spec ordinal(number :: integer) :: String.t()
-  def ordinal(_number), do: nil
-
-  @doc """
-  Given a `number`, return the gift for that specific day, along with its count.
-
-  1 => "a Partridge in a Pear Tree",
-  6 => "six Geese-a-Laying",
-  8 => "eight Maids-a-Milking",
-  etc...
-  """
-  @spec gift(number :: integer) :: String.t()
-  def gift(_number), do: nil
 
   @doc """
   Given a `number`, return the song's verse for that specific day, including
