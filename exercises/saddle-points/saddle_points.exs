@@ -1,4 +1,4 @@
-defmodule Matrix do
+defmodule SaddlePoints do
   @doc """
   Parses a string representation of a matrix
   to a list of rows
