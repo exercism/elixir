@@ -221,6 +221,15 @@
       ]
     },
     {
+      "slug": "tournament",
+      "difficulty": 4,
+      "topics": [
+        "string processing",
+        "sorting",
+        "formatting"
+      ]
+    },
+    {
       "slug": "list-ops",
       "difficulty": 4,
       "topics": [
