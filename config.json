@@ -74,6 +74,15 @@
       ]
     },
     {
+      "slug": "twelve-days",
+      "difficulty": 3,
+      "topics": [
+        "enumerations",
+        "string formatting",
+        "reduce"
+      ]
+    },
+    {
       "slug": "word-count",
       "difficulty": 2,
       "topics": [
