@@ -38,16 +38,6 @@ defmodule IsogramTest do
   end
 
   @tag :pending
-  test "isogram with utf-8 letters" do
-    assert Isogram.isogram?("heizölrückstoßabdämpfung")
-  end
-
-  @tag :pending
-  test "not isogram with utf-8 letters" do
-    refute Isogram.isogram?("éléphant")
-  end
-
-  @tag :pending
   test "phrase is isogram" do
     assert Isogram.isogram?("emily jung schwartzkopf")
   end
