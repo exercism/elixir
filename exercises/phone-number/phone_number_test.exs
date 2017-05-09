@@ -23,6 +23,11 @@ defmodule PhoneTest do
   end
 
   @tag :pending
+  test "valid when 11 digits and some decorations" do
+    assert Phone.number("+1 (212) 555-0100") == "2125550100"
+  end
+
+  @tag :pending
   test "invalid when country calling code is not 1" do
     assert Phone.number("22125550100") == "0000000000"
   end

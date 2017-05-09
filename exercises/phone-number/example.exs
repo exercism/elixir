@@ -2,55 +2,97 @@ defmodule Phone do
   @moduledoc """
   Utilities to work with phone numbers.
   """
+  @invalid "0000000000"
 
   @doc """
-  Clean up a phone number.
+  Remove formatting from a phone number.
 
-  Returns 0000000000 if the phone number is bad.
+  Returns "0000000000" if phone number is not valid
+  (10 digits or "1" followed by 10 digits)
+
+  ## Examples
+
+  iex> Phone.number("212-555-0100")
+  "2125550100"
+
+  iex> Phone.number("+1 (212) 555-0100")
+  "2125550100"
+
+  iex> Phone.number("+1 (212) 055-0100")
+  "0000000000"
+
+  iex> Phone.number("(212) 555-0100")
+  "2125550100"
+
+  iex> Phone.number("867.5309")
+  "0000000000"
   """
   @spec number(String.t) :: String.t
   def number(raw) do
     raw
-    |> to_parts
-    |> to_string
+    |> String.replace(~r/[\s+.()-]/, "") # remove decorations
+    |> valid?
+    |> (fn false -> @invalid; num -> String.replace(num, ~r/^1/, "") end).()
   end
 
-  @spec to_parts(String.t) :: [String.t]
-  defp to_parts(raw) do
-    Regex.run(~r/^\D*?1?\D*?(\d{3})\D*(\d{3})\D*(\d{4})$/, raw, [capture: :all_but_first]) || ["000", "000", "0000"]
+  defp valid?(num) do
+    Regex.match?(~r/^1?(?:[2-9][0-9]{2}){2}\d{4}$/, num)
+    |> (fn true -> num; false -> false end).()
   end
 
   @doc """
-  Get the area code of a phone number.
+  Extract the area code from a phone number
 
-  The area code is the first three digits of a cleaned up phone number.
+  Returns the first three digits from a phone number,
+  ignoring long distance indicator
+
+  ## Examples
+
+  iex> Phone.area_code("212-555-0100")
+  "212"
+
+  iex> Phone.area_code("+1 (212) 555-0100")
+  "212"
+
+  iex> Phone.area_code("+1 (012) 555-0100")
+  "000"
+
+  iex> Phone.area_code("867.5309")
+  "000"
   """
   @spec area_code(String.t) :: String.t
-  def area_code(str) do
-    str
-    |> to_parts
-    |> List.first
-  end
-
-  @spec prefix(String.t) :: String.t
-  def prefix(str) do
-    str
-    |> to_parts
-    |> Enum.at(1)
-  end
-
-  @spec line(String.t) :: String.t
-  def line(str) do
-    str
-    |> to_parts
-    |> List.last
+  def area_code(raw) do         
+    raw
+    |> __MODULE__.number
+    |> String.slice(0, 3)      # the first three digits are area_code
   end
 
   @doc """
-  Pretty print a phone number.
+  Pretty print a phone number
+
+  Wraps the area code in parentheses and separates
+  exchange and subscriber number with a dash.
+
+  ## Examples
+
+  iex> Phone.pretty("212-555-0100")
+  "(212) 555-0100"
+
+  iex> Phone.pretty("212-155-0100")
+  "(000) 000-0000"
+
+  iex> Phone.pretty("+1 (303) 555-1212")
+  "(303) 555-1212"
+
+  iex> Phone.pretty("867.5309")
+  "(000) 000-0000"
   """
   @spec pretty(String.t) :: String.t
-  def pretty(str) do
-    "(#{area_code(str)}) #{prefix(str)}-#{line(str)}"
+  def pretty(raw) do
+    raw
+    |> __MODULE__.number
+    |> (fn <<area_code::binary-size(3), exchange_code::binary-size(3), rest::binary>> ->
+      "(#{area_code}) #{exchange_code}-#{rest}"
+    end).()
   end
 end
