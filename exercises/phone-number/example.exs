@@ -61,7 +61,7 @@ defmodule Phone do
   "000"
   """
   @spec area_code(String.t) :: String.t
-  def area_code(raw) do         
+  def area_code(raw) do
     raw
     |> __MODULE__.number
     |> String.slice(0, 3)      # the first three digits are area_code
