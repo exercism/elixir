@@ -11,7 +11,7 @@ defmodule Strain do
 
   @doc """
   Given a `list` of items and a function `fun`, return the list of items where
-  `fun` returns true.
+  `fun` returns false.
 
   Do not use `Enum.reject`.
   """
@@ -19,4 +19,3 @@ defmodule Strain do
   def discard(list, fun) do
   end
 end
-
