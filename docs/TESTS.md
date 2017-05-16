@@ -8,7 +8,6 @@ $ elixir bob_test.exs
 
 (Replace `bob_test.exs` with the name of the test file.)
 
-
 ### Pending tests
 
 In the test suites, all but the first test have been skipped.
@@ -74,7 +73,6 @@ If this is the first time you have run Dialyzer you
 will most likely not have a `plt` file. The persistent lookup table,
 or PLT is used by Dialyzer to cache information about built in Elixir
 and Erlang types. To create a plt with sensible defaults run:
-
 
 ```bash
 $ dialyzer --build_plt --apps erts kernel stdlib crypto public_key /path/to/elixir

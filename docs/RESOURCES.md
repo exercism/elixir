@@ -3,7 +3,7 @@
 * [Elixir Docs](http://elixir-lang.org/docs.html)
 
 ## Hex - A package manager for the Erlang ecosystem.
-  
+
 * [Hex Docs](https://hex.pm/)
 
 ## Testing with ExUnit

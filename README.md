@@ -1,17 +1,22 @@
 # xElixir
+
 ![build status](https://travis-ci.org/exercism/xelixir.svg?branch=master)
 
 Exercism Exercises in Elixir
 
 ## Setup
 
-The exercises currently target Elixir 1.3.2 and Erlang/OTP 19. Detailed installation instructions can be found at [http://elixir-lang.org/install.html](http://elixir-lang.org/install.html).
+The exercises currently target Elixir 1.3.2 and Erlang/OTP 19. Detailed
+installation instructions can be found at
+[http://elixir-lang.org/install.html](http://elixir-lang.org/install.html).
 
 ## Contributing
 
 Thank you so much for contributing! :tada:
 
-We welcome pull requests that provide fixes and improvements to existing exercises. If you're unsure, then go ahead and open a GitHub issue, and we'll discuss the change.
+We welcome pull requests that provide fixes and improvements to existing
+exercises. If you're unsure, then go ahead and open a GitHub issue, and we'll
+discuss the change.
 
 Please keep the following in mind:
 
@@ -19,25 +24,35 @@ Please keep the following in mind:
 
 - Pull requests should be focused on a single exercise, issue, or change.
 
-- We welcome changes to code style, and wording. Please open a separate PR for these changes if possible.
+- We welcome changes to code style, and wording. Please open a separate PR for
+  these changes if possible.
 
-- Please open an issue before creating a PR that makes significant (breaking) changes to an existing exercise or makes changes across many exercises. It is best to discuss these changes before doing the work.
+- Please open an issue before creating a PR that makes significant (breaking)
+  changes to an existing exercise or makes changes across many exercises. It is
+  best to discuss these changes before doing the work.
 
-- Follow the coding standards found in [The Elixir Style Guide](https://github.com/niftyn8/elixir_style_guide).
+- Follow the coding standards found in
+  [The Elixir Style Guide](https://github.com/niftyn8/elixir_style_guide).
 
 - Watch out for trailing spaces, extra blank lines, and spaces in blank lines.
 
-- Each exercise must stand on its own. Do not reference files outside the exercise directory. They will not be included when the user fetches the exercise.
+- Each exercise must stand on its own. Do not reference files outside the
+  exercise directory. They will not be included when the user fetches the
+  exercise.
 
-- Please do not add a README or README.md file to the exercise directory. The READMEs are constructed using shared metadata, which lives in the
-[exercism/x-common](https://github.com/exercism/x-common) repository.
+- Please do not add a README or README.md file to the exercise directory. The
+  READMEs are constructed using shared metadata, which lives in the
+  [exercism/x-common](https://github.com/exercism/x-common) repository.
 
-- Each problem should have a test suite, an example solution, and a template file for the real implementation.
-The example solution should be named `example.exs`.
+- Each problem should have a test suite, an example solution, and a template
+  file for the real implementation. The example solution should be named
+  `example.exs`.
 
 - Use typespecs in the example and template files as described [here](http://elixir-lang.org/getting-started/typespecs-and-behaviours.html).
 
-- Each test file should have code like the following at the top of the file. This allows the tests to be run on CI and configures tests to be skipped with the `:pending` flag.
+- Each test file should have code like the following at the top of the file.
+  This allows the tests to be run on CI and configures tests to be skipped with
+  the `:pending` flag.
 
 ```elixir
 if !System.get_env("EXERCISM_TEST_EXAMPLES") do
@@ -57,7 +72,9 @@ test "shouting" do
 end
 ```
 
-All the tests for xElixir exercises can be run from the top level of the repo with `$ mix test`. Please run this command before submitting your PR. Watch out for and correct any compiler warnings you may have introduced.
+All the tests for xElixir exercises can be run from the top level of the repo
+with `$ mix test`. Please run this command before submitting your PR. Watch out
+for and correct any compiler warnings you may have introduced.
 
 ## License
 
