@@ -49,4 +49,32 @@ defmodule AtbashTest do
     cipher = "gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt"
     assert Atbash.encode(plaintext) == cipher
   end
+
+  @tag :pending
+  test "decode exercism" do
+    cipher = "vcvix rhn"
+    plaintext = "exercism"
+    assert Atbash.decode(cipher) == plaintext
+  end
+
+  @tag :pending
+  test "decode a sentence" do
+    cipher = "zmlyh gzxov rhlug vmzhg vkkrm thglm v"
+    plaintext = "anobstacleisoftenasteppingstone"
+    assert Atbash.decode(cipher) == plaintext
+  end
+
+  @tag :pending
+  test "decode numbers" do
+    cipher = "gvhgr mt123 gvhgr mt"
+    plaintext = "testing123testing"
+    assert Atbash.decode(cipher) == plaintext
+  end
+
+  @tag :pending
+  test "decode all the letters" do
+    cipher = "gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt"
+    plaintext = "thequickbrownfoxjumpsoverthelazydog"
+    assert Atbash.decode(cipher) == plaintext
+  end
 end

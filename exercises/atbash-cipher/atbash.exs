@@ -10,4 +10,8 @@ defmodule Atbash do
   @spec encode(String.t) :: String.t
   def encode(plaintext) do
   end
+
+  @spec decode(String.t) :: String.t
+  def decode(cipher) do
+  end
 end
