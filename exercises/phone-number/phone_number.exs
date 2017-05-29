@@ -7,11 +7,17 @@ defmodule Phone do
 
   ## Examples
 
-  iex> Phone.number("123-456-7890")
-  "1234567890"
+  iex> Phone.number("212-555-0100")
+  "2125550100"
 
-  iex> Phone.number("+1 (303) 555-1212")
-  "3035551212"
+  iex> Phone.number("+1 (212) 555-0100")
+  "2125550100"
+
+  iex> Phone.number("+1 (212) 055-0100")
+  "0000000000"
+
+  iex> Phone.number("(212) 555-0100")
+  "2125550100"
 
   iex> Phone.number("867.5309")
   "0000000000"
@@ -28,11 +34,14 @@ defmodule Phone do
 
   ## Examples
 
-  iex> Phone.area_code("123-456-7890")
-  "123"
+  iex> Phone.area_code("212-555-0100")
+  "212"
 
-  iex> Phone.area_code("+1 (303) 555-1212")
-  "303"
+  iex> Phone.area_code("+1 (212) 555-0100")
+  "212"
+
+  iex> Phone.area_code("+1 (012) 555-0100")
+  "000"
 
   iex> Phone.area_code("867.5309")
   "000"
@@ -49,8 +58,11 @@ defmodule Phone do
 
   ## Examples
 
-  iex> Phone.pretty("123-456-7890")
-  "(123) 456-7890"
+  iex> Phone.pretty("212-555-0100")
+  "(212) 555-0100"
+
+  iex> Phone.pretty("212-155-0100")
+  "(000) 000-0000"
 
   iex> Phone.pretty("+1 (303) 555-1212")
   "(303) 555-1212"
