@@ -76,8 +76,3 @@ All the tests for xElixir exercises can be run from the top level of the repo
 with `$ mix test`. Please run this command before submitting your PR. Watch out
 for and correct any compiler warnings you may have introduced.
 
-## License
-
-The MIT License (MIT)
-
-Copyright (c) 2016 Katrina Owen, _@kytrinyx.com
