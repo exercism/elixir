@@ -9,19 +9,25 @@ defmodule Atbash do
   iex> Atbash.encode("completely insecure")
   "xlnko vgvob rmhvx fiv"
   """
+  @spec encode(String.t) :: String.t
   def encode(plaintext) do
-    plaintext |> normalize |> cipher |> chunk |> Enum.join(" ")
+    plaintext |> normalize |> transpose |> chunk |> Enum.join(" ")
+  end
+
+  @spec decode(String.t) :: String.t
+  def decode(cipher) do
+    cipher |> normalize |> transpose
   end
 
   defp normalize(input) do
     Regex.replace(~r{\W}, String.downcase(input), "")
   end
 
-  defp cipher(plaintext) do
-    plaintext
-      |> String.to_char_list
-      |> Enum.map(&convert/1)
-      |> List.to_string
+  defp transpose(text) do
+    text
+    |> String.to_char_list
+    |> Enum.map(&convert/1)
+    |> List.to_string
   end
 
   defp convert(character) do
