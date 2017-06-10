@@ -103,6 +103,7 @@
       "slug": "acronym",
       "difficulty": 2,
       "topics": [
+
       ]
     },
     {
@@ -116,30 +117,35 @@
       "slug": "raindrops",
       "difficulty": 2,
       "topics": [
+
       ]
     },
     {
       "slug": "run-length-encoding",
       "difficulty": 2,
       "topics": [
+
       ]
     },
     {
       "slug": "sublist",
       "difficulty": 2,
       "topics": [
+
       ]
     },
     {
       "slug": "scrabble-score",
       "difficulty": 2,
       "topics": [
+
       ]
     },
     {
       "slug": "sum-of-multiples",
       "difficulty": 2,
       "topics": [
+
       ]
     },
     {
@@ -161,6 +167,7 @@
       "slug": "anagram",
       "difficulty": 2,
       "topics": [
+
       ]
     },
     {
@@ -175,66 +182,77 @@
       "slug": "bracket-push",
       "difficulty": 3,
       "topics": [
+
       ]
     },
     {
       "slug": "rna-transcription",
       "difficulty": 2,
       "topics": [
+
       ]
     },
     {
       "slug": "phone-number",
       "difficulty": 3,
       "topics": [
+
       ]
     },
     {
       "slug": "nth-prime",
       "difficulty": 2,
       "topics": [
+
       ]
     },
     {
       "slug": "roman-numerals",
       "difficulty": 2,
       "topics": [
+
       ]
     },
     {
       "slug": "all-your-base",
       "difficulty": 2,
       "topics": [
+
       ]
     },
     {
       "slug": "hamming",
       "difficulty": 2,
       "topics": [
+
       ]
     },
     {
       "slug": "triangle",
       "difficulty": 2,
       "topics": [
+
       ]
     },
     {
       "slug": "beer-song",
       "difficulty": 3,
       "topics": [
+
       ]
     },
     {
       "slug": "isogram",
       "difficulty": 3,
       "topics": [
+
       ]
     },
     {
       "slug": "grade-school",
       "difficulty": 3,
       "topics": [
+
       ]
     },
     {
@@ -250,60 +268,70 @@
       "slug": "list-ops",
       "difficulty": 4,
       "topics": [
+
       ]
     },
     {
       "slug": "flatten-array",
       "difficulty": 3,
       "topics": [
+
       ]
     },
     {
       "slug": "leap",
       "difficulty": 3,
       "topics": [
+
       ]
     },
     {
       "slug": "kindergarten-garden",
       "difficulty": 3,
       "topics": [
+
       ]
     },
     {
       "slug": "etl",
       "difficulty": 2,
       "topics": [
+
       ]
     },
     {
       "slug": "meetup",
       "difficulty": 4,
       "topics": [
+
       ]
     },
     {
       "slug": "grains",
       "difficulty": 3,
       "topics": [
+
       ]
     },
     {
       "slug": "change",
       "difficulty": 3,
       "topics": [
+
       ]
     },
     {
       "slug": "parallel-letter-frequency",
       "difficulty": 4,
       "topics": [
+
       ]
     },
     {
       "slug": "binary",
       "difficulty": 3,
       "topics": [
+
       ]
     },
     {
@@ -318,66 +346,77 @@
       "slug": "luhn",
       "difficulty": 5,
       "topics": [
+
       ]
     },
     {
       "slug": "markdown",
       "difficulty": 5,
       "topics": [
+
       ]
     },
     {
       "slug": "gigasecond",
       "difficulty": 3,
       "topics": [
+
       ]
     },
     {
       "slug": "queen-attack",
       "difficulty": 7,
       "topics": [
+
       ]
     },
     {
       "slug": "pascals-triangle",
       "difficulty": 3,
       "topics": [
+
       ]
     },
     {
       "slug": "saddle-points",
       "difficulty": 5,
       "topics": [
+
       ]
     },
     {
       "slug": "hexadecimal",
       "difficulty": 3,
       "topics": [
+
       ]
     },
     {
       "slug": "diamond",
       "difficulty": 5,
       "topics": [
+
       ]
     },
     {
       "slug": "binary-search",
       "difficulty": 3,
       "topics": [
+
       ]
     },
     {
       "slug": "prime-factors",
       "difficulty": 3,
       "topics": [
+
       ]
     },
     {
       "slug": "perfect-numbers",
       "difficulty": 3,
       "topics": [
+
       ]
     },
     {
@@ -391,24 +430,28 @@
       "slug": "sieve",
       "difficulty": 5,
       "topics": [
+
       ]
     },
     {
       "slug": "wordy",
       "difficulty": 6,
       "topics": [
+
       ]
     },
     {
       "slug": "robot-simulator",
       "difficulty": 6,
       "topics": [
+
       ]
     },
     {
       "slug": "atbash-cipher",
       "difficulty": 3,
       "topics": [
+
       ]
     },
     {
@@ -423,66 +466,77 @@
       "slug": "bank-account",
       "difficulty": 7,
       "topics": [
+
       ]
     },
     {
       "slug": "largest-series-product",
       "difficulty": 4,
       "topics": [
+
       ]
     },
     {
       "slug": "crypto-square",
       "difficulty": 4,
       "topics": [
+
       ]
     },
     {
       "slug": "pythagorean-triplet",
       "difficulty": 5,
       "topics": [
+
       ]
     },
     {
       "slug": "allergies",
       "difficulty": 4,
       "topics": [
+
       ]
     },
     {
       "slug": "palindrome-products",
       "difficulty": 5,
       "topics": [
+
       ]
     },
     {
       "slug": "rail-fence-cipher",
       "difficulty": 6,
       "topics": [
+
       ]
     },
     {
       "slug": "zipper",
       "difficulty": 8,
       "topics": [
+
       ]
     },
     {
       "slug": "minesweeper",
       "difficulty": 7,
       "topics": [
+
       ]
     },
     {
       "slug": "connect",
       "difficulty": 7,
       "topics": [
+
       ]
     },
     {
       "slug": "difference-of-squares",
       "difficulty": 4,
       "topics": [
+
       ]
     },
     {
@@ -496,24 +550,28 @@
       "slug": "bowling",
       "difficulty": 8,
       "topics": [
+
       ]
     },
     {
       "slug": "dot-dsl",
       "difficulty": 8,
       "topics": [
+
       ]
     },
     {
       "slug": "custom-set",
       "difficulty": 5,
       "topics": [
+
       ]
     },
     {
       "slug": "forth",
       "difficulty": 10,
       "topics": [
+
       ]
     },
     {
@@ -553,13 +611,6 @@
   ],
   "deprecated": [
 
-  ],
-  "ignored": [
-    "docs",
-    "deps",
-    "img",
-    "test",
-    "_build"
   ],
   "foregone": [
     "robot-name"
