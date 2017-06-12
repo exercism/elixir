@@ -612,13 +612,6 @@
   "deprecated": [
 
   ],
-  "ignored": [
-    "docs",
-    "deps",
-    "img",
-    "test",
-    "_build"
-  ],
   "foregone": [
     "robot-name"
   ]
