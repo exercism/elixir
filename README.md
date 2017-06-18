@@ -1,6 +1,6 @@
-# xElixir
+# Exercism Elixir Track
 
-![build status](https://travis-ci.org/exercism/xelixir.svg?branch=master)
+![build status](https://travis-ci.org/exercism/elixir.svg?branch=master)
 
 Exercism Exercises in Elixir
 
@@ -72,7 +72,7 @@ test "shouting" do
 end
 ```
 
-All the tests for xElixir exercises can be run from the top level of the repo
+All the tests for Exercism Elixir Track exercises can be run from the top level of the repo
 with `$ mix test`. Please run this command before submitting your PR. Watch out
 for and correct any compiler warnings you may have introduced.
 
