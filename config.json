@@ -1,7 +1,7 @@
 {
   "slug": "elixir",
   "language": "Elixir",
-  "repository": "https://github.com/exercism/xelixir",
+  "repository": "https://github.com/exercism/elixir",
   "active": true,
   "exercises": [
     {
