@@ -13,7 +13,7 @@ defmodule CollatzConjectureTest do
   end
 
   test "zero is an error" do
-    assert_raise ArgumentError, "Only positive numbers are allowed", fn -> CollatzConjecture.calc(0) end
+    assert_raise FunctionClauseError, fn -> CollatzConjecture.calc(0) end
   end
 
   @tag :pending
@@ -43,6 +43,11 @@ defmodule CollatzConjectureTest do
 
   @tag :pending
   test "negative value is an error " do
-    assert_raise ArgumentError, "Only positive numbers are allowed", fn -> CollatzConjecture.calc(-15) end
+    assert_raise FunctionClauseError, fn -> CollatzConjecture.calc(-15) end
+  end
+
+  @tag :pending
+  test "string as input value is an error " do
+    assert_raise FunctionClauseError, fn -> CollatzConjecture.calc("fubar") end
   end
 end
