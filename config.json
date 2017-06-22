@@ -607,6 +607,13 @@
         "Strings",
         "Enumerations"
       ]
+    },
+    {
+      "slug": "collatz-conjecture",
+      "difficulty": 2,
+      "topics": [
+        "Recursion"
+      ]
     }
   ],
   "deprecated": [
