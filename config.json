@@ -614,6 +614,17 @@
       "topics": [
         "Recursion"
       ]
+    },
+    {
+      "slug": "dominoes",
+      "difficulty": 4,
+      "topics": [
+        "Recursion",
+        "Enumerations",
+        "Trees",
+        "Algorithms",
+        "Sorting"
+      ]
     }
   ],
   "deprecated": [
