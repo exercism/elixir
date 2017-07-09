@@ -12,7 +12,7 @@ matrix:
 
 script:
 - bin/fetch-configlet
-- bin/configlet .
+- bin/configlet lint .
 - mix deps.get
 - mix test
 
