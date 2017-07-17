@@ -10,16 +10,18 @@ defmodule Bowling do
   end
 
   def roll(_, score) when score < 0 do
-    {:error, "Pins must have a value from 0 to 10"}
+    {:error, "Negative roll is invalid"}
   end
 
   def roll(_, score) when score > 10 do
-    {:error, "Pins must have a value from 0 to 10"}
+    {:error, "Pin count exceeds pins on the lane"}
   end
 
   def roll(game, score) do
     updates = update_score(game.roll_in_frame, game, score)
     cond do
+      too_many_frames?(updates) ->
+        {:error, "Cannot roll after game is over"}
       valid_updates?(updates) ->
         updates
       true ->
@@ -58,8 +60,6 @@ defmodule Bowling do
         {:error, "Score cannot be taken until the end of the game"}
       bonus_roll_remaining?(game) ->
         {:error, "Score cannot be taken until the end of the game"}
-      too_many_frames?(game) ->
-        {:error, "Invalid game: too many frames"}
       true ->
         parse_scores(game.scores)
     end

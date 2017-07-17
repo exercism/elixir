@@ -12,7 +12,7 @@ defmodule BowlingTest do
     Enum.reduce(rolls, game, fn(roll, game) -> Bowling.roll(game, roll) end)
   end
 
-  test "can score all 0s" do
+  test "should be able to score a game with all zeros" do
     game = Bowling.start
     rolls = [0, 0,
              0, 0,
@@ -29,7 +29,7 @@ defmodule BowlingTest do
   end
 
   @tag :pending
-  test "can score a game with no strikes or spares" do
+  test "should be able to score a game with no strikes or spares" do
     game = Bowling.start
     rolls = [3, 6,
              3, 6,
@@ -46,7 +46,7 @@ defmodule BowlingTest do
   end
 
   @tag :pending
-  test "spare followed by all 0s is worth 10 points" do
+  test "a spare followed by zeros is worth ten points" do
     game = Bowling.start
     rolls = [6, 4,
              0, 0,
@@ -63,7 +63,7 @@ defmodule BowlingTest do
   end
 
   @tag :pending
-  test "points scored in the roll after the spare are counted twice" do
+  test "points scored in the roll after a spare are counted twice" do
     game = Bowling.start
     rolls = [6, 4,
              3, 0,
@@ -115,7 +115,7 @@ defmodule BowlingTest do
   end
 
   @tag :pending
-  test "a strike earns ten points in frame with a single roll" do
+  test "a strike earns ten points in a frame with a single roll" do
     game = Bowling.start
     rolls = [10,
              0, 0,
@@ -258,26 +258,26 @@ defmodule BowlingTest do
   end
 
   @tag :pending
-  test "rolls can not score negative points" do
+  test "rolls cannot score negative points" do
     game = Bowling.start
-    assert Bowling.roll(game, -1) == {:error, "Pins must have a value from 0 to 10"}
+    assert Bowling.roll(game, -1) == {:error, "Negative roll is invalid"}
   end
 
   @tag :pending
-  test "a roll can not score more than 10 points" do
+  test "a roll cannot score more than 10 points" do
     game = Bowling.start
-    assert Bowling.roll(game, 11) == {:error, "Pins must have a value from 0 to 10"}
+    assert Bowling.roll(game, 11) == {:error, "Pin count exceeds pins on the lane"}
   end
 
   @tag :pending
-  test "two rolls in a frame can not score more than 10 points" do
+  test "two rolls in a frame cannot score more than 10 points" do
     game = Bowling.start
     game = Bowling.roll(game, 5)
     assert Bowling.roll(game, 6) == {:error, "Pin count exceeds pins on the lane"}
   end
 
   @tag :pending
-  test "two bonus rolls after a strike in the last frame can not score more than 10 points" do
+  test "bonus roll after a strike in the last frame cannot score more than 10 points" do
     game = Bowling.start
     rolls = [0, 0,
              0, 0,
@@ -288,26 +288,31 @@ defmodule BowlingTest do
              0, 0,
              0, 0,
              0, 0,
+             10]
+    game = roll_reduce(game, rolls)
+    assert Bowling.roll(game, 11) == {:error, "Pin count exceeds pins on the lane"}
+  end
+
+  @tag :pending
+  test "two bonus rolls after a strike in the last frame cannot score more than 10 points" do
+    game = Bowling.start
+    rolls = [0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             10,
              5]
     game = roll_reduce(game, rolls)
     assert Bowling.roll(game, 6) == {:error, "Pin count exceeds pins on the lane"}
   end
 
   @tag :pending
-  test "an unstarted game can not be scored" do
-    game = Bowling.start
-    assert Bowling.score(game) == {:error, "Score cannot be taken until the end of the game"}
-  end
-
-  @tag :pending
-  test "score cannot be taken until the end of the game" do
-    game = Bowling.start
-    game = Bowling.roll(game, 0)
-    assert Bowling.score(game) == {:error, "Score cannot be taken until the end of the game"}
-  end
-
-  @tag :pending
-  test "a game with more than ten frames can not be scored" do
+  test "two bonus rolls after a strike in the last frame can score more than 10 points if one is a strike" do
     game = Bowling.start
     rolls = [0, 0,
              0, 0,
@@ -318,10 +323,78 @@ defmodule BowlingTest do
              0, 0,
              0, 0,
              0, 0,
-             0, 0,
-             0]
+             10,
+             10,
+             6]
     game = roll_reduce(game, rolls)
-    assert Bowling.score(game) == {:error, "Invalid game: too many frames"}
+    assert Bowling.score(game) == 26
+  end
+
+  @tag :pending
+  test "the second bonus rolls after a strike in the last frame cannot be a strike if the first one is not a strike" do
+    game = Bowling.start
+    rolls = [0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             10,
+             6]
+    game = roll_reduce(game, rolls)
+    assert Bowling.roll(game, 10) == {:error, "Pin count exceeds pins on the lane"}
+  end
+
+  @tag :pending
+  test "second bonus roll after a strike in the last frame cannot score more than 10 points" do
+    game = Bowling.start
+    rolls = [0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             10,
+             10]
+    game = roll_reduce(game, rolls)
+    assert Bowling.roll(game, 11) == {:error, "Pin count exceeds pins on the lane"}
+  end
+
+  @tag :pending
+  test "an unstarted game cannot be scored" do
+    game = Bowling.start
+    assert Bowling.score(game) == {:error, "Score cannot be taken until the end of the game"}
+  end
+
+  @tag :pending
+  test "an incomplete game cannot be scored" do
+    game = Bowling.start
+    rolls = [0, 0]
+    game = roll_reduce(game, rolls)
+    assert Bowling.score(game) == {:error, "Score cannot be taken until the end of the game"}
+  end
+
+  @tag :pending
+  test "cannot roll if game already has ten frames" do
+    game = Bowling.start
+    rolls = [0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             0, 0]
+    game = roll_reduce(game, rolls)
+    assert Bowling.roll(game, 0) == {:error, "Cannot roll after game is over"}
   end
 
   @tag :pending
