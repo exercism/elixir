@@ -17,7 +17,7 @@ defmodule Pangram do
     chars =
       sentence
       |> String.downcase
-      |> to_char_list
+      |> to_charlist
 
     Enum.all? ?a..?z, &(&1 in chars)
   end

@@ -25,7 +25,7 @@ defmodule Atbash do
 
   defp transpose(text) do
     text
-    |> String.to_char_list
+    |> String.to_charlist
     |> Enum.map(&convert/1)
     |> List.to_string
   end
