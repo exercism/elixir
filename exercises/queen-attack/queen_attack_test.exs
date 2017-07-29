@@ -32,7 +32,7 @@ defmodule QueenAttackTest do
   @tag :pending
   test "string representation" do
     queens = Queens.new({2, 4}, {6, 6})
-    board = String.strip """
+    board = String.trim """
 _ _ _ _ _ _ _ _
 _ _ _ _ _ _ _ _
 _ _ _ _ W _ _ _
@@ -48,7 +48,7 @@ _ _ _ _ _ _ _ _
   @tag :pending
   test "another string representation" do
     queens = Queens.new({7, 1}, {0, 0})
-    board = String.strip """
+    board = String.trim """
 B _ _ _ _ _ _ _
 _ _ _ _ _ _ _ _
 _ _ _ _ _ _ _ _
@@ -64,7 +64,7 @@ _ W _ _ _ _ _ _
   @tag :pending
   test "yet another string representation" do
     queens = Queens.new({4, 3}, {3, 4})
-    board = String.strip """
+    board = String.trim """
 _ _ _ _ _ _ _ _
 _ _ _ _ _ _ _ _
 _ _ _ _ _ _ _ _
@@ -80,7 +80,7 @@ _ _ _ _ _ _ _ _
   @tag :pending
   test "queen placed on the bottom right corner" do
     queens = Queens.new({4, 3}, {7, 7})
-    board = String.strip """
+    board = String.trim """
 _ _ _ _ _ _ _ _
 _ _ _ _ _ _ _ _
 _ _ _ _ _ _ _ _
@@ -96,7 +96,7 @@ _ _ _ _ _ _ _ B
   @tag :pending
   test "queen placed on the edge of the board" do
     queens = Queens.new({4, 3}, {2, 7})
-    board = String.strip """
+    board = String.trim """
 _ _ _ _ _ _ _ _
 _ _ _ _ _ _ _ _
 _ _ _ _ _ _ _ B

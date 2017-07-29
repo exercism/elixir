@@ -9,13 +9,13 @@ defmodule Minesweeper do
     w = String.length(hd(board)) # Only 7-bit ASCII in the board, so this is safe
     annotations =
       Enum.reduce(Stream.with_index(board), %{}, fn { line, y }, acc ->
-        Enum.reduce(Stream.with_index(String.to_char_list(line)), acc, fn
+        Enum.reduce(Stream.with_index(String.to_charlist(line)), acc, fn
           { ?*, x }, acc -> add_adjacents(acc, { x, y }, { w, h })
           _, acc         -> acc
         end)
       end)
     Enum.map(Stream.with_index(board), fn { line, y } ->
-      Enum.map(Stream.with_index(String.to_char_list(line)), fn
+      Enum.map(Stream.with_index(String.to_charlist(line)), fn
         { ?*, _ } -> ?* # Don't replace mines
         { _, x }  -> case annotations[{x, y}] do
                        nil -> ?\s

@@ -3,7 +3,7 @@ defmodule Scrabble do
     word |> letters |> summarize
   end
 
-  defp letters(word), do: word |> String.strip |> String.downcase |> String.codepoints
+  defp letters(word), do: word |> String.trim |> String.downcase |> String.codepoints
 
   defp summarize(letters), do: Enum.reduce(letters, 0, fn(letter, acc) -> acc + letter_score(letter) end)
 
