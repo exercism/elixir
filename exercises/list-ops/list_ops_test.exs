@@ -85,6 +85,11 @@ defmodule ListOpsTest do
   end
 
   @tag :pending
+  test "order of reduction is important" do
+    assert L.reduce(~w(C B A), ". Done!", &(&1 <> &2)) == "ABC. Done!"
+  end
+
+  @tag :pending
   test "reduce of huge list" do
     assert L.reduce(Enum.to_list(1..1_000_000), 0, &(&1+&2)) ==
       Enum.reduce(1..1_000_000, 0, &(&1+&2))
