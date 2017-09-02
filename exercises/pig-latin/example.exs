@@ -17,28 +17,27 @@ defmodule PigLatin do
   def translate(phrase) do
     phrase
     |> String.split(" ")
-    |> Enum.map_join(" ", &to_pig_latin/1)
+    |> Enum.map(&translate_word/1)
+    |> Enum.join(" ")
   end
 
-  @consonant_sounds ["ch", "sch", "qu", "squ", "thr", "th"]
-  @vowel_sounds ["xr", "yt"]
-  @consonants "bcdfghjklmnpqrstvwxyz" |> String.graphemes
-  @vowels "aeiou" |> String.graphemes
-
-  for sound <- @consonant_sounds do
-    defp to_pig_latin(unquote(sound) <> rest), do: "#{rest}#{unquote(sound)}ay"
+  defp translate_word(word) do
+    word
+    |> consonant_prefix_and_rest
+    |> case do
+      ["", _] -> word <> "ay"
+      [consonant_prefix, rest] -> rest <> consonant_prefix <> "ay"
+      _ -> word
+    end
   end
 
-  for sound <- @vowel_sounds do
-    defp to_pig_latin(unquote(sound) <> rest), do: "#{unquote(sound)}#{rest}ay"
-  end
-
-  for sound <- @consonants do
-    defp to_pig_latin(unquote(sound) <> rest), do: "#{rest}#{unquote(sound)}ay"
-  end
-
-  for sound <- @vowels do
-    defp to_pig_latin(unquote(sound) <> rest), do: "#{unquote(sound)}#{rest}ay"
+  defp consonant_prefix_and_rest(word) do
+    if Regex.match?(~r/^yt|xr/, word) do
+      ["", word]
+    else
+      ~r/^(s?qu|(?:[^aeiou]*))?([aeiou].*)$/
+      |> Regex.run(word, capture: :all_but_first)
+    end
   end
 end
 
