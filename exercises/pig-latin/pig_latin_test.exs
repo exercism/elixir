@@ -40,7 +40,7 @@ defmodule PigLatinTest do
     end
   end
 
-  describe "first letter and ay are moved to the end of words that start with consonants" do
+  describe "first consonant letters and ay are moved to the end of words that start with consonants" do
     @tag :pending
     test "word beginning with p" do
       assert PigLatin.translate("pig") == "igpay"
@@ -64,6 +64,21 @@ defmodule PigLatinTest do
     @tag :pending
     test "word beginning with q without a following u" do
       assert PigLatin.translate("qat") == "atqay"
+    end
+
+    @tag :pending
+    test "word beginning with two consonants" do
+      assert PigLatin.translate("pleasure") == "easureplay"
+    end
+
+    @tag :pending
+    test "word beginning with three consonants" do
+      assert PigLatin.translate("stringify") == "ingifystray"
+    end
+
+    @tag :pending
+    test "word beginning with a serie of consonants : aliens speak Pig Latin too" do
+      assert PigLatin.translate("zkrrkrkrkrzzzkewk") == "ewkzkrrkrkrkrzzzkay"
     end
   end
 
