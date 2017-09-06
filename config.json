@@ -569,6 +569,17 @@
       ]
     },
     {
+      "uuid": "77fe5eb6-a35b-4af4-9512-275f140c25d6",
+      "slug": "binary-search-tree",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "algorithms",
+        "trees"
+      ]
+    },
+    {
       "uuid": "47328272-b2f6-42e4-a5a3-a5d276bfbdee",
       "slug": "prime-factors",
       "core": false,
