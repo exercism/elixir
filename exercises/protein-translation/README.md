@@ -10,9 +10,9 @@ Codons: `"AUG", "UUU", "UCU"`
 => which become a polypeptide with the following sequence =>
 
 Protein: `"Methionine", "Phenylalanine", "Serine"`
- 
+
 There are 64 codons which in turn correspond to 20 amino acids; however, all of the codon sequences and resulting amino acids are not important in this exercise.  If it works for one codon, the program should work for all of them.
-However, feel free to expand the list in the test suite to include them all.  
+However, feel free to expand the list in the test suite to include them all.
 
 There are also four terminating codons (also known as 'STOP' codons); if any of these codons are encountered (by the ribosome), all translation ends and the protein is terminated.
 
@@ -20,7 +20,7 @@ All subsequent codons after are ignored, like this:
 
 RNA: `"AUGUUUUCUUAAAUG"` =>
 
-Codons: `"AUG", "UUU", "UCU", "UAG", "AUG"` => 
+Codons: `"AUG", "UUU", "UCU", "UAA", "AUG"` =>
 
 Protein: `"Methionine", "Phenylalanine", "Serine"`
 
@@ -38,7 +38,6 @@ UAU, UAC              | Tyrosine
 UGU, UGC              | Cysteine
 UGG                   | Tryptophan
 UAA, UAG, UGA         | STOP
-
 
 Learn more about [protein translation on Wikipedia](http://en.wikipedia.org/wiki/Translation_(biology))
 
@@ -83,4 +82,5 @@ see the [help page](http://exercism.io/languages/elixir).
 Tyler Long
 
 ## Submitting Incomplete Solutions
+
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
