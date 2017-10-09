@@ -1,7 +1,7 @@
 defmodule CustomSet do
   @opaque t :: %__MODULE__{map: map}
 
-  @spec new(Enum.t) :: t
+  @spec new(Enum.t()) :: t
   def new(enumerable) do
   end
 

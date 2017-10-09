@@ -2,8 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("say.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule SayTest do
   use ExUnit.Case
@@ -45,12 +45,12 @@ defmodule SayTest do
 
   @tag :pending
   test "one thousand" do
-    assert Say.in_english(1_000) == {:ok, "one thousand"}
+    assert Say.in_english(1000) == {:ok, "one thousand"}
   end
 
   @tag :pending
   test "one thousand two hundred thirty-four" do
-    assert Say.in_english(1_234) == {:ok, "one thousand two hundred thirty-four"}
+    assert Say.in_english(1234) == {:ok, "one thousand two hundred thirty-four"}
   end
 
   @tag :pending
@@ -70,7 +70,10 @@ defmodule SayTest do
 
   @tag :pending
   test "a big number" do
-    assert Say.in_english(987_654_321_123) == {:ok, "nine hundred eighty-seven billion six hundred fifty-four million three hundred twenty-one thousand one hundred twenty-three"}
+    assert Say.in_english(987_654_321_123) == {
+             :ok,
+             "nine hundred eighty-seven billion six hundred fifty-four million three hundred twenty-one thousand one hundred twenty-three"
+           }
   end
 
   @tag :pending

@@ -46,4 +46,3 @@ defmodule SimpleCipher do
   def decode(ciphertext, key) do
   end
 end
-

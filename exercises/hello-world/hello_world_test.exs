@@ -2,8 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("hello_world.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule HelloWorldTest do
   use ExUnit.Case
@@ -21,5 +21,4 @@ defmodule HelloWorldTest do
   test "says hello other sample name" do
     assert HelloWorld.hello("Bob") == "Hello, Bob!"
   end
-
 end

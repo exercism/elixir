@@ -14,7 +14,7 @@ defmodule BinarySearchTree do
   end
 
   def in_order(tree) do
-    in_order(tree, []) |> Enum.reverse
+    in_order(tree, []) |> Enum.reverse()
   end
 
   def in_order(nil, accum) do

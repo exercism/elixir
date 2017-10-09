@@ -2,13 +2,13 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("series.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule StringSeriesTest do
   use ExUnit.Case
 
-  #@tag :pending
+  # @tag :pending
   test "slices of size 1" do
     assert StringSeries.slices("01234", 1) == ["0", "1", "2", "3", "4"]
   end
@@ -50,4 +50,3 @@ defmodule StringSeriesTest do
     assert StringSeries.slices("01234", 0) == []
   end
 end
-

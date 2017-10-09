@@ -2,15 +2,15 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("matrix.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure trace: true, exclude: :pending
+ExUnit.start()
+ExUnit.configure(trace: true, exclude: :pending)
 
 defmodule MatrixTest do
   use ExUnit.Case
 
   @input "1 2 3\n4 5 6\n7 8 9"
 
-  #@tag :pending
+  # @tag :pending
   test "reading from and writing to string" do
     matrix = Matrix.from_string(@input)
     assert Matrix.to_string(matrix) == @input
@@ -21,10 +21,10 @@ defmodule MatrixTest do
     matrix = Matrix.from_string(@input)
 
     assert Matrix.rows(matrix) == [
-      [1, 2, 3],
-      [4, 5, 6],
-      [7, 8, 9]
-    ]
+             [1, 2, 3],
+             [4, 5, 6],
+             [7, 8, 9]
+           ]
   end
 
   @tag :pending
@@ -41,10 +41,10 @@ defmodule MatrixTest do
     matrix = Matrix.from_string(@input)
 
     assert Matrix.columns(matrix) == [
-      [1, 4, 7],
-      [2, 5, 8],
-      [3, 6, 9]
-    ]
+             [1, 4, 7],
+             [2, 5, 8],
+             [3, 6, 9]
+           ]
   end
 
   @tag :pending

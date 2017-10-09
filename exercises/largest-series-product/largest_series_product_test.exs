@@ -2,8 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("largest_series_product.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule LargestSeriesProductTest do
   use ExUnit.Case
@@ -45,12 +45,14 @@ defmodule LargestSeriesProductTest do
 
   @tag :pending
   test "some big number" do
-    assert Series.largest_product("73167176531330624919225119674426574742355349194934", 6) == 23520
+    assert Series.largest_product("73167176531330624919225119674426574742355349194934", 6) ==
+             23520
   end
 
   @tag :pending
   test "some other big number" do
-    assert Series.largest_product("52677741234314237566414902593461595376319419139427", 6) == 28350
+    assert Series.largest_product("52677741234314237566414902593461595376319419139427", 6) ==
+             28350
   end
 
   @tag :pending
@@ -75,22 +77,16 @@ defmodule LargestSeriesProductTest do
 
   @tag :pending
   test "raises if span is too large" do
-    assert_raise ArgumentError, fn ->
-      Series.largest_product("123", 4)
-    end
+    assert_raise ArgumentError, fn -> Series.largest_product("123", 4) end
   end
 
   @tag :pending
   test "raises with empty string but non-zero span size" do
-    assert_raise ArgumentError, fn ->
-      Series.largest_product("", 1)
-    end
+    assert_raise ArgumentError, fn -> Series.largest_product("", 1) end
   end
 
   @tag :pending
   test "raises with non-empty string and negative span size" do
-    assert_raise ArgumentError, fn ->
-      Series.largest_product("1234", -1)
-    end
+    assert_raise ArgumentError, fn -> Series.largest_product("1234", -1) end
   end
 end

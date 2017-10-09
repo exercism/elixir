@@ -45,4 +45,3 @@ defmodule Matrix do
   def column(matrix, index) do
   end
 end
-

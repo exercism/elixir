@@ -2,8 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("connect.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule ConnectTest do
   use ExUnit.Case
@@ -14,13 +14,15 @@ defmodule ConnectTest do
 
   # @tag :pending
   test "empty board has no winner" do
-    board = remove_spaces [
-      ". . . . .",
-      " . . . . .",
-      "  . . . . .",
-      "   . . . . .",
-      "    . . . . ."
-    ]
+    board =
+      remove_spaces([
+        ". . . . .",
+        " . . . . .",
+        "  . . . . .",
+        "   . . . . .",
+        "    . . . . ."
+      ])
+
     assert Connect.result_for(board) == :none
   end
 
@@ -38,37 +40,43 @@ defmodule ConnectTest do
 
   @tag :pending
   test "convulted path" do
-    board = remove_spaces [
-      ". X X . .",
-      " X . X . X",
-      "  . X . X .",
-      "   . X X . .",
-      "    O O O O O"
-    ]
+    board =
+      remove_spaces([
+        ". X X . .",
+        " X . X . X",
+        "  . X . X .",
+        "   . X X . .",
+        "    O O O O O"
+      ])
+
     assert Connect.result_for(board) == :black
   end
 
   @tag :pending
   test "rectangle, black wins" do
-    board = remove_spaces [
-      ". O . .",
-      " O X X X",
-      "  O X O .",
-      "   X X O X",
-      "    . O X ."
-    ]
+    board =
+      remove_spaces([
+        ". O . .",
+        " O X X X",
+        "  O X O .",
+        "   X X O X",
+        "    . O X ."
+      ])
+
     assert Connect.result_for(board) == :black
   end
 
   @tag :pending
   test "rectangle, white wins" do
-    board = remove_spaces [
-      ". O . .",
-      " O X X X",
-      "  O O O .",
-      "   X X O X",
-      "    . O X ."
-    ]
+    board =
+      remove_spaces([
+        ". O . .",
+        " O X X X",
+        "  O O O .",
+        "   X X O X",
+        "    . O X ."
+      ])
+
     assert Connect.result_for(board) == :white
   end
 
@@ -85,6 +93,7 @@ defmodule ConnectTest do
       "OOOOOOOXO",
       "XXXXXXXXO"
     ]
+
     assert Connect.result_for(board) == :black
   end
 
@@ -101,6 +110,7 @@ defmodule ConnectTest do
       "OOOOOOOXO",
       "XXXXXXXXO"
     ]
+
     assert Connect.result_for(board) == :none
   end
 end

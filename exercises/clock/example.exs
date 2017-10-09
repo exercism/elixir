@@ -9,7 +9,7 @@ defmodule Clock do
       iex> Clock.new(8, 9) |> to_string
       "08:09"
   """
-  @spec new(integer, integer) :: Clock.t
+  @spec new(integer, integer) :: Clock.t()
   def new(hour, minute) do
     rollover(%Clock{hour: hour, minute: minute})
   end
@@ -20,7 +20,7 @@ defmodule Clock do
       iex> Clock.new(10, 0) |> Clock.add(3) |> to_string
       "10:03"
   """
-  @spec add(Clock.t, integer) :: Clock.t
+  @spec add(Clock.t(), integer) :: Clock.t()
   def add(%Clock{hour: hour, minute: minute}, add_minute) do
     new(hour, minute + add_minute)
   end
@@ -38,9 +38,11 @@ defmodule Clock do
   defp roll_minute(minute) when minute < 0 do
     {div(minute, 60) - 1, 60 + rem(minute, 60)}
   end
+
   defp roll_minute(minute) when minute >= 60 do
     {div(minute, 60), rem(minute, 60)}
   end
+
   defp roll_minute(minute), do: {0, minute}
 
   defimpl String.Chars, for: Clock do
@@ -49,7 +51,7 @@ defmodule Clock do
     end
 
     defp format(number) do
-      number |> Integer.to_string |> String.pad_leading(2, "0")
+      number |> Integer.to_string() |> String.pad_leading(2, "0")
     end
   end
 end

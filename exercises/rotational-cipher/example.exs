@@ -4,14 +4,19 @@ defmodule RotationalCipher do
 
   for shift <- 0..25 do
     plain = String.split(@alphabet, "", trim: true)
-    cipher = @alphabet
-             |> Kernel.<>(@alphabet)
-             |> String.split("", trim: true)
-             |> Enum.drop(shift)
-             |> Enum.take(@alphabet_size)
+
+    cipher =
+      @alphabet
+      |> Kernel.<>(@alphabet)
+      |> String.split("", trim: true)
+      |> Enum.drop(shift)
+      |> Enum.take(@alphabet_size)
+
     for {p, c} <- Enum.zip(plain, cipher) do
       def translate(unquote(p), unquote(shift)), do: unquote(c)
-      def translate(unquote(p |> String.upcase), unquote(shift)), do: unquote(c |> String.upcase)
+
+      def translate(unquote(p |> String.upcase()), unquote(shift)),
+        do: unquote(c |> String.upcase())
     end
   end
 
@@ -29,7 +34,6 @@ defmodule RotationalCipher do
   def rotate(text, shift) do
     text
     |> String.split("", trim: true)
-    |> Enum.map_join(&(translate(&1, shift)))
+    |> Enum.map_join(&translate(&1, shift))
   end
 end
-

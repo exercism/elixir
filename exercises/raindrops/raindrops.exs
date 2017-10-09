@@ -8,8 +8,7 @@ defmodule Raindrops do
   - If the number does not contain 3, 5, or 7 as a prime factor,
     just pass the number's digits straight through.
   """
-  @spec convert(pos_integer) :: String.t
+  @spec convert(pos_integer) :: String.t()
   def convert(number) do
-
   end
 end

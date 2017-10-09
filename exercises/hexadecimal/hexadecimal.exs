@@ -17,6 +17,5 @@ defmodule Hexadecimal do
 
   @spec to_decimal(binary) :: integer
   def to_decimal(hex) do
-
   end
 end

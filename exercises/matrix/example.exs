@@ -7,13 +7,14 @@ defmodule Matrix do
   """
   @spec from_string(input :: String.t()) :: %Matrix{}
   def from_string(input) do
-    rows = input
-           |> String.split("\n", trim: true)
-           |> Enum.map(&parse_line/1)
+    rows =
+      input
+      |> String.split("\n", trim: true)
+      |> Enum.map(&parse_line/1)
 
     %Matrix{
       matrix: rows,
-      transposed_matrix: rows |> List.zip |> Enum.map(&Tuple.to_list/1)
+      transposed_matrix: rows |> List.zip() |> Enum.map(&Tuple.to_list/1)
     }
   end
 
@@ -28,7 +29,7 @@ defmodule Matrix do
   values separated by single spaces.
   """
   @spec to_string(matrix :: %Matrix{}) :: String.t()
-  def to_string(%Matrix{ matrix: rows }) do
+  def to_string(%Matrix{matrix: rows}) do
     rows
     |> Enum.map(&join_row/1)
     |> Enum.join("\n")
@@ -60,4 +61,3 @@ defmodule Matrix do
   @spec column(matrix :: %Matrix{}, index :: integer) :: list(integer)
   def column(%Matrix{transposed_matrix: cols}, index), do: Enum.at(cols, index)
 end
-

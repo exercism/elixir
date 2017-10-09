@@ -6,8 +6,7 @@ defmodule CryptoSquare do
     iex> CryptoSquare.encode("abcd")
     "ac bd"
   """
-  @spec encode(String.t) :: String.t
+  @spec encode(String.t()) :: String.t()
   def encode(str) do
-
   end
 end

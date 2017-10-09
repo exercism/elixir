@@ -12,7 +12,7 @@ defmodule Pangram do
 
   """
 
-  @spec pangram?(String.t) :: boolean
+  @spec pangram?(String.t()) :: boolean
   def pangram?(sentence) do
   end
 end

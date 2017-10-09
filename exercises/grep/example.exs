@@ -17,22 +17,25 @@ defmodule Grep do
   defp parse_flags(flags) do
     flags
     |> Enum.map(&parse_flag/1)
-    |> Enum.reduce(0, fn(a,b) -> a ||| b end)
+    |> Enum.reduce(0, fn a, b -> a ||| b end)
   end
 
   defp has_flag(flags, flag), do: (flags &&& flag) > 0
 
   defp is_match(pattern, flags) do
-    pat = if has_flag(flags, @entire_lines) do
-      "^#{pattern}$"
-    else
-      pattern
-    end
-    cas = if has_flag(flags, @case_insensitive) do
-      "i"
-    else
-      ""
-    end
+    pat =
+      if has_flag(flags, @entire_lines) do
+        "^#{pattern}$"
+      else
+        pattern
+      end
+
+    cas =
+      if has_flag(flags, @case_insensitive) do
+        "i"
+      else
+        ""
+      end
 
     regex = Regex.compile!(pat, cas)
 
@@ -75,18 +78,19 @@ defmodule Grep do
     |> Enum.map(fmt)
   end
 
-  @spec grep(String.t, [String.t], [String.t]) :: String.t
+  @spec grep(String.t(), [String.t()], [String.t()]) :: String.t()
   def grep(pattern, flag_args, files) do
     flags = parse_flags(flag_args)
 
-    output = if has_flag(flags, @file_name) do
-      process_files(pattern, flags, files)
-    else
-      process_lines(pattern, flags, files)
-    end
+    output =
+      if has_flag(flags, @file_name) do
+        process_files(pattern, flags, files)
+      else
+        process_lines(pattern, flags, files)
+      end
 
     output
     |> Enum.map(fn l -> "#{l}\n" end)
-    |> Enum.reduce("", fn b,a -> "#{a}#{b}" end)
+    |> Enum.reduce("", fn b, a -> "#{a}#{b}" end)
   end
 end

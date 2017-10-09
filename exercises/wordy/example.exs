@@ -6,7 +6,7 @@ defmodule Wordy do
   @doc """
   Calculate the math problem in the sentence.
   """
-  @spec answer(String.t) :: integer
+  @spec answer(String.t()) :: integer
   def answer(question) do
     question
     |> tokenize
@@ -17,34 +17,33 @@ defmodule Wordy do
 
   defp tokenize(sentence) do
     Regex.scan(~r/(#{all_matchers()})/, sentence)
-    |> Enum.map(&(Enum.at(&1,0)))
+    |> Enum.map(&Enum.at(&1, 0))
   end
 
   defp all_matchers do
-    Enum.map(@parts, &(&1.matcher)) |> Enum.join("|")
+    Enum.map(@parts, & &1.matcher) |> Enum.join("|")
   end
 
   defp parse(tokens) do
-    for token <- tokens,
-    part = Enum.find(@parts, &(&1.match?(token))) do
+    for token <- tokens, part = Enum.find(@parts, & &1.match?(token)) do
       part.parse(token)
     end
   end
 
   defp validate(parsed) do
-    if Enum.find(parsed, &(is_function &1)) do
+    if Enum.find(parsed, &is_function(&1)) do
       parsed
     else
       raise ArgumentError
     end
   end
 
-  defp calculate([ left | [] ] ) do
+  defp calculate([left | []]) do
     left
   end
 
-  defp calculate([ left, operation, right | t ]) do
-    calculate([ operation.(left, right) | t ])
+  defp calculate([left, operation, right | t]) do
+    calculate([operation.(left, right) | t])
   end
 
   defmodule Number do
@@ -53,7 +52,7 @@ defmodule Wordy do
     end
 
     def match?(token) do
-      String.match?(token,~r/#{matcher()}/)
+      String.match?(token, ~r/#{matcher()}/)
     end
 
     def parse(token) do
@@ -67,7 +66,7 @@ defmodule Wordy do
     end
 
     def match?(token) do
-      String.match?(token,~r/#{matcher()}/)
+      String.match?(token, ~r/#{matcher()}/)
     end
 
     def parse(_) do
@@ -85,7 +84,7 @@ defmodule Wordy do
     end
 
     def match?(token) do
-      String.match?(token,~r/#{matcher()}/)
+      String.match?(token, ~r/#{matcher()}/)
     end
 
     def parse(_) do
@@ -103,7 +102,7 @@ defmodule Wordy do
     end
 
     def match?(token) do
-      String.match?(token,~r/#{matcher()}/)
+      String.match?(token, ~r/#{matcher()}/)
     end
 
     def parse(_) do
@@ -121,7 +120,7 @@ defmodule Wordy do
     end
 
     def match?(token) do
-      String.match?(token,~r/#{matcher()}/)
+      String.match?(token, ~r/#{matcher()}/)
     end
 
     def parse(_) do

@@ -2,8 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("nth_prime.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule NthPrimeTest do
   use ExUnit.Case
@@ -30,6 +30,6 @@ defmodule NthPrimeTest do
 
   @tag :pending
   test "weird case" do
-    catch_error Prime.nth(0)
+    catch_error(Prime.nth(0))
   end
 end

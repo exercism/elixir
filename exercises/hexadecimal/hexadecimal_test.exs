@@ -2,14 +2,14 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("hexadecimal.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule HexadecimalTest do
   use ExUnit.Case
 
   test "returns 1 when hex is 1" do
-    assert Hexadecimal.to_decimal("1") ==  1
+    assert Hexadecimal.to_decimal("1") == 1
   end
 
   @tag :pending

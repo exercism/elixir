@@ -2,8 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("collatz_conjecture.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule CollatzConjectureTest do
   use ExUnit.Case
@@ -29,7 +29,7 @@ defmodule CollatzConjectureTest do
 
   @tag :pending
   test "Large number of even and odd steps" do
-    assert CollatzConjecture.calc(1000000) == 152
+    assert CollatzConjecture.calc(1_000_000) == 152
   end
 
   @tag :pending

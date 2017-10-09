@@ -71,8 +71,9 @@ defmodule LinkedList do
   def to_list(list) do
     list |> do_to_list([]) |> Enum.reverse()
   end
+
   defp do_to_list({}, acc), do: acc
-  defp do_to_list({h, t}, acc), do: do_to_list(t, [h|acc])
+  defp do_to_list({h, t}, acc), do: do_to_list(t, [h | acc])
 
   @doc """
   Reverse a LinkedList
@@ -81,6 +82,7 @@ defmodule LinkedList do
   def reverse(list) do
     do_reverse(list, new())
   end
+
   def do_reverse({}, acc), do: acc
   def do_reverse({h, t}, acc), do: do_reverse(t, push(acc, h))
 end

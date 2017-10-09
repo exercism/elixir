@@ -2,8 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("all-your-base.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule AllYourBaseTest do
   use ExUnit.Case
@@ -111,5 +111,4 @@ defmodule AllYourBaseTest do
   test "convert both bases are negative" do
     assert AllYourBase.convert([1], -2, -7) == nil
   end
-
 end
