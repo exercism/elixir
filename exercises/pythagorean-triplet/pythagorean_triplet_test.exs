@@ -2,8 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("pythagorean_triplet.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule PythagoreanTripletTest do
   use ExUnit.Case
@@ -47,6 +47,6 @@ defmodule PythagoreanTripletTest do
   @tag :pending
   test "triplets where sum is 180 and max factor is 100" do
     triplets = Triplet.generate(1, 100, 180)
-    assert Enum.map(triplets, &Triplet.product/1) == [118080, 168480, 202500]
+    assert Enum.map(triplets, &Triplet.product/1) == [118_080, 168_480, 202_500]
   end
 end

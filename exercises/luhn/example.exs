@@ -5,25 +5,26 @@ defmodule Luhn do
   @spec checksum(String.t()) :: integer
   def checksum(number) do
     number
-    |> String.reverse
-    |> String.graphemes
-    |> Enum.with_index
+    |> String.reverse()
+    |> String.graphemes()
+    |> Enum.with_index()
     |> Enum.map(&do_checksum/1)
-    |> Enum.sum
+    |> Enum.sum()
   end
 
   defp do_checksum({digit, index}) do
     digit
-    |> String.to_integer
+    |> String.to_integer()
     |> double_if_even_index(index)
     |> compact
   end
 
   defp compact(num) when num < 10, do: num
+
   defp compact(num) do
     num
-    |> Integer.digits
-    |> Enum.sum
+    |> Integer.digits()
+    |> Enum.sum()
     |> compact
   end
 
@@ -45,12 +46,12 @@ defmodule Luhn do
   end
 
   defp do_create(number) do
-    number <> "0"
+    (number <> "0")
     |> checksum
     |> rem(10)
     |> (&(10 - &1)).()
     |> to_string
-    |> String.last
+    |> String.last()
   end
 
   defp double_if_even_index(n, index) do

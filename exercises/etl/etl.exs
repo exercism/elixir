@@ -9,6 +9,5 @@ defmodule ETL do
   """
   @spec transform(map) :: map
   def transform(input) do
-
   end
 end

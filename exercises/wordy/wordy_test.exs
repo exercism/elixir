@@ -2,8 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("wordy.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule WordyTest do
   use ExUnit.Case
@@ -79,9 +79,7 @@ defmodule WordyTest do
 
   @tag :pending
   test "unknown operation" do
-    assert_raise ArgumentError, fn ->
-      Wordy.answer("What is 52 cubed?")
-    end
+    assert_raise ArgumentError, fn -> Wordy.answer("What is 52 cubed?") end
   end
 
   @tag :pending

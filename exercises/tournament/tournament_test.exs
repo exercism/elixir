@@ -2,13 +2,13 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("tournament.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure trace: true, exclude: :pending
+ExUnit.start()
+ExUnit.configure(trace: true, exclude: :pending)
 
 defmodule TournamentTest do
   use ExUnit.Case
 
-  #@tag :pending
+  # @tag :pending
   test "typical input" do
     input = [
       "Allegoric Alaskans;Blithering Badgers;win",
@@ -19,13 +19,15 @@ defmodule TournamentTest do
       "Allegoric Alaskans;Courageous Californians;win"
     ]
 
-    expected = """
-    Team                           | MP |  W |  D |  L |  P
-    Devastating Donkeys            |  3 |  2 |  1 |  0 |  7
-    Allegoric Alaskans             |  3 |  2 |  0 |  1 |  6
-    Blithering Badgers             |  3 |  1 |  0 |  2 |  3
-    Courageous Californians        |  3 |  0 |  1 |  2 |  1
-    """ |> String.trim
+    expected =
+      """
+      Team                           | MP |  W |  D |  L |  P
+      Devastating Donkeys            |  3 |  2 |  1 |  0 |  7
+      Allegoric Alaskans             |  3 |  2 |  0 |  1 |  6
+      Blithering Badgers             |  3 |  1 |  0 |  2 |  3
+      Courageous Californians        |  3 |  0 |  1 |  2 |  1
+      """
+      |> String.trim()
 
     assert Tournament.tally(input) == expected
   end
@@ -39,13 +41,15 @@ defmodule TournamentTest do
       "Allegoric Alaskans;Courageous Californians;win"
     ]
 
-    expected = """
-    Team                           | MP |  W |  D |  L |  P
-    Allegoric Alaskans             |  3 |  2 |  0 |  1 |  6
-    Blithering Badgers             |  2 |  1 |  1 |  0 |  4
-    Courageous Californians        |  2 |  0 |  1 |  1 |  1
-    Devastating Donkeys            |  1 |  0 |  0 |  1 |  0
-    """ |> String.trim
+    expected =
+      """
+      Team                           | MP |  W |  D |  L |  P
+      Allegoric Alaskans             |  3 |  2 |  0 |  1 |  6
+      Blithering Badgers             |  2 |  1 |  1 |  0 |  4
+      Courageous Californians        |  2 |  0 |  1 |  1 |  1
+      Devastating Donkeys            |  1 |  0 |  0 |  1 |  0
+      """
+      |> String.trim()
 
     assert Tournament.tally(input) == expected
   end
@@ -61,13 +65,15 @@ defmodule TournamentTest do
       "Allegoric Alaskans;Courageous Californians;draw"
     ]
 
-    expected = """
-    Team                           | MP |  W |  D |  L |  P
-    Allegoric Alaskans             |  3 |  2 |  1 |  0 |  7
-    Courageous Californians        |  3 |  2 |  1 |  0 |  7
-    Blithering Badgers             |  3 |  0 |  1 |  2 |  1
-    Devastating Donkeys            |  3 |  0 |  1 |  2 |  1
-    """ |> String.trim
+    expected =
+      """
+      Team                           | MP |  W |  D |  L |  P
+      Allegoric Alaskans             |  3 |  2 |  1 |  0 |  7
+      Courageous Californians        |  3 |  2 |  1 |  0 |  7
+      Blithering Badgers             |  3 |  0 |  1 |  2 |  1
+      Devastating Donkeys            |  3 |  0 |  1 |  2 |  1
+      """
+      |> String.trim()
 
     assert Tournament.tally(input) == expected
   end
@@ -84,13 +90,14 @@ defmodule TournamentTest do
       "Courageous Californians;Allegoric Alaskans;los"
     ]
 
-    expected = """
-    Team                           | MP |  W |  D |  L |  P
-    Devastating Donkeys            |  1 |  1 |  0 |  0 |  3
-    Blithering Badgers             |  1 |  0 |  0 |  1 |  0
-    """ |> String.trim
+    expected =
+      """
+      Team                           | MP |  W |  D |  L |  P
+      Devastating Donkeys            |  1 |  1 |  0 |  0 |  3
+      Blithering Badgers             |  1 |  0 |  0 |  1 |  0
+      """
+      |> String.trim()
 
     assert Tournament.tally(input) == expected
   end
 end
-

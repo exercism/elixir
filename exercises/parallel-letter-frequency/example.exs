@@ -5,9 +5,9 @@ defmodule Frequency do
   Returns a map of characters to frequencies.
   """
   def frequency(texts, workers) do
-    groups = Enum.map(0..(workers-1), &stripe(&1, texts, workers))
+    groups = Enum.map(0..(workers - 1), &stripe(&1, texts, workers))
+    # :rpc.pmap({Frequency, :count_texts}, [], groups)
     Enum.map(groups, &Frequency.count_texts/1)
-    #:rpc.pmap({Frequency, :count_texts}, [], groups)
     |> merge_freqs()
   end
 
@@ -25,17 +25,17 @@ defmodule Frequency do
   defp count_text(string) do
     String.downcase(string)
     |> String.graphemes()
+
     # At the time of writing Elixir doesn't yet have a way to determine if a
     # character is a letter. So use a workaround with Regex.
-    String.replace(string, ~r/\P{L}+/u, "") # \P{L} = anything but a letter
+    # \P{L} = anything but a letter
+    String.replace(string, ~r/\P{L}+/u, "")
     |> String.downcase()
     |> String.graphemes()
-    |> Enum.reduce(%{}, fn c, acc -> Map.update(acc, c, 1, &(&1+1)) end)
+    |> Enum.reduce(%{}, fn c, acc -> Map.update(acc, c, 1, &(&1 + 1)) end)
   end
 
   defp merge_freqs(map) do
-    Enum.reduce(map, %{}, fn d, acc ->
-      Map.merge(acc, d, fn _, a, b -> a+b end)
-    end)
+    Enum.reduce(map, %{}, fn d, acc -> Map.merge(acc, d, fn _, a, b -> a + b end) end)
   end
 end

@@ -1,5 +1,4 @@
 defmodule Triplet do
-
   @doc """
   Calculates sum of a given triplet of integers.
   """
@@ -21,7 +20,7 @@ defmodule Triplet do
   """
   @spec pythagorean?([non_neg_integer]) :: boolean
   def pythagorean?([a, b, c]) do
-    (a * a) + (b * b) == (c * c)
+    a * a + b * b == c * c
   end
 
   defp select?(triplet) do
@@ -40,7 +39,8 @@ defmodule Triplet do
     for x <- Enum.to_list(min..max),
         y <- Enum.to_list(x..max),
         z <- Enum.to_list(y..max),
-        select?([x, y, z]), do: [x, y, z]
+        select?([x, y, z]),
+        do: [x, y, z]
   end
 
   @doc """
@@ -51,6 +51,7 @@ defmodule Triplet do
     for x <- Enum.to_list(min..max),
         y <- Enum.to_list(x..max),
         z <- Enum.to_list(y..max),
-        select?([x, y, z], sum), do: [x, y, z]
+        select?([x, y, z], sum),
+        do: [x, y, z]
   end
 end

@@ -9,8 +9,7 @@ defmodule PerfectNumbers do
   :abundant if the aliquot sum is greater than `number`
   :deficient if the aliquot sum is less than `number`
   """
-  @spec classify(number :: integer) :: ({ :ok, atom } | { :error, String.t() })
+  @spec classify(number :: integer) :: {:ok, atom} | {:error, String.t()}
   def classify(number) do
   end
 end
-

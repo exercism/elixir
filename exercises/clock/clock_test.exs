@@ -2,24 +2,24 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("clock.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule ClockTest do
   use ExUnit.Case
 
-  #@tag :pending
+  # @tag :pending
   test "to_string" do
     try do
       to_string(%Clock{})
     rescue
       Protocol.UndefinedError ->
-        refute(true, """
-          Can't convert Clock to string.
-          Hint: implement the String.Chars protocol for Clock.
-          http://elixir-lang.org/getting-started/protocols.html
-          http://elixir-lang.org/docs/stable/elixir/String.Chars.html
-          """)
+        refute true, """
+        Can't convert Clock to string.
+        Hint: implement the String.Chars protocol for Clock.
+        http://elixir-lang.org/getting-started/protocols.html
+        http://elixir-lang.org/docs/stable/elixir/String.Chars.html
+        """
     end
   end
 

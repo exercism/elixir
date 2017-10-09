@@ -10,4 +10,3 @@ defmodule RotationalCipher do
   def rotate(text, shift) do
   end
 end
-

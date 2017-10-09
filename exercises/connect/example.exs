@@ -4,7 +4,7 @@ defmodule Connect do
   using "O" as the white player
   and "X" as the black player
   """
-  @spec result_for([String.t]) :: :none | :black | :white
+  @spec result_for([String.t()]) :: :none | :black | :white
   def result_for(board) do
     cond do
       black_wins?(board) -> :black
@@ -15,35 +15,35 @@ defmodule Connect do
 
   defp black_wins?(board) do
     board
-    |> Enum.with_index
+    |> Enum.with_index()
     |> Enum.any?(fn {row, index} ->
-      String.first(row) == "X" && black_wins?(board, [{index, 0}])
-    end)
+         String.first(row) == "X" && black_wins?(board, [{index, 0}])
+       end)
   end
 
-  defp black_wins?(board, [{_, y} | _ ]) when y + 1 == byte_size(hd board), do: true
-  defp black_wins?(board, history = [last_loc | _ ]) do
+  defp black_wins?(board, [{_, y} | _]) when y + 1 == byte_size(hd(board)), do: true
+
+  defp black_wins?(board, history = [last_loc | _]) do
     last_loc
     |> locs_next_to(history)
-    |> Enum.filter(&( get_loc(board, &1) == "X" ))
+    |> Enum.filter(&(get_loc(board, &1) == "X"))
     |> Enum.any?(&black_wins?(board, [&1 | history]))
   end
 
   defp white_wins?(board) do
     board
     |> hd
-    |> String.graphemes
-    |> Enum.with_index
-    |> Enum.any?(fn {spot, index} ->
-      spot == "O" && white_wins?(board, [{0, index}])
-    end)
+    |> String.graphemes()
+    |> Enum.with_index()
+    |> Enum.any?(fn {spot, index} -> spot == "O" && white_wins?(board, [{0, index}]) end)
   end
 
-  defp white_wins?(board, [{x, _} | _ ]) when x + 1 == length(board), do: true
-  defp white_wins?(board, history = [last_loc | _ ]) do
+  defp white_wins?(board, [{x, _} | _]) when x + 1 == length(board), do: true
+
+  defp white_wins?(board, history = [last_loc | _]) do
     last_loc
     |> locs_next_to(history)
-    |> Enum.filter(&( get_loc(board, &1) == "O" ))
+    |> Enum.filter(&(get_loc(board, &1) == "O"))
     |> Enum.any?(&white_wins?(board, [&1 | history]))
   end
 

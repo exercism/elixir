@@ -10,9 +10,9 @@ defmodule Markdown do
     iex> Markdown.parse("#Header!\n* __Bold Item__\n* _Italic Item_")
     "<h1>Header!</h1><ul><li><em>Bold Item</em></li><li><i>Italic Item</i></li></ul>"
   """
-  @spec parse(String.t) :: String.t
+  @spec parse(String.t()) :: String.t()
   def parse(m) do
-    patch(Enum.join(Enum.map(String.split(m, "\n"), fn(t) -> process(t) end)))
+    patch(Enum.join(Enum.map(String.split(m, "\n"), fn t -> process(t) end)))
   end
 
   defp process(t) do
@@ -46,7 +46,7 @@ defmodule Markdown do
   end
 
   defp join_words_with_tags(t) do
-    Enum.join(Enum.map(t, fn(w) -> replace_md_with_tag(w) end), " ")
+    Enum.join(Enum.map(t, fn w -> replace_md_with_tag(w) end), " ")
   end
 
   defp replace_md_with_tag(w) do
@@ -70,6 +70,10 @@ defmodule Markdown do
   end
 
   defp patch(l) do
-    String.replace_suffix(String.replace(l, "<li>", "<ul>" <> "<li>", global: false), "</li>", "</li>" <> "</ul>")
+    String.replace_suffix(
+      String.replace(l, "<li>", "<ul>" <> "<li>", global: false),
+      "</li>",
+      "</li>" <> "</ul>"
+    )
   end
 end

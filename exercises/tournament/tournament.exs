@@ -14,4 +14,3 @@ defmodule Tournament do
   def tally(input) do
   end
 end
-

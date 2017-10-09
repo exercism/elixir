@@ -13,7 +13,8 @@ defmodule ScaleGenerator do
   "M": E
   "A": F
   """
-  @spec step(scale :: list(String.t()), tonic :: String.t(), step :: String.t()) :: list(String.t())
+  @spec step(scale :: list(String.t()), tonic :: String.t(), step :: String.t()) ::
+          list(String.t())
   def step(scale, tonic, step) do
   end
 
@@ -80,4 +81,3 @@ defmodule ScaleGenerator do
   def scale(tonic, pattern) do
   end
 end
-

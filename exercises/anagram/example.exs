@@ -4,10 +4,11 @@ defmodule Anagram do
 
   Comparison is case insensitive.
   """
-  @spec match(String.t, [String.t]) :: [String.t]
+  @spec match(String.t(), [String.t()]) :: [String.t()]
   def match(target, words) do
     lc_target = String.downcase(target)
     sorted_target = sort(lc_target)
+
     Enum.filter(words, fn word ->
       lc_word = String.downcase(word)
       # `and` is shortcutting

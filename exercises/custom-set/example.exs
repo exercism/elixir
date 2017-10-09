@@ -1,16 +1,16 @@
 defmodule CustomSet do
-  defstruct map: Map.new
+  defstruct map: Map.new()
 
   @opaque t :: %__MODULE__{map: map}
 
-  @spec new(Enum.t) :: t
+  @spec new(Enum.t()) :: t
   def new(enumerable) do
-    %CustomSet{map: Map.new(enumerable, fn (x) -> {x, true} end)}
+    %CustomSet{map: Map.new(enumerable, fn x -> {x, true} end)}
   end
 
   @spec empty?(t) :: boolean
   def empty?(%CustomSet{map: map}) do
-    Map.keys(map) |> Enum.empty?
+    Map.keys(map) |> Enum.empty?()
   end
 
   @spec contains?(t, any) :: boolean
@@ -28,6 +28,7 @@ defmodule CustomSet do
   end
 
   defp do_subset?([], _), do: true
+
   defp do_subset?([key | rest], map2) do
     if Map.has_key?(map2, key) do
       do_subset?(rest, map2)

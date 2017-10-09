@@ -1,13 +1,14 @@
 defmodule SimpleCipher do
-  @alphabet "abcdefghijklmnopqrstuvwxyz" |> String.graphemes
+  @alphabet "abcdefghijklmnopqrstuvwxyz" |> String.graphemes()
   @alphabet_size @alphabet |> length
 
   for key_char <- @alphabet do
-    shifted_alphabet = Stream.cycle(@alphabet)
-                       |> Stream.drop_while(&(&1 != key_char))
-                       |> Enum.take(@alphabet_size)
+    shifted_alphabet =
+      Stream.cycle(@alphabet)
+      |> Stream.drop_while(&(&1 != key_char))
+      |> Enum.take(@alphabet_size)
 
-    for { plain, cipher } <- Enum.zip(@alphabet, shifted_alphabet) do
+    for {plain, cipher} <- Enum.zip(@alphabet, shifted_alphabet) do
       defp encode_char(unquote(plain), unquote(key_char)), do: unquote(cipher)
       defp decode_char(unquote(cipher), unquote(key_char)), do: unquote(plain)
     end
@@ -69,12 +70,11 @@ defmodule SimpleCipher do
   end
 
   defp convert_keystream(text, key, converter) do
-    keystream = key |> String.graphemes |> Stream.cycle
+    keystream = key |> String.graphemes() |> Stream.cycle()
 
     text
-    |> String.graphemes
+    |> String.graphemes()
     |> Enum.zip(keystream)
     |> Enum.map_join(converter)
   end
 end
-

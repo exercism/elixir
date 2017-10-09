@@ -2,8 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("garden.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule GardenTest do
   use ExUnit.Case
@@ -57,8 +57,21 @@ defmodule GardenTest do
 
   @tag :pending
   test "gets the garden for all students with custom child names" do
-    names = [:maggie, :nate, :xander, :ophelia, :pete, :reggie, :sylvia,
-             :tanner, :ursula, :victor, :winnie, :ynold]
+    names = [
+      :maggie,
+      :nate,
+      :xander,
+      :ophelia,
+      :pete,
+      :reggie,
+      :sylvia,
+      :tanner,
+      :ursula,
+      :victor,
+      :winnie,
+      :ynold
+    ]
+
     garden_string = "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV"
     garden_info = Garden.info(garden_string, names)
     assert garden_info.maggie == {:violets, :radishes, :violets, :radishes}

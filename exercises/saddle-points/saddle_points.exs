@@ -5,7 +5,6 @@ defmodule SaddlePoints do
   """
   @spec rows(String.t()) :: [[integer]]
   def rows(str) do
-
   end
 
   @doc """
@@ -14,7 +13,6 @@ defmodule SaddlePoints do
   """
   @spec columns(String.t()) :: [[integer]]
   def columns(str) do
-
   end
 
   @doc """
@@ -23,6 +21,5 @@ defmodule SaddlePoints do
   """
   @spec saddle_points(String.t()) :: [{integer, integer}]
   def saddle_points(str) do
-
   end
 end

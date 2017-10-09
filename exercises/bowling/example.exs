@@ -1,7 +1,5 @@
 defmodule BowlingGame do
-  defstruct scores: List.duplicate([0,0], 12),
-            current_frame: 1,
-            roll_in_frame: 1
+  defstruct scores: List.duplicate([0, 0], 12), current_frame: 1, roll_in_frame: 1
 end
 
 defmodule Bowling do
@@ -19,11 +17,14 @@ defmodule Bowling do
 
   def roll(game, score) do
     updates = update_score(game.roll_in_frame, game, score)
+
     cond do
       too_many_frames?(updates) ->
         {:error, "Cannot roll after game is over"}
+
       valid_updates?(updates) ->
         updates
+
       true ->
         {:error, "Pin count exceeds pins on the lane"}
     end
@@ -32,11 +33,13 @@ defmodule Bowling do
   defp update_score(1, game, score) do
     current_frame = game.current_frame
     scores = List.replace_at(game.scores, current_frame - 1, [score, 0])
+
     cond do
       score == 10 ->
-        %{ game | current_frame: current_frame + 1, scores: scores }
+        %{game | current_frame: current_frame + 1, scores: scores}
+
       true ->
-        %{ game | roll_in_frame: 2, scores: scores }
+        %{game | roll_in_frame: 2, scores: scores}
     end
   end
 
@@ -46,20 +49,21 @@ defmodule Bowling do
     old_frame_values = Enum.at(old_scores, current_frame - 1)
     new_frame_values = List.replace_at(old_frame_values, 1, score)
     new_scores = List.replace_at(old_scores, current_frame - 1, new_frame_values)
-    %{ game | scores: new_scores, roll_in_frame: 1,
-              current_frame: current_frame + 1 }
+    %{game | scores: new_scores, roll_in_frame: 1, current_frame: current_frame + 1}
   end
 
   defp valid_updates?(updates) do
-    Enum.all?(updates.scores, fn(frame) -> Enum.sum(frame) <= 10 end)
+    Enum.all?(updates.scores, fn frame -> Enum.sum(frame) <= 10 end)
   end
 
   def score(game) do
     cond do
       game.current_frame < 10 ->
         {:error, "Score cannot be taken until the end of the game"}
+
       bonus_roll_remaining?(game) ->
         {:error, "Score cannot be taken until the end of the game"}
+
       true ->
         parse_scores(game.scores)
     end
@@ -67,16 +71,20 @@ defmodule Bowling do
 
   defp bonus_roll_remaining?(game) do
     final_frame = Enum.at(game.scores, 9)
+
     cond do
       strike?(final_frame) ->
         cond do
           strike?(Enum.at(game.scores, 10)) ->
             game.current_frame == 12 && game.roll_in_frame == 1
+
           true ->
             game.current_frame < 12
         end
+
       spare?(final_frame) ->
         game.current_frame == 11 && game.roll_in_frame == 1
+
       true ->
         false
     end
@@ -84,6 +92,7 @@ defmodule Bowling do
 
   defp too_many_frames?(game) do
     final_frame = Enum.at(game.scores, 9)
+
     unless strike?(final_frame) || spare?(final_frame) do
       game.current_frame == 11 && game.roll_in_frame == 2
     end
@@ -92,18 +101,21 @@ defmodule Bowling do
   defp parse_scores(scores) do
     scores
     |> score_frames
-    |> Enum.sum
+    |> Enum.sum()
   end
 
   defp score_frames(scores) do
-    Enum.map((0..9), fn(idx) ->
+    Enum.map(0..9, fn idx ->
       current_frame = Enum.at(scores, idx)
-      next_frame = Enum.at(scores, idx + 1, [0,0])
+      next_frame = Enum.at(scores, idx + 1, [0, 0])
+
       cond do
         strike?(current_frame) ->
           strike(current_frame, next_frame, scores, idx)
+
         spare?(current_frame) ->
           10 + hd(next_frame)
+
         true ->
           Enum.sum(current_frame)
       end
@@ -119,7 +131,7 @@ defmodule Bowling do
       Enum.sum(current_frame) + Enum.sum(next_frame) +
         (Enum.at(scores, idx + 2, [0, 0]) |> Enum.at(0))
     else
-      Enum.sum(Enum.at(scores, idx)) + Enum.sum(Enum.at(scores, idx + 1, [0,0]))
+      Enum.sum(Enum.at(scores, idx)) + Enum.sum(Enum.at(scores, idx + 1, [0, 0]))
     end
   end
 

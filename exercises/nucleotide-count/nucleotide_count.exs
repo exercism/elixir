@@ -14,9 +14,7 @@ defmodule NucleotideCount do
   """
   @spec count([char], char) :: non_neg_integer
   def count(strand, nucleotide) do
-
   end
-
 
   @doc """
   Returns a summary of counts by nucleotide.
@@ -28,6 +26,5 @@ defmodule NucleotideCount do
   """
   @spec histogram([char]) :: map
   def histogram(strand) do
-
   end
 end

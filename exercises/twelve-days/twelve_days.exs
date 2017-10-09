@@ -18,8 +18,7 @@ defmodule TwelveDays do
   @doc """
   Sing all 12 verses, in order, one verse per line.
   """
-  @spec sing():: String.t()
+  @spec sing() :: String.t()
   def sing do
   end
 end
-
