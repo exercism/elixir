@@ -55,10 +55,8 @@ Flags &&& Check: 0b10010 (Third bit not set)
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir secret_handshake_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 
@@ -71,8 +69,8 @@ For example:
 
 ```elixir
 # @tag :pending
-test "shouting" do
-  assert Bob.hey("WATCH OUT!") == "Whoa, chill out!"
+test "wink for 1" do
+  assert SecretHandshake.commands(1) == ["wink"]
 end
 ```
 
