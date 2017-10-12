@@ -19,17 +19,17 @@ defmodule Bob do
 
   def hey(input) do
     cond do
-      silent?(input)   -> "Fine. Be that way!"
+      silent?(input) -> "Fine. Be that way!"
       question?(input) -> "Sure."
       shouting?(input) -> "Whoa, chill out!"
-      true             -> "Whatever."
+      true -> "Whatever."
     end
   end
 
-  defp silent?(input),   do: "" == String.strip(input)
+  defp silent?(input), do: "" == String.trim(input)
   defp shouting?(input), do: input == String.upcase(input) && letters?(input)
   defp question?(input), do: String.ends_with?(input, "?")
-  defp letters?(input),  do: Regex.match?(~r/\p{L}+/, input)
+  defp letters?(input), do: Regex.match?(~r/\p{L}+/, input)
 end
 
 # Another approach which abstracts knowing about string categories

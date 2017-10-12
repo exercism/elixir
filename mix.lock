@@ -1,1 +1,4 @@
-%{"poison": {:hex, :poison, "1.4.0", "cd5afb9db7f0d19487572fa28185b6d4de647f14235746824e77b3139b79b725", [], [], "hexpm"}}
+%{
+  "dialyxir": {:hex, :dialyxir, "0.5.1", "b331b091720fd93e878137add264bac4f644e1ddae07a70bf7062c7862c4b952", [:mix], []},
+  "poison": {:hex, :poison, "1.4.0", "cd5afb9db7f0d19487572fa28185b6d4de647f14235746824e77b3139b79b725", [:mix], []},
+}

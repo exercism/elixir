@@ -9,12 +9,12 @@ defmodule Atbash do
   iex> Atbash.encode("completely insecure")
   "xlnko vgvob rmhvx fiv"
   """
-  @spec encode(String.t) :: String.t
+  @spec encode(String.t()) :: String.t()
   def encode(plaintext) do
     plaintext |> normalize |> transpose |> chunk |> Enum.join(" ")
   end
 
-  @spec decode(String.t) :: String.t
+  @spec decode(String.t()) :: String.t()
   def decode(cipher) do
     cipher |> normalize |> transpose
   end
@@ -25,9 +25,9 @@ defmodule Atbash do
 
   defp transpose(text) do
     text
-    |> String.to_char_list
+    |> String.to_charlist()
     |> Enum.map(&convert/1)
-    |> List.to_string
+    |> List.to_string()
   end
 
   defp convert(character) do
@@ -35,6 +35,6 @@ defmodule Atbash do
   end
 
   defp chunk(input) do
-    Regex.scan(~r(.{1,5}), input) |> List.flatten
+    Regex.scan(~r(.{1,5}), input) |> List.flatten()
   end
 end

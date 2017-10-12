@@ -8,20 +8,20 @@ defmodule BankAccount do
   ## Callbacks
 
   def init(_args) do
-    { :ok, 0 }
+    {:ok, 0}
   end
 
   def handle_call(:balance, _from, balance) do
-    { :reply, balance, balance }
+    {:reply, balance, balance}
   end
 
-  def handle_call({ :update, amount }, _from, balance) do
-    { :reply, :ok, balance + amount }
+  def handle_call({:update, amount}, _from, balance) do
+    {:reply, :ok, balance + amount}
   end
 
   def handle_call(:close, _from, balance) do
     # We stop normally and return :stopped to the caller.
-    { :stop, :normal, :stopped, balance }
+    {:stop, :normal, :stopped, balance}
   end
 
   ## Interface for tests
@@ -36,7 +36,7 @@ defmodule BankAccount do
   """
   @spec open_bank() :: account
   def open_bank() do
-    { :ok, pid } = :gen_server.start_link(BankAccount, [], [])
+    {:ok, pid} = GenServer.start_link(__MODULE__, [], [])
     pid
   end
 
@@ -45,7 +45,7 @@ defmodule BankAccount do
   """
   @spec close_bank(account) :: any
   def close_bank(account) do
-    :gen_server.call(account, :close)
+    GenServer.stop(account)
   end
 
   @doc """
@@ -54,9 +54,9 @@ defmodule BankAccount do
   @spec balance(account) :: integer
   def balance(account) do
     if Process.alive?(account) do
-      :gen_server.call(account, :balance)
+      GenServer.call(account, :balance)
     else
-      { :error, :account_closed }
+      {:error, :account_closed}
     end
   end
 
@@ -65,9 +65,9 @@ defmodule BankAccount do
   """
   def update(account, amount) do
     if Process.alive?(account) do
-      :gen_server.call(account, { :update, amount })
+      GenServer.call(account, {:update, amount})
     else
-      { :error, :account_closed }
+      {:error, :account_closed}
     end
   end
 end

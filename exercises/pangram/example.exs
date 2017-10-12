@@ -12,13 +12,13 @@ defmodule Pangram do
 
   """
 
-  @spec pangram?(String.t) :: boolean
+  @spec pangram?(String.t()) :: boolean
   def pangram?(sentence) do
     chars =
       sentence
-      |> String.downcase
-      |> to_char_list
+      |> String.downcase()
+      |> to_charlist
 
-    Enum.all? ?a..?z, &(&1 in chars)
+    Enum.all?(?a..?z, &(&1 in chars))
   end
 end
