@@ -59,7 +59,7 @@ defmodule TransposeTest do
 
   @tag :pending
   test "first line longer than second line" do
-    input = "The fourth line." <>
+    input = "The fourth line.\n" <>
             "The fifth line."
 
       expected = 
@@ -85,7 +85,7 @@ defmodule TransposeTest do
 
   @tag :pending
   test "second line longer than first line" do
-    input = "The first line." <>
+    input = "The first line.\n" <>
             "The second line."
 
       expected = 
@@ -134,7 +134,7 @@ defmodule TransposeTest do
       "FRACTURE\n" <>
       "OUTLINED\n" <>
       "BLOOMING\n" <>
-      "SEPTETTE\n"
+      "SEPTETTE"
 
     expected =
       "FOBS\n" <>
@@ -186,7 +186,7 @@ defmodule TransposeTest do
       "Which, but their children's end, naught could remove,\n" <>
       "Is now the two hours' traffic of our stage;\n" <>
       "The which if you with patient ears attend,\n" <>
-      "What here shall miss, our toil shall strive to mend.\n"
+      "What here shall miss, our toil shall strive to mend."
 
     expected =
       "CIFWFAWDTAWITW\n" <>
