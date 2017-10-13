@@ -18,7 +18,7 @@ defmodule TransposeTest do
   @tag :pending
   test "two characters in a row" do
     input= "AB"
-    expected = 
+    expected =
       "A\n" <>
       "B"
 
@@ -28,7 +28,7 @@ defmodule TransposeTest do
   @tag :pending
   test "two characters in one column" do
     input= 
-      "A\n" <> 
+      "A\n" <>
       "B"
 
     expected = "AB"
@@ -40,7 +40,7 @@ defmodule TransposeTest do
   test "single line" do
     input = "Single line."
 
-    expected = 
+    expected =
       "S\n" <>
       "i\n" <>
       "n\n" <>
@@ -62,7 +62,7 @@ defmodule TransposeTest do
     input = "The fourth line.\n" <>
             "The fifth line."
 
-      expected = 
+      expected =
         "TT\n" <>
         "hh\n" <>
         "ee\n" <>
@@ -88,7 +88,7 @@ defmodule TransposeTest do
     input = "The first line.\n" <>
             "The second line."
 
-      expected = 
+      expected =
         "TT\n" <>
         "hh\n" <>
         "ee\n" <>
@@ -111,7 +111,7 @@ defmodule TransposeTest do
 
   @tag :pending
   test "square" do
-    matrix = 
+    matrix =
       "HEART\n" <>
       "EMBER\n" <>
       "ABUSE\n" <>

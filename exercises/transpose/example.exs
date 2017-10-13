@@ -1,6 +1,7 @@
 defmodule Transpose do
   def transpose(matrix) do
     rows = String.split(matrix, "\n")
+
     max_length = get_longest_row_length(rows)
 
     rows
