@@ -27,7 +27,7 @@ defmodule TransposeTest do
 
   @tag :pending
   test "two characters in one column" do
-    input= 
+    input=
       "A\n" <>
       "B"
 

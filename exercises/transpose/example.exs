@@ -22,7 +22,7 @@ defmodule Transpose do
   end
 
   defp get_padded_row(row, max_length) do
-    padding = String.duplicate("*", max_length - String.length(row)) 
+    padding = String.duplicate("*", max_length - String.length(row))
     row <> padding
   end
 end
