@@ -1,6 +1,12 @@
+if !System.get_env("EXERCISM_TEST_EXAMPLES") do
+  Code.load_file("transpose.exs", __DIR__)
+end
+
+ExUnit.start
+ExUnit.configure exclude: :pending, trace: true
+
 defmodule TransposeTest do
   use ExUnit.Case
-  doctest Transpose
 
   test "empty string" do
     input = ""
