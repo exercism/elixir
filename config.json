@@ -889,6 +889,17 @@
         "Algorithms",
         "Sorting"
       ]
+    },
+    {
+      "uuid": "ce270a34-add1-422c-bb86-53b310f05e27",
+      "slug": "transpose",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 6,
+      "topics": [
+        "Strings",
+        "Transforming"
+      ]
     }
   ],
   "foregone": [
