@@ -6,7 +6,7 @@ Exercism Exercises in Elixir
 
 ## Setup
 
-The exercises currently target Elixir 1.3.2 and Erlang/OTP 19. Detailed
+The exercises currently target Elixir 1.5.2 and Erlang/OTP 20. Detailed
 installation instructions can be found at
 [http://elixir-lang.org/install.html](http://elixir-lang.org/install.html).
 
@@ -32,17 +32,13 @@ Please keep the following in mind:
   best to discuss these changes before doing the work.
 
 - Follow the coding standards found in
-  [The Elixir Style Guide](https://github.com/niftyn8/elixir_style_guide).
+  [The Elixir Style Guide](https://github.com/lexmag/elixir-style-guide).
 
 - Watch out for trailing spaces, extra blank lines, and spaces in blank lines.
 
 - Each exercise must stand on its own. Do not reference files outside the
   exercise directory. They will not be included when the user fetches the
   exercise.
-
-- Please do not add a README or README.md file to the exercise directory. The
-  READMEs are constructed using shared metadata, which lives in the
-  [exercism/x-common](https://github.com/exercism/x-common) repository.
 
 - Each problem should have a test suite, an example solution, and a template
   file for the real implementation. The example solution should be named
