@@ -6,7 +6,7 @@ defmodule Luhn do
   @spec valid?(String.t()) :: boolean
   def valid?(number) do
 
-    with  number       <- String.replace(number, ~r/[ ]/, ""),
+    with  number       <- String.replace(number, " ", ""),
           {_, ""}      <- Integer.parse(number),
           true         <- String.length(number) > 1,
           true         <- checksum(number)
