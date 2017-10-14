@@ -20,7 +20,7 @@ defmodule Luhn do
   @doc """
   Applies the luhn formula to a string only containing integers 
   """
-  def checksum(number) do
+  defp checksum(number) do
     0 == number
     |> String.graphemes()
     |> Enum.map(&String.to_integer/1)
@@ -33,7 +33,7 @@ defmodule Luhn do
   Reverses list and doubles every second digit,
   subtracts 9 if doubled digit is greater than 9
   """  
-  def double_even(numlist) do
+  defp double_even(numlist) do
     numlist
     |> Enum.reverse()
     |> Enum.zip(Stream.cycle([1,2]))
