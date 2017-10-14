@@ -1,59 +1,51 @@
 defmodule Luhn do
-  @doc """
-  Calculates the total checksum of a number
-  """
-  @spec checksum(String.t()) :: integer
-  def checksum(number) do
-    number
-    |> String.reverse
-    |> String.graphemes
-    |> Enum.with_index
-    |> Enum.map(&do_checksum/1)
-    |> Enum.sum
-  end
-
-  defp do_checksum({digit, index}) do
-    digit
-    |> String.to_integer
-    |> double_if_even_index(index)
-    |> compact
-  end
-
-  defp compact(num) when num < 10, do: num
-  defp compact(num) do
-    num
-    |> Integer.digits
-    |> Enum.sum
-    |> compact
-  end
 
   @doc """
   Checks if the given number is valid via the luhn formula
   """
   @spec valid?(String.t()) :: boolean
   def valid?(number) do
-    number |> checksum |> rem(10) == 0
+
+    with  number       <- String.replace(number, ~r/[ ]/, ""),
+          {_, ""}      <- Integer.parse(number),
+          true         <- String.length(number) > 1,
+          true         <- checksum(number)
+    do
+      true
+    else
+      _ -> false
+    end
   end
 
   @doc """
-  Creates a valid number by adding the correct
-  checksum digit to the end of the number
+  Applies the luhn formula to a string only containing integers 
   """
-  @spec create(String.t()) :: String.t()
-  def create(number) do
-    number <> do_create(number)
-  end
-
-  defp do_create(number) do
-    number <> "0"
-    |> checksum
+  def checksum(number) do
+    0 == number
+    |> String.graphemes()
+    |> Enum.map(&String.to_integer/1)
+    |> double_even()
+    |> Enum.sum()
     |> rem(10)
-    |> (&(10 - &1)).()
-    |> to_string
-    |> String.last
   end
 
-  defp double_if_even_index(n, index) do
-    if rem(index, 2) == 0, do: n, else: n * 2
+  @doc """
+  Reverses list and doubles every second digit,
+  subtracts 9 if doubled digit is greater than 9
+  """  
+  def double_even(numlist) do
+    numlist
+    |> Enum.reverse()
+    |> Enum.zip(Stream.cycle([1,2]))
+    |> Enum.map(fn {n,m} -> n * m  end)
+    |> Enum.map(
+      fn
+        n when n > 9 -> n-9
+        n -> n
+      end)
+
   end
+
+  
 end
+  
