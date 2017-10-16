@@ -1,59 +1,39 @@
 defmodule Luhn do
-  @doc """
-  Calculates the total checksum of a number
-  """
-  @spec checksum(String.t()) :: integer
-  def checksum(number) do
-    number
-    |> String.reverse
-    |> String.graphemes
-    |> Enum.with_index
-    |> Enum.map(&do_checksum/1)
-    |> Enum.sum
-  end
-
-  defp do_checksum({digit, index}) do
-    digit
-    |> String.to_integer
-    |> double_if_even_index(index)
-    |> compact
-  end
-
-  defp compact(num) when num < 10, do: num
-  defp compact(num) do
-    num
-    |> Integer.digits
-    |> Enum.sum
-    |> compact
-  end
 
   @doc """
   Checks if the given number is valid via the luhn formula
   """
   @spec valid?(String.t()) :: boolean
   def valid?(number) do
-    number |> checksum |> rem(10) == 0
+    number_without_spaces = String.replace(number, " ", "")
+    case Integer.parse(number_without_spaces) do
+      {_, ""} ->
+        String.length(number_without_spaces) > 1 && checksum(number_without_spaces)
+      _ ->
+        false
+    end
   end
 
-  @doc """
-  Creates a valid number by adding the correct
-  checksum digit to the end of the number
-  """
-  @spec create(String.t()) :: String.t()
-  def create(number) do
-    number <> do_create(number)
-  end
-
-  defp do_create(number) do
-    number <> "0"
-    |> checksum
+  defp checksum(number) do
+    0 == number
+    |> String.graphemes()
+    |> Enum.map(&String.to_integer/1)
+    |> double_even()
+    |> Enum.sum()
     |> rem(10)
-    |> (&(10 - &1)).()
-    |> to_string
-    |> String.last
   end
 
-  defp double_if_even_index(n, index) do
-    if rem(index, 2) == 0, do: n, else: n * 2
+  defp double_even(numlist) do
+    numlist
+    |> Enum.reverse()
+    |> Enum.zip(Stream.cycle([1,2]))
+    |> Enum.map(fn {n,m} -> n * m  end)
+    |> Enum.map(
+      fn
+        n when n > 9 -> n-9
+        n -> n
+      end)
+
   end
+
 end

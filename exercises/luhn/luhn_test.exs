@@ -8,37 +8,67 @@ ExUnit.configure exclude: :pending, trace: true
 defmodule LuhnTest do
   use ExUnit.Case
 
-  test "checksum" do
-    assert Luhn.checksum("4913") == 22
+  test "single digit strings can not be valid" do
+    refute Luhn.valid?("1")
   end
 
   @tag :pending
-  test "checksum again" do
-    assert Luhn.checksum("201773") == 21
+  test "A single zero is invalid" do
+    refute Luhn.valid?("0")
   end
 
   @tag :pending
-  test "invalid number" do
-    assert Luhn.valid?("738") == false
+  test "a simple valid SIN that remains valid if reversed" do
+    assert Luhn.valid?("059")
   end
 
   @tag :pending
-  test "valid number" do
-    assert Luhn.valid?("8739567") == true
+  test "a simple valid SIN that becomes invalid if reversed" do
+    assert Luhn.valid?("59")
   end
 
   @tag :pending
-  test "create valid number" do
-    assert Luhn.create("123") == "1230"
+  test "a valid Canadian SIN" do
+    assert Luhn.valid?("055 444 285")
   end
 
   @tag :pending
-  test "create other valid number" do
-    assert Luhn.create("873956") == "8739567"
+  test "invalid Canadian SIN" do
+    refute Luhn.valid?("055 444 286")
   end
 
   @tag :pending
-  test "create yet another valid number" do
-    assert Luhn.create("837263756") == "8372637564"
+  test "invalid credit card" do
+    refute Luhn.valid?("8273 1232 7352 0569")
+  end
+
+  @tag :pending
+  test "valid strings with a non-digit included become invalid" do
+    refute Luhn.valid?("055a 444 285")
+  end
+
+  @tag :pending
+  test "valid strings with punctuation included become invalid" do
+    refute Luhn.valid?("055-444-285")
+  end
+
+  @tag :pending
+  test "valid strings with symbols included become invalid" do
+    refute Luhn.valid?("055£ 444$ 285")
+  end
+
+  @tag :pending
+  test "single zero with space is invalid" do
+    refute Luhn.valid?(" 0")
+  end
+
+  @tag :pending
+  test "more than a single zero is valid" do
+    assert Luhn.valid?("0000 0")
+  end
+
+  @tag :pending
+  test "input digit 9 is correctly converted to output digit 9" do
+    assert Luhn.valid?("091")
   end
 end
