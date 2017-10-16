@@ -895,7 +895,7 @@
       "slug": "transpose",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 6,
+      "difficulty": 5,
       "topics": [
         "Strings",
         "Transforming"

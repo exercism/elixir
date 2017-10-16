@@ -63,10 +63,8 @@ the corresponding output row should contain the spaces in its right-most column(
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir transpose_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 
@@ -79,8 +77,13 @@ For example:
 
 ```elixir
 # @tag :pending
-test "shouting" do
-  assert Bob.hey("WATCH OUT!") == "Whoa, chill out!"
+test "two characters in a row" do
+  input= "AB"
+  expected =
+    "A\n" <>
+    "B"
+
+  assert Transpose.transpose(input) == expected
 end
 ```
 
