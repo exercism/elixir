@@ -17,9 +17,6 @@ defmodule Luhn do
     end
   end
 
-  @doc """
-  Applies the luhn formula to a string only containing integers 
-  """
   defp checksum(number) do
     0 == number
     |> String.graphemes()
@@ -29,10 +26,6 @@ defmodule Luhn do
     |> rem(10)
   end
 
-  @doc """
-  Reverses list and doubles every second digit,
-  subtracts 9 if doubled digit is greater than 9
-  """  
   defp double_even(numlist) do
     numlist
     |> Enum.reverse()
