@@ -5,15 +5,12 @@ defmodule Luhn do
   """
   @spec valid?(String.t()) :: boolean
   def valid?(number) do
-
-    with  number       <- String.replace(number, " ", ""),
-          {_, ""}      <- Integer.parse(number),
-          true         <- String.length(number) > 1,
-          true         <- checksum(number)
-    do
-      true
-    else
-      _ -> false
+    number_without_spaces = String.replace(number, " ", "")
+    case Integer.parse(number_without_spaces) do
+      {_, ""} -> 
+        String.length(number_without_spaces) > 1 && checksum(number_without_spaces)
+      _ ->
+        false
     end
   end
 
