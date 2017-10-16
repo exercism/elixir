@@ -7,7 +7,7 @@ defmodule Luhn do
   def valid?(number) do
     number_without_spaces = String.replace(number, " ", "")
     case Integer.parse(number_without_spaces) do
-      {_, ""} -> 
+      {_, ""} ->
         String.length(number_without_spaces) > 1 && checksum(number_without_spaces)
       _ ->
         false
@@ -36,6 +36,4 @@ defmodule Luhn do
 
   end
 
-  
 end
-  
