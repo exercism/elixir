@@ -14,7 +14,8 @@ defmodule Allergies do
 
   def list(flags) do
     Enum.with_index(@allergens)
-    |> Enum.filter_map(&(flagged? flags, &1), fn({item, _}) -> item end)
+    |> Enum.filter(&flagged?(flags, &1))
+    |> Enum.map(fn {item, _} -> item end)
   end
 
   def allergic_to?(flags, item) do
@@ -22,6 +23,6 @@ defmodule Allergies do
   end
 
   defp flagged?(flags, {_, index}) do
-    (flags &&& (1 <<< index)) > 0
+    (flags &&& 1 <<< index) > 0
   end
 end

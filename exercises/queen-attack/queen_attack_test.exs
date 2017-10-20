@@ -2,15 +2,15 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("queen_attack.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule QueenAttackTest do
   use ExUnit.Case
 
   # @tag :pending
   test "default positions" do
-    queens = Queens.new
+    queens = Queens.new()
     assert queens.white == {0, 3}
     assert queens.black == {7, 3}
   end
@@ -32,80 +32,95 @@ defmodule QueenAttackTest do
   @tag :pending
   test "string representation" do
     queens = Queens.new({2, 4}, {6, 6})
-    board = String.strip """
-_ _ _ _ _ _ _ _
-_ _ _ _ _ _ _ _
-_ _ _ _ W _ _ _
-_ _ _ _ _ _ _ _
-_ _ _ _ _ _ _ _
-_ _ _ _ _ _ _ _
-_ _ _ _ _ _ B _
-_ _ _ _ _ _ _ _
-    """
+
+    board =
+      String.trim("""
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ W _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ B _
+      _ _ _ _ _ _ _ _
+      """)
+
     assert Queens.to_string(queens) == board
   end
 
   @tag :pending
   test "another string representation" do
     queens = Queens.new({7, 1}, {0, 0})
-    board = String.strip """
-B _ _ _ _ _ _ _
-_ _ _ _ _ _ _ _
-_ _ _ _ _ _ _ _
-_ _ _ _ _ _ _ _
-_ _ _ _ _ _ _ _
-_ _ _ _ _ _ _ _
-_ _ _ _ _ _ _ _
-_ W _ _ _ _ _ _
-    """
+
+    board =
+      String.trim("""
+      B _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ W _ _ _ _ _ _
+      """)
+
     assert Queens.to_string(queens) == board
   end
 
   @tag :pending
   test "yet another string representation" do
     queens = Queens.new({4, 3}, {3, 4})
-    board = String.strip """
-_ _ _ _ _ _ _ _
-_ _ _ _ _ _ _ _
-_ _ _ _ _ _ _ _
-_ _ _ _ B _ _ _
-_ _ _ W _ _ _ _
-_ _ _ _ _ _ _ _
-_ _ _ _ _ _ _ _
-_ _ _ _ _ _ _ _
-    """
+
+    board =
+      String.trim("""
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ B _ _ _
+      _ _ _ W _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      """)
+
     assert Queens.to_string(queens) == board
   end
 
   @tag :pending
   test "queen placed on the bottom right corner" do
     queens = Queens.new({4, 3}, {7, 7})
-    board = String.strip """
-_ _ _ _ _ _ _ _
-_ _ _ _ _ _ _ _
-_ _ _ _ _ _ _ _
-_ _ _ _ _ _ _ _
-_ _ _ W _ _ _ _
-_ _ _ _ _ _ _ _
-_ _ _ _ _ _ _ _
-_ _ _ _ _ _ _ B
-    """
+
+    board =
+      String.trim("""
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ W _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ B
+      """)
+
     assert Queens.to_string(queens) == board
   end
 
   @tag :pending
   test "queen placed on the edge of the board" do
     queens = Queens.new({4, 3}, {2, 7})
-    board = String.strip """
-_ _ _ _ _ _ _ _
-_ _ _ _ _ _ _ _
-_ _ _ _ _ _ _ B
-_ _ _ _ _ _ _ _
-_ _ _ W _ _ _ _
-_ _ _ _ _ _ _ _
-_ _ _ _ _ _ _ _
-_ _ _ _ _ _ _ _
-    """
+
+    board =
+      String.trim("""
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ B
+      _ _ _ _ _ _ _ _
+      _ _ _ W _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      """)
+
     assert Queens.to_string(queens) == board
   end
 
