@@ -783,6 +783,16 @@
       ],
       "unlocked_by": null,
       "uuid": "ce270a34-add1-422c-bb86-53b310f05e27"
+    },
+    {
+      "core": false,
+      "difficulty": 3,
+      "slug": "isbn-verifier",
+      "topics": [
+        "string_processing"
+      ],
+      "unlocked_by": null,
+      "uuid": "0fb09d01-1f8b-4654-9004-52baa057412e"
     }
   ],
   "foregone": [
