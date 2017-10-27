@@ -73,6 +73,9 @@ Or, you can enable all the tests by commenting out the
 For more detailed information about the Elixir track, please
 see the [help page](http://exercism.io/languages/elixir).
 
+## Source
+
+Converting a string into a number and some basic processing utilizing a relatable real world example. [https://en.wikipedia.org/wiki/International_Standard_Book_Number#ISBN-10_check_digit_calculation](https://en.wikipedia.org/wiki/International_Standard_Book_Number#ISBN-10_check_digit_calculation)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
