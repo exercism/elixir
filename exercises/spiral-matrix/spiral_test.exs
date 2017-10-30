@@ -8,17 +8,17 @@ ExUnit.configure trace: true, exclude: :pending
 defmodule SpiralTest do
   use ExUnit.Case
 
-  #@tag :pending
+  # @tag :pending
   test "empty spiral" do
     assert Spiral.matrix(0) == []
   end
 
-  #@tag :pending
+  @tag :pending
   test "trivial spiral" do
     assert Spiral.matrix(1) == [ [1] ]
   end
 
-  #@tag :pending
+  @tag :pending
   test "spiral of side length 2" do
     assert Spiral.matrix(2) == [
       [1, 2],
@@ -26,7 +26,7 @@ defmodule SpiralTest do
     ]
   end
 
-  #@tag :pending
+  @tag :pending
   test "spiral of side length 3" do
     assert Spiral.matrix(3) == [
       [1, 2, 3],
@@ -35,7 +35,7 @@ defmodule SpiralTest do
     ]
   end
 
-  #@tag :pending
+  @tag :pending
   test "spiral of side length 4" do
     assert Spiral.matrix(4) == [
       [ 1,  2,  3, 4],
@@ -45,7 +45,7 @@ defmodule SpiralTest do
     ]
   end
 
-  #@tag :pending
+  @tag :pending
   test "spiral of size 5" do
     assert Spiral.matrix(5) == [
       [ 1,  2,  3,  4, 5],
