@@ -12,7 +12,8 @@ defmodule Spiral do
   defp unwind(row, col, start) do
     case col do
       0 -> [[]]
-      _ -> [Enum.to_list(start..start+col-1) | rotate_right(unwind(col, row-1, start+col))]
+      _ -> [Enum.to_list(start..start + col - 1) |
+            unwind(col, row - 1, start + col) |> rotate_right]
     end
   end
 
