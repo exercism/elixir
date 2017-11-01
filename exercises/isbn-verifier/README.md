@@ -42,10 +42,9 @@ It's getting even trickier since the check-digit of an ISBN-10 can be 'X'.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir isbn_verifier_test.exs
 ```
 
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 
