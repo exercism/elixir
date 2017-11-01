@@ -786,6 +786,16 @@
     },
     {
       "core": false,
+      "difficulty": 3,
+      "slug": "isbn-verifier",
+      "topics": [
+        "string_processing"
+      ],
+      "unlocked_by": null,
+      "uuid": "0fb09d01-1f8b-4654-9004-52baa057412e"
+    },
+    {
+      "core": false,
       "difficulty": 4,
       "slug": "spiral-matrix",
       "topics": [
