@@ -794,6 +794,17 @@
       "unlocked_by": null,
       "uuid": "0fb09d01-1f8b-4654-9004-52baa057412e"
     }
+    {
+      "core": false,
+      "difficulty": 4,
+      "slug": "spiral-matrix",
+      "topics": [
+        "lists",
+        "transforming"
+      ],
+      "unlocked_by": null,
+      "uuid": "b0216103-000b-8480-556d-816ddca02c40810d1e9"
+    }
   ],
   "foregone": [
     "robot-name"
