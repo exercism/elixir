@@ -11,10 +11,8 @@ Given `"listen"` and a list of candidates like `"enlists" "google"
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir anagram_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

@@ -67,10 +67,8 @@ Use _and_ (correctly) when spelling out the number in English:
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir say_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

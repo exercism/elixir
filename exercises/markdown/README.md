@@ -19,10 +19,8 @@ important thing is to make the code better!
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir markdown_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 
@@ -49,7 +47,6 @@ Or, you can enable all the tests by commenting out the
 
 For more detailed information about the Elixir track, please
 see the [help page](http://exercism.io/languages/elixir).
-
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.

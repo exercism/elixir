@@ -18,10 +18,8 @@ the largest product for a series of 6 digits is 23520.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir largest_series_product_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

@@ -1,4 +1,4 @@
-# Rna Transcription
+# RNA Transcription
 
 Given a DNA strand, return its RNA complement (per RNA transcription).
 
@@ -23,10 +23,8 @@ each nucleotide with its complement:
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir rna_transcription_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

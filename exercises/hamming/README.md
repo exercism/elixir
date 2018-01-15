@@ -40,10 +40,8 @@ of equal length differently.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir hamming_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

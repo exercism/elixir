@@ -13,10 +13,8 @@ numbers, pretend they don't exist and implement them yourself.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir nth_prime_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

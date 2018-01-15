@@ -11,41 +11,46 @@ Finally the message is then read off in rows.
 
 For example, using three "rails" and the message "WE ARE DISCOVERED FLEE AT ONCE",
 the cipherer writes out:
-```
+
+```text
 W . . . E . . . C . . . R . . . L . . . T . . . E
 . E . R . D . S . O . E . E . F . E . A . O . C .
 . . A . . . I . . . V . . . D . . . E . . . N . .
 ```
 
 Then reads off:
-```
+
+```text
 WECRLTEERDSOEEFEAOCAIVDEN
 ```
 
-
 To decrypt a message you take the zig-zag shape and fill the ciphertext along the rows.
-```
+
+```text
 ? . . . ? . . . ? . . . ? . . . ? . . . ? . . . ?
 . ? . ? . ? . ? . ? . ? . ? . ? . ? . ? . ? . ? .
 . . ? . . . ? . . . ? . . . ? . . . ? . . . ? . .
 ```
 
 The first row has seven spots that can be filled with "WECRLTE".
-```
+
+```text
 W . . . E . . . C . . . R . . . L . . . T . . . E
 . ? . ? . ? . ? . ? . ? . ? . ? . ? . ? . ? . ? .
 . . ? . . . ? . . . ? . . . ? . . . ? . . . ? . .
 ```
 
 Now the 2nd row takes "ERDSOEEFEAOC".
-```
+
+```text
 W . . . E . . . C . . . R . . . L . . . T . . . E
 . E . R . D . S . O . E . E . F . E . A . O . C .
 . . ? . . . ? . . . ? . . . ? . . . ? . . . ? . .
 ```
 
 Leaving "AIVDEN" for the last row.
-```
+
+```text
 W . . . E . . . C . . . R . . . L . . . T . . . E
 . E . R . D . S . O . E . E . F . E . A . O . C .
 . . A . . . I . . . V . . . D . . . E . . . N . .
@@ -58,10 +63,8 @@ If you now read along the zig-zag shape you can read the original message.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir rail_fence_cipher_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

@@ -18,10 +18,10 @@ like these examples:
 
 ```text
  1  2  3 4
- 12 13 14 5
- 11 16 15 6
- 10  9  8 7
- ```
+12 13 14 5
+11 16 15 6
+10  9  8 7
+```
 
 ## Running tests
 
@@ -59,7 +59,7 @@ see the [help page](http://exercism.io/languages/elixir).
 
 ## Source
 
-Reddit r/dailyprogrammer challenge #320 [Easy] Spiral Ascension. [spiral ascension](https://www.reddit.com/r/dailyprogrammer/comments/6i60lr/20170619_challenge_320_easy_spiral_ascension/)
+Reddit r/dailyprogrammer challenge #320 [Easy] Spiral Ascension. [https://www.reddit.com/r/dailyprogrammer/comments/6i60lr/20170619_challenge_320_easy_spiral_ascension/](https://www.reddit.com/r/dailyprogrammer/comments/6i60lr/20170619_challenge_320_easy_spiral_ascension/)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.

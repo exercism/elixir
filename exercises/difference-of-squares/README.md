@@ -17,10 +17,8 @@ natural numbers is 3025 - 385 = 2640.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir difference_of_squares_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

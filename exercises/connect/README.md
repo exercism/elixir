@@ -18,7 +18,7 @@ computes the winner (or lack thereof). Note that all games need not be "fair".
 The boards look like this (with spaces added for readability, which won't be in
 the representation passed to your code):
 
-```        
+```text
 . O . X .
  . X X O .
   O O O X .
@@ -35,10 +35,8 @@ won since `O` didn't connect top and bottom.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir connect_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 
@@ -65,7 +63,6 @@ Or, you can enable all the tests by commenting out the
 
 For more detailed information about the Elixir track, please
 see the [help page](http://exercism.io/languages/elixir).
-
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.

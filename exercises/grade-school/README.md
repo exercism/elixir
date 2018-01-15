@@ -21,7 +21,6 @@ In the end, you should be able to:
 Note that all our students only have one name.  (It's a small town, what
 do you want?)
 
-
 ## For bonus points
 
 Did you get the tests passing and the code clean? If you want to, these
@@ -40,10 +39,8 @@ experiment make the code better? Worse? Did you learn anything from it?
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir grade_school_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

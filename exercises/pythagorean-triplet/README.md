@@ -3,13 +3,13 @@
 A Pythagorean triplet is a set of three natural numbers, {a, b, c}, for
 which,
 
-```
+```text
 a**2 + b**2 = c**2
 ```
 
-For example, 
+For example,
 
-```
+```text
 3**2 + 4**2 = 9 + 16 = 25 = 5**2.
 ```
 
@@ -22,10 +22,8 @@ Find the product a * b * c.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir pythagorean_triplet_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

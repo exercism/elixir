@@ -1,7 +1,7 @@
 # Diamond
 
-The diamond kata takes as its input a letter, and outputs it in a diamond 
-shape. Given a letter, it prints a diamond starting with 'A', with the 
+The diamond kata takes as its input a letter, and outputs it in a diamond
+shape. Given a letter, it prints a diamond starting with 'A', with the
 supplied letter at the widest point.
 
 ## Requirements
@@ -15,7 +15,7 @@ supplied letter at the widest point.
 * The diamond has a square shape (width equals height).
 * The letters form a diamond shape.
 * The top half has the letters in ascending order.
-* The bottom half has the letters in descending order. 
+* The bottom half has the letters in descending order.
 * The four corners (containing the spaces) are triangles.
 
 ## Examples
@@ -24,13 +24,13 @@ In the following examples, spaces are indicated by `·` characters.
 
 Diamond for letter 'A':
 
-```plain
+```text
 A
 ```
 
 Diamond for letter 'C':
 
-```plain
+```text
 ··A··
 ·B·B·
 C···C
@@ -40,7 +40,7 @@ C···C
 
 Diamond for letter 'E':
 
-```plain
+```text
 ····A····
 ···B·B···
 ··C···C··
@@ -57,10 +57,8 @@ E·······E
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir diamond_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

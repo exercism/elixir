@@ -77,13 +77,8 @@ For example:
 
 ```elixir
 # @tag :pending
-test "two characters in a row" do
-  input= "AB"
-  expected =
-    "A\n" <>
-    "B"
-
-  assert Transpose.transpose(input) == expected
+test "shouting" do
+  assert Bob.hey("WATCH OUT!") == "Whoa, chill out!"
 end
 ```
 
@@ -96,6 +91,10 @@ Or, you can enable all the tests by commenting out the
 
 For more detailed information about the Elixir track, please
 see the [help page](http://exercism.io/languages/elixir).
+
+## Source
+
+Reddit r/dailyprogrammer challenge #270 [Easy]. [https://www.reddit.com/r/dailyprogrammer/comments/4msu2x/challenge_270_easy_transpose_the_input_text](https://www.reddit.com/r/dailyprogrammer/comments/4msu2x/challenge_270_easy_transpose_the_input_text)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.

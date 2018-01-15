@@ -6,6 +6,7 @@ Implement general base conversion. Given a number in base **a**,
 represented as a sequence of digits, convert it to base **b**.
 
 ## Note
+
 - Try to implement the conversion yourself.
   Do not use something else to perform the conversion for you.
 
@@ -28,7 +29,6 @@ The number 1120, *in base 3*, means:
 
 I think you got the idea!
 
-
 *Yes. Those three numbers above are exactly the same. Congratulations!*
 
 ## Running tests
@@ -36,10 +36,8 @@ I think you got the idea!
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir all_your_base_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 
@@ -66,7 +64,6 @@ Or, you can enable all the tests by commenting out the
 
 For more detailed information about the Elixir track, please
 see the [help page](http://exercism.io/languages/elixir).
-
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.

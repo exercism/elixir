@@ -10,6 +10,7 @@ always reach 1 eventually.
 Given a number n, return the number of steps required to reach 1.
 
 ## Examples
+
 Starting with n = 12, the steps would be as follows:
 
 0. 12
@@ -25,16 +26,13 @@ Starting with n = 12, the steps would be as follows:
 
 Resulting in 9 steps. So for input n = 12, the return value would be 9.
 
-
 ## Running tests
 
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir collatz_conjecture_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

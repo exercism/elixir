@@ -2,7 +2,6 @@
 
 Parse and evaluate simple math word problems returning the answer as an integer.
 
-
 ## Iteration 1 — Addition
 
 Add two numbers together.
@@ -12,7 +11,6 @@ Add two numbers together.
 Evaluates to 18.
 
 Handle large numbers and negative numbers.
-
 
 ## Iteration 2 — Subtraction, Multiplication and Division
 
@@ -30,7 +28,6 @@ Now, perform the other three operations.
 
 5
 
-
 ## Iteration 3 — Multiple Operations
 
 Handle a set of operations, in sequence.
@@ -46,7 +43,6 @@ left-to-right, _ignoring the typical order of operations._
 
 15  (i.e. not 9)
 
-
 ## Bonus — Exponentials
 
 If you'd like, handle exponentials.
@@ -55,16 +51,13 @@ If you'd like, handle exponentials.
 
 32
 
-
 ## Running tests
 
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir wordy_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

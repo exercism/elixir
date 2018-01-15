@@ -21,10 +21,8 @@ that the sum of the coins' value would equal the correct amount of change.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir change_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 
@@ -54,7 +52,7 @@ see the [help page](http://exercism.io/languages/elixir).
 
 ## Source
 
-Software Craftsmanship - Kata-logue [http://craftsmanship.sv.cmu.edu/exercises/coin-change-kata](http://craftsmanship.sv.cmu.edu/exercises/coin-change-kata)
+Software Craftsmanship - Coin Change Kata [https://web.archive.org/web/20130115115225/http://craftsmanship.sv.cmu.edu:80/exercises/coin-change-kata](https://web.archive.org/web/20130115115225/http://craftsmanship.sv.cmu.edu:80/exercises/coin-change-kata)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.

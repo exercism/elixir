@@ -9,10 +9,8 @@ A gigasecond is 10^9 (1,000,000,000) seconds.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir gigasecond_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

@@ -12,10 +12,8 @@ The program should handle invalid hexadecimal strings.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir hexadecimal_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

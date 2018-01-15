@@ -7,10 +7,12 @@ string, your program should produce a decimal output. The
 program should handle invalid inputs.
 
 ## Note
+
 - Implement the conversion yourself.
   Do not use something else to perform the conversion for you.
 
 ## About Binary (Base-2)
+
 Decimal is a base-10 system.
 
 A number 23 in base 10 notation can be understood
@@ -33,10 +35,8 @@ So: `101 => 1*2^2 + 0*2^1 + 1*2^0 => 1*4 + 0*2 + 1*1 => 4 + 1 => 5 base 10`.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir binary_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

@@ -22,10 +22,8 @@ Convert a number to a string, the contents of which depend on the number's facto
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir raindrops_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

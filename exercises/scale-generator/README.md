@@ -32,7 +32,6 @@ Use Flats:
 F, Bb, Eb, Ab, Db, Gb major
 d, g, c, f, bb, eb minor
 
-
 The diatonic scales, and all other scales that derive from the
 chromatic scale, are built upon intervals. An interval is the space
 between two pitches.
@@ -61,10 +60,8 @@ Here is a table of pitches with the names of their interval distance from the to
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir scale_generator_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 
@@ -91,7 +88,6 @@ Or, you can enable all the tests by commenting out the
 
 For more detailed information about the Elixir track, please
 see the [help page](http://exercism.io/languages/elixir).
-
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
