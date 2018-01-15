@@ -10,10 +10,8 @@ overview of poker hands.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir poker_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

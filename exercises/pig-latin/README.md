@@ -22,10 +22,8 @@ See <http://en.wikipedia.org/wiki/Pig_latin> for more details.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir pig_latin_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

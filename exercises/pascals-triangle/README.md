@@ -1,11 +1,11 @@
-# Pascals Triangle
+# Pascal's Triangle
 
 Compute Pascal's triangle up to a given number of rows.
 
 In Pascal's Triangle each number is computed by adding the numbers to
 the right and left of the current position in the previous row.
 
-```plain
+```text
     1
    1 1
   1 2 1
@@ -19,10 +19,8 @@ the right and left of the current position in the previous row.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir pascals_triangle_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

@@ -29,16 +29,13 @@ allergens that score 256, 512, 1024, etc.).  Your program should
 ignore those components of the score.  For example, if the allergy
 score is 257, your program should only report the eggs (1) allergy.
 
-
 ## Running tests
 
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir allergies_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

@@ -7,16 +7,13 @@ Techies love their TLA (Three Letter Acronyms)!
 Help generate some jargon by writing a program that converts a long name
 like Portable Network Graphics to its acronym (PNG).
 
-
 ## Running tests
 
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir acronym_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

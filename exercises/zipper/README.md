@@ -3,7 +3,7 @@
 Creating a zipper for a binary tree.
 
 [Zippers](https://en.wikipedia.org/wiki/Zipper_%28data_structure%29) are
-a way purely functional of navigating within a data structure and
+a purely functional way of navigating within a data structure and
 manipulating it.  They essentially contain a data structure and a
 pointer into that data structure (called the focus).
 
@@ -32,10 +32,8 @@ list of child nodes) a zipper might support these operations:
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir zipper_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 
@@ -62,7 +60,6 @@ Or, you can enable all the tests by commenting out the
 
 For more detailed information about the Elixir track, please
 see the [help page](http://exercism.io/languages/elixir).
-
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.

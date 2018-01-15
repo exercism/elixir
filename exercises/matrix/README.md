@@ -5,13 +5,15 @@ that matrix.
 
 So given a string with embedded newlines like:
 
-> 9 8 7  
-> 5 3 2  
-> 6 6 7  
+```text
+9 8 7
+5 3 2
+6 6 7
+```
 
 representing this matrix:
 
-```plain
+```text
     0  1  2
   |---------
 0 | 9  8  7
@@ -43,10 +45,8 @@ And its columns:
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir matrix_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

@@ -11,7 +11,7 @@ A chessboard can be represented by an 8 by 8 array.
 So if you're told the white queen is at (2, 3) and the black queen at
 (5, 6), then you'd know you've got a set-up like so:
 
-```plain
+```text
 _ _ _ _ _ _ _ _
 _ _ _ _ _ _ _ _
 _ _ _ W _ _ _ _
@@ -31,10 +31,8 @@ share a diagonal.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir queen_attack_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

@@ -2,7 +2,7 @@
 
 Output the lyrics to 'The Twelve Days of Christmas'.
 
-```
+```text
 On the first day of Christmas my true love gave to me, a Partridge in a Pear Tree.
 
 On the second day of Christmas my true love gave to me, two Turtle Doves, and a Partridge in a Pear Tree.
@@ -33,10 +33,8 @@ On the twelfth day of Christmas my true love gave to me, twelve Drummers Drummin
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir twelve_days_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

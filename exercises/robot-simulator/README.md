@@ -32,10 +32,8 @@ direction it is pointing.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir robot_simulator_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

@@ -1,3 +1,5 @@
+# Binary Search Tree
+
 Insert and search for numbers in a binary tree.
 
 When we need to represent sorted data, an array does not make a good
@@ -50,3 +52,44 @@ And if we then added 1, 5, and 7, it would look like this
       2       6
      / \     / \
     1   3   5   7
+
+## Running tests
+
+Execute the tests with:
+
+```bash
+$ elixir binary_search_tree_test.exs
+```
+
+### Pending tests
+
+In the test suites, all but the first test have been skipped.
+
+Once you get a test passing, you can unskip the next one by
+commenting out the relevant `@tag :pending` with a `#` symbol.
+
+For example:
+
+```elixir
+# @tag :pending
+test "shouting" do
+  assert Bob.hey("WATCH OUT!") == "Whoa, chill out!"
+end
+```
+
+Or, you can enable all the tests by commenting out the
+`ExUnit.configure` line in the test suite.
+
+```elixir
+# ExUnit.configure exclude: :pending, trace: true
+```
+
+For more detailed information about the Elixir track, please
+see the [help page](http://exercism.io/languages/elixir).
+
+## Source
+
+Josh Cheek [https://twitter.com/josh_cheek](https://twitter.com/josh_cheek)
+
+## Submitting Incomplete Solutions
+It's possible to submit an incomplete solution so you can see how others have completed the exercise.

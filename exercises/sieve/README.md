@@ -32,10 +32,8 @@ correct list of primes.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir sieve_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

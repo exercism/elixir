@@ -5,7 +5,7 @@ Tally the results of a small football competition.
 Based on an input file containing which team played against which and what the
 outcome was, create a file with a table like this:
 
-```
+```text
 Team                           | MP |  W |  D |  L |  P
 Devastating Donkeys            |  3 |  2 |  1 |  0 |  7
 Allegoric Alaskans             |  3 |  2 |  0 |  1 |  6
@@ -31,7 +31,7 @@ Input
 
 Your tallying program will receive input that looks like:
 
-```
+```text
 Allegoric Alaskans;Blithering Badgers;win
 Devastating Donkeys;Courageous Californians;draw
 Devastating Donkeys;Allegoric Alaskans;win
@@ -42,7 +42,7 @@ Allegoric Alaskans;Courageous Californians;win
 
 The result of the match refers to the first team listed. So this line
 
-```
+```text
 Allegoric Alaskans;Blithering Badgers;win
 ```
 
@@ -50,7 +50,7 @@ Means that the Allegoric Alaskans beat the Blithering Badgers.
 
 This line:
 
-```
+```text
 Courageous Californians;Blithering Badgers;loss
 ```
 
@@ -58,7 +58,7 @@ Means that the Blithering Badgers beat the Courageous Californians.
 
 And this line:
 
-```
+```text
 Devastating Donkeys;Courageous Californians;draw
 ```
 
@@ -74,10 +74,8 @@ team name column can be right-padded with spaces to a width of 30.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir tournament_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 
@@ -104,7 +102,6 @@ Or, you can enable all the tests by commenting out the
 
 For more detailed information about the Elixir track, please
 see the [help page](http://exercism.io/languages/elixir).
-
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.

@@ -8,10 +8,8 @@ verify that all the pairs are matched and nested correctly.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir bracket_push_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

@@ -14,13 +14,13 @@ Protein: `"Methionine", "Phenylalanine", "Serine"`
 There are 64 codons which in turn correspond to 20 amino acids; however, all of the codon sequences and resulting amino acids are not important in this exercise.  If it works for one codon, the program should work for all of them.
 However, feel free to expand the list in the test suite to include them all.
 
-There are also four terminating codons (also known as 'STOP' codons); if any of these codons are encountered (by the ribosome), all translation ends and the protein is terminated.
+There are also three terminating codons (also known as 'STOP' codons); if any of these codons are encountered (by the ribosome), all translation ends and the protein is terminated.
 
 All subsequent codons after are ignored, like this:
 
 RNA: `"AUGUUUUCUUAAAUG"` =>
 
-Codons: `"AUG", "UUU", "UCU", "UAA", "AUG"` =>
+Codons: `"AUG", "UUU", "UCU", "UAG", "AUG"` =>
 
 Protein: `"Methionine", "Phenylalanine", "Serine"`
 
@@ -46,10 +46,8 @@ Learn more about [protein translation on Wikipedia](http://en.wikipedia.org/wiki
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir protein_translation_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 
@@ -82,5 +80,4 @@ see the [help page](http://exercism.io/languages/elixir).
 Tyler Long
 
 ## Submitting Incomplete Solutions
-
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.

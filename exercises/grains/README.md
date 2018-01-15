@@ -15,7 +15,6 @@ Write code that shows:
 - how many grains were on each square, and
 - the total number of grains
 
-
 ## For bonus points
 
 Did you get the tests passing and the code clean? If you want to, these
@@ -32,10 +31,8 @@ experiment make the code better? Worse? Did you learn anything from it?
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir grains_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

@@ -54,10 +54,8 @@ particularly for enormous integers, but you might need :binary to decode it.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir diffie_hellman_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

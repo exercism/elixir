@@ -6,7 +6,7 @@ Given a word, compute the scrabble score for that word.
 
 You'll need these:
 
-```plain
+```text
 Letter                           Value
 A, E, I, O, U, L, N, R, S, T       1
 D, G                               2
@@ -18,6 +18,7 @@ Q, Z                               10
 ```
 
 ## Examples
+
 "cabbage" should be scored as worth 14 points:
 
 - 3 points for C
@@ -34,6 +35,7 @@ And to total:
 - = 14
 
 ## Extensions
+
 - You can play a double or a triple letter.
 - You can play a double or a triple word.
 
@@ -42,10 +44,8 @@ And to total:
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir scrabble_score_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

@@ -25,10 +25,8 @@ in the input; the digits need not be *numerically consecutive*.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir series_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

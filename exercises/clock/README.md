@@ -11,10 +11,8 @@ Two clocks that represent the same time should be equal to each other.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir clock_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 

@@ -47,7 +47,7 @@ Given the key "aaaaaaaaaaaaaaaaaa", encoding the string "iamapandabear"
 would return the original "iamapandabear".
 
 Given the key "ddddddddddddddddd", encoding our string "iamapandabear"
-would return the obscured "lpdsdqgdehdu"
+would return the obscured "ldpdsdqgdehdu"
 
 In the example above, we've set a = 0 for the key value. So when the
 plaintext is added to the key, we end up with the same message coming
@@ -58,15 +58,13 @@ would get the same thing as the Caesar Cipher.
 
 The weakest link in any cipher is the human being. Let's make your
 substitution cipher a little more fault tolerant by providing a source
-of randomness and ensuring that the key is not composed of numbers or
-capital letters.
+of randomness and ensuring that the key contains only lowercase letters.
 
 If someone doesn't submit a key at all, generate a truly random key of
-at least 100 characters in length, accessible via Cipher#key (the #
-syntax means instance variable)
+at least 100 characters in length.
 
-If the key submitted has capital letters or numbers, throw an
-ArgumentError with a message to that effect.
+If the key submitted is not composed only of lowercase letters, your
+solution should handle the error in a language-appropriate way.
 
 ## Extensions
 
@@ -88,10 +86,8 @@ on Wikipedia][dh] for one of the first implementations of this scheme.
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ elixir simple_cipher_test.exs
 ```
-
-(Replace `bob_test.exs` with the name of the test file.)
 
 ### Pending tests
 
