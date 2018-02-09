@@ -79,7 +79,7 @@ defmodule AllYourBaseTest do
 
   @tag :pending
   test "convert first base is one" do
-    assert AllYourBase.convert([], 1, 10) == nil
+    assert AllYourBase.convert([0], 1, 10) == nil
   end
 
   @tag :pending
@@ -111,5 +111,4 @@ defmodule AllYourBaseTest do
   test "convert both bases are negative" do
     assert AllYourBase.convert([1], -2, -7) == nil
   end
-
 end
