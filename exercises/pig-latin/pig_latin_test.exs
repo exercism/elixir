@@ -63,7 +63,7 @@ defmodule PigLatinTest do
 
     @tag :pending
     test "word beginning with q without a following u" do
-      assert PigLatin.translate("qatar") == "atarqay"
+      assert PigLatin.translate("qat") == "atqay"
     end
 
     @tag :pending
