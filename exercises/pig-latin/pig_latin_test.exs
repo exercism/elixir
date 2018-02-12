@@ -82,7 +82,7 @@ defmodule PigLatinTest do
     end
   end
 
-  describe "some letter clusters are treated like a single consonant" do
+  describe "consecutive consonants are treated like a single consonant" do
     @tag :pending
     test "word beginning with ch" do
       assert PigLatin.translate("chair") == "airchay"
@@ -114,15 +114,25 @@ defmodule PigLatinTest do
     end
   end
 
-  describe "some letter clusters are treated like a single vowel" do
+  describe "'x' and 'y', when followed by a consonant, are treated like a vowel" do
     @tag :pending
-    test "word beginning with yt" do
+    test "word beginning with y, followed by a consonant" do
       assert PigLatin.translate("yttria") == "yttriaay"
+    end
+
+    @tag :pending
+    test "word beginning with y, followed by another consonant" do
+      assert PigLatin.translate("yddria") == "yddriaay"
     end
 
     @tag :pending
     test "word beginning with xr" do
       assert PigLatin.translate("xray") == "xrayay"
+    end
+
+    @tag :pending
+    test "word beginning with xb" do
+      assert PigLatin.translate("xbot") == "xbotay"
     end
   end
 
@@ -133,4 +143,3 @@ defmodule PigLatinTest do
     end
   end
 end
-

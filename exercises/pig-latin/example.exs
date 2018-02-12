@@ -32,7 +32,7 @@ defmodule PigLatin do
   end
 
   defp consonant_prefix_and_rest(word) do
-    if Regex.match?(~r/^yt|xr/, word) do
+    if Regex.match?(~r/^[yx][bcdfghjklmnpqrstvwxy]+/, word) do
       ["", word]
     else
       ~r/^(s?qu|(?:[^aeiou]*))?([aeiou].*)$/
@@ -40,4 +40,3 @@ defmodule PigLatin do
     end
   end
 end
-
