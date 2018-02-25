@@ -20,8 +20,8 @@ defmodule SecretHandshake do
   @spec commands(code :: integer) :: list(String.t())
   def commands(code) do
     @codes
-    |> Enum.with_index
-    |> Enum.map(fn {command, i} -> { command, 2 <<< (i-1) } end)
+    |> Enum.with_index()
+    |> Enum.map(fn {command, i} -> {command, 2 <<< (i - 1)} end)
     |> decode_commands(code, [])
   end
 
@@ -31,7 +31,8 @@ defmodule SecretHandshake do
       _ -> Enum.reverse(results)
     end
   end
-  defp decode_commands([{ command, flag } | flags], code, results) do
+
+  defp decode_commands([{command, flag} | flags], code, results) do
     case flag_set(code, flag) do
       true -> decode_commands(flags, code, [command | results])
       _ -> decode_commands(flags, code, results)
@@ -40,4 +41,3 @@ defmodule SecretHandshake do
 
   defp flag_set(flags, flag_to_check), do: (flags &&& flag_to_check) == flag_to_check
 end
-

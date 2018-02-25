@@ -2,8 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("account.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 # The BankAccount module should support four calls:
 #
@@ -26,8 +26,8 @@ defmodule BankAccountTest do
   use ExUnit.Case
 
   setup do
-    account = BankAccount.open_bank
-    { :ok, account: account }
+    account = BankAccount.open_bank()
+    {:ok, account: account}
   end
 
   # @tag :pending
@@ -59,18 +59,23 @@ defmodule BankAccountTest do
   end
 
   @tag :pending
-  test "incrementing balance from another process then checking it from test process", %{account: account} do
+  test "incrementing balance from another process then checking it from test process", %{
+    account: account
+  } do
     assert BankAccount.balance(account) == 0
     this = self()
+
     spawn(fn ->
       BankAccount.update(account, 20)
       send(this, :continue)
     end)
+
     receive do
       :continue -> :ok
     after
       1000 -> flunk("Timeout")
     end
+
     assert BankAccount.balance(account) == 20
   end
 end

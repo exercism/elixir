@@ -2,8 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("bracket_push.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule BracketPushTest do
   use ExUnit.Case
@@ -75,6 +75,8 @@ defmodule BracketPushTest do
 
   @tag :pending
   test "complex latex expression" do
-    assert BracketPush.check_brackets("\\left(\\begin{array}{cc} \\frac{1}{3} & x\\\\ \\mathrm{e}^{x} &... x^2 \\end{array}\\right)")
+    assert BracketPush.check_brackets(
+             "\\left(\\begin{array}{cc} \\frac{1}{3} & x\\\\ \\mathrm{e}^{x} &... x^2 \\end{array}\\right)"
+           )
   end
 end

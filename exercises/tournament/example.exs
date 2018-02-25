@@ -1,6 +1,6 @@
 defmodule Tournament do
-  @stats_header { "Team", "MP", "W", "D", "L", "P" }
-  @initial_stats { 0, 0, 0, 0, 0 }
+  @stats_header {"Team", "MP", "W", "D", "L", "P"}
+  @initial_stats {0, 0, 0, 0, 0}
 
   @doc """
   Given `input` lines representing two teams and whether the first of them won,
@@ -24,6 +24,7 @@ defmodule Tournament do
   end
 
   defp do_tally(results, []), do: results
+
   defp do_tally(results, [line | rest]) do
     results
     |> parse_line(line |> String.split(";", trim: true))
@@ -45,26 +46,32 @@ defmodule Tournament do
   defp parse_line(results, _), do: results
 
   defp mark_win(results, team) do
-    { played, wins, draws, lost, points } = Map.get(results, team, @initial_stats)
+    {played, wins, draws, lost, points} = Map.get(results, team, @initial_stats)
 
-    Map.put(results, team, { played + 1, wins + 1, draws, lost, points + 3 })
+    Map.put(results, team, {played + 1, wins + 1, draws, lost, points + 3})
   end
 
   defp mark_draw(results, team) do
-    { played, wins, draws, lost, points } = Map.get(results, team, @initial_stats)
+    {played, wins, draws, lost, points} = Map.get(results, team, @initial_stats)
 
-    Map.put(results, team, { played + 1, wins, draws + 1, lost, points + 1})
+    Map.put(results, team, {played + 1, wins, draws + 1, lost, points + 1})
   end
 
   defp mark_loss(results, team) do
-    { played, wins, draws, lost, points } = Map.get(results, team, @initial_stats)
+    {played, wins, draws, lost, points} = Map.get(results, team, @initial_stats)
 
-    Map.put(results, team, { played + 1, wins, draws, lost + 1, points})
+    Map.put(results, team, {played + 1, wins, draws, lost + 1, points})
   end
 
-  defp sort_results({_, _, _, _, _, points_a}, {_, _, _, _, _, points_b}) when points_a > points_b, do: true
-  defp sort_results({_, _, _, _, _, points_a}, {_, _, _, _, _, points_b}) when points_a < points_b, do: false
-  defp sort_results({name_a, _, _, _, _, _}, {name_b, _, _, _, _, _}) when name_a <= name_b, do: true
+  defp sort_results({_, _, _, _, _, points_a}, {_, _, _, _, _, points_b}) when points_a > points_b,
+    do: true
+
+  defp sort_results({_, _, _, _, _, points_a}, {_, _, _, _, _, points_b}) when points_a < points_b,
+    do: false
+
+  defp sort_results({name_a, _, _, _, _, _}, {name_b, _, _, _, _, _}) when name_a <= name_b,
+    do: true
+
   defp sort_results(_, _), do: false
 
   defp format_results({name, played, wins, draws, lost, points}) do
@@ -75,7 +82,7 @@ defmodule Tournament do
       draws |> to_string |> String.pad_leading(2),
       lost |> to_string |> String.pad_leading(2),
       points |> to_string |> String.pad_leading(2)
-    ] |> Enum.join(" | ")
+    ]
+    |> Enum.join(" | ")
   end
 end
-

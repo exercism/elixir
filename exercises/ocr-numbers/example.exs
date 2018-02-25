@@ -1,10 +1,9 @@
 defmodule OCRNumbers do
-
   @doc """
   Given a 3 x 4 grid of pipes, underscores, and spaces, determine which number is represented, or
   whether it is garbled.
   """
-  @spec convert([String.t]) :: String.t
+  @spec convert([String.t()]) :: String.t()
   def convert(input) do
     Enum.chunk(input, 4)
     |> Enum.map(fn row_set -> _convert(row_set, "") end)
@@ -21,9 +20,10 @@ defmodule OCRNumbers do
   def _convert(_, {:error, _} = error), do: error
   def _convert(input, _) when length(input) != 4, do: {:error, 'invalid line count'}
   def _convert(["", "", "", ""], output), do: output
+
   def _convert(input, output) do
     split_strings = Enum.map(input, fn a -> String.split_at(a, 3) end)
-    this_character = Enum.map(split_strings, fn ({a, _}) -> a end)
+    this_character = Enum.map(split_strings, fn {a, _} -> a end)
     other_characters = Enum.map(split_strings, fn {_, a} -> a end)
     lengths = Enum.map(this_character, fn a -> String.length(a) end)
 

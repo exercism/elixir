@@ -44,7 +44,8 @@ defmodule DiffieHellman do
 
   (prime_g **  private_key) % prime_p
   """
-  @spec generate_public_key(prime_p :: integer, prime_g :: integer, private_key :: integer) :: integer
+  @spec generate_public_key(prime_p :: integer, prime_g :: integer, private_key :: integer) ::
+          integer
   def generate_public_key(prime_p, prime_g, private_key) do
   end
 
@@ -54,8 +55,11 @@ defmodule DiffieHellman do
 
   (public_key_b ** private_key_a) % prime_p
   """
-  @spec generate_shared_secret(prime_p :: integer, public_key_b :: integer, private_key_a :: integer) :: integer
+  @spec generate_shared_secret(
+          prime_p :: integer,
+          public_key_b :: integer,
+          private_key_a :: integer
+        ) :: integer
   def generate_shared_secret(prime_p, public_key_b, private_key_a) do
   end
 end
-

@@ -2,13 +2,13 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("rotational_cipher.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule RotationalCipherTest do
   use ExUnit.Case
 
-  #@tag :pending
+  # @tag :pending
   test "rotate a by 1" do
     plaintext = "a"
     shift = 1
@@ -75,6 +75,8 @@ defmodule RotationalCipherTest do
   test "rotate all letters" do
     plaintext = "The quick brown fox jumps over the lazy dog."
     shift = 13
-    assert RotationalCipher.rotate(plaintext, shift) == "Gur dhvpx oebja sbk whzcf bire gur ynml qbt."
+
+    assert RotationalCipher.rotate(plaintext, shift) ==
+             "Gur dhvpx oebja sbk whzcf bire gur ynml qbt."
   end
 end

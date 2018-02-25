@@ -15,8 +15,7 @@ defmodule Change do
 
   """
 
-  @spec generate(list, integer) :: {:ok, list} | {:error, String.t}
+  @spec generate(list, integer) :: {:ok, list} | {:error, String.t()}
   def generate(coins, target) do
-
   end
 end

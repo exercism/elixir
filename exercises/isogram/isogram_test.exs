@@ -2,8 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("isogram.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule IsogramTest do
   use ExUnit.Case
@@ -46,5 +46,4 @@ defmodule IsogramTest do
   test "phrase is not isogram" do
     refute Isogram.isogram?("the quick brown fox")
   end
-
 end

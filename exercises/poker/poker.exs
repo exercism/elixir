@@ -31,4 +31,3 @@ defmodule Poker do
   def best_hand(hands) do
   end
 end
-

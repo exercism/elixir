@@ -2,8 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("prime_factors.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule PrimeFactorsTest do
   use ExUnit.Case
@@ -55,12 +55,12 @@ defmodule PrimeFactorsTest do
 
   @tag :pending
   test "901255" do
-    assert PrimeFactors.factors_for(901255) == [5, 17, 23, 461]
+    assert PrimeFactors.factors_for(901_255) == [5, 17, 23, 461]
   end
 
   @tag :pending
   test "93819012551" do
-    assert PrimeFactors.factors_for(93819012551) == [11, 9539, 894119]
+    assert PrimeFactors.factors_for(93_819_012_551) == [11, 9539, 894_119]
   end
 
   @tag :pending
@@ -70,6 +70,6 @@ defmodule PrimeFactorsTest do
   # in under two sconds. Uncomment it if you want to test the efficiency of your
   # solution.
   test "10000000055" do
-    assert PrimeFactors.factors_for(10000000055) == [5, 2000000011]
+    assert PrimeFactors.factors_for(10_000_000_055) == [5, 2_000_000_011]
   end
 end

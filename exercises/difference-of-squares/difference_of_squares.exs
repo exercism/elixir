@@ -8,7 +8,6 @@ defmodule Squares do
   """
   @spec sum_of_squares(pos_integer) :: pos_integer
   def sum_of_squares(number) do
-
   end
 
   @doc """
@@ -16,7 +15,6 @@ defmodule Squares do
   """
   @spec square_of_sums(pos_integer) :: pos_integer
   def square_of_sums(number) do
-
   end
 
   @doc """
@@ -24,7 +22,5 @@ defmodule Squares do
   """
   @spec difference(pos_integer) :: pos_integer
   def difference(number) do
-
   end
-
 end

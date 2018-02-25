@@ -2,8 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("linked_list.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule LinkedListTest do
   use ExUnit.Case
@@ -62,6 +62,7 @@ defmodule LinkedListTest do
       LinkedList.new()
       |> LinkedList.push(:a)
       |> LinkedList.push(:b)
+
     assert LinkedList.peek(list) == {:ok, :b}
     assert {:ok, list} = LinkedList.tail(list)
     assert LinkedList.peek(list) == {:ok, :a}
@@ -145,10 +146,12 @@ defmodule LinkedListTest do
   @tag :pending
   test "reverse/1 round trip" do
     list = Enum.to_list(1..200)
+
     linked_list =
       LinkedList.from_list(list)
       |> LinkedList.reverse()
       |> LinkedList.reverse()
+
     assert LinkedList.to_list(linked_list) == list
   end
 end

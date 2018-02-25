@@ -2,9 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("pascals_triangle.exs", __DIR__)
 end
 
-
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule PascalsTriangleTest do
   use ExUnit.Case
@@ -26,20 +25,39 @@ defmodule PascalsTriangleTest do
 
   @tag :pending
   test "fourth row" do
-    assert List.last(PascalsTriangle.rows(4)) ==  [1, 3, 3, 1]
+    assert List.last(PascalsTriangle.rows(4)) == [1, 3, 3, 1]
   end
 
   @tag :pending
   test "fifth row" do
-    assert List.last(PascalsTriangle.rows(5)) ==  [1, 4, 6, 4, 1]
+    assert List.last(PascalsTriangle.rows(5)) == [1, 4, 6, 4, 1]
   end
 
   @tag :pending
   test "twentieth row" do
     expected = [
-      1, 19, 171, 969, 3876, 11_628, 27_132, 50_388, 75_582, 92_378, 92_378,
-      75_582, 50_388, 27_132, 11_628, 3876, 969, 171, 19, 1
+      1,
+      19,
+      171,
+      969,
+      3876,
+      11_628,
+      27_132,
+      50_388,
+      75_582,
+      92_378,
+      92_378,
+      75_582,
+      50_388,
+      27_132,
+      11_628,
+      3876,
+      969,
+      171,
+      19,
+      1
     ]
-    assert List.last(PascalsTriangle.rows(20)) ==  expected
+
+    assert List.last(PascalsTriangle.rows(20)) == expected
   end
 end

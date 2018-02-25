@@ -2,8 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("hello_world.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure trace: true
+ExUnit.start()
+ExUnit.configure(trace: true)
 
 defmodule HelloWorldTest do
   use ExUnit.Case

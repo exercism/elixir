@@ -14,6 +14,5 @@ defmodule FlattenArray do
 
   @spec flatten(list) :: list
   def flatten(list) do
-
   end
 end

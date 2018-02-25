@@ -8,7 +8,7 @@ ExUnit.configure(exclude: :pending, trace: true)
 defmodule ISBNVerifierTest do
   use ExUnit.Case
 
-  #@tag :pending
+  # @tag :pending
   test "valid isbn number" do
     assert ISBNVerifier.isbn?("3-598-21508-8")
   end

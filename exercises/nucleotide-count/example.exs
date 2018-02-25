@@ -13,10 +13,11 @@ defmodule NucleotideCount do
   1
   """
 
-  def count(strand, nucleotide) when nucleotide in(@nucleotides) do
-    Enum.count strand, &(&1 == nucleotide)
+  def count(strand, nucleotide) when nucleotide in @nucleotides do
+    Enum.count(strand, &(&1 == nucleotide))
   end
-  def count(_strand, _nucleotide), do: raise ArgumentError
+
+  def count(_strand, _nucleotide), do: raise(ArgumentError)
 
   @doc """
   Returns a summary of counts by nucleotide.

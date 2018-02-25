@@ -8,7 +8,8 @@ defmodule PascalsTriangle do
     do_rows(num - 1, [[1]])
   end
 
-  defp do_rows(0, rows), do: Enum.reverse rows
+  defp do_rows(0, rows), do: Enum.reverse(rows)
+
   defp do_rows(n, rows = [h | _]) do
     do_rows(n - 1, [next_row(h) | rows])
   end

@@ -14,10 +14,10 @@ defmodule TwelveDays do
     {"twelve", "twelfth", "Drummers Drumming"}
   ]
 
-  for { { count, ordinal, gift }, number } <- @days |> Enum.with_index(1) do
+  for {{count, ordinal, gift}, number} <- @days |> Enum.with_index(1) do
     defp count(unquote(number)), do: unquote(count)
     defp ordinal(unquote(number)), do: unquote(ordinal)
-    defp gift(unquote(number)), do: "#{count(unquote(number))} #{ unquote(gift) }"
+    defp gift(unquote(number)), do: "#{count(unquote(number))} #{unquote(gift)}"
   end
 
   @doc """
@@ -26,11 +26,16 @@ defmodule TwelveDays do
   """
   @spec verse(number :: integer) :: String.t()
   def verse(number) do
-    "On the #{ordinal(number)} day of Christmas my true love gave to me, #{gifts_for_day(number, [])}."
+    "On the #{ordinal(number)} day of Christmas my true love gave to me, #{
+      gifts_for_day(number, [])
+    }."
   end
 
   defp gifts_for_day(1, []), do: gift(1)
-  defp gifts_for_day(1, results), do: ["and #{gift(1)}" | results] |> Enum.reverse |> Enum.join(", ")
+
+  defp gifts_for_day(1, results),
+    do: ["and #{gift(1)}" | results] |> Enum.reverse() |> Enum.join(", ")
+
   defp gifts_for_day(number, results), do: gifts_for_day(number - 1, [gift(number) | results])
 
   @doc """
@@ -47,7 +52,6 @@ defmodule TwelveDays do
   @doc """
   Sing all 12 verses, in order, one verse per line.
   """
-  @spec sing():: String.t()
+  @spec sing() :: String.t()
   def sing, do: verses(1, 12)
 end
-

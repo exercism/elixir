@@ -2,13 +2,13 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("poker.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule PokerTest do
   use ExUnit.Case
 
-  #@tag :pending
+  # @tag :pending
   test "single hand always wins" do
     high_of_jack = ~w(4S 5S 7H 8D JC)
     assert Poker.best_hand([high_of_jack]) == [high_of_jack]
@@ -103,7 +103,10 @@ defmodule PokerTest do
     assert Poker.best_hand([three_aces_7_high, three_aces_8_high]) == [three_aces_8_high]
 
     three_aces_8_high_5_low = ~w(5S AH AS 8C AD)
-    assert Poker.best_hand([three_aces_8_high_5_low, three_aces_8_high]) == [three_aces_8_high_5_low]
+
+    assert Poker.best_hand([three_aces_8_high_5_low, three_aces_8_high]) == [
+             three_aces_8_high_5_low
+           ]
   end
 
   @tag :pending
@@ -214,4 +217,3 @@ defmodule PokerTest do
     assert Poker.best_hand([straight_flush_to_8, straight_flush_to_9]) == [straight_flush_to_9]
   end
 end
-

@@ -18,35 +18,49 @@ defmodule RobotSimulator do
 
   Valid instructions are: "R" (turn right), "L", (turn left), and "A" (advance)
   """
-  @spec simulate(robot :: %RobotSimulator{}, instructions :: String.t ) :: any
+  @spec simulate(robot :: %RobotSimulator{}, instructions :: String.t()) :: any
   def simulate(%RobotSimulator{} = robot, instructions) do
-    instructions |> String.graphemes |> Enum.reduce(robot, &move/2)
+    instructions |> String.graphemes() |> Enum.reduce(robot, &move/2)
   end
 
   def position(%RobotSimulator{position: pos}), do: pos
   def direction(%RobotSimulator{direction: dir}), do: dir
 
   defp orient(%RobotSimulator{} = robot, direction) when direction in @valid_directions do
-    %{ robot | direction: direction }
+    %{robot | direction: direction}
   end
-  defp orient({ :error, _ } = error, _), do: error
-  defp orient(_, _), do: { :error, "invalid direction" }
 
-  defp place(%RobotSimulator{} = robot, { x, y } = position) when is_integer(x) and is_integer(y) do
-    %{ robot | position: position }
+  defp orient({:error, _} = error, _), do: error
+  defp orient(_, _), do: {:error, "invalid direction"}
+
+  defp place(%RobotSimulator{} = robot, {x, y} = position) when is_integer(x) and is_integer(y) do
+    %{robot | position: position}
   end
-  defp place(_, _), do: { :error, "invalid position" }
 
-  defp move("R", %RobotSimulator{ direction: direction } = robot), do: robot |> orient(direction |> rotate_right)
-  defp move("L", %RobotSimulator{ direction: direction } = robot), do: robot |> orient(direction |> rotate_left)
-  defp move("A", %RobotSimulator{ direction: :north, position: { x, y } } = robot), do: robot |> place({ x, y + 1 })
-  defp move("A", %RobotSimulator{ direction: :east, position: { x, y } } = robot), do: robot |> place({ x + 1, y })
-  defp move("A", %RobotSimulator{ direction: :south, position: { x, y } } = robot), do: robot |> place({ x, y - 1 })
-  defp move("A", %RobotSimulator{ direction: :west, position: { x, y } } = robot), do: robot |> place({ x - 1, y })
-  defp move(_, { :error, _ } = error), do: error
-  defp move(_, _), do: { :error, "invalid instruction" }
+  defp place(_, _), do: {:error, "invalid position"}
 
-  for [curr, right] <- @valid_directions |> Stream.cycle |> Enum.take(5) |> Enum.chunk(2, 1) do
+  defp move("R", %RobotSimulator{direction: direction} = robot),
+    do: robot |> orient(direction |> rotate_right)
+
+  defp move("L", %RobotSimulator{direction: direction} = robot),
+    do: robot |> orient(direction |> rotate_left)
+
+  defp move("A", %RobotSimulator{direction: :north, position: {x, y}} = robot),
+    do: robot |> place({x, y + 1})
+
+  defp move("A", %RobotSimulator{direction: :east, position: {x, y}} = robot),
+    do: robot |> place({x + 1, y})
+
+  defp move("A", %RobotSimulator{direction: :south, position: {x, y}} = robot),
+    do: robot |> place({x, y - 1})
+
+  defp move("A", %RobotSimulator{direction: :west, position: {x, y}} = robot),
+    do: robot |> place({x - 1, y})
+
+  defp move(_, {:error, _} = error), do: error
+  defp move(_, _), do: {:error, "invalid instruction"}
+
+  for [curr, right] <- @valid_directions |> Stream.cycle() |> Enum.take(5) |> Enum.chunk(2, 1) do
     defp rotate_right(unquote(curr)), do: unquote(right)
     defp rotate_left(unquote(right)), do: unquote(curr)
   end

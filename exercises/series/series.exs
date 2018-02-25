@@ -8,4 +8,3 @@ defmodule StringSeries do
   def slices(_s, _size) do
   end
 end
-

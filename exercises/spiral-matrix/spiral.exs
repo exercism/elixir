@@ -1,5 +1,4 @@
 defmodule Spiral do
-
   @doc """
   Given the dimension, return a square matrix of numbers in clockwise spiral order.
   """

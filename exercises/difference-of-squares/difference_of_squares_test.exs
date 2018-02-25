@@ -2,8 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("difference_of_squares.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule DifferenceOfSquaresTest do
   use ExUnit.Case
@@ -40,17 +40,16 @@ defmodule DifferenceOfSquaresTest do
 
   @tag :pending
   test "square of sums to 100" do
-    assert Squares.square_of_sums(100) == 25502500
+    assert Squares.square_of_sums(100) == 25_502_500
   end
 
   @tag :pending
   test "sum of squares to 100" do
-    assert Squares.sum_of_squares(100) == 338350
+    assert Squares.sum_of_squares(100) == 338_350
   end
 
   @tag :pending
   test "difference of sums to 100" do
-    assert Squares.difference(100) == 25164150
+    assert Squares.difference(100) == 25_164_150
   end
-
 end

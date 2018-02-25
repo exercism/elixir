@@ -135,11 +135,11 @@ defmodule Forth do
     Regex.scan(~r/[\p{L}\p{N}\p{S}\p{P}]+/u, s)
     |> Stream.map(&hd/1)
     |> Enum.map(fn t ->
-         case Integer.parse(t) do
-           {i, ""} -> i
-           _ -> t
-         end
-       end)
+      case Integer.parse(t) do
+        {i, ""} -> i
+        _ -> t
+      end
+    end)
   end
 
   @doc """

@@ -17,4 +17,3 @@ defmodule SecretHandshake do
   def commands(code) do
   end
 end
-

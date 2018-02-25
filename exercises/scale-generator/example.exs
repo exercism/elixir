@@ -17,7 +17,8 @@ defmodule ScaleGenerator do
   "M": E
   "A": F
   """
-  @spec step(scale :: list(String.t()), tonic :: String.t(), step :: String.t()) :: list(String.t())
+  @spec step(scale :: list(String.t()), tonic :: String.t(), step :: String.t()) ::
+          list(String.t())
   def step(scale, tonic, step) do
     scale |> rotate_chromatic(tonic) |> do_step(step)
   end
@@ -66,13 +67,17 @@ defmodule ScaleGenerator do
     scale_length = length(scale)
 
     scale
-    |> Stream.cycle
+    |> Stream.cycle()
     |> Enum.take(2 * scale_length)
-    |> rotate_chromatic(tonic |> String.capitalize, [])
+    |> rotate_chromatic(tonic |> String.capitalize(), [])
     |> Enum.take(scale_length + 1)
   end
-  defp rotate_chromatic([tonic | _] = scale_from_tonic, tonic, results), do: scale_from_tonic ++ results
-  defp rotate_chromatic([head | tail], tonic, results), do: rotate_chromatic(tail, tonic, results ++ [head])
+
+  defp rotate_chromatic([tonic | _] = scale_from_tonic, tonic, results),
+    do: scale_from_tonic ++ results
+
+  defp rotate_chromatic([head | tail], tonic, results),
+    do: rotate_chromatic(tail, tonic, results ++ [head])
 
   @doc """
   Certain scales will require the use of the flat version, depending on the
@@ -86,8 +91,10 @@ defmodule ScaleGenerator do
   """
   @spec find_chromatic_scale(tonic :: String.t()) :: list(String.t())
   for flat_tonic <- @flat_keys do
-    def find_chromatic_scale(unquote(flat_tonic)), do: flat_chromatic_scale(unquote(flat_tonic |> String.capitalize))
+    def find_chromatic_scale(unquote(flat_tonic)),
+      do: flat_chromatic_scale(unquote(flat_tonic |> String.capitalize()))
   end
+
   def find_chromatic_scale(tonic) do
     chromatic_scale(tonic)
   end
@@ -107,13 +114,17 @@ defmodule ScaleGenerator do
   def scale(tonic, pattern) do
     tonic
     |> find_chromatic_scale
-    |> generate_scale(pattern, [tonic |> String.capitalize])
+    |> generate_scale(pattern, [tonic |> String.capitalize()])
   end
 
   defp generate_scale(scale, pattern, results)
   defp generate_scale(_scale, "", results), do: Enum.reverse(results)
-  defp generate_scale(scale, <<step_amt::binary-size(1), pattern::binary>>, [last_tonic | _] = results) do
+
+  defp generate_scale(
+         scale,
+         <<step_amt::binary-size(1), pattern::binary>>,
+         [last_tonic | _] = results
+       ) do
     generate_scale(scale, pattern, [step(scale, last_tonic, step_amt) | results])
   end
 end
-

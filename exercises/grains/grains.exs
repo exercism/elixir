@@ -4,7 +4,6 @@ defmodule Grains do
   """
   @spec square(pos_integer) :: pos_integer
   def square(number) do
-
   end
 
   @doc """
@@ -12,6 +11,5 @@ defmodule Grains do
   """
   @spec total :: pos_integer
   def total do
-
   end
 end

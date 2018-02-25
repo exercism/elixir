@@ -2,8 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("hamming.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule HammingTest do
   use ExUnit.Case
@@ -34,7 +34,10 @@ defmodule HammingTest do
 
   @tag :pending
   test "hamming distance is undefined for strands of different lengths" do
-    assert {:error, "Lists must be the same length"} = Hamming.hamming_distance('AAAC', 'TAGGGGAGGCTAGCGGTAGGAC')
-    assert {:error, "Lists must be the same length"} = Hamming.hamming_distance('GACTACGGACAGGACACC', 'GACATCGC')
+    assert {:error, "Lists must be the same length"} =
+             Hamming.hamming_distance('AAAC', 'TAGGGGAGGCTAGCGGTAGGAC')
+
+    assert {:error, "Lists must be the same length"} =
+             Hamming.hamming_distance('GACTACGGACAGGACACC', 'GACATCGC')
   end
 end
