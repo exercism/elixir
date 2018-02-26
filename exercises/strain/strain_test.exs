@@ -2,8 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("strain.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure trace: true, exclude: :pending
+ExUnit.start()
+ExUnit.configure(trace: true, exclude: :pending)
 
 defmodule StrainTest do
   use ExUnit.Case
@@ -12,7 +12,7 @@ defmodule StrainTest do
   defp is_even?(n), do: rem(n, 2) == 0
   defp noop(_), do: true
 
-  #@tag :pending
+  # @tag :pending
   test "empty keep" do
     assert Strain.keep([], &noop/1) == []
   end
@@ -35,7 +35,7 @@ defmodule StrainTest do
   @tag :pending
   test "keep strings" do
     words = ~w(apple zebra banana zombies cherimoya zelot)
-    assert Strain.keep(words, &(String.starts_with?(&1, "z"))) == ~w(zebra zombies zelot)
+    assert Strain.keep(words, &String.starts_with?(&1, "z")) == ~w(zebra zombies zelot)
   end
 
   @tag :pending
@@ -50,7 +50,12 @@ defmodule StrainTest do
       [1, 2, 5]
     ]
 
-    assert Strain.keep(rows, fn row -> 5 in row end) == [[5, 5, 5], [5, 1, 2], [1, 5, 2], [1, 2, 5]]
+    assert Strain.keep(rows, fn row -> 5 in row end) == [
+             [5, 5, 5],
+             [5, 1, 2],
+             [1, 5, 2],
+             [1, 2, 5]
+           ]
   end
 
   @tag :pending
@@ -76,7 +81,7 @@ defmodule StrainTest do
   @tag :pending
   test "discard strings" do
     words = ~w(apple zebra banana zombies cherimoya zelot)
-    assert Strain.discard(words, &(String.starts_with?(&1, "z"))) == ~w(apple banana cherimoya)
+    assert Strain.discard(words, &String.starts_with?(&1, "z")) == ~w(apple banana cherimoya)
   end
 
   @tag :pending
@@ -90,7 +95,7 @@ defmodule StrainTest do
       [2, 2, 1],
       [1, 2, 5]
     ]
+
     assert Strain.discard(rows, fn row -> 5 in row end) == [[1, 2, 3], [2, 1, 2], [2, 2, 1]]
   end
 end
-

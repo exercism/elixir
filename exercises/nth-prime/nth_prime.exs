@@ -1,5 +1,4 @@
 defmodule Prime do
-
   @doc """
   Generates the nth prime.
   """

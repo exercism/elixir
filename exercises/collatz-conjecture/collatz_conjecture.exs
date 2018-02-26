@@ -1,5 +1,4 @@
 defmodule CollatzConjecture do
-
   @doc """
   calc/1 takes an integer and returns the number of steps required to get the
   number to 1 when following the rules:

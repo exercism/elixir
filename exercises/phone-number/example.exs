@@ -27,17 +27,24 @@ defmodule Phone do
   iex> Phone.number("867.5309")
   "0000000000"
   """
-  @spec number(String.t) :: String.t
+  @spec number(String.t()) :: String.t()
   def number(raw) do
+    # remove decorations
     raw
-    |> String.replace(~r/[\s+.()-]/, "") # remove decorations
+    |> String.replace(~r/[\s+.()-]/, "")
     |> valid?
-    |> (fn false -> @invalid; num -> String.replace(num, ~r/^1/, "") end).()
+    |> (fn
+          false -> @invalid
+          num -> String.replace(num, ~r/^1/, "")
+        end).()
   end
 
   defp valid?(num) do
     Regex.match?(~r/^1?(?:[2-9][0-9]{2}){2}\d{4}$/, num)
-    |> (fn true -> num; false -> false end).()
+    |> (fn
+          true -> num
+          false -> false
+        end).()
   end
 
   @doc """
@@ -60,11 +67,12 @@ defmodule Phone do
   iex> Phone.area_code("867.5309")
   "000"
   """
-  @spec area_code(String.t) :: String.t
+  @spec area_code(String.t()) :: String.t()
   def area_code(raw) do
+    # the first three digits are area_code
     raw
-    |> __MODULE__.number
-    |> String.slice(0, 3)      # the first three digits are area_code
+    |> __MODULE__.number()
+    |> String.slice(0, 3)
   end
 
   @doc """
@@ -87,12 +95,12 @@ defmodule Phone do
   iex> Phone.pretty("867.5309")
   "(000) 000-0000"
   """
-  @spec pretty(String.t) :: String.t
+  @spec pretty(String.t()) :: String.t()
   def pretty(raw) do
     raw
-    |> __MODULE__.number
+    |> __MODULE__.number()
     |> (fn <<area_code::binary-size(3), exchange_code::binary-size(3), rest::binary>> ->
-      "(#{area_code}) #{exchange_code}-#{rest}"
-    end).()
+          "(#{area_code}) #{exchange_code}-#{rest}"
+        end).()
   end
 end

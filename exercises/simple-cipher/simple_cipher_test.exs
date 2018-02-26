@@ -2,13 +2,13 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("simple_cipher.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure trace: true, exclude: :pending
+ExUnit.start()
+ExUnit.configure(trace: true, exclude: :pending)
 
 defmodule SimpleCipherTest do
   use ExUnit.Case
 
-  #@tag :pending
+  # @tag :pending
   test "encoding with 'a' returns the original text" do
     assert SimpleCipher.encode("a", "a") == "a"
     assert SimpleCipher.encode("b", "a") == "b"
@@ -86,4 +86,3 @@ defmodule SimpleCipherTest do
     assert SimpleCipher.decode(ciphertext, plaintext) == key
   end
 end
-

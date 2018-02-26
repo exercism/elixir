@@ -2,9 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("allergies.exs", __DIR__)
 end
 
-
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule AllergiesTest do
   use ExUnit.Case
@@ -41,12 +40,16 @@ defmodule AllergiesTest do
 
   @tag :pending
   test "allergic_to_lots_of_stuff" do
-    Allergies.list(248) |> assert_is_a_set_containing(~w[strawberries tomatoes chocolate pollen cats])
+    Allergies.list(248)
+    |> assert_is_a_set_containing(~w[strawberries tomatoes chocolate pollen cats])
   end
 
   @tag :pending
   test "allergic_to_everything" do
-    Allergies.list(255) |> assert_is_a_set_containing(~w[eggs peanuts shellfish strawberries tomatoes chocolate pollen cats])
+    Allergies.list(255)
+    |> assert_is_a_set_containing(
+      ~w[eggs peanuts shellfish strawberries tomatoes chocolate pollen cats]
+    )
   end
 
   @tag :pending
@@ -68,16 +71,19 @@ defmodule AllergiesTest do
 
   @tag :pending
   test "ignore_non_allergen_score_parts" do
-    Allergies.list(509) |> assert_is_a_set_containing(~w[eggs shellfish strawberries tomatoes chocolate pollen cats])
+    Allergies.list(509)
+    |> assert_is_a_set_containing(~w[eggs shellfish strawberries tomatoes chocolate pollen cats])
   end
 
   defp assert_is_a_set_containing(list, to_contain) do
-    set = Enum.into(list, MapSet.new)
-    same_contents = to_contain
-      |> Enum.into(MapSet.new)
-      |> MapSet.equal?(set)
-    assert same_contents,
-           "Expected a set with: #{inspect to_contain} got #{inspect set |> MapSet.to_list}"
-  end
+    set = Enum.into(list, MapSet.new())
 
+    same_contents =
+      to_contain
+      |> Enum.into(MapSet.new())
+      |> MapSet.equal?(set)
+
+    assert same_contents,
+           "Expected a set with: #{inspect(to_contain)} got #{inspect(set |> MapSet.to_list())}"
+  end
 end

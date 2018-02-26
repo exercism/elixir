@@ -7,11 +7,11 @@ defmodule Atbash do
   iex> Atbash.encode("completely insecure")
   "xlnko vgvob rmhvx fiv"
   """
-  @spec encode(String.t) :: String.t
+  @spec encode(String.t()) :: String.t()
   def encode(plaintext) do
   end
 
-  @spec decode(String.t) :: String.t
+  @spec decode(String.t()) :: String.t()
   def decode(cipher) do
   end
 end

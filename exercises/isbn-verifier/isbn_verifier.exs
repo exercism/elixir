@@ -13,6 +13,5 @@ defmodule ISBNVerifier do
   """
   @spec isbn?(String.t()) :: boolean
   def isbn?(isbn) do
-
   end
 end

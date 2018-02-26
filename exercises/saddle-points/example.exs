@@ -24,7 +24,7 @@ defmodule SaddlePoints do
   def columns(str) do
     str
     |> rows
-    |> List.zip
+    |> List.zip()
     |> Enum.map(&Tuple.to_list/1)
   end
 
@@ -36,6 +36,7 @@ defmodule SaddlePoints do
   def saddle_points(str) do
     rows = rows(str)
     columns = columns(str)
+
     rows
     |> generate_coordinates
     |> Enum.filter(&is_saddle_point?(&1, rows, columns))
@@ -57,13 +58,13 @@ defmodule SaddlePoints do
 
   defp generate_coordinates(rows) do
     rows
-    |> Enum.with_index
+    |> Enum.with_index()
     |> Enum.flat_map(&generate_coordinates_row/1)
   end
 
   defp generate_coordinates_row({row, row_index}) do
     row
-    |> Enum.with_index
+    |> Enum.with_index()
     |> Enum.map(fn {_, col_index} -> {row_index, col_index} end)
   end
 end

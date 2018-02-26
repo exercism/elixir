@@ -6,13 +6,11 @@ defmodule RunLengthEncoder do
   It should also be able to reconstruct the data into its original form.
   "2A3B4C" => "AABBBCCCC"
   """
-  @spec encode(String.t) :: String.t
+  @spec encode(String.t()) :: String.t()
   def encode(string) do
-
   end
 
-  @spec decode(String.t) :: String.t
+  @spec decode(String.t()) :: String.t()
   def decode(string) do
-
   end
 end

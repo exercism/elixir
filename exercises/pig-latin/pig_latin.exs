@@ -17,4 +17,3 @@ defmodule PigLatin do
   def translate(phrase) do
   end
 end
-

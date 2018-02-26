@@ -2,8 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("frequency.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 # Your code should contain a frequency(texts, workers) function which accepts a
 # list of texts and the number of workers to use in parallel.
@@ -76,8 +76,7 @@ defmodule FrequencyTest do
 
   @tag :pending
   test "many times the same text gives a predictable result" do
-    assert freq(List.duplicate("abc", 1000))
-         == %{"a" => 1000, "b" => 1000, "c" => 1000}
+    assert freq(List.duplicate("abc", 1000)) == %{"a" => 1000, "b" => 1000, "c" => 1000}
   end
 
   @tag :pending

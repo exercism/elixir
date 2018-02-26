@@ -2,8 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("dominoes.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule DominoesTest do
   use ExUnit.Case
@@ -49,7 +49,8 @@ defmodule DominoesTest do
 
   @tag :pending
   test "need backtrack" do
-    assert Dominoes.chain?([{1, 2}, {2, 3}, {3, 1}, {2, 4}, {2, 4}]) == true # a variation in which we have to turn but no duplicates
+    # a variation in which we have to turn but no duplicates
+    assert Dominoes.chain?([{1, 2}, {2, 3}, {3, 1}, {2, 4}, {2, 4}]) == true
   end
 
   @tag :pending
@@ -59,9 +60,18 @@ defmodule DominoesTest do
 
   @tag :pending
   test "nine elements" do
-    assert Dominoes.chain?([{1, 2}, {5, 3}, {3, 1}, {1, 2}, {2, 4}, {1, 6}, {2, 3}, {3, 4}, {5, 6}]) == true
- end
-
+    assert Dominoes.chain?([
+             {1, 2},
+             {5, 3},
+             {3, 1},
+             {1, 2},
+             {2, 4},
+             {1, 6},
+             {2, 3},
+             {3, 4},
+             {5, 6}
+           ]) == true
+  end
 
   @tag :pending
   test "disconnected - simple" do

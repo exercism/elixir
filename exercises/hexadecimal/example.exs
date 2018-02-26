@@ -1,8 +1,8 @@
 defmodule Hexadecimal do
   @base 16
   @hex_table String.split("0123456789abcdef", "", trim: true)
-               |> Enum.with_index
-               |> Enum.into(%{})
+             |> Enum.with_index()
+             |> Enum.into(%{})
 
   @doc """
     Accept a string representing a hexadecimal value and return the
@@ -26,10 +26,10 @@ defmodule Hexadecimal do
       0
     else
       hex
-        |> String.downcase
-        |> String.reverse
-        |> String.split("", trim: true)
-        |> hex_to_int(0, 0)
+      |> String.downcase()
+      |> String.reverse()
+      |> String.split("", trim: true)
+      |> hex_to_int(0, 0)
     end
   end
 
@@ -38,7 +38,8 @@ defmodule Hexadecimal do
   end
 
   defp hex_to_int([], acc, _), do: round(acc)
-  defp hex_to_int([char|hex], acc, power) do
+
+  defp hex_to_int([char | hex], acc, power) do
     acc = acc + Map.get(@hex_table, char) * :math.pow(@base, power)
     hex_to_int(hex, acc, power + 1)
   end

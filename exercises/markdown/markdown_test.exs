@@ -2,8 +2,8 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("markdown.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule MarkdownTest do
   use ExUnit.Case
@@ -67,7 +67,10 @@ defmodule MarkdownTest do
   @tag :pending
   test "with a little bit of everything" do
     input = "# Header!\n* __Bold Item__\n* _Italic Item_"
-    expected = "<h1>Header!</h1><ul><li><strong>Bold Item</strong></li><li><em>Italic Item</em></li></ul>"
+
+    expected =
+      "<h1>Header!</h1><ul><li><strong>Bold Item</strong></li><li><em>Italic Item</em></li></ul>"
+
     assert Markdown.parse(input) == expected
   end
 end

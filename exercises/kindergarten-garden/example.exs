@@ -1,6 +1,18 @@
 defmodule Garden do
-  @default_names [:alice, :bob, :charlie, :david, :eve, :fred, :ginny, :harriet,
-                  :ileana, :joseph, :kincaid, :larry]
+  @default_names [
+    :alice,
+    :bob,
+    :charlie,
+    :david,
+    :eve,
+    :fred,
+    :ginny,
+    :harriet,
+    :ileana,
+    :joseph,
+    :kincaid,
+    :larry
+  ]
   @letter_map %{"V" => :violets, "R" => :radishes, "C" => :clover, "G" => :grass}
 
   @doc """
@@ -46,7 +58,7 @@ defmodule Garden do
 
   defp add_to_map(map, current_name, letters) do
     letters = String.codepoints(letters)
-    translated_list = Enum.map(letters, fn(letter) -> @letter_map[letter] end)
+    translated_list = Enum.map(letters, fn letter -> @letter_map[letter] end)
     tuple = List.to_tuple(translated_list)
     Map.put(map, current_name, tuple)
   end

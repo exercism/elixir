@@ -6,8 +6,8 @@ defmodule StringSeries do
   """
   @spec slices(s :: String.t(), size :: integer) :: list(String.t())
   def slices(_s, size) when size < 1, do: []
+
   def slices(s, size) do
-    s |> String.graphemes |> Enum.chunk(size, 1) |> Enum.map(&Enum.join/1)
+    s |> String.graphemes() |> Enum.chunk(size, 1) |> Enum.map(&Enum.join/1)
   end
 end
-

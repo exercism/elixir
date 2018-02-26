@@ -2,14 +2,14 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
   Code.load_file("pig_latin.exs", __DIR__)
 end
 
-ExUnit.start
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.start()
+ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule PigLatinTest do
   use ExUnit.Case
 
   describe "ay is added to words that start with vowels" do
-    #@tag :pending
+    # @tag :pending
     test "word beginning with a" do
       assert PigLatin.translate("apple") == "appleay"
     end

@@ -16,7 +16,7 @@ defmodule Transpose do
   "AD\nBE\n F"
   """
 
-  @spec transpose(String.t) :: String.t
+  @spec transpose(String.t()) :: String.t()
   def transpose(input) do
   end
 end

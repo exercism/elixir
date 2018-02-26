@@ -1,5 +1,5 @@
 defmodule Queens do
-  @type t :: %Queens{ black: {integer, integer}, white: {integer, integer} }
+  @type t :: %Queens{black: {integer, integer}, white: {integer, integer}}
   defstruct black: nil, white: nil
 
   @doc """
@@ -8,7 +8,6 @@ defmodule Queens do
   @spec new() :: Queens.t()
   @spec new({integer, integer}, {integer, integer}) :: Queens.t()
   def new(white, black) do
-
   end
 
   @doc """
@@ -17,7 +16,6 @@ defmodule Queens do
   """
   @spec to_string(Queens.t()) :: String.t()
   def to_string(queens) do
-
   end
 
   @doc """
@@ -25,6 +23,5 @@ defmodule Queens do
   """
   @spec can_attack?(Queens.t()) :: boolean
   def can_attack?(queens) do
-
   end
 end

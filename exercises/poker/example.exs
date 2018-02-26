@@ -29,9 +29,10 @@ defmodule Poker do
   """
   @spec best_hand(list(list(String.t()))) :: list(list(String.t()))
   def best_hand(hands) do
-    sorted_hands = hands
-                   |> Enum.map(&score_hand/1)
-                   |> Enum.sort(&sort_scored_hands/2)
+    sorted_hands =
+      hands
+      |> Enum.map(&score_hand/1)
+      |> Enum.sort(&sort_scored_hands/2)
 
     [{_, highest_score, highest_extra} | _] = sorted_hands
 
@@ -47,19 +48,21 @@ defmodule Poker do
   @suits ~w(clubs diamonds hearts spades)a
   @scores ~w(straight_flush four_of_a_kind full_house flush straight three_of_a_kind two_pair pair high_card)a
 
-  for {rank, value} <- Enum.with_index(@ranks, 2), suit <- @suits do
-    suit_char = suit |> to_string |> String.upcase |> String.first
+  for {rank, value} <- Enum.with_index(@ranks, 2),
+      suit <- @suits do
+    suit_char = suit |> to_string |> String.upcase() |> String.first()
 
-    defp card(<< unquote(rank), unquote(suit_char) >>), do: {unquote(value), unquote(suit)}
+    defp card(<<unquote(rank), unquote(suit_char)>>), do: {unquote(value), unquote(suit)}
   end
 
   defp score_hand(hand) do
-    {ranks, suits} = hand
-                     |> Enum.map(&card/1)
-                     |> Enum.sort(&sort_rank_asc/2)
-                     |> Enum.unzip
+    {ranks, suits} =
+      hand
+      |> Enum.map(&card/1)
+      |> Enum.sort(&sort_rank_asc/2)
+      |> Enum.unzip()
 
-    flush = suits |> Enum.uniq |> length |> Kernel.==(1)
+    flush = suits |> Enum.uniq() |> length |> Kernel.==(1)
 
     ranks
     |> Enum.group_by(fn x -> x end)
@@ -71,41 +74,70 @@ defmodule Poker do
 
   defp score_hand(_, [2, 3, 4, 5, 14], true), do: {:straight_flush, {5}}
   defp score_hand(_, [2, 3, 4, 5, 14], _), do: {:straight, {5}}
-  defp score_hand(counts, [low, _, _, _, high], true) when length(counts) == 5 and high-low == 4, do: {:straight_flush, {high}}
-  defp score_hand(counts, [low, _, _, _, high], _) when length(counts) == 5 and high-low == 4, do: {:straight, {high}}
-  defp score_hand(_, ranks, true), do: {:flush, {ranks |> Enum.sort |> Enum.reverse}}
+
+  defp score_hand(counts, [low, _, _, _, high], true) when length(counts) == 5 and high - low == 4,
+    do: {:straight_flush, {high}}
+
+  defp score_hand(counts, [low, _, _, _, high], _) when length(counts) == 5 and high - low == 4,
+    do: {:straight, {high}}
+
+  defp score_hand(_, ranks, true), do: {:flush, {ranks |> Enum.sort() |> Enum.reverse()}}
   defp score_hand([{kicker, 1}, {high, 4}], _, _), do: {:four_of_a_kind, {high, kicker}}
   defp score_hand([{pair, 2}, {triplet, 3}], _, _), do: {:full_house, {triplet, pair}}
-  defp score_hand([{kicker1, 1}, {kicker2, 1}, {triplet, 3}], _, _), do: {:three_of_a_kind, {triplet, [ kicker1, kicker2 ] |> Enum.sort |> Enum.reverse}}
-  defp score_hand([{kicker, 1}, {low_pair, 2}, {high_pair, 2}], _, _), do: {:two_pair, {high_pair, low_pair, kicker}}
-  defp score_hand([{kicker1, 1}, {kicker2, 1}, {kicker3, 1}, {pair, 2}], _, _), do: {:pair, {pair, [ kicker1, kicker2, kicker3 ] |> Enum.sort |> Enum.reverse}}
-  defp score_hand(_, ranks, _), do: {:high_card, {ranks |> Enum.sort |> Enum.reverse}}
+
+  defp score_hand([{kicker1, 1}, {kicker2, 1}, {triplet, 3}], _, _),
+    do: {:three_of_a_kind, {triplet, [kicker1, kicker2] |> Enum.sort() |> Enum.reverse()}}
+
+  defp score_hand([{kicker, 1}, {low_pair, 2}, {high_pair, 2}], _, _),
+    do: {:two_pair, {high_pair, low_pair, kicker}}
+
+  defp score_hand([{kicker1, 1}, {kicker2, 1}, {kicker3, 1}, {pair, 2}], _, _),
+    do: {:pair, {pair, [kicker1, kicker2, kicker3] |> Enum.sort() |> Enum.reverse()}}
+
+  defp score_hand(_, ranks, _), do: {:high_card, {ranks |> Enum.sort() |> Enum.reverse()}}
 
   defp sort_rank_asc({rank1, _}, {rank2, _}), do: rank1 <= rank2
-  defp sort_count_then_rank_asc({rank1, count1}, {rank2, count2}), do: count1 <= count2 and rank1 <= rank2
+
+  defp sort_count_then_rank_asc({rank1, count1}, {rank2, count2}),
+    do: count1 <= count2 and rank1 <= rank2
 
   # Compare different scores against each other first
   for {score, index} <- @scores |> Enum.with_index(1) do
     for other_score <- @scores |> Enum.drop(index) do
-      defp sort_scored_hands({_, unquote(score), _}, {_, unquote(other_score), _} ), do: true
-      defp sort_scored_hands({_, unquote(other_score), _}, {_, unquote(score), _} ), do: false
+      defp sort_scored_hands({_, unquote(score), _}, {_, unquote(other_score), _}), do: true
+      defp sort_scored_hands({_, unquote(other_score), _}, {_, unquote(score), _}), do: false
     end
   end
 
   # Additional rules for tiebreakers
 
   # Straight flush tie determined by high card
-  defp sort_scored_hands({_, :straight_flush, {high_a}}, {_, :straight_flush, {high_b}}), do: high_a >= high_b
+  defp sort_scored_hands({_, :straight_flush, {high_a}}, {_, :straight_flush, {high_b}}),
+    do: high_a >= high_b
 
   # 4-of-a-kind tie determined by rank, then by kicker
-  defp sort_scored_hands({_, :four_of_a_kind, {rank_a, _}}, {_, :four_of_a_kind, {rank_b, _}}) when rank_a > rank_b, do: true
-  defp sort_scored_hands({_, :four_of_a_kind, {rank_a, _}}, {_, :four_of_a_kind, {rank_b, _}}) when rank_a < rank_b, do: false
-  defp sort_scored_hands({_, :four_of_a_kind, {_, kicker_a}}, {_, :four_of_a_kind, {_, kicker_b}}), do: kicker_a >= kicker_b
+  defp sort_scored_hands({_, :four_of_a_kind, {rank_a, _}}, {_, :four_of_a_kind, {rank_b, _}})
+       when rank_a > rank_b,
+       do: true
+
+  defp sort_scored_hands({_, :four_of_a_kind, {rank_a, _}}, {_, :four_of_a_kind, {rank_b, _}})
+       when rank_a < rank_b,
+       do: false
+
+  defp sort_scored_hands({_, :four_of_a_kind, {_, kicker_a}}, {_, :four_of_a_kind, {_, kicker_b}}),
+    do: kicker_a >= kicker_b
 
   # Full house tie determined by triplet, then pair
-  defp sort_scored_hands({_, :full_house, {triplet_a, _}}, {_, :full_house, {triplet_b, _}}) when triplet_a > triplet_b, do: true
-  defp sort_scored_hands({_, :full_house, {triplet_a, _}}, {_, :full_house, {triplet_b, _}}) when triplet_a < triplet_b, do: false
-  defp sort_scored_hands({_, :full_house, {_, pair_a}}, {_, :full_house, {_, pair_b}}), do: pair_a >= pair_b
+  defp sort_scored_hands({_, :full_house, {triplet_a, _}}, {_, :full_house, {triplet_b, _}})
+       when triplet_a > triplet_b,
+       do: true
+
+  defp sort_scored_hands({_, :full_house, {triplet_a, _}}, {_, :full_house, {triplet_b, _}})
+       when triplet_a < triplet_b,
+       do: false
+
+  defp sort_scored_hands({_, :full_house, {_, pair_a}}, {_, :full_house, {_, pair_b}}),
+    do: pair_a >= pair_b
 
   # Flush tie determined by high card, comparing all 5 if necessary
   defp sort_scored_hands({_, :flush, {ranks_a}}, {_, :flush, {ranks_b}}), do: ranks_a >= ranks_b
@@ -114,23 +146,54 @@ defmodule Poker do
   defp sort_scored_hands({_, :straight, {high_a}}, {_, :straight, {high_b}}), do: high_a >= high_b
 
   # 3-of-a-kind tie determined by triplet, then by high card, comparing both if necessary
-  defp sort_scored_hands({_, :three_of_a_kind, {triplet_a, _}}, {_, :three_of_a_kind, {triplet_b, _}}) when triplet_a > triplet_b, do: true
-  defp sort_scored_hands({_, :three_of_a_kind, {triplet_a, _}}, {_, :three_of_a_kind, {triplet_b, _}}) when triplet_a < triplet_b, do: false
-  defp sort_scored_hands({_, :three_of_a_kind, {_, ranks_a}}, {_, :three_of_a_kind, {_, ranks_b}}), do: ranks_a >= ranks_b
+  defp sort_scored_hands(
+         {_, :three_of_a_kind, {triplet_a, _}},
+         {_, :three_of_a_kind, {triplet_b, _}}
+       )
+       when triplet_a > triplet_b,
+       do: true
+
+  defp sort_scored_hands(
+         {_, :three_of_a_kind, {triplet_a, _}},
+         {_, :three_of_a_kind, {triplet_b, _}}
+       )
+       when triplet_a < triplet_b,
+       do: false
+
+  defp sort_scored_hands({_, :three_of_a_kind, {_, ranks_a}}, {_, :three_of_a_kind, {_, ranks_b}}),
+    do: ranks_a >= ranks_b
 
   # Two-pair tie determined by high pair, then low pair, then by kicker
-  defp sort_scored_hands({_, :two_pair, {high_a, _, _}}, {_, :two_pair, {high_b, _, _}}) when high_a > high_b, do: true
-  defp sort_scored_hands({_, :two_pair, {high_a, _, _}}, {_, :two_pair, {high_b, _, _}}) when high_a < high_b, do: false
-  defp sort_scored_hands({_, :two_pair, {_, low_a, _}}, {_, :two_pair, {_, low_b, _}}) when low_a > low_b, do: true
-  defp sort_scored_hands({_, :two_pair, {_, low_a, _}}, {_, :two_pair, {_, low_b, _}}) when low_a < low_b, do: false
-  defp sort_scored_hands({_, :two_pair, {_, _, kicker_a}}, {_, :two_pair, {_, _, kicker_b}}), do: kicker_a >= kicker_b
+  defp sort_scored_hands({_, :two_pair, {high_a, _, _}}, {_, :two_pair, {high_b, _, _}})
+       when high_a > high_b,
+       do: true
+
+  defp sort_scored_hands({_, :two_pair, {high_a, _, _}}, {_, :two_pair, {high_b, _, _}})
+       when high_a < high_b,
+       do: false
+
+  defp sort_scored_hands({_, :two_pair, {_, low_a, _}}, {_, :two_pair, {_, low_b, _}})
+       when low_a > low_b,
+       do: true
+
+  defp sort_scored_hands({_, :two_pair, {_, low_a, _}}, {_, :two_pair, {_, low_b, _}})
+       when low_a < low_b,
+       do: false
+
+  defp sort_scored_hands({_, :two_pair, {_, _, kicker_a}}, {_, :two_pair, {_, _, kicker_b}}),
+    do: kicker_a >= kicker_b
 
   # Pair tie determined by pair rank, then by high card, comparing all 3 if necessary
-  defp sort_scored_hands({_, :pair, {pair_a, _}}, {_, :pair, {pair_b, _}}) when pair_a > pair_b, do: true
-  defp sort_scored_hands({_, :pair, {pair_a, _}}, {_, :pair, {pair_b, _}}) when pair_a < pair_b, do: false
-  defp sort_scored_hands({_, :pair, {_, kickers_a}}, {_, :pair, {_, kickers_b}}), do: kickers_a >= kickers_b
+  defp sort_scored_hands({_, :pair, {pair_a, _}}, {_, :pair, {pair_b, _}}) when pair_a > pair_b,
+    do: true
+
+  defp sort_scored_hands({_, :pair, {pair_a, _}}, {_, :pair, {pair_b, _}}) when pair_a < pair_b,
+    do: false
+
+  defp sort_scored_hands({_, :pair, {_, kickers_a}}, {_, :pair, {_, kickers_b}}),
+    do: kickers_a >= kickers_b
 
   # High-card tie determined by high card, comparing all 5 if necessary
-  defp sort_scored_hands({_, :high_card, {ranks_a}}, {_, :high_card, {ranks_b}}), do: ranks_a >= ranks_b
+  defp sort_scored_hands({_, :high_card, {ranks_a}}, {_, :high_card, {ranks_b}}),
+    do: ranks_a >= ranks_b
 end
-

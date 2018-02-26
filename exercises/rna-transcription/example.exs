@@ -8,7 +8,7 @@ defmodule RNATranscription do
   'UGAC'
   """
   def to_rna(dna) do
-    Enum.map dna, &transcribe(&1)
+    Enum.map(dna, &transcribe(&1))
   end
 
   defp transcribe(?C), do: ?G

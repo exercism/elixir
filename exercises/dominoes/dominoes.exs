@@ -1,5 +1,4 @@
 defmodule Dominoes do
-
   @type domino :: {1..6, 1..6}
 
   @doc """

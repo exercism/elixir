@@ -9,6 +9,5 @@ defmodule PrimeFactors do
   """
   @spec factors_for(pos_integer) :: [pos_integer]
   def factors_for(number) do
-
   end
 end

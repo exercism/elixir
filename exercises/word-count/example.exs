@@ -3,15 +3,15 @@ defmodule Words do
 
   def count(sentence) do
     sentence
-      |> String.downcase
-      |> remove_punctuation
-      |> to_words
-      |> summarize
+    |> String.downcase()
+    |> remove_punctuation
+    |> to_words
+    |> summarize
   end
 
   defp remove_punctuation(string), do: String.replace(string, @ascii_punctuation, " ")
 
-  defp to_words(sentence), do: List.flatten String.split(sentence)
+  defp to_words(sentence), do: List.flatten(String.split(sentence))
 
   defp summarize(words) do
     Enum.reduce(words, %{}, &add_count/2)
