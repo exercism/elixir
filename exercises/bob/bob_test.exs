@@ -34,7 +34,7 @@ defmodule BobTest do
 
   @tag :pending
   test "asking in capitals" do
-    assert Bob.hey("THIS ISN'T SHOUTING?") == "Sure."
+    assert Bob.hey("THIS ISN'T SHOUTING?") == "Calm down, I know what I'm doing!"
   end
 
   @tag :pending
