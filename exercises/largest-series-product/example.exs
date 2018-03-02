@@ -36,7 +36,7 @@ defmodule Series do
   end
 
   # Handle Enum.chunks -> Enum.chunk renaming.
-  if not ({:chunk, 3} in Enum.__info__(:functions)) do
+  if {:chunk, 3} not in Enum.__info__(:functions) do
     defp chunk(coll, n, step), do: Enum.chunks(coll, n, step)
   else
     defp chunk(coll, n, step), do: Enum.chunk(coll, n, step)
