@@ -18,6 +18,6 @@ defmodule ExercismTestRunner.Mixfile do
   end
 
   defp deps do
-    [{:poison, "~> 1.4.0"}, {:dialyxir, "~> 0.5"}]
+    [{:dialyxir, "~> 0.5"}]
   end
 end
