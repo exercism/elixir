@@ -1,6 +1,6 @@
 defmodule ProteinTranslation do
   @doc """
-  Given an RNA string, return a list of proteins specified by codons, in order.
+  Given an RNA string, return a list of amino acids specified by codons, in order.
   """
   @spec of_rna(String.t()) :: {atom, list(String.t())}
   def of_rna(rna) do
@@ -8,7 +8,7 @@ defmodule ProteinTranslation do
   end
 
   @doc """
-  Given a codon, return the corresponding protein
+  Given a codon, return the corresponding amino acid
 
   UGU -> Cysteine
   UGC -> Cysteine
@@ -51,12 +51,12 @@ defmodule ProteinTranslation do
     defp translate_codon(unquote(codon)), do: {:ok, "STOP"}
   end
 
-  for {protein, codons} <- @codons,
+  for {amino_acid, codons} <- @codons,
       codon <- codons do
     defp translate_rna(unquote(codon) <> rest, results),
-      do: translate_rna(rest, [unquote(protein) | results])
+      do: translate_rna(rest, [unquote(amino_acid) | results])
 
-    defp translate_codon(unquote(codon)), do: {:ok, unquote(protein)}
+    defp translate_codon(unquote(codon)), do: {:ok, unquote(amino_acid)}
   end
 
   defp translate_rna(_, _), do: {:error, "invalid RNA"}
