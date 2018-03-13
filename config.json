@@ -804,6 +804,18 @@
       ],
       "unlocked_by": null,
       "uuid": "cf28d2b2-763e-404b-90b0-637263d3bba6"
+    },
+    {
+      "core": false,
+      "difficulty": 5,
+      "slug": "alphametics",
+      "topics": [
+        "algorithms",
+        "backtracking",
+        "strings"
+      ],
+      "unlocked_by": null,
+      "uuid": "7ed99829-acd8-4724-b92f-85146f1709f9"
     }
   ],
   "foregone": [
