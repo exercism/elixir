@@ -28,7 +28,7 @@ Note the stop codon terminates the translation and the final methionine is not t
 
 Below are the codons and resulting Amino Acids needed for the exercise.
 
-Codon                 | Protein
+Codon                 | Amino Acid
 :---                  | :---
 AUG                   | Methionine
 UUU, UUC              | Phenylalanine
