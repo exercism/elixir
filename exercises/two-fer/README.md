@@ -8,7 +8,7 @@ $ elixir "One for X, one for me."
 
 When X is a name or "you".
 
-If the given name is "Dunk", the result should be "One for Dunk one for me." If no name is given, the result should be "One for you, one for me."
+If the given name is "Dunk", the result should be "One for Dunk, one for me." If no name is given, the result should be "One for you, one for me."
 
 ## Running tests
 
