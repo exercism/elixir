@@ -8,6 +8,8 @@ ExUnit.configure(exclude: :pending, trace: true)
 defmodule TwoFerTest do
   use ExUnit.Case
 
+  @error_message "Invalid argument, expected a string as argument!"
+
   test "no name given" do
     assert TwoFer.two_fer() == "One for you, one for me"
   end
@@ -19,16 +21,22 @@ defmodule TwoFerTest do
 
   @tag :pending
   test "when the parameter is a number" do
-    refute TwoFer.two_fer(10)
+    assert_raise ArgumentError, @error_message, fn ->
+      TwoFer.two_fer(10)
+    end
   end
 
   @tag :pending
   test "when the parameter is an atom" do
-    refute TwoFer.two_fer(:bob)
+    assert_raise ArgumentError, @error_message, fn ->
+      TwoFer.two_fer(:bob)
+    end
   end
 
   @tag :pending
   test "when the parameter is a charlist" do
-    refute TwoFer.two_fer('Jon Snow')
+    assert_raise ArgumentError, @error_message, fn ->
+      refute TwoFer.two_fer('Jon Snow')
+    end
   end
 end

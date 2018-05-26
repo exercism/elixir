@@ -822,7 +822,6 @@
       "difficulty": 1,
       "slug": "two-fer",
       "topics": [
-        "control_flow_conditionals",
         "strings"
       ],
       "unlocked_by": null,
