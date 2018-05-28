@@ -816,6 +816,16 @@
       ],
       "unlocked_by": null,
       "uuid": "7ed99829-acd8-4724-b92f-85146f1709f9"
+    },
+    {
+      "core": false,
+      "difficulty": 1,
+      "slug": "two-fer",
+      "topics": [
+        "strings"
+      ],
+      "unlocked_by": null,
+      "uuid": "e7f3280e-0bef-4fac-8a69-cbfa2e5f818a"
     }
   ],
   "foregone": [
