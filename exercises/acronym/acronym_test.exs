@@ -23,6 +23,12 @@ defmodule AcronymTest do
   end
 
   @tag :pending
+  test "it produces acronyms from multiple inconsistent cases in one word" do
+    input = "WhatAboutMorethanJustTwoUpperCaseletters Acronym"
+    assert Acronym.abbreviate(input) === "WAMJTUCA"
+  end
+
+  @tag :pending
   test "it ignores punctuation" do
     assert Acronym.abbreviate("First in, First out") === "FIFO"
   end
