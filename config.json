@@ -9,7 +9,7 @@
     {
       "slug": "hello-world",
       "uuid": "cc96d65d-1c79-40d0-8fd2-9a6665a43b01",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
@@ -94,7 +94,7 @@
     {
       "slug": "bob",
       "uuid": "d20b49dc-cb6d-45fc-a168-78d002072c75",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 2,
       "topics": [
@@ -117,7 +117,7 @@
     {
       "slug": "word-count",
       "uuid": "4a24ba2f-ae92-4095-be53-64bc881422ea",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 2,
       "topics": [
@@ -246,7 +246,7 @@
     {
       "slug": "rna-transcription",
       "uuid": "a4629a60-752f-4234-99f1-6b3ac0b4ba18",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 2,
       "topics": null
@@ -270,7 +270,7 @@
     {
       "slug": "roman-numerals",
       "uuid": "4c0ece49-5710-43a1-88b3-2fb149de8552",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 2,
       "topics": null
@@ -302,7 +302,7 @@
     {
       "slug": "beer-song",
       "uuid": "24db624b-7c80-409d-97d5-e1177f025c67",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 3,
       "topics": null
@@ -338,7 +338,7 @@
     {
       "slug": "list-ops",
       "uuid": "86658a31-d401-401b-80df-2c4df35f9b15",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 4,
       "topics": null
@@ -437,7 +437,7 @@
     {
       "slug": "markdown",
       "uuid": "5dfa24bf-e77c-47c6-88e1-e50cbeecd159",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 5,
       "topics": null
@@ -493,7 +493,7 @@
     {
       "slug": "binary-search",
       "uuid": "89204af8-3914-404b-8984-39a8d60362c4",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 3,
       "topics": null
@@ -554,7 +554,7 @@
     {
       "slug": "robot-simulator",
       "uuid": "e5e55560-852f-4551-b4da-c9f4a3141470",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 6,
       "topics": null
@@ -581,7 +581,7 @@
     {
       "slug": "bank-account",
       "uuid": "5d5e0f6c-f4b7-418e-88f8-4b1d0f99bfb0",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 7,
       "topics": null
@@ -637,7 +637,7 @@
     {
       "slug": "zipper",
       "uuid": "bc315734-051c-4735-9a8a-3aacb094d2ca",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 8,
       "topics": null
@@ -679,7 +679,7 @@
     {
       "slug": "bowling",
       "uuid": "3b252cc6-cc55-4187-891e-c10aaabac81f",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 8,
       "topics": null
@@ -703,7 +703,7 @@
     {
       "slug": "forth",
       "uuid": "2abfa3e5-d358-4a07-91f9-d4ad04eb719d",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 10,
       "topics": null
@@ -711,7 +711,7 @@
     {
       "slug": "clock",
       "uuid": "e7cb9cd0-5893-4ebb-b801-f5d548945531",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 5,
       "topics": [
