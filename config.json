@@ -11,6 +11,7 @@
       "uuid": "cc96d65d-1c79-40d0-8fd2-9a6665a43b01",
       "core": true,
       "unlocked_by": null,
+      "auto_approve": true,
       "difficulty": 1,
       "topics": [
         "strings"
