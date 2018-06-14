@@ -11,8 +11,16 @@ Elixir actually compiles down to [bytecode](https://en.wikipedia.org/wiki/Byteco
 
 There is no "conversion cost" for calling Erlang, meaning you can run Erlang code right next to Elixir code.
 
-Being a functional language, everything in Elixir is an expression. Elixir has "First Class Documentation" meaning comments  can be attached to a function, making it easier to retrieve. Regular expressions are also given first class treatment, removing awkward escaping within strings.
+Being a functional language, everything in Elixir is an expression.
 
-Elixir's asynchronous communication implementation allows the code to be lightweight, yet incorporate high-volume concurrency. Programmers use Elixir to handle thousands of requests and responses *concurrently* on a single server node. It has been used successfully for microservices that need to consume and serve a multitude of APIs rapidly.
+Elixir has "First Class Documentation" meaning comments  can be attached to a function, making it easier to retrieve.
+
+Regular expressions are also given first class treatment, removing awkward escaping within strings.
+
+Elixir's asynchronous communication implementation allows the code to be lightweight, yet incorporate high-volume concurrency.
+
+Programmers use Elixir to handle thousands of requests and responses *concurrently* on a single server node.
+
+It has been used successfully for microservices that need to consume and serve a multitude of APIs rapidly.
 
 The [Phoenix framework](http://www.phoenixframework.org/) helps structure Elixir applications for the web.
