@@ -144,7 +144,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": null
+      "topics": ["string_processing"]
     },
     {
       "slug": "series",
@@ -162,7 +162,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": null
+      "topics": ["mathematics", "conditionals"]
     },
     {
       "slug": "run-length-encoding",
@@ -170,7 +170,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": null
+      "topics": ["algorithms", "strings"]
     },
     {
       "slug": "sublist",
@@ -178,7 +178,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": null
+      "topics": ["lists", "enumeration"]
     },
     {
       "slug": "scrabble-score",
@@ -186,7 +186,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": null
+      "topics": ["reduce"]
     },
     {
       "slug": "sum-of-multiples",
@@ -194,7 +194,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": null
+      "topics": ["algorithms", "reduce"]
     },
     {
       "slug": "pangram",
@@ -223,7 +223,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": null
+      "topics": ["filter", "enumeration"]
     },
     {
       "slug": "matrix",
@@ -242,7 +242,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 3,
-      "topics": null
+      "topics": ["algorithms", "reduce", "enumeration"]
     },
     {
       "slug": "rna-transcription",
@@ -250,7 +250,7 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": null
+      "topics": ["strings"]
     },
     {
       "slug": "phone-number",
@@ -258,7 +258,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 3,
-      "topics": null
+      "topics": ["string_processing", "pattern_matching"]
     },
     {
       "slug": "nth-prime",
@@ -266,7 +266,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": null
+      "topics": ["algorithms", "mathematics", "recursion"]
     },
     {
       "slug": "roman-numerals",
@@ -274,7 +274,7 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": null
+      "topics": ["algorithms", "pattern_matching"]
     },
     {
       "slug": "all-your-base",
@@ -282,7 +282,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": null
+      "topics": ["translation", "numbers"]
     },
     {
       "slug": "hamming",
@@ -290,7 +290,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": null
+      "topics": ["string_processing"]
     },
     {
       "slug": "triangle",
@@ -298,7 +298,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": null
+      "topics": ["mathematics", "algorithms"]
     },
     {
       "slug": "beer-song",
@@ -306,7 +306,7 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 3,
-      "topics": null
+      "topics": ["recursion", "pattern_matching"]
     },
     {
       "slug": "isogram",
@@ -314,7 +314,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 3,
-      "topics": null
+      "topics": ["reduce", "algorithms"]
     },
     {
       "slug": "grade-school",
@@ -322,7 +322,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 3,
-      "topics": null
+      "topics": ["maps"]
     },
     {
       "slug": "tournament",
@@ -342,7 +342,7 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 4,
-      "topics": null
+      "topics": ["lists", "enumeration", "recursion"]
     },
     {
       "slug": "flatten-array",
@@ -350,7 +350,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 3,
-      "topics": null
+      "topics": ["lists", "recursion"]
     },
     {
       "slug": "leap",
@@ -358,7 +358,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 3,
-      "topics": null
+      "topics": ["mathematics", "algorithms"]
     },
     {
       "slug": "kindergarten-garden",
@@ -366,7 +366,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 3,
-      "topics": null
+      "topics": ["string_processing"]
     },
     {
       "slug": "etl",
@@ -374,7 +374,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": null
+      "topics": ["enumeration", "string_processing"]
     },
     {
       "slug": "meetup",
@@ -382,7 +382,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 4,
-      "topics": null
+      "topics": ["time", "calendar", "pattern_matching"]
     },
     {
       "slug": "grains",
@@ -390,7 +390,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 3,
-      "topics": null
+      "topics": ["recursion", "reduce"]
     },
     {
       "slug": "change",
@@ -398,7 +398,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 3,
-      "topics": null
+      "topics": ["enumeration", "reduce"]
     },
     {
       "slug": "parallel-letter-frequency",
@@ -406,7 +406,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 4,
-      "topics": null
+      "topics": ["concurrency", "otp"]
     },
     {
       "slug": "binary",
@@ -414,7 +414,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 3,
-      "topics": null
+      "topics": ["binary_operators"]
     },
     {
       "slug": "scale-generator",
@@ -433,7 +433,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 5,
-      "topics": null
+      "topics": ["string_processing", "enumeration"]
     },
     {
       "slug": "markdown",
@@ -441,7 +441,7 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 5,
-      "topics": null
+      "topics": ["refactoring"]
     },
     {
       "slug": "gigasecond",
@@ -449,7 +449,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 3,
-      "topics": null
+      "topics": ["calendar", "time"]
     },
     {
       "slug": "queen-attack",
@@ -457,7 +457,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 7,
-      "topics": null
+      "topics": ["mathematics", "algorithms", "structs"]
     },
     {
       "slug": "pascals-triangle",
@@ -465,7 +465,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 3,
-      "topics": null
+      "topics": ["enumeration", "mathematics", "algorithms"]
     },
     {
       "slug": "saddle-points",
@@ -473,7 +473,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 5,
-      "topics": null
+      "topics": ["matricies", "string_processing", "enumeration"]
     },
     {
       "slug": "hexadecimal",
@@ -481,7 +481,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 3,
-      "topics": null
+      "topics": ["numbers", "string_processing"]
     },
     {
       "slug": "diamond",
@@ -489,7 +489,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 5,
-      "topics": null
+      "topics": ["algorithms", "enumeration"]
     },
     {
       "slug": "binary-search",
@@ -497,7 +497,7 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 3,
-      "topics": null
+      "topics": ["algorithms", "recursion"]
     },
     {
       "slug": "binary-search-tree",
@@ -516,7 +516,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 3,
-      "topics": null
+      "topics": ["recursion", "mathematics", "pattern_matching"]
     },
     {
       "slug": "perfect-numbers",
@@ -524,7 +524,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 3,
-      "topics": null
+      "topics": ["pattern_matching", "enumeration"]
     },
     {
       "slug": "diffie-hellman",
@@ -542,7 +542,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 5,
-      "topics": null
+      "topics": ["enumeration"]
     },
     {
       "slug": "wordy",
@@ -550,7 +550,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 6,
-      "topics": null
+      "topics": ["parsers", "mathematics"]
     },
     {
       "slug": "robot-simulator",
@@ -558,7 +558,7 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 6,
-      "topics": null
+      "topics": ["structs", "pattern_matching", "otp"]
     },
     {
       "slug": "atbash-cipher",
@@ -566,7 +566,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 3,
-      "topics": null
+      "topics": ["encryption"]
     },
     {
       "slug": "simple-cipher",
@@ -585,7 +585,7 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 7,
-      "topics": null
+      "topics": ["otp"]
     },
     {
       "slug": "largest-series-product",
@@ -593,7 +593,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 4,
-      "topics": null
+      "topics": ["enumeration", "recursion"]
     },
     {
       "slug": "crypto-square",
@@ -601,7 +601,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 4,
-      "topics": null
+      "topics": ["encryption", "algorithms"]
     },
     {
       "slug": "pythagorean-triplet",
@@ -609,7 +609,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 5,
-      "topics": null
+      "topics": ["reduce", "algorithms"]
     },
     {
       "slug": "allergies",
@@ -617,7 +617,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 4,
-      "topics": null
+      "topics": ["binary_operators", "enumeration"]
     },
     {
       "slug": "palindrome-products",
@@ -625,7 +625,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 5,
-      "topics": null
+      "topics": ["reduce", "mathematics"]
     },
     {
       "slug": "rail-fence-cipher",
@@ -633,7 +633,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 6,
-      "topics": null
+      "topics": ["encryption", "string_processing"]
     },
     {
       "slug": "zipper",
@@ -641,7 +641,7 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 8,
-      "topics": null
+      "topics": ["structs", "recursion", "trees", "algorithms"]
     },
     {
       "slug": "minesweeper",
@@ -649,7 +649,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 7,
-      "topics": null
+      "topics": ["enumeration", "reduce", "algorithms"]
     },
     {
       "slug": "connect",
@@ -657,7 +657,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 7,
-      "topics": null
+      "topics": ["string_processing", "reduce"]
     },
     {
       "slug": "difference-of-squares",
@@ -665,7 +665,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 4,
-      "topics": null
+      "topics": ["mathematics", "reduce"]
     },
     {
       "slug": "poker",
@@ -683,7 +683,7 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 8,
-      "topics": null
+      "topics": ["structs", "algorithms", "pattern_matching"]
     },
     {
       "slug": "dot-dsl",
@@ -691,7 +691,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 8,
-      "topics": null
+      "topics": ["structs", "graphs"]
     },
     {
       "slug": "custom-set",
@@ -699,7 +699,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 5,
-      "topics": null
+      "topics": ["collections", "enumeration"]
     },
     {
       "slug": "forth",
@@ -707,7 +707,7 @@
       "core": true,
       "unlocked_by": null,
       "difficulty": 10,
-      "topics": null
+      "topics": ["parsers"]
     },
     {
       "slug": "clock",
