@@ -23,6 +23,8 @@ A matrix may have zero or more saddle points.
 Your code should be able to provide the (possibly empty) list of all the
 saddle points for any given matrix.
 
+The matrix can have a different number of rows and columns (Non square).
+
 Note that you may find other definitions of matrix saddle points online,
 but the tests for this exercise follow the above unambiguous definition.
 
@@ -57,8 +59,9 @@ Or, you can enable all the tests by commenting out the
 # ExUnit.configure exclude: :pending, trace: true
 ```
 
-For more detailed information about the Elixir track, please
-see the [help page](http://exercism.io/languages/elixir).
+If you're stuck on something, it may help to look at some of
+the [available resources](https://exercism.io/tracks/elixir/resources)
+out there where answers might be found.
 
 ## Source
 

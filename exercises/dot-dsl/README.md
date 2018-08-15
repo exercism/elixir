@@ -6,10 +6,9 @@ A [Domain Specific Language
 (DSL)](https://en.wikipedia.org/wiki/Domain-specific_language) is a
 small language optimized for a specific domain.
 
-For example the dot language of [Graphviz](http://graphviz.org) allows
-you to write a textual description of a graph which is then transformed
-into a picture by one of the graphviz tools (such as `dot`). A simple
-graph looks like this:
+For example the [DOT language](https://en.wikipedia.org/wiki/DOT_(graph_description_language)) allows
+you to write a textual description of a graph which is then transformed into a picture by one of
+the [Graphviz](http://graphviz.org/) tools (such as `dot`). A simple graph looks like this:
 
     graph {
         graph [bgcolor="yellow"]
@@ -55,8 +54,9 @@ Or, you can enable all the tests by commenting out the
 # ExUnit.configure exclude: :pending, trace: true
 ```
 
-For more detailed information about the Elixir track, please
-see the [help page](http://exercism.io/languages/elixir).
+If you're stuck on something, it may help to look at some of
+the [available resources](https://exercism.io/tracks/elixir/resources)
+out there where answers might be found.
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.

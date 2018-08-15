@@ -52,8 +52,13 @@ Or, you can enable all the tests by commenting out the
 # ExUnit.configure exclude: :pending, trace: true
 ```
 
-For more detailed information about the Elixir track, please
-see the [help page](http://exercism.io/languages/elixir).
+If you're stuck on something, it may help to look at some of
+the [available resources](https://exercism.io/tracks/elixir/resources)
+out there where answers might be found.
+
+## Source
+
+Inspired by 'Data Structures and Algorithms with Object-Oriented Design Patterns in Ruby', singly linked-lists. [http://www.brpreiss.com/books/opus8/html/page96.html#SECTION004300000000000000000](http://www.brpreiss.com/books/opus8/html/page96.html#SECTION004300000000000000000)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.

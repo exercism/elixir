@@ -31,9 +31,10 @@ The Hamming distance between these two DNA strands is 7.
 
 # Implementation notes
 
-The Hamming distance is only defined for sequences of equal length. This means
-that based on the definition, each language could deal with getting sequences
-of equal length differently.
+The Hamming distance is only defined for sequences of equal length, so
+an attempt to calculate it between sequences of different lengths should
+not work. The general handling of this situation (e.g., raising an
+exception vs returning a special value) may differ between languages.
 
 ## Running tests
 
@@ -66,8 +67,9 @@ Or, you can enable all the tests by commenting out the
 # ExUnit.configure exclude: :pending, trace: true
 ```
 
-For more detailed information about the Elixir track, please
-see the [help page](http://exercism.io/languages/elixir).
+If you're stuck on something, it may help to look at some of
+the [available resources](https://exercism.io/tracks/elixir/resources)
+out there where answers might be found.
 
 ## Source
 
