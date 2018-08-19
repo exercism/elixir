@@ -19,7 +19,7 @@ If everything goes well, you will be ready to fetch your first real exercise.
 Execute the tests with:
 
 ```bash
-$ elixir hello_world_test.exs
+$ mix test
 ```
 
 ### Pending tests
@@ -39,7 +39,7 @@ end
 ```
 
 Or, you can enable all the tests by commenting out the
-`ExUnit.configure` line in the test suite.
+`ExUnit.configure` line in `test/test_helper.exs`.
 
 ```elixir
 # ExUnit.configure exclude: :pending, trace: true
