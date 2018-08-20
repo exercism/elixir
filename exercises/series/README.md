@@ -1,18 +1,18 @@
 # Series
 
 Given a string of digits, output all the contiguous substrings of length `n` in
-that string.
+that string in the order that they appear.
 
 For example, the string "49142" has the following 3-digit series:
 
-- 491
-- 914
-- 142
+- "491"
+- "914"
+- "142"
 
 And the following 4-digit series:
 
-- 4914
-- 9142
+- "4914"
+- "9142"
 
 And if you ask for a 6-digit series from a 5-digit string, you deserve
 whatever you get.
@@ -51,8 +51,9 @@ Or, you can enable all the tests by commenting out the
 # ExUnit.configure exclude: :pending, trace: true
 ```
 
-For more detailed information about the Elixir track, please
-see the [help page](http://exercism.io/languages/elixir).
+If you're stuck on something, it may help to look at some of
+the [available resources](https://exercism.io/tracks/elixir/resources)
+out there where answers might be found.
 
 ## Source
 
