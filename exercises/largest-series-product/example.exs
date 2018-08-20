@@ -39,6 +39,6 @@ defmodule Series do
   if {:chunk, 3} not in Enum.__info__(:functions) do
     defp chunk(coll, n, step), do: Enum.chunks(coll, n, step)
   else
-    defp chunk(coll, n, step), do: Enum.chunk(coll, n, step)
+    defp chunk(coll, n, step), do: Enum.chunk_every(coll, n, step, :discard)
   end
 end

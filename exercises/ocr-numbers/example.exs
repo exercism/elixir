@@ -5,7 +5,7 @@ defmodule OCRNumbers do
   """
   @spec convert([String.t()]) :: String.t()
   def convert(input) do
-    Enum.chunk(input, 4)
+    Enum.chunk_every(input, 4)
     |> Enum.map(fn row_set -> _convert(row_set, "") end)
     |> format_output()
   end
