@@ -125,7 +125,7 @@ defmodule Say do
     pad_size = pad_size(chunk_size, rem(Enum.count(list), chunk_size))
 
     pad(list, pad, pad_size)
-    |> Enum.chunk(chunk_size)
+    |> Enum.chunk_every(chunk_size)
   end
 
   @spec pad_size(number, number) :: number

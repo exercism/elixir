@@ -25,7 +25,7 @@ defmodule PascalsTriangle do
     list
     |> Enum.flat_map(&[&1, &1])
     |> Enum.slice(1..-2)
-    |> Enum.chunk(2)
+    |> Enum.chunk_every(2)
   end
 
   defp add_ends(list), do: [1] ++ list ++ [1]
