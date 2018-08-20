@@ -60,7 +60,7 @@ defmodule RobotSimulator do
   defp move(_, {:error, _} = error), do: error
   defp move(_, _), do: {:error, "invalid instruction"}
 
-  for [curr, right] <- @valid_directions |> Stream.cycle() |> Enum.take(5) |> Enum.chunk(2, 1) do
+  for [curr, right] <- @valid_directions |> Stream.cycle() |> Enum.take(5) |> Enum.chunk_every(2, 1) do
     defp rotate_right(unquote(curr)), do: unquote(right)
     defp rotate_left(unquote(right)), do: unquote(curr)
   end
