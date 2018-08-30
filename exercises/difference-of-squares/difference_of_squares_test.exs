@@ -9,8 +9,8 @@ defmodule DifferenceOfSquaresTest do
   use ExUnit.Case
 
   # @tag :pending
-  test "square of sums to 5" do
-    assert Squares.square_of_sums(5) == 225
+  test "square of sum to 5" do
+    assert Squares.square_of_sum(5) == 225
   end
 
   @tag :pending
@@ -19,13 +19,13 @@ defmodule DifferenceOfSquaresTest do
   end
 
   @tag :pending
-  test "difference of sums to 5" do
+  test "difference of sum to 5" do
     assert Squares.difference(5) == 170
   end
 
   @tag :pending
-  test "square of sums to 10" do
-    assert Squares.square_of_sums(10) == 3025
+  test "square of sum to 10" do
+    assert Squares.square_of_sum(10) == 3025
   end
 
   @tag :pending
@@ -34,13 +34,13 @@ defmodule DifferenceOfSquaresTest do
   end
 
   @tag :pending
-  test "difference of sums to 10" do
+  test "difference of sum to 10" do
     assert Squares.difference(10) == 2640
   end
 
   @tag :pending
-  test "square of sums to 100" do
-    assert Squares.square_of_sums(100) == 25_502_500
+  test "square of sum to 100" do
+    assert Squares.square_of_sum(100) == 25_502_500
   end
 
   @tag :pending
@@ -49,7 +49,7 @@ defmodule DifferenceOfSquaresTest do
   end
 
   @tag :pending
-  test "difference of sums to 100" do
+  test "difference of sum to 100" do
     assert Squares.difference(100) == 25_164_150
   end
 end
