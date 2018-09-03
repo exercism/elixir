@@ -1,6 +1,6 @@
 defmodule Squares do
   @moduledoc """
-  Calculate sum of squares, square of sum, difference between two sum from 1 to a given end number.
+  Calculate sum of squares, square of sum, difference between two sums from 1 to a given end number.
   """
 
   @doc """
