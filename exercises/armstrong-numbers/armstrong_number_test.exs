@@ -45,21 +45,21 @@ defmodule ArmstrongNumberTest do
 
   @tag :pending
   test "Seven-digit number that is the Armstrong numbers" do
-    assert ArmstrongNumber.is_valid?(9926315)
+    assert ArmstrongNumber.is_valid?(9_926_315)
   end
 
   @tag :pending
   test "Seven-digit number that is not the Armstrong numbers" do
-    refute ArmstrongNumber.is_valid?(2369989)
+    refute ArmstrongNumber.is_valid?(2_369_989)
   end
 
   @tag :pending
   test "Ten-digit number that is the Armstrong numbers" do
-    assert ArmstrongNumber.is_valid?(4679307774)
+    assert ArmstrongNumber.is_valid?(4_679_307_774)
   end
 
   @tag :pending
   test "Fourteen-digit number that is the Armstrong numbers" do
-    assert ArmstrongNumber.is_valid?(28116440335967)
+    assert ArmstrongNumber.is_valid?(28_116_440_335_967)
   end
 end

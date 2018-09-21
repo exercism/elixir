@@ -51,7 +51,7 @@ defmodule Alphametics do
 
   defp to_number(letters, numbers) do
     letters
-    |> Enum.map(& numbers[&1])
+    |> Enum.map(&numbers[&1])
     |> Integer.undigits()
   end
 
