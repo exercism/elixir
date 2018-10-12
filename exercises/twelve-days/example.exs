@@ -26,7 +26,7 @@ defmodule TwelveDays do
   """
   @spec verse(number :: integer) :: String.t()
   def verse(number) do
-    "On the #{ordinal(number)} day of Christmas my true love gave to me, #{
+    "On the #{ordinal(number)} day of Christmas my true love gave to me: #{
       gifts_for_day(number, [])
     }."
   end
