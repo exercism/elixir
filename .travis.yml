@@ -8,18 +8,23 @@ otp_release:
   - 21.0
 
 script:
-- bin/fetch-configlet
-- bin/configlet lint .
-- mix deps.get
-- mix test
+  - bin/fetch-configlet
+  - bin/configlet lint .
+  - mix deps.get
+  - mix test
 
-# fail if there are any compiler warnings
-- mkdir ./tmp
-- EXERCISM_TEST_EXAMPLES=true elixirc --warnings-as-errors **/example.exs **/*_test.exs -o ./tmp > /dev/null
-- rm -rf ./tmp
+  # fail if there are any compiler warnings
+  - mkdir ./tmp
+  - EXERCISM_TEST_EXAMPLES=true elixirc --warnings-as-errors **/example.exs **/*_test.exs -o ./tmp > /dev/null
+  - rm -rf ./tmp
 
-- bin/dialyzer_check.sh
+  - travis_wait 30 bin/dialyzer_check.sh
 
-- "! git grep ' $' -- \\*.exs | grep -v -e 'exercises/diamond/diamond_test.exs'"
+  - "! git grep ' $' -- \\*.exs | grep -v -e 'exercises/diamond/diamond_test.exs'"
 
 sudo: false
+
+cache:
+  directories:
+    - _build
+    - deps

@@ -9,7 +9,7 @@ do
   cp "$exercise_dir/example.exs" "./tmp/src/$exercise.exs"
 done
 
-elixirc -o ./tmp/build ./tmp/src/*.exs
+elixirc -o ./_build ./tmp/src/*.exs
 mix dialyzer
 RESULT=$?
 rm -rf ./tmp
