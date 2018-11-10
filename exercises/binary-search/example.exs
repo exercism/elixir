@@ -28,7 +28,7 @@ defmodule BinarySearch do
 
   defp do_search(numbers, key, low, high) do
     middle = div(low + high, 2)
-    middle_value = elem(numbers, middle)
+    middle_value = elem(numbers, middle).()
 
     cond do
       key < middle_value -> do_search(numbers, key, low, middle - 1)
