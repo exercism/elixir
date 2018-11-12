@@ -8,6 +8,10 @@ ExUnit.configure(exclude: :pending, trace: true)
 defmodule BobTest do
   use ExUnit.Case
 
+  test "Only hey/1 is def, all other functions should be defp" do
+    assert Bob.__info__(:functions) == [hey: 1]
+  end
+
   test "stating something" do
     assert Bob.hey("Tom-ay-to, tom-aaaah-to.") == "Whatever."
   end
