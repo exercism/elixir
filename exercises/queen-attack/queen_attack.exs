@@ -5,13 +5,12 @@ defmodule Queens do
   @doc """
   Creates a new set of Queens
   """
-  @spec new() :: Queens.t()
   @spec new({integer, integer}, {integer, integer}) :: Queens.t()
   def new(white, black) do
   end
 
   @doc """
-  Gives a string reprentation of the board with
+  Gives a string representation of the board with
   white and black queen locations shown
   """
   @spec to_string(Queens.t()) :: String.t()
