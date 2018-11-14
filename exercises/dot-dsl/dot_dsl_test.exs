@@ -178,7 +178,6 @@ defmodule DotTest do
           a([color: green][[label: "Alpha!"]])
         end
       )
-      |> IO.inspect()
     end
   end
 
