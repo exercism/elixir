@@ -5,8 +5,9 @@ defmodule Queens do
   @doc """
   Creates a new set of Queens
   """
+  @spec new() :: Queens.t()
   @spec new({integer, integer}, {integer, integer}) :: Queens.t()
-  def new(white, black) do
+  def new(white \\ nil, black \\ nil) do
   end
 
   @doc """
