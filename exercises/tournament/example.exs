@@ -63,11 +63,13 @@ defmodule Tournament do
     Map.put(results, team, {played + 1, wins, draws, lost + 1, points})
   end
 
-  defp sort_results({_, _, _, _, _, points_a}, {_, _, _, _, _, points_b}) when points_a > points_b,
-    do: true
+  defp sort_results({_, _, _, _, _, points_a}, {_, _, _, _, _, points_b})
+       when points_a > points_b,
+       do: true
 
-  defp sort_results({_, _, _, _, _, points_a}, {_, _, _, _, _, points_b}) when points_a < points_b,
-    do: false
+  defp sort_results({_, _, _, _, _, points_a}, {_, _, _, _, _, points_b})
+       when points_a < points_b,
+       do: false
 
   defp sort_results({name_a, _, _, _, _, _}, {name_b, _, _, _, _, _}) when name_a <= name_b,
     do: true

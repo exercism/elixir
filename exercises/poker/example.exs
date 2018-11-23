@@ -75,8 +75,9 @@ defmodule Poker do
   defp score_hand(_, [2, 3, 4, 5, 14], true), do: {:straight_flush, {5}}
   defp score_hand(_, [2, 3, 4, 5, 14], _), do: {:straight, {5}}
 
-  defp score_hand(counts, [low, _, _, _, high], true) when length(counts) == 5 and high - low == 4,
-    do: {:straight_flush, {high}}
+  defp score_hand(counts, [low, _, _, _, high], true)
+       when length(counts) == 5 and high - low == 4,
+       do: {:straight_flush, {high}}
 
   defp score_hand(counts, [low, _, _, _, high], _) when length(counts) == 5 and high - low == 4,
     do: {:straight, {high}}
@@ -124,8 +125,11 @@ defmodule Poker do
        when rank_a < rank_b,
        do: false
 
-  defp sort_scored_hands({_, :four_of_a_kind, {_, kicker_a}}, {_, :four_of_a_kind, {_, kicker_b}}),
-    do: kicker_a >= kicker_b
+  defp sort_scored_hands(
+         {_, :four_of_a_kind, {_, kicker_a}},
+         {_, :four_of_a_kind, {_, kicker_b}}
+       ),
+       do: kicker_a >= kicker_b
 
   # Full house tie determined by triplet, then pair
   defp sort_scored_hands({_, :full_house, {triplet_a, _}}, {_, :full_house, {triplet_b, _}})
@@ -160,8 +164,11 @@ defmodule Poker do
        when triplet_a < triplet_b,
        do: false
 
-  defp sort_scored_hands({_, :three_of_a_kind, {_, ranks_a}}, {_, :three_of_a_kind, {_, ranks_b}}),
-    do: ranks_a >= ranks_b
+  defp sort_scored_hands(
+         {_, :three_of_a_kind, {_, ranks_a}},
+         {_, :three_of_a_kind, {_, ranks_b}}
+       ),
+       do: ranks_a >= ranks_b
 
   # Two-pair tie determined by high pair, then low pair, then by kicker
   defp sort_scored_hands({_, :two_pair, {high_a, _, _}}, {_, :two_pair, {high_b, _, _}})

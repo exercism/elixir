@@ -8,7 +8,7 @@ defmodule ArmstrongNumber do
     digits = Integer.digits(number)
     exponent = length(digits)
 
-    Enum.reduce(digits, 0, fn(number, acc) ->
+    Enum.reduce(digits, 0, fn number, acc ->
       :math.pow(number, exponent) + acc
     end) == number
   end
