@@ -8,7 +8,7 @@
 
 ## Testing with ExUnit
 
-* [ExUnit](http://elixir-lang.org/docs/v1.0/ex_unit/ExUnit.html)
+* [ExUnit](https://hexdocs.pm/ex_unit/ExUnit.html)
 
 ## Elixir IRC 
 
