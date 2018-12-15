@@ -34,6 +34,12 @@ A binary search halves the number of items to check with each iteration,
 so locating an item (or determining its absence) takes logarithmic time.
 A binary search is a dichotomic divide and conquer search algorithm.
 
+## Restrictions
+
+Do not convert the Tuple to a List - this defeats the object of the test. List operations are more expensive than Tuple lookups.
+
+Note that this is a test of the Binary Search Algorithm, this is not typical Elixir tuple usage (the test assumes unique values that are sorted into ascending order, which is not guarenteed). In Elixir you would not normally see more than 5 items in a tuple - move to a Map or a List in that case.
+
 ## Running tests
 
 Execute the tests with:
