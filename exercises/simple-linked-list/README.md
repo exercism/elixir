@@ -26,7 +26,7 @@ implement your own abstract data type.
 Execute the tests with:
 
 ```bash
-$ elixir simple_linked_list_test.exs
+$ elixir linked_list_test.exs
 ```
 
 ### Pending tests
