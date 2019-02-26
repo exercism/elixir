@@ -72,7 +72,7 @@ defmodule MarkdownTest do
   end
 
   @tag :pending
-  test "parsing text with left-flanking" do
+  test "parsing text with left-flanking (should not be a header)" do
     input = "##This is not a header"
     expected = "<p>##This is not a header</p>"
     assert Markdown.parse(input) == expected
