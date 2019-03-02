@@ -47,7 +47,8 @@ defmodule ZipperTest do
 
   @tag :pending
   test "left, right, and up" do
-    assert t1() |> from_tree() |> left() |> up() |> right() |> up() |> left() |> right() |> value() == 3
+    zipper = t1() |> from_tree() |> left() |> up() |> right() |> up() |> left() |> right()
+    assert value(zipper) == 3
   end
 
   @tag :pending
