@@ -29,6 +29,9 @@ defmodule BinTree do
 end
 
 defmodule Zipper do
+  alias BinTree, as: BT
+  alias Zipper, as: Z
+
   @doc """
   Get a zipper focused on the root node.
   """
@@ -67,7 +70,7 @@ defmodule Zipper do
   @doc """
   Get the parent of the focus node, if any.
   """
-  @spec up(Z.t()) :: Z.t()
+  @spec up(Z.t()) :: Z.t() | nil
   def up(z) do
   end
 
@@ -81,14 +84,14 @@ defmodule Zipper do
   @doc """
   Replace the left child tree of the focus node.
   """
-  @spec set_left(Z.t(), BT.t()) :: Z.t()
+  @spec set_left(Z.t(), BT.t() | nil) :: Z.t()
   def set_left(z, l) do
   end
 
   @doc """
   Replace the right child tree of the focus node.
   """
-  @spec set_right(Z.t(), BT.t()) :: Z.t()
+  @spec set_right(Z.t(), BT.t() | nil) :: Z.t()
   def set_right(z, r) do
   end
 end
