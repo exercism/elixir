@@ -14,84 +14,81 @@ defmodule BinTree do
   # A custom inspect instance purely for the tests, this makes error messages
   # much more readable.
   #
-  # BT[value: 3, left: BT[value: 5, right: BT[value: 6]]] becomes (3:(5::(6::)):)
-  def inspect(%BinTree{value: v, left: l, right: r}, opts) do
+  # BinTree[value: 3, left: BinTree[value: 5, right: BinTree[value: 6]]] becomes (3:(5::(6::)):)
+  def inspect(%BinTree{value: value, left: left, right: right}, opts) do
     concat([
       "(",
-      to_doc(v, opts),
+      to_doc(value, opts),
       ":",
-      if(l, do: to_doc(l, opts), else: ""),
+      if(left, do: to_doc(left, opts), else: ""),
       ":",
-      if(r, do: to_doc(r, opts), else: ""),
+      if(right, do: to_doc(right, opts), else: ""),
       ")"
     ])
   end
 end
 
 defmodule Zipper do
-  alias BinTree, as: BT
-  alias Zipper, as: Z
-
   @doc """
   Get a zipper focused on the root node.
   """
-  @spec from_tree(BT.t()) :: Z.t()
-  def from_tree(bt) do
+  @spec from_tree(BinTree.t()) :: Zipper.t()
+  def from_tree(bin_tree) do
   end
 
   @doc """
   Get the complete tree from a zipper.
   """
-  @spec to_tree(Z.t()) :: BT.t()
-  def to_tree(z) do
+  @spec to_tree(Zipper.t()) :: BinTree.t()
+  def to_tree(zipper) do
   end
 
   @doc """
   Get the value of the focus node.
   """
-  @spec value(Z.t()) :: any
-  def value(z) do
+  @spec value(Zipper.t()) :: any
+  def value(zipper) do
   end
 
   @doc """
   Get the left child of the focus node, if any.
   """
-  @spec left(Z.t()) :: Z.t() | nil
-  def left(z) do
+  @spec left(Zipper.t()) :: Zipper.t() | nil
+  def left(zipper) do
   end
 
   @doc """
   Get the right child of the focus node, if any.
   """
-  @spec right(Z.t()) :: Z.t() | nil
-  def right(z) do
+  @spec right(Zipper.t()) :: Zipper.t() | nil
+  def right(zipper) do
   end
 
   @doc """
   Get the parent of the focus node, if any.
   """
-  @spec up(Z.t()) :: Z.t() | nil
-  def up(z) do
+  @spec up(Zipper.t()) :: Zipper.t() | nil
+  def up(zipper) do
   end
 
   @doc """
   Set the value of the focus node.
   """
-  @spec set_value(Z.t(), any) :: Z.t()
-  def set_value(z, v) do
+  @spec set_value(Zipper.t(), any) :: Zipper.t()
+  def set_value(zipper, value) do
   end
 
   @doc """
   Replace the left child tree of the focus node.
   """
-  @spec set_left(Z.t(), BT.t() | nil) :: Z.t()
-  def set_left(z, l) do
+  @spec set_left(Zipper.t(), BinTree.t() | nil) :: Zipper.t()
+  def set_left(zipper, left) do
   end
 
   @doc """
   Replace the right child tree of the focus node.
   """
-  @spec set_right(Z.t(), BT.t() | nil) :: Z.t()
-  def set_right(z, r) do
+  @spec set_right(Zipper.t(), BinTree.t() | nil) :: Zipper.t()
+  def set_right(zipper, right) do
   end
 end
