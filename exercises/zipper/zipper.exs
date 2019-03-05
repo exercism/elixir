@@ -9,7 +9,7 @@ defmodule BinTree do
   `right` is the right subtree (nil if no subtree).
   """
   @type t :: %BinTree{value: any, left: BinTree.t() | nil, right: BinTree.t() | nil}
-  defstruct value: nil, left: nil, right: nil
+  defstruct [:value, :left, :right]
 
   # A custom inspect instance purely for the tests, this makes error messages
   # much more readable.
