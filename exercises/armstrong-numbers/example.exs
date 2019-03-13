@@ -3,8 +3,8 @@ defmodule ArmstrongNumber do
   Provides a way to validate whether or not a number is an Armstrong number
   """
 
-  @spec is_valid?(integer) :: boolean
-  def is_valid?(number) do
+  @spec valid?(integer) :: boolean
+  def valid?(number) do
     digits = Integer.digits(number)
     exponent = length(digits)
 
