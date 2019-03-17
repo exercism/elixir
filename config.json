@@ -105,6 +105,18 @@
       ]
     },
     {
+      "slug": "list-ops",
+      "uuid": "86658a31-d401-401b-80df-2c4df35f9b15",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "enumeration",
+        "lists",
+        "recursion"
+      ]
+    },
+    {
       "slug": "zipper",
       "uuid": "bc315734-051c-4735-9a8a-3aacb094d2ca",
       "core": true,
@@ -115,18 +127,6 @@
         "recursion",
         "structs",
         "trees"
-      ]
-    },
-    {
-      "slug": "list-ops",
-      "uuid": "86658a31-d401-401b-80df-2c4df35f9b15",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 4,
-      "topics": [
-        "enumeration",
-        "lists",
-        "recursion"
       ]
     },
     {
