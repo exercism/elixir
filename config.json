@@ -85,6 +85,18 @@
       ]
     },
     {
+      "slug": "list-ops",
+      "uuid": "86658a31-d401-401b-80df-2c4df35f9b15",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "enumeration",
+        "lists",
+        "recursion"
+      ]
+    },
+    {
       "slug": "markdown",
       "uuid": "5dfa24bf-e77c-47c6-88e1-e50cbeecd159",
       "core": true,
@@ -102,18 +114,6 @@
       "difficulty": 7,
       "topics": [
         "otp"
-      ]
-    },
-    {
-      "slug": "list-ops",
-      "uuid": "86658a31-d401-401b-80df-2c4df35f9b15",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 4,
-      "topics": [
-        "enumeration",
-        "lists",
-        "recursion"
       ]
     },
     {
