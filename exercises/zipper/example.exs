@@ -1,6 +1,4 @@
 defmodule BinTree do
-  import Inspect.Algebra
-
   @moduledoc """
   A node in a binary tree.
 
@@ -8,21 +6,27 @@ defmodule BinTree do
   `left` is the left subtree (nil if no subtree).
   `right` is the right subtree (nil if no subtree).
   """
-  @type t :: %BinTree{value: any, left: BinTree.t() | nil, right: BinTree.t() | nil}
-  defstruct value: nil, left: nil, right: nil
+
+  @type t :: %BinTree{value: any, left: t() | nil, right: t() | nil}
+
+  defstruct [:value, :left, :right]
+end
+
+defimpl Inspect, for: BinTree do
+  import Inspect.Algebra
 
   # A custom inspect instance purely for the tests, this makes error messages
   # much more readable.
   #
-  # BT[value: 3, left: BT[value: 5, right: BT[value: 6]]] becomes (3:(5::(6::)):)
-  def inspect(%BinTree{value: v, left: l, right: r}, opts) do
+  # %BinTree{value: 3, left: %BinTree{value: 5, right: %BinTree{value: 6}}} becomes (3:(5::(6::)):)
+  def inspect(%BinTree{value: value, left: left, right: right}, opts) do
     concat([
       "(",
-      to_doc(v, opts),
+      to_doc(value, opts),
       ":",
-      if(l, do: to_doc(l, opts), else: ""),
+      if(left, do: to_doc(left, opts), else: ""),
       ":",
-      if(r, do: to_doc(r, opts), else: ""),
+      if(right, do: to_doc(right, opts), else: ""),
       ")"
     ])
   end
