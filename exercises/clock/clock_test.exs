@@ -18,7 +18,7 @@ defmodule ClockTest do
         Can't convert Clock to string.
         Hint: implement the String.Chars protocol for Clock.
         http://elixir-lang.org/getting-started/protocols.html
-        http://elixir-lang.org/docs/stable/elixir/String.Chars.html
+        https://hexdocs.pm/elixir/String.Chars.html
         """)
     end
   end
