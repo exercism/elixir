@@ -16,7 +16,7 @@ Write some code to determine whether a number is an Armstrong number.
 Execute the tests with:
 
 ```bash
-$ elixir armstrong_numbers_test.exs
+$ elixir armstrong_number_test.exs
 ```
 
 ### Pending tests
