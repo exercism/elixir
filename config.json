@@ -18,6 +18,140 @@
       ]
     },
     {
+      "slug": "rna-transcription",
+      "uuid": "a4629a60-752f-4234-99f1-6b3ac0b4ba18",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "strings"
+      ]
+    },
+    {
+      "slug": "word-count",
+      "uuid": "4a24ba2f-ae92-4095-be53-64bc881422ea",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "lists",
+        "maps",
+        "reduce"
+      ]
+    },
+    {
+      "slug": "roman-numerals",
+      "uuid": "4c0ece49-5710-43a1-88b3-2fb149de8552",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "algorithms",
+        "pattern_matching"
+      ]
+    },
+    {
+      "slug": "bob",
+      "uuid": "d20b49dc-cb6d-45fc-a168-78d002072c75",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "control_flow",
+        "string_processing"
+      ]
+    },
+    {
+      "slug": "beer-song",
+      "uuid": "24db624b-7c80-409d-97d5-e1177f025c67",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "pattern_matching",
+        "recursion"
+      ]
+    },
+    {
+      "slug": "robot-simulator",
+      "uuid": "e5e55560-852f-4551-b4da-c9f4a3141470",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 6,
+      "topics": [
+        "otp",
+        "pattern_matching",
+        "structs"
+      ]
+    },
+    {
+      "slug": "list-ops",
+      "uuid": "86658a31-d401-401b-80df-2c4df35f9b15",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "enumeration",
+        "lists",
+        "recursion"
+      ]
+    },
+    {
+      "slug": "markdown",
+      "uuid": "5dfa24bf-e77c-47c6-88e1-e50cbeecd159",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 5,
+      "topics": [
+        "refactoring"
+      ]
+    },
+    {
+      "slug": "bank-account",
+      "uuid": "5d5e0f6c-f4b7-418e-88f8-4b1d0f99bfb0",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 7,
+      "topics": [
+        "otp"
+      ]
+    },
+    {
+      "slug": "zipper",
+      "uuid": "bc315734-051c-4735-9a8a-3aacb094d2ca",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 8,
+      "topics": [
+        "algorithms",
+        "recursion",
+        "structs",
+        "trees"
+      ]
+    },
+    {
+      "slug": "bowling",
+      "uuid": "3b252cc6-cc55-4187-891e-c10aaabac81f",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 8,
+      "topics": [
+        "algorithms",
+        "pattern_matching",
+        "structs"
+      ]
+    },
+    {
+      "slug": "forth",
+      "uuid": "2abfa3e5-d358-4a07-91f9-d4ad04eb719d",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 10,
+      "topics": [
+        "parsers"
+      ]
+    },
+    {
       "slug": "nucleotide-count",
       "uuid": "7404e885-747a-46fc-be0c-c53f4b0e162f",
       "core": false,
@@ -92,17 +226,6 @@
       ]
     },
     {
-      "slug": "bob",
-      "uuid": "d20b49dc-cb6d-45fc-a168-78d002072c75",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 2,
-      "topics": [
-        "control_flow",
-        "string_processing"
-      ]
-    },
-    {
       "slug": "twelve-days",
       "uuid": "9dfb5dfc-1123-492b-9383-2a4312c219a4",
       "core": false,
@@ -112,18 +235,6 @@
         "enumerations",
         "reduce",
         "string_formatting"
-      ]
-    },
-    {
-      "slug": "word-count",
-      "uuid": "4a24ba2f-ae92-4095-be53-64bc881422ea",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 2,
-      "topics": [
-        "lists",
-        "maps",
-        "reduce"
       ]
     },
     {
@@ -267,16 +378,6 @@
       ]
     },
     {
-      "slug": "rna-transcription",
-      "uuid": "a4629a60-752f-4234-99f1-6b3ac0b4ba18",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 2,
-      "topics": [
-        "strings"
-      ]
-    },
-    {
       "slug": "phone-number",
       "uuid": "e8b049b7-6648-412c-8a11-0c95a15e2641",
       "core": false,
@@ -297,17 +398,6 @@
         "algorithms",
         "math",
         "recursion"
-      ]
-    },
-    {
-      "slug": "roman-numerals",
-      "uuid": "4c0ece49-5710-43a1-88b3-2fb149de8552",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 2,
-      "topics": [
-        "algorithms",
-        "pattern_matching"
       ]
     },
     {
@@ -343,17 +433,6 @@
       ]
     },
     {
-      "slug": "beer-song",
-      "uuid": "24db624b-7c80-409d-97d5-e1177f025c67",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 3,
-      "topics": [
-        "pattern_matching",
-        "recursion"
-      ]
-    },
-    {
       "slug": "isogram",
       "uuid": "55a20a0f-0131-4e4e-b14f-f3cb49e3cc04",
       "core": false,
@@ -384,18 +463,6 @@
         "formatting",
         "sorting",
         "string_processing"
-      ]
-    },
-    {
-      "slug": "list-ops",
-      "uuid": "86658a31-d401-401b-80df-2c4df35f9b15",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 4,
-      "topics": [
-        "enumeration",
-        "lists",
-        "recursion"
       ]
     },
     {
@@ -519,16 +586,6 @@
       ]
     },
     {
-      "slug": "markdown",
-      "uuid": "5dfa24bf-e77c-47c6-88e1-e50cbeecd159",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 5,
-      "topics": [
-        "refactoring"
-      ]
-    },
-    {
       "slug": "gigasecond",
       "uuid": "287331a4-64d5-4b35-b4c1-a1171dc338e1",
       "core": false,
@@ -600,7 +657,7 @@
     {
       "slug": "binary-search",
       "uuid": "89204af8-3914-404b-8984-39a8d60362c4",
-      "core": true,
+      "core": false,
       "unlocked_by": null,
       "difficulty": 3,
       "topics": [
@@ -675,18 +732,6 @@
       ]
     },
     {
-      "slug": "robot-simulator",
-      "uuid": "e5e55560-852f-4551-b4da-c9f4a3141470",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 6,
-      "topics": [
-        "otp",
-        "pattern_matching",
-        "structs"
-      ]
-    },
-    {
       "slug": "atbash-cipher",
       "uuid": "eab8a96f-74af-4e3d-8039-d1d74714f72b",
       "core": false,
@@ -705,16 +750,6 @@
       "topics": [
         "encryption",
         "string_processing"
-      ]
-    },
-    {
-      "slug": "bank-account",
-      "uuid": "5d5e0f6c-f4b7-418e-88f8-4b1d0f99bfb0",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 7,
-      "topics": [
-        "otp"
       ]
     },
     {
@@ -786,19 +821,6 @@
       ]
     },
     {
-      "slug": "zipper",
-      "uuid": "bc315734-051c-4735-9a8a-3aacb094d2ca",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 8,
-      "topics": [
-        "algorithms",
-        "recursion",
-        "structs",
-        "trees"
-      ]
-    },
-    {
       "slug": "minesweeper",
       "uuid": "8d665135-31dc-490a-8f6d-51c6654099bd",
       "core": false,
@@ -843,18 +865,6 @@
       ]
     },
     {
-      "slug": "bowling",
-      "uuid": "3b252cc6-cc55-4187-891e-c10aaabac81f",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 8,
-      "topics": [
-        "algorithms",
-        "pattern_matching",
-        "structs"
-      ]
-    },
-    {
       "slug": "dot-dsl",
       "uuid": "c316b8ef-7b2d-43d4-b402-f7d28b0cdaa7",
       "core": false,
@@ -877,19 +887,9 @@
       ]
     },
     {
-      "slug": "forth",
-      "uuid": "2abfa3e5-d358-4a07-91f9-d4ad04eb719d",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 10,
-      "topics": [
-        "parsers"
-      ]
-    },
-    {
       "slug": "clock",
       "uuid": "e7cb9cd0-5893-4ebb-b801-f5d548945531",
-      "core": true,
+      "core": false,
       "unlocked_by": null,
       "difficulty": 5,
       "topics": [
