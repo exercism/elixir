@@ -245,7 +245,7 @@ defmodule GrepTest do
 
     @tag :pending
     test "no matches, various flags" do
-      assert Grep.grep("Frodo", ["-n", "-l", "-x", "i"], [
+      assert Grep.grep("Frodo", ["-n", "-l", "-x", "-i"], [
                "iliad.txt",
                "midsummer-night.txt",
                "paradise-lost.txt"
