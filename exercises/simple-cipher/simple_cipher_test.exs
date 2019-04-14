@@ -57,8 +57,12 @@ defmodule SimpleCipherTest do
   end
 
   @tag :pending
-  test "only lowercase a-z are translated, rest are passed through" do
+  test "only lowercase a-z are encoded, rest are passed through" do
     assert SimpleCipher.encode("this is a test!", "d") == "wklv lv d whvw!"
+  end
+  
+  @tag :pending
+  test "only lowercase a-z are decoded, rest are passed through" do
     assert SimpleCipher.decode("wklv lv d whvw!", "d") == "this is a test!"
   end
 
@@ -69,10 +73,16 @@ defmodule SimpleCipherTest do
   end
 
   @tag :pending
-  test "if key is longer than text, only use as much as needed" do
+  test "if key is longer than text, only use as much as needed to encode" do
     key = "somewhatlongkey"
 
     assert SimpleCipher.encode("abc", key) == "spo"
+  end
+  
+  @tag :pending
+  test "if key is longer than text, only use as much as needed to decode" do
+    key = "somewhatlongkey"
+
     assert SimpleCipher.decode("abc", key) == "inq"
   end
 
