@@ -25,9 +25,8 @@ https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
 
 Notice that this is a very specific algorithm, and the tests don't check
 that you've implemented the algorithm, only that you've come up with the
-correct list of primes. A good first test is to check that you do not use
-division or remainder operations (div, /, mod or % depending on the
-language).
+correct list of primes. A good first test is to check that you do not
+write any code that checks whether a number is a prime or not.
 
 ## Running tests
 
