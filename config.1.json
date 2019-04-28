@@ -905,7 +905,7 @@
       "uuid": "b2630a58-6ee1-4b3b-ad5c-e09b8bfe2a30",
       "core": false,
       "unlocked_by": "forth",
-      "difficulty": 1,
+      "difficulty": 3,
       "topics": [
         "enumerations",
         "strings"
