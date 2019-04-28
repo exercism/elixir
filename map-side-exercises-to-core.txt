@@ -1,0 +1,104 @@
+Hello World - 1
+    Two Fer, EASY, strings, 1
+    Nucleotide Count, EASY, enumerables maps string processing, 2
+    Secret Handshake, EASY, binary representation, 2
+    Rotational Cipher, EASY, string processing, 2
+    Strain, EASY, collections, 2 
+    Protein Translation, EASY, pattern matching string processing, 2
+    Pig Latin, EASY, pattern matching string processing, 2
+    Space Age, EASY, pattern matching, 2
+
+RNA Transcription - 2
+    Acronym, EASY, string processing, 2
+    Series, EASY, string processing, 2
+    Raindrops, EASY, conditionals, 2
+    Pangram, EASY, enumerations strings, 2
+    Run Length Encoding, EASY, algorithms strings, 2
+    Accumulate, EASY, recursion reduce, 2
+
+Word Count - 3
+    Twelve Days, EASY, enumerations reduce string formatting, 3
+    Sum Of Multiples, EASY, algorithms reduce math, 2
+    Scrabble Score, EASY, reduce, 2
+    Isogram, EASY, reduce algorithms, 3
+    Grade School, EASY, maps, 3
+
+Roman Numerals - 2
+    Collatz Conjecture, EASY, recursion math, 2
+    Sublist, EASY, lists enumeration, 2
+    Bracket Push, EASY, algorithms reduce enumeration, 3
+    Triangle, EASY, algorithms, 2
+    Flatten Array, EASY, lists recursion, 3
+
+Bob - 2
+    Say, EASY, pattern matching, 3
+    Hamming, EASY, string processing, 2
+    Phone Number, EASY, string processing pattern matching, 3
+    Matrix, EASY, string processing structs, 3
+    Anagram, EASY, filter enumeration, 2
+
+Beer Song - 3
+    ISBN Verifier, EASY, string processing, 3
+    Binary Search, EASY, algorithms recursion, 3
+    Leap, EASY, algorithms, 3
+    Nth Prime, EASY, algorithms recursion math, 2
+    Tournament, MEDIUM, formatting sorting string processing, 4
+
+Robot Simulator - 6
+    Binary Search Tree, EASY, algorithms trees, 3
+    All Your Base, EASY, translation numbers math, 2
+    Meetup, MEDIUM, time calendar pattern matching, 4
+    Grains, EASY, recursion reduce, 3
+
+List Ops - 4
+    OCR Numbers, MEDIUM, enumerations strings, 6
+    Simple Linked List, EASY, recursion, 1
+    ETL, EASY, enumeration string processing, 2
+    Change, EASY, enumeration reduce, 3
+    Binary, EASY, binary operators math, 3
+    Transpose, MEDIUM, strings transforming, 5
+
+Markdown - 5
+    Kindergarten Garden, EASY, string processing, 3
+    Scale Generator, MEDIUM, enumerations string processing, 5
+    Luhn, MEDIUM, string processing enumeration, 5
+    Diamond, MEDIUM, algorithms enumeration, 5
+    Rail Fence Cipher, MEDIUM, encryption string processing, 6
+
+Bank Account 7
+    Prime Factors, EASY, recursion pattern matching math, 3
+    Perfect Numbers, EASY, pattern matching enumeration math, 3
+    Hexadecimal, EASY, numbers string processing math, 3
+    Gigasecond, EASY, calendar time, 3
+    Palindrome Products, MEDIUM, reduce math, 5
+    Parallel Letter Frequency, MEDIUM, concurrency otp, 4
+    Diffie Hellman, MEDIUM, math, 4
+
+Zipper 8
+    Pascal's Triangle, EASY, enumeration algorithms math, 3
+    Queen Attack, MEDIUM, algorithms structs, 7
+    Saddle Points, MEDIUM, matricies string processing enumeration, 5
+    Minesweeper, MEDIUM, enumeration reduce algorithms, 7
+    Connect, MEDIUM, string processing reduce, 7
+    Custom Set, MEDIUM, collections enumeration, 5
+    Spiral Matrix, MEDIUM, lists transforming, 4
+
+Bowling 8
+    Simple Cipher, EASY, encryption string processing, 3
+    Armstrong Numbers, EASY, algorithms math, 2
+    Sieve, MEDIUM, enumeration math, 5
+    Largest Series Product, MEDIUM, enumeration recursion math, 4
+    Crypto Square, MEDIUM, encryption algorithms, 4
+    Allergies, MEDIUM, binary operators enumeration, 4
+    Poker, MEDIUM, sorting, 7
+    Clock, MEDIUM, integers logic protocols structs transforming, 5
+
+Forth 10
+    Grep, EASY, enumerations strings, 1
+    Atbash Cipher, EASY, encryption, 3
+    Difference Of Squares, MEDIUM, reduce math, 4
+    Wordy, MEDIUM, parsers, 6
+    Pythagorean Triplet, MEDIUM, reduce algorithms math, 5
+    Dominoes, MEDIUM, algorithms enumerations recursion sorting trees, 4
+    Alphametics, MEDIUM, algorithms backtracking strings, 5
+    DOT DSL, HARD, structs graphs, 8
