@@ -5,7 +5,7 @@ defmodule CollatzConjecture do
     - if number is odd, multiply with 3 and add 1
     - if number is even, divide by 2
   """
-  @spec calc(number :: pos_integer) :: pos_integer
+  @spec calc(input :: pos_integer()) :: non_neg_integer()
   def calc(input) do
   end
 end
