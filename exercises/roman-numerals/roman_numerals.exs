@@ -1,4 +1,4 @@
-defmodule Roman do
+defmodule RomanNumerals do
   @doc """
   Convert the number to a roman number.
   """
