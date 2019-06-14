@@ -9,3 +9,5 @@
 # trim leading exercise stuff
 # rm <exercise>/lib/exercise.ex
 # cp <exercise>/bkp/<exercise>.exs <exercise>/lib/exercise.ex
+# cp example to base
+# rm -rf bkp dir
