@@ -6,3 +6,4 @@ bin/configlet
 bin/configlet*
 deps
 _build
+.elixir_ls/
