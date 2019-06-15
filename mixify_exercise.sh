@@ -8,12 +8,16 @@ fi
 
 EXERCISE=$1
 
+SKIP_FILE="skipped.out"
+CUSTOMIZED_FILE="customized.out"
+
 EX_DIR="./exercises/${EXERCISE}"
 EX_BKP="./exercises/${EXERCISE}-bkp"
 
 if [ -f "${EX_DIR}/mix.exs" ]
 then
   echo "SKIP: ${EXERCISE} is already mixified"
+  echo "$EXERCISE" >> $SKIP_FILE
   exit 1
 fi
 
@@ -29,7 +33,6 @@ then
 fi
 
 CODE_FILE="${EXERCISE//-/_}.exs"
-CODE_PATH="${EX_BKP}/${CODE_FILE}"
 
 if [ ! -f "${EX_DIR}/${CODE_FILE}" ]
 then
@@ -40,6 +43,8 @@ then
   then
     exit 1
   fi
+
+  echo "$EXERCISE" >> $CUSTOMIZED_FILE
 fi
 
 TEST_FILE="${EXERCISE//-/_}_test.exs"
