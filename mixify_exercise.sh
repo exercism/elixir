@@ -6,9 +6,8 @@ then
   exit 1  
 fi
 
-echo "* Mixifying exercise \"${1}\""
-
 EXERCISE=$1
+
 EX_DIR="./exercises/${EXERCISE}"
 EX_BKP="./exercises/${EXERCISE}-bkp"
 
@@ -17,6 +16,8 @@ then
   echo "SKIP: ${EXERCISE} is already mixified"
   exit 1
 fi
+
+echo "* Mixifying exercise \"${1}\""
 
 EXAMPLE_FILE="example.exs"
 EXAMPLE_PATH="${EX_BKP}/${EXAMPLE_FILE}"
@@ -27,22 +28,32 @@ then
   exit 1;
 fi
 
-CODE_FILE="${EXERCISE}.exs"
+CODE_FILE="${EXERCISE//-/_}.exs"
 CODE_PATH="${EX_BKP}/${CODE_FILE}"
 
 if [ ! -f "${EX_DIR}/${CODE_FILE}" ]
 then
-  echo "> Code file \"${CODE_FILE}\" doesn't exist, exiting."
-  exit 1;
+  echo "> Code file \"${CODE_FILE}\" doesn't exist, specify?"
+  read -p 'Code file name: ' CODE_FILE
+
+  if [ -z "$CODE_FILE" ]
+  then
+    exit 1
+  fi
 fi
 
-TEST_FILE="${EXERCISE}_test.exs"
+TEST_FILE="${EXERCISE//-/_}_test.exs"
 TEST_PATH="${EX_BKP}/${TEST_FILE}"
 
 if [ ! -f "${EX_DIR}/${TEST_FILE}" ]
 then
   echo "> Test file \"${TEST_FILE}\" doesn't exist, exiting."
-  exit 1;
+  read -p 'Code file name: ' CODE_FILE
+
+  if [ -z "$CODE_FILE" ]
+  then
+    exit 1
+  fi
 fi
 
 README_FILE="README.md"
@@ -61,7 +72,23 @@ then
 fi
 
 # create a blank mix project
-mix new "${EX_DIR}"
+mix new "${EX_DIR//-/_}"
+
+if [ $EX_DIR != ${EX_DIR//-/_} ]
+then
+  mv ${EX_DIR//-/_} $EX_DIR
+fi
+
+if [ "$CODE_FILE" != "${EXERCISE}.exs" ]
+then
+  BASE_CODE_FILE=$(basename --suffix='.exs' "$CODE_FILE")
+  # echo ">>> $BASE_CODE_FILE"
+
+  # cp "${EX_DIR}/mix.exs" "${EX_DIR}/mix.exs.tmp"
+  perl -pi -e "s/:${EXERCISE//-/_}/:${BASE_CODE_FILE}/" "${EX_DIR}/mix.exs"
+  # rm "${EX_DIR}/mix.exs.tmp" 
+  # sed 's/string/replace/1' filename
+fi
 
 # copy the example and readme to the new dir
 cp $EXAMPLE_PATH $EX_DIR
@@ -76,8 +103,8 @@ echo $TEST_CONFIG >> "${EX_DIR}/test/test_helper.exs"
 cat "${TEST_PATH}" | perl -ne 'print if /^defmodule/../^end/' > "${EX_DIR}/test/${TEST_FILE}"
 
 # Copy the exercise from backup to the lib dir
-rm "${EX_DIR}/lib/${EXERCISE}.ex"
-cp "${EX_BKP}/${EXERCISE}.exs" "${EX_DIR}/lib/${EXERCISE}.ex"
+rm "${EX_DIR}/lib/${EXERCISE//-/_}.ex"
+cp "${EX_BKP}/${CODE_FILE}" "${EX_DIR}/lib/${CODE_FILE%?}"
 
 # delete backup
-rm -rf $EX_BKP
+# rm -rf $EX_BKP
