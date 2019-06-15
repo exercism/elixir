@@ -17,7 +17,7 @@ then
   exit 1
 fi
 
-echo "* Mixifying exercise \"${1}\""
+echo "* Mixifying exercise: ${1}"
 
 EXAMPLE_FILE="example.exs"
 EXAMPLE_PATH="${EX_BKP}/${EXAMPLE_FILE}"
