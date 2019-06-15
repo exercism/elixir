@@ -1,12 +1,12 @@
 ## Running tests
 
-Execute the tests with:
+From the terminal, change to the base directory of the problem then execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ mix test
 ```
 
-(Replace `bob_test.exs` with the name of the test file.)
+This will execute the test file found in the `test` subfolder -- a file ending in `_test.exs`
 
 ### Pending tests
 
@@ -33,9 +33,9 @@ Or, you can enable all the tests by commenting out the
 
 ### Typespecs and Dialyzer (DIscrepancy AnalYZer for ERlang programs)
 
-Elixir exercises include a skeleton implementation file. This
-file outlines the module and functions that you are expected
-to implement. In most exercises, you will find typespecs
+Elixir exercises include a skeleton implementation file in the `lib` 
+subdirectory. This file outlines the module and functions that you are 
+expected to implement. In most exercises, you will find typespecs
 above the function declaration. These start with the `@spec` tag and
 typically follow the `@spec function_name(type1, type2) :: return_type`
 format. These are used in Elixir and Erlang as documentation and
@@ -47,26 +47,22 @@ documentation about Dialyzer see [Erlang -- dialyzer](http://erlang.org/doc/man/
 
 Optionally, you may want to check
 the types of your implementation with Dialyzer. There are a couple
-of steps you will need to take. Because all of the Elixir exercises
-are implemented as `.exs` script files they will not create a
-`.beam` file when they are dynamically compiled when running
-normal tests. In order to create the `.beam` file that Dialyzer
-needs to analyze run:
+of steps you will need to take. In order to do that, you must add the `Dialyxir`
+dependency to the `mix.exs` file for your problem.
 
-```bash
-$ elixirc word_count.exs
+```elixir
+defp deps do
+  [{:dialyxir, "~> 0.4", only: [:dev]}] # <-- Add this
+end
 ```
 
-This will create a file called `Elixir.Words.beam`. Now you can run
-Dialyzer on your implementation with:
+Then use mix tasks to get and compile from the command line:
 
 ```bash
-$ dialyzer Elixir.Words.beam
-
-Checking whether the PLT ~/.dialyzer_plt is up-to-date... yes
-  Proceeding with analysis...
-  done in 0m0.27s
-done (passed successfully)
+$ mix deps.get
+...
+$ mix deps.compile
+...
 ```
 
 If this is the first time you have run Dialyzer you
@@ -75,7 +71,13 @@ or PLT is used by Dialyzer to cache information about built in Elixir
 and Erlang types. To create a plt with sensible defaults run:
 
 ```bash
-$ dialyzer --build_plt --apps erts kernel stdlib crypto public_key /path/to/elixir
+$ mix dialyzer --plt
+```
+
+Finally it can be run with:
+
+```bash
+$ mix dialyzer
 ```
 
 Make sure to change the path to your system's path to the Elixir libraries. For
