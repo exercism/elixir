@@ -53,9 +53,9 @@ TEST_PATH="${EX_BKP}/${TEST_FILE}"
 if [ ! -f "${EX_DIR}/${TEST_FILE}" ]
 then
   echo "> Test file \"${TEST_FILE}\" doesn't exist, exiting."
-  read -p 'Code file name: ' CODE_FILE
+  read -p 'Code file name: ' TEST_FILE
 
-  if [ -z "$CODE_FILE" ]
+  if [ -z "$TEST_FILE" ]
   then
     exit 1
   fi
@@ -87,12 +87,8 @@ fi
 if [ "$CODE_FILE" != "${EXERCISE}.exs" ]
 then
   BASE_CODE_FILE=$(basename --suffix='.exs' "$CODE_FILE")
-  # echo ">>> $BASE_CODE_FILE"
 
-  # cp "${EX_DIR}/mix.exs" "${EX_DIR}/mix.exs.tmp"
   perl -pi -e "s/:${EXERCISE//-/_}/:${BASE_CODE_FILE}/" "${EX_DIR}/mix.exs"
-  # rm "${EX_DIR}/mix.exs.tmp" 
-  # sed 's/string/replace/1' filename
 fi
 
 # copy the example and readme to the new dir
