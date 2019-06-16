@@ -1,3 +1,8 @@
+if System.get_env("EXERCISM_TEST_EXAMPLES") do  
+  ExUnit.start()
+  ExUnit.configure(exclude: :pending, trace: true)
+end
+
 defmodule WordyTest do
   use ExUnit.Case
 
