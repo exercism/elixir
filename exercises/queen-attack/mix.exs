@@ -1,9 +1,9 @@
-defmodule QueenAttack.MixProject do
+defmodule Queens.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :queen_attack,
+      app: :queens,
       version: "0.1.0",
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,

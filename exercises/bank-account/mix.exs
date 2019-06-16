@@ -1,4 +1,4 @@
-defmodule Account.MixProject do
+defmodule BankAccount.MixProject do
   use Mix.Project
 
   def project do

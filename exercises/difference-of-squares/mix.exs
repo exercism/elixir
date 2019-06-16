@@ -1,9 +1,9 @@
-defmodule DifferenceOfSquares.MixProject do
+defmodule Squares.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :difference_of_squares,
+      app: :squares,
       version: "0.1.0",
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,

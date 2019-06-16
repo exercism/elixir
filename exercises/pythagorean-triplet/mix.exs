@@ -1,9 +1,9 @@
-defmodule PythagoreanTriplet.MixProject do
+defmodule Triplet.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :pythagorean_triplet,
+      app: :triplet,
       version: "0.1.0",
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,

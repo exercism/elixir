@@ -1,9 +1,9 @@
-defmodule Series.MixProject do
+defmodule StringSeries.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :series,
+      app: :string_series,
       version: "0.1.0",
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
