@@ -33,8 +33,8 @@ Or, you can enable all the tests by commenting out the
 
 ### Typespecs and Dialyzer (DIscrepancy AnalYZer for ERlang programs)
 
-Elixir exercises include a skeleton implementation file in the `lib` 
-subdirectory. This file outlines the module and functions that you are 
+Elixir exercises include a skeleton implementation file in the `lib`
+subdirectory. This file outlines the module and functions that you are
 expected to implement. In most exercises, you will find typespecs
 above the function declaration. These start with the `@spec` tag and
 typically follow the `@spec function_name(type1, type2) :: return_type`

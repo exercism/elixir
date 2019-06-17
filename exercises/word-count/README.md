@@ -11,7 +11,7 @@ come: 1
 free: 1
 ```
 
-Words are compared case-insensitively. 
+Words are compared case-insensitively.
 The keys are lowercase.
 
 ## Running tests
