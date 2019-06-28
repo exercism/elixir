@@ -29,7 +29,19 @@ defmodule RNATranscriptionTest do
   end
 
   @tag :pending
-  test "it transcribes all dna nucleotides to rna equivalents" do
+  test "transcribes all dna nucleotides to rna equivalents" do
     assert RNATranscription.to_rna('ACGTGGTCTTAA') == 'UGCACCAGAAUU'
+  end
+  
+  @tag :pending
+  test "transcribes very long dna" do
+    dna_list = Enum.reduce(1..500000, [], 
+                         fn x, acc -> if x <= 250000, do: [?A | acc], else: [?C | acc]
+                         end)
+    rna_list = Enum.reduce(1..500000, [],
+                         fn x, acc -> if x <= 250000, do: [?U | acc], else: [?G | acc]
+                         end)
+    
+    assert RNATranscription.to_rna(dna_list) == rna_list
   end
 end
