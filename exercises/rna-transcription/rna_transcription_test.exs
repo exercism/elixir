@@ -35,7 +35,7 @@ defmodule RNATranscriptionTest do
   
   @tag :pending
   test "transcribes very long dna" do
-    dna_list = Enum.reduce(1..500000, [], 
+    dna_list = Enum.reduce(1..500000, [],
                          fn x, acc -> if x <= 250000, do: [?A | acc], else: [?C | acc]
                          end)
     rna_list = Enum.reduce(1..500000, [],
