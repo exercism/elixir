@@ -12,3 +12,5 @@ done
 mv example.exs lib/example.ex
 
 mix test --include pending
+
+result=$?
