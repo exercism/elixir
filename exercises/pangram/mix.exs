@@ -14,7 +14,7 @@ defmodule Pangram.MixProject do
 
   def aliases do
     [
-      "compile": ["compile --warnings-as-errors"]
+      compile: ["compile --warnings-as-errors"]
     ]
   end
 
