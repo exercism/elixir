@@ -5,9 +5,16 @@ defmodule RailFenceCipher.MixProject do
     [
       app: :rail_fence_cipher,
       version: "0.1.0",
-      elixir: "~> 1.8",
+      # elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      aliases: aliases()
+    ]
+  end
+
+  def aliases do
+    [
+      "compile": ["compile --warnings-as-errors"]
     ]
   end
 
