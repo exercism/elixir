@@ -37,6 +37,7 @@ relative_root=$(pwd)
 # make a copy of exercises
 cp -a exercises tmp-exercises
 
+# test each exercise
 for exercise in tmp-exercises/*
   do if [ -d $exercise ]; then
     cd "$exercise"
