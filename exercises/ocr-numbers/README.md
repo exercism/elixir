@@ -43,7 +43,7 @@ Update your program to recognize all numbers 0 through 9, both individually and 
  _
  _|
 |_
-  
+
 ```
 
 Is converted to "2"
@@ -65,15 +65,15 @@ Update your program to handle multiple numbers, one per line. When converting se
     _  _
   | _| _|
   ||_  _|
-        
+
     _  _
 |_||_ |_
   | _||_|
-        
+
  _  _  _
   ||_||_|
   ||_| _|
-        
+
 ```
 
 Is converted to "123,456,789"
