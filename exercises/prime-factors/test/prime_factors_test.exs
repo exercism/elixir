@@ -1,7 +1,7 @@
-if System.get_env("EXERCISM_TEST_EXAMPLES") do
-  ExUnit.start()
-  ExUnit.configure(exclude: :pending, trace: true)
-end
+# if System.get_env("EXERCISM_TEST_EXAMPLES") do
+#   ExUnit.start()
+#   ExUnit.configure(exclude: :pending, trace: true)
+# end
 
 defmodule PrimeFactorsTest do
   use ExUnit.Case
