@@ -55,13 +55,22 @@ for exercise in tmp-exercises/*
     mv example.exs lib/example.ex
 
     # do testing then based on exit code print the result
-    mix test --no-elixir-version-check --include pending > /dev/null
+    test_results=$(mix test --color --no-elixir-version-check --include pending)
 
     if [ "$?" -eq 0 ]; then
-        printf " -- pass ✅\n"
+        printf " -- Pass ✅\n"
         pass_count=$((pass_count+1))
     else
-        printf " -- fail ❌\n"
+        printf " -- Fail ❌\n"
+
+        test_results=$(echo "$test_results" \
+                         | grep "* test" \
+                         | sed 's:\r:\n:' \
+                         | awk 'NR % 2 == 1' \
+                         | sed -r "s:\x1B\[31m: -- Fail ❌:g" \
+                         | sed -r "s:\x1B\[32m: -- Pass ✅:g")
+        printf "${test_results}\n"
+
         fail_count=$((fail_count+1))
         failing_exercises+=( $exercise_name )
     fi
