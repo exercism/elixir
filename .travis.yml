@@ -9,6 +9,11 @@ otp_release:
   - 20.3
   - 22.0
 
+matrix:
+  exclude:
+  - elixir: 1.6.6
+    otp_release: 22
+
 script:
   - bin/fetch-configlet
   - bin/configlet lint .
