@@ -1,5 +1,6 @@
 language: elixir
 elixir:
+  - 1.6.6
   - 1.7.2
   - 1.8.2
   - 1.9.0
@@ -12,14 +13,8 @@ script:
   - bin/fetch-configlet
   - bin/configlet lint .
   - mix deps.get
-  - mix test
 
-  # OLD - fail if there are any compiler warnings
-  # - mkdir ./tmp
-  # - EXERCISM_TEST_EXAMPLES=true elixirc --warnings-as-errors **/example.exs **/*_test.exs -o ./tmp > /dev/null
-  # - rm -rf ./tmp
-
-  # NEW - fail if there are any compiler and test problems for individual tests.
+  # fail if there are any compiler and test problems for individual tests.
   - bin/test_exercises.sh
 
   - travis_wait 30 bin/dialyzer_check.sh
