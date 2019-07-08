@@ -1,7 +1,3 @@
-# if System.get_env("EXERCISM_TEST_EXAMPLES") do
-#   ExUnit.start()
-#   ExUnit.configure(exclude: :pending, trace: true)
-# end
 
 defmodule PalindromeProductsTest do
   use ExUnit.Case

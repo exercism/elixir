@@ -1,8 +1,3 @@
-# if System.get_env("EXERCISM_TEST_EXAMPLES") do
-#   ExUnit.start()
-#   ExUnit.configure(exclude: :pending, trace: true)
-# end
-
 defmodule AccumulateTest do
   use ExUnit.Case
 
@@ -12,7 +7,7 @@ defmodule AccumulateTest do
 
   @tag :pending
   test "accumulate square numbers" do
-    assert Accumulate.accumulate([1, 2, 3], fn n -> n * n end) == [1, 4, 9]
+    assert Accumulate.accumulate([1, 2, 3], fn n -> n * n end) == [1, 4, 9,1]
   end
 
   @tag :pending
