@@ -16,10 +16,11 @@
 # ###
 
 # helper subroutine
-test_or_tests () {
+function test_or_tests () {
     local tests="test"
-    if (( $1 != 1)); then
-        tests+="s"
+    if (( $1 != 1 ))
+    then
+      tests+="s"
     fi
     printf "%s" "$tests"
 }
@@ -35,11 +36,14 @@ failing_exercises=()
 relative_root=$(pwd)
 
 # make a copy of exercises
+rm -rf tmp-exercises
 cp -a exercises tmp-exercises
 
 # test each exercise
 for exercise in tmp-exercises/*
-  do if [ -d $exercise ]; then
+do 
+  if [ -d $exercise ]
+  then
     cd "$exercise"
 
     exercise_name=$(basename $exercise)
@@ -49,7 +53,8 @@ for exercise in tmp-exercises/*
 
     # Move the example into the lib file
     for file in lib/*.ex
-      do mv "$file" "${file/.ex/.ex.bkp}"
+    do 
+      mv "$file" "${file/.ex/.ex.bkp}"
     done
 
     mv example.exs lib/example.ex
@@ -57,22 +62,24 @@ for exercise in tmp-exercises/*
     # do testing then based on exit code print the result
     test_results=$(mix test --color --no-elixir-version-check --include pending)
 
-    if [ "$?" -eq 0 ]; then
-        printf " -- Pass ✅\n"
-        pass_count=$((pass_count+1))
+    if [ "$?" -eq 0 ]
+    then
+      printf " -- \\033[32mPass\\033[0m\n"
+      pass_count=$((pass_count+1))
     else
-        printf " -- Fail ❌\n"
+      printf " -- \\033[31mFail\\033[0m\n"
 
-        test_results=$(echo "$test_results" \
-                         | grep "* test" \
-                         | sed 's:\r:\n:' \
-                         | awk 'NR % 2 == 1' \
-                         | sed -r "s:\x1B\[31m: -- Fail ❌:g" \
-                         | sed -r "s:\x1B\[32m: -- Pass ✅:g")
-        printf "${test_results}\n"
 
-        fail_count=$((fail_count+1))
-        failing_exercises+=( $exercise_name )
+      test_results=$(echo "$test_results" \
+                      | grep "* test" \
+                      | sed 's:\r:\n:' \
+                      | awk 'NR % 2 == 1' \
+                      | sed -r "s:\x1B\[31m:$(printf " -- \\033[31mFail\\033[0m"):g" \
+                      | sed -r "s:\x1B\[32m:$(printf " -- \\033[32mPass\\033[0m"):g")
+      printf "${test_results}\n"
+
+      fail_count=$((fail_count+1))
+      failing_exercises+=( $exercise_name )
     fi
 
     cd "$relative_root"
@@ -86,14 +93,16 @@ rm -rf tmp-exercises
 printf -- '-%.0s' {1..30}; echo ""
 printf "${pass_count}/${test_count} tests passed.\n"
 
-if [ "$fail_count" -eq 0 ]; then
+if [ "$fail_count" -eq 0 ]
+then
   # everything is good, exit
   exit 0;
 else
   # There was at least one problem, list the exercises with problems.
   printf "${fail_count} $(test_or_tests "$fail_count") failing:\n"
 
-  for exercise in ${failing_exercises[@]}; do
+  for exercise in ${failing_exercises[@]}
+  do
     printf " - ${exercise}\n"
   done
 
