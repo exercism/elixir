@@ -49,7 +49,7 @@ do
     exercise_name=$(basename $exercise)
     test_count=$((test_count+1))
 
-    printf "Testing: $exercise_name"
+    printf "\\033[33mTesting\\033[0m: $exercise_name"
 
     # Move the example into the lib file
     for file in lib/*.ex
@@ -59,20 +59,46 @@ do
 
     mv example.exs lib/example.ex
 
-    # do testing then based on exit code print the result
-    test_results=$(mix test --color --no-elixir-version-check --include pending)
+    # test compilation with --warnings-as-errors flag as the example and test should not raise any
+    cat test/test_helper.exs > test/glob_test.exs
+    for file in test/*.exs
+    do
+      if [ "$file" != "test/test_helper.exs" -a "$file" != "test/glob_test.exs" ]
+      then
+        cat "$file" >> test/glob_test.exs
+      fi
+    done
 
+    elixirc --warnings-as-errors lib/example.ex test/glob_test.exs &> compiler_output
+    compile_exit_code="$?"
+    compiler_results=$(cat compiler_output)
+
+    rm compiler_output
+    rm test/glob_test.exs
+    rm *.beam
+
+    # perform unit tests
+    test_results=$(mix test --color --no-elixir-version-check --include pending 2> /dev/null)
     test_exit_code="$?"
 
-    if [ "$test_exit_code" -eq 0 ]
+    # based on compiler and unit test, print results
+    if [ "$compile_exit_code" -eq 0 -a "$test_exit_code" -eq 0 ]
     then
       printf " -- \\033[32mPass\\033[0m\n"
       pass_count=$((pass_count+1))
     else
       printf " -- \\033[31mFail\\033[0m\n"
 
-      printf -- '-%.0s' {1..80}; echo ""
-      printf "${test_results}\n"
+      if [ "$compile_exit_code" -ne 0 ]
+      then
+        printf -- "-- \\033[36mcompiler output\\033[0m "; printf -- '-%.0s' {1..62}; echo ""
+        printf "${compiler_results}\n"
+      fi
+      if [ "$test_exit_code" -ne 0 ]
+      then
+        printf -- "-- \\033[36mtest output\\033[0m "; printf -- '-%.0s' {1..66}; echo ""
+        printf "${test_results}\n"
+      fi
       printf -- '-%.0s' {1..80}; echo ""
 
       fail_count=$((fail_count+1))
