@@ -63,9 +63,15 @@ do
     compiler_results=$(MIX_ENV=test mix compile --force --warnings-as-errors 2>&1)
     compile_exit_code="$?"
 
-    # perform unit tests
-    test_results=$(mix test --no-compile --color --no-elixir-version-check --include pending 2> /dev/null)
-    test_exit_code="$?"
+    if [ "$compile_exit_code" -eq 0 ]
+    then
+      # perform unit tests
+      test_results=$(mix test --no-compile --color --no-elixir-version-check --include pending 2> /dev/null)
+      test_exit_code="$?"
+    else
+      # use code 5 to indicate tests skipped
+      test_exit_code=5
+    fi
 
     # based on compiler and unit test, print results
     if [ "$compile_exit_code" -eq 0 -a "$test_exit_code" -eq 0 ]
@@ -77,12 +83,12 @@ do
 
       if [ "$compile_exit_code" -ne 0 ]
       then
-        printf -- "-- \\033[36mcompiler output\\033[0m "; printf -- '-%.0s' {1..62}; echo ""
+        printf -- "-- \\033[36mcompiler output\\033[0m "; printf -- '-%.0s' {1..61}; echo ""
         printf "${compiler_results}\n"
       fi
-      if [ "$test_exit_code" -ne 0 ]
+      if [ "$test_exit_code" -ne 0 -a "$test_exit_code" -ne 5 ]
       then
-        printf -- "-- \\033[36mtest output\\033[0m "; printf -- '-%.0s' {1..66}; echo ""
+        printf -- "-- \\033[36mtest output\\033[0m "; printf -- '-%.0s' {1..65}; echo ""
         printf "${test_results}\n"
       fi
       printf -- '-%.0s' {1..80}; echo ""
