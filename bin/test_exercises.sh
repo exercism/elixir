@@ -60,32 +60,19 @@ do
     mv example.exs lib/example.ex
 
     # do testing then based on exit code print the result
-    compile_results=$(MIX_ENV=test mix compile --warnings-as-errors)
-
-    compile_exit_code="$?"
-
     test_results=$(mix test --color --no-elixir-version-check --include pending)
 
     test_exit_code="$?"
 
-    if [ "$test_exit_code" -eq 0 -a "$compile_exit_code" -eq 0 ]
+    if [ "$test_exit_code" -eq 0 ]
     then
       printf " -- \\033[32mPass\\033[0m\n"
       pass_count=$((pass_count+1))
     else
       printf " -- \\033[31mFail\\033[0m\n"
 
-      if [ "$compile_exit_code" -ne 0 ]
-      then
-        printf -- '-%.0s' {1..80}; echo ""
-        printf "${compile_results}\n"
-      fi
-
-      if [ "$test_exit_code" -ne 0 ]
-      then
-        printf -- '-%.0s' {1..80}; echo ""
-        printf "${test_results}\n"
-      fi
+      printf -- '-%.0s' {1..80}; echo ""
+      printf "${test_results}\n"
       printf -- '-%.0s' {1..80}; echo ""
 
       fail_count=$((fail_count+1))
