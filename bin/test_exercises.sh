@@ -54,7 +54,7 @@ do
     # Move the example into the lib file
     for file in lib/*.ex
     do 
-      mv "$file" "${file/.ex/.ex.bkp}"
+      rm "$file"
     done
 
     mv example.exs lib/example.ex
