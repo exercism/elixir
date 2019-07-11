@@ -60,23 +60,33 @@ do
     mv example.exs lib/example.ex
 
     # do testing then based on exit code print the result
+    compile_results=$(MIX_ENV=test mix compile --warnings-as-errors)
+
+    compile_exit_code="$?"
+
     test_results=$(mix test --color --no-elixir-version-check --include pending)
 
-    if [ "$?" -eq 0 ]
+    test_exit_code="$?"
+
+    if [ "$test_exit_code" -eq 0 -a "$compile_exit_code" -eq 0 ]
     then
       printf " -- \\033[32mPass\\033[0m\n"
       pass_count=$((pass_count+1))
     else
       printf " -- \\033[31mFail\\033[0m\n"
 
+      if [ "$compile_exit_code" -ne 0 ]
+      then
+        printf -- '-%.0s' {1..80}; echo ""
+        printf "${compile_results}\n"
+      fi
 
-      test_results=$(echo "$test_results" \
-                      | grep "* test" \
-                      | sed 's:\r:\n:' \
-                      | awk 'NR % 2 == 1' \
-                      | sed -r "s:\x1B\[31m:$(printf " -- \\033[31mFail\\033[0m"):g" \
-                      | sed -r "s:\x1B\[32m:$(printf " -- \\033[32mPass\\033[0m"):g")
-      printf "${test_results}\n"
+      if [ "$test_exit_code" -ne 0 ]
+      then
+        printf -- '-%.0s' {1..80}; echo ""
+        printf "${test_results}\n"
+      fi
+      printf -- '-%.0s' {1..80}; echo ""
 
       fail_count=$((fail_count+1))
       failing_exercises+=( $exercise_name )
@@ -90,7 +100,7 @@ done
 rm -rf tmp-exercises
 
 # report
-printf -- '-%.0s' {1..30}; echo ""
+printf -- '-%.0s' {1..80}; echo ""
 printf "${pass_count}/${test_count} tests passed.\n"
 
 if [ "$fail_count" -eq 0 ]
