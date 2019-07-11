@@ -60,25 +60,11 @@ do
     mv example.exs lib/example.ex
 
     # test compilation with --warnings-as-errors flag as the example and test should not raise any
-    cat test/test_helper.exs > test/glob_test.exs
-    for file in test/*.exs
-    do
-      if [ "$file" != "test/test_helper.exs" -a "$file" != "test/glob_test.exs" ]
-      then
-        cat "$file" >> test/glob_test.exs
-      fi
-    done
-
-    elixirc --warnings-as-errors lib/example.ex test/glob_test.exs &> compiler_output
+    compiler_results=$(MIX_ENV=test mix compile --force --warnings-as-errors 2>&1)
     compile_exit_code="$?"
-    compiler_results=$(cat compiler_output)
-
-    rm compiler_output
-    rm test/glob_test.exs
-    rm *.beam
 
     # perform unit tests
-    test_results=$(mix test --color --no-elixir-version-check --include pending 2> /dev/null)
+    test_results=$(mix test --no-compile --color --no-elixir-version-check --include pending 2> /dev/null)
     test_exit_code="$?"
 
     # based on compiler and unit test, print results
