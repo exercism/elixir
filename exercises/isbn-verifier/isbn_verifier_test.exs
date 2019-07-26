@@ -75,7 +75,7 @@ defmodule ISBNVerifierTest do
 
   # Test cases from international ISBN to test variable dash placement
   # Adapted from https://en.wikipedia.org/wiki/International_Standard_Book_Number#Registrant_element
-  
+
   @tag :pending
   test "Qatar	NCCAH, Doha" do
     assert ISBNVerifier.isbn?("99921-58-10-7")
