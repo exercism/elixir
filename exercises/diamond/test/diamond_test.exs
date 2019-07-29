@@ -1,4 +1,3 @@
-
 defmodule DiamondTest do
   use ExUnit.Case
 

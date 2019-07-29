@@ -1,4 +1,3 @@
-
 defmodule LeapTest do
   use ExUnit.Case
 

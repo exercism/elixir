@@ -1,4 +1,3 @@
-
 defmodule SumOfMultiplesTest do
   use ExUnit.Case
 

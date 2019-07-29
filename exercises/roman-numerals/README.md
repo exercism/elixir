@@ -47,7 +47,7 @@ See also: http://www.novaroma.org/via_romana/numbers.html
 Execute the tests with:
 
 ```bash
-$ elixir roman_numerals_test.exs
+$ mix test
 ```
 
 ### Pending tests

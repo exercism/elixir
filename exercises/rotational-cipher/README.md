@@ -35,7 +35,7 @@ Ciphertext is written out in the same formatting as the input including spaces a
 Execute the tests with:
 
 ```bash
-$ elixir rotational_cipher_test.exs
+$ mix test
 ```
 
 ### Pending tests

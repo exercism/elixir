@@ -1,4 +1,3 @@
-
 defmodule ChangeTest do
   use ExUnit.Case
 

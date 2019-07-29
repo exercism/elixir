@@ -1,4 +1,3 @@
-
 defmodule ArmstrongNumberTest do
   use ExUnit.Case
 

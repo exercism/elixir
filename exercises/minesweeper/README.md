@@ -31,7 +31,7 @@ into this:
 Execute the tests with:
 
 ```bash
-$ elixir minesweeper_test.exs
+$ mix test
 ```
 
 ### Pending tests

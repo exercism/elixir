@@ -1,4 +1,3 @@
-
 defmodule StringSeriesTest do
   use ExUnit.Case
 

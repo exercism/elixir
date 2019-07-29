@@ -1,4 +1,3 @@
-
 defmodule ScaleGeneratorTest do
   use ExUnit.Case
 

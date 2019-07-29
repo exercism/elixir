@@ -31,7 +31,7 @@ Resulting in 9 steps. So for input n = 12, the return value would be 9.
 Execute the tests with:
 
 ```bash
-$ elixir collatz_conjecture_test.exs
+$ mix test
 ```
 
 ### Pending tests

@@ -1,4 +1,3 @@
-
 defmodule PigLatinTest do
   use ExUnit.Case
 

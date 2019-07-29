@@ -77,7 +77,7 @@ cyphertext back in to the original message:
 Execute the tests with:
 
 ```bash
-$ elixir crypto_square_test.exs
+$ mix test
 ```
 
 ### Pending tests

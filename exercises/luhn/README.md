@@ -69,7 +69,7 @@ Sum the digits
 Execute the tests with:
 
 ```bash
-$ elixir luhn_test.exs
+$ mix test
 ```
 
 ### Pending tests

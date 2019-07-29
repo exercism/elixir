@@ -22,7 +22,7 @@ Implement a way to determine whether a given number is **perfect**. Depending on
 Execute the tests with:
 
 ```bash
-$ elixir perfect_numbers_test.exs
+$ mix test
 ```
 
 ### Pending tests

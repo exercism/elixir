@@ -1,4 +1,3 @@
-
 defmodule TwoFerTest do
   use ExUnit.Case
 

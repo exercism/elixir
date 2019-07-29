@@ -1,4 +1,3 @@
-
 defmodule PalindromeProductsTest do
   use ExUnit.Case
 

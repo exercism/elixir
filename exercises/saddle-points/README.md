@@ -33,7 +33,7 @@ but the tests for this exercise follow the above unambiguous definition.
 Execute the tests with:
 
 ```bash
-$ elixir saddle_points_test.exs
+$ mix test
 ```
 
 ### Pending tests

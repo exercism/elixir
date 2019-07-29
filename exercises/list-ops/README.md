@@ -11,7 +11,7 @@ without using existing functions.
 Execute the tests with:
 
 ```bash
-$ elixir list_ops_test.exs
+$ mix test
 ```
 
 ### Pending tests

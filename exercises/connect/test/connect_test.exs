@@ -1,4 +1,3 @@
-
 defmodule ConnectTest do
   use ExUnit.Case
 

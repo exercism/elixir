@@ -1,4 +1,3 @@
-
 defmodule FlattenArrayTest do
   use ExUnit.Case
 

@@ -1,4 +1,3 @@
-
 defmodule HexadecimalTest do
   use ExUnit.Case
 

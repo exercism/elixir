@@ -1,4 +1,3 @@
-
 defmodule NucleotideCountTest do
   use ExUnit.Case
 

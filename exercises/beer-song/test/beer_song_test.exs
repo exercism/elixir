@@ -1,4 +1,3 @@
-
 defmodule BeerSongTest do
   use ExUnit.Case
 

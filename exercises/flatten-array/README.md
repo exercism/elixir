@@ -15,7 +15,7 @@ output: [1,2,3,4,5]
 Execute the tests with:
 
 ```bash
-$ elixir flatten_array_test.exs
+$ mix test
 ```
 
 ### Pending tests

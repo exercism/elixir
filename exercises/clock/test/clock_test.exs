@@ -1,4 +1,3 @@
-
 defmodule ClockTest do
   use ExUnit.Case
 

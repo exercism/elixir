@@ -1,4 +1,3 @@
-
 defmodule AlphameticsTest do
   use ExUnit.Case
 

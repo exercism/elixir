@@ -1,4 +1,3 @@
-
 defmodule ProteinTranslationTest do
   use ExUnit.Case
 

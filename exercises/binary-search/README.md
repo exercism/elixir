@@ -39,7 +39,7 @@ A binary search is a dichotomic divide and conquer search algorithm.
 Execute the tests with:
 
 ```bash
-$ elixir binary_search_test.exs
+$ mix test
 ```
 
 ### Pending tests

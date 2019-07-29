@@ -1,4 +1,3 @@
-
 defmodule GrainsTest do
   use ExUnit.Case
 

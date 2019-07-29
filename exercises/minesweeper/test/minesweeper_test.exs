@@ -1,4 +1,3 @@
-
 defmodule MinesweeperTest do
   use ExUnit.Case
 

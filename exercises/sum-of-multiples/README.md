@@ -13,7 +13,7 @@ The sum of these multiples is 78.
 Execute the tests with:
 
 ```bash
-$ elixir sum_of_multiples_test.exs
+$ mix test
 ```
 
 ### Pending tests

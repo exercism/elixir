@@ -9,7 +9,7 @@ A gigasecond is 10^9 (1,000,000,000) seconds.
 Execute the tests with:
 
 ```bash
-$ elixir gigasecond_test.exs
+$ mix test
 ```
 
 ### Pending tests

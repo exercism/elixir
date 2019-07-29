@@ -1,4 +1,3 @@
-
 defmodule BowlingTest do
   use ExUnit.Case
 

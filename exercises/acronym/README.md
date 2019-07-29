@@ -12,7 +12,7 @@ like Portable Network Graphics to its acronym (PNG).
 Execute the tests with:
 
 ```bash
-$ elixir acronym_test.exs
+$ mix test
 ```
 
 ### Pending tests

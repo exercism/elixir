@@ -86,7 +86,7 @@ on Wikipedia][dh] for one of the first implementations of this scheme.
 Execute the tests with:
 
 ```bash
-$ elixir simple_cipher_test.exs
+$ mix test
 ```
 
 ### Pending tests

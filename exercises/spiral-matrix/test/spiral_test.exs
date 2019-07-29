@@ -1,4 +1,3 @@
-
 defmodule SpiralTest do
   use ExUnit.Case
 

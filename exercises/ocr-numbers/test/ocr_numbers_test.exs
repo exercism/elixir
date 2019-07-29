@@ -1,4 +1,3 @@
-
 defmodule OcrNumbersTest do
   use ExUnit.Case
 

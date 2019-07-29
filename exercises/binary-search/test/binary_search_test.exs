@@ -1,4 +1,3 @@
-
 defmodule BinarySearchTest do
   use ExUnit.Case
 

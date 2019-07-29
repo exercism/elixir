@@ -1,4 +1,3 @@
-
 defmodule MeetupTest do
   use ExUnit.Case
 

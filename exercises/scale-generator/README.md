@@ -53,7 +53,7 @@ figure into this exercise.
 Execute the tests with:
 
 ```bash
-$ elixir scale_generator_test.exs
+$ mix test
 ```
 
 ### Pending tests

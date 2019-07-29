@@ -1,4 +1,3 @@
-
 defmodule SublistTest do
   use ExUnit.Case
 

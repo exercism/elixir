@@ -1,4 +1,3 @@
-
 defmodule AllYourBaseTest do
   use ExUnit.Case
 

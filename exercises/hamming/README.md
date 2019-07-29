@@ -41,7 +41,7 @@ exception vs returning a special value) may differ between languages.
 Execute the tests with:
 
 ```bash
-$ elixir hamming_test.exs
+$ mix test
 ```
 
 ### Pending tests

@@ -1,4 +1,3 @@
-
 defmodule PhoneTest do
   use ExUnit.Case
 

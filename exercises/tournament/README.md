@@ -74,7 +74,7 @@ team name column can be right-padded with spaces to a width of 30.
 Execute the tests with:
 
 ```bash
-$ elixir tournament_test.exs
+$ mix test
 ```
 
 ### Pending tests

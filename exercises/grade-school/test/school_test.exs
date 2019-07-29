@@ -1,4 +1,3 @@
-
 defmodule SchoolTest do
   use ExUnit.Case
 

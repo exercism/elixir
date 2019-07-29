@@ -1,4 +1,3 @@
-
 defmodule MatrixTest do
   use ExUnit.Case
 

@@ -1,4 +1,3 @@
-
 defmodule AnagramTest do
   use ExUnit.Case
 

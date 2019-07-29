@@ -27,7 +27,7 @@ a single line. Feel free to add your own code/tests to check for degenerate tria
 Execute the tests with:
 
 ```bash
-$ elixir triangle_test.exs
+$ mix test
 ```
 
 ### Pending tests

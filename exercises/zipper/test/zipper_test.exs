@@ -1,4 +1,3 @@
-
 defmodule ZipperTest do
   alias BinTree, as: BT
   import Zipper
