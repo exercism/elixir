@@ -1,4 +1,4 @@
-defmodule RNATranscription do
+defmodule RnaTranscription do
   @doc """
   Transcribes a character list representing RNATranscription nucleotides to RNA
 
