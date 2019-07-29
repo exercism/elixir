@@ -17,7 +17,7 @@ natural numbers is 3025 - 385 = 2640.
 Execute the tests with:
 
 ```bash
-$ elixir difference_of_squares_test.exs
+$ mix test
 ```
 
 ### Pending tests

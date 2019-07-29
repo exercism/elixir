@@ -54,7 +54,7 @@ particularly for enormous integers, but you might need :binary to decode it.
 Execute the tests with:
 
 ```bash
-$ elixir diffie_hellman_test.exs
+$ mix test
 ```
 
 ### Pending tests

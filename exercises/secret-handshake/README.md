@@ -55,7 +55,7 @@ Flags &&& Check: 0b10010 (Third bit not set)
 Execute the tests with:
 
 ```bash
-$ elixir secret_handshake_test.exs
+$ mix test
 ```
 
 ### Pending tests

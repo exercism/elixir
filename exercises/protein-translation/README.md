@@ -46,7 +46,7 @@ Learn more about [protein translation on Wikipedia](http://en.wikipedia.org/wiki
 Execute the tests with:
 
 ```bash
-$ elixir protein_translation_test.exs
+$ mix test
 ```
 
 ### Pending tests

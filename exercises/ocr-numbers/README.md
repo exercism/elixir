@@ -83,7 +83,7 @@ Is converted to "123,456,789"
 Execute the tests with:
 
 ```bash
-$ elixir ocr_numbers_test.exs
+$ mix test
 ```
 
 ### Pending tests

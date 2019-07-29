@@ -56,7 +56,7 @@ If you'd like, handle exponentials.
 Execute the tests with:
 
 ```bash
-$ elixir wordy_test.exs
+$ mix test
 ```
 
 ### Pending tests

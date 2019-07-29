@@ -28,7 +28,7 @@ like these examples:
 Execute the tests with:
 
 ```bash
-$ elixir spiral_matrix_test.exs
+$ mix test
 ```
 
 ### Pending tests

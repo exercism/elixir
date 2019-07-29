@@ -34,7 +34,7 @@ score is 257, your program should only report the eggs (1) allergy.
 Execute the tests with:
 
 ```bash
-$ elixir allergies_test.exs
+$ mix test
 ```
 
 ### Pending tests

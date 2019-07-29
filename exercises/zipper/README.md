@@ -32,7 +32,7 @@ list of child nodes) a zipper might support these operations:
 Execute the tests with:
 
 ```bash
-$ elixir zipper_test.exs
+$ mix test
 ```
 
 ### Pending tests

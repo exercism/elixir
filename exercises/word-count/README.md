@@ -19,7 +19,7 @@ The keys are lowercase.
 Execute the tests with:
 
 ```bash
-$ elixir word_count_test.exs
+$ mix test
 ```
 
 ### Pending tests

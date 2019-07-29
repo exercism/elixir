@@ -19,7 +19,7 @@ important thing is to make the code better!
 Execute the tests with:
 
 ```bash
-$ elixir markdown_test.exs
+$ mix test
 ```
 
 ### Pending tests

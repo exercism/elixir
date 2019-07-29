@@ -23,7 +23,7 @@ each nucleotide with its complement:
 Execute the tests with:
 
 ```bash
-$ elixir rna_transcription_test.exs
+$ mix test
 ```
 
 ### Pending tests

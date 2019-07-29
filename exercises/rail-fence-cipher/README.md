@@ -63,7 +63,7 @@ If you now read along the zig-zag shape you can read the original message.
 Execute the tests with:
 
 ```bash
-$ elixir rail_fence_cipher_test.exs
+$ mix test
 ```
 
 ### Pending tests

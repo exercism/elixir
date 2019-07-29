@@ -19,7 +19,7 @@ the right and left of the current position in the previous row.
 Execute the tests with:
 
 ```bash
-$ elixir pascals_triangle_test.exs
+$ mix test
 ```
 
 ### Pending tests

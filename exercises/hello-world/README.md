@@ -19,7 +19,7 @@ If everything goes well, you will be ready to fetch your first real exercise.
 Execute the tests with:
 
 ```bash
-$ elixir hello_world_test.exs
+$ mix test
 ```
 
 ### Pending tests

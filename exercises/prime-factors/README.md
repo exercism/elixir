@@ -34,7 +34,7 @@ You can check this yourself:
 Execute the tests with:
 
 ```bash
-$ elixir prime_factors_test.exs
+$ mix test
 ```
 
 ### Pending tests

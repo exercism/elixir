@@ -20,7 +20,7 @@ Bob's conversational partner is a purist when it comes to written communication 
 Execute the tests with:
 
 ```bash
-$ elixir bob_test.exs
+$ mix test
 ```
 
 ### Pending tests

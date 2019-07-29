@@ -33,7 +33,7 @@ should all produce the output
 Execute the tests with:
 
 ```bash
-$ elixir phone_number_test.exs
+$ mix test
 ```
 
 ### Pending tests

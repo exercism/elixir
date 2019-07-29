@@ -28,7 +28,7 @@ be decoded always represent the count for the following character.
 Execute the tests with:
 
 ```bash
-$ elixir run_length_encoding_test.exs
+$ mix test
 ```
 
 ### Pending tests

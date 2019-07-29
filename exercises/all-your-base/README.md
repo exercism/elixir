@@ -36,7 +36,7 @@ I think you got the idea!
 Execute the tests with:
 
 ```bash
-$ elixir all_your_base_test.exs
+$ mix test
 ```
 
 ### Pending tests

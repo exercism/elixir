@@ -18,7 +18,7 @@ The word *isograms*, however, is not an isogram, because the s repeats.
 Execute the tests with:
 
 ```bash
-$ elixir isogram_test.exs
+$ mix test
 ```
 
 ### Pending tests

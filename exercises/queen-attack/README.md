@@ -31,7 +31,7 @@ share a diagonal.
 Execute the tests with:
 
 ```bash
-$ elixir queen_attack_test.exs
+$ mix test
 ```
 
 ### Pending tests

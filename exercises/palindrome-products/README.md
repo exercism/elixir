@@ -37,7 +37,7 @@ The largest palindrome product is `9009`. Its factors are `(91, 99)`.
 Execute the tests with:
 
 ```bash
-$ elixir palindrome_products_test.exs
+$ mix test
 ```
 
 ### Pending tests
