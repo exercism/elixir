@@ -1,4 +1,3 @@
-
 defmodule ForthTest do
   use ExUnit.Case
 

@@ -1,4 +1,3 @@
-
 defmodule SieveTest do
   use ExUnit.Case
 

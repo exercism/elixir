@@ -1,4 +1,3 @@
-
 defmodule DiffieHellmanTest do
   use ExUnit.Case
 

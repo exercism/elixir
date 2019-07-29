@@ -1,4 +1,3 @@
-
 defmodule TwelveDaysTest do
   use ExUnit.Case
 

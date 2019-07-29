@@ -1,4 +1,3 @@
-
 defmodule NthPrimeTest do
   use ExUnit.Case
 

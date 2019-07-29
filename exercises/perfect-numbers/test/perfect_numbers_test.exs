@@ -1,4 +1,3 @@
-
 defmodule PerfectNumbersTest do
   use ExUnit.Case
 

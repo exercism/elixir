@@ -1,4 +1,3 @@
-
 defmodule CollatzConjectureTest do
   use ExUnit.Case
 

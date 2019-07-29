@@ -1,4 +1,3 @@
-
 defmodule MarkdownTest do
   use ExUnit.Case
 

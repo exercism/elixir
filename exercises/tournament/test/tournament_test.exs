@@ -1,4 +1,3 @@
-
 defmodule TournamentTest do
   use ExUnit.Case
 

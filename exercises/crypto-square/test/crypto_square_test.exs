@@ -1,4 +1,3 @@
-
 defmodule CryptoSquareTest do
   use ExUnit.Case
 

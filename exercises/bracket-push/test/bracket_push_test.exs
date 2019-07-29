@@ -1,4 +1,3 @@
-
 defmodule BracketPushTest do
   use ExUnit.Case
 

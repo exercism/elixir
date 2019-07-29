@@ -1,4 +1,3 @@
-
 defmodule RailFenceCipherTest do
   use ExUnit.Case
 

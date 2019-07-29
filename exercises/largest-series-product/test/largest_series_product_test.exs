@@ -1,4 +1,3 @@
-
 defmodule LargestSeriesProductTest do
   use ExUnit.Case
 

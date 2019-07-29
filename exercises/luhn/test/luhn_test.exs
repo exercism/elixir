@@ -1,4 +1,3 @@
-
 defmodule LuhnTest do
   use ExUnit.Case
 

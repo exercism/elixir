@@ -1,4 +1,3 @@
-
 defmodule PrimeFactorsTest do
   use ExUnit.Case
 

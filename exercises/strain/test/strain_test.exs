@@ -1,4 +1,3 @@
-
 defmodule StrainTest do
   use ExUnit.Case
 

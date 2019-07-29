@@ -1,4 +1,3 @@
-
 defmodule SecretHandshakeTest do
   use ExUnit.Case
 

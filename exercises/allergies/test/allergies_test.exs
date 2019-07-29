@@ -1,4 +1,3 @@
-
 defmodule AllergiesTest do
   use ExUnit.Case
 

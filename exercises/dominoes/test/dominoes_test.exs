@@ -1,4 +1,3 @@
-
 defmodule DominoesTest do
   use ExUnit.Case
 

@@ -1,4 +1,3 @@
-
 defmodule ScrabbleTest do
   use ExUnit.Case
 

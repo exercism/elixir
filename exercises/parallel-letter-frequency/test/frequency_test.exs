@@ -1,4 +1,3 @@
-
 defmodule FrequencyTest do
   use ExUnit.Case
 

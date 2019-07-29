@@ -1,4 +1,3 @@
-
 defmodule SimpleCipherTest do
   use ExUnit.Case
 

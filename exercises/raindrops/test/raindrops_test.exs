@@ -1,4 +1,3 @@
-
 defmodule RaindropsTest do
   use ExUnit.Case
 

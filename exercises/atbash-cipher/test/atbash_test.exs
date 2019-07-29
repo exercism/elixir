@@ -1,4 +1,3 @@
-
 defmodule AtbashTest do
   use ExUnit.Case
 

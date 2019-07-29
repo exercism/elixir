@@ -1,4 +1,3 @@
-
 defmodule HammingTest do
   use ExUnit.Case
 

@@ -1,4 +1,3 @@
-
 defmodule DotTest do
   use ExUnit.Case
   require Dot

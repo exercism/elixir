@@ -1,4 +1,3 @@
-
 defmodule PascalsTriangleTest do
   use ExUnit.Case
 

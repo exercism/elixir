@@ -1,4 +1,3 @@
-
 defmodule CustomSetTest do
   use ExUnit.Case
 

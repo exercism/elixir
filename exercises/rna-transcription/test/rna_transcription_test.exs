@@ -1,4 +1,3 @@
-
 defmodule RnaTranscriptionTest do
   use ExUnit.Case
 

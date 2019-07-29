@@ -1,4 +1,3 @@
-
 defmodule RotationalCipherTest do
   use ExUnit.Case
 

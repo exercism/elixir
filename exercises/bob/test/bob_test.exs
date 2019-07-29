@@ -1,4 +1,3 @@
-
 defmodule BobTest do
   use ExUnit.Case
 

@@ -1,4 +1,3 @@
-
 defmodule LinkedListTest do
   use ExUnit.Case
 

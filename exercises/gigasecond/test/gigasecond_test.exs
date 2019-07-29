@@ -1,4 +1,3 @@
-
 defmodule GigasecondTest do
   use ExUnit.Case
 

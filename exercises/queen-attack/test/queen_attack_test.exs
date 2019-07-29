@@ -1,4 +1,3 @@
-
 defmodule QueenAttackTest do
   use ExUnit.Case
 

@@ -1,4 +1,3 @@
-
 defmodule TriangleTest do
   use ExUnit.Case
 

@@ -1,4 +1,3 @@
-
 defmodule PythagoreanTripletTest do
   use ExUnit.Case
 

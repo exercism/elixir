@@ -1,4 +1,3 @@
-
 defmodule IsbnVerifierTest do
   use ExUnit.Case
 

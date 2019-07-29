@@ -1,4 +1,3 @@
-
 defmodule WordyTest do
   use ExUnit.Case
 

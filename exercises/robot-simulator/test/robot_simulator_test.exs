@@ -1,4 +1,3 @@
-
 defmodule RobotSimulatorTest do
   use ExUnit.Case
 

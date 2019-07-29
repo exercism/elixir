@@ -1,4 +1,3 @@
-
 defmodule SaddlePointsTest do
   use ExUnit.Case
 

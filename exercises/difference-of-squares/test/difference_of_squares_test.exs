@@ -1,4 +1,3 @@
-
 defmodule DifferenceOfSquaresTest do
   use ExUnit.Case
 

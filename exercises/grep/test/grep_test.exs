@@ -1,4 +1,3 @@
-
 defmodule GrepTest do
   use ExUnit.Case
 

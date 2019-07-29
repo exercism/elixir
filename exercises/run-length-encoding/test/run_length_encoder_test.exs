@@ -1,4 +1,3 @@
-
 defmodule RunLengthEncoderTest do
   use ExUnit.Case
 
