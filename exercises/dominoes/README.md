@@ -19,7 +19,7 @@ Some test cases may use duplicate stones in a chain solution, assume that multip
 Execute the tests with:
 
 ```bash
-$ elixir dominoes_test.exs
+$ mix test
 ```
 
 ### Pending tests

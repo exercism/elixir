@@ -41,7 +41,7 @@ basic tools instead.
 Execute the tests with:
 
 ```bash
-$ elixir strain_test.exs
+$ mix test
 ```
 
 ### Pending tests

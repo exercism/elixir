@@ -30,7 +30,7 @@ Words are case-insensitive.
 Execute the tests with:
 
 ```bash
-$ elixir forth_test.exs
+$ mix test
 ```
 
 ### Pending tests

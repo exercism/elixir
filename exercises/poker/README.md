@@ -10,7 +10,7 @@ overview of poker hands.
 Execute the tests with:
 
 ```bash
-$ elixir poker_test.exs
+$ mix test
 ```
 
 ### Pending tests

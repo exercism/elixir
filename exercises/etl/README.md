@@ -51,7 +51,7 @@ game while being scored at 4 in the Hawaiian-language version.
 Execute the tests with:
 
 ```bash
-$ elixir etl_test.exs
+$ mix test
 ```
 
 ### Pending tests

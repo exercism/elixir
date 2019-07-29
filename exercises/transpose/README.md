@@ -63,7 +63,7 @@ the corresponding output row should contain the spaces in its right-most column(
 Execute the tests with:
 
 ```bash
-$ elixir transpose_test.exs
+$ mix test
 ```
 
 ### Pending tests

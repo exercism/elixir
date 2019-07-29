@@ -34,7 +34,7 @@ language).
 Execute the tests with:
 
 ```bash
-$ elixir sieve_test.exs
+$ mix test
 ```
 
 ### Pending tests

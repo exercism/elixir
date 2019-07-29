@@ -30,7 +30,7 @@ Solve this one yourself using other basic tools instead.
 Execute the tests with:
 
 ```bash
-$ elixir accumulate_test.exs
+$ mix test
 ```
 
 ### Pending tests
