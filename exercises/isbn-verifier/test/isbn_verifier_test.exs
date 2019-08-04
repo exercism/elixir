@@ -65,4 +65,67 @@ defmodule IsbnVerifierTest do
   test "check digit of X should not be used for 0" do
     refute IsbnVerifier.isbn?("3-598-21515-X")
   end
+
+  # Test cases from international ISBN to test variable dash placement
+  # Adapted from https://en.wikipedia.org/wiki/International_Standard_Book_Number#Registrant_element
+
+  @tag :pending
+  test "Qatar	NCCAH, Doha" do
+    assert IsbnVerifier.isbn?("99921-58-10-7")
+  end
+
+  @tag :pending
+  test "Singapore	World Scientific" do
+    assert IsbnVerifier.isbn?("9971-5-0210-0")
+  end
+
+  @tag :pending
+  test "Greece	Sigma Publications" do
+    assert IsbnVerifier.isbn?("960-425-059-0")
+  end
+
+  @tag :pending
+  test "Czech Republic; Slovakia	Taita Publishers" do
+    assert IsbnVerifier.isbn?("80-902734-1-6")
+  end
+
+  @tag :pending
+  test "Brazil	Companhia das Letras" do
+    assert IsbnVerifier.isbn?("85-359-0277-5")
+  end
+
+  @tag :pending
+  test "English-speaking area	Simon Wallenberg Press" do
+    assert IsbnVerifier.isbn?("1-84356-028-3")
+  end
+
+  @tag :pending
+  test "English-speaking area	Scribner" do
+    assert IsbnVerifier.isbn?("0-684-84328-5")
+  end
+
+  @tag :pending
+  test "English-speaking area	Frederick Ungar" do
+    assert IsbnVerifier.isbn?("0-8044-2957-X")
+  end
+
+  @tag :pending
+  test "English-speaking area	J. A. Allen & Co." do
+    assert IsbnVerifier.isbn?("0-85131-041-9")
+  end
+
+  @tag :pending
+  test "English-speaking area	Edupedia Publications Pvt Ltd." do
+    assert IsbnVerifier.isbn?("93-86954-21-4")
+  end
+
+  @tag :pending
+  test "English-speaking area	Willmann–Bell" do
+    assert IsbnVerifier.isbn?("0-943396-04-2")
+  end
+
+  @tag :pending
+  test "English-speaking area	KT Publishing" do
+    assert IsbnVerifier.isbn?("0-9752298-0-X")
+  end
 end
