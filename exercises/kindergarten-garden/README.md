@@ -64,7 +64,7 @@ While asking for Bob's plants would yield:
 Execute the tests with:
 
 ```bash
-$ elixir kindergarten_garden_test.exs
+$ mix test
 ```
 
 ### Pending tests

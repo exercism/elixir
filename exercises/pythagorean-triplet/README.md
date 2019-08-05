@@ -22,7 +22,7 @@ Find the product a * b * c.
 Execute the tests with:
 
 ```bash
-$ elixir pythagorean_triplet_test.exs
+$ mix test
 ```
 
 ### Pending tests

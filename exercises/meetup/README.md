@@ -31,7 +31,7 @@ descriptor calculate the date of the actual meetup.  For example, if given
 Execute the tests with:
 
 ```bash
-$ elixir meetup_test.exs
+$ mix test
 ```
 
 ### Pending tests

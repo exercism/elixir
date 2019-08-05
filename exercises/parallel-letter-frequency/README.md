@@ -12,7 +12,7 @@ list of texts and that employs parallelism.
 Execute the tests with:
 
 ```bash
-$ elixir parallel_letter_frequency_test.exs
+$ mix test
 ```
 
 ### Pending tests

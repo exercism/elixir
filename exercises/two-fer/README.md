@@ -17,7 +17,7 @@ If no name is given, the result should be "One for you, one for me."
 Execute the tests with:
 
 ```bash
-$ elixir two_fer_test.exs
+$ mix test
 ```
 
 ### Pending tests

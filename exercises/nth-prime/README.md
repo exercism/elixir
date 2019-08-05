@@ -13,7 +13,7 @@ numbers, pretend they don't exist and implement them yourself.
 Execute the tests with:
 
 ```bash
-$ elixir nth_prime_test.exs
+$ mix test
 ```
 
 ### Pending tests

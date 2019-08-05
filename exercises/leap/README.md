@@ -31,7 +31,7 @@ phenomenon, go watch [this youtube video][video].
 Execute the tests with:
 
 ```bash
-$ elixir leap_test.exs
+$ mix test
 ```
 
 ### Pending tests

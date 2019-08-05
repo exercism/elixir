@@ -25,7 +25,7 @@ in the input; the digits need not be *numerically consecutive*.
 Execute the tests with:
 
 ```bash
-$ elixir series_test.exs
+$ mix test
 ```
 
 ### Pending tests

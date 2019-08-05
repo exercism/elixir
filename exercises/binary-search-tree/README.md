@@ -58,7 +58,7 @@ And if we then added 1, 5, and 7, it would look like this
 Execute the tests with:
 
 ```bash
-$ elixir binary_search_tree_test.exs
+$ mix test
 ```
 
 ### Pending tests

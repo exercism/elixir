@@ -9,7 +9,7 @@ and nested correctly.
 Execute the tests with:
 
 ```bash
-$ elixir bracket_push_test.exs
+$ mix test
 ```
 
 ### Pending tests

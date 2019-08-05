@@ -11,7 +11,7 @@ come: 1
 free: 1
 ```
 
-Words are compared case-insensitively. 
+Words are compared case-insensitively.
 The keys are lowercase.
 
 ## Running tests
@@ -19,7 +19,7 @@ The keys are lowercase.
 Execute the tests with:
 
 ```bash
-$ elixir word_count_test.exs
+$ mix test
 ```
 
 ### Pending tests

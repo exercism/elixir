@@ -11,7 +11,7 @@ Given `"listen"` and a list of candidates like `"enlists" "google"
 Execute the tests with:
 
 ```bash
-$ elixir anagram_test.exs
+$ mix test
 ```
 
 ### Pending tests

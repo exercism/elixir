@@ -22,7 +22,7 @@ See <http://en.wikipedia.org/wiki/Pig_latin> for more details.
 Execute the tests with:
 
 ```bash
-$ elixir pig_latin_test.exs
+$ mix test
 ```
 
 ### Pending tests

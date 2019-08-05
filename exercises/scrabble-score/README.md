@@ -44,7 +44,7 @@ And to total:
 Execute the tests with:
 
 ```bash
-$ elixir scrabble_score_test.exs
+$ mix test
 ```
 
 ### Pending tests

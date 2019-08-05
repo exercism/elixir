@@ -67,7 +67,7 @@ Use _and_ (correctly) when spelling out the number in English:
 Execute the tests with:
 
 ```bash
-$ elixir say_test.exs
+$ mix test
 ```
 
 ### Pending tests

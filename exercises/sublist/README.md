@@ -22,7 +22,7 @@ Examples:
 Execute the tests with:
 
 ```bash
-$ elixir sublist_test.exs
+$ mix test
 ```
 
 ### Pending tests

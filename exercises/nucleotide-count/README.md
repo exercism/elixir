@@ -17,7 +17,7 @@ Here is an analogy:
 Execute the tests with:
 
 ```bash
-$ elixir nucleotide_count_test.exs
+$ mix test
 ```
 
 ### Pending tests

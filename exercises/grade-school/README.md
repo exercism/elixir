@@ -39,7 +39,7 @@ experiment make the code better? Worse? Did you learn anything from it?
 Execute the tests with:
 
 ```bash
-$ elixir grade_school_test.exs
+$ mix test
 ```
 
 ### Pending tests

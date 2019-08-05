@@ -45,7 +45,7 @@ And its columns:
 Execute the tests with:
 
 ```bash
-$ elixir matrix_test.exs
+$ mix test
 ```
 
 ### Pending tests

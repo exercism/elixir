@@ -12,7 +12,7 @@ The program should handle invalid hexadecimal strings.
 Execute the tests with:
 
 ```bash
-$ elixir hexadecimal_test.exs
+$ mix test
 ```
 
 ### Pending tests

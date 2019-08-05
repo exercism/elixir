@@ -12,7 +12,7 @@ unique elements.
 Execute the tests with:
 
 ```bash
-$ elixir custom_set_test.exs
+$ mix test
 ```
 
 ### Pending tests
