@@ -13,7 +13,7 @@ insensitive. Input will not contain non-ASCII symbols.
 Execute the tests with:
 
 ```bash
-$ elixir pangram_test.exs
+$ mix test
 ```
 
 ### Pending tests

@@ -11,7 +11,7 @@ Two clocks that represent the same time should be equal to each other.
 Execute the tests with:
 
 ```bash
-$ elixir clock_test.exs
+$ mix test
 ```
 
 ### Pending tests

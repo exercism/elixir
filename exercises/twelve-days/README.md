@@ -33,7 +33,7 @@ On the twelfth day of Christmas my true love gave to me: twelve Drummers Drummin
 Execute the tests with:
 
 ```bash
-$ elixir twelve_days_test.exs
+$ mix test
 ```
 
 ### Pending tests

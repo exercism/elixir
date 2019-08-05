@@ -26,7 +26,7 @@ implement your own abstract data type.
 Execute the tests with:
 
 ```bash
-$ elixir linked_list_test.exs
+$ mix test
 ```
 
 ### Pending tests

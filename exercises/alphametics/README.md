@@ -36,7 +36,7 @@ Write a function to solve alphametics puzzles.
 Execute the tests with:
 
 ```bash
-$ elixir alphametics_test.exs
+$ mix test
 ```
 
 ### Pending tests

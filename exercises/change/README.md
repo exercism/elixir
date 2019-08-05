@@ -21,7 +21,7 @@ that the sum of the coins' value would equal the correct amount of change.
 Execute the tests with:
 
 ```bash
-$ elixir change_test.exs
+$ mix test
 ```
 
 ### Pending tests

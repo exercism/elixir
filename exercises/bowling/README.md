@@ -65,7 +65,7 @@ support two operations:
 Execute the tests with:
 
 ```bash
-$ elixir bowling_test.exs
+$ mix test
 ```
 
 ### Pending tests

@@ -32,7 +32,7 @@ direction it is pointing.
 Execute the tests with:
 
 ```bash
-$ elixir robot_simulator_test.exs
+$ mix test
 ```
 
 ### Pending tests

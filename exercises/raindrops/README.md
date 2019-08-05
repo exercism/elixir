@@ -22,7 +22,7 @@ Convert a number to a string, the contents of which depend on the number's facto
 Execute the tests with:
 
 ```bash
-$ elixir raindrops_test.exs
+$ mix test
 ```
 
 ### Pending tests

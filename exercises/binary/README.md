@@ -35,7 +35,7 @@ So: `101 => 1*2^2 + 0*2^1 + 1*2^0 => 1*4 + 0*2 + 1*1 => 4 + 1 => 5 base 10`.
 Execute the tests with:
 
 ```bash
-$ elixir binary_test.exs
+$ mix test
 ```
 
 ### Pending tests

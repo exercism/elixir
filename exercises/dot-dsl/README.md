@@ -28,7 +28,7 @@ Create a DSL similar to the dot language.
 Execute the tests with:
 
 ```bash
-$ elixir dot_dsl_test.exs
+$ mix test
 ```
 
 ### Pending tests

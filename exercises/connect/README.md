@@ -35,7 +35,7 @@ won since `O` didn't connect top and bottom.
 Execute the tests with:
 
 ```bash
-$ elixir connect_test.exs
+$ mix test
 ```
 
 ### Pending tests

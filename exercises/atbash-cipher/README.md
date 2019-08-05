@@ -33,7 +33,7 @@ things based on word boundaries.
 Execute the tests with:
 
 ```bash
-$ elixir atbash_cipher_test.exs
+$ mix test
 ```
 
 ### Pending tests

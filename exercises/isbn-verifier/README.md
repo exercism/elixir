@@ -45,7 +45,7 @@ Now, it's even trickier since the check digit of an ISBN-10 may be 'X' (represen
 Execute the tests with:
 
 ```bash
-$ elixir isbn_verifier_test.exs
+$ mix test
 ```
 
 ### Pending tests

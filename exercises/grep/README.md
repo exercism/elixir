@@ -69,7 +69,7 @@ print the names of files that do not contain the string "hello".
 Execute the tests with:
 
 ```bash
-$ elixir grep_test.exs
+$ mix test
 ```
 
 ### Pending tests

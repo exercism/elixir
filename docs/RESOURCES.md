@@ -10,7 +10,7 @@
 
 * [ExUnit](https://hexdocs.pm/ex_unit/ExUnit.html)
 
-## Elixir IRC 
+## Elixir IRC
 
 * [Elixir IRC](http://irc.lc/freenode/elixir)
 

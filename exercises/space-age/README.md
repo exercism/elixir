@@ -22,7 +22,7 @@ youtube video](http://www.youtube.com/watch?v=Z_2gbGXzFbs).
 Execute the tests with:
 
 ```bash
-$ elixir space_age_test.exs
+$ mix test
 ```
 
 ### Pending tests

@@ -31,7 +31,7 @@ Have fun!
 Execute the tests with:
 
 ```bash
-$ elixir bank_account_test.exs
+$ mix test
 ```
 
 ### Pending tests

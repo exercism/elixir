@@ -57,7 +57,7 @@ E·······E
 Execute the tests with:
 
 ```bash
-$ elixir diamond_test.exs
+$ mix test
 ```
 
 ### Pending tests
