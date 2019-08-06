@@ -1,9 +1,9 @@
-defmodule Roman.MixProject do
+defmodule RomanNumerals.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :roman,
+      app: :roman_numerals,
       version: "0.1.0",
       # elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
