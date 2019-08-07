@@ -15,11 +15,11 @@ defmodule RomanNumerals do
     [1, "I"]
   ]
 
-  def numerals(0), do: ""
+  def numeral(0), do: ""
 
-  def numerals(number) do
+  def numeral(number) do
     [part, letter] = largest_factor(number)
-    letter <> numerals(number - part)
+    letter <> numeral(number - part)
   end
 
   defp largest_factor(number) do
