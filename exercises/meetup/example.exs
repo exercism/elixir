@@ -20,7 +20,7 @@ defmodule Meetup do
   The schedule is in which week (1..4, last or "teenth") the meetup date should
   fall.
   """
-  @spec meetup(pos_integer, pos_integer, weekday, schedule) :: :calendar.date()
+  @spec meetup(pos_integer, pos_integer, weekday, schedule) :: Date.t()
   def meetup(year, month, weekday, :last) do
     start_day = :calendar.last_day_of_the_month(year, month) - 6
     meetup_nth(year, month, start_day, weekday)
@@ -37,6 +37,7 @@ defmodule Meetup do
       n when n < 0 -> {year, month, start_day + n + 7}
       n -> {year, month, start_day + n}
     end
+    |> Date.from_erl!()
   end
 
   # Aliases for the day of week numbers from Erlang.
