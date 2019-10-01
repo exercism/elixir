@@ -46,15 +46,11 @@ Please keep the following in mind:
 
 - Use typespecs in the example and template files as described [here](http://elixir-lang.org/getting-started/typespecs-and-behaviours.html).
 
-- Each test file should have code like the following at the top of the file.
-  This allows the tests to be run on CI and configures tests to be skipped with
-  the `:pending` flag.
+- Each test file should have a `test_helper.exs` with code like the following
+  at the top of the file. This allows the tests to be run on CI and configures
+  tests to be skipped with the `:pending` flag.
 
 ```elixir
-if !System.get_env("EXERCISM_TEST_EXAMPLES") do
-  Code.load_file("bob.exs", __DIR__)
-end
-
 ExUnit.start
 ExUnit.configure exclude: :pending, trace: true
 ```
@@ -71,4 +67,3 @@ end
 All the tests for Exercism Elixir Track exercises can be run from the top level of the repo
 with `$ mix test`. Please run this command before submitting your PR. Watch out
 for and correct any compiler warnings you may have introduced.
-
