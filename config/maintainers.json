@@ -32,6 +32,16 @@
       "bio": null
     },
     {
+      "github_username": "cohen-carlisle",
+      "alumnus": false,
+      "show_on_website": true,
+      "name": "Cohen Carlisle",
+      "link_text": null,
+      "link_url": "https://medium.com/@CohenCarlisle",
+      "avatar_url": null,
+      "bio": "I love Elixir for its productivity, elegant syntax, and functional nature. I've written it professionally and for fun. I hope to help people get excited about Elixir and learn some things myself, as well."
+    },
+    {
       "github_username": "neenjaw",
       "alumnus": false,
       "show_on_website": true,
