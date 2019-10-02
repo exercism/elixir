@@ -53,5 +53,5 @@ Please keep the following in mind:
     ```
 
 All the tests for Exercism Elixir Track exercises can be run from the top level of the repo
-with `$ mix test`. Please run this command before submitting your PR. Watch out
+with `$ ./bin/test_exercises.sh`. Please run this command before submitting your PR. Watch out
 for and correct any compiler warnings you may have introduced.
