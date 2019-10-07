@@ -1,19 +1,35 @@
 defmodule DndCharacter do
-  @type t :: %{
-    strength: pos_integer,
-    dexterity: pos_integer,
-    constitution: pos_integer,
-    intelligence: pos_integer,
-    wisdom: pos_integer,
-    charisma: pos_integer,
-    hitpoints: pos_integer
+  @type t :: %__MODULE__{
+    strength: pos_integer(),
+    dexterity: pos_integer(),
+    constitution: pos_integer(),
+    intelligence: pos_integer(),
+    wisdom: pos_integer(),
+    charisma: pos_integer(),
+    hitpoints: pos_integer()
   }
 
-  def __struct__() do
+  defstruct ~w[strength dexterity constitution intelligence wisdom charisma hitpoints]a
+
+  @spec modifier(pos_integer) :: integer()
+  def modifier(score) do
+    div(score - 10, 2)
+  end
+
+  @spec ability :: pos_integer()
+  def ability() do
+    1..4
+    |> Enum.map(fn _ -> Enum.random(1..6) end)
+    |> Enum.sort()
+    |> Enum.drop(1)
+    |> Enum.sum()
+  end
+
+  @spec character :: t()
+  def character() do
     constitution = ability()
 
-    %{
-      __struct__: __MODULE__,
+    %__MODULE__{
       strength: ability(),
       dexterity: ability(),
       constitution: constitution,
@@ -22,20 +38,5 @@ defmodule DndCharacter do
       charisma: ability(),
       hitpoints: 10 + modifier(constitution)
     }
-  end
-
-  def __struct__(kv) do
-    Enum.reduce(kv, __struct__(), fn {k, v}, acc -> :maps.update(k, v, acc) end)
-  end
-
-  @spec modifier(pos_integer) :: integer
-  def modifier(score), do: :erlang.floor((score - 10) / 2)
-
-  @spec ability :: pos_integer
-  def ability(), do: :rand.uniform(16) + 2
-
-  @spec character :: t()
-  def character() do
-    %__MODULE__{}
   end
 end

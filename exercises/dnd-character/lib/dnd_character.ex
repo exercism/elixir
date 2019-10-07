@@ -1,22 +1,25 @@
 defmodule DndCharacter do
-  @type t :: %{
-          strength: pos_integer,
-          dexterity: pos_integer,
-          constitution: pos_integer,
-          intelligence: pos_integer,
-          wisdom: pos_integer,
-          charisma: pos_integer,
-          hitpoints: pos_integer
-        }
+  @type t :: %__MODULE__{
+    strength: pos_integer(),
+    dexterity: pos_integer(),
+    constitution: pos_integer(),
+    intelligence: pos_integer(),
+    wisdom: pos_integer(),
+    charisma: pos_integer(),
+    hitpoints: pos_integer()
+  }
 
-  @spec modifier(pos_integer) :: integer
+  defstruct ~w[strength dexterity constitution intelligence wisdom charisma hitpoints]a
+
+  @spec modifier(pos_integer) :: integer()
   def modifier(score) do
   end
 
-  def ability do
+  @spec ability :: pos_integer()
+  def ability() do
   end
 
   @spec character :: t()
-  def character do
+  def character() do
   end
 end
