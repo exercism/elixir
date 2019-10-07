@@ -13,7 +13,7 @@ defmodule DndCharacter do
 
   @spec modifier(pos_integer) :: integer()
   def modifier(score) do
-    div(score - 10, 2)
+    Integer.floor_div(score - 10, 2)
   end
 
   @spec ability :: pos_integer()
