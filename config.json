@@ -365,7 +365,7 @@
       ]
     },
     {
-      "slug": "bracket-push",
+      "slug": "matching-brackets",
       "uuid": "cf0084a0-7b1d-4714-b7b2-618e3ad6e147",
       "core": false,
       "unlocked_by": "roman-numerals",

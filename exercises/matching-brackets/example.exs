@@ -1,4 +1,4 @@
-defmodule BracketPush do
+defmodule MatchingBrackets do
   @brackets %{
     "{" => "}",
     "(" => ")",
