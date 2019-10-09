@@ -15,6 +15,7 @@ matrix:
     otp_release: 22
 
 script:
+  - mix format --check-formatted
   - bin/fetch-configlet
   - bin/configlet lint .
   - mix deps.get
