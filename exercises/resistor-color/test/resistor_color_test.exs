@@ -53,7 +53,18 @@ defmodule ResistorColorTest do
 
   @tag :pending
   test "returns all colors" do
-    colors = ["black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"]
+    colors = [
+      "black",
+      "brown",
+      "red",
+      "orange",
+      "yellow",
+      "green",
+      "blue",
+      "violet",
+      "grey",
+      "white"
+    ]
 
     assert ResistorColor.colors() == colors
   end

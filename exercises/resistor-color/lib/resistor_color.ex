@@ -5,7 +5,7 @@ defmodule ResistorColor do
   def colors do
   end
 
-  @spec code(String.t()) :: integer
+  @spec code(String.t()) :: integer()
   def code(color) do
   end
 end
