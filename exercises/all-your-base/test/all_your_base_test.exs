@@ -61,6 +61,21 @@ defmodule AllYourBaseTest do
   end
 
   @tag :pending
+  test "convert first base is one" do
+    assert AllYourBase.convert([0], 1, 10) == nil
+  end
+
+  @tag :pending
+  test "convert first base is zero" do
+    assert AllYourBase.convert([], 0, 10) == nil
+  end
+
+  @tag :pending
+  test "convert first base is negative" do
+    assert AllYourBase.convert([1], -2, 10) == nil
+  end
+
+  @tag :pending
   test "convert negative digit" do
     assert AllYourBase.convert([1, -1, 1, 0, 1, 0], 2, 10) == nil
   end
@@ -71,28 +86,13 @@ defmodule AllYourBaseTest do
   end
 
   @tag :pending
-  test "convert first base is one" do
-    assert AllYourBase.convert([0], 1, 10) == nil
-  end
-
-  @tag :pending
   test "convert second base is one" do
     assert AllYourBase.convert([1, 0, 1, 0, 1, 0], 2, 1) == nil
   end
 
   @tag :pending
-  test "convert first base is zero" do
-    assert AllYourBase.convert([], 0, 10) == nil
-  end
-
-  @tag :pending
   test "convert second base is zero" do
     assert AllYourBase.convert([7], 10, 0) == nil
-  end
-
-  @tag :pending
-  test "convert first base is negative" do
-    assert AllYourBase.convert([1], -2, 10) == nil
   end
 
   @tag :pending

@@ -27,6 +27,19 @@ defmodule AlphameticsTest do
   end
 
   @tag :pending
+  test "puzzle with two digits final carry" do
+    puzzle = "A + A + A + A + A + A + A + A + A + A + A + B == BCC"
+
+    solution = %{
+      ?A => 9,
+      ?B => 1,
+      ?C => 0,
+    }
+
+    assert Alphametics.solve(puzzle) == solution
+  end
+
+  @tag :pending
   test "puzzle with four letters" do
     puzzle = "AS + A == MOM"
 
