@@ -27,7 +27,9 @@ defmodule AcronymTest do
 
   @tag :pending
   test "it produces a very long abbreviation" do
-    assert Acronym.abbreviate("Rolling On The Floor Laughing So Hard That My Dogs Came Over And Licked Me") === "ROTFLSHTMDCOALM"
+    assert Acronym.abbreviate(
+             "Rolling On The Floor Laughing So Hard That My Dogs Came Over And Licked Me"
+           ) === "ROTFLSHTMDCOALM"
   end
 
   @tag :pending

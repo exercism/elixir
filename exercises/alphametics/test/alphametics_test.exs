@@ -33,7 +33,7 @@ defmodule AlphameticsTest do
     solution = %{
       ?A => 9,
       ?B => 1,
-      ?C => 0,
+      ?C => 0
     }
 
     assert Alphametics.solve(puzzle) == solution
