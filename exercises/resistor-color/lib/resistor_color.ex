@@ -1,7 +1,7 @@
 defmodule ResistorColor do
   @moduledoc false
 
-  @spec colors() :: List.t()
+  @spec colors() :: list(String.t())
   def colors do
   end
 

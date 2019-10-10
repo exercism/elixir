@@ -3,7 +3,7 @@ defmodule ResistorColor do
 
   @colors ["black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"]
 
-  @spec colors() :: List.t()
+  @spec colors() :: list(String.t())
   def colors, do: @colors
 
   @spec code(String.t()) :: integer
