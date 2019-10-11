@@ -1,58 +1,47 @@
 defmodule ArmstrongNumberTest do
   use ExUnit.Case
 
-  test "One-digit numbers are Armstrong numbers" do
-    assert ArmstrongNumber.valid?(1)
-    assert ArmstrongNumber.valid?(6)
-    assert ArmstrongNumber.valid?(9)
+  # @tag :pending
+  test "Zero is an Armstrong number" do
+    assert ArmstrongNumber.valid?(0)
+  end
+
+  test "Single digit numbers are Armstrong numbers" do
+    assert ArmstrongNumber.valid?(5)
   end
 
   @tag :pending
-  test "Two-digit numbers aren't Armstrong numbers" do
-    refute ArmstrongNumber.valid?(11)
-    refute ArmstrongNumber.valid?(89)
-    refute ArmstrongNumber.valid?(44)
+  test "There are no 2 digit Armstrong Numbers" do
+    refute ArmstrongNumber.valid?(10)
   end
 
   @tag :pending
-  test "Three-digit numbers that are the Armstrong numbers" do
+  test "Three digit number that is an Armstrong number" do
     assert ArmstrongNumber.valid?(153)
-    assert ArmstrongNumber.valid?(370)
   end
 
   @tag :pending
-  test "Three-digit numbers that aren't the Armstrong numbers" do
-    refute ArmstrongNumber.valid?(555)
-    refute ArmstrongNumber.valid?(662)
+  test "Three digit number that is not an Armstrong number" do
+    refute ArmstrongNumber.valid?(100)
   end
 
   @tag :pending
-  test "Four-digit number that is the Armstrong numbers" do
-    assert ArmstrongNumber.valid?(1634)
+  test "Four digit number that is an Armstrong number" do
+    assert ArmstrongNumber.valid?(9474)
   end
 
   @tag :pending
-  test "Four-digit number that is not the Armstrong numbers" do
-    refute ArmstrongNumber.valid?(9989)
+  test "Four digit number that is not an Armstrong number" do
+    refute ArmstrongNumber.valid?(9475)
   end
 
   @tag :pending
-  test "Seven-digit number that is the Armstrong numbers" do
+  test "Seven digit number that is an Armstrong number" do
     assert ArmstrongNumber.valid?(9_926_315)
   end
 
   @tag :pending
-  test "Seven-digit number that is not the Armstrong numbers" do
-    refute ArmstrongNumber.valid?(2_369_989)
-  end
-
-  @tag :pending
-  test "Ten-digit number that is the Armstrong numbers" do
-    assert ArmstrongNumber.valid?(4_679_307_774)
-  end
-
-  @tag :pending
-  test "Fourteen-digit number that is the Armstrong numbers" do
-    assert ArmstrongNumber.valid?(28_116_440_335_967)
+  test "Seven digit number that is not an Armstrong number" do
+    refute ArmstrongNumber.valid?(9_926_134)
   end
 end
