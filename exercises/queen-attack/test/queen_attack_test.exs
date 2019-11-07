@@ -118,6 +118,25 @@ defmodule QueenAttackTest do
   end
 
   @tag :pending
+  test "queens positioned on the same row" do
+    queens = Queens.new({4, 4}, {4, 5})
+
+    board =
+      String.trim("""
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ W B _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      _ _ _ _ _ _ _ _
+      """)
+
+    assert Queens.to_string(queens) == board
+  end
+
+  @tag :pending
   test "cannot attack" do
     queens = Queens.new({2, 3}, {4, 7})
     refute Queens.can_attack?(queens)
