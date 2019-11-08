@@ -1,19 +1,23 @@
 defmodule Queens do
   @type t :: %Queens{white: {integer, integer}, black: {integer, integer}}
-  defstruct white: {0, 3}, black: {7, 3}
+  defstruct [:white, :black]
+  @board_range 0..7
 
   @doc """
   Creates a new set of Queens
   """
-  @spec new() :: Queens.t()
-  @spec new({integer, integer}, {integer, integer}) :: Queens.t()
-  def new(same, same), do: raise(ArgumentError)
+  @spec new(white: {integer, integer} | nil, black: {integer, integer} | nil) :: Queens.t()
+  def new(opts \\ [])
 
-  def new(white, black) do
+  def new(white: same, black: same),
+    do: raise(ArgumentError)
+
+  def new(opts) do
+    white = opts |> Keyword.get(:white) |> check_range()
+    black = opts |> Keyword.get(:black) |> check_range()
+
     %Queens{white: white, black: black}
   end
-
-  def new, do: %Queens{}
 
   @doc """
   Gives a string reprentation of the board with
@@ -37,6 +41,13 @@ defmodule Queens do
     {black_x, black_y} = black
     white_x == black_x || white_y == black_y || diagonal?(white, black)
   end
+
+  defp check_range({x, y})
+       when x not in @board_range
+       when y not in @board_range,
+       do: raise(ArgumentError)
+
+  defp check_range(queen), do: queen
 
   defp diagonal?({x1, y1}, {x2, y2}) do
     abs(x1 - x2) == abs(y1 - y2)
