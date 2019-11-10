@@ -6,18 +6,15 @@ defmodule Queens do
   @doc """
   Creates a new set of Queens
   """
-  @spec new(white: {integer, integer} | nil, black: {integer, integer} | nil) :: Queens.t()
-  def new(opts \\ [])
+  @spec new(Keyword.t()) :: Queens.t()
+  def new(opts \\ []), do: do_new(opts, %Queens{})
 
-  def new(white: same, black: same),
-    do: raise(ArgumentError)
-
-  def new(opts) do
-    white = opts |> Keyword.get(:white) |> check_range()
-    black = opts |> Keyword.get(:black) |> check_range()
-
-    %Queens{white: white, black: black}
+  defp do_new([{queen, pos} | rest], queens) do
+    if not is_valid_position?(pos), do: raise(ArgumentError)
+    do_new(rest, add_to_queens(queens, {queen, pos}))
   end
+
+  defp do_new([], queens), do: queens
 
   @doc """
   Gives a string reprentation of the board with
@@ -42,12 +39,14 @@ defmodule Queens do
     white_x == black_x || white_y == black_y || diagonal?(white, black)
   end
 
-  defp check_range({x, y})
-       when x not in @board_range
-       when y not in @board_range,
-       do: raise(ArgumentError)
+  defp is_valid_position?({x, y}) do
+    x in @board_range && y in @board_range
+  end
 
-  defp check_range(queen), do: queen
+  defp add_to_queens(queens, {queen, pos}) do
+    if pos in Map.values(queens), do: raise(ArgumentError)
+    %{queens | queen => pos}
+  end
 
   defp diagonal?({x1, y1}, {x2, y2}) do
     abs(x1 - x2) == abs(y1 - y2)
