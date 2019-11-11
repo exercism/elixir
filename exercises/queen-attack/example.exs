@@ -7,7 +7,7 @@ defmodule Queens do
   Creates a new set of Queens
   """
   @spec new(Keyword.t()) :: Queens.t()
-  def new(opts \\ []), do: do_new(opts, %Queens{})
+  def new(opts \\ []), do: do_new(%Queens{}, opts)
 
   defp do_new([{queen, pos} | rest], queens) do
     if not is_valid_position?(pos), do: raise(ArgumentError)
