@@ -3,18 +3,27 @@ defmodule Queens do
   defstruct [:white, :black]
   @board_range 0..7
 
+  defguardp is_coordinate(c)
+            when is_tuple(c) and
+                   tuple_size(c) == 2 and
+                   c |> elem(0) |> is_integer() and
+                   c |> elem(1) |> is_integer()
+
+  defguardp is_board_position(p)
+            when is_coordinate(p) and
+                   p |> elem(0) |> Kernel.in(@board_range) and
+                   p |> elem(1) |> Kernel.in(@board_range)
+
   @doc """
   Creates a new set of Queens
   """
   @spec new(Keyword.t()) :: Queens.t()
-  def new(opts \\ []), do: do_new(%Queens{}, opts)
-
-  defp do_new([{queen, pos} | rest], queens) do
-    if not is_valid_position?(pos), do: raise(ArgumentError)
-    do_new(rest, add_to_queens(queens, {queen, pos}))
+  def new(opts \\ []) do
+    Enum.reduce(opts, %Queens{}, fn {queen, pos}, queens ->
+      if not is_board_position(pos), do: raise(ArgumentError, "invalid board position")
+      add_to_queens(queens, {queen, pos})
+    end)
   end
-
-  defp do_new([], queens), do: queens
 
   @doc """
   Gives a string reprentation of the board with
@@ -39,12 +48,18 @@ defmodule Queens do
     white_x == black_x || white_y == black_y || diagonal?(white, black)
   end
 
-  defp is_valid_position?({x, y}) do
-    x in @board_range && y in @board_range
-  end
-
   defp add_to_queens(queens, {queen, pos}) do
-    if pos in Map.values(queens), do: raise(ArgumentError)
+    case queen do
+      :black ->
+        if queens.white == pos, do: raise(ArgumentError, "white queen already placed here")
+
+      :white ->
+        if queens.black == pos, do: raise(ArgumentError, "black queen already placed here")
+
+      _ ->
+        raise(ArgumentError, "invalid queen color")
+    end
+
     %{queens | queen => pos}
   end
 
