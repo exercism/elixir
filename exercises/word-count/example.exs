@@ -1,4 +1,4 @@
-defmodule Words do
+defmodule WordCount do
   @ascii_punctuation ~r/!|"|\#|\$|%|&|'|\(|\)|\*|\+|,|\.|\/|:|;|<|=|>|\?|@|\[|\\|]|\^|_|`|\{|\||}|~/
 
   def count(sentence) do

@@ -1,4 +1,4 @@
-defmodule Words do
+defmodule WordCount do
   @doc """
   Count the number of words in the sentence.
 
