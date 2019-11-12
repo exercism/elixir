@@ -4,14 +4,11 @@ defmodule Queens do
   @board_range 0..7
 
   defguardp is_coordinate(c)
-            when is_tuple(c) and
-                   tuple_size(c) == 2 and
-                   c |> elem(0) |> is_integer() and
+            when is_tuple(c) and tuple_size(c) == 2 and c |> elem(0) |> is_integer() and
                    c |> elem(1) |> is_integer()
 
   defguardp is_board_position(p)
-            when is_coordinate(p) and
-                   p |> elem(0) |> Kernel.in(@board_range) and
+            when is_coordinate(p) and p |> elem(0) |> Kernel.in(@board_range) and
                    p |> elem(1) |> Kernel.in(@board_range)
 
   @doc """
