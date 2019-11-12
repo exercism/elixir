@@ -56,6 +56,7 @@ defmodule QueenAttackTest do
       end
     end
 
+    @tag :pending
     test "invalid queen color" do
       assert_raise ArgumentError, fn ->
         Queens.new(blue: {0, 1})
