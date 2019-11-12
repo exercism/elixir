@@ -42,6 +42,10 @@ defmodule Queens do
   Checks if the queens can attack each other
   """
   @spec can_attack?(Queens.t()) :: boolean
+  def can_attack?(%Queens{white: white, black: black})
+      when is_nil(white) or is_nil(black),
+      do: false
+
   def can_attack?(%Queens{white: white, black: black}) do
     {white_x, white_y} = white
     {black_x, black_y} = black
@@ -66,6 +70,8 @@ defmodule Queens do
   defp diagonal?({x1, y1}, {x2, y2}) do
     abs(x1 - x2) == abs(y1 - y2)
   end
+
+  defp insert_queen(board, nil, _letter), do: board
 
   defp insert_queen(board, {x, y}, letter) do
     List.update_at(board, x, fn row ->

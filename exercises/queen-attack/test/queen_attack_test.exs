@@ -34,6 +34,33 @@ defmodule QueenAttackTest do
         Queens.new(white: {4, 8})
       end
     end
+
+    @tag :pending
+    test "specific placement" do
+      queens = Queens.new(white: {3, 7}, black: {6, 1})
+      assert queens.white == {3, 7}
+      assert queens.black == {6, 1}
+    end
+
+    @tag :pending
+    test "cannot occupy same space" do
+      assert_raise ArgumentError, fn ->
+        Queens.new(white: {2, 4}, black: {2, 4})
+      end
+    end
+
+    @tag :pending
+    test "cannot occupy same space, with black first" do
+      assert_raise ArgumentError, fn ->
+        Queens.new(black: {2, 4}, white: {2, 4})
+      end
+    end
+
+    test "invalid queen color" do
+      assert_raise ArgumentError, fn ->
+        Queens.new(blue: {0, 1})
+      end
+    end
   end
 
   describe "test the ability of one queen to attack another" do
@@ -78,19 +105,11 @@ defmodule QueenAttackTest do
       queens = Queens.new(white: {1, 7}, black: {0, 6})
       assert Queens.can_attack?(queens)
     end
-  end
 
-  @tag :pending
-  test "specific placement" do
-    queens = Queens.new(white: {3, 7}, black: {6, 1})
-    assert queens.white == {3, 7}
-    assert queens.black == {6, 1}
-  end
-
-  @tag :pending
-  test "cannot occupy same space" do
-    assert_raise ArgumentError, fn ->
-      Queens.new(white: {2, 4}, black: {2, 4})
+    @tag :pending
+    test "cannot attack when only one queen set" do
+      queens = Queens.new(white: {0, 5})
+      refute Queens.can_attack?(queens)
     end
   end
 
@@ -201,6 +220,44 @@ defmodule QueenAttackTest do
         _ _ _ _ _ _ _ _
         _ _ _ _ _ _ _ _
         _ _ _ _ W B _ _
+        _ _ _ _ _ _ _ _
+        _ _ _ _ _ _ _ _
+        _ _ _ _ _ _ _ _
+        """)
+
+      assert Queens.to_string(queens) == board
+    end
+
+    @tag :pending
+    test "string representation with single white queen" do
+      queens = Queens.new(white: {2, 4})
+
+      board =
+        String.trim("""
+        _ _ _ _ _ _ _ _
+        _ _ _ _ _ _ _ _
+        _ _ _ _ W _ _ _
+        _ _ _ _ _ _ _ _
+        _ _ _ _ _ _ _ _
+        _ _ _ _ _ _ _ _
+        _ _ _ _ _ _ _ _
+        _ _ _ _ _ _ _ _
+        """)
+
+      assert Queens.to_string(queens) == board
+    end
+
+    @tag :pending
+    test "string representation with single black queen" do
+      queens = Queens.new(black: {3, 5})
+
+      board =
+        String.trim("""
+        _ _ _ _ _ _ _ _
+        _ _ _ _ _ _ _ _
+        _ _ _ _ _ _ _ _
+        _ _ _ _ _ B _ _
+        _ _ _ _ _ _ _ _
         _ _ _ _ _ _ _ _
         _ _ _ _ _ _ _ _
         _ _ _ _ _ _ _ _
