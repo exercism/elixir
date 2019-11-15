@@ -1,13 +1,12 @@
 defmodule Queens do
   @type t :: %Queens{black: {integer, integer}, white: {integer, integer}}
-  defstruct black: nil, white: nil
+  defstruct [:white, :black]
 
   @doc """
   Creates a new set of Queens
   """
-  @spec new() :: Queens.t()
-  @spec new({integer, integer}, {integer, integer}) :: Queens.t()
-  def new(white \\ nil, black \\ nil) do
+  @spec new(Keyword.t()) :: Queens.t()
+  def new(opts \\ []) do
   end
 
   @doc """
