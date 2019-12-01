@@ -54,4 +54,17 @@ defmodule BankAccountTest do
 
     assert BankAccount.balance(account) == 20
   end
+
+  @tag :pending
+  test "implementation for multiple account support", %{account: account} do
+    assert is_pid(account)
+
+    account_two = BankAccount.open_bank()
+    assert is_pid(account_two)
+
+    assert account != account_two
+
+    BankAccount.update(account, 20)
+    assert BankAccount.balance(account) != BankAccount.balance(account_two)
+  end
 end
