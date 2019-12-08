@@ -2,6 +2,7 @@
 *.beam
 .DS_Store
 tmp
+tmp-exercises
 bin/configlet
 bin/configlet*
 deps
