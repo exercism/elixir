@@ -220,4 +220,20 @@ defmodule BowlingTest do
     game = roll_reduce(game, rolls)
     assert Bowling.score(game) == {:error, "Score cannot be taken until the end of the game"}
   end
+
+  @tag :pending
+  test "cannot roll after bonus roll for spare" do
+    game = Bowling.start()
+    rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 2]
+    game = roll_reduce(game, rolls)
+    assert Bowling.roll(game, 2) == {:error, "Cannot roll after game is over"}
+  end
+
+  @tag :pending
+  test "cannot roll after bonus roll for strike" do
+    game = Bowling.start()
+    rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 3, 2]
+    game = roll_reduce(game, rolls)
+    assert Bowling.roll(game, 2) == {:error, "Cannot roll after game is over"}
+  end
 end
