@@ -122,7 +122,7 @@ defmodule BobTest do
 
   @tag :pending
   test "ending with whitespace" do
-    assert Bob.hey("Okay if like my  spacebar  quite a bit?   ") == "Whatever."
+    assert Bob.hey("Okay if like my  spacebar  quite a bit?   ") == "Sure."
   end
 
   @tag :pending

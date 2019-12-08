@@ -18,6 +18,8 @@ defmodule Bob do
   """
 
   def hey(input) do
+    input = String.trim(input)
+
     cond do
       silent?(input) -> "Fine. Be that way!"
       shouting_question?(input) -> "Calm down, I know what I'm doing!"
@@ -27,7 +29,7 @@ defmodule Bob do
     end
   end
 
-  defp silent?(input), do: "" == String.trim(input)
+  defp silent?(input), do: "" == input
   defp shouting?(input), do: input == String.upcase(input) && letters?(input)
   defp question?(input), do: String.ends_with?(input, "?")
   defp shouting_question?(input), do: shouting?(input) && question?(input)
