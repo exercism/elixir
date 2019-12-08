@@ -11,8 +11,23 @@ defmodule BobTest do
   end
 
   @tag :pending
+  test "shouting gibberish" do
+    assert Bob.hey("FCECDFCAAB") == "Whoa, chill out!"
+  end
+
+  @tag :pending
   test "asking a question" do
     assert Bob.hey("Does this cryogenic chamber make me look fat?") == "Sure."
+  end
+
+  @tag :pending
+  test "asking a numeric question" do
+    assert Bob.hey("You are, what, like 15?") == "Sure."
+  end
+
+  @tag :pending
+  test "asking gibberish" do
+    assert Bob.hey("fffbbcbeab?") == "Sure."
   end
 
   @tag :pending
@@ -21,8 +36,18 @@ defmodule BobTest do
   end
 
   @tag :pending
+  test "using acronyms in regular speech" do
+    assert Bob.hey("It's OK if you don't want to go to the DMV.") == "Whatever."
+  end
+
+  @tag :pending
   test "talking in capitals" do
     assert Bob.hey("This Isn't Shouting!") == "Whatever."
+  end
+
+  @tag :pending
+  test "forceful question" do
+    assert Bob.hey("WHAT THE HELL WERE YOU THINKING?") == "Calm down, I know what I'm doing!"
   end
 
   @tag :pending
@@ -42,7 +67,7 @@ defmodule BobTest do
 
   @tag :pending
   test "shouting with no exclamation mark" do
-    assert Bob.hey("I HATE YOU") == "Whoa, chill out!"
+    assert Bob.hey("I HATE THE DMV") == "Whoa, chill out!"
   end
 
   @tag :pending
@@ -61,13 +86,53 @@ defmodule BobTest do
   end
 
   @tag :pending
+  test "alternate silence" do
+    assert Bob.hey("\t\t\t\t\t\t\t\t\t\t") == "Fine. Be that way!"
+  end
+
+  @tag :pending
   test "only numbers" do
     assert Bob.hey("1, 2, 3") == "Whatever."
   end
 
   @tag :pending
+  test "multiple line question" do
+    assert Bob.hey("\nDoes this cryogenic chamber make me look fat?\nNo.") == "Whatever."
+  end
+
+  @tag :pending
   test "question with numbers" do
     assert Bob.hey("4?") == "Sure."
+  end
+
+  @tag :pending
+  test "non-letters with question" do
+    assert Bob.hey(":) ?") == "Sure."
+  end
+
+  @tag :pending
+  test "prattling on" do
+    assert Bob.hey("Wait! Hang on. Are you going to be OK?") == "Sure."
+  end
+
+  @tag :pending
+  test "starting with whitespace" do
+    assert Bob.hey("         hmmmmmmm...") == "Whatever."
+  end
+
+  @tag :pending
+  test "ending with whitespace" do
+    assert Bob.hey("Okay if like my  spacebar  quite a bit?   ") == "Whatever."
+  end
+
+  @tag :pending
+  test "other whitespace" do
+    assert Bob.hey("\n\r \t") == "Fine. Be that way!"
+  end
+
+  @tag :pending
+  test "non-question ending with whitespace" do
+    assert Bob.hey("This is a statement ending with whitespace     ") == "Whatever."
   end
 
   @tag :pending
