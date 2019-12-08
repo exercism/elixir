@@ -94,9 +94,33 @@ defmodule Bowling do
 
   defp too_many_frames?(game) do
     final_frame = Enum.at(game.scores, 9)
+    bonus_frame_1 = Enum.at(game.scores, 10)
+    bonus_frame_2 = Enum.at(game.scores, 11)
 
-    unless strike?(final_frame) || spare?(final_frame) do
-      game.current_frame == 11 && game.roll_in_frame == 2
+    cond do
+      # If last frame is all strikes:
+      strike?(final_frame) && strike?(bonus_frame_1) && strike?(bonus_frame_2) ->
+        game.current_frame == 13 && game.roll_in_frame == 2
+
+      # If last frame has two strikes:
+      strike?(final_frame) && strike?(bonus_frame_1) && not strike?(bonus_frame_2) ->
+        game.current_frame == 13 && game.roll_in_frame == 1
+
+      # If last frame has one strike and some other combination
+      strike?(final_frame) && not strike?(bonus_frame_1) ->
+        game.current_frame == 12 && game.roll_in_frame == 2
+
+      # If last frame has a spare, and one strike
+      spare?(final_frame) && strike?(bonus_frame_1) ->
+        game.current_frame == 12 && game.roll_in_frame == 2
+
+      # If last frame has a spare and some other combination
+      spare?(final_frame) && not strike?(bonus_frame_1) ->
+        game.current_frame == 12 && game.roll_in_frame == 1
+
+      # All of the others
+      true ->
+        game.current_frame == 11 && game.roll_in_frame == 2
     end
   end
 
