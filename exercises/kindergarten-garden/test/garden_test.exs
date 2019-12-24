@@ -53,7 +53,6 @@ defmodule GardenTest do
     names = [
       :maggie,
       :nate,
-      :xander,
       :ophelia,
       :pete,
       :reggie,
@@ -62,6 +61,7 @@ defmodule GardenTest do
       :ursula,
       :victor,
       :winnie,
+      :xander,
       :ynold
     ]
 
