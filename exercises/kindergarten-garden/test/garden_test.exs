@@ -25,6 +25,13 @@ defmodule GardenTest do
   end
 
   @tag :pending
+  test "plants are assigned in alphabetical order" do
+    garden_info = Garden.info("VVCC\nGGRR", [:bob, :alice])
+    assert garden_info.alice == {:violets, :violets, :grass, :grass}
+    assert garden_info.bob == {:clover, :clover, :radishes, :radishes}
+  end
+
+  @tag :pending
   test "gets the garden for all students" do
     garden_info = Garden.info("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV")
     assert garden_info.alice == {:violets, :radishes, :violets, :radishes}
