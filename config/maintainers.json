@@ -50,6 +50,16 @@
       "link_url": null,
       "avatar_url": null,
       "bio": "Exercism has been a great way for me to stay current and expand my developer experience in new areas.  I am excited to be working with the elixir track, because I appreciate the clarity/idiomaticity of the elixir language.  I want others to enjoy this track as much as I have."
+    },
+    {
+      "github_username": "nathanchere",
+      "alumnus": false,
+      "show_on_website": false,
+      "name": "Nathan Chere",
+      "link_text": "null",
+      "link_url": "null",
+      "avatar_url": "https://s.gravatar.com/avatar/e5021d7393c10095cc2baf9a63ba40b4",
+      "bio": "Have code, will travel"
     }
   ]
 }
