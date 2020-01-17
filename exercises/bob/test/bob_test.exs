@@ -32,7 +32,7 @@ defmodule BobTest do
 
   @tag :pending
   test "talking forcefully" do
-    assert Bob.hey("Let's go make out behind the gym!") == "Whatever."
+    assert Bob.hey("Hi there!") == "Whatever."
   end
 
   @tag :pending
@@ -47,7 +47,7 @@ defmodule BobTest do
 
   @tag :pending
   test "forceful question" do
-    assert Bob.hey("WHAT THE HELL WERE YOU THINKING?") == "Calm down, I know what I'm doing!"
+    assert Bob.hey("WHAT'S GOING ON?") == "Calm down, I know what I'm doing!"
   end
 
   @tag :pending
@@ -67,7 +67,7 @@ defmodule BobTest do
 
   @tag :pending
   test "shouting with no exclamation mark" do
-    assert Bob.hey("I HATE THE DMV") == "Whoa, chill out!"
+    assert Bob.hey("I HATE THE DENTIST") == "Whoa, chill out!"
   end
 
   @tag :pending
