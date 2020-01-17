@@ -9,7 +9,10 @@ defmodule ExercismTestRunner.Mixfile do
       deps: deps(),
       test_paths: ["exercises"],
       consolidate_protocols: false,
-      dialyzer: [paths: ["tmp/build"]]
+      dialyzer: [
+        paths: ["_build"],
+        plt_file: {:no_warn, "priv/plts/eventstore.plt"}
+      ]
     ]
   end
 
@@ -18,6 +21,6 @@ defmodule ExercismTestRunner.Mixfile do
   end
 
   defp deps do
-    [{:dialyxir, "~> 0.5"}]
+    [{:dialyxir, "~> 1.0.0-rc.7"}]
   end
 end

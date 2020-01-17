@@ -6,7 +6,7 @@ elixir:
   - 1.9.0
 
 otp_release:
-  - 20.3
+  - 21.3
   - 22.0
 
 matrix:
@@ -34,3 +34,5 @@ cache:
   directories:
     - _build
     - deps
+    - ~/.mix/
+    - priv/plts
