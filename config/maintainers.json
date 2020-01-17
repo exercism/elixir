@@ -70,6 +70,16 @@
       "link_url": "null",
       "avatar_url": "https://s.gravatar.com/avatar/0fc9e7d51cbfcfa04e86f1f5dbdc362d",
       "bio": "Elixir is a passion of mine, being functional, elegant and productive. After being a mentor for some time, I decided to be a maintainer. Looking forward to it!"
+    },
+    {
+      "github_username": "fireproofsocks",
+      "alumnus": false,
+      "show_on_website": true,
+      "name": "Everett Griffiths",
+      "link_text": "https://github.com/fireproofsocks",
+      "link_url": null,
+      "avatar_url": "https://s.gravatar.com/avatar/8fd910b4f7c7baabc22976dc6b29b744",
+      "bio": "Elixir developer based in Los Angeles, former instructor at USC"
     }
   ]
 }
