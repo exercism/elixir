@@ -1,6 +1,14 @@
 # How to implement an Elixir Concept Exercise
 
-This document describes how to implement a Concept Exercise for the Elixir track. As this document is generic, the following placeholders are used:
+This document describes how to implement a Concept Exercise for the Elixir track.
+
+**Please please please read the docs before starting.** Posting PRs without reading these docs will be a lot more frustrating for you during the review cycle, and exhaust Exercism's maintainers' time. So, before diving into the implementation, please read the following documents:
+
+- [The features of v3][docs-features-of-v3].
+- [Rationale for v3][docs-rationale-for-v3].
+- [What are concept exercise and how they are structured?][docs-concept-exercises]
+
+As this document is generic, the following placeholders are used:
 
 - `$slug`: the name of the exercise in snake_case (e.g. `anonymous-methods`).
 - `$elixir_slug`: `$slug` converted to snake-case from kebab-case,
@@ -124,4 +132,7 @@ If you have any questions regarding implementing the exercise, please post them 
 [representer]: https://github.com/exercism/elixir-representer
 [concept-exercises]: ../exercises/concept/README.md
 [how-to-implement-a-concept-exercise]: ../../../docs/maintainers/generic-how-to-implement-a-concept-exercise.md
+[docs-concept-exercises]: ../../../docs/concept-exercises.md
+[docs-rationale-for-v3]: ../../../docs/rationale-for-v3.md
+[docs-features-of-v3]: ../../../docs/features-of-v3.md
 [reference]: ../../../reference/README.md
