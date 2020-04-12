@@ -120,7 +120,7 @@ defmodule IsbnVerifierTest do
   end
 
   @tag :pending
-  test "English-speaking area	Willmann–Bell" do
+  test "English-speaking area Willmann-Bell" do
     assert IsbnVerifier.isbn?("0-943396-04-2")
   end
 
