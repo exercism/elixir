@@ -8,6 +8,10 @@ This document describes how to implement a Concept Exercise for the Elixir track
 - [Rationale for v3][docs-rationale-for-v3].
 - [What are concept exercise and how they are structured?][docs-concept-exercises]
 
+Please also watch the following video:
+
+- [The Anatomy of a Concept Exercise][anatomy-of-a-concept-exercise].
+
 As this document is generic, the following placeholders are used:
 
 - `$slug`: the name of the exercise in snake_case (e.g. `anonymous-methods`).
@@ -131,5 +135,6 @@ If you have any questions regarding implementing the exercise, please post them 
 [docs-concept-exercises]: ../../../docs/concept-exercises.md
 [docs-rationale-for-v3]: ../../../docs/rationale-for-v3.md
 [docs-features-of-v3]: ../../../docs/features-of-v3.md
+[anatomy-of-a-concept-exercise]: https://www.youtube.com/watch?v=gkbBqd7hPrA
 [reference]: ../../../reference/README.md
 [config-json]; https://github.com/exercism/v3/blob/master/docs/concept-exercises.md#metaconfigjson
