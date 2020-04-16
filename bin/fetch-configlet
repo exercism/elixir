@@ -1,32 +1,52 @@
 #!/bin/bash
 
-LATEST=https://github.com/exercism/configlet/releases/latest
+set -eo pipefail
 
-OS=$(
-case $(uname) in
-    (Darwin*)
-        echo "mac";;
-    (Linux*)
-        echo "linux";;
-    (Windows*)
-        echo "windows";;
-    (*)
-        echo "linux";;
-esac)
+readonly LATEST='https://api.github.com/repos/exercism/configlet/releases/latest'
 
-ARCH=$(
-case $(uname -m) in
-    (*64*)
-        echo 64bit;;
-    (*686*)
-        echo 32bit;;
-    (*386*)
-        echo 32bit;;
-    (*)
-        echo 64bit;;
-esac)
+case "$(uname)" in
+    (Darwin*)   OS='mac'     ;;
+    (Linux*)    OS='linux'   ;;
+    (Windows*)  OS='windows' ;;
+    (MINGW*)    OS='windows' ;;
+    (MSYS_NT-*) OS='windows' ;;
+    (*)         OS='linux'   ;;
+esac
 
-VERSION="$(curl --head --silent $LATEST | awk -v FS=/ 'toupper($0) ~ /LOCATION:/{print $NF}' | tr -d '\r')"
-URL=https://github.com/exercism/configlet/releases/download/$VERSION/configlet-$OS-${ARCH}.tgz
+case "$OS" in
+    (windows*) EXT='zip' ;;
+    (*)        EXT='tgz' ;;
+esac
 
-curl -s --location $URL | tar xz -C bin/
+case "$(uname -m)" in
+    (*64*)  ARCH='64bit' ;;
+    (*686*) ARCH='32bit' ;;
+    (*386*) ARCH='32bit' ;;
+    (*)     ARCH='64bit' ;;
+esac
+
+if [ -z "${GITHUB_TOKEN}" ]
+then
+    HEADER=''
+else
+    HEADER="authorization: Bearer ${GITHUB_TOKEN}"
+fi
+
+FILENAME="configlet-${OS}-${ARCH}.${EXT}"
+
+get_url () {
+    curl --header "$HEADER" -s "$LATEST" |
+        awk -v filename=$FILENAME '$1 ~ /browser_download_url/ && $2 ~ filename { print $2 }' |
+        tr -d '"'
+}
+
+URL=$(get_url)
+
+case "$EXT" in
+    (*zip)
+        curl --header "$HEADER" -s --location "$URL" -o bin/latest-configlet.zip
+        unzip bin/latest-configlet.zip -d bin/
+        rm bin/latest-configlet.zip
+        ;;
+    (*) curl --header "$HEADER" -s --location "$URL" | tar xz -C bin/ ;;
+esac
