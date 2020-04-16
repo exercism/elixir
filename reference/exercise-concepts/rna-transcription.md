@@ -54,10 +54,9 @@ defmodule RNATranscription do
 end
 ```
 
-
 ## List of concepts
 
-The trickiest concept with this as written was due to it providing a _charlist_ instead of a regular string binary.  The mapping / recursion / etc. is complex enough without throwing in the subtle difficulties of navigating character lists.
+The trickiest concept with this as written was due to it providing a _charlist_ instead of a regular string binary. The mapping / recursion / etc. is complex enough without throwing in the subtle difficulties of navigating character lists.
 
 - approaches
   - map

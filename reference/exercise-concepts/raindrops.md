@@ -30,13 +30,13 @@ defmodule Raindrops do
     sounds = for f <- [3, 5, 7], s = sound(number, f), s != :no_sound, do: s
     output(sounds, number)
   end
-    
+
   defp sound(n, 3) when rem(n, 3) == 0, do: "Pling"
   defp sound(n, 5) when rem(n, 5) == 0, do: "Plang"
   defp sound(n, 7) when rem(n, 7) == 0, do: "Plong"
   defp sound(_, _), do: :no_sound
 
-  
+
   defp output([], number), do: "#{number}"
   defp output(sounds, _), do: Enum.join(sounds)
 end
@@ -55,7 +55,7 @@ defmodule Raindrops do
     |> do_convert(number)
     |> output(number)
   end
-  
+
   defp do_convert([], _), do: []
   defp do_convert([f | t], n) do
     case sound(n, f) do

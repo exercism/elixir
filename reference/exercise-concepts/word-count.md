@@ -1,6 +1,7 @@
 # Concepts for word-count
 
 ## Optimal solution
+
 ```elixir
 defmodule WordCount do
   def count(sentence) do
@@ -24,6 +25,7 @@ end
 ```
 
 ## Concepts
+
 - Strings
   - we are consuming a string in which to count words
 - UTF-8
