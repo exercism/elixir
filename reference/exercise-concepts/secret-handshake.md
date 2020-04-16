@@ -1,6 +1,7 @@
 # Concepts for secret-handshake
 
 ## Optimal solution
+
 ```elixir
 defmodule SecretHandshake do
   use Bitwise
@@ -37,6 +38,7 @@ end
 ```
 
 ## Concepts
+
 - Bitwise manipulation
   - a simple way to check if a bit is set is with a binary and (`Bitwise.band/2` or `&&&`)
 - Conditionals

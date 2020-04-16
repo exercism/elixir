@@ -1,4 +1,4 @@
-Elixir is a dynamically-typed language, meaning that the type of a variable is only checked at runtime.  In Elixir, we refer to variable assignment as being _bound_ to a value.  Using the [match `=` operator][match], we can bind a value to a variable name:
+Elixir is a dynamically-typed language, meaning that the type of a variable is only checked at runtime. In Elixir, we refer to variable assignment as being _bound_ to a value. Using the [match `=` operator][match], we can bind a value to a variable name:
 
 ```elixir
 variable = 10 # Bind the integer value 10
@@ -14,9 +14,9 @@ count = 2 # Re-bind to the new value of 2
 count = false
 ```
 
-Elixir is an [functional-programming language][functional-programming] and requires all named [functions][functions] to be defined in a [module][modules]. The `defmodule` keyword is used to define a module. All modules are available to all other modules at runtime and do not require an _access modifier_ to make them visible to other parts of the program.  A [module][modules] is analogous to a _class_ in other programming languages.
+Elixir is an [functional-programming language][functional-programming] and requires all named [functions][functions] to be defined in a [module][modules]. The `defmodule` keyword is used to define a module. All modules are available to all other modules at runtime and do not require an _access modifier_ to make them visible to other parts of the program. A [module][modules] is analogous to a _class_ in other programming languages.
 
-_Named Functions_ must be defined in a module.  Each [function][functions] can have zero or more parameters. All parameters are dynamically typed, and the return type is not explicitly declared, it is the type of the value returned. An _access modifier_ can be specified for functions, making only desired functions available for use external to the module. In a function, the value of the last line is _implicitly returned_ to the calling function.
+_Named Functions_ must be defined in a module. Each [function][functions] can have zero or more parameters. All parameters are dynamically typed, and the return type is not explicitly declared, it is the type of the value returned. An _access modifier_ can be specified for functions, making only desired functions available for use external to the module. In a function, the value of the last line is _implicitly returned_ to the calling function.
 
 ```elixir
 defmodule Calculator do
