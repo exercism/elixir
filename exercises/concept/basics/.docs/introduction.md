@@ -22,7 +22,7 @@ defmodule Calculator do
 end
 ```
 
-_Named Functions_ must be defined in a module. Each function can have zero or more parameters. All parameters are dynamically typed, and the return type is not explicitly declared, it is the type of the value returned. An _access modifier_ can be specified for functions, making only desired functions available for use external to the module. In a function, the value of the last line is _implicitly returned_ to the calling function.
+_Named Functions_ must be defined in a module. Each function can have zero or more parameters. All parameters are dynamically-typed, and the return type is not explicitly declared, it is the type of the value returned. An _access modifier_ can be specified for functions, making only desired functions available for use external to the module. In a function, the value of the last line is _implicitly returned_ to the calling function.
 
 ```elixir
 defmodule Calculator do
