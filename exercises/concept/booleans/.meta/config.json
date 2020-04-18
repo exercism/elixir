@@ -5,5 +5,11 @@
       "exercism_username": "neenjaw"
     }
   ],
+  "contributors": [
+    {
+      "github_username": "Cohen-Carlisle",
+      "exercism_username": "Cohen-Carlisle"
+    }
+  ],
   "language_versions": ">=1.10"
 }
