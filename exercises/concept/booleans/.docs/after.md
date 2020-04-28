@@ -1,4 +1,4 @@
-Elixir represents true and false values with the boolean type. There are only two values -- _true_ and _false_. These values can be bound to a variable and combined with boolean operators (`and/2`, `or/2`, `not/1`):
+Elixir represents true and false values with the boolean type. There are only two values: _true_ and _false_. These values can be bound to a variable and combined with boolean operators (`and/2`, `or/2`, `not/1`):
 
 ```elixir
 true_variable = true and true
