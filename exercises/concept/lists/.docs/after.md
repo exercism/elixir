@@ -2,7 +2,8 @@
 
 - [Lists][list] are a basic data type.
 - [Lists][list] are implemented as a linked list.
-- [List][list] can be written in literal form or head-tail notation or mixed.
+- [Lists][list] implement the [Enumerable protocol][enum-protocol], which allows the use of [Enum][enum] and [Stream][stream] module functions.
+- [Lists][list] can be written in literal form or head-tail notation or mixed.
 
   ```elixir
   # Literal Form
@@ -45,9 +46,12 @@
   string = "this is a string! 1, 2, 3!"
   ```
 
-[list]: https://hexdocs.pm/elixir/List.html
+[enum]: https://hexdocs.pm/elixir/Enum.html
+[enum-protocol]: https://hexdocs.pm/elixir/Enumerable.html
 [hd]: https://hexdocs.pm/elixir/Kernel.html#hd/1
-[tl]: https://hexdocs.pm/elixir/Kernel.html#tl/1
 [in]: https://hexdocs.pm/elixir/Kernel.html#in/2
 [length]: https://hexdocs.pm/elixir/Kernel.html#length/1
+[list]: https://hexdocs.pm/elixir/List.html
+[stream]: https://hexdocs.pm/elixir/Stream.html
 [string]: https://elixir-lang.org/getting-started/basic-types.html#strings
+[tl]: https://hexdocs.pm/elixir/Kernel.html#tl/1
