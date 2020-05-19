@@ -15,7 +15,7 @@ Please also watch the following video:
 As this document is generic, the following placeholders are used:
 
 - `$slug`: the name of the exercise in snake_case (e.g. `anonymous-methods`).
-- `$elixir_slug`: `$slug` converted to snake-case from kebab-case,
+- `$elixir_slug`: `$slug` converted to snake_case from kebab-case,
 - `$concepts`: the Concepts the exercise is about (e.g. `loops`),
 - `$concept-1`: a single Concept slug,
 - `$prerequisite-n`: a single Concept slug,
@@ -40,26 +40,26 @@ languages
                 │   └── after.md
                 ├── .meta
                 │   ├── config.json
-                │   └── design.md
+                │   ├── design.md
+                │   └── example.ex
                 ├── lib
-                │   ├── example.ex
-                │   └── $slug.ex
+                │   └── $elixir_slug.ex
                 ├── mix.exs
                 ├── mix.lock
                 └── test
-                    ├── $slug_test.exs
+                    ├── $elixir_slug_test.exs
                     └── test_helper.exs
 ```
 
 ## Step 1: Add code files
 
-The configuration files may be copied from another exercise. But it would be recommended to use `mix new $elixir_slug` (where `$elixir_slug` exchanges underscores `_` in the place of `$slug`'s dashes `-`) for file generation, the move the generated structure to the `$slug` directory to match the structure in this guide.
+The configuration files may be copied from another exercise. But it would be recommended to use `mix new $elixir_slug` (where `$elixir_slug` exchanges underscores `_` in the place of `$slug`'s dashes `-`) for file generation, then move the generated structure to the `$slug` directory to match the structure in this guide.
 
 Now create the following three files:
 
-- `lib/$slug.ex`. the stub implementation file, which is the starting point for students to work on the exercise.
-- `test/$slug_test.ex`: the test suite.
-- `lib/example.ex`: an example implementation that passes all the tests.
+- `lib/$elixir_slug.ex`. the stub implementation file, which is the starting point for students to work on the exercise.
+- `test/$elixir_slug_test.ex`: the test suite.
+- `.meta/example.ex`: an example implementation that passes all the tests.
 
 ## Step 2: Add documentation files
 
