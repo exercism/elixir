@@ -13,8 +13,8 @@ This is done through the implementation of a basic kitchen calculator.
 - Know how to return a tuple from a function
 - Know that returning a tuple is a common for of multiple return in Elixir
 - Know how to extract an element from a tuple using `elem/2`
-- Know how to write a floating point literal
-- Know how to round a floating point number to decimal place or integer
+- Know how to perform a basic pattern match using the `=/2` function
+- Know how to perform basic pattern matching on function parameters to guide which function to invoke
 
 ## Out of scope
 
@@ -24,14 +24,14 @@ This is done through the implementation of a basic kitchen calculator.
 
 The exercise's prerequisites are:
 
-- `basics`: needs to be able to define named functions, define and return integers, return values from functions
 - `atoms`: needs to be able to define and use atoms for return values
 - `multiple-clause-functions`: need to know that a named function can be overloaded and elixir will attempt to use them all until one found
+- `floating-point-numbers`: need to know how to use floating point numbers to convert
 
 ## Concepts unlocked
 
 - `tuples` know of the existence of the `tuple` data type, how to define tuple literals, extract values from a tuple using `elem/2`
-- `floating-point-numbers` know of the existence of the floating point number type, know that it is double precision float encoding, how to convert it to an integer type
+- `pattern-matching` basic knowledge of pattern matching using `=/2` and on function parameters
 
 ## Representer
 

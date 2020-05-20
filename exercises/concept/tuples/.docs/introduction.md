@@ -1,4 +1,4 @@
-In Elixir, a tuple is a data structure which organizes data in contiguous memory. It behaves as a static data structure, holding a fixed number of items, but without explicit names for each element. Tuples are often used in Elixir for memory read-intensive operations, since read-access of an element is a constant-time operation. They are not usually used when elements may need to be added/removed dynamically because rather than modifying the existing tuple, a new tuple is created which requires memory to be allocated upfront.
+In Elixir, a tuple is a data structure which organizes data, holding a fixed number of any-type items, but without explicit names for each element. Tuples are often used in Elixir for memory read-intensive operations, since read-access of an element is a constant-time operation. They are not usually used when elements may need to be added/removed dynamically because rather than modifying the existing tuple, a new tuple is created which requires memory to be allocated upfront.
 
 In practice, tuples are created in Elixir using curly braces, and element can be individually accessed using the `elem/1` function using 0-based indexing:
 
