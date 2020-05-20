@@ -12,7 +12,7 @@ Use this conversion chart for your solution:
 
 Being a talented programmer in training, you decide to use millilitres as a transition unit to facilitate the conversion from any unit listed to any other (even itself)
 
-### 1. Implement the `get_volume/1` function
+### 1. Get the numeric component from a volume-pair
 
 - Given a volume-pair tuple, `{:cup, 2.0}`, return just the numeric component.
 
@@ -21,31 +21,31 @@ KitchenCalculator.get_volume({:cup, 2.0})
 # => 2.0
 ```
 
-### 2. Implement the `to_millilitre/1` functions
+### 2. Convert the volume-pair to millilitres
 
-- Given a volume-pair tuple, `{:cup, 2.0}`, convert the volume to millilitres using the conversion chart.
+- Given a volume-pair tuple, `{:cup, 2.5}`, convert the volume to millilitres using the conversion chart.
 
 - use multiple function clauses and pattern matching to create the functions for each unit
   - the atoms used to denote each unit are: `:cup`, `:fluid_ounce`, `:teaspoon`, `:tablespoon`, `:millilitre`
 - return the conversion wrapped in a tuple
 
 ```elixir
-KitchenCalculator.to_millilitre({:cup, 2.0})
-# => {:millilitre, 480.0}
+KitchenCalculator.to_millilitre({:cup, 2.5})
+# => {:millilitre, 600.0}
 ```
 
-### 3. Implement the `from_millilitre/2` functions
+### 3. Convert the millilitre volume-pair to another unit
 
-- Given a volume-pair tuple, `{:millilitre, 1200.0}`, and the desired unit, `:cup`, convert the volume to the desired unit using the conversion chart.
+- Given a volume-pair tuple, `{:millilitre, 1320.0}`, and the desired unit, `:cup`, convert the volume to the desired unit using the conversion chart.
 - use multiple function clauses and pattern matching to create the functions for each unit
   - the atoms used to denote each unit are: `:cup`, `:fluid_ounce`, `:teaspoon`, `:tablespoon`, `:millilitre`
 
 ```elixir
-KitchenCalculator.from_millilitre({:millilitre, 1200.0}, :cup)
-# => {:cup, 5.0}
+KitchenCalculator.from_millilitre({:millilitre, 1320.0}, :cup)
+# => {:cup, 5.5}
 ```
 
-### 4. Implement the `convert/2` function
+### 4. Convert from any unit to any unit
 
 - Given a volume-pair tuple, `{:teaspoons, 9.0}`, and the desired unit, `:tablespoon`, convert the volume to the desired unit
 

@@ -53,19 +53,19 @@ defmodule KitchenCalculatorTest do
     end
 
     test "cups" do
-      assert KC.from_millilitre({:millilitre, 960}, :cup) == {:cup, 4}
+      assert KC.from_millilitre({:millilitre, 840}, :cup) == {:cup, 3.5}
     end
 
     test "fluid ounces" do
-      assert KC.from_millilitre({:millilitre, 6000}, :fluid_ounce) == {:fluid_ounce, 200}
+      assert KC.from_millilitre({:millilitre, 4522.5}, :fluid_ounce) == {:fluid_ounce, 150.75}
     end
 
     test "teaspoon" do
-      assert KC.from_millilitre({:millilitre, 60}, :teaspoon) == {:teaspoon, 12}
+      assert KC.from_millilitre({:millilitre, 61.25}, :teaspoon) == {:teaspoon, 12.25}
     end
 
     test "tablespoon" do
-      assert KC.from_millilitre({:millilitre, 120}, :tablespoon) == {:tablespoon, 8}
+      assert KC.from_millilitre({:millilitre, 71.25}, :tablespoon) == {:tablespoon, 4.75}
     end
   end
 
