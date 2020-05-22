@@ -1,8 +1,8 @@
-### General
+## General
 
 Don't worry about how the paramaters are derived, just focus on combining the parameters to return the intended result.
 
-### 1. Define if pac-man can eat a ghost
+## 1. Define if pac-man can eat a ghost
 
 - You need to define a [named function][named-function] with 2 arguments.
   - The first argument is a [boolean][boolean] value, whether pac-man has a power pellet active.
@@ -10,7 +10,7 @@ Don't worry about how the paramaters are derived, just focus on combining the pa
 - The function must return a [boolean][boolean] value.
 - You can use the [boolean][boolean] operator [`and/2`][boolean-function] to combine the arguments for a result.
 
-### 2. Define if pac-man scores
+## 2. Define if pac-man scores
 
 - You need to define a [named function][named-function] with 2 arguments.
   - The first argument is a [boolean][boolean] value, whether pac-man is touching a power pellet.
@@ -18,7 +18,7 @@ Don't worry about how the paramaters are derived, just focus on combining the pa
 - The function must return a [boolean][boolean] value.
 - You can use the [boolean][boolean] operator [`or/2`][boolean-function] to combine the arguments for a result.
 
-### 3. Define if pac-man loses
+## 3. Define if pac-man loses
 
 - You need to define a [named function][named-function] with 2 arguments.
   - The first argument is a [boolean][boolean] value, whether pac-man has a power pellet active.
@@ -26,7 +26,7 @@ Don't worry about how the paramaters are derived, just focus on combining the pa
 - The function must return a [boolean][boolean] value.
 - You can use the [boolean][boolean] operators [`and/2`][boolean-function] and [`not/1`][boolean-function] to combine the arguments for a result.
 
-### 4. Define if pac-man wins
+## 4. Define if pac-man wins
 
 - You need to define a [named function][named-function] with 3 arguments.
   - The second argument is a [boolean][boolean] value, whether pac-man has eaten all of the dots.

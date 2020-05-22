@@ -33,7 +33,7 @@ variable.(1)
 # => 2
 ```
 
-#### Bitwise operations
+### Bitwise operations
 
 Elixir supports many functions for working with bits found in the _Bitwise module_.
 

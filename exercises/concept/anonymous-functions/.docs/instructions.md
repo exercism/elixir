@@ -6,7 +6,7 @@ All functions should expect integer parameters. Integers are also suitable for p
 
 You have seven tasks:
 
-### 1. Create an adder
+## 1. Create an adder
 
 Implement `Secrets.secret_add/1`, have it return a function which takes one parameter and adds it to the parameter passed in to `secret_add`.
 
@@ -16,7 +16,7 @@ adder.(2)
 # => 4
 ```
 
-### 2. Create a subtractor
+## 2. Create a subtractor
 
 Implement `Secrets.secret_subtract/1`, have it return a function which takes one parameter and subtracts the parameter passed in to `secret_subtract`.
 
@@ -26,7 +26,7 @@ subtractor.(3)
 # => 1
 ```
 
-### 3. Create a multiplier
+## 3. Create a multiplier
 
 Implement `Secrets.secret_multiply/1`, have it return a function which takes one parameter and multiplies it by the parameter passed in to `secret_multiply`.
 
@@ -36,7 +36,7 @@ multiplier.(3)
 # => 21
 ```
 
-### 4. Create a divider
+## 4. Create a divider
 
 Implement `Secrets.secret_divide/1`, have it return a function which takes one parameter and divides it by the parameter passed in to `secret_divide`.
 
@@ -48,7 +48,7 @@ divider.(32)
 
 Make use of integer division.
 
-### 5. Create a "and"-er
+## 5. Create a "and"-er
 
 Implement `Secrets.secret_and/1`, have it return a function which takes one parameter and performs a bitwise _and_ operation to the parameter passed in to `secret_and`.
 
@@ -58,7 +58,7 @@ ander.(2)
 # => 0
 ```
 
-### 6. Create a "xor"-er
+## 6. Create a "xor"-er
 
 Implement `Secrets.secret_xor/1`, have it return a function which takes one parameter and performs a bitwise _xor_ operation to the parameter passed in to `secret_xor`.
 
@@ -68,7 +68,7 @@ xorer.(3)
 # => 2
 ```
 
-### 7. Create a function combiner
+## 7. Create a function combiner
 
 Implement `Secrets.secret_combine/2`, have it return a function which applies the functions parameter passed in to `secret_combine` in sequence.
 

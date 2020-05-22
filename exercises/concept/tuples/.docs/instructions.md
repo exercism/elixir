@@ -12,7 +12,7 @@ Use this conversion chart for your solution:
 
 Being a talented programmer in training, you decide to use millilitres as a transition unit to facilitate the conversion from any unit listed to any other (even itself)
 
-### 1. Get the numeric component from a volume-pair
+## 1. Get the numeric component from a volume-pair
 
 - Given a volume-pair tuple, `{:cup, 2.0}`, return just the numeric component.
 
@@ -21,7 +21,7 @@ KitchenCalculator.get_volume({:cup, 2.0})
 # => 2.0
 ```
 
-### 2. Convert the volume-pair to millilitres
+## 2. Convert the volume-pair to millilitres
 
 - Given a volume-pair tuple, `{:cup, 2.5}`, convert the volume to millilitres using the conversion chart.
 
@@ -34,7 +34,7 @@ KitchenCalculator.to_millilitre({:cup, 2.5})
 # => {:millilitre, 600.0}
 ```
 
-### 3. Convert the millilitre volume-pair to another unit
+## 3. Convert the millilitre volume-pair to another unit
 
 - Given a volume-pair tuple, `{:millilitre, 1320.0}`, and the desired unit, `:cup`, convert the volume to the desired unit using the conversion chart.
 - use multiple function clauses and pattern matching to create the functions for each unit
@@ -45,7 +45,7 @@ KitchenCalculator.from_millilitre({:millilitre, 1320.0}, :cup)
 # => {:cup, 5.5}
 ```
 
-### 4. Convert from any unit to any unit
+## 4. Convert from any unit to any unit
 
 - Given a volume-pair tuple, `{:teaspoons, 9.0}`, and the desired unit, `:tablespoon`, convert the volume to the desired unit
 

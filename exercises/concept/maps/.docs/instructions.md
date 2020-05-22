@@ -2,7 +2,7 @@ In this exercise, you're implementing a way to keep track of the high scores for
 
 You have 7 functions to implement, all related to returning and manipulating a map of high score data.
 
-### 1. Define a new high score map
+## 1. Define a new high score map
 
 To make a new high score map, define the `HighScore.new/0` function which doesn't take any parameters and returns a new, empty map of high scores.
 
@@ -11,7 +11,7 @@ HighScore.new()
 # => %{}
 ```
 
-### 2. Add players to the high score map
+## 2. Add players to the high score map
 
 To add a player to the high score map, define `HighScore.add_player/3`, which is a function which takes 3 parameters:
 
@@ -28,7 +28,7 @@ score_map = HighScore.add_player(score_map, "José Valim", 486_373)
 # => %{"Dave Thomas" => 0, "José Valim"=> 486_373}
 ```
 
-### 3. Remove players from the score map
+## 3. Remove players from the score map
 
 To remove a player from the high score map, define `HighScore.remove_player/2`, which takes 2 parameters:
 
@@ -44,7 +44,7 @@ score_map = HighScore.remove_player(score_map, "Dave Thomas")
 # => %{}
 ```
 
-### 4. Reset a player's score
+## 4. Reset a player's score
 
 To reset a player's score, define `HighScore.remove_player/2`, which takes 2 parameters:
 
@@ -60,7 +60,7 @@ score_map = HighScore.reset_score(score_map, "José Valim")
 # => %{"José Valim"=> 0}
 ```
 
-### 5. Update a player's score
+## 5. Update a player's score
 
 To update a players score by adding to the previous score, define `HighScore.update_player/2`, which takes 3 parameters:
 
@@ -77,7 +77,7 @@ score_map = HighScore.update_score(score_map, "José Valim", 5)
 # => %{"José Valim"=> 486_378}
 ```
 
-### 6. Get a list of players with scores ordered by player name
+## 6. Get a list of players with scores ordered by player name
 
 To get a list of players ordered by name, define `HighScore.order_by_players/1`, which takes 1 parameter:
 
@@ -94,7 +94,7 @@ HighScore.order_by_players(score_map)
 # => [{"Dave Thomas", 2_374}, {"José Valim", 486_373}]
 ```
 
-### 7. Get a list of players ordered by player score in decreasing order
+## 7. Get a list of players ordered by player score in decreasing order
 
 To get a list of players ordered by scores in decreasing order, define `HighScore.order_by_scores/1`, which takes 1 parameter:
 
