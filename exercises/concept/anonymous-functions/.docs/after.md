@@ -7,7 +7,7 @@ Enum.map([1, 2, 3], &(&1 + 1))
 # => [2, 3, 4]
 ```
 
-### Key points
+## Key points
 
 - Functions are treated as first class citizens:
   - Can be assigned to variables.
