@@ -1,51 +1,77 @@
-Elixir is a dynamically-typed language, meaning that the type of a variable is only checked at runtime. In Elixir, we refer to variable assignment as being _bound_ to a value. Using the [match `=` operator][match], we can bind a value to a variable name:
+- Elixir is dynamically-typed
+  - the type of a variable is only checked at run-time
+- Using the match `=/2` operator, we can bind a value of any type to a variable name:
+  - It is possible to re-bind variables
+  - A variable may have any type of value bound to it.
 
-```elixir
-variable = 10 # Bind the integer value 10
-```
+## Modules
 
-Re-binding a variable's value is also done performed with the [match `=` operator][match]. Once defined, a variable's type can change when re-bound.
+- Modules are the basis of code organization in Elixir.
+  - A module is visible to all other modules.
+  - A module is defined with `defmodule`.
 
-```elixir
-count = 1 # Bind an integer literal value of 1
-count = 2 # Re-bind to the new value of 2
+## Named Functions
 
-# Compiler does not error when binding a new type to the variable
-count = false
-```
+- All named functions must be defined in a module.
 
-Elixir is an [functional-programming language][functional-programming] and requires all named [functions][functions] to be defined in a [module][modules]. The `defmodule` keyword is used to define a module. All modules are available to all other modules at runtime and do not require an _access modifier_ to make them visible to other parts of the program. A [module][modules] is analogous to a _class_ in other programming languages.
+  - Named functions are defined with `def`.
+  - A named function may be made private from external modules by using `defp` instead.
+  - The value of the last line of a function is _implicitly returned_ after it is evaluated
+  - Short functions may also be written using a one-line syntax.
 
-_Named Functions_ must be defined in a module. Each [function][functions] can have zero or more parameters. All parameters are dynamically typed, and the return type is not explicitly declared, it is the type of the value returned. An _access modifier_ can be specified for functions, making only desired functions available for use external to the module. In a function, the value of the last line is _implicitly returned_ to the calling function.
-
-```elixir
-defmodule Calculator do
-  def add(x, y) do
-    x + y
+  ```elixir
+  def increment(n) do
+    n + 1
   end
-end
-```
 
-Invoking a function is done by specifying its module- and function name and passing arguments for each of the functions's parameters. The module name may be omitted if the function is invoked inside of the module.
+  defp private_increment(n) do
+    n + 1
+  end
 
-```elixir
-sum = Calculator.add(1, 2)
-```
+  def short_increment(n), do: n + 1
+  ```
 
-If the function to be called is defined in the same module as the function that calls it, the module name can be omitted.
+- Functions are invoked using the full name of the function with the module name.
+  - If invoked from within its own module, the module name may be omitted.
+- The arity of a function is often used when referring to a named function
 
-When referring to functions, refer to them with their _arity_. The _arity_ of a function is the number or parameters it takes.
+  - The arity refers to the number of parameters it accepts.
 
-```elixir
-# add_3/1 because this function has one parameter, thus an arity of 1
-def add_3(x) do
-  3 + x
-end
-```
+  ```elixir
+  def add(x, y, z), do: x + y + z # add/3, because the arity is 3
+  ```
 
-Elixir supports one type of comment for [inline documentation][inline-documentation]. Single line comments are preceded by `#`.
+## Integers
 
-Integer values are defined as one or more (consecutive) digits and support the [default mathematical operators][operators].
+- Integer values are whole numbers written with one or more digits.
+  - You may use underscores to separate large numbers.
+  - Integers support the [basic mathematical operators][operators].
+
+## Documentation
+
+- Elixir provides 3 ways to write [inline documentation][inline-documentation].
+
+  - Single line comments are preceded by `#`.
+  - Functions may be documented with `@doc` preceding the named function definition
+
+    ```elixir
+    @doc """
+    Function Documentation
+    """
+    def function(), do: true
+    ```
+
+  - Module may be documented with `@moduledoc` immediately following the module definition
+
+    ```elixir
+    defmodule Example do
+      @moduledoc """
+      Module documentation
+      """
+
+      #...
+    end
+    ```
 
 [functional-programming]: https://en.wikipedia.org/wiki/Functional_programming
 [match]: https://elixirschool.com/en/lessons/basics/pattern-matching/
