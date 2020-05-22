@@ -1,17 +1,17 @@
-### General
+## General
 
 - The [atom type is described here][atom].
 
-### 1. Return the logging code label
+## 1. Return the logging code label
 
 - You can use the [`cond/1` function][cond] to elegantly handle the various log codes.
 - You can use [equality operators][equality] to compare integers for strict type equality.
 
-### 2. Support unknown logging codes
+## 2. Support unknown logging codes
 
 - There is a [way to specify a default branch][cond] in a cond function that can be used to catch unspecified cases.
 
-### 3. Send an alert
+## 3. Send an alert
 
 - You can use the [`cond/1` function][cond] to decide if an alert should be sent.
 - You can use [equality operators][equality] to compare atoms for equality.
