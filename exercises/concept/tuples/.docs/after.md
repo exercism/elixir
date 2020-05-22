@@ -19,9 +19,7 @@ end
 
 It might occur to you that this function may crash if the file does not exist. Don't worry, in Elixir it is often said to [**let it crash**][let-it-crash], because in elixir applications, a supervising process will restart the application to a known-good state.
 
-## Key-points
-
-### [Tuples][tuple-doc]
+## Tuples
 
 - [Tuple][tuple-doc] literals are enclosed with curly braces, `{}`.
 - [Tuples][tuple-doc] may hold any data-type in contiguous memory, which is allocated when the tuple is created.
@@ -29,7 +27,7 @@ It might occur to you that this function may crash if the file does not exist. D
 - When manipulating a [tuple][tuple-doc], rather than mutating the existing [tuple][tuple-doc], a new one is created.
 - The [`Kernel`][kernel-module] and [`Tuple`][tuple-module] modules have useful functions for working with [tuples][tuple-doc].
 
-### Pattern Matching
+## Pattern Matching
 
 - [Pattern matching][pattern-match-doc] is explicitly performed using the match operator, [`=/2`][match-op].
 
