@@ -2,7 +2,7 @@ In this exercise, you've been tasked with writing the software for an encryption
 
 For each task, make use of a closure and return a function that can be invoked from the calling scope.
 
-All functions should expect integer parameters. Integers are also suitable for performing bitwise operations in elixir.
+All functions should expect integer parameters. Integers are also suitable for performing bitwise operations in Elixir.
 
 You have seven tasks:
 

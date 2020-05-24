@@ -95,7 +95,7 @@ defmodule HighScoreTest do
   end
 
   describe "reset_score/2" do
-    test "reseting score for non-existent player sets player score to 0" do
+    test "resetting score for non-existent player sets player score to 0" do
       {jose, _score} = @jose
       scores =
         HighScore.new()
@@ -104,7 +104,7 @@ defmodule HighScoreTest do
       assert scores == %{jose => 0}
     end
 
-    test "reseting score for existing player sets previous player score to 0" do
+    test "resetting score for existing player sets previous player score to 0" do
       {jose, score} = @jose
       scores =
         HighScore.new()

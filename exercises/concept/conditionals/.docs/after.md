@@ -1,7 +1,7 @@
 You can use [atoms][atom] whenever you have a set of constants you want to express. Using [atoms][atom] opens a type-safe way of interacting with constant values. An atom is defined by its name, following the [atom][atom] format:
 
 ```elixir
-# All atoms are preceeded with a ':' then follow with alphanumeric snake-cased characters
+# All atoms are preceded with a ':' then follow with alphanumeric snake-cased characters
 variable = :an_atom
 ```
 

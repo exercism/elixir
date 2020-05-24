@@ -7,7 +7,7 @@
 ## 1. Get the numeric component from a volume-pair
 
 - Consider using a `Kernel` module function to return the volume-pair's numeric component.
-- Remember, one-line functions are best used for short elixir functions.
+- Remember, one-line functions are best used for short Elixir functions.
 
 ## 2. Convert the volume-pair to millilitres
 

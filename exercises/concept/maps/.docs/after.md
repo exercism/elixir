@@ -1,4 +1,4 @@
-Great work, knowing how to effectivly use [maps][maps] is an important skill to use Elixir fluently.
+Great work, knowing how to effectively use [maps][maps] is an important skill to use Elixir fluently.
 
 ## Key points
 
@@ -22,7 +22,7 @@ Great work, knowing how to effectivly use [maps][maps] is an important skill to 
   %{"a" => 2.0}
 
   # A map with the map key %{} with the list value [1,2,3]
-  %{%{}, [1,2,3]}
+  %{%{} => [1,2,3]}
   ```
 
 - Maps can also be instantiated using [`Map.new`][map-new] in the [Map module][map-module].

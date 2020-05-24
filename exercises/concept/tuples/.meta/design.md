@@ -2,7 +2,7 @@
 
 ## Goal
 
-The goal of this exercise is to teach the student the basics of tuples and common conventions in elixir to return multiple values.
+The goal of this exercise is to teach the student the basics of tuples and common conventions in Elixir to return multiple values.
 
 This is done through the implementation of a basic kitchen calculator.
 
@@ -25,7 +25,7 @@ This is done through the implementation of a basic kitchen calculator.
 The exercise's prerequisites are:
 
 - `atoms`: needs to be able to define and use atoms for return values
-- `multiple-clause-functions`: need to know that a named function can be overloaded and elixir will attempt to use them all until one found
+- `multiple-clause-functions`: need to know that a named function can be overloaded and Elixir will attempt to use them all until one found
 - `floating-point-numbers`: need to know how to use floating point numbers to convert
 
 ## Concepts unlocked

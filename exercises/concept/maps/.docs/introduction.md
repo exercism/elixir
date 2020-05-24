@@ -27,7 +27,7 @@ Maps also implement the _Enumerable protocol_, which allow them to be used in _E
 
 ## Module attributes as constants
 
-In elixir, we can define module attributes which can be used as constants in our functions.
+In Elixir, we can define module attributes which can be used as constants in our functions.
 
 ```elixir
 defmodule Example do

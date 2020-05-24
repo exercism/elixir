@@ -13,13 +13,13 @@ def number(_n) do
 end
 ```
 
-At run-time, elixir will test, from top to bottom of the source file, which function clause to invoke.
+At run-time, Elixir will test, from top to bottom of the source file, which function clause to invoke.
 
 Variables that are unused in the function body should be prefixed with an underscore.
 
 ## Guards
 
-Guards are used to prevent elixir from invoking functions based on evaluation of the parameters by guard functions. Guards begin with the `when` keyword, followed by a boolean expression. Guard functions are special functions which:
+Guards are used to prevent Elixir from invoking functions based on evaluation of the parameters by guard functions. Guards begin with the `when` keyword, followed by a boolean expression. Guard functions are special functions which:
 
 - Must be pure and not mutate any global states.
 - Must return strict `true` or `false` values.
@@ -28,7 +28,7 @@ A list of common guards are found in the [Elixir documentation][kernel-guards]
 
 ## Default arguments
 
-Functions may declare default values for one or more arguments. When compiled, elixir creates a function definition for `number/0` (no arguments), and `number/1` (one argument).
+Functions may declare default values for one or more arguments. When compiled, Elixir creates a function definition for `number/0` (no arguments), and `number/1` (one argument).
 
 ```elixir
 def number(n \\ 13), do: "That's not my favorite"

@@ -2,7 +2,7 @@
 
 ## Goal
 
-The goal for this exercise is to teach more about functions in elixir and how to use multiple functions clauses, guards
+The goal for this exercise is to teach more about functions in Elixir and how to use multiple functions clauses, guards
 
 ## Learning objectives
 
