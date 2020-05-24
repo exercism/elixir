@@ -5,6 +5,6 @@
       "exercism_username": "neenjaw"
     }
   ],
-  "forked_from": "clojure/lists",
+  "forked_from": ["clojure/lists"],
   "language_versions": ">=1.10"
 }
