@@ -26,7 +26,7 @@ After completing this exercise, the student should:
 This exercise's prerequisites are:
 
 - `lists`: needs to be able to work with the return value of `String.split`.
-- `basic-pattern-matching`: needs to be able to work with the return value of `String.split`.
+- `pattern-matching`: needs to be able to work with the return value of `String.split`.
 
 ## Concepts
 
