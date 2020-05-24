@@ -1,6 +1,6 @@
 ## General
 
-Don't worry about how the paramaters are derived, just focus on combining the parameters to return the intended result.
+Don't worry about how the parameters are derived, just focus on combining the parameters to return the intended result.
 
 ## 1. Define if pac-man can eat a ghost
 

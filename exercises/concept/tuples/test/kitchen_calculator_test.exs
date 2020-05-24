@@ -78,7 +78,7 @@ defmodule KitchenCalculatorTest do
       assert KC.convert({:cup, 4}, :fluid_ounce) == {:fluid_ounce, 32}
     end
 
-    test "fluid ounces to teapoons" do
+    test "fluid ounces to teaspoons" do
       assert KC.convert({:fluid_ounce, 4}, :teaspoon) == {:teaspoon, 24}
     end
 

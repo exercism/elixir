@@ -1,4 +1,4 @@
-Great job! [Tuples][tuple-doc] are used commonly to group information informally. A common pattern through elixir is to group function return values with a status
+Great job! [Tuples][tuple-doc] are used commonly to group information informally. A common pattern through Elixir is to group function return values with a status
 
 ```elixir
 File.read("hello.txt")
@@ -8,7 +8,7 @@ File.read("invalid.txt")
 # => {:error, :enoent}
 ```
 
-Then when writing elixir functions, we can made use of an [assertive style][assertive-style] with [pattern matching][pattern-match-doc]:
+Then when writing Elixir functions, we can made use of an [assertive style][assertive-style] with [pattern matching][pattern-match-doc]:
 
 ```elixir
 def read_file() do
@@ -17,7 +17,7 @@ def read_file() do
 end
 ```
 
-It might occur to you that this function may crash if the file does not exist. Don't worry, in Elixir it is often said to [**let it crash**][let-it-crash], because in elixir applications, a supervising process will restart the application to a known-good state.
+It might occur to you that this function may crash if the file does not exist. Don't worry, in Elixir it is often said to [**let it crash**][let-it-crash], because in Elixir applications, a supervising process will restart the application to a known-good state.
 
 ## Tuples
 

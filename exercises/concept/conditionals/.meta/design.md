@@ -18,7 +18,7 @@ After completing this exercise, the student should:
 - Pattern matching.
 - Function overloading.
 - `case` flow control structures.
-- Converstion of string to atoms.
+- Conversion of string to atoms.
 
 ## Concepts
 
@@ -27,7 +27,7 @@ The Concepts this exercise unlocks are:
 - `conditionals`: know of the existence of the `cond` control flow structure; know how to use boolean expressions to control flow;
 - `atoms`: know how to use `atom` values.
 
-## Prequisites
+## Prerequisites
 
 This exercise's prerequisites Concepts are:
 

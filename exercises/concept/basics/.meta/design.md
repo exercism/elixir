@@ -38,7 +38,7 @@ The Concepts this exercise unlocks are:
 
 - `basics`: know what a variable is; know how to define a variable; know how to update a variable; know how to use type inference for variables; know how to define a function; know how to return a value from a function; know how to call a function; know that functions must be defined in classes; know about the `public` access modifier; know how to define an integer; know how to use mathematical operators on integers; know how to define single-line comments.
 
-## Prequisites
+## Prerequisites
 
 There are no prerequisites.
 
