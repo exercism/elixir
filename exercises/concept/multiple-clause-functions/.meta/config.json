@@ -11,6 +11,6 @@
       "exercism_username": "angelikatyborska"
     }
   ],
-  "forked_from": "fsharp/pattern-matching",
+  "forked_from": ["fsharp/pattern-matching"],
   "language_versions": ">=1.10"
 }
