@@ -16,7 +16,7 @@
 ## 3. Split the full name into the first name and the last name
 
 - There is a [built-in function][string-split] that splits a string on whitespace characters.
-- A few first elements of a list can be assigned to variables by pattern-matching on the list.
+- A few first elements of a list can be assigned to variables by pattern matching on the list.
 
 ## 4. Put the initials inside of the heart
 

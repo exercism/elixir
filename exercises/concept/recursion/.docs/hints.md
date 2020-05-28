@@ -2,19 +2,19 @@
 
 - Read about recursion in the official [Getting Started Elixir guide][getting-started-recursion].
 - Read about recursion on [elixirschool.com][elixir-school-recursion].
-- Use multiple clause functions and pattern-matching.
+- Use multiple clause functions and pattern matching.
 - Try to split a problem into a base case and a recursive case.
   - For example, let's say you want to count how many cookies are there in the cookie jar with a recursive approach. A base case is an empty jar - it has zero cookies. If the jar is not empty, then the number of cookies in the jar is equal to one cookie plus the number of cookies in the jar after removing one cookie.
 
 ## 1. Check how many birds visited today
 
 - This task doesn't need recursion.
-- Accessing the first element in a list can be done by [pattern-matching][getting-started-pattern-matching].
+- Accessing the first element in a list can be done by [pattern matching][getting-started-pattern-matching].
 
 ## 2. Increment today's count
 
 - This task doesn't need recursion.
-- Accessing the first element in a list can be done by [pattern-matching][getting-started-pattern-matching].
+- Accessing the first element in a list can be done by [pattern matching][getting-started-pattern-matching].
 
 ## 3. Check if there was a day with no visiting birds
 
