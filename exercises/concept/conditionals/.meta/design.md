@@ -1,5 +1,3 @@
-# Design
-
 ## Goal
 
 The goal of this exercise is to teach students how to use conditional control flow structures

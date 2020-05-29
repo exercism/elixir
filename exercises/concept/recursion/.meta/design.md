@@ -1,5 +1,3 @@
-# Design
-
 ## Goal
 
 The goal of this exercise to learn how to do simple recursion in Elixir.

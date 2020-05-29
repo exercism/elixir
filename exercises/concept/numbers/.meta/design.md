@@ -1,5 +1,3 @@
-# Design
-
 ## Goal
 
 The goal of this exercise is to teach how to use floating point numbers in Elixir.
