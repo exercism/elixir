@@ -1,5 +1,3 @@
-# Design
-
 ## Goal
 
 The goal of this exercise is to teach the student the basics of tuples and common conventions in Elixir to return multiple values.

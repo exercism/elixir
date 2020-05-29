@@ -1,5 +1,3 @@
-# Design
-
 ## Goal
 
 The goal of this exercise is to introduce the student to the list type in Elixir.
