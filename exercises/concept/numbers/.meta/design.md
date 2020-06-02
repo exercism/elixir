@@ -1,7 +1,3 @@
-## Goal
-
-The goal of this exercise is to teach how to use floating point numbers in Elixir.
-
 ## Learning objectives
 
 - Know how to write floating point literals.

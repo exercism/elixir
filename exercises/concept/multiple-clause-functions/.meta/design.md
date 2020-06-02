@@ -1,9 +1,3 @@
-# Concept Exercise: multiple-clause-functions
-
-## Goal
-
-The goal for this exercise is to teach more about functions in Elixir and how to use multiple functions clauses, guards
-
 ## Learning objectives
 
 A student upon completion will:
