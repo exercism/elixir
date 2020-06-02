@@ -17,20 +17,12 @@ After completing this exercise, the student should:
 
 ## Prerequisites
 
-This exercise's prerequisites are:
-
 - `lists`: needs to be able to work with the return value of `String.split`.
 - `pattern-matching`: needs to be able to work with the return value of `String.split`.
 
 ## Concepts
 
-The concepts this exercise unlocks are:
-
 - `strings`: knows how to concatenate strings, interpolate expressions inside of strings, create multiline strings, and modify strings using the _String module_.
-
-## Representer
-
-This exercise does not require any specific representation logic to be added to the [representer][representer].
 
 ## Analyzer
 
@@ -41,4 +33,3 @@ This exercise could benefit from the following rules added to the the [analyzer]
 - Verify that the `pair/1` function calls the `initials/1` function and uses `"""` to create the string.
 
 [analyzer]: https://github.com/exercism/elixir-analyzer
-[representer]: https://github.com/exercism/elixir-representer

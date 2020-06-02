@@ -11,8 +11,6 @@
 
 ## Prerequisites
 
-This exercise's prerequisites are:
-
 - `lists`
 - `pattern-matching`: necessary for working with lists.
 - `multiple-clause-functions`: the preferred way of defining a base case and a recursive step.
@@ -21,10 +19,6 @@ This exercise's prerequisites are:
 ## Concepts
 
 - `recursion`
-
-## Representer
-
-This exercise does not require any specific representation logic to be added to the [representer][representer].
 
 ## Analyzer
 
@@ -37,4 +31,3 @@ This exercise could benefit from the following rules added to the the [analyzer]
   - list comprehensions (`for x <- list`)
 
 [analyzer]: https://github.com/exercism/elixir-analyzer
-[representer]: https://github.com/exercism/elixir-representer
