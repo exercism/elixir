@@ -39,10 +39,6 @@ This exercise is a fork from [F#'s Number Guessing Game](https://github.com/exer
 - <https://elixirschool.com/en/lessons/basics/functions/#guards>
 - <https://elixirschool.com/en/lessons/basics/functions/#default-arguments>
 
-## Representer
-
-No modifications at this time
-
 ## Analyzer
 
 - ensure multiple-clause functions, guards, default arguments are being used.

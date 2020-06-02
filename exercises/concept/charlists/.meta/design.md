@@ -32,4 +32,3 @@ This exercise could benefit from the following rules added to the the [analyzer]
 - Verify that none of those functions are used: `Kernel.to_string`, anything from the `String` module, anything from the `Regex` module.
 
 [analyzer]: https://github.com/exercism/elixir-analyzer
-[representer]: https://github.com/exercism/elixir-representer
