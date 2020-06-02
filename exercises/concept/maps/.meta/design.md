@@ -1,7 +1,3 @@
-## Goal
-
-The goal of this exercise is to teach the student the basics of maps in Elixir.
-
 ## Learning objectives
 
 - Know what a map is.

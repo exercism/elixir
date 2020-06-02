@@ -1,7 +1,3 @@
-## Goal
-
-The goal of this exercise is to teach the student how strings are implemented and used in Elixir.
-
 ## Learning objectives
 
 After completing this exercise, the student should:

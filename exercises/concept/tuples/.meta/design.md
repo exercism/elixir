@@ -1,7 +1,3 @@
-## Goal
-
-The goal of this exercise is to teach the student the basics of tuples and common conventions in Elixir to return multiple values.
-
 This is done through the implementation of a basic kitchen calculator.
 
 ## Learning objectives
