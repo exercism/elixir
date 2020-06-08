@@ -5,6 +5,12 @@
       "exercism_username": "neenjaw"
     }
   ],
+  "contributors": [
+    {
+      "github_username": "fireproofsocks",
+      "exercism_username": "fireproofsocks"
+    }
+  ],
   "forked_from": ["clojure/lists"],
   "language_versions": ">=1.10"
 }

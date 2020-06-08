@@ -5,6 +5,12 @@
       "exercism_username": "neenjaw"
     }
   ],
+  "contributors": [
+    {
+      "github_username": "angelikatyborska",
+      "exercism_username": "angelikatyborska"
+    }
+  ],
   "forked_from": ["csharp/basics"],
   "language_versions": ">=1.10"
 }
