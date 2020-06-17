@@ -3,7 +3,7 @@
 - Know what a struct is
 - Know that a struct is a bare map
 - Know that structs have compile time guarantees
-- Know that structs implment the static access operator (struct.key)
+- Know that structs implement the static access operator (struct.key)
 - Know that structs have fields, like maps
 - Know how to declare a struct
 - Know how to declare a struct field
