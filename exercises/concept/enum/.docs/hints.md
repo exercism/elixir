@@ -1,7 +1,7 @@
 ## General
 
 - Read about the `Enum` module in the [official Getting Started guide][getting-started-enum] or on [elixirschool.com][elixir-school-enum]
-- Take a look in the documentation for the full [list of functions in the `Enum` module][enum-fuctions].
+- Take a look in the documentation for the full [list of functions in the `Enum` module][enum-functions].
 
 ## 1. Sort items by price
 
@@ -26,7 +26,7 @@
 
 [gettin-started-enum]: https://elixir-lang.org/getting-started/enumerables-and-streams.html#enumerables
 [elixir-school-enum]: https://elixirschool.com/en/lessons/basics/enum/
-[enum-fuctions]: https://hexdocs.pm/elixir/Enum.html#functions
+[enum-functions]: https://hexdocs.pm/elixir/Enum.html#functions
 [enum-sort-by]: https://hexdocs.pm/elixir/Enum.html#sort_by/3
 [enum-filter]: https://hexdocs.pm/elixir/Enum.html#filter/2
 [enum-map]: https://hexdocs.pm/elixir/Enum.html#map/2

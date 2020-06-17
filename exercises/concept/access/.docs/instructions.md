@@ -2,7 +2,7 @@ You are working with a web development team to maintain a website for a local ba
 
 ## 1. Extract data from a nested map structure
 
-Implement the `extract_from/2` function to take two arguemnts:
+Implement the `extract_from/2` function to take two arguments:
 
 - `data`: a nested map structure with data pertaining to the basketball team.
 - `path`: a string consisting of period-delimited keys to obtain the value associated with the last key.
