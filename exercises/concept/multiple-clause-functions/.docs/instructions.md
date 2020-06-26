@@ -50,7 +50,7 @@ GuessingGame.compare(5, 4)
 
 ## 5. Make the response when there is no guess
 
-Modify the `compare` function to respond to guesses that are close to the secret number.
+Modify the `compare` function to respond to a lack of guess.
 
 ```elixir
 GuessingGame.compare(5)
