@@ -40,7 +40,7 @@ our_map[:level_one][:level_two] == 3
 [1] S. Jurić, Elixir in action, Second edition, Manning Publications Co, Shelter Island, NY, 2019.
 
 [kernel]: https://hexdocs.pm/elixir/Kernel.html#content
-[behaviors]: https://hexdocs.pm/elixir/Module.html#module-behaviour
+[behaviours]: https://hexdocs.pm/elixir/Module.html#module-behaviour
 [genserver]: https://hexdocs.pm/elixir/GenServer.html#content
 [supervisor]: https://hexdocs.pm/elixir/Supervisor.html#content
 [application]: https://hexdocs.pm/elixir/Application.html#content
