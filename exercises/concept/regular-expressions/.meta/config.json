@@ -1,0 +1,15 @@
+{
+  "authors": [
+    {
+      "github_username": "neenjaw",
+      "exercism_username": "neenjaw"
+    }
+  ],
+  "contributors": [
+    {
+      "github_username": "angelikatyborska",
+      "exercism_username": "angelikatyborska"
+    }
+  ],
+  "language_versions": ">=1.10"
+}
