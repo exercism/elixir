@@ -4,7 +4,7 @@ defmodule AllYourBase do
   or returns nil if either of the bases are less than 2
   """
 
-  @spec convert(list, integer, integer) :: list
+  @spec convert(list, integer, integer) :: list | nil
   def convert(digits, base_a, base_b) do
   end
 end
