@@ -5,7 +5,7 @@ defmodule ETL do
   ## Examples
 
   iex> ETL.transform(%{"a" => ["ABILITY", "AARDVARK"], "b" => ["BALLAST", "BEAUTY"]})
-  %{"ability" => "a", "aardvark" => "a", "ballast" => "b", "beauty" =>"b"}
+  %{"aardvark" => "a", "ability" => "a", "ballast" => "b", "beauty" => "b"}
   """
   @spec transform(map) :: map
   def transform(input) do
