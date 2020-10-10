@@ -19,7 +19,7 @@ After completing this exercise, the student should:
 - `bitstrings` (TODO)
 - `pattern-matching`
 - `strings`
-- `if-conditional`
+- `if`
 
 ## Concepts
 

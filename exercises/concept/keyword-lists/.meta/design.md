@@ -20,5 +20,5 @@
 - `lists`
 - `tuples`
 - `atoms`
-- `if-conditional`
+- `if`
 - `default-arguments`

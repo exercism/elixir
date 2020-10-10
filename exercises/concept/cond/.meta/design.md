@@ -16,7 +16,7 @@ After completing this exercise, the student should:
 
 ## Concepts
 
-- `conditionals`: know of the existence of the `cond` control flow structure; know how to use boolean expressions to control flow;
+- `cond`: know of the existence of the `cond` control flow structure; know how to use boolean expressions to control flow;
 - `atoms`: know how to use `atom` values.
 
 ## Prerequisites

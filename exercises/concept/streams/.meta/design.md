@@ -22,7 +22,7 @@
 
 - `enum`
 - `tuples`
-- `if-conditional`
+- `if`
 
 ## Analyzer
 

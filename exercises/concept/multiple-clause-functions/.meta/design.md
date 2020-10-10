@@ -25,7 +25,7 @@ A student upon completion will:
 
 ## Prerequisites
 
-- `conditionals`
+- `cond`
 
 ## Narrative
 
