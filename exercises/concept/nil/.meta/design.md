@@ -11,7 +11,7 @@
 ## Concepts
 
 - `nil`
-- `if-conditional`
+- `if`
 
 ## Prerequisites
 
