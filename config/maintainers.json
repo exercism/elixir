@@ -90,6 +90,16 @@
       "link_url": null,
       "avatar_url": null,
       "bio": "Working with Elixir since 2017. I love it for its elegant syntax, great performance, pattern matching, and immutability."
+    },
+    {
+      "github_username": "jwarwick",
+      "alumnus": false,
+      "show_on_website": false,
+      "name": "John Warwick",
+      "link_text": "https://github.com/jwarwick",
+      "link_url": null,
+      "avatar_url": null,
+      "bio": null
     }
   ]
 }
