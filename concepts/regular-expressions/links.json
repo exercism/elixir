@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "url": "https://elixir-lang.org/getting-started/sigils.html#regular-expressions",
+    "description": "Getting Started guide - Regular Expressions"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/Regex.html",
+    "description": "The Regex module"
+  },
+  {
+    "url": "https://www.regular-expressions.info",
+    "description": "Regex Reference"
+  },
+  {
+    "url": "https://regexone.com/",
+    "description": "Interactive Regex Tutorial - RegexOne"
+  },
+  {
+    "url": "https://regex101.com/",
+    "description": "Online Regex Tester - Regex101"
+  },
+  {
+    "url": "https://regexr.com/",
+    "description": "Online Regex Tester - Regexr"
+  },
+  {
+    "url": "https://regexcrossword.com/",
+    "description": "Regex Crossword"
+  }
+]

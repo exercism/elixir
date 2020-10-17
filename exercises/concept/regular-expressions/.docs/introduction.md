@@ -1,6 +1,10 @@
-Regular expressions are a powerful tool for working with strings in Elixir. Regular expressions in Elixir follow the **PCRE** specification (**P**erl **C**ompatible **R**egular **E**xpressions). String patterns representing the regular expression's meaning are first compiled then used for matching all or part of a string.
+Regular expressions (regex) are a powerful tool for working with strings in Elixir. Regular expressions in Elixir follow the **PCRE** specification (**P**erl **C**ompatible **R**egular **E**xpressions). String patterns representing the regular expression's meaning are first compiled then used for matching all or part of a string.
 
-In Elixir, the most common way to create regular expressions is using the `~r` sigil. Sigils provide _syntactic sugar_ shortcuts for common tasks in Elixir. In this case, `~r` is a shortcut for using `Regex.compile!/2`. To match a _string literal_, we can using the string itself as a pattern following the sigil.
+In Elixir, the most common way to create regular expressions is using the `~r` sigil. Sigils provide _syntactic sugar_ shortcuts for common tasks in Elixir. To match a _string literal_, we can use the string itself as a pattern following the sigil.
+
+```elixir
+~r/test/
+```
 
 The `=~/2` operator is useful to perform a regex match on a string to return a `boolean` result.
 
@@ -50,7 +54,7 @@ _Quantifiers_ allow a for a repeating pattern in the regex. They affect the grou
   - `{1,}` may also be written as `+`: match one-or-more repetitions
 - `{,N}` match up to `N` repetitions
 
-Round brackets `()` are used to denote _groups_ and _captures_. The group may also be _captured_ in some instances to be returned for use. In Elixir, these may be named or un-named. Groups function as a single unit, like when followed by _quantifiers_.
+Round brackets `()` are used to denote _groups_ and _captures_. The group may also be _captured_ in some instances to be returned for use. In Elixir, these may be named or un-named. Captures are named by appending `?<name>` after the opening parenthesis. Groups function as a single unit, like when followed by _quantifiers_.
 
 ```elixir
 regex = ~r/(h)at/
