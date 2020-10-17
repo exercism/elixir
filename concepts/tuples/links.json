@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "url": "https://elixir-lang.org/getting-started/basic-types.html#tuples",
+    "description": "Getting Started guide - Tuples"
+  },
+  {
+    "url": "https://blog.appsignal.com/2018/08/21/elixir-alchemy-list-vs-tuples.html",
+    "description": "Lists vs Tuples"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/Tuple.html",
+    "description": "The Tuple module"
+  }
+]
