@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "url": "https://hexdocs.pm/elixir/Kernel.html#==/2",
+    "description": "Comparision Operator"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/Kernel.html#is_nil/1",
+    "description": "is_nil Guard Clause"
+  }
+]

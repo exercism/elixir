@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "url": "https://elixir-lang.org/getting-started/case-cond-and-if.html#if-and-unless",
+    "description": "Getting Started: `if` and `unless`"
+  },
+  {
+    "url": "https://elixir-lang.org/getting-started/basic-types.html#booleans",
+    "description": "Getting Started: Booleans"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/Kernel.html#if/2",
+    "description": "Documentation: `if/2`"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/Kernel.html#unless/2",
+    "description": "Documentation: `unless/2`"
+  }
+]
