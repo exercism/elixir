@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "url": "https://elixir-lang.org/getting-started/basic-types.html",
+    "description": "Getting Started guide - Basic Types"
+  },
+  {
+    "url": "https://elixir-lang.org/getting-started/basic-operators.html",
+    "description": "Getting Started guide - Basic Operators"
+  },
+  {
+    "url": "https://elixirschool.com/en/lessons/basics/basics/",
+    "description": "Basics - Elixir School"
+  }
+]
