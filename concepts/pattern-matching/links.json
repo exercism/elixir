@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "url": "https://elixir-lang.org/getting-started/pattern-matching.html",
+    "description": "Getting Started guide - Pattern Matching"
+  },
+  {
+    "url": "https://elixirschool.com/en/lessons/basics/pattern-matching/",
+    "description": "Pattern Matching - Elixir School"
+  },
+  {
+    "url": "https://www.poeticoding.com/the-beauty-of-pattern-matching-in-elixir/",
+    "description": "The Beauty of Pattern Matching in Elixir - Poeticoding"
+  },
+  {
+    "url": "https://joyofelixir.com/6-pattern-matching",
+    "description": "Pattern Matching - Joy of Elixir"
+  }
+]
