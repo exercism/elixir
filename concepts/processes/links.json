@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "url": "https://elixir-lang.org/getting-started/processes.html",
+    "description": "Getting Started guide: Processes"
+  },
+  {
+    "url": "https://samuelmullen.com/articles/elixir-processes-send-and-receive/",
+    "description": "Elixir Processes: Spawn, Send, and Receive"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Actor_model",
+    "description": "Actor model"
+  }
+]

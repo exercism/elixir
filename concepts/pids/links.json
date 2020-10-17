@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "url": "https://elixir-lang.org/getting-started/processes.html",
+    "description": "Getting Started guide - Processes"
+  },
+  {
+    "url": "https://samuelmullen.com/articles/elixir-processes-send-and-receive/",
+    "description": "Elixir Processes: Spawn, Send, and Receive"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/Kernel.html#spawn/1",
+    "description": "Kernel.spawn/1"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/Kernel.html#is_pid/1",
+    "description": "Kernel.is_pid/1"
+  }
+]
