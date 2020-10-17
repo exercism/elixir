@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "url": "https://elixir-lang.org/getting-started/comprehensions.html",
+    "description": "Getting Started guide - Comprehensions"
+  },
+  {
+    "url": "https://elixirschool.com/en/lessons/basics/comprehensions/",
+    "description": "Comprehensions - Elixir School"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/Kernel.SpecialForms.html#for/1",
+    "description": "Kernel.for/1"
+  }
+]
