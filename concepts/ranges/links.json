@@ -1,1 +1,11 @@
-[]
+[
+  { "url": "https://hexdocs.pm/elixir/Range.html", "description": "range" },
+  {
+    "url": "https://hexdocs.pm/elixir/Kernel.html#../2",
+    "description": "range-operator"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/Enumerable.html",
+    "description": "enumerable"
+  }
+]
