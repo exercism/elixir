@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "url": "https://elixir-lang.org/getting-started/basic-types.html#anonymous-functions",
+    "description": "Getting Started guide - Anonymous Functions"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/Kernel.SpecialForms.html#&/1",
+    "description": "Documentation - &"
+  },
+  {
+    "url": "https://dockyard.com/blog/2016/08/05/understand-capture-operator-in-elixir",
+    "description": "Understanding the & operator"
+  }
+]

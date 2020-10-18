@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "url": "https://elixir-lang.org/getting-started/basic-types.html#anonymous-functions",
+    "description": "Getting Started guide - Anonymous Functions"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Closure_(computer_programming)",
+    "description": "Closure - Wikipedia"
+  }
+]
