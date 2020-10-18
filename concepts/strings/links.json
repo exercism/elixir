@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "url": "https://elixir-lang.org/getting-started/basic-types.html#strings",
+    "description": "Getting Started guide - Strings"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/String.html",
+    "description": "The String module"
+  }
+]
