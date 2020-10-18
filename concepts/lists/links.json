@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "url": "https://elixir-lang.org/getting-started/basic-types.html#linked-lists",
+    "description": "Getting Started - Lists"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/List.html",
+    "description": "Documentation - List Module"
+  }
+]
