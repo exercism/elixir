@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "url": "https://elixir-lang.org/getting-started/keywords-and-maps.html#keyword-lists",
+    "description": "Getting Started guide - Keyword Lists"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/Keyword.html",
+    "description": "The Keyword module"
+  }
+]
