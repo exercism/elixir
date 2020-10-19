@@ -1,1 +1,6 @@
-[]
+[
+  {
+    "url": "https://elixir-lang.org/getting-started/module-attributes.html#as-constants",
+    "description": "Module attributes as \"constants\""
+  }
+]
