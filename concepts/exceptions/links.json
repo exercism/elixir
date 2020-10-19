@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "url": "https://elixir-lang.org/getting-started/try-catch-and-rescue.html#errors",
+    "description": "Getting Started guide - Errors"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/Exception.html",
+    "description": "The Exception module"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/Kernel.html#defexception/1",
+    "description": "Kernel.defexception/1"
+  }
+]
