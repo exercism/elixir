@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "url": "https://elixir-lang.org/getting-started/modules-and-functions.html#named-functions",
+    "description": "Getting Started guide - Named Functions"
+  },
+  {
+    "url": "https://inquisitivedeveloper.com/lwm-elixir-25/",
+    "description": "Default Values and Multiple Function Clauses"
+  },
+  {
+    "url": "https://culttt.com/2016/05/23/multi-clause-functions-pattern-matching-guards-elixir/",
+    "description": "Multi-clause Functions with Pattern Matching and Guards"
+  }
+]
