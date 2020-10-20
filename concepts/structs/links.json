@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "url": "https://elixir-lang.org/getting-started/structs.html",
+    "description": "Getting Started guide - Structs"
+  },
+  {
+    "url": "https://elixirschool.com/en/lessons/basics/modules/#structs",
+    "description": "Structs - Elixir School"
+  },
+  {
+    "url": "https://elixircasts.io/intro-to-structs",
+    "description": "Intro to Structs - ElixirCasts"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/Kernel.html#defstruct/1",
+    "description": "Kernel.defstruct/1"
+  }
+]

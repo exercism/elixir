@@ -18,7 +18,6 @@
 ## Concepts
 
 - `structs`
-- `static-access-operator`
 
 ## Prerequisites
 
