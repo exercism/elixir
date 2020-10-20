@@ -17,7 +17,8 @@
 
 ## Prerequisites
 
-- `structs`
 - `processes`
+- `maps`
+- `structs`
 
 ## Analyzer

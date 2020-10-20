@@ -24,6 +24,9 @@
 
 ## Prerequisites
 
+- `lists`
+- `tuples`
+- `default-arguments`
 - `string-literals`: know how to write string literals in code (alphanumeric unicode graphemes surrounded by double quotes)
 - `anonymous-functions`: know how to write anonymous functions, pass functions as data
 

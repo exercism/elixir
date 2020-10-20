@@ -16,7 +16,7 @@ After completing this exercise, the student should:
 
 ## Prerequisites
 
-- `bitstrings` (TODO)
+- `bitstrings`
 - `pattern-matching`
 - `strings`
 - `if`

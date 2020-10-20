@@ -21,7 +21,6 @@ After completing this exercise, the student should:
 
 ## Prerequisites
 
-- `basics`: be able to define a named function, return a value.
 - `booleans`: be able to work with boolean values, boolean expressions
 
 [atom]: https://elixir-lang.org/getting-started/basic-types.html#atoms
