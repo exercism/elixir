@@ -66,3 +66,5 @@ def count(list), do: do_count(list, 0)
 defp do_count([], count), do: count
 defp do_count([_head | tail], count), do: do_count(tail, count + 1)
 ```
+
+The usage of an accumulator allows us to turn recursive functions into _tail-recursive_ functions. A function is tail-recursive if the _last_ thing executed by the function is a call to itself.

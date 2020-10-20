@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "url": "https://dino.codes/posts/tail-call-optimization-in-elixir/",
+    "description": "Tail Call Optimization"
+  },
+  {
+    "url": "https://blog.appsignal.com/2019/03/19/elixir-alchemy-recursion.html",
+    "description": "Recursion in Elixir"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Tail_call",
+    "description": "Tail Call - Wikipedia"
+  }
+]
