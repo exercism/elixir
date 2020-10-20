@@ -26,6 +26,7 @@ A student upon completion will:
 ## Prerequisites
 
 - `cond`
+- `string-literals`
 
 ## Narrative
 

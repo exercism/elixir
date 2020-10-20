@@ -16,7 +16,7 @@
 ## Concepts
 
 - `bitstrings`
-- `tail-recursion`
+- `tail-call-recursion`
 
 ## Prerequisites
 
