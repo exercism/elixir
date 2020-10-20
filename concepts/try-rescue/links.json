@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "url": "https://elixir-lang.org/getting-started/try-catch-and-rescue.html",
+    "description": "Getting Started - try-rescue"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/Kernel.SpecialForms.html#try/1",
+    "description": "Documentation - try"
+  }
+]
