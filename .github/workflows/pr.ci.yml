@@ -102,7 +102,7 @@ jobs:
           mix local.hex --force
           mix deps.get
 
-      - name: Build project
+      - name: Build Project
         run: mix
 
         # Replace <code-extensions> with file extensions that should trigger running tests. Replace with .* to allow anything.
