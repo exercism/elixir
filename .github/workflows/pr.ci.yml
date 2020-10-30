@@ -1,0 +1,80 @@
+# This workflow will do a clean install of the dependencies and run tests across different versions
+#
+# Requires scripts:
+# - bin/pr-check.sh
+# - bin/pr.sh
+
+name: elixir / pr
+
+on: pull_request
+
+jobs:
+  precheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v2
+
+      - name: Use Elixir
+        uses: actions/setup-elixir@v1
+        with:
+          otp-version: '22.2'
+          elixir-version: '1.10.0'
+
+
+      - name: Install project dependencies
+        run: mix deps.get
+
+      - name: Build project
+        run: mix
+
+      - name: Find trailing whitespace
+        uses: harupy/find-trailing-whitespace@master
+
+        # Replace <code-extensions> with file extensions that should trigger this check. Replace with .* to allow anything.
+      - name: Run exercism/elixir ci pre-check (stub files, config integrity) for changed exercises
+        run: |
+          PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
+          curl --url $"${PULL_REQUEST_URL}/files" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
+            jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(ex|exs|md|json)$")) | .filename' | \
+            xargs -r bin/pr-check.sh
+
+  ci:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        elixir: ['1.6.0', '1.7.0']
+        otp: ['19.0']
+        include:
+          - elixir: '1.8.0'
+            otp: '20.0'
+          - elixir: '1.9.0'
+            otp: '20.0'
+          - elixir: '1.10.0'
+            otp: '21.0'
+          - elixir: '1.10.0'
+            otp: '22.2'
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Elixir ${{matrix.elixir}} / OTP ${{matrix.otp}}
+        uses: actions/setup-elixir@v1
+        with:
+          otp-version: ${{matrix.otp}}
+          elixir-version: ${{matrix.elixir}}
+
+      - name: Install project dependencies
+        run: mix deps.get
+
+      - name: Build project
+        run: mix
+
+        # Replace <code-extensions> with file extensions that should trigger running tests. Replace with .* to allow anything.
+      - name: Run exercism/elixir ci (runs tests) for changed/added exercises
+        run: |
+          PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
+          curl --url $"${PULL_REQUEST_URL}/files" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
+            jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(ex|exs|md|json)$")) | .filename' | \
+            xargs -r bin/pr.sh

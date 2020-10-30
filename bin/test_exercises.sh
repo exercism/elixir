@@ -41,7 +41,7 @@ cp -a exercises tmp-exercises
 
 # test each exercise
 for exercise in tmp-exercises/*
-do 
+do
   if [ -d $exercise ]
   then
     cd "$exercise"
@@ -53,7 +53,7 @@ do
 
     # Move the example into the lib file
     for file in lib/*.ex
-    do 
+    do
       rm "$file"
     done
 
