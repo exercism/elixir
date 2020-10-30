@@ -22,15 +22,38 @@ jobs:
           otp-version: '22.2'
           elixir-version: '1.10.0'
 
+      - name: Retrieve Mix Dependencies Cache
+        uses: actions/cache@v1
+        id: mix-cache # id to use in retrieve action
+        with:
+          path: deps
+          key: ${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-mix-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}
 
-      - name: Install project dependencies
-        run: mix deps.get
+      - name: Install Mix Dependencies
+        if: steps.mix-cache.outputs.cache-hit != 'true'
+        run: |
+          mix local.rebar --force
+          mix local.hex --force
+          mix deps.get
 
-      - name: Build project
+      - name: Build Project
         run: mix
 
-      - name: Find trailing whitespace
+      - name: Find Trailing Whitespace
         uses: harupy/find-trailing-whitespace@master
+
+      - name: Retrieve PLT Cache
+        uses: actions/cache@v1
+        id: plt-cache
+        with:
+          path: priv/plts
+          key: ${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-plts-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}
+
+      - name: Create PLTs
+        if: steps.plt-cache.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p priv/plts
+          mix dialyzer --plt
 
         # Replace <code-extensions> with file extensions that should trigger this check. Replace with .* to allow anything.
       - name: Run exercism/elixir ci pre-check (stub files, config integrity) for changed exercises
@@ -65,8 +88,19 @@ jobs:
           otp-version: ${{matrix.otp}}
           elixir-version: ${{matrix.elixir}}
 
-      - name: Install project dependencies
-        run: mix deps.get
+      - name: Retrieve Mix Dependencies Cache
+        uses: actions/cache@v1
+        id: mix-cache # id to use in retrieve action
+        with:
+          path: deps
+          key: ${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-mix-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}
+
+      - name: Install Mix Dependencies
+        if: steps.mix-cache.outputs.cache-hit != 'true'
+        run: |
+          mix local.rebar --force
+          mix local.hex --force
+          mix deps.get
 
       - name: Build project
         run: mix
