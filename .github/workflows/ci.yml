@@ -42,6 +42,7 @@ jobs:
 
     strategy:
       matrix:
+        #Note: pick a canonical set of supported versions
         elixir: ['1.6.0', '1.7.0']
         otp: ['19.0']
         include:
