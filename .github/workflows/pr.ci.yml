@@ -1,0 +1,111 @@
+# This workflow will do a clean install of the dependencies and run tests across different versions
+#
+# Requires scripts:
+# - bin/pr-check.sh
+# - bin/pr.sh
+
+name: elixir / pr
+
+on: pull_request
+
+jobs:
+  precheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v2
+
+      - name: Use Elixir
+        uses: actions/setup-elixir@v1
+        with:
+          otp-version: '22.2'
+          elixir-version: '1.10.0'
+
+      - name: Retrieve Mix Dependencies Cache
+        uses: actions/cache@v1
+        id: mix-cache # id to use in retrieve action
+        with:
+          path: deps
+          key: ${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-mix-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}
+
+      - name: Install Mix Dependencies
+        if: steps.mix-cache.outputs.cache-hit != 'true'
+        run: |
+          mix local.rebar --force
+          mix local.hex --force
+          mix deps.get
+
+      - name: Build Project
+        run: mix
+
+      - name: Retrieve PLT Cache
+        uses: actions/cache@v1
+        id: plt-cache
+        with:
+          path: priv/plts
+          key: ${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-plts-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}
+
+      - name: Create PLTs
+        if: steps.plt-cache.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p priv/plts
+          mix dialyzer --plt
+
+        # Replace <code-extensions> with file extensions that should trigger this check. Replace with .* to allow anything.
+      - name: Run exercism/elixir ci pre-check (stub files, config integrity) for changed exercises
+        run: |
+          PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
+          curl --url $"${PULL_REQUEST_URL}/files" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
+            jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(ex|exs|md|json)$")) | .filename' | \
+            xargs -r bin/pr-check.sh
+
+  ci:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        elixir: ['1.6.0', '1.7.0']
+        otp: ['19.0']
+        include:
+          - elixir: '1.8.0'
+            otp: '20.0'
+          - elixir: '1.9.0'
+            otp: '20.0'
+          - elixir: '1.10.0'
+            otp: '21.0'
+          - elixir: '1.10.0'
+            otp: '22.2'
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Elixir ${{matrix.elixir}} / OTP ${{matrix.otp}}
+        uses: actions/setup-elixir@v1
+        with:
+          otp-version: ${{matrix.otp}}
+          elixir-version: ${{matrix.elixir}}
+
+      - name: Retrieve Mix Dependencies Cache
+        uses: actions/cache@v1
+        id: mix-cache # id to use in retrieve action
+        with:
+          path: deps
+          key: ${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-mix-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}
+
+      - name: Install Mix Dependencies
+        if: steps.mix-cache.outputs.cache-hit != 'true'
+        run: |
+          mix local.rebar --force
+          mix local.hex --force
+          mix deps.get
+
+      - name: Build Project
+        run: mix
+
+        # Replace <code-extensions> with file extensions that should trigger running tests. Replace with .* to allow anything.
+      - name: Run exercism/elixir ci (runs tests) for changed/added exercises
+        run: |
+          PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
+          curl --url $"${PULL_REQUEST_URL}/files" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
+            jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(ex|exs|md|json)$")) | .filename' | \
+            xargs -r bin/pr.sh
