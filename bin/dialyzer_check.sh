@@ -19,7 +19,7 @@ do
 done
 
 elixirc -o ./_build ./tmp/src/*.exs
-mix dialyzer
+mix dialyzer --no-check --halt-exit-status
 RESULT=$?
 rm -rf ./tmp
 
