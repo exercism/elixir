@@ -39,9 +39,6 @@ jobs:
       - name: Build Project
         run: mix
 
-      - name: Find Trailing Whitespace
-        uses: harupy/find-trailing-whitespace@master
-
       - name: Retrieve PLT Cache
         uses: actions/cache@v1
         id: plt-cache

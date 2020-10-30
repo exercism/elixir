@@ -58,9 +58,6 @@ jobs:
       - name: Run Prechecks
         run: bin/ci-check.sh
 
-      - name: Find Trailing Whitespace
-        uses: harupy/find-trailing-whitespace@master
-
   ci:
     runs-on: ubuntu-latest
 
