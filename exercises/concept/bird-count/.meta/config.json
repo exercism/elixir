@@ -11,6 +11,10 @@
       "exercism_username": "neenjaw"
     }
   ],
+  "editor": {
+    "solution_files": ["lib/bird_count.ex"],
+    "test_files": ["test/bird_count_test.exs"]
+  },
   "forked_from": ["csharp/arrays"],
   "language_versions": ">=1.10"
 }

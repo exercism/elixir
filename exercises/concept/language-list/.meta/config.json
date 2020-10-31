@@ -11,6 +11,10 @@
       "exercism_username": "fireproofsocks"
     }
   ],
+  "editor": {
+    "solution_files": ["lib/language_list.ex"],
+    "test_files": ["test/language_list_test.exs"]
+  },
   "forked_from": ["clojure/lists"],
   "language_versions": ">=1.10"
 }

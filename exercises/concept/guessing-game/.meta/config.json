@@ -11,6 +11,10 @@
       "exercism_username": "angelikatyborska"
     }
   ],
+  "editor": {
+    "solution_files": ["lib/guessing_game.ex"],
+    "test_files": ["test/guessing_game_test.exs"]
+  },
   "forked_from": ["fsharp/pattern-matching"],
   "language_versions": ">=1.10"
 }

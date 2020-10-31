@@ -11,6 +11,10 @@
       "exercism_username": "neenjaw"
     }
   ],
+  "editor": {
+    "solution_files": ["lib/freelancer_rate.ex"],
+    "test_files": ["test/freelancer_rate_test.exs"]
+  },
   "forked_from": ["javascript/numbers"],
   "language_versions": ">=1.10"
 }

@@ -11,5 +11,9 @@
       "exercism_username": "angelikatyborska"
     }
   ],
+  "editor": {
+    "solution_files": ["lib/file_sniffer.ex"],
+    "test_files": ["test/file_sniffer_test.exs"]
+  },
   "language_versions": ">=1.10"
 }

@@ -5,5 +5,9 @@
       "exercism_username": "angelikatyborska"
     }
   ],
+  "editor": {
+    "solution_files": ["lib/wine_cellar.ex"],
+    "test_files": ["test/wine_cellar_test.exs"]
+  },
   "language_versions": ">=1.10"
 }
