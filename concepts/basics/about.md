@@ -47,6 +47,14 @@
   - You may use underscores to separate large numbers.
   - Integers support the [basic mathematical operators][operators].
 
+## Strings
+
+- [String][string] literals are a sequence of characters surrounded by double quotes.
+
+```elixir
+string = "this is a string! 1, 2, 3!"
+```
+
 ## Documentation
 
 - Elixir provides 3 ways to write [inline documentation][inline-documentation].
@@ -82,3 +90,4 @@
 [def]: https://hexdocs.pm/elixir/Kernel.html#def/2
 [defp]: https://hexdocs.pm/elixir/Kernel.html#defp/2
 [defmodule]: https://hexdocs.pm/elixir/Kernel.html#defmodule/2
+[string]: https://elixir-lang.org/getting-started/basic-types.html#strings

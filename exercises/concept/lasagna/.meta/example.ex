@@ -14,4 +14,8 @@ defmodule Lasagna do
   def total_time_in_minutes(number_of_layers, actual_minutes_in_oven) do
     preparation_time_in_minutes(number_of_layers) + actual_minutes_in_oven
   end
+
+  def alarm() do
+    "Ding!"
+  end
 end

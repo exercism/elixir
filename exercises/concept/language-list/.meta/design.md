@@ -25,6 +25,7 @@
   - know some basic patterns / functions
     - like `[]`, `[_|_]`, `hd/1`, `tl/1`, `length/1`, `in/2`
 - `string-literals`
+  - not a standalone concept, captured in `basics`
   - know how to write out a string with double quotes
 
 ## Prerequisites

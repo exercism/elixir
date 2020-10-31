@@ -1,6 +1,6 @@
 In this exercise you're going to write some code to help you cook a brilliant lasagna from your favorite cooking book.
 
-You have four tasks, all related to the time spent cooking the lasagna.
+You have five tasks, all related to the time spent cooking the lasagna.
 
 ## 1. Define the expected oven time in minutes
 
@@ -36,4 +36,13 @@ Define the `Lasagna.total_time_in_minutes/2` method that takes two parameters: t
 ```elixir
 Lasagna.total_time_in_minutes(3, 20)
 # => 26
+```
+
+## 5. Create a notification that the lasagna is ready
+
+Define the `Lasagna.alarm/0` method that does not take any parameters and returns a message indicating that the lasagna is ready to eat.
+
+```elixir
+Lasagna.alarm()
+# => "Ding!"
 ```

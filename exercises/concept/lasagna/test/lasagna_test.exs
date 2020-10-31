@@ -31,4 +31,9 @@ defmodule LasagnaTest do
   test "total time in minutes for multiple layers" do
     assert Lasagna.total_time_in_minutes(4, 8) === 16
   end
+
+  @tag :pending
+  test "notification message" do
+    assert Lasagna.alarm() === "Ding!"
+  end
 end
