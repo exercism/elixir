@@ -5,5 +5,9 @@
       "exercism_username": "angelikatyborska"
     }
   ],
+  "editor": {
+    "solution_files": ["lib/rpg.ex"],
+    "test_files": ["test/rpg_test.exs"]
+  },
   "language_versions": ">=1.10"
 }

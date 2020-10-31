@@ -11,5 +11,9 @@
       "exercism_username": "neenjaw"
     }
   ],
+  "editor": {
+    "solution_files": ["lib/take_a_number.ex"],
+    "test_files": ["test/take_a_number_test.exs"]
+  },
   "language_versions": ">=1.10"
 }

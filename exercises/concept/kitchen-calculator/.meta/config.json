@@ -11,5 +11,9 @@
       "exercism_username": "angelikatyborska"
     }
   ],
+  "editor": {
+    "solution_files": ["lib/kitchen_calculator.ex"],
+    "test_files": ["test/kitchen_calculator_test.exs"]
+  },
   "language_versions": ">=1.10"
 }
