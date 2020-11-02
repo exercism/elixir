@@ -8,5 +8,6 @@ options = [
   undefined_struct_stack_underflow_error_exception:
     not function_exported?(RPNCalculator.Exception.StackUnderflowError, :__struct__, 0)
 ]
+
 ExUnit.start(options)
 ExUnit.configure(exclude: :pending, trace: true)

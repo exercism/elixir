@@ -12,7 +12,7 @@
     }
   ],
   "editor": {
-    "solution_files": ["lib/rpn_calculator.ex"],
+    "solution_files": ["lib/rpn_calculator/exception.ex"],
     "test_files": ["test/rpn_calculator/exception_test.exs"]
   },
   "language_versions": ">=1.10"
