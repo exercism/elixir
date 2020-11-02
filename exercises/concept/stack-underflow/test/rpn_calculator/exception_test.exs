@@ -23,15 +23,23 @@ defmodule RPNCalculator.ExceptionTest do
       # @tag :pending
       test "DivisionByZeroError fields defined by `defexception`" do
         assert %RPNCalculator.Exception.DivisionByZeroError{}.__exception__ == true
-        assert %RPNCalculator.Exception.DivisionByZeroError{}.__struct__ == RPNCalculator.Exception.DivisionByZeroError
-        assert %RPNCalculator.Exception.DivisionByZeroError{}.message == "division by zero occurred"
+
+        assert %RPNCalculator.Exception.DivisionByZeroError{}.__struct__ ==
+                 RPNCalculator.Exception.DivisionByZeroError
+
+        assert %RPNCalculator.Exception.DivisionByZeroError{}.message ==
+                 "division by zero occurred"
       end
 
       @tag :pending
       test "DivisionByZeroError message when raised with raise/1" do
-        assert_raise(RPNCalculator.Exception.DivisionByZeroError, "division by zero occurred", fn ->
-          raise RPNCalculator.Exception.DivisionByZeroError
-        end)
+        assert_raise(
+          RPNCalculator.Exception.DivisionByZeroError,
+          "division by zero occurred",
+          fn ->
+            raise RPNCalculator.Exception.DivisionByZeroError
+          end
+        )
       end
   end
 
@@ -52,31 +60,47 @@ defmodule RPNCalculator.ExceptionTest do
       # @tag :pending
       test "StackUnderflowError fields defined by `defexception`" do
         assert %RPNCalculator.Exception.StackUnderflowError{}.__exception__ == true
-        assert %RPNCalculator.Exception.StackUnderflowError{}.__struct__ == RPNCalculator.Exception.StackUnderflowError
-        assert %RPNCalculator.Exception.StackUnderflowError{}.message == "stack underflow occurred"
+
+        assert %RPNCalculator.Exception.StackUnderflowError{}.__struct__ ==
+                 RPNCalculator.Exception.StackUnderflowError
+
+        assert %RPNCalculator.Exception.StackUnderflowError{}.message ==
+                 "stack underflow occurred"
       end
 
       @tag :pending
       test "StackUnderflowError message when raised with raise/1" do
-        assert_raise(RPNCalculator.Exception.StackUnderflowError, "stack underflow occurred", fn ->
-          raise RPNCalculator.Exception.StackUnderflowError
-        end)
+        assert_raise(
+          RPNCalculator.Exception.StackUnderflowError,
+          "stack underflow occurred",
+          fn ->
+            raise RPNCalculator.Exception.StackUnderflowError
+          end
+        )
       end
 
       @tag :pending
       test "StackUnderflowError message when raised with raise/2" do
-        assert_raise(RPNCalculator.Exception.StackUnderflowError, "stack underflow occurred, context: test", fn ->
-          raise RPNCalculator.Exception.StackUnderflowError, "test"
-        end)
+        assert_raise(
+          RPNCalculator.Exception.StackUnderflowError,
+          "stack underflow occurred, context: test",
+          fn ->
+            raise RPNCalculator.Exception.StackUnderflowError, "test"
+          end
+        )
       end
   end
 
   describe "divide/2" do
     @tag :pending
     test "when stack doesn't contain enough numbers, raise" do
-      assert_raise(RPNCalculator.Exception.StackUnderflowError, "stack underflow occurred, context: when dividing", fn ->
-        RPNCalculator.Exception.divide([])
-      end)
+      assert_raise(
+        RPNCalculator.Exception.StackUnderflowError,
+        "stack underflow occurred, context: when dividing",
+        fn ->
+          RPNCalculator.Exception.divide([])
+        end
+      )
     end
 
     @tag :pending

@@ -13,7 +13,7 @@ defmodule RPNCalculator.OutputTest do
 
     case filename do
       @filename -> {:ok, :stdio}
-      @bad_filename -> {:ok, spawn fn -> nil end}
+      @bad_filename -> {:ok, spawn(fn -> nil end)}
     end
   end
 
@@ -30,10 +30,10 @@ defmodule RPNCalculator.OutputTest do
 
     @tag :pending
     @use_open_error_message """
-      Use the open/1 function from the `resource` specified in the arguments to open `filename`.
+    Use the open/1 function from the `resource` specified in the arguments to open `filename`.
 
-      E.g.) resource.open(filename)
-      """
+    E.g.) resource.open(filename)
+    """
     test "opens resource" do
       RPNCalculator.Output.write(@resource, @filename, @equation)
       assert_received {:open, @filename}, @use_open_error_message
@@ -41,18 +41,20 @@ defmodule RPNCalculator.OutputTest do
 
     @tag :pending
     @use_write_error_message """
-      Use IO.write/2 to write to the opened `filename`.
-      """
+    Use IO.write/2 to write to the opened `filename`.
+    """
     test "writes to resource" do
-      assert capture_io(fn -> RPNCalculator.Output.write(@resource, @filename, @equation) end) == "1 1 +", @use_write_error_message
+      assert capture_io(fn -> RPNCalculator.Output.write(@resource, @filename, @equation) end) ==
+               "1 1 +",
+             @use_write_error_message
     end
 
     @tag :pending
     @use_close_error_message """
-      Use the close/1 function from the `resource` specified in the arguments to close the opened file handle.
+    Use the close/1 function from the `resource` specified in the arguments to close the opened file handle.
 
-      E.g.) resource.close(filename)
-      """
+    E.g.) resource.close(filename)
+    """
     test "closes resource" do
       RPNCalculator.Output.write(__MODULE__, @filename, @equation)
       assert_received :close, @use_close_error_message
@@ -60,7 +62,8 @@ defmodule RPNCalculator.OutputTest do
 
     @tag :pending
     test "rescues and returns error tuple from raised error" do
-      assert {:error, "Unable to write to resource"} == RPNCalculator.Output.write(@resource, @bad_filename, @equation)
+      assert {:error, "Unable to write to resource"} ==
+               RPNCalculator.Output.write(@resource, @bad_filename, @equation)
     end
 
     @tag :pending
