@@ -3,7 +3,7 @@ defmodule Username.MixProject do
 
   def project do
     [
-      app: :charlists,
+      app: :german_sysadmin,
       version: "0.1.0",
       # elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,

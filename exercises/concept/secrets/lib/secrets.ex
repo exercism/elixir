@@ -1,5 +1,4 @@
 defmodule Secrets do
-
   def secret_add(secret) do
     raise "Please implement the secret_add/1 function."
   end

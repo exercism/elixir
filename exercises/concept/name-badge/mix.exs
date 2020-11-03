@@ -3,7 +3,7 @@ defmodule NameBadge.MixProject do
 
   def project do
     [
-      app: :nil_app,
+      app: :name_badge,
       version: "0.1.0",
       # elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,

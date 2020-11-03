@@ -1,4 +1,4 @@
-defmodule FreelancerRate do
+defmodule FreelancerRates do
   def daily_rate(hourly_rate) do
     raise "Please implement the daily_rate/1 function"
   end

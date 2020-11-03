@@ -3,7 +3,7 @@ defmodule HighSchoolSweetheart.MixProject do
 
   def project do
     [
-      app: :strings,
+      app: :high_school_sweetheart,
       version: "0.1.0",
       # elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
