@@ -3,7 +3,7 @@ defmodule BoutiqueSuggestions.MixProject do
 
   def project do
     [
-      app: :list_comprehensions,
+      app: :boutique_suggestions,
       version: "0.1.0",
       # elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,

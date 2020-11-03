@@ -1,4 +1,4 @@
-defmodule FreelancerRate do
+defmodule FreelancerRates do
   def daily_rate(hourly_rate) do
     hourly_rate * 8.0
   end

@@ -15,7 +15,7 @@ Discounts are modeled as fractional numbers representing percentage, for example
 Implement a function to calculate the daily rate given an hourly rate:
 
 ```elixir
-FreelancerRate.daily_rate(60)
+FreelancerRates.daily_rate(60)
 # => 480.0
 ```
 
@@ -26,7 +26,7 @@ The returned daily rate should be a float.
 Implement a function to calculate the monthly rate, and apply a discount:
 
 ```elixir
-FreelancerRate.monthly_rate(77, 10.5)
+FreelancerRates.monthly_rate(77, 10.5)
 # => 12130
 ```
 
@@ -37,7 +37,7 @@ The returned monthly rate should be rounded up to the nearest integer.
 Implement a function that takes a budget, a hourly rate, and a discount, and calculates how many days of work that covers.
 
 ```elixir
-FreelancerRate.days_in_budget(20000, 80, 11.0)
+FreelancerRates.days_in_budget(20000, 80, 11.0)
 # => 35.1
 ```
 

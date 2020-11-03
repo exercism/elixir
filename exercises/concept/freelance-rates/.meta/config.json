@@ -12,8 +12,8 @@
     }
   ],
   "editor": {
-    "solution_files": ["lib/freelancer_rate.ex"],
-    "test_files": ["test/freelancer_rate_test.exs"]
+    "solution_files": ["lib/freelancer_rates.ex"],
+    "test_files": ["test/freelancer_rates_test.exs"]
   },
   "forked_from": ["javascript/numbers"],
   "language_versions": ">=1.10"

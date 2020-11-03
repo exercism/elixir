@@ -1,5 +1,4 @@
 defmodule Secrets do
-
   def secret_add(secret) do
     fn x -> x + secret end
   end

@@ -1,9 +1,9 @@
-defmodule RescueRunner.MixProject do
+defmodule RPNCalculator.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :errors,
+      app: :rpn_calculator,
       version: "0.1.0",
       # elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
