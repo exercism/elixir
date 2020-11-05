@@ -1,6 +1,6 @@
-Working with binary data is an important concept in any language, and Elixir provides an elegant syntax to write, match, and construct binary data.
+## bitstrings
 
-## Bitstrings
+Working with binary data is an important concept in any language, and Elixir provides an elegant syntax to write, match, and construct binary data.
 
 In Elixir, binary data is referred to as the bitstring type. The binary data*type* (not to be confused with binary data in general) is a specific form of a bitstring, which we will discuss in a later exercise.
 
@@ -25,7 +25,7 @@ value = 0b11111011011 = 2011
 # By default, bitstrings are displayed in chunks of 8 bits (a byte)
 ```
 
-## Constructing
+### Constructing
 
 We can combine bitstrings stored in variables using the special form:
 
@@ -36,7 +36,7 @@ combined = <<first::bitstring, second::bitstring>>
 # => <<49::size(6)>>
 ```
 
-## Pattern matching
+### Pattern matching
 
 Pattern matching can also be done to obtain the value from within the special form:
 
@@ -46,7 +46,7 @@ value == 0b0110
 # => true
 ```
 
-## Tail Call Recursion and Accumulators
+## tail-call-recursion
 
 When recursing through enumerables [lists, bitstrings, strings], there are often two concerns:
 

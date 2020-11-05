@@ -1,3 +1,5 @@
+## agent
+
 The `Agent` module facilitates an abstraction for spawning processes and the _receive-send_ loop. From here, we will call processes started using the `Agent` module _'agent processes'_. An _agent process_ might be chosen to represent a central shared state.
 
 To start an _agent process_, `Agent` provides the `start/2` function. The supplied function when `start`_-ing_ the _agent process_ returns the initial state of the process:

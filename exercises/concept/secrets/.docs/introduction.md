@@ -1,3 +1,5 @@
+## anonymous-functions
+
 Functions are treated as first class citizens in Elixir. This means functions:
 
 - Can be assigned to variables.
@@ -33,7 +35,18 @@ variable.(1)
 # => 2
 ```
 
-## Bitwise operations
+## closures
+
+Anonymous functions in Elixir are [closures][closure]. They can access variables that are in scope when the function is defined.
+
+```elixir
+a = 7
+square = fn -> a * a end
+square.()
+# => 49
+```
+
+## bit-manipulation
 
 Elixir supports many functions for working with bits found in the _Bitwise module_.
 

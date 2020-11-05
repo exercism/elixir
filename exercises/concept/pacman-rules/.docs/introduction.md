@@ -1,3 +1,5 @@
+## booleans
+
 Elixir represents true and false values with the boolean type. There are only two values: _true_ and _false_. These values can be bound to a variable:
 
 ```elixir

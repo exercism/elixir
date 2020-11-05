@@ -1,3 +1,5 @@
+## basics
+
 Elixir is a dynamically-typed language, meaning that the type of a variable is only checked at runtime. Using the match `=` operator, we can bind a value of any type to a variable name:
 
 ```elixir
@@ -7,7 +9,7 @@ count = 2 # You may re-bind variables
 count = false # You may re-bind any type to a variable
 ```
 
-## Modules
+### Modules
 
 Elixir is an [functional-programming language][functional-programming] and requires all named functions to be defined in a _module_. The `defmodule` keyword is used to define a module. All modules are available to all other modules at runtime and do not require an _access modifier_ to make them visible to other parts of the program. A _module_ is analogous to a _class_ in other programming languages.
 
@@ -17,7 +19,7 @@ defmodule Calculator do
 end
 ```
 
-## Named Functions
+### Named functions
 
 _Named Functions_ must be defined in a module. Each function can have zero or more parameters. All parameters are dynamically-typed, and the return type is not explicitly declared, it is the type of the value returned. An _access modifier_ can be specified for functions, making only desired functions available for use external to the module. In a function, the value of the last line is _implicitly returned_ to the calling function.
 
@@ -40,7 +42,7 @@ sum = Calculator.short_add(2, 2)
 # => 4
 ```
 
-## Arity of Functions
+### Arity of functions
 
 It is common to refer to functions with their _arity_. The _arity_ of a function is the number of parameters it accepts.
 
@@ -51,7 +53,7 @@ def add(x, y, z) do
 end
 ```
 
-## Documentation
+### Documentation
 
 Documentation is a priority in high-quality Elixir code bases, and there are 3 ways to write inline documentation:
 

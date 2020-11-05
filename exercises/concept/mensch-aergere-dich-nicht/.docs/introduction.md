@@ -1,4 +1,4 @@
-## Ranges
+## ranges
 
 Ranges represent a sequence of one or many consecutive integers. They are created by connecting two integers with `..`.
 
@@ -10,7 +10,7 @@ Ranges can be ascending or descending. They are always inclusive of the last val
 
 A range implements the _Enumerable protocol_, which means functions in the `Enum` module can be used to work with ranges.
 
-## Pipe operator
+## pipe-operator
 
 The `|>` operator is called the pipe operator. It can be used to chain function calls together in such a way that the value returned by the previous function call is passed as the first argument to the next function call.
 
@@ -21,7 +21,7 @@ The `|>` operator is called the pipe operator. It can be used to chain function 
 # => [4, 16]
 ```
 
-## Streams
+## streams
 
 All functions in the `Enum` module are _eager_. When performing multiple operations on enumerables with the `Enum` module, each operation is going to generate an intermediate result.
 

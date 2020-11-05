@@ -1,3 +1,5 @@
+## recursion
+
 Recursive functions are functions that call themselves.
 
 A recursive function needs to have at least one _base case_ and at least one _recursive case_.
