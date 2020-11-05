@@ -1,4 +1,4 @@
-## Multiple Function Clauses
+## multiple-clause-functions
 
 Elixir facilitates **Open-Close Principle** practices by allowing functions to have multiple clauses, so instead of sprawling and hard-coded control-logic, pointed functions can be written to add/remove behavior easily.
 
@@ -17,7 +17,7 @@ At run-time, Elixir will test, from top to bottom of the source file, which func
 
 Variables that are unused in the function body should be prefixed with an underscore.
 
-## Guards
+## guards
 
 Guards are used to prevent Elixir from invoking functions based on evaluation of the parameters by guard functions. Guards begin with the `when` keyword, followed by a boolean expression. Guard functions are special functions which:
 
@@ -26,7 +26,7 @@ Guards are used to prevent Elixir from invoking functions based on evaluation of
 
 A list of common guards are found in the [Elixir documentation][kernel-guards]
 
-## Default arguments
+## default-arguments
 
 Functions may declare default values for one or more arguments. When compiled, Elixir creates a function definition for `number/0` (no arguments), and `number/1` (one argument).
 

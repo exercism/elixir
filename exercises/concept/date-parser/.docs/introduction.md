@@ -1,3 +1,5 @@
+## regular-expressions
+
 Regular expressions (regex) are a powerful tool for working with strings in Elixir. Regular expressions in Elixir follow the **PCRE** specification (**P**erl **C**ompatible **R**egular **E**xpressions). String patterns representing the regular expression's meaning are first compiled then used for matching all or part of a string.
 
 In Elixir, the most common way to create regular expressions is using the `~r` sigil. Sigils provide _syntactic sugar_ shortcuts for common tasks in Elixir. To match a _string literal_, we can use the string itself as a pattern following the sigil.
