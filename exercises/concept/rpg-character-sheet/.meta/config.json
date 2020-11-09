@@ -1,0 +1,13 @@
+{
+  "authors": [
+    {
+      "github_username": "angelikatyborska",
+      "exercism_username": "angelikatyborska"
+    }
+  ],
+  "editor": {
+    "solution_files": ["lib/rpg/character_builder.ex"],
+    "test_files": ["test/rpg/character_builder_test.exs"]
+  },
+  "language_versions": ">=1.10"
+}

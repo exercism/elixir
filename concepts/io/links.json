@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "url": "https://elixir-lang.org/getting-started/io-and-the-file-system.html#the-io-module",
+    "description": "Getting Started guide - IO"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/IO.html",
+    "description": "The IO module"
+  },
+  {
+    "url": "https://elixir-lang.org/getting-started/debugging.html#ioinspect2",
+    "description": "Getting Started guide - Debugging with IO.inspect/2"
+  }
+]

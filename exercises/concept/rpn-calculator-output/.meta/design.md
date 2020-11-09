@@ -17,7 +17,7 @@
 
 ## Prerequisites
 
-- `io`
+- `file`
 - `try-rescue`
 
 ## Analyzer
