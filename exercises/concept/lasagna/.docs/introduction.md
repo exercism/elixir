@@ -7,6 +7,8 @@ count = 1 # Bound an integer value of 1
 count = 2 # You may re-bind variables
 
 count = false # You may re-bind any type to a variable
+
+message = "Success!" # Strings can be created by enclosing characters within double quotes
 ```
 
 ### Modules
