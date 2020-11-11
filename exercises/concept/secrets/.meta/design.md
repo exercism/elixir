@@ -5,7 +5,7 @@ After completing this exercise, the student should:
 - Know how to write [anonymous functions][fns].
 - Know how to return a function from a function.
 - Know how to use closures in Elixir.
-- Be exposed to the capture notation in the after.md
+- Be exposed to the capture notation in the concept's `about.md`
 
 ## Out of scope
 
