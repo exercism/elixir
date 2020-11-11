@@ -14,7 +14,7 @@ Please also watch the following video:
 
 As this document is generic, the following placeholders are used:
 
-- `$slug`: the name of the exercise in snake_case (e.g. `anonymous-methods`).
+- `$slug`: the name of the exercise in snake_case (e.g. `calculator-conundrum`).
 - `$elixir_slug`: `$slug` converted to snake_case from kebab-case,
 - `$concepts`: the Concepts the exercise is about (e.g. `loops`),
 - `$concept-1`: a single Concept slug,
@@ -30,14 +30,17 @@ To implement a Concept Exercise, the following files must be added:
 ```text
 languages
 └── elixir
+    ├── concepts
+    |   └── $concept-1
+    |       ├── about.md
+    |       └── links.json
     └── exercises
         └── concept
             └── $slug
                 ├── .docs
                 │   ├── instructions.md
                 │   ├── introduction.md
-                │   ├── hints.md
-                │   └── after.md
+                │   └── hints.md
                 ├── .meta
                 │   ├── config.json
                 │   ├── design.md
