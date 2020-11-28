@@ -110,82 +110,114 @@ defmodule BasketballWebsiteTest do
   }
 
   describe "extract_from_path retrieves from" do
+    # @tag :pending
     test "first layer" do
       assert BasketballWebsite.extract_from_path(@team_data, "team_name") == "Hoop Masters"
     end
 
+    @tag :pending
     test "second layer" do
       assert BasketballWebsite.extract_from_path(@team_data, "coach.first_name") == "Jane"
     end
 
+    @tag :pending
     test "third layer" do
       assert BasketballWebsite.extract_from_path(@team_data, "players.99.first_name") == "Amalee"
     end
 
+    @tag :pending
     test "fourth layer" do
-      assert BasketballWebsite.extract_from_path(@team_data, "players.61.statistics.average_points_per_game") === 5.0
+      assert BasketballWebsite.extract_from_path(
+               @team_data,
+               "players.61.statistics.average_points_per_game"
+             ) === 5.0
     end
   end
 
   describe "extract_from_path returns nil from nonexistent last key in" do
+    @tag :pending
     test "first layer" do
       assert BasketballWebsite.extract_from_path(@team_data, "team_song") == nil
     end
 
+    @tag :pending
     test "second layer" do
       assert BasketballWebsite.extract_from_path(@team_data, "coach.age") == nil
     end
 
+    @tag :pending
     test "third layer" do
       assert BasketballWebsite.extract_from_path(@team_data, "players.32.height") == nil
     end
 
+    @tag :pending
     test "fourth layer" do
-      assert BasketballWebsite.extract_from_path(@team_data, "players.12.statistics.personal_fouls") == nil
+      assert BasketballWebsite.extract_from_path(
+               @team_data,
+               "players.12.statistics.personal_fouls"
+             ) == nil
     end
   end
 
+  @tag :pending
   test "extract_from_path returns nil from nonexistent path" do
-    assert BasketballWebsite.extract_from_path(@team_data, "support_personnel.physiotherapy.first_name") == nil
+    assert BasketballWebsite.extract_from_path(
+             @team_data,
+             "support_personnel.physiotherapy.first_name"
+           ) == nil
   end
 
   describe "get_in_path retrieves from" do
+    @tag :pending
     test "first layer" do
       assert BasketballWebsite.get_in_path(@team_data, "team_name") == "Hoop Masters"
     end
 
+    @tag :pending
     test "second layer" do
       assert BasketballWebsite.get_in_path(@team_data, "coach.first_name") == "Jane"
     end
 
+    @tag :pending
     test "third layer" do
       assert BasketballWebsite.get_in_path(@team_data, "players.99.first_name") == "Amalee"
     end
 
+    @tag :pending
     test "fourth layer" do
-      assert BasketballWebsite.get_in_path(@team_data, "players.61.statistics.average_points_per_game") === 5.0
+      assert BasketballWebsite.get_in_path(
+               @team_data,
+               "players.61.statistics.average_points_per_game"
+             ) === 5.0
     end
   end
 
   describe "get_in_path returns nil from nonexistent last key in" do
+    @tag :pending
     test "first layer" do
       assert BasketballWebsite.get_in_path(@team_data, "team_song") == nil
     end
 
+    @tag :pending
     test "second layer" do
       assert BasketballWebsite.get_in_path(@team_data, "coach.age") == nil
     end
 
+    @tag :pending
     test "third layer" do
       assert BasketballWebsite.get_in_path(@team_data, "players.32.height") == nil
     end
 
+    @tag :pending
     test "fourth layer" do
-      assert BasketballWebsite.get_in_path(@team_data, "players.12.statistics.personal_fouls") == nil
+      assert BasketballWebsite.get_in_path(@team_data, "players.12.statistics.personal_fouls") ==
+               nil
     end
   end
 
+  @tag :pending
   test "get_in_path returns nil from nonexistent path" do
-    assert BasketballWebsite.get_in_path(@team_data, "support_personnel.physiotherapy.first_name") == nil
+    assert BasketballWebsite.get_in_path(@team_data, "support_personnel.physiotherapy.first_name") ==
+             nil
   end
 end

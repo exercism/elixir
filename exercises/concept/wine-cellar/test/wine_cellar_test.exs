@@ -13,6 +13,7 @@ defmodule WineCellarTest do
   ]
 
   describe "explain_colors/0" do
+    # @tag :pending
     test "returns a keyword list" do
       assert WineCellar.explain_colors() == [
                white: "Fermented without skin contact.",
@@ -23,10 +24,12 @@ defmodule WineCellarTest do
   end
 
   describe "filter/3" do
+    @tag :pending
     test "works for empty cellar" do
       assert WineCellar.filter([], :rose) == []
     end
 
+    @tag :pending
     test "returns all wines of a chosen color" do
       assert WineCellar.filter(@cellar, :white) == [
                {"Chardonnay", 2015, "Italy"},
@@ -38,6 +41,7 @@ defmodule WineCellarTest do
       assert WineCellar.filter(@cellar, :rose) == [{"Dornfelder", 2018, "Germany"}]
     end
 
+    @tag :pending
     test "filters wines of chosen color by year" do
       assert WineCellar.filter(@cellar, :white, year: 2015) == [
                {"Chardonnay", 2015, "Italy"},
@@ -45,6 +49,7 @@ defmodule WineCellarTest do
              ]
     end
 
+    @tag :pending
     test "filters wines of chosen color by country" do
       assert WineCellar.filter(@cellar, :red, country: "France") == [
                {"Merlot", 2015, "France"},
@@ -52,12 +57,14 @@ defmodule WineCellarTest do
              ]
     end
 
+    @tag :pending
     test "filters wines of chosen color by year and country" do
       assert WineCellar.filter(@cellar, :white, year: 2015, country: "Germany") == [
                {"Pinot grigio", 2015, "Germany"}
              ]
     end
 
+    @tag :pending
     test "filters wines of chosen color by country and year" do
       assert WineCellar.filter(@cellar, :red, country: "France", year: 2015) == [
                {"Merlot", 2015, "France"}
