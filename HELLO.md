@@ -63,6 +63,7 @@ question, and then ~1-2h for writing the analyzer.
 
 #### Useful links for this task
 
+- [What is an analyzer?](https://github.com/exercism/v3-docs/tree/master/anatomy/track-tooling/analyzers)
 - [V3 Elixir concept exercises](https://github.com/exercism/v3/tree/master/languages/elixir/exercises/concept)
 - [Currently implemented analyzers](https://github.com/exercism/elixir-analyzer/tree/master/lib/elixir_analyzer/exercise_test)
 - [How to write an analyzer?](https://github.com/exercism/elixir-analyzer/blob/master/docs/writing-an-analyzer.md)
@@ -85,6 +86,7 @@ Anything from 15 minutes to many hours, depending on the specific issue.
 
 #### Useful links for this task
 
+- [What is track tooling?](https://github.com/exercism/v3-docs/tree/master/anatomy/track-tooling#track-tooling)
 - [Open issues and PRs in the Elixir analyzer](https://github.com/pulls?q=is%3Aopen+repo%3Aexercism%2Felixir-analyzer)
 - [Open issues and PRs in the Elixir test runner](https://github.com/pulls?q=is%3Aopen+repo%3Aexercism%2Felixir-test-runner)
 - [Open issues and PRs in the Elixir representer](https://github.com/pulls?q=is%3Aopen+repo%3Aexercism%2Felixir-representer)
@@ -106,6 +108,7 @@ One-time ~30 min investment to get familiar with how existing analyzers are writ
 
 #### Useful links for this task
 
+- [What is an analyzer?](https://github.com/exercism/v3-docs/tree/master/anatomy/track-tooling/analyzers)
 - [Currently implemented analyzers](https://github.com/exercism/elixir-analyzer/tree/master/lib/elixir_analyzer/exercise_test)
 - [How to write an analyzer?](https://github.com/exercism/elixir-analyzer/blob/master/docs/writing-an-analyzer.md)
 - [Two-fer analyzer](https://github.com/exercism/elixir-analyzer/blob/3827403d0f1cd5cd4c4b8d5a9e7736f19cce5ea4/lib/elixir_analyzer/exercise_test/two_fer.ex)
