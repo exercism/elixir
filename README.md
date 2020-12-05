@@ -52,4 +52,7 @@ TravisCI's current testing routine can be found in [.travis.yml](https://github.
 
 ## Contributing Guide
 
-For an in-depth discussion of how exercism language tracks and exercises work, please see [CONTRIBUTING.md](https://github.com/exercism/elixir/blob/master/CONTRIBUTING.md)
+If you want to help maintain the Elixir track, take a look at [HELLO.md](https://github.com/exercism/elixir/blob/master/HELLO.md). You will find there an introduction to all the possible ways you can help us.
+
+If you want to contribute to this repository specifically, please see [CONTRIBUTING.md](https://github.com/exercism/elixir/blob/master/CONTRIBUTING.md).
+
