@@ -1,0 +1,10 @@
+[
+  {
+    "url": "https://hexdocs.pm/elixir/Enum.html#random/1",
+    "description": "Documentation: `Enum.random/1`"
+  },
+  {
+    "url": "http://erlang.org/doc/man/rand.html",
+    "description": "Erlang `rand`"
+  }
+]

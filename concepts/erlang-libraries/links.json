@@ -1,0 +1,10 @@
+[
+  {
+    "url": "https://elixir-lang.org/getting-started/erlang-libraries.html",
+    "description": "Getting Started - Erlang libraries"
+  },
+  {
+    "url": "http://erlang.org/doc/apps/stdlib/index.html",
+    "description": "Erlang's STDLIB Reference Manual "
+  }
+]
