@@ -1,0 +1,13 @@
+{
+  "authors": [
+    {
+      "github_username": "angelikatyborska",
+      "exercism_username": "angelikatyborska"
+    }
+  ],
+  "editor": {
+    "solution_files": ["lib/captains_log.ex"],
+    "test_files": ["test/captains_log_test.exs"]
+  },
+  "language_versions": ">=1.10"
+}
