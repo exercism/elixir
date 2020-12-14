@@ -5,6 +5,12 @@
       "exercism_username": "angelikatyborska"
     }
   ],
+  "contributors": [
+    {
+      "github_username": "neenjaw",
+      "exercism_username": "neenjaw"
+    }
+  ],
   "editor": {
     "solution_files": ["lib/rpg/character_sheet.ex"],
     "test_files": ["test/rpg/character_sheet_test.exs"]

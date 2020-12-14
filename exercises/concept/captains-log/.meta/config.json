@@ -5,6 +5,12 @@
       "exercism_username": "angelikatyborska"
     }
   ],
+  "contributors": [
+    {
+      "github_username": "neenjaw",
+      "exercism_username": "neenjaw"
+    }
+  ],
   "editor": {
     "solution_files": ["lib/captains_log.ex"],
     "test_files": ["test/captains_log_test.exs"]
