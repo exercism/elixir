@@ -1,6 +1,6 @@
 ## General
 
-- Use `?` to work with the character [codepoints][codepoint].
+- Use `?` to work with the character [code points][codepoint].
 - `\s` can be used to represent a space.
 - Use [integer binary notation][integer-literal] for working with the codes.
 - Try to use the tail call recursion strategy.
@@ -17,9 +17,9 @@
 
 ## 3. Encode a DNA charlist
 
-- Create a recursive function which takes a codepoint from the charlist and recursively builds the bitstring result.
+- Create a recursive function which takes a code point from the charlist and recursively builds the bitstring result.
 
-- Remember, a [charlist][charlist] is a list of [integer codepoints][codepoint].
+- Remember, a [charlist][charlist] is a list of [integer code points][codepoint].
 - You can get the first and remaining items from a list using a build in [`Kernel` module][kernel] function
 - You can also pattern match on a list using the [`[head | tail]`][list] notation.
 - Use multiple clause functions to separate the base case from the recursive cases.

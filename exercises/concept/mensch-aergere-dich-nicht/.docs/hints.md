@@ -1,7 +1,7 @@
 ## General
 
 - Read about enumerables and streams in the [official Getting Started Elixir guide][getting-started-streams].
-- Read the official documentation for [ranges][range] and [streams][stream].
+- Read the official documentation for [streams][stream].
 
 ## 1. Do one 6-sided die roll
 
@@ -17,7 +17,6 @@
 
 - Use the [capture operator][special-forms-capture] to capture the `roll/0` function.
 
-[range]: https://hexdocs.pm/elixir/Range.html
 [stream]: https://hexdocs.pm/elixir/Stream.html
 [getting-started-streams]: https://elixir-lang.org/getting-started/enumerables-and-streams.html
 [enum-random]: https://hexdocs.pm/elixir/Enum.html#random/1

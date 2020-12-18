@@ -12,7 +12,7 @@ You ponder this, as it will potentially halve the required data storage costs, b
 
 ## 1. Encode nucleic acid to binary value
 
-Implement `encode_nucleotide/1` to accept the codepoint for the nucleic acid and return the integer value of the encoded code.
+Implement `encode_nucleotide/1` to accept the code point for the nucleic acid and return the integer value of the encoded code.
 
 ```elixir
 DNA.encode_nucleotide(?A)
@@ -21,7 +21,7 @@ DNA.encode_nucleotide(?A)
 
 ## 2. Decode the binary value to the nucleic acid
 
-Implement `decode_nucleotide/1` to accept the integer value of the encoded code and return the codepoint for the nucleic acid.
+Implement `decode_nucleotide/1` to accept the integer value of the encoded code and return the code point for the nucleic acid.
 
 ```elixir
 DNA.decode_nucleotide(0b0001)

@@ -113,7 +113,7 @@ Charlists and strings consisting of the same characters are not considered equal
 false
 ```
 
-Each value in a charlist is the [Unicode code point of a character][unicode-table] whereas in a string, the codepoints are encoded as [UTF-8][utf8].
+Each value in a charlist is the [Unicode code point of a character][unicode-table] whereas in a string, the code points are encoded as [UTF-8][utf8].
 
 ```elixir
 IO.inspect('tschüss', charlists: :as_lists)

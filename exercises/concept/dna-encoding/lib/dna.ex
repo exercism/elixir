@@ -1,5 +1,5 @@
 defmodule DNA do
-  def encode_nucleotide(codepoint), do: raise "Please implement encode_nucleotide/1"
+  def encode_nucleotide(code_point), do: raise "Please implement encode_nucleotide/1"
 
   def decode_nucleotide(encoded_code), do: raise "Please implement decode_nucleotide/1"
 
