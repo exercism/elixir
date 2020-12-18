@@ -14,7 +14,7 @@ defmodule DNATest do
     test "?T to 0b1000", do: assert DNA.encode_nucleotide(?T) == 0b1000
   end
 
-  describe "decode to codepoint" do
+  describe "decode to code point" do
     @tag :pending
     test "0b0000 to ?\\s", do: assert DNA.decode_nucleotide(0b0000) == ?\s
     @tag :pending

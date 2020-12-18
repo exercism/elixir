@@ -57,7 +57,7 @@ end
 - types
   - string
   - boolean
-  - codepoint
+  - code point
     - ? operator
   - lists
     - charlist

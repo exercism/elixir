@@ -1,10 +1,6 @@
 ## Learning objectives
 
 - Know about the `|>` pipe operator for chaining function calls.
-- Know about ranges.
-  - They are structs.
-  - They are enumerable.
-  - How to transform them to a list.
 - Know about streams.
   - `Enum` functions are eager, `Stream` functions are lazy.
   - Potentially infinite.
@@ -15,7 +11,6 @@
 ## Concepts
 
 - `streams`
-- `ranges`
 - `pipe-operator`
 
 ## Prerequisites
@@ -23,6 +18,8 @@
 - `enum`
 - `tuples`
 - `if`
+- `ranges`
+- `randomness`
 
 ## Analyzer
 

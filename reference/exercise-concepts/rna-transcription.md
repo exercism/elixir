@@ -70,12 +70,12 @@ The trickiest concept with this as written was due to it providing a _charlist_ 
 - types
   - list
   - char
-  - codepoint
+  - code point
   - charlist
 - standard library modules
   - Kernel
     - function capture
-    - ? (codepoint)
+    - ? (code point)
   - Enum
     - map/2
 - typespec
