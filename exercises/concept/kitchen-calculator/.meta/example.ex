@@ -1,5 +1,4 @@
 defmodule KitchenCalculator do
-
   # Get the number component from the volume-unit pair '{:unit, volume}'
 
   def get_volume(volume_pair), do: elem(volume_pair, 1)
