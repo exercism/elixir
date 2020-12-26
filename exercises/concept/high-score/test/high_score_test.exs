@@ -1,12 +1,8 @@
 defmodule HighScoreTest do
   use ExUnit.Case
 
-  # Trivia: Scores are based on lines added to the elixir-lang/elixir
-  # github repository as of Apr 27, 2020.
-  @chris {"Chris McCord", 0}
-  @jose {"José Valim", 486_373}
-  @dave {"Dave Thomas", 2_374}
-  @sasa {"Saša Jurić", 762}
+  # Trivia: Scores used in this test suite are based on lines of code
+  # added to the elixir-lang/elixir github repository as of Apr 27, 2020.
 
   # @tag :pending
   test "new/1 result in empty score map" do
@@ -16,149 +12,135 @@ defmodule HighScoreTest do
   describe "add_player/2" do
     @tag :pending
     test "add player without score to empty score map" do
-      {name, _} = @jose
       scores = HighScore.new()
 
-      assert HighScore.add_player(scores, name) == %{name => 0}
+      assert HighScore.add_player(scores, "José Valim") == %{"José Valim" => 0}
     end
 
     @tag :pending
     test "add two players without score to empty map" do
-      {jose, _} = @jose
-      {chris, _} = @chris
       scores =
         HighScore.new()
-        |> HighScore.add_player(jose)
-        |> HighScore.add_player(chris)
+        |> HighScore.add_player("José Valim")
+        |> HighScore.add_player("Chris McCord")
 
-      assert scores == %{chris => 0, jose => 0}
+      assert scores == %{"Chris McCord" => 0, "José Valim" => 0}
     end
 
     @tag :pending
     test "add player with score to empty score map" do
-      {name, score} = @jose
       scores =
         HighScore.new()
-        |> HighScore.add_player(name, score)
+        |> HighScore.add_player("José Valim", 486_373)
 
-      assert scores == %{name => score}
+      assert scores == %{"José Valim" => 486_373}
     end
 
     @tag :pending
     test "add players with scores to empty score map" do
-      {jose, jose_score} = @jose
-      {dave, dave_score} = @dave
       scores =
         HighScore.new()
-        |> HighScore.add_player(jose, jose_score)
-        |> HighScore.add_player(dave, dave_score)
+        |> HighScore.add_player("José Valim", 486_373)
+        |> HighScore.add_player("Dave Thomas", 2_374)
 
-      assert scores == %{jose => jose_score, dave => dave_score}
+      assert scores == %{"José Valim" => 486_373, "Dave Thomas" => 2_374}
     end
   end
 
   describe "remove_player/2" do
     @tag :pending
     test "remove from empty score map results in empty score map" do
-      {jose, _} = @jose
+      scores =
+        HighScore.new()
+        |> HighScore.remove_player("José Valim")
 
-      assert HighScore.new() |> HighScore.remove_player(jose) == %{}
+      assert scores == %{}
     end
 
     @tag :pending
     test "remove player after adding results in empty score map" do
-      {jose, _} = @jose
       map =
         HighScore.new()
-        |> HighScore.add_player(jose)
-        |> HighScore.remove_player(jose)
+        |> HighScore.add_player("José Valim")
+        |> HighScore.remove_player("José Valim")
 
       assert map == %{}
     end
 
     @tag :pending
     test "remove first player after adding two results in map with remaining player" do
-      {jose, _} = @jose
-      {chris, _} = @chris
       scores =
         HighScore.new()
-        |> HighScore.add_player(jose)
-        |> HighScore.add_player(chris)
-        |> HighScore.remove_player(jose)
+        |> HighScore.add_player("José Valim")
+        |> HighScore.add_player("Chris McCord")
+        |> HighScore.remove_player("José Valim")
 
-      assert scores == %{chris => 0}
+      assert scores == %{"Chris McCord" => 0}
     end
 
     @tag :pending
     test "remove second player after adding two results in map with remaining player" do
-      {jose, _} = @jose
-      {chris, _} = @chris
       scores =
         HighScore.new()
-        |> HighScore.add_player(jose)
-        |> HighScore.add_player(chris)
-        |> HighScore.remove_player(chris)
+        |> HighScore.add_player("José Valim")
+        |> HighScore.add_player("Chris McCord")
+        |> HighScore.remove_player("Chris McCord")
 
-      assert scores == %{jose => 0}
+      assert scores == %{"José Valim" => 0}
     end
   end
 
   describe "reset_score/2" do
     @tag :pending
     test "resetting score for non-existent player sets player score to 0" do
-      {jose, _score} = @jose
       scores =
         HighScore.new()
-        |> HighScore.reset_score(jose)
+        |> HighScore.reset_score("José Valim")
 
-      assert scores == %{jose => 0}
+      assert scores == %{"José Valim" => 0}
     end
 
     @tag :pending
     test "resetting score for existing player sets previous player score to 0" do
-      {jose, score} = @jose
       scores =
         HighScore.new()
-        |> HighScore.add_player(jose)
-        |> HighScore.update_score(jose, score)
-        |> HighScore.reset_score(jose)
+        |> HighScore.add_player("José Valim")
+        |> HighScore.update_score("José Valim", 486_373)
+        |> HighScore.reset_score("José Valim")
 
-      assert scores == %{jose => 0}
+      assert scores == %{"José Valim" => 0}
     end
   end
 
   describe "update_score/3" do
     @tag :pending
     test "update score for non existent player initializes value" do
-      {jose, score} = @jose
       scores =
         HighScore.new()
-        |> HighScore.update_score(jose, score)
+        |> HighScore.update_score("José Valim", 486_373)
 
-      assert scores = %{jose => score}
+      assert scores == %{"José Valim" => 486_373}
     end
 
     @tag :pending
     test "update score for existing player adds score to previous" do
-      {jose, score} = @jose
       scores =
         HighScore.new()
-        |> HighScore.add_player(jose)
-        |> HighScore.update_score(jose, score)
+        |> HighScore.add_player("José Valim")
+        |> HighScore.update_score("José Valim", 486_373)
 
-      assert scores == %{jose => score}
+      assert scores == %{"José Valim" => 486_373}
     end
 
     @tag :pending
     test "update score for existing player with non-zero score adds score to previous" do
-      {jose, score} = @jose
       scores =
         HighScore.new()
-        |> HighScore.add_player(jose)
-        |> HighScore.update_score(jose, 1)
-        |> HighScore.update_score(jose, score)
+        |> HighScore.add_player("José Valim")
+        |> HighScore.update_score("José Valim", 1)
+        |> HighScore.update_score("José Valim", 486_373)
 
-      assert scores == %{jose => score + 1}
+      assert scores == %{"José Valim" => 486_374}
     end
   end
 
@@ -174,45 +156,42 @@ defmodule HighScoreTest do
 
     @tag :pending
     test "score map with one entry gives one result" do
-      {jose, score} = @jose
       scores_by_player =
         HighScore.new()
-        |> HighScore.add_player(jose)
-        |> HighScore.update_score(jose, score)
+        |> HighScore.add_player("José Valim")
+        |> HighScore.update_score("José Valim", 486_373)
         |> HighScore.order_by_players()
 
-      assert scores_by_player == [@jose]
+      assert scores_by_player == [{"José Valim", 486_373}]
     end
 
     @tag :pending
     test "score map with two entries gives ordered result" do
-      {jose, jose_score} = @jose
-      {dave, dave_score} = @dave
       scores_by_player =
         HighScore.new()
-        |> HighScore.add_player(jose, jose_score)
-        |> HighScore.add_player(dave, dave_score)
+        |> HighScore.add_player("José Valim", 486_373)
+        |> HighScore.add_player("Dave Thomas", 2_374)
         |> HighScore.order_by_players()
 
-      assert scores_by_player == [@dave, @jose]
+      assert scores_by_player == [{"Dave Thomas", 2_374}, {"José Valim", 486_373}]
     end
 
     @tag :pending
     test "score map with multiple entries gives ordered result" do
-      {jose, jose_score} = @jose
-      {dave, dave_score} = @dave
-      {chris, chris_score} = @chris
-      {sasa, sasa_score} = @sasa
-
       scores_by_player =
         HighScore.new()
-        |> HighScore.add_player(jose, jose_score)
-        |> HighScore.add_player(dave, dave_score)
-        |> HighScore.add_player(chris, chris_score)
-        |> HighScore.add_player(sasa, sasa_score)
+        |> HighScore.add_player("José Valim", 486_373)
+        |> HighScore.add_player("Dave Thomas", 2_374)
+        |> HighScore.add_player("Chris McCord", 0)
+        |> HighScore.add_player("Saša Jurić", 762)
         |> HighScore.order_by_players()
 
-      assert scores_by_player == [@chris, @dave, @jose, @sasa]
+      assert scores_by_player == [
+               {"Chris McCord", 0},
+               {"Dave Thomas", 2_374},
+               {"José Valim", 486_373},
+               {"Saša Jurić", 762}
+             ]
     end
   end
 
@@ -228,45 +207,42 @@ defmodule HighScoreTest do
 
     @tag :pending
     test "score map with one entry gives one result" do
-      {jose, score} = @jose
       scores_by_player =
         HighScore.new()
-        |> HighScore.add_player(jose)
-        |> HighScore.update_score(jose, score)
+        |> HighScore.add_player("José Valim")
+        |> HighScore.update_score("José Valim", 486_373)
         |> HighScore.order_by_scores()
 
-      assert scores_by_player == [@jose]
+      assert scores_by_player == [{"José Valim", 486_373}]
     end
 
     @tag :pending
     test "score map with two entries gives ordered result" do
-      {jose, jose_score} = @jose
-      {dave, dave_score} = @dave
       scores_by_player =
         HighScore.new()
-        |> HighScore.add_player(jose, jose_score)
-        |> HighScore.add_player(dave, dave_score)
+        |> HighScore.add_player("José Valim", 486_373)
+        |> HighScore.add_player("Dave Thomas", 2_374)
         |> HighScore.order_by_scores()
 
-      assert scores_by_player == [@jose, @dave]
+      assert scores_by_player == [{"José Valim", 486_373}, {"Dave Thomas", 2_374}]
     end
 
     @tag :pending
     test "score map with multiple entries gives ordered result" do
-      {jose, jose_score} = @jose
-      {dave, dave_score} = @dave
-      {chris, chris_score} = @chris
-      {sasa, sasa_score} = @sasa
-
       scores_by_player =
         HighScore.new()
-        |> HighScore.add_player(jose, jose_score)
-        |> HighScore.add_player(dave, dave_score)
-        |> HighScore.add_player(chris, chris_score)
-        |> HighScore.add_player(sasa, sasa_score)
+        |> HighScore.add_player("José Valim", 486_373)
+        |> HighScore.add_player("Dave Thomas", 2_374)
+        |> HighScore.add_player("Chris McCord", 0)
+        |> HighScore.add_player("Saša Jurić", 762)
         |> HighScore.order_by_scores()
 
-      assert scores_by_player == [@jose, @dave, @sasa, @chris]
+      assert scores_by_player == [
+               {"José Valim", 486_373},
+               {"Dave Thomas", 2_374},
+               {"Saša Jurić", 762},
+               {"Chris McCord", 0}
+             ]
     end
   end
 end
