@@ -1,12 +1,5 @@
 defmodule RemoteControlCarTest do
   use ExUnit.Case
-  import CompileTimeAssertions
-
-  @fake_car %{
-    battery_percentage: 100,
-    distance_driven_in_meters: 0,
-    nickname: "Fake"
-  }
 
   # @tag :pending
   test "required key 'nickname' should not have a default value" do
@@ -41,8 +34,14 @@ defmodule RemoteControlCarTest do
 
   @tag :pending
   test "display distance raises error when not given struct" do
+    fake_car = %{
+      battery_percentage: 100,
+      distance_driven_in_meters: 0,
+      nickname: "Fake"
+    }
+
     assert_raise(FunctionClauseError, fn ->
-      RemoteControlCar.display_distance(@fake_car)
+      RemoteControlCar.display_distance(fake_car)
     end)
   end
 
@@ -63,8 +62,14 @@ defmodule RemoteControlCarTest do
 
   @tag :pending
   test "display battery raises error when not given struct" do
+    fake_car = %{
+      battery_percentage: 100,
+      distance_driven_in_meters: 0,
+      nickname: "Fake"
+    }
+
     assert_raise(FunctionClauseError, fn ->
-      RemoteControlCar.display_battery(@fake_car)
+      RemoteControlCar.display_battery(fake_car)
     end)
   end
 
@@ -85,8 +90,14 @@ defmodule RemoteControlCarTest do
 
   @tag :pending
   test "drive raises error when not given struct" do
+    fake_car = %{
+      battery_percentage: 100,
+      distance_driven_in_meters: 0,
+      nickname: "Fake"
+    }
+
     assert_raise(FunctionClauseError, fn ->
-      RemoteControlCar.drive(@fake_car)
+      RemoteControlCar.drive(fake_car)
     end)
   end
 
