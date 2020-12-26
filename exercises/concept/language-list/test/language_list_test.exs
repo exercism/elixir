@@ -1,19 +1,14 @@
 defmodule LanguageListTest do
   use ExUnit.Case
 
-  alias LanguageList, as: LL
-
-  @languages ~w/Clojure Haskell Erlang F# Elixir/
-  @languages_reversed Enum.reverse(@languages)
-
   # @tag :pending
   test "new list" do
-    assert LL.new() == []
+    assert LanguageList.new() == []
   end
 
   @tag :pending
   test "count an empty list" do
-    assert LL.new() |> LL.count() == 0
+    assert LanguageList.new() |> LanguageList.count() == 0
   end
 
   @tag :pending
@@ -21,25 +16,33 @@ defmodule LanguageListTest do
     language = "Elixir"
     list = [language]
 
-    assert LL.new() |> LL.add(language) == list
+    assert LanguageList.new() |> LanguageList.add(language) == list
   end
 
   @tag :pending
   test "add several languages to a list" do
-    assert Enum.reduce(@languages, LL.new(), &LL.add(&2, &1)) == @languages_reversed
+    list =
+      LanguageList.new()
+      |> LanguageList.add("Clojure")
+      |> LanguageList.add("Haskell")
+      |> LanguageList.add("Erlang")
+      |> LanguageList.add("F#")
+      |> LanguageList.add("Elixir")
+
+    assert list == ["Elixir", "F#", "Erlang", "Haskell", "Clojure"]
   end
 
   @tag :pending
   test "remove on an empty list results in error" do
-    assert_raise ArgumentError, fn -> LL.new() |> LL.remove() end
+    assert_raise ArgumentError, fn -> LanguageList.new() |> LanguageList.remove() end
   end
 
   @tag :pending
   test "add then remove results in empty list" do
     list =
-      LL.new()
-      |> LL.add("Elixir")
-      |> LL.remove()
+      LanguageList.new()
+      |> LanguageList.add("Elixir")
+      |> LanguageList.remove()
 
     assert list == []
   end
@@ -47,47 +50,47 @@ defmodule LanguageListTest do
   @tag :pending
   test "adding two languages, when removed, removes first item" do
     list =
-      LL.new()
-      |> LL.add("F#")
-      |> LL.add("Elixir")
-      |> LL.remove()
+      LanguageList.new()
+      |> LanguageList.add("F#")
+      |> LanguageList.add("Elixir")
+      |> LanguageList.remove()
 
-    assert list = ~w/F#/
+    assert list == ["F#"]
   end
 
   @tag :pending
   test "first on an empty list raises an error" do
-    assert_raise ArgumentError, fn -> LL.new() |> LL.first() end
+    assert_raise ArgumentError, fn -> LanguageList.new() |> LanguageList.first() end
   end
 
   @tag :pending
   test "add one language, then get the first" do
-    assert LL.new() |> LL.add("Elixir") |> LL.first() == "Elixir"
+    assert LanguageList.new() |> LanguageList.add("Elixir") |> LanguageList.first() == "Elixir"
   end
 
   @tag :pending
   test "add a few languages, then get the first" do
     first =
-      LL.new()
-      |> LL.add("Elixir")
-      |> LL.add("Prolog")
-      |> LL.add("F#")
-      |> LL.first()
+      LanguageList.new()
+      |> LanguageList.add("Elixir")
+      |> LanguageList.add("Prolog")
+      |> LanguageList.add("F#")
+      |> LanguageList.first()
 
     assert first == "F#"
   end
 
   @tag :pending
   test "the count of a new list is 0" do
-    assert LL.new() |> LL.count() == 0
+    assert LanguageList.new() |> LanguageList.count() == 0
   end
 
   @tag :pending
   test "the count of a one-language list is 1" do
     count =
-      LL.new()
-      |> LL.add("Elixir")
-      |> LL.count()
+      LanguageList.new()
+      |> LanguageList.add("Elixir")
+      |> LanguageList.count()
 
     assert count == 1
   end
@@ -95,20 +98,22 @@ defmodule LanguageListTest do
   @tag :pending
   test "the count of a multiple-item list is equal to its length" do
     count =
-      @languages
-      |> Enum.reduce(LL.new(), &LL.add(&2, &1))
-      |> LL.count()
+      LanguageList.new()
+      |> LanguageList.add("Elixir")
+      |> LanguageList.add("Prolog")
+      |> LanguageList.add("F#")
+      |> LanguageList.count()
 
-    assert count == length(@languages)
+    assert count == 3
   end
 
   @tag :pending
   test "an exciting language list" do
-    assert LL.exciting_list?(@languages)
+    assert LanguageList.exciting_list?(["Clojure", "Haskell", "Erlang", "F#", "Elixir"])
   end
 
   @tag :pending
   test "not an exciting language list" do
-    refute LL.exciting_list?(~w/Java C JavaScript/)
+    refute LanguageList.exciting_list?(["Java", "C", "JavaScript"])
   end
 end
