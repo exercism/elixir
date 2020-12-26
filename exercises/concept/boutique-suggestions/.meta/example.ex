@@ -7,8 +7,7 @@ defmodule BoutiqueSuggestions do
         bottom <- bottoms,
         %{base_color: bottom_base_color, price: bottom_price} = bottom,
         top_base_color != bottom_base_color,
-        (top_price + bottom_price) <= maximum_price
-    do
+        top_price + bottom_price <= maximum_price do
       {top, bottom}
     end
   end
