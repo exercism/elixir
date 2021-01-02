@@ -2,7 +2,7 @@
 
 - Know what a variable is.
 - Know how to define a named function.
-- Know how to define a function with parameters.
+- Know how to define a function with arguments.
 - Know how to return a value from a function.
 - Know what a boolean is.
 - Know how to use logical operators on booleans.
@@ -11,7 +11,7 @@
 
 ## Out of scope
 
-- Default parameters.
+- Default arguments.
 - Truthy logical comparisons using `&&/2`, `||/2`, `!/1`
 - Single-line functions
 - Booleans as special atoms

@@ -35,7 +35,7 @@
   - If invoked from within its own module, the module name may be omitted.
 - The arity of a function is often used when referring to a named function
 
-  - The arity refers to the number of parameters it accepts.
+  - The arity refers to the number of arguments it accepts.
 
   ```elixir
   def add(x, y, z), do: x + y + z # add/3, because the arity is 3

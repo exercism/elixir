@@ -41,4 +41,4 @@ end
 - Higher order functions
   - updating the map is best achieved with `Enum.reduce/3`, which takes a function as an argument
 - Anonymous Functions
-  - anonymous functions can be used to supply function parameters
+  - anonymous functions can be used to supply function arguments

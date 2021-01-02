@@ -19,7 +19,7 @@ Variables that are unused in the function body should be prefixed with an unders
 
 ## guards
 
-Guards are used to prevent Elixir from invoking functions based on evaluation of the parameters by guard functions. Guards begin with the `when` keyword, followed by a boolean expression. Guard functions are special functions which:
+Guards are used to prevent Elixir from invoking functions based on evaluation of the arguments by guard functions. Guards begin with the `when` keyword, followed by a boolean expression. Guard functions are special functions which:
 
 - Must be pure and not mutate any global states.
 - Must return strict `true` or `false` values.
@@ -34,6 +34,6 @@ Functions may declare default values for one or more arguments. When compiled, E
 def number(n \\ 13), do: "That's not my favorite"
 ```
 
-If more than one argument has default values, the default values will be applied to the function from left to right to fill in for missing parameters.
+If more than one argument has default values, the default values will be applied to the function from left to right to fill in for missing arguments.
 
 [kernel-guards]: https://hexdocs.pm/elixir/master/Kernel.html#guards

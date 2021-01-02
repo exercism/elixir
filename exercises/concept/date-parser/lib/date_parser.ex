@@ -1,28 +1,28 @@
 defmodule DateParser do
-  def day(), do: raise "Please implement day/0"
-  def month(), do: raise "Please implement month/0"
-  def year(), do: raise "Please implement year/0"
+  def day(), do: raise "Please implement the day/0 function"
+  def month(), do: raise "Please implement the month/0 function"
+  def year(), do: raise "Please implement the year/0 function"
 
   def day_names() do
-    raise "Please implement day_names/0"
+    raise "Please implement the day_names/0 function"
   end
 
   def month_names() do
-    raise "Please implement month_names/0"
+    raise "Please implement the month_names/0 function"
   end
 
-  def capture_day(), do: raise "Please implement capture_day/0"
-  def capture_month(), do: raise "Please implement capture_month/0"
-  def capture_year(), do: raise "Please implement capture_year/0"
+  def capture_day(), do: raise "Please implement the capture_day/0 function"
+  def capture_month(), do: raise "Please implement the capture_month/0 function"
+  def capture_year(), do: raise "Please implement the capture_year/0 function"
 
-  def capture_day_name(), do: raise "Please implement capture_day_name/0"
-  def capture_month_name(), do: raise "Please implement capture_month_name/0"
+  def capture_day_name(), do: raise "Please implement the capture_day_name/0 function"
+  def capture_month_name(), do: raise "Please implement the capture_month_name/0 function"
 
-  def capture_numeric_date(), do: raise "Please implement capture_numeric_date/0"
-  def capture_month_name_date(), do: raise "Please implement capture_month_name_date/0"
-  def capture_day_month_name_date(), do: raise "Please implement capture_day_month_name_date/0"
+  def capture_numeric_date(), do: raise "Please implement the capture_numeric_date/0 function"
+  def capture_month_name_date(), do: raise "Please implement the capture_month_name_date/0 function"
+  def capture_day_month_name_date(), do: raise "Please implement the capture_day_month_name_date/0 function"
 
-  def match_numeric_date(), do: raise "Please implement match_numeric_date/0"
-  def match_month_name_date(), do: raise "Please implement match_month_name_day/0"
-  def match_day_month_name_date(), do: raise "Please implement match_day_month_name_date/0"
+  def match_numeric_date(), do: raise "Please implement the match_numeric_date/0 function"
+  def match_month_name_date(), do: raise "Please implement the match_month_name_day/0 function"
+  def match_day_month_name_date(), do: raise "Please implement the match_day_month_name_date/0 function"
 end

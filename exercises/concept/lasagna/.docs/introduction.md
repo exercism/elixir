@@ -23,9 +23,9 @@ end
 
 ### Named functions
 
-_Named Functions_ must be defined in a module. Each function can have zero or more parameters. All parameters are dynamically-typed, and the return type is not explicitly declared, it is the type of the value returned. An _access modifier_ can be specified for functions, making only desired functions available for use external to the module. In a function, the value of the last line is _implicitly returned_ to the calling function.
+_Named Functions_ must be defined in a module. Each function can have zero or more arguments. All arguments are dynamically-typed, and the return type is not explicitly declared, it is the type of the value returned. An _access modifier_ can be specified for functions, making only desired functions available for use external to the module. In a function, the value of the last line is _implicitly returned_ to the calling function.
 
-Invoking a function is done by specifying its module- and function name and passing arguments for each of the function's parameters. The module name may be omitted if the function is invoked inside of the module.
+Invoking a function is done by specifying its module- and function name and passing arguments for each of the function's arguments. The module name may be omitted if the function is invoked inside of the module.
 
 You may also write short functions using a one-line syntax (note the comma `,` and the colon `:` around the keyword `do`).
 
@@ -46,10 +46,10 @@ sum = Calculator.short_add(2, 2)
 
 ### Arity of functions
 
-It is common to refer to functions with their _arity_. The _arity_ of a function is the number of parameters it accepts.
+It is common to refer to functions with their _arity_. The _arity_ of a function is the number of arguments it accepts.
 
 ```elixir
-# add/3 because this function has three parameters, thus an arity of 3
+# add/3 because this function has three arguments, thus an arity of 3
 def add(x, y, z) do
   x + y + z
 end
