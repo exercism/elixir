@@ -6,7 +6,7 @@
 - Know that returning a tuple is a common for of multiple return in Elixir
 - Know how to extract an element from a tuple using `elem/2`
 - Know how to perform a basic pattern match using the `=/2` function
-- Know how to perform basic pattern matching on function parameters to guide which function to invoke
+- Know how to perform basic pattern matching on function arguments to guide which function to invoke
 
 ## Out of scope
 
@@ -21,7 +21,7 @@
 ## Concepts
 
 - `tuples` know of the existence of the `tuple` data type, how to define tuple literals, extract values from a tuple using `elem/2`
-- `pattern-matching` basic knowledge of pattern matching using `=/2` and on function parameters
+- `pattern-matching` basic knowledge of pattern matching using `=/2` and on function arguments
 
 ## Analyzer
 

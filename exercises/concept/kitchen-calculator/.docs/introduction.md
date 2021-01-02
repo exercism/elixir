@@ -45,7 +45,7 @@ In the last example if we don't need a variable in a pattern match, we can disca
 
 ### Pattern matching in named functions
 
-Pattern matching is also a useful tool when creating multiple function clauses. Pattern matching can be used on the functions' parameters which then determines which function clause to invoke -- starting from the top of the file down until the first match. Variables may be bound to patterns.
+Pattern matching is also a useful tool when creating multiple function clauses. Pattern matching can be used on the functions' arguments which then determines which function clause to invoke -- starting from the top of the file down until the first match. Variables may be bound to patterns.
 
 ```elixir
 defmodule Example do

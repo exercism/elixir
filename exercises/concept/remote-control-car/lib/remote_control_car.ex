@@ -1,23 +1,23 @@
 defmodule RemoteControlCar do
-  raise "Implement the struct with the specified fields"
+  raise "Please implement the struct with the specified fields"
 
   def new() do
-    raise "Implement new/0"
+    raise "Please implement the new/0 function"
   end
 
   def new(nickname) do
-    raise "Implement new/1"
+    raise "Please implement the new/1 function"
   end
 
   def display_distance(remote_car) do
-    raise "Implement display_distance/1"
+    raise "Please implement the display_distance/1 function"
   end
 
   def display_battery(remote_car) do
-    raise "Implement display_battery/1"
+    raise "Please implement the display_battery/1 function"
   end
 
   def drive(remote_car) do
-    raise "Implement drive/1"
+    raise "Please implement the drive/1 function"
   end
 end

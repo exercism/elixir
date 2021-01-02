@@ -21,7 +21,7 @@
 - Memory and performance characteristics.
 - Function overloads.
 - Anonymous functions.
-- Default parameters.
+- Default arguments.
 - Organizing functions in namespaces.
 - Visibility (`defp`).
 - Single-line functions
