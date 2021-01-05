@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://elixir-lang.org/getting-started/io-and-the-file-system.html#the-file-module",
+    "description": "Getting Started guide - File"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/File.html",
+    "description": "The File module"
+  },
+  {
+    "url": "https://joyofelixir.com/11-files/",
+    "description": "Joy of Elixir - Working with files"
+  }
+]
