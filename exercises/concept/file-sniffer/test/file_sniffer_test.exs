@@ -1,11 +1,11 @@
 defmodule FileSnifferTest do
   use ExUnit.Case
 
-  @bmp_file File.read!("assets/bmp.bmp" )
-  @gif_file File.read!("assets/gif.gif")
-  @jpg_file File.read!("assets/jpeg.jpg")
-  @png_file File.read!("assets/png-transparent.png")
-  @exe_file File.read!("assets/elf.o")
+  @bmp_file File.read!(Path.join("assets", "bmp.bmp"))
+  @gif_file File.read!(Path.join("assets", "gif.gif"))
+  @jpg_file File.read!(Path.join("assets", "jpeg.jpg"))
+  @png_file File.read!(Path.join("assets", "png-transparent.png"))
+  @exe_file File.read!(Path.join("assets", "elf.o"))
 
   describe "get type from extension:" do
     # @tag :pending
@@ -91,27 +91,32 @@ defmodule FileSnifferTest do
   describe "reject invalid files" do
     @tag :pending
     test "bmp" do
-      assert FileSniffer.verify(@exe_file, "bmp") == {:error, "Warning, file format and file extension do not match."}
+      assert FileSniffer.verify(@exe_file, "bmp") ==
+               {:error, "Warning, file format and file extension do not match."}
     end
 
     @tag :pending
     test "gif" do
-      assert FileSniffer.verify(@exe_file, "gif") == {:error, "Warning, file format and file extension do not match."}
+      assert FileSniffer.verify(@exe_file, "gif") ==
+               {:error, "Warning, file format and file extension do not match."}
     end
 
     @tag :pending
     test "jpg" do
-      assert FileSniffer.verify(@exe_file, "jpg") == {:error, "Warning, file format and file extension do not match."}
+      assert FileSniffer.verify(@exe_file, "jpg") ==
+               {:error, "Warning, file format and file extension do not match."}
     end
 
     @tag :pending
     test "png" do
-      assert FileSniffer.verify(@exe_file, "png") == {:error, "Warning, file format and file extension do not match."}
+      assert FileSniffer.verify(@exe_file, "png") ==
+               {:error, "Warning, file format and file extension do not match."}
     end
 
     @tag :pending
     test "exe" do
-      assert FileSniffer.verify(@png_file, "exe") == {:error, "Warning, file format and file extension do not match."}
+      assert FileSniffer.verify(@png_file, "exe") ==
+               {:error, "Warning, file format and file extension do not match."}
     end
   end
 end
