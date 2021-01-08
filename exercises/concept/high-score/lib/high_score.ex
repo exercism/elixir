@@ -17,11 +17,7 @@ defmodule HighScore do
     raise "Please implement the reset_score/2 function"
   end
 
-  def order_by_players(scores) do
-    raise "Please implement the order_by_players/1 function"
-  end
-
-  def order_by_scores(scores) do
-    raise "Please implement the order_by_scores/1 function"
+  def get_players(scores) do
+    raise "Please implement the get_players/1 function"
   end
 end

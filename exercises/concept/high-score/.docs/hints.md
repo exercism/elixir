@@ -11,37 +11,30 @@
 ## 2. Add players to the high score map
 
 - The resulting map should be returned.
-- [Map module][map-module] contains functions useful for manipulating maps.
+- [Map module][map-module] contains functions useful for manipulating maps. [One of them][map-put] deletes a key from a map.
 
 ## 3. Remove players from the score map
 
 - The resulting map should be returned.
-- [Map module][map-module] contains functions useful for manipulating maps.
+- [Map module][map-module] contains functions useful for manipulating maps. [One of them][map-delete] puts a value in a map under a given key.
 
 ## 4. Reset a player's score
 
 - The resulting map should be returned with the player's score reset to an initial value.
-- [Map module][map-module] contains functions useful for manipulating maps.
+- [Map module][map-module] contains functions useful for manipulating maps. [One of them][map-put] puts a value in a map under a given key.
 
 ## 5. Update a player's score
 
 - The resulting map should be returned with the player's updated score.
-- [Map module][map-module] contains functions useful for manipulating maps.
+- [Map module][map-module] contains functions useful for manipulating maps. [One of them][map-update] updates a value in a map under a given key.
 
-## 6. Get a list of players with scores ordered by player name
+## 6. Get a list of players
 
-- [Enum module][enum] functions can be used on maps.
+- [Map module][map-module] contains functions useful for manipulating maps. [One of them][map-keys] returns a list of all keys in a map.
 
-## 7. Get a list of players ordered by player score in decreasing order
-
-- Maps make use of the [Enumerable][enum-protocol] protocol, so they can be used with [Enum module functions][enum].
-- Make sure the highest score is listed first in the ordered result.
-
-[default-arg]: https://elixir-lang.org/getting-started/modules-and-functions.html#default-arguments
-[enum]: https://hexdocs.pm/elixir/Enum.html
-[enum-protocol]: https://hexdocs.pm/elixir/Enumerable.html
-[integers]: https://elixir-lang.org/getting-started/basic-types.html
 [maps]: https://elixir-lang.org/getting-started/keywords-and-maps.html#maps
 [map-module]: https://hexdocs.pm/elixir/Map.html
-[named-function]: https://elixir-lang.org/getting-started/modules-and-functions.html#named-functions
-[strings]: https://elixir-lang.org/getting-started/basic-types.html#strings
+[map-put]: https://hexdocs.pm/elixir/Map.html#put/3
+[map-delete]: https://hexdocs.pm/elixir/Map.html#delete/2
+[map-update]: https://hexdocs.pm/elixir/Map.html#update/4
+[map-keys]: https://hexdocs.pm/elixir/Map.html#keys/1
