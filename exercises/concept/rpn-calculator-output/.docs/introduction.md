@@ -21,7 +21,7 @@ end
 # => :success
 ```
 
-## Dynamic dispatch
+## dynamic-dispatch
 
 When Elixir resolves the function to be invoked, it uses the Module's name (atom) to perform a lookup. The lookup can be done dynamically if the Module's name (atom) is bound to a variable.
 
