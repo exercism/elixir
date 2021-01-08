@@ -19,15 +19,7 @@ defmodule HighScore do
     Map.update(scores, name, score, &(&1 + score))
   end
 
-  def order_by_players(scores) do
-    scores
-    |> Map.to_list()
-    |> Enum.sort_by(&(&1 |> Kernel.elem(0) |> String.downcase()))
-  end
-
-  def order_by_scores(scores) do
-    scores
-    |> Map.to_list()
-    |> Enum.sort_by(&Kernel.elem(&1, 1), &>=/2)
+  def get_players(scores) do
+    Map.keys(scores)
   end
 end

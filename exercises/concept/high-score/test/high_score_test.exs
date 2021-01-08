@@ -144,104 +144,43 @@ defmodule HighScoreTest do
     end
   end
 
-  describe "order_by_players/1" do
+  describe "get_players/1" do
     @tag :pending
     test "empty score map gives empty list" do
       scores_by_player =
         HighScore.new()
-        |> HighScore.order_by_players()
+        |> HighScore.get_players()
 
       assert scores_by_player == []
     end
 
     @tag :pending
     test "score map with one entry gives one result" do
-      scores_by_player =
+      players =
         HighScore.new()
         |> HighScore.add_player("José Valim")
         |> HighScore.update_score("José Valim", 486_373)
-        |> HighScore.order_by_players()
+        |> HighScore.get_players()
 
-      assert scores_by_player == [{"José Valim", 486_373}]
+      assert players == ["José Valim"]
     end
 
     @tag :pending
-    test "score map with two entries gives ordered result" do
-      scores_by_player =
-        HighScore.new()
-        |> HighScore.add_player("José Valim", 486_373)
-        |> HighScore.add_player("Dave Thomas", 2_374)
-        |> HighScore.order_by_players()
-
-      assert scores_by_player == [{"Dave Thomas", 2_374}, {"José Valim", 486_373}]
-    end
-
-    @tag :pending
-    test "score map with multiple entries gives ordered result" do
-      scores_by_player =
+    test "score map with multiple entries gives results in unknown order" do
+      players =
         HighScore.new()
         |> HighScore.add_player("José Valim", 486_373)
         |> HighScore.add_player("Dave Thomas", 2_374)
         |> HighScore.add_player("Chris McCord", 0)
         |> HighScore.add_player("Saša Jurić", 762)
-        |> HighScore.order_by_players()
+        |> HighScore.get_players()
+        |> Enum.sort()
 
-      assert scores_by_player == [
-               {"Chris McCord", 0},
-               {"Dave Thomas", 2_374},
-               {"José Valim", 486_373},
-               {"Saša Jurić", 762}
-             ]
-    end
-  end
-
-  describe "order_by_scores/1" do
-    @tag :pending
-    test "empty score map gives empty list" do
-      scores_by_player =
-        HighScore.new()
-        |> HighScore.order_by_scores()
-
-      assert scores_by_player == []
-    end
-
-    @tag :pending
-    test "score map with one entry gives one result" do
-      scores_by_player =
-        HighScore.new()
-        |> HighScore.add_player("José Valim")
-        |> HighScore.update_score("José Valim", 486_373)
-        |> HighScore.order_by_scores()
-
-      assert scores_by_player == [{"José Valim", 486_373}]
-    end
-
-    @tag :pending
-    test "score map with two entries gives ordered result" do
-      scores_by_player =
-        HighScore.new()
-        |> HighScore.add_player("José Valim", 486_373)
-        |> HighScore.add_player("Dave Thomas", 2_374)
-        |> HighScore.order_by_scores()
-
-      assert scores_by_player == [{"José Valim", 486_373}, {"Dave Thomas", 2_374}]
-    end
-
-    @tag :pending
-    test "score map with multiple entries gives ordered result" do
-      scores_by_player =
-        HighScore.new()
-        |> HighScore.add_player("José Valim", 486_373)
-        |> HighScore.add_player("Dave Thomas", 2_374)
-        |> HighScore.add_player("Chris McCord", 0)
-        |> HighScore.add_player("Saša Jurić", 762)
-        |> HighScore.order_by_scores()
-
-      assert scores_by_player == [
-               {"José Valim", 486_373},
-               {"Dave Thomas", 2_374},
-               {"Saša Jurić", 762},
-               {"Chris McCord", 0}
+      assert players == [
+               "Chris McCord",
+               "Dave Thomas",
+               "José Valim",
+               "Saša Jurić"
              ]
     end
   end

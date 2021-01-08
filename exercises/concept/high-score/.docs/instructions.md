@@ -77,26 +77,9 @@ score_map = HighScore.update_score(score_map, "José Valim", 5)
 # => %{"José Valim"=> 486_378}
 ```
 
-## 6. Get a list of players with scores ordered by player name
+## 6. Get a list of players
 
-To get a list of players ordered by name, define `HighScore.order_by_players/1`, which takes 1 argument:
-
-- The first argument is the map of scores.
-
-```elixir
-score_map = HighScore.new()
-# => %{}
-score_map = HighScore.add_player(score_map, "Dave Thomas", 2_374)
-# => %{"Dave Thomas" => 2_374}
-score_map = HighScore.add_player(score_map, "José Valim", 486_373)
-# => %{"Dave Thomas" => 2_374, "José Valim"=> 486_373}
-HighScore.order_by_players(score_map)
-# => [{"Dave Thomas", 2_374}, {"José Valim", 486_373}]
-```
-
-## 7. Get a list of players ordered by player score in decreasing order
-
-To get a list of players ordered by scores in decreasing order, define `HighScore.order_by_scores/1`, which takes 1 argument:
+To get a list of players, define `HighScore.get_players/1`, which takes 1 argument:
 
 - The first argument is the map of scores.
 
@@ -107,6 +90,6 @@ score_map = HighScore.add_player(score_map, "Dave Thomas", 2_374)
 # => %{"Dave Thomas" => 2_374}
 score_map = HighScore.add_player(score_map, "José Valim", 486_373)
 # => %{"Dave Thomas" => 2_374, "José Valim"=> 486_373}
-HighScore.order_by_scores(score_map)
-# => [{"José Valim", 486_373}, {"Dave Thomas", 2_374}]
+HighScore.get_players(score_map)
+# => ["Dave Thomas", "José Valim"]
 ```
