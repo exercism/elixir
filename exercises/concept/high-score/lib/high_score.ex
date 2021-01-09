@@ -9,12 +9,12 @@ defmodule HighScore do
     raise "Please implement the remove_player/2 function"
   end
 
-  def update_score(scores, name, score) do
-    raise "Please implement the update_score/3 function"
-  end
-
   def reset_score(scores, name) do
     raise "Please implement the reset_score/2 function"
+  end
+
+  def update_score(scores, name, score) do
+    raise "Please implement the update_score/3 function"
   end
 
   def get_players(scores) do
