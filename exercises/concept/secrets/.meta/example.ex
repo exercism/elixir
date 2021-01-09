@@ -23,9 +23,9 @@ defmodule Secrets do
     fn x -> Bitwise.^^^(x, secret) end
   end
 
-  def secret_combine(f, g) do
+  def secret_combine(secret_function1, secret_function2) do
     fn x ->
-      g.(f.(x))
+      secret_function2.(secret_function1.(x))
     end
   end
 end
