@@ -4,11 +4,9 @@ For each task, make use of a closure and return a function that can be invoked f
 
 All functions should expect integer arguments. Integers are also suitable for performing bitwise operations in Elixir.
 
-You have seven tasks:
-
 ## 1. Create an adder
 
-Implement `Secrets.secret_add/1`, have it return a function which takes one argument and adds it to the argument passed in to `secret_add`.
+Implement `Secrets.secret_add/1`. It should return a function which takes one argument and adds to it the argument passed in to `secret_add`.
 
 ```elixir
 adder = Secrets.secret_add(2)
@@ -18,7 +16,7 @@ adder.(2)
 
 ## 2. Create a subtractor
 
-Implement `Secrets.secret_subtract/1`, have it return a function which takes one argument and subtracts the argument passed in to `secret_subtract`.
+Implement `Secrets.secret_subtract/1`. It should return a function which takes one argument and subtracts from it the secret passed in to `secret_subtract`.
 
 ```elixir
 subtractor = Secrets.secret_subtract(2)
@@ -28,7 +26,7 @@ subtractor.(3)
 
 ## 3. Create a multiplier
 
-Implement `Secrets.secret_multiply/1`, have it return a function which takes one argument and multiplies it by the argument passed in to `secret_multiply`.
+Implement `Secrets.secret_multiply/1`. It should return a function which takes one argument and multiplies it by the secret passed in to `secret_multiply`.
 
 ```elixir
 multiplier = Secrets.secret_multiply(7)
@@ -38,7 +36,7 @@ multiplier.(3)
 
 ## 4. Create a divider
 
-Implement `Secrets.secret_divide/1`, have it return a function which takes one argument and divides it by the argument passed in to `secret_divide`.
+Implement `Secrets.secret_divide/1`. It should return a function which takes one argument and divides it by the secret passed in to `secret_divide`.
 
 ```elixir
 divider = Secrets.secret_divide(3)
@@ -50,7 +48,7 @@ Make use of integer division.
 
 ## 5. Create a "and"-er
 
-Implement `Secrets.secret_and/1`, have it return a function which takes one argument and performs a bitwise _and_ operation to the argument passed in to `secret_and`.
+Implement `Secrets.secret_and/1`. It should return a function which takes one argument and performs a bitwise _and_ operation on it and the secret passed in to `secret_and`.
 
 ```elixir
 ander = Secrets.secret_and(1)
@@ -60,7 +58,7 @@ ander.(2)
 
 ## 6. Create a "xor"-er
 
-Implement `Secrets.secret_xor/1`, have it return a function which takes one argument and performs a bitwise _xor_ operation to the argument passed in to `secret_xor`.
+Implement `Secrets.secret_xor/1`. It should return a function which takes one argument and performs a bitwise _xor_ operation on it and the secret passed in to `secret_xor`.
 
 ```elixir
 xorer = Secrets.secret_xor(1)
@@ -70,7 +68,7 @@ xorer.(3)
 
 ## 7. Create a function combiner
 
-Implement `Secrets.secret_combine/2`, have it return a function which applies the functions argument passed in to `secret_combine` in sequence.
+Implement `Secrets.secret_combine/2`. It should return a function which takes one argument and applies to it the two functions passed in to `secret_combine` in order.
 
 ```elixir
 multiply = Secrets.secret_multiply(7)

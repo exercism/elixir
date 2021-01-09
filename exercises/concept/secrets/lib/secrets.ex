@@ -23,7 +23,7 @@ defmodule Secrets do
     raise "Please implement the secret_xor/1 function"
   end
 
-  def secret_combine(secret_f, secret_g) do
+  def secret_combine(secret_function1, secret_function2) do
     raise "Please implement the secret_combine/2 function"
   end
 end
