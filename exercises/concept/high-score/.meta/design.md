@@ -33,7 +33,6 @@
 
 This exercise could benefit from the following rules added to the the [analyzer][analyzer]:
 
-- Verify that the `order_by_players/2` function uses the enumerable protocol and uses `Enum.sort_by/2` function.
-- Verify that the `order_by_scores/2` function uses the enumerable protocol and uses `Enum.sort_by/2` function.
+- Verify that a module attribute is used to store the initial score of `0`, and then that module attribute is used in `add_player` and `reset_score`.
 
 [analyzer]: https://github.com/exercism/elixir-analyzer

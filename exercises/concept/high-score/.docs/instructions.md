@@ -1,7 +1,5 @@
 In this exercise, you're implementing a way to keep track of the high scores for the most popular game in your local arcade hall.
 
-You have 7 functions to implement, all related to returning and manipulating a map of high score data.
-
 ## 1. Define a new high score map
 
 To make a new high score map, define the `HighScore.new/0` function which doesn't take any arguments and returns a new, empty map of high scores.
@@ -18,6 +16,8 @@ To add a player to the high score map, define `HighScore.add_player/3`, which is
 - The first argument is the map of scores.
 - The second argument is the name of a player as a string.
 - The third argument is the score as an integer. The argument is optional, implement the third argument with a default value of 0.
+
+Store the default initial score in a module attribute. It will be needed again.
 
 ```elixir
 score_map = HighScore.new()
@@ -46,7 +46,7 @@ score_map = HighScore.remove_player(score_map, "Dave Thomas")
 
 ## 4. Reset a player's score
 
-To reset a player's score, define `HighScore.remove_player/2`, which takes 2 arguments:
+To reset a player's score, define `HighScore.reset_score/2`, which takes 2 arguments:
 
 - The first argument is the map of scores.
 - The second argument is the name of the player as a string, whose score you wish to reset.
