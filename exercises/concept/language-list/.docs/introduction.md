@@ -36,13 +36,3 @@ There are several Elixir Kernel functions for working with lists, e.g.
 1 in [1, 2, 3, 4]
 # => true
 ```
-
-String literals are a sequence of characters surrounded by double quotes.
-
-```elixir
-string_variable = "this is a string! 1, 2, 3!"
-
-# Check if "c" is a member of the list
-"c" in ["a", "b", "c", "d"]
-# => true
-```
