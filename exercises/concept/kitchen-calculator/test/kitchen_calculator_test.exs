@@ -23,64 +23,64 @@ defmodule KitchenCalculatorTest do
     end
 
     @tag :pending
-    test "get millilitres" do
-      assert KitchenCalculator.get_volume({:millilitre, 5}) == 5
+    test "get milliliters" do
+      assert KitchenCalculator.get_volume({:milliliter, 5}) == 5
     end
   end
 
-  describe "convert to millilitres from" do
+  describe "convert to milliliters from" do
     @tag :pending
-    test "millilitres" do
-      assert KitchenCalculator.to_millilitre({:millilitre, 3}) == {:millilitre, 3}
+    test "milliliters" do
+      assert KitchenCalculator.to_milliliter({:milliliter, 3}) == {:milliliter, 3}
     end
 
     @tag :pending
     test "cups" do
-      assert KitchenCalculator.to_millilitre({:cup, 3}) == {:millilitre, 720}
+      assert KitchenCalculator.to_milliliter({:cup, 3}) == {:milliliter, 720}
     end
 
     @tag :pending
     test "fluid ounces" do
-      assert KitchenCalculator.to_millilitre({:fluid_ounce, 100}) == {:millilitre, 3000}
+      assert KitchenCalculator.to_milliliter({:fluid_ounce, 100}) == {:milliliter, 3000}
     end
 
     @tag :pending
     test "teaspoon" do
-      assert KitchenCalculator.to_millilitre({:teaspoon, 3}) == {:millilitre, 15}
+      assert KitchenCalculator.to_milliliter({:teaspoon, 3}) == {:milliliter, 15}
     end
 
     @tag :pending
     test "tablespoon" do
-      assert KitchenCalculator.to_millilitre({:tablespoon, 3}) == {:millilitre, 45}
+      assert KitchenCalculator.to_milliliter({:tablespoon, 3}) == {:milliliter, 45}
     end
   end
 
-  describe "convert from millilitres to" do
+  describe "convert from milliliters to" do
     @tag :pending
-    test "millilitres" do
-      assert KitchenCalculator.from_millilitre({:millilitre, 4}, :millilitre) == {:millilitre, 4}
+    test "milliliters" do
+      assert KitchenCalculator.from_milliliter({:milliliter, 4}, :milliliter) == {:milliliter, 4}
     end
 
     @tag :pending
     test "cups" do
-      assert KitchenCalculator.from_millilitre({:millilitre, 840}, :cup) == {:cup, 3.5}
+      assert KitchenCalculator.from_milliliter({:milliliter, 840}, :cup) == {:cup, 3.5}
     end
 
     @tag :pending
     test "fluid ounces" do
-      assert KitchenCalculator.from_millilitre({:millilitre, 4522.5}, :fluid_ounce) ==
+      assert KitchenCalculator.from_milliliter({:milliliter, 4522.5}, :fluid_ounce) ==
                {:fluid_ounce, 150.75}
     end
 
     @tag :pending
     test "teaspoon" do
-      assert KitchenCalculator.from_millilitre({:millilitre, 61.25}, :teaspoon) ==
+      assert KitchenCalculator.from_milliliter({:milliliter, 61.25}, :teaspoon) ==
                {:teaspoon, 12.25}
     end
 
     @tag :pending
     test "tablespoon" do
-      assert KitchenCalculator.from_millilitre({:millilitre, 71.25}, :tablespoon) ==
+      assert KitchenCalculator.from_milliliter({:milliliter, 71.25}, :tablespoon) ==
                {:tablespoon, 4.75}
     end
   end
