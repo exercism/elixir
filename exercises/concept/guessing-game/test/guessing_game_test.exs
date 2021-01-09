@@ -30,4 +30,9 @@ defmodule GuessingGameTest do
   test "when no guess is supplied, ask the player to make a guess" do
     assert GuessingGame.compare(15) == "Make a guess"
   end
+
+  @tag :pending
+  test "when the atom :no_guess is supplied, ask the player to make a guess" do
+    assert GuessingGame.compare(16, :no_guess) == "Make a guess"
+  end
 end

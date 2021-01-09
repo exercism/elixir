@@ -55,4 +55,7 @@ Modify the `compare` function to respond to a lack of guess.
 ```elixir
 GuessingGame.compare(5)
 # => "Make a guess"
+
+GuessingGame.compare(5, :no_guess)
+# => "Make a guess"
 ```
