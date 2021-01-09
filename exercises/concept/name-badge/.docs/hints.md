@@ -1,11 +1,11 @@
 ## General
 
-- Read about `if` in the official [Getting Started Elixir guide][getting-started-if-unless] or on [elixirschool.com][elixirschool-if-unless].
+- Read about `if` in the official [Getting Started guide][getting-started-if-unless] or on [elixirschool.com][elixirschool-if-unless].
 
 ## 1. Print a badge for an employee
 
 - This is a base case where we can assume that none of the input data is `nil`.
-- If you need to refresh your memory about working with strings, read about them in the official [Getting Started Elixir guide][getting-started-basic-strings].
+- If you need to refresh your memory about working with strings, read about them in the official [Getting Started guide][getting-started-basic-strings].
 
 ## 2. Print a badge for a new employee
 

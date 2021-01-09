@@ -1,10 +1,8 @@
 ## General
 
-- Review the official documentation:
-  - [Elixir - Getting started: Structs][getting-started]
-  - [Elixir - defstruct][docs-defstruct]
-- Watch this short video:
-  - [Elixir Casts - #106: Intro to Structs][elixir-casts]
+- Read about [structs][getting-started-structs] in the Getting Started guide.
+- Read about [`defstruct`][docs-defstruct] in the documentation.
+- Watch [Elixir Casts - #106: Intro to Structs][elixir-casts].
 
 ## 1. Create a brand-new remote controlled car
 
@@ -34,9 +32,9 @@
 
 ## 6. Account for driving with a dead battery
 
-If the battery is dead, it should return the struct unchanged.
+- If the battery is dead, it should return the struct unchanged.
 
-[getting-started]: https://elixir-lang.org/getting-started/structs.html
+[getting-started-structs]: https://elixir-lang.org/getting-started/structs.html
 [docs-defstruct]: https://hexdocs.pm/elixir/Kernel.html#defstruct/1
 [elixir-casts]: https://elixircasts.io/intro-to-structs
 [multiple-fn-clauses]: https://elixir-lang.org/getting-started/modules-and-functions.html#named-functions

@@ -1,6 +1,6 @@
 ## General
 
-- Read about strings in the official [Getting Started Elixir guide][getting-started-strings].
+- Read about strings in the official [Getting Started guide][getting-started-strings].
 - Browse the [functions available in the _String module_][string-module-functions] to discover which operations on strings Elixir's standard library offers.
 
 ## 1. Get the name's first letter

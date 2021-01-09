@@ -1,6 +1,6 @@
 ## 1. General
 
-- Read about files in the official [Getting Started Elixir guide][getting-started-file].
+- Read about files in the official [Getting Started guide][getting-started-file].
 - Read about files on [joyofelixir.com][joy-of-elixir-file].
 - Take a look at the [documentation of the `File` module][file].
 

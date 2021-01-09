@@ -1,9 +1,8 @@
 ## General
 
-- Review the official documentation:
-  - [Elixir - Getting started: IO][getting-started-io]
-  - [Elixir - Getting started: Debugging - IO.inspect/2][getting-started-debugging-io-inspect]
-  - [Elixir - IO][module-io]
+- Read about [IO][getting-started-io] in the Getting Started guide.
+- Read about [debugging with `IO.inspect/2`][getting-started-debugging-io-inspect] in the Getting Started guide.
+- Read about the [`IO` module][module-io] in the documentation.
 
 ## 1. Welcome the new player
 

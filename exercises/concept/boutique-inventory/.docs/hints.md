@@ -1,6 +1,6 @@
 ## General
 
-- Read about the `Enum` module in the [official Getting Started guide][getting-started-enum] or on [elixirschool.com][elixir-school-enum]
+- Read about the `Enum` module in the [official Getting Started guide][getting-started-enum] or on [elixirschool.com][elixir-school-enum].
 - Take a look in the documentation for the full [list of functions in the `Enum` module][enum-functions].
 
 ## 1. Sort items by price

@@ -1,6 +1,6 @@
 ## General
 
-- Read about [charlists][getting-started-charlists], [Unicode and code points][getting-started-code-points], and [`case`][getting-started-case] in the official Getting Started Elixir guide.
+- Read about [charlists][getting-started-charlists], [Unicode and code points][getting-started-code-points], and [`case`][getting-started-case] in the official Getting Started guide.
 - Read about [charlists][elixirschool-charlists] and [`case`][elixirschool-case] on elixirschool.com.
 
 ## 1. Sanitize existing usernames by removing everything but lowercase letters

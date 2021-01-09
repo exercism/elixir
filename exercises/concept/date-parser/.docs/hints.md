@@ -1,16 +1,13 @@
 ## General
 
-- Review regular expression patterns from the introduction
-  - Remember, when creating the pattern a string, you must escape some characters.
-- Review the Elixir documentation:
-  - [Regex][regex-docs]
-  - [Sigils: Regular Expressions][sigils-regex]
-- Check out these great regular expression resources:
-  - [Regular-Expressions.info][website-regex-info]
-  - [Rex Egg: The world's most tyrannosauical regex tutorial][website-rexegg]
-  - [RegexOne: Learn Regular Expressions with simple, interactive exercises.][website-regexone]
-  - [Regular Expressions 101: an online regex sandbox][website-regex-101]
-  - [RegExr: an online regex sandbox][website-regexr]
+- Review regular expression patterns from the introduction. Remember, when creating the pattern a string, you must escape some characters.
+- Read about the [`Regex` module][regex-docs] in the documentation.
+- Read about the [regular expression sigil][sigils-regex] in the Getting Started guide.
+- Checck out this website about regular expressions: [Regular-Expressions.info][website-regex-info].
+- Checck out this website about regular expressions: [Rex Egg -The world's most tyrannosauical regex tutorial][website-rexegg].
+- Checck out this website about regular expressions: [RegexOne - Learn Regular Expressions with simple, interactive exercises.][website-regexone].
+- Checck out this website about regular expressions: [Regular Expressions 101 - an online regex sandbox][website-regex-101].
+- Checck out this website about regular expressions: [RegExr - an online regex sandbox][website-regexr].
 
 ## 1. Match the day, month, and year from a date
 

@@ -1,6 +1,6 @@
 ## General
 
-- Read about keyword lists in the official [Getting Started Elixir guide][getting-started-keyword-lists].
+- Read about keyword lists in the official [Getting Started guide][getting-started-keyword-lists].
 - Read about keyword lists on [elixirschool.com][elixir-school-keyword-lists].
 - Take a look at the [documentation of the `Keyword` module][keyword].
 

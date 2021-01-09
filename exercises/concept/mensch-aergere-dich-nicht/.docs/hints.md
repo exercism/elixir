@@ -1,6 +1,6 @@
 ## General
 
-- Read about enumerables and streams in the [official Getting Started Elixir guide][getting-started-streams].
+- Read about enumerables and streams in the [official Getting Started guide][getting-started-streams].
 - Read the official documentation for [streams][stream].
 
 ## 1. Do one 6-sided die roll
