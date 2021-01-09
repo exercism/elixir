@@ -1,6 +1,6 @@
 ## General
 
-- Read about processes in the official [Getting Started Elixir guide][getting-started-processes].
+- Read about processes in the official [Getting Started guide][getting-started-processes].
 - Read [this blog post][mullen-processes] about Elixir processes.
 
 ## 1. Start the machine

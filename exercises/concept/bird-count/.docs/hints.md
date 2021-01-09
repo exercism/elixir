@@ -1,10 +1,9 @@
 ## General
 
-- Read about recursion in the official [Getting Started Elixir guide][getting-started-recursion].
+- Read about recursion in the official [Getting Started guide][getting-started-recursion].
 - Read about recursion on [elixirschool.com][elixir-school-recursion].
 - Use multiple clause functions and pattern matching.
-- Try to split a problem into a base case and a recursive case.
-  - For example, let's say you want to count how many cookies are there in the cookie jar with a recursive approach. A base case is an empty jar - it has zero cookies. If the jar is not empty, then the number of cookies in the jar is equal to one cookie plus the number of cookies in the jar after removing one cookie.
+- Try to split a problem into a base case and a recursive case. For example, let's say you want to count how many cookies are there in the cookie jar with a recursive approach. A base case is an empty jar - it has zero cookies. If the jar is not empty, then the number of cookies in the jar is equal to one cookie plus the number of cookies in the jar after removing one cookie.
 
 ## 1. Check how many birds visited today
 

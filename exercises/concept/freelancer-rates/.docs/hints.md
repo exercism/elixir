@@ -1,6 +1,6 @@
 ## General
 
-- Read about basic arithmetic in the official [Getting Started Elixir guide][getting-started-basic-arithmetic].
+- Read about basic arithmetic in the official [Getting Started guide][getting-started-basic-arithmetic].
 - Browse the [`Float`][float-functions] and [`Kernel`][kernel-arithmetic-operators] modules to learn about functions and operators that work with floats.
 
 ## 1. Calculate the daily rate given an hourly rate

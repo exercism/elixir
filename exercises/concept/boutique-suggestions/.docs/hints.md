@@ -1,10 +1,9 @@
 ## General
 
-- Review the Elixir documentation:
-  - [Comprehensions][elixir-comprehensions]
-  - [Lists][elixir-lists]
-  - [Maps][elixir-maps]
-  - [Keyword Lists][elixir-kwlists]
+- Read about [comprehensions][elixir-comprehensions] in the Getting Started guide.
+- Read about [lists][elixir-lists] in the Getting Started guide.
+- Read about [maps][elixir-maps] in the Getting Started guide.
+- Read about [keyword Lists][elixir-kwlists] in the Getting Started guide.
 
 ## 1. Suggest a combination
 

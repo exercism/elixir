@@ -18,9 +18,8 @@
 ## 3. Encode a DNA charlist
 
 - Create a recursive function which takes a code point from the charlist and recursively builds the bitstring result.
-
 - Remember, a [charlist][charlist] is a list of [integer code points][codepoint].
-- You can get the first and remaining items from a list using a build in [`Kernel` module][kernel] function
+- You can get the first and remaining items from a list using a build in [`Kernel` module][kernel] function.
 - You can also pattern match on a list using the [`[head | tail]`][list] notation.
 - Use multiple clause functions to separate the base case from the recursive cases.
 
