@@ -1,4 +1,4 @@
-## tuples
+## Tuples
 
 In Elixir, a tuple is a data structure which organizes data, holding a fixed number of items of any type, but without explicit names for each element. Tuples are often used in Elixir for memory read-intensive operations, since read-access of an element is a constant-time operation. They are not usually used when elements may need to be added/removed dynamically because rather than modifying the existing tuple, a new tuple is created which requires memory to be allocated upfront.
 
@@ -22,7 +22,7 @@ Float.ratio(0.25)
 # => {1, 4} indicating the numerator and denominator of the fraction ¼
 ```
 
-## pattern-matching
+## Pattern Matching
 
 The use of pattern matching is dominant in assertive, idiomatic Elixir code. You might recall that `=/2` is described as a match operator rather than as an assignment operator. When Elixir invokes the `=/2` function, if the pattern on the left matches the right, any variables on the left are bound, and the function returns the value of the right side. A `MatchError` is raised if there is no match.
 

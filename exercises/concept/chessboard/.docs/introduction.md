@@ -1,4 +1,4 @@
-## ranges
+## Ranges
 
 Ranges represent a sequence of one or many consecutive integers. They are created by connecting two integers with `..`.
 

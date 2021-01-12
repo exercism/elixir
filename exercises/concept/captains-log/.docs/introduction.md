@@ -1,10 +1,10 @@
-## randomness
+## Randomness
 
 In Elixir, to choose a random element from an enumerable data structure (e.g. list, range), we use `Enum.random`. This function will pick a single element, with every element having equal probability of being picked.
 
 Elixir does not have its own functions for picking a random float. To do that, we have to use Erlang directly.
 
-## erlang-libraries
+## Erlang Libraries
 
 Elixir code runs in the BEAM virtual machine. BEAM is part of the Erlang Run-Time System. Being inspired by Erlang, and sharing its run environment, Elixir provides great interoperability with Erlang libraries. This means that Elixir developers can use Erlang libraries from within their Elixir code. In fact, writing Elixir libraries for functionality already provided by Erlang libraries is discouraged in the Elixir community.
 

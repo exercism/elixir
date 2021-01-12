@@ -1,4 +1,4 @@
-## exceptions
+## Exceptions
 
 All errors in Elixir implement the _Exception Behaviour_. Just like the _Access Behaviour_, the _Exception Behavior_ defines callback functions that a module must implement to fulfill the software contract of the behaviour. Once an errors is defined, it has the following properties:
 

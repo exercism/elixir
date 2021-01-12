@@ -1,4 +1,4 @@
-## charlists
+## Charlists
 
 Charlists are created using single quotes.
 
@@ -40,7 +40,7 @@ You can concatenate two lists using `++`.
 
 The longer the first list is, the slower the concatenation, so avoid repeatedly appending to lists of arbitrary length.
 
-## case
+## Case
 
 `case` is a control flow structure that allows us to compare a given value against many patterns. Clauses in a `case` statement are evaluated from top to bottom, until a match is found.
 

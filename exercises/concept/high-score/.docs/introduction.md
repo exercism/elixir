@@ -1,4 +1,4 @@
-## maps
+## Maps
 
 Maps in Elixir are the data structure for storing information in key-value pairs. In other languages, these might also be known as associative arrays (PHP), hashes (Perl 5, Raku), or dictionaries (Python).
 
@@ -27,7 +27,7 @@ Elixir provides many functions for working with maps in the _Map module_. Some _
 
 Maps also implement the _Enumerable protocol_, which allow them to be used in _Enum module_ functions. Often maps are transformed into a list, processed or transformed in some way, then returned. When a map is returned as a list, each key-value pair is returned as a tuple in the list.
 
-## module-attributes-as-constants
+## Module Attributes As Constants
 
 In Elixir, we can define module attributes which can be used as constants in our functions.
 

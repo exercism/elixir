@@ -1,4 +1,4 @@
-## strings
+## Strings
 
 Strings in Elixir are delimited by double quotes, and they are encoded in UTF-8:
 

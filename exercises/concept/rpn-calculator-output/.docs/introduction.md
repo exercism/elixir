@@ -1,4 +1,4 @@
-## try-rescue-else-after
+## Try Rescue Else After
 
 Using `try..rescue` is a powerful construct for catching errors when they occur. Rescuing errors allows functions to return defined values when it is necessary. The `try..rescue` construct also offers us two additional features we can make use of:
 
@@ -21,7 +21,7 @@ end
 # => :success
 ```
 
-## dynamic-dispatch
+## Dynamic Dispatch
 
 When Elixir resolves the function to be invoked, it uses the Module's name (atom) to perform a lookup. The lookup can be done dynamically if the Module's name (atom) is bound to a variable.
 
