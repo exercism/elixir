@@ -1,4 +1,4 @@
-## enum
+## Enum
 
 `Enum` is a very useful module that provides a set of algorithms for working with enumerables. It offers sorting, filtering, grouping, counting, searching, finding min/max values, and much more.
 

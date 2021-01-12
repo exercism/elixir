@@ -1,4 +1,4 @@
-## nil
+## Nil
 
 [Nil][nil-dictionary] is an English word meaning "nothing" or "zero". In Elixir, `nil` is a special value that means an _absence_ of a value.
 
@@ -9,7 +9,7 @@ favorite_color = nil
 
 In other programming languages, `null` or `none` values might play a similar role.
 
-## if
+## If
 
 Besides `cond`, Elixir also provides the macro [`if/2`][getting-started-if-unless] which is useful when you need to check for only one condition.
 

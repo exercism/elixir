@@ -1,4 +1,4 @@
-## file
+## File
 
 Functions for working with files are provided by the `File` module.
 
