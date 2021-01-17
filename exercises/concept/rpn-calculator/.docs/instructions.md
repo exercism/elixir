@@ -36,7 +36,7 @@ RPNCalculator.calculate!(stack, operation)
 
 ## 3. Pass on the message
 
-Some of the errors contain important information that your coworkers need to have to ensure the correct operation of the system. Implement `calculate_verbose/2` to pass on the error message.
+Some of the errors contain important information that your coworkers need to have to ensure the correct operation of the system. Implement `calculate_verbose/2` to pass on the error message. The error is a struct that has a `:message` field.
 
 ```elixir
 stack = []
