@@ -53,6 +53,14 @@ def add(x, y, z) do
 end
 ```
 
+### Standard library
+
+Elixir has a very rich and well-documented standard library. The documentation is available online at [hexdocs.pm/elixir][docs]. Save this link somewhere - you will use it a lot!
+
+Most built-in data types have a corresponding module that offers functions for working with that data type, e.g. there's the `Integer` module for integers, `String` module for strings, `List` module for lists and so on.
+
+A notable module is the `Kernel` module. It provides the basic capabilities on top of which the rest of the standard library is built, like arithmetic operators, control-flow macros, and much more. Functions for the `Kernel` module are automatically imported, so you can use them without the `Kernel.` prefix.
+
 ### Documentation
 
 Documentation is a priority in high-quality Elixir code bases, and there are 3 ways to write inline documentation:
@@ -62,3 +70,4 @@ Documentation is a priority in high-quality Elixir code bases, and there are 3 w
 - Module-level documentation uses the `@moduledoc` annotation following the module definition
 
 [functional-programming]: https://en.wikipedia.org/wiki/Functional_programming
+[docs]: https://hexdocs.pm/elixir/Kernel.html#content
