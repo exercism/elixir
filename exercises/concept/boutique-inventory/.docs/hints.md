@@ -20,8 +20,8 @@
 
 ## 4. Calculate the item's total quantity
 
-- Maps are enumerables too.
-- Iterating over a map will convert the map to a list of `{key, value}` tuples.
+- Maps implement the enumerable protocol.
+- `Enum` functions convert maps to a list of `{key, value}` tuples.
 - There is a [built-in function][enum-reduce] for reducing an enumerable to a single value.
 
 [gettin-started-enum]: https://elixir-lang.org/getting-started/enumerables-and-streams.html#enumerables
