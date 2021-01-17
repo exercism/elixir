@@ -6,13 +6,14 @@
 
 ## 1. Create a brand-new remote controlled car
 
+- The module attribute `@enforce_keys` can be used to specify required values. It needs to be defined before calling `defstruct`.
 - The `nickname` field should not have a default value specified.
 - The `new/0` function should initialize the `nickname` with the value `"none"`.
 
 ## 2. Create a brand-new remote controlled car with a nickname
 
 - Use [`multiple-function-clauses`][multiple-fn-clauses] to reuse the function name but accept different arguments.
-- Consider a [`default-argument`][default-argument] for the function.
+- Consider a [`default-argument`][default-arg] for the function.
 
 ## 3. Display the distance
 
