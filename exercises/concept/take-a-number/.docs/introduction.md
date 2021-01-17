@@ -38,6 +38,6 @@ end
 
 If you want to receive more than one message, you need to call `receive/1` recursively. It is a common pattern to implement a recursive function, for example named `loop`, that calls `receive/1`, does something with the message, and then calls itself to wait for more messages. If you need to carry some state from one `receive/1` call to another, you can do it by passing an argument to that `loop` function.
 
-## Pids
+## PIDs
 
 Process identifiers are their own datatype. They function as _mailbox addresses_ - if you have a process' PID, you can send a message to that process. PIDs are usually created indirectly, as a return value of functions that create new processes, like `spawn`.
