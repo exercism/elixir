@@ -16,6 +16,6 @@ Let's examine this construct:
   - on the left side of `->`:
     - `e` is matched to the error struct
     - `in` is a keyword in this occurrence
-    - `RuntimeError` is the Error that we want to rescue. If we wanted to rescue from all errors, we could use `_`.
+    - `RuntimeError` is the error that we want to rescue. If we wanted to rescue from all errors, we could use `_`.
   - on the right side:
     - the instructions to be executed if the error matches
