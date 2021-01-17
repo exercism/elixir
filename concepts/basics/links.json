@@ -10,5 +10,9 @@
   {
     "url": "https://elixirschool.com/en/lessons/basics/basics/",
     "description": "Basics - Elixir School"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/Kernel.html#module-the-standard-library",
+    "description": "Overview of the standard library"
   }
 ]
