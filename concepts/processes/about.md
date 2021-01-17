@@ -30,7 +30,7 @@ By default, a function will execute in the same process from which it was called
 
 - A process exits as soon as its function has finished executing.
 
-- You can check if a process is still _alive_ (executing) with [Process.alive?/1][process-alive]:
+- You can check if a process is still _alive_ (executing) with [`Process.alive?/1`][process-alive]:
 
   ```elixir
   pid = spawn(fn -> 2 + 2 end)
@@ -42,7 +42,7 @@ By default, a function will execute in the same process from which it was called
 
 Processes do not directly share information with one another. Processes _send messages_ to share data. This concurrency pattern is called the [Actor model][wiki-actor-model].
 
-- Send messages to a process using [send/2][kernel-send].
+- Send messages to a process using [`send/2`][kernel-send].
 
   ```elixir
   send(pid, :hello)
@@ -93,10 +93,10 @@ def loop(state) do
 end
 ```
 
-In practice, this approach is rarely used directly. Elixir offers concurrency abstractions, such as the [`Agent` module][agent] or a [_`GenServer` behaviour`_][genserver], that both build on top of the receive loop. However, it is crucial to understand those basics to be able to efficiently use the abstractions.
+In practice, this approach is rarely used directly. Elixir offers concurrency abstractions, such as the [`Agent` module][agent] or a [_`GenServer` behaviour_][genserver], that both build on top of the receive loop. However, it is crucial to understand those basics to be able to efficiently use the abstractions.
 
 [getting-started-processes-state]: https://elixir-lang.org/getting-started/processes.html#state
-[getting-started-processes-links]: https://elixir-lang.org/getting-started/processes.html#state
+[getting-started-processes-links]: https://elixir-lang.org/getting-started/processes.html#links
 [process-alive]: https://hexdocs.pm/elixir/Process.html#alive?
 [agent]: https://hexdocs.pm/elixir/Agent.html
 [genserver]: https://hexdocs.pm/elixir/GenServer.html
