@@ -26,7 +26,7 @@ Keyword.keyword?(["day of week": "Monday"])
 
 ## Keys can repeat
 
-Keys in a keyword list can repeat, and the [key/value pairs are ordered][keyword-duplicate-keys-and-ordering]. When attempting to get a single value under a given key, you will get the first value, and any other values under the same key will be silently ignored.
+Keys in a keyword list can repeat, and the [key-value pairs are ordered][keyword-duplicate-keys-and-ordering]. When attempting to get a single value under a given key, you will get the first value, and any other values under the same key will be silently ignored.
 
 ```elixir
 list = [month: "April", month: "May"]

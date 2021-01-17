@@ -16,12 +16,12 @@
 ## 3. Get all wines of a given color bottled in a given year
 
 - There is a [built-in function][keyword-get] for getting a single value for a given key.
-- You do not need to implement the actual login to filter the list of bottles. You just need to conditionally use the already-implemented `filter_by_year/2` function.
+- You do not need to implement the filtering of bottles on your own. You just need to conditionally use the already-implemented `filter_by_year/2` function.
 
 ## 4. Get all wines of a given color bottled in a given country
 
 - There is a [built-in function][keyword-get] for getting a single value for a given key.
-- You do not need to implement the actual login to filter the list of bottles. You just need to conditionally use the already-implemented `filter_by_country/2` function.
+- You do not need to implement the filtering of bottles on your own. You just need to conditionally use the already-implemented `filter_by_country/2` function.
 
 [getting-started-keyword-lists]: https://elixir-lang.org/getting-started/keywords-and-maps.html#keyword-lists
 [elixir-school-keyword-lists]: https://elixirschool.com/en/lessons/basics/collections/#keyword-lists
