@@ -17,6 +17,6 @@ The most common `Enum` functions are `map` and `reduce`.
 
 The second argument to `Enum.reduce/2` is the initial value of the accumulator. The third argument is a function that accepts an element and an accumulator, and returns the new value for the accumulator.
 
-When using maps with `Enum` functions, the map gets automatically converted to a list of 2`{key, value}` tuples.
+When using maps with `Enum` functions, the map gets automatically converted to a list of 2 `{key, value}` tuples.
 
 To transform it back to a map, use `Enum.into`. `Enum.into` is a function that transforms an enumerable into a collectable - any data structure implementing the `Collectable` protocol. It can be thought of as the opposite of `Enum.reduce`.
