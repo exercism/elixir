@@ -4,7 +4,7 @@
 - A struct is named after the module it is defined in.
 - To define a struct use the [`defstruct`][docs-defstruct] construct.
   - The construct usually immediately follows after the module definition.
-- `defstruct` accepts either a list of [atoms][atom] (for nil default values) or key-value tuples (for specified default values).
+- `defstruct` accepts either a list of [atoms][atom] (for nil default values) or keyword lists (for specified default values).
   - The fields without defaults must precede the fields with default values.
 
 ```elixir
@@ -19,7 +19,7 @@ plane = %Plane{}
 ## Accessing fields and updating
 
 - Most functions that work with [maps][maps] will also work with structs.
-  - The [_Access Behavior_][access-behavior] is an exception and is **not** implemented for structs unless specifically implemented.
+  - The [_Access Behavior_][access-behavior] is an exception and is **not** implemented for structs.
 - It is recommended to use the _static access operator_ `.` to access struct fields.
 
 - Get/fetch field values:
@@ -40,7 +40,7 @@ plane = %Plane{}
   # => %Plane{engine: nil, wings: 4}
   ```
 
-## Enforcing Field Value Initialization
+## Enforcing field value initialization
 
 - The `@enforce_keys` [module attribute][attribute] creates a run-time check that specified fields must be initialized to a **non**-`nil` value when the struct is created.
 - `@enforce_keys` is followed by a list of the field keys (which are [atoms][atom]).

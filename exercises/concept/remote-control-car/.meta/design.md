@@ -27,6 +27,7 @@
 - `strings`
 - `nil`
 - `default-arguments`
+- `keyword-lists`
 
 ## Analyzer
 
