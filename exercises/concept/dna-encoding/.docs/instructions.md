@@ -1,12 +1,12 @@
 In your DNA research lab, you have been working through various ways to compress your research data to save storage space. One teammate suggests converting the DNA data to a binary representation:
 
-| Nucleic Acid | Code |
-| ------------ | ---- |
-| ' ' (a gap)  | 0000 |
-| A            | 0001 |
-| C            | 0010 |
-| G            | 0100 |
-| T            | 1000 |
+| Nucleic Acid | Code   |
+| ------------ | ------ |
+| a space      | `0000` |
+| A            | `0001` |
+| C            | `0010` |
+| G            | `0100` |
+| T            | `1000` |
 
 You ponder this, as it will potentially halve the required data storage costs, but at the expense of human readability. You decide to write a module to encode and decode your data to benchmark your savings.
 

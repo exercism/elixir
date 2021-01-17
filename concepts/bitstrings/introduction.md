@@ -14,13 +14,17 @@ Bitstring literals are defined using the bitstring special form `<<>>`. When def
 # => true because of value overflow
 ```
 
-When writing binary integer literals, we can write them directly in base-2 notation by prefixing the literal with `0b`: E.g. `0b10 == 2`
+When writing binary integer literals, we can write them directly in base-2 notation by prefixing the literal with `0b`.
 
 ```elixir
 value = 0b11111011011 = 2011
+```
+
+By default, bitstrings are displayed in chunks of 8 bits (a byte).
+
+```
 <<value::11>>
 # => <<251, 3::size(3)>>
-# By default, bitstrings are displayed in chunks of 8 bits (a byte)
 ```
 
 ### Constructing
