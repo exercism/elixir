@@ -10,54 +10,54 @@ defmodule FileSnifferTest do
   describe "get type from extension:" do
     # @tag :pending
     test "bmp" do
-      assert FileSniffer.type_from_extension("bmp") == {:ok, "image/bmp"}
+      assert FileSniffer.type_from_extension("bmp") == "image/bmp"
     end
 
     @tag :pending
     test "gif" do
-      assert FileSniffer.type_from_extension("gif") == {:ok, "image/gif"}
+      assert FileSniffer.type_from_extension("gif") == "image/gif"
     end
 
     @tag :pending
     test "jpg" do
-      assert FileSniffer.type_from_extension("jpg") == {:ok, "image/jpg"}
+      assert FileSniffer.type_from_extension("jpg") == "image/jpg"
     end
 
     @tag :pending
     test "png" do
-      assert FileSniffer.type_from_extension("png") == {:ok, "image/png"}
+      assert FileSniffer.type_from_extension("png") == "image/png"
     end
 
     @tag :pending
     test "exe" do
-      assert FileSniffer.type_from_extension("exe") == {:ok, "application/octet-stream"}
+      assert FileSniffer.type_from_extension("exe") == "application/octet-stream"
     end
   end
 
   describe "get type from binary:" do
     @tag :pending
     test "bmp" do
-      assert FileSniffer.type_from_binary(@bmp_file) == {:ok, "image/bmp"}
+      assert FileSniffer.type_from_binary(@bmp_file) == "image/bmp"
     end
 
     @tag :pending
     test "gif" do
-      assert FileSniffer.type_from_binary(@gif_file) == {:ok, "image/gif"}
+      assert FileSniffer.type_from_binary(@gif_file) == "image/gif"
     end
 
     @tag :pending
     test "jpg" do
-      assert FileSniffer.type_from_binary(@jpg_file) == {:ok, "image/jpg"}
+      assert FileSniffer.type_from_binary(@jpg_file) == "image/jpg"
     end
 
     @tag :pending
     test "png" do
-      assert FileSniffer.type_from_binary(@png_file) == {:ok, "image/png"}
+      assert FileSniffer.type_from_binary(@png_file) == "image/png"
     end
 
     @tag :pending
     test "exe" do
-      assert FileSniffer.type_from_binary(@exe_file) == {:ok, "application/octet-stream"}
+      assert FileSniffer.type_from_binary(@exe_file) == "application/octet-stream"
     end
   end
 
