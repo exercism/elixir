@@ -30,6 +30,7 @@ defmodule DNA do
   end
 
   defp do_encode([], acc), do: acc
+
   defp do_encode([n | rest], acc) do
     do_encode(rest, <<acc::bitstring, encode_nucleotide(n)::4>>)
   end
@@ -38,6 +39,10 @@ defmodule DNA do
     do_decode(dna, [])
   end
 
-  def do_decode(<<>>, acc), do: acc |> Enum.reverse()
+  def do_decode(<<>>, acc), do: acc |> reverse()
   def do_decode(<<n::4, rest::bitstring>>, acc), do: do_decode(rest, [decode_nucleotide(n) | acc])
+
+  defp reverse(l), do: do_reverse(l, [])
+  defp do_reverse([], acc), do: acc
+  defp do_reverse([h | t], acc), do: do_reverse(t, [h | acc])
 end

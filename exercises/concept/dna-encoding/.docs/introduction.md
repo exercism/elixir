@@ -16,13 +16,17 @@ Bitstring literals are defined using the bitstring special form `<<>>`. When def
 # => true because of value overflow
 ```
 
-When writing binary integer literals, we can write them directly in base-2 notation by prefixing the literal with `0b`: E.g. `0b10 == 2`
+When writing binary integer literals, we can write them directly in base-2 notation by prefixing the literal with `0b`.
 
 ```elixir
 value = 0b11111011011 = 2011
+```
+
+By default, bitstrings are displayed in chunks of 8 bits (a byte).
+
+```
 <<value::11>>
 # => <<251, 3::size(3)>>
-# By default, bitstrings are displayed in chunks of 8 bits (a byte)
 ```
 
 ### Constructing
@@ -48,12 +52,16 @@ value == 0b0110
 
 ## Tail Call Recursion
 
-When recursing through enumerables [lists, bitstrings, strings], there are often two concerns:
+When recursing through enumerables (lists, bitstrings, strings), there are often two concerns:
 
 - how much memory is required to store the trail of recursive function calls
 - how to build the solution efficiently
 
-To deal with these concerns an _accumulator_ may be used to pass the state of the function _so far_ until the result reaches the _base case_ and returns the value. An accumulator is a variable that is passed along in addition to the data.
+To deal with these concerns an _accumulator_ may be used.
+
+An accumulator is a variable that is passed along in addition to the data. It is used to pass the current state of the function's execution, from function call to function call, until the _base case_ is reached. In the base case, the accumulator is used to return the final value of the recursive function call.
+
+Accumulators should be initialized by the function's author, not the function's user. To achieve this, declare two functions - a public function that takes just the necessary data as arguments and initializes the accumulator, and a private function that also takes an accumulator. In Elixir, it is a common pattern to prefix the private function's name with `do_`.
 
 ```elixir
 # Count the length of a list without an accumulator
