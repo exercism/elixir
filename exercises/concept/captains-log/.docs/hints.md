@@ -9,7 +9,6 @@
 
 ## 2. Generate a random starship registry number
 
-- [A range][range-macro] is a data structure representing a sequence of consecutive integers.
 - There is a [build-in function][enum-random] for choosing an element from a range at random.
 
 ## 3. Generate a random stardate
@@ -25,13 +24,13 @@
 - There is a [built-in function][to-string] that changes a charlist to a string.
 - The format string of that function contains control sequences.
 - A control sequence starts with `~` and has the pattern `~F.P.PadModC`, where `F` stands for the width of the output, `P` stands for the precision, `Pad` stands for the padding character, `Mod` stands for the control sequence modifier, and `C` is the type of the control sequence.
-- To format a float with a desired precision, a control sequence with the pattern `~P.C` will suffice.
+- To format a float with a desired precision, a control sequence with the pattern `~.PC` will suffice.
 - The control sequence type for floats is `f`.
+- The exact format string you need is `~.1f`.
 
 [getting-started-erlang-libraries]: https://elixir-lang.org/getting-started/erlang-libraries.html
 [getting-started-formatted-text-output]: https://elixir-lang.org/getting-started/erlang-libraries.html#formatted-text-output
 [enum-random]: https://hexdocs.pm/elixir/Enum.html#random/1
-[range-macro]: https://hexdocs.pm/elixir/Kernel.html#../2
 [erl-rand-uniform]: http://erlang.org/doc/man/rand.html#uniform-0
 [erl-io-lib-format]: http://erlang.org/doc/man/io_lib.html#format-2
 [to-string]: https://hexdocs.pm/elixir/Kernel.html#to_string/1

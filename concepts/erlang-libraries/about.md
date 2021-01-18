@@ -8,7 +8,7 @@ This close relationship between Elixir and Erlang means that to become a profici
 
 Erlang's standard library is available for use in our Elixir code without any extra steps necessary.
 
-Erlang functions can be called in the same way we call Elixir functions, with one small difference. Erlang module names are lower snake case names atoms. For example, to call the Erlang `pi/0` function from the `math` module, one would write:
+Erlang functions can be called in the same way we call Elixir functions, with one small difference. Erlang module names are `snake_case` atoms. For example, to call the Erlang `pi/0` function from the `math` module, one would write:
 
 ```elixir
 :math.pi()
