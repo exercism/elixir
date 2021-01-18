@@ -4,7 +4,7 @@ You have been tasked to write a service which ingests events. Each event has a d
 - `"January 1, 1970"`
 - `"Thursday, January 1, 1970"`
 
-You would can see there are some similarities between each of them, and decide to write some composable regular expression patterns.
+You can see there are some similarities between each of them, and decide to write some composable regular expression patterns.
 
 ## 1. Match the day, month, and year from a date
 
@@ -23,7 +23,7 @@ Do not worry about error checking. You can assume you will always be passed a va
 
 ## 2. Match the day of the week and the month of the year
 
-Implement `day_names/0` and `month_name/0` to return a string pattern which, when compiled, would match the any named day of the week and the named month of the year respectively.
+Implement `day_names/0` and `month_names/0` to return a string pattern which, when compiled, would match the any named day of the week and the named month of the year respectively.
 
 ```elixir
 "Tuesday" =~ DateParser.day_names() |> Regex.compile!()
@@ -45,7 +45,11 @@ DateParser.capture_month_name()
 
 ## 4. Combine the captures to capture the whole date
 
-Implement `capture_numeric_date/0`, `capture_month_name_date()`, and `capture_day_month_name_date/0` to return a string pattern which captures the components from part 3 using the respective date format.
+Implement `capture_numeric_date/0`, `capture_month_name_date()`, and `capture_day_month_name_date/0` to return a string pattern which captures the components from part 3 using the respective date format:
+
+- numeric date - `"01/01/1970"`
+- month name date - `"January 1, 1970"`
+- day month name date - `"Thursday, January 1, 1970"`
 
 ```elixir
 DateParser.capture_numeric_date()
@@ -59,8 +63,6 @@ DateParser.capture_numeric_date()
 Implement `match_numeric_date/0`, `match_month_name_date/0`, and `match_day_month_name_date/0` to return a compiled regular expression that only matches the date, and which can also capture the components.
 
 ```elixir
-"The Unix epoch was Thursday, January 1, 1970" =~ DateParser.match_day_month_name_date()
-# => false
 "Thursday, January 1, 1970 was the Unix epoch." =~ DateParser.match_day_month_name_date()
 # => false
 "Thursday, January 1, 1970" =~ DateParser.match_day_month_name_date()
