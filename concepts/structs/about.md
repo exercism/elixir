@@ -19,7 +19,7 @@ plane = %Plane{}
 ## Accessing fields and updating
 
 - Most functions that work with [maps][maps] will also work with structs.
-  - The [_Access Behavior_][access-behavior] is an exception and is **not** implemented for structs.
+  - The [_Access Behaviour_][access-behaviour] is an exception and is **not** implemented for structs.
 - It is recommended to use the _static access operator_ `.` to access struct fields.
 
 - Get/fetch field values:
@@ -57,7 +57,7 @@ end
 ```
 
 [atom]: https://elixir-lang.org/getting-started/basic-types.html#atoms
-[access-behavior]: https://hexdocs.pm/elixir/Access.html#content
+[access-behaviour]: https://hexdocs.pm/elixir/Access.html#content
 [attribute]: https://elixir-lang.org/getting-started/module-attributes.html
 [maps]: https://hexdocs.pm/elixir/Map.html#content
 [getting-started]: https://elixir-lang.org/getting-started/structs.html

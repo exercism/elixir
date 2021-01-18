@@ -1,6 +1,6 @@
 ## General
 
-- Read about the [`Access` behavior][access-behavior] in the documentation.
+- Read about the [`Access` behaviour][access-behaviour] in the documentation.
 
 ## 1. Extract data from a nested map structure
 
@@ -13,4 +13,4 @@
 
 [kernel-module]: https://hexdocs.pm/elixir/Kernel.html#functions
 [string-module]: https://hexdocs.pm/elixir/String.html#functions
-[access-behavior]: https://hexdocs.pm/elixir/Access.html
+[access-behaviour]: https://hexdocs.pm/elixir/Access.html

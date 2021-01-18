@@ -40,5 +40,5 @@ Follows the **Basketball Website Story** (outlined [here](https://github.com/exe
 - That `structs` aren't used.
 - That the `static access operator` isn't used.
 - That `Map` module functions aren't used.
-- That for `extract_from_path/2` get_in isn't used, but that access behavior is used
+- That for `extract_from_path/2` get_in isn't used, but that access behaviour is used
 - That for `get_in_path/2` get_in is used

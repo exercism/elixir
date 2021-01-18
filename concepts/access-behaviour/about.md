@@ -1,10 +1,10 @@
-Elixir uses [_Behaviours_][behaviours] to provide common generic interfaces while facilitating specific implementations for each module which implements the behavior. One of those behaviours is the _Access Behaviour_.
+Elixir uses [_Behaviours_][behaviours] to provide common generic interfaces while facilitating specific implementations for each module which implements the behaviour. One of those behaviours is the _Access Behaviour_.
 
 The _Access Behaviour_ provides a common interface for retrieving key-based data from a data structure. It is implemented for maps and keyword lists.
 
 The [`Access`][access] module defines the callbacks required for the interface. The [`Map`][map] and [`Keyword`][keyword] modules then implements the required callbacks [`fetch/2`][map-fetch], [`get_and_update/3`][map-get-and-update], and [`pop/2`][map-pop]
 
-To use the behavior, you may follow a bound variable with _square brackets_ and then use the key to retrieve the value associated with that key. Maps support atom and string keys, while keyword lists only atom keys.
+To use the behaviour, you may follow a bound variable with _square brackets_ and then use the key to retrieve the value associated with that key. Maps support atom and string keys, while keyword lists only atom keys.
 
 ```elixir
 my_map = %{key: "my value"}
@@ -24,7 +24,7 @@ Structs do not implement the Access behaviour.
 
 ## Access shortcuts
 
-- [`Kernel`][kernel] provides several functions which make using nested data easier with the access behavior. See these links to the library documentation:
+- [`Kernel`][kernel] provides several functions which make using nested data easier with the access behaviour. See these links to the library documentation:
   - [`get_in/2`][get-in-2]
   - [`get_and_update_in/2`][get-and-update-in-2]
   - [`get_and_update_in/3`][get-and-update-in-3]

@@ -93,7 +93,7 @@ defmodule RPNCalculator.ExceptionTest do
 
   describe "divide/2" do
     @tag :pending
-    test "when stack doesn't contain enough numbers, raise" do
+    test "when stack doesn't contain any numbers, raise StackUnderflowError" do
       assert_raise(
         RPNCalculator.Exception.StackUnderflowError,
         "stack underflow occurred, context: when dividing",
@@ -104,7 +104,29 @@ defmodule RPNCalculator.ExceptionTest do
     end
 
     @tag :pending
-    test "when divisor is 0, raise" do
+    test "when stack contains only one number, raise StackUnderflowError" do
+      assert_raise(
+        RPNCalculator.Exception.StackUnderflowError,
+        "stack underflow occurred, context: when dividing",
+        fn ->
+          RPNCalculator.Exception.divide([3])
+        end
+      )
+    end
+
+    @tag :pending
+    test "when stack contains only one number, raise StackUnderflowError, even when it's a zero" do
+      assert_raise(
+        RPNCalculator.Exception.StackUnderflowError,
+        "stack underflow occurred, context: when dividing",
+        fn ->
+          RPNCalculator.Exception.divide([0])
+        end
+      )
+    end
+
+    @tag :pending
+    test "when divisor is 0, raise DivisionByZeroError" do
       assert_raise(RPNCalculator.Exception.DivisionByZeroError, "division by zero occurred", fn ->
         RPNCalculator.Exception.divide([0, 2])
       end)

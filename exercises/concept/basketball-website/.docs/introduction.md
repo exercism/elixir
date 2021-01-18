@@ -9,7 +9,7 @@ The _Access Behaviour_ provides a common interface for retrieving data from a ke
 my_map = %{key: "my value"}
 your_map = %{"key" => "your value"}
 
-# Obtain the value using the Access Behavior
+# Obtain the value using the Access Behaviour
 my_map[:key] == "my value"
 your_map[:key] == nil
 ```

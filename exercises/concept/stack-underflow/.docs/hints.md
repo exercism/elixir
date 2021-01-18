@@ -8,11 +8,13 @@
 ## 1. Error for Division by Zero
 
 - Implement the module, specifying the message using a special [built-in macro for defining exceptions][defexception].
+- Modules can be nested inside of other modules.
 
 ## 2. Error when encountering stack underflow
 
 - Implement the module, specifying the message using a special [built-in macro for defining exceptions][defexception].
 - You can use one of the Exception Behaviour callbacks to define an exception whose message changes based on the arguments passed to `raise/2`.
+- Modules can be nested inside of other modules.
 
 ## 3. Write a dividing function
 

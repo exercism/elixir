@@ -11,7 +11,7 @@ plane = %Plane{}
 
 ### Accessing fields and updating
 
-Since structs are built on maps, we can use most map functions to get and manipulate values. The _Access Behavior_ is **not** implemented for structs. It is recommended to use the _static access operator_ `.` to access struct fields instead.
+Since structs are built on maps, we can use most map functions to get and manipulate values. The _Access Behaviour_ is **not** implemented for structs. It is recommended to use the _static access operator_ `.` to access struct fields instead.
 
 - get/fetch field values:
 
