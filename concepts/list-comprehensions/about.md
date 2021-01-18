@@ -30,7 +30,7 @@ end
 # => [{0, 0}, {0, 1}, {1, 0}, {1, 1}]
 ```
 
-The value in the do-block is inserted into the _collectable_ **for each value generated** from the _enumerable_. It may or may not include variables bound inside of the comprehension.
+The value in the do-block is inserted into the _collectable_ **for each value generated** from the _enumerable_.
 
 ```elixir
 for _ <- [1, 2, 3], do: :a
