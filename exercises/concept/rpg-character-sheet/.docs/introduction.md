@@ -1,4 +1,4 @@
-## Io
+## IO
 
 Functions for handling input and output are provided by the `IO` module.
 
