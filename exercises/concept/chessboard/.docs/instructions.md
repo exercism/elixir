@@ -31,7 +31,7 @@ Chessboard.ranks()
 
 ## 4. Transform the file range into a list of files
 
-Implement the `files/0` function. It should return a list of letters (string), from "A" to "H". Do not write the list by hand, generate it from the range returned by the `file_range/0` function.
+Implement the `files/0` function. It should return a list of letters (strings), from "A" to "H". Do not write the list by hand, generate it from the range returned by the `file_range/0` function.
 
 ```elixir
 Chessboard.files()

@@ -19,7 +19,7 @@
 ## 4. Transform the file range into a list of files
 
 - Ranges implement the `Enumerable` protocol.
-- There is a [built-in function][unicode-code-points] to change an enumerable data structure to a list while modifying its elements.
+- There is a [built-in function][enum-map] to change an enumerable data structure to a list while modifying its elements.
 - The [bitstring special form][bitstring-special-form] can be used to turn a code point into a string.
 
 [range]: https://hexdocs.pm/elixir/Range.html
