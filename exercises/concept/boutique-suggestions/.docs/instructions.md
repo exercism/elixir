@@ -1,4 +1,4 @@
-Your work at the online fashion boutique store continues. You come up with the idea for a website feature where a outfit is suggested to the user. While you want to give lots of suggestions, you don't want to give bad suggestions, so you decide to use a list comprehension since you can easily _generate_ outfit combinations, then _filter_ them by some criteria.
+Your work at the online fashion boutique store continues. You come up with the idea for a website feature where an outfit is suggested to the user. While you want to give lots of suggestions, you don't want to give bad suggestions, so you decide to use a list comprehension since you can easily _generate_ outfit combinations, then _filter_ them by some criteria.
 
 Clothing items are stored as a map:
 
