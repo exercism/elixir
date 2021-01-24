@@ -3,80 +3,99 @@ defmodule LogLevelTest do
 
   describe "LogLevel.to_label/1" do
     # @tag :pending
-    test "label trace" do
-      assert LogLevel.to_label(0) == :trace
+    test "level 0 has label trace only in a non-legacy app" do
+      assert LogLevel.to_label(0, false) == :trace
+      assert LogLevel.to_label(0, true) == :unknown
     end
 
     @tag :pending
-    test "label debug" do
-      assert LogLevel.to_label(1) == :debug
+    test "level 1 has label debug" do
+      assert LogLevel.to_label(1, false) == :debug
+      assert LogLevel.to_label(1, true) == :debug
     end
 
     @tag :pending
-    test "label info" do
-      assert LogLevel.to_label(4) == :info
+    test "level 2 has label info" do
+      assert LogLevel.to_label(2, false) == :info
+      assert LogLevel.to_label(2, true) == :info
     end
 
     @tag :pending
-    test "label warning" do
-      assert LogLevel.to_label(5) == :warning
+    test "level 3 has label warning" do
+      assert LogLevel.to_label(3, false) == :warning
+      assert LogLevel.to_label(3, true) == :warning
     end
 
     @tag :pending
-    test "label error" do
-      assert LogLevel.to_label(6) == :error
+    test "level 4 has label error" do
+      assert LogLevel.to_label(4, false) == :error
+      assert LogLevel.to_label(4, true) == :error
     end
 
     @tag :pending
-    test "label fatal" do
-      assert LogLevel.to_label(7) == :fatal
+    test "level 5 has label fatal only in a non-legacy app" do
+      assert LogLevel.to_label(5, false) == :fatal
+      assert LogLevel.to_label(5, true) == :unknown
     end
 
     @tag :pending
-    test "label unknown" do
-      assert LogLevel.to_label(10) == :unknown
+    test "level 6 has label unknown" do
+      assert LogLevel.to_label(6, false) == :unknown
+      assert LogLevel.to_label(6, true) == :unknown
     end
 
     @tag :pending
-    test "label another unknown" do
-      assert LogLevel.to_label(-1) == :unknown
+    test "level -1 has label unknown" do
+      assert LogLevel.to_label(-1, false) == :unknown
+      assert LogLevel.to_label(-1, true) == :unknown
     end
   end
 
-  describe "LogLevel.send_alert?/1" do
+  describe "LogLevel.alert_recipient/2" do
     @tag :pending
-    test "if :fatal code sends alert" do
-      assert LogLevel.send_alert?(7)
+    test "fatal code sends alert to ops" do
+      assert LogLevel.alert_recipient(5, false) == :ops
     end
 
     @tag :pending
-    test "if :error code sends alert" do
-      assert LogLevel.send_alert?(6)
+    test "error code sends alert to ops" do
+      assert LogLevel.alert_recipient(4, false) == :ops
+      assert LogLevel.alert_recipient(4, true) == :ops
     end
 
     @tag :pending
-    test "if :unknown code sends alert" do
-      assert LogLevel.send_alert?(10)
+    test "unknown code sends alert to dev team 1 for a legacy app" do
+      assert LogLevel.alert_recipient(6, true) == :dev1
+      assert LogLevel.alert_recipient(0, true) == :dev1
+      assert LogLevel.alert_recipient(5, true) == :dev1
     end
 
     @tag :pending
-    test "if :trace code does not send alert" do
-      refute LogLevel.send_alert?(0)
+    test "unknown code sends alert to dev team 2" do
+      assert LogLevel.alert_recipient(6, false) == :dev2
     end
 
     @tag :pending
-    test "if :debug code does not send alert" do
-      refute LogLevel.send_alert?(1)
+    test "trace code does not send alert" do
+      refute LogLevel.alert_recipient(0, false)
     end
 
     @tag :pending
-    test "if :info code does not send alert" do
-      refute LogLevel.send_alert?(4)
+    test "debug code does not send alert" do
+      refute LogLevel.alert_recipient(1, false)
+      refute LogLevel.alert_recipient(1, true)
     end
 
     @tag :pending
-    test "if :warning code does not send alert" do
-      refute LogLevel.send_alert?(5)
+    test "info code does not send alert" do
+      refute LogLevel.alert_recipient(2, false)
+      refute LogLevel.alert_recipient(2, true)
+    end
+
+    @tag :pending
+    test "warning code does not send alert" do
+      refute LogLevel.alert_recipient(3, false)
+      refute LogLevel.alert_recipient(3, true)
     end
   end
 end

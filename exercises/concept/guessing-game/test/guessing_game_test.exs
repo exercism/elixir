@@ -23,7 +23,7 @@ defmodule GuessingGameTest do
 
   @tag :pending
   test "so close when guess differs from 7 secret by +1" do
-    assert GuessingGame.compare(52,53) == "So close"
+    assert GuessingGame.compare(52, 53) == "So close"
   end
 
   @tag :pending

@@ -10,8 +10,8 @@ defmodule GuessingGame do
   end
 
   def compare(secret_number, guess)
-      when guess == secret_number + 1
-      or guess == secret_number - 1 do
+      when guess == secret_number + 1 or
+           guess == secret_number - 1 do
     "So close"
   end
 
