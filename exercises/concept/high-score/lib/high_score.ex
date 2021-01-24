@@ -1,5 +1,7 @@
 defmodule HighScore do
-  def new(), do: raise "Please implement the new/0 function"
+  def new() do
+    raise "Please implement the new/0 function"
+  end
 
   def add_player(scores, name, score) do
     raise "Please implement the add_player/3 function"

@@ -1,5 +1,4 @@
 defmodule KitchenCalculator do
-
   def get_volume(volume_pair) do
     raise "Please implement the get_volume/1 function"
   end
