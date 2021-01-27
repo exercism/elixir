@@ -1,22 +1,22 @@
-- Elixir is dynamically-typed
-  - the type of a variable is only checked at run-time
-- Using the match `=/2` operator, we can bind a value of any type to a variable name:
-  - It is possible to re-bind variables
+- Elixir is dynamically-typed.
+  - The type of a variable is only checked at run-time.
+- Using the match [`=/2`][match] operator, we can bind a value of any type to a variable name:
+  - It is possible to re-bind variables.
   - A variable may have any type of value bound to it.
 
 ## Modules
 
-- Modules are the basis of code organization in Elixir.
+- [Modules][modules] are the basis of code organization in Elixir.
   - A module is visible to all other modules.
   - A module is defined with [`defmodule`][defmodule].
 
 ## Named Functions
 
-- All named functions must be defined in a module.
+- All [named functions][functions] must be defined in a module.
 
   - Named functions are defined with [`def`][def].
-  - A named function may be made private from external modules by using [`defp`][defp] instead.
-  - The value of the last line of a function is _implicitly returned_ after it is evaluated
+  - A named function may be made private by using [`defp`][defp] instead.
+  - The value of the last expression in a function is _implicitly returned_.
   - Short functions may also be written using a one-line syntax.
 
   ```elixir
@@ -33,29 +33,28 @@
 
 - Functions are invoked using the full name of the function with the module name.
   - If invoked from within its own module, the module name may be omitted.
-- The arity of a function is often used when referring to a named function
+- The arity of a function is often used when referring to a named function.
 
   - The arity refers to the number of arguments it accepts.
 
   ```elixir
-  def add(x, y, z), do: x + y + z # add/3, because the arity is 3
+  # add/3, because the arity is 3
+  def add(x, y, z), do: x + y + z
   ```
 
 ## Integers
 
-- Integer values are whole numbers written with one or more digits.
-  - You may use underscores to separate large numbers.
-  - Integers support the [basic mathematical operators][operators].
+Integer values are whole numbers written with one or more digits. You can perform [basic mathematical operations][operators] on them.
 
 ## Strings
 
-- [String][string] literals are a sequence of characters surrounded by double quotes.
+[String][string] literals are sequences of characters surrounded by double quotes.
 
 ```elixir
 string = "this is a string! 1, 2, 3!"
 ```
 
-### Standard library
+## Standard library
 
 - The documentation is available online at [hexdocs.pm/elixir][docs].
 - Most built-in data types have a corresponding module, e.g. `Integer`, `Float`, `String`, `Tuple`, `List`.
@@ -78,7 +77,7 @@ string = "this is a string! 1, 2, 3!"
     def function(), do: true
     ```
 
-  - Module may be documented with `@moduledoc` immediately following the module definition
+  - Modules may be documented with `@moduledoc` immediately following the module definition
 
     ```elixir
     defmodule Example do
@@ -90,7 +89,6 @@ string = "this is a string! 1, 2, 3!"
     end
     ```
 
-[functional-programming]: https://en.wikipedia.org/wiki/Functional_programming
 [match]: https://elixirschool.com/en/lessons/basics/pattern-matching/
 [inline-documentation]: https://elixirschool.com/en/lessons/basics/documentation/#inline-documentation
 [operators]: https://elixir-lang.org/getting-started/basic-types.html#basic-arithmetic

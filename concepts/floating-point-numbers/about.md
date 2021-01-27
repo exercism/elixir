@@ -27,7 +27,7 @@ However, those kind of errors are not specific to Elixir. They happen in all pro
 
 ```elixir
 # 3/4
- Float.ratio(0.75)
+Float.ratio(0.75)
 # => {3, 4}
 
 # 3/5
@@ -61,7 +61,11 @@ Integers and floats can be mixed together in a single arithmetic expression. Usi
 # => 6.0
 ```
 
-Floats can be rounded (`round`), rounded up (`ceil`), or rounded down (`floor`) into floats by using [functions from the `Float`][float-ceil] module, or into integers by using [functions from the `Kernel` module][kernel-ceil]. Another method of changing a float into an integer is cutting off its decimal part with [`trunc`][kernel-trunc].
+Floats can be rounded (`round`), rounded up (`ceil`), or rounded down (`floor`).
+
+To round a float into a float, use functions from the `Float` module ([`Float.round`][float-round], [`Float.ceil`][float-ceil], [`Float.floor`][float-floor]). To get an integer instead, use functions from the `Kernel` module ([`round`][kernel-round], [`ceil`][kernel-ceil], [`floor`][kernel-floor]).
+
+Another method of changing a float into an integer is cutting off its decimal part with [`trunc`][kernel-trunc].
 
 ```elixir
 Float.ceil(5.2)
@@ -69,13 +73,20 @@ Float.ceil(5.2)
 
 ceil(5.2)
 # => 6
+
+trunc(5.2)
+# => 5
 ```
 
 [0.30000000000000004.com]: https://0.30000000000000004.com/
 [evanw.github.io-float-toy]: https://evanw.github.io/float-toy/
 [arbitrary-precision-arithmetic]: https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic
 [kernel-equal]: https://hexdocs.pm/elixir/Kernel.html#==/2
-[kernel-strictly-equal]: https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic
+[kernel-strictly-equal]: https://hexdocs.pm/elixir/Kernel.html#===/2
+[kernel-round]: https://hexdocs.pm/elixir/Kernel.html#round/1
 [kernel-ceil]: https://hexdocs.pm/elixir/Kernel.html#ceil/1
+[kernel-floor]: https://hexdocs.pm/elixir/Kernel.html#floor/1
 [kernel-trunc]: https://hexdocs.pm/elixir/Kernel.html#trunc/1
+[float-round]: https://hexdocs.pm/elixir/Float.html#round/2
 [float-ceil]: https://hexdocs.pm/elixir/Float.html#ceil/2
+[float-floor]: https://hexdocs.pm/elixir/Float.html#floor/2

@@ -2,5 +2,9 @@
   {
     "url": "https://hexdocs.pm/elixir/Bitwise.html",
     "description": "The Bitwise module"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Bitwise_operation#Bitwise_operators",
+    "description": "Bitwise operators - Wikipedia"
   }
 ]

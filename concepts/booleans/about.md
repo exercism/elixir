@@ -1,4 +1,4 @@
-Elixir represents true and false values with the boolean type. There are only two values: _true_ and _false_. These values can be bound to a variable and combined with boolean operators ([`and/2`][strict-and], [`or/2`][strict-or], [`not/1`][strict-not]):
+Elixir represents true and false values with the boolean type. There are only two values: `true` and `false`. These values can be combined with boolean operators ([`and/2`][strict-and], [`or/2`][strict-or], [`not/1`][strict-not]):
 
 ```elixir
 true_variable = true and true
@@ -11,7 +11,7 @@ true_variable = not false
 false_variable = not true
 ```
 
-The operators [`and/2`][strict-and], [`or/2`][strict-or], and [`not/1`][strict-not] are strictly boolean which means they require their arguments to be booleans. There are also equivalent boolean operators which that any type of arguments - [`&&/2`][and], [`||/2`][or], and [`!/1`][not].
+The operators [`and/2`][strict-and], [`or/2`][strict-or], and [`not/1`][strict-not] are strictly boolean which means they require their _first_ argument to be a boolean. There are also equivalent boolean operators that work any type of arguments - [`&&/2`][and], [`||/2`][or], and [`!/1`][not].
 
 Boolean operators use _short-circuit evaluation_, which means that expression on the right-hand side of the operator is only evaluated if needed.
 

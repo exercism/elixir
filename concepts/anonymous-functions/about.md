@@ -7,25 +7,23 @@ Enum.map([1, 2, 3], fn n -> n + 1 end)
 
 Functions in Elixir are treated as first class citizens:
 
-- Can be assigned to variables.
-- Can be passed around like data as arguments and return values.
-- Can be created dynamically.
+- Named and anonymous functions can be assigned to variables.
+- Named and anonymous functions can be passed around like data as arguments and return values.
+- Anonymous functions can be created dynamically.
 
-Anonymous functions are created with the `fn` keyword and invoked with a dot (`.`):
+Anonymous functions are created with the [`fn`][kernel-fn] keyword and invoked with a dot (`.`):
 
 ```elixir
-function_variable = fn param ->
-  param + 1
-end
+function_variable = fn n -> n + 1 end
 
 function_variable.(1)
 # => 2
 ```
 
-Anonymous functions may be created with the [`&` capture shorthand][kernal-capture];
+Anonymous functions may be created with the [`&` capture shorthand][kernal-capture].
 
-- The initial `&` declares the start of the capture expression
-- `&1`, `&2`, and so on refer to the positional arguments of the anonymous function
+- The initial `&` declares the start of the capture expression.
+- `&1`, `&2`, and so on refer to the positional arguments of the anonymous function.
 
   ```elixir
   # Instead of:
@@ -35,13 +33,13 @@ Anonymous functions may be created with the [`&` capture shorthand][kernal-captu
   & abs(&1) + abs(&2)
   ```
 
-- The & capture operator can also be used to [_capture_ existing named function][capture]:
+- The `&` capture operator can also be used to [_capture_ existing named function][capture]:
 
   ```elixir
   # Instead of:
   fn a, b -> a <= b end
 
-  # We can write using the function and the function's arity:
+  # We can capture the function using its name and arity:
   &<=/2
   ```
 
