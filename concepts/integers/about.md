@@ -50,6 +50,6 @@ Integers and floats can be considered equal ([`==`][kernel-equal]) if they have 
 
 [arbitrary-precision-arithmetic]: https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic
 [kernel-equal]: https://hexdocs.pm/elixir/Kernel.html#==/2
-[kernel-strictly-equal]: https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic
+[kernel-strictly-equal]: https://hexdocs.pm/elixir/Kernel.html#===/2
 [integer]: https://hexdocs.pm/elixir/Integer.html
 [integers-in-other-bases]: https://hexdocs.pm/elixir/master/syntax-reference.html#integers-in-other-bases-and-unicode-code-points

@@ -1,11 +1,11 @@
-Elixir represents true and false values with the boolean type. There are only two values: _true_ and _false_. These values can be bound to a variable:
+Elixir represents true and false values with the boolean type. There are only two values: `true` and `false`.
 
 ```elixir
 true_variable = true
 false_variable = false
 ```
 
-We can evaluate strict boolean expressions using the `and/2`, `or/2`, and `not/1` operator functions.
+We can evaluate strict boolean expressions using the `and/2`, `or/2`, and `not/1` operators.
 
 ```elixir
 true_variable = true and true

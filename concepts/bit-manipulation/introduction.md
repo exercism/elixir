@@ -14,4 +14,4 @@ Bitwise.<<<(1, 2)
 # => 4
 ```
 
-By default, integers are used for bitwise values.
+All bitwise functions only work on integers.
