@@ -44,7 +44,7 @@ languages
                 ├── .meta
                 │   ├── config.json
                 │   ├── design.md
-                │   └── example.ex
+                │   └── exemplar.ex
                 ├── lib
                 │   └── $elixir_slug.ex
                 ├── mix.exs
@@ -62,7 +62,7 @@ Now create the following three files:
 
 - `lib/$elixir_slug.ex`. the stub implementation file, which is the starting point for students to work on the exercise.
 - `test/$elixir_slug_test.ex`: the test suite.
-- `.meta/example.ex`: an example implementation that passes all the tests.
+- `.meta/exemplar.ex`: an exemplar implementation that passes all the tests.
 
 ## Step 2: Add documentation files
 
