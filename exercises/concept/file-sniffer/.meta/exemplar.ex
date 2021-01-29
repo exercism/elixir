@@ -8,7 +8,7 @@ defmodule FileSniffer do
   def type_from_binary(<<0x42, 0x4D, _::binary>>), do: "image/bmp"
 
   def type_from_binary(<<0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A, _::binary>>),
-      do: "image/png"
+    do: "image/png"
 
   def type_from_binary(<<0xFF, 0xD8, 0xFF, _::binary>>), do: "image/jpg"
   def type_from_binary(<<0x47, 0x49, 0x46, _::binary>>), do: "image/gif"
