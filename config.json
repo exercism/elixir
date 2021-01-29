@@ -1822,5 +1822,19 @@
       "content": "Elixir runs on the Erlang VM, known for running low-latency, distributed and fault-tolerant systems.",
       "icon": "TODO"
     }
+  ],
+  "tags": [
+    "paradigm/functional",
+    "typing/dynamic",
+    "typing/strong",
+    "execution_mode/compiled",
+    "platform/windows",
+    "platform/mac",
+    "platform/linux",
+    "runtime/beam",
+    "used_for/backends",
+    "used_for/embedded_systems",
+    "used_for/financial_systems",
+    "used_for/web_development"
   ]
 }
