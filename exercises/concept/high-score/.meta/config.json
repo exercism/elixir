@@ -5,9 +5,10 @@
       "exercism_username": "neenjaw"
     }
   ],
-  "editor": {
-    "solution_files": ["lib/high_score.ex"],
-    "test_files": ["test/high_score_test.exs"]
+  "files": {
+    "solution": ["lib/high_score.ex"],
+    "test": ["test/high_score_test.exs"],
+    "exemplar": [".meta/exemplar.ex"]
   },
   "language_versions": ">=1.10"
 }

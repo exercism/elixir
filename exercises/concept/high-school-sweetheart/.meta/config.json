@@ -11,9 +11,10 @@
       "exercism_username": "neenjaw"
     }
   ],
-  "editor": {
-    "solution_files": ["lib/high_school_sweetheart.ex"],
-    "test_files": ["test/high_school_sweetheart_test.exs"]
+  "files": {
+    "solution": ["lib/high_school_sweetheart.ex"],
+    "test": ["test/high_school_sweetheart_test.exs"],
+    "exemplar": [".meta/exemplar.ex"]
   },
   "language_versions": ">=1.10"
 }

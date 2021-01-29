@@ -19,9 +19,10 @@
       "exercism_username": "efx"
     }
   ],
-  "editor": {
-    "solution_files": ["lib/community_garden.ex"],
-    "test_files": ["test/community_garden_test.exs"]
+  "files": {
+    "solution": ["lib/community_garden.ex"],
+    "test": ["test/community_garden_test.exs"],
+    "exemplar": [".meta/exemplar.ex"]
   },
   "language_versions": ">=1.10"
 }

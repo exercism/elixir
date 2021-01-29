@@ -15,9 +15,10 @@
       "exercism_username": "NobbZ"
     }
   ],
-  "editor": {
-    "solution_files": ["lib/dna.ex"],
-    "test_files": ["test/dna_test.exs"]
+  "files": {
+    "solution": ["lib/dna.ex"],
+    "test": ["test/dna_test.exs"],
+    "exemplar": [".meta/exemplar.ex"]
   },
   "language_versions": ">=1.10"
 }

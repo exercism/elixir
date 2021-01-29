@@ -11,9 +11,10 @@
       "exercism_username": "neenjaw"
     }
   ],
-  "editor": {
-    "solution_files": ["lib/username.ex"],
-    "test_files": ["test/username_test.exs"]
+  "files": {
+    "solution": ["lib/username.ex"],
+    "test": ["test/username_test.exs"],
+    "exemplar": [".meta/exemplar.ex"]
   },
   "language_versions": ">=1.10"
 }

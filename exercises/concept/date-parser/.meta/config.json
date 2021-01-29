@@ -11,9 +11,10 @@
       "exercism_username": "angelikatyborska"
     }
   ],
-  "editor": {
-    "solution_files": ["lib/date_parser.ex"],
-    "test_files": ["test/date_parser_test.exs"]
+  "files": {
+    "solution": ["lib/date_parser.ex"],
+    "test": ["test/date_parser_test.exs"],
+    "exemplar": [".meta/exemplar.ex"]
   },
   "language_versions": ">=1.10"
 }

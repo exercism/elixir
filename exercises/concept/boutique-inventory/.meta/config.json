@@ -11,9 +11,10 @@
       "exercism_username": "neenjaw"
     }
   ],
-  "editor": {
-    "solution_files": ["lib/boutique_inventory.ex"],
-    "test_files": ["test/boutique_inventory_test.exs"]
+  "files": {
+    "solution": ["lib/boutique_inventory.ex"],
+    "test": ["test/boutique_inventory_test.exs"],
+    "exemplar": [".meta/exemplar.ex"]
   },
   "language_versions": ">=1.10"
 }

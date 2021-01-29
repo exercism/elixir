@@ -11,9 +11,10 @@
       "exercism_username": "angelikatyborska"
     }
   ],
-  "editor": {
-    "solution_files": ["lib/boutique_suggestions.ex"],
-    "test_files": ["test/boutique_suggestions_test.exs"]
+  "files": {
+    "solution": ["lib/boutique_suggestions.ex"],
+    "test": ["test/boutique_suggestions_test.exs"],
+    "exemplar": [".meta/exemplar.ex"]
   },
   "language_versions": ">=1.10"
 }

@@ -11,9 +11,10 @@
       "exercism_username": "angelikatyborska"
     }
   ],
-  "editor": {
-    "solution_files": ["lib/lasagna.ex"],
-    "test_files": ["test/lasagna_test.exs"]
+  "files": {
+    "solution": ["lib/lasagna.ex"],
+    "test": ["test/lasagna_test.exs"],
+    "exemplar": [".meta/exemplar.ex"]
   },
   "forked_from": ["csharp/basics"],
   "language_versions": ">=1.10"

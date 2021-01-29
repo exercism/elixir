@@ -11,9 +11,10 @@
       "exercism_username": "Cohen-Carlisle"
     }
   ],
-  "editor": {
-    "solution_files": ["lib/rules.ex"],
-    "test_files": ["test/rules_test.exs"]
+  "files": {
+    "solution": ["lib/rules.ex"],
+    "test": ["test/rules_test.exs"],
+    "exemplar": [".meta/exemplar.ex"]
   },
   "language_versions": ">=1.10"
 }

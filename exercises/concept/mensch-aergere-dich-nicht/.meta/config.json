@@ -11,9 +11,10 @@
       "exercism_username": "neenjaw"
     }
   ],
-  "editor": {
-    "solution_files": ["lib/mensch_aergere_dich_nicht.ex"],
-    "test_files": ["test/mensch_aergere_dich_nicht_test.exs"]
+  "files": {
+    "solution": ["lib/mensch_aergere_dich_nicht.ex"],
+    "test": ["test/mensch_aergere_dich_nicht_test.exs"],
+    "exemplar": [".meta/exemplar.ex"]
   },
   "language_versions": ">=1.10"
 }
