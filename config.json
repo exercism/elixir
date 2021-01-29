@@ -22,7 +22,8 @@
         "concepts": [
           "basics"
         ],
-        "prerequisites": []
+        "prerequisites": [],
+        "status": "wip"
       },
       {
         "slug": "pacman-rules",
@@ -32,7 +33,8 @@
         ],
         "prerequisites": [
           "basics"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "freelancer-rates",
@@ -43,7 +45,8 @@
         ],
         "prerequisites": [
           "basics"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "log-level",
@@ -54,7 +57,8 @@
         ],
         "prerequisites": [
           "booleans"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "language-list",
@@ -64,7 +68,8 @@
         ],
         "prerequisites": [
           "booleans"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "guessing-game",
@@ -76,7 +81,8 @@
         ],
         "prerequisites": [
           "cond"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "secrets",
@@ -88,7 +94,8 @@
         ],
         "prerequisites": [
           "basics"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "kitchen-calculator",
@@ -101,7 +108,8 @@
           "atoms",
           "floating-point-numbers",
           "multiple-clause-functions"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "high-school-sweetheart",
@@ -112,7 +120,8 @@
         "prerequisites": [
           "lists",
           "pattern-matching"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "name-badge",
@@ -124,7 +133,8 @@
         "prerequisites": [
           "strings",
           "booleans"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "high-score",
@@ -138,7 +148,8 @@
           "tuples",
           "anonymous-functions",
           "default-arguments"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "bird-count",
@@ -151,7 +162,8 @@
           "pattern-matching",
           "multiple-clause-functions",
           "guards"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "german-sysadmin",
@@ -165,7 +177,8 @@
           "recursion",
           "pattern-matching",
           "guards"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "basketball-website",
@@ -178,7 +191,8 @@
           "strings",
           "recursion",
           "nil"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "file-sniffer",
@@ -191,7 +205,8 @@
           "pattern-matching",
           "if",
           "bitstrings"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "dna-encoding",
@@ -205,7 +220,8 @@
           "charlists",
           "recursion",
           "pattern-matching"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "boutique-inventory",
@@ -220,7 +236,8 @@
           "tuples",
           "nil",
           "anonymous-functions"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "rpn-calculator",
@@ -234,7 +251,8 @@
           "anonymous-functions",
           "pattern-matching",
           "structs"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "remote-control-car",
@@ -250,7 +268,8 @@
           "nil",
           "default-arguments",
           "keyword-lists"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "stack-underflow",
@@ -261,7 +280,8 @@
         "prerequisites": [
           "access-behaviour",
           "errors"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "wine-cellar",
@@ -275,7 +295,8 @@
           "atoms",
           "if",
           "default-arguments"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "rpn-calculator-output",
@@ -288,7 +309,8 @@
         "prerequisites": [
           "file",
           "try-rescue"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "take-a-number",
@@ -303,7 +325,8 @@
           "recursion",
           "pattern-matching",
           "tuples"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "mensch-aergere-dich-nicht",
@@ -319,7 +342,8 @@
           "if",
           "ranges",
           "randomness"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "community-garden",
@@ -331,7 +355,8 @@
           "processes",
           "maps",
           "structs"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "date-parser",
@@ -341,7 +366,8 @@
         ],
         "prerequisites": [
           "strings"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "boutique-suggestions",
@@ -355,7 +381,8 @@
           "maps",
           "keyword-lists",
           "tuples"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "bread-and-potions",
@@ -366,7 +393,8 @@
         "prerequisites": [
           "structs",
           "nil"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "rpg-character-sheet",
@@ -379,7 +407,8 @@
           "strings",
           "maps",
           "atoms"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "captains-log",
@@ -396,7 +425,8 @@
           "strings",
           "charlists",
           "atoms"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "chessboard",
@@ -410,7 +440,8 @@
           "integers",
           "bitstrings",
           "charlists"
-        ]
+        ],
+        "status": "wip"
       },
       {
         "slug": "newsletter",
@@ -425,7 +456,8 @@
           "io",
           "processes",
           "pids"
-        ]
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
