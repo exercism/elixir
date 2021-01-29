@@ -14,9 +14,6 @@
     "indent_style": "space",
     "indent_size": 2
   },
-  "foregone": [
-    "robot-name"
-  ],
   "exercises": {
     "practice": [
       {
@@ -1054,6 +1051,9 @@
           "structs"
         ]
       }
+    ],
+    "foregone": [
+      "robot-name"
     ]
   }
 }
