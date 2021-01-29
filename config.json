@@ -1790,5 +1790,37 @@
       "name": "Tuples",
       "blurb": "TODO: add blurb for tuples concept"
     }
+  ],
+  "key_features": [
+    {
+      "title": "General-purpose",
+      "content": "Elixir is used for web development, embedded software, data ingestion, and multimedia processing.",
+      "icon": "TODO"
+    },
+    {
+      "title": "Functional",
+      "content": "Multi-clause functions with pattern matching and guards are the building blocks of Elixir code.",
+      "icon": "TODO"
+    },
+    {
+      "title": "Dynamically typed",
+      "content": "Elixir has no compile-time type checks, favoring run-time pattern matching.",
+      "icon": "TODO"
+    },
+    {
+      "title": "Immutable",
+      "content": "All data in Elixir is immutable, allowing for safer and easier-to-reason-about concurrency.",
+      "icon": "TODO"
+    },
+    {
+      "title": "Concurrent",
+      "content": "Elixir uses the actor model - shared-nothing concurrency via message passing.",
+      "icon": "TODO"
+    },
+    {
+      "title": "Fault tolerant",
+      "content": "Elixir runs on the Erlang VM, known for running low-latency, distributed and fault-tolerant systems.",
+      "icon": "TODO"
+    }
   ]
 }
