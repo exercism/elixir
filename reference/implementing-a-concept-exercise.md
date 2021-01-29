@@ -95,11 +95,11 @@ If you have any questions regarding implementing the exercise, please post them 
 [analyzer]: https://github.com/exercism/elixir-analyzer
 [representer]: https://github.com/exercism/elixir-representer
 [concept-exercises]: ../exercises/concept/README.md
-[how-to-implement-a-concept-exercise]: ../../../docs/maintainers/generic-how-to-implement-a-concept-exercise.md
-[docs-concept-exercises]: ../../../docs/concept-exercises.md
-[docs-rationale-for-v3]: ../../../docs/rationale-for-v3.md
-[docs-features-of-v3]: ../../../docs/features-of-v3.md
+[how-to-implement-a-concept-exercise]: https://github.com/exercism/v3/blob/main/docs/maintainers/generic-how-to-implement-a-concept-exercise.md
+[docs-concept-exercises]: https://github.com/exercism/v3/blob/main/docs/concept-exercises.md
+[docs-rationale-for-v3]: https://github.com/exercism/v3/blob/main/docs/rationale-for-v3.md
+[docs-features-of-v3]: https://github.com/exercism/v3/blob/main/docs/features-of-v3.md
 [anatomy-of-a-concept-exercise]: https://www.youtube.com/watch?v=gkbBqd7hPrA
-[reference]: ../../../reference/README.md
+[reference]: https://github.com/exercism/v3/blob/main/reference/README.md
 [config-json]: https://github.com/exercism/v3/blob/master/docs/concept-exercises.md#metaconfigjson
 [implemented-exercises]: ../exercises/concept/README.md#implemented-exercises
