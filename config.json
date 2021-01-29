@@ -1500,5 +1500,295 @@
     "foregone": [
       "robot-name"
     ]
-  }
+  },
+  "concepts": [
+    {
+      "uuid": "da243817-5c15-461c-8305-dba188b6a527",
+      "slug": "file",
+      "name": "File",
+      "blurb": "TODO: add blurb for file concept"
+    },
+    {
+      "uuid": "e95023cf-6928-4ccc-ae09-d3cb93d96d0e",
+      "slug": "access-behaviour",
+      "name": "Access Behaviour",
+      "blurb": "TODO: add blurb for access-behaviour concept"
+    },
+    {
+      "uuid": "a5a3b2bb-fe4d-4a0b-97a3-c56ddfa9b650",
+      "slug": "agent",
+      "name": "Agent",
+      "blurb": "TODO: add blurb for agent concept"
+    },
+    {
+      "uuid": "a5b7f41f-9f07-4996-8032-05225f0ef639",
+      "slug": "anonymous-functions",
+      "name": "Anonymous Functions",
+      "blurb": "In addition to named functions organized in modules, Elixir has anonymous functions that can be defined dynamically as needed."
+    },
+    {
+      "uuid": "0bc1ad03-5ec7-4269-ad33-df6decbb5ee2",
+      "slug": "atoms",
+      "name": "Atoms",
+      "blurb": "TODO: add blurb for atoms concept"
+    },
+    {
+      "uuid": "5bd736ed-290d-4d1b-9668-36a704cbe236",
+      "slug": "basics",
+      "name": "Basics",
+      "blurb": "Elixir is a functional, dynamically-typed language. Elixir code is organized into modules which contain public and private named functions. There are no compile-time type checks. Variables can be bound and re-bound to data of any type."
+    },
+    {
+      "uuid": "d291ca4b-7163-43e4-ab02-383904f19c34",
+      "slug": "binaries",
+      "name": "Binaries",
+      "blurb": "TODO: add blurb for binaries concept"
+    },
+    {
+      "uuid": "ffd52ca2-8d45-4bce-a048-5d6c99dc8571",
+      "slug": "bit-manipulation",
+      "name": "Bit Manipulation",
+      "blurb": "Bitwise operations, such as AND, OR, and XOR, can be performed on integers using functions from the Bitwise module."
+    },
+    {
+      "uuid": "71d2383f-fa4e-4309-a0ce-7b05312f3259",
+      "slug": "bitstrings",
+      "name": "Bitstrings",
+      "blurb": "TODO: add blurb for bitstrings concept"
+    },
+    {
+      "uuid": "e1c4540a-12ae-4986-a604-07f38d46b498",
+      "slug": "booleans",
+      "name": "Booleans",
+      "blurb": "Elixir represents true and false values with the boolean type. Booleans can be combined into expressions using boolean operators \"not\", \"or\", and \"and\"."
+    },
+    {
+      "uuid": "cc1d6b46-976a-481f-96e2-7d3eadea7603",
+      "slug": "case",
+      "name": "Case",
+      "blurb": "TODO: add blurb for case concept"
+    },
+    {
+      "uuid": "7fe6a6a2-34f7-4786-a2af-1d3e2a977bc7",
+      "slug": "charlists",
+      "name": "Charlists",
+      "blurb": "TODO: add blurb for charlists concept"
+    },
+    {
+      "uuid": "bc688f4f-e8a1-44d8-a5aa-eceb8e725ce2",
+      "slug": "closures",
+      "name": "Closures",
+      "blurb": "Anonymous functions in Elixir are closures. They can access variables that are in scope when the function is defined."
+    },
+    {
+      "uuid": "1e7bb8a6-9620-4474-b01e-a232408e9b65",
+      "slug": "cond",
+      "name": "Cond",
+      "blurb": "There are three conditional expressions in Elixir: if, case, and cond. Cond is usually used when there are more than two logical branches and each branch has a condition based on different variables."
+    },
+    {
+      "uuid": "337ea0be-2978-48a1-ba10-0c29d7018a99",
+      "slug": "default-arguments",
+      "name": "Default Arguments",
+      "blurb": "TODO: add blurb for default-arguments concept"
+    },
+    {
+      "uuid": "c809ee97-03d1-42a9-ae72-af1c4042b974",
+      "slug": "dynamic-dispatch",
+      "name": "Dynamic Dispatch",
+      "blurb": "TODO: add blurb for dynamic-dispatch concept"
+    },
+    {
+      "uuid": "34f0a21f-1ec5-4042-9efe-0c3ae7e35fbb",
+      "slug": "enum",
+      "name": "Enum",
+      "blurb": "TODO: add blurb for enum concept"
+    },
+    {
+      "uuid": "4d8c1cac-ab6b-4d7a-b0c9-faef14b523a8",
+      "slug": "erlang-libraries",
+      "name": "Erlang Libraries",
+      "blurb": "TODO: add blurb for erlang-libraries concept"
+    },
+    {
+      "uuid": "3f8ca849-0546-4fd0-b55d-a617a9e119ee",
+      "slug": "errors",
+      "name": "Errors",
+      "blurb": "TODO: add blurb for errors concept"
+    },
+    {
+      "uuid": "586001b3-974f-468e-9f7c-45a8c74e6f39",
+      "slug": "exceptions",
+      "name": "Exceptions",
+      "blurb": "TODO: add blurb for exceptions concept"
+    },
+    {
+      "uuid": "a0a894e1-c54d-4c7a-89bf-653e6efb0039",
+      "slug": "floating-point-numbers",
+      "name": "Floating Point Numbers",
+      "blurb": "There are two different kinds of numbers in Elixir - integers and floats. Floats are numbers with one or more digits behind the decimal separator."
+    },
+    {
+      "uuid": "5dd6841b-3875-499c-9de7-4cf4d033e68f",
+      "slug": "guards",
+      "name": "Guards",
+      "blurb": "TODO: add blurb for guards concept"
+    },
+    {
+      "uuid": "6bafcc9f-7e2b-4240-a487-be15030cf4a3",
+      "slug": "if",
+      "name": "If",
+      "blurb": "TODO: add blurb for if concept"
+    },
+    {
+      "uuid": "bab00476-4570-41c3-b74a-ba6c1a567c49",
+      "slug": "integers",
+      "name": "Integers",
+      "blurb": "There are two different kinds of numbers in Elixir - integers and floats. Integers are whole numbers."
+    },
+    {
+      "uuid": "776919ef-6e4a-40d6-8977-9da237d8cc14",
+      "slug": "io",
+      "name": "IO",
+      "blurb": "TODO: add blurb for io concept"
+    },
+    {
+      "uuid": "a07081f3-c517-46ea-b68f-27f7e048cb5e",
+      "slug": "keyword-lists",
+      "name": "Keyword Lists",
+      "blurb": "TODO: add blurb for keyword-lists concept"
+    },
+    {
+      "uuid": "9db9d827-ea45-46ca-bc0c-ef81363f9492",
+      "slug": "list-comprehensions",
+      "name": "List Comprehensions",
+      "blurb": "TODO: add blurb for list-comprehensions concept"
+    },
+    {
+      "uuid": "68417562-6ef3-4a1d-9983-96b4182d444f",
+      "slug": "lists",
+      "name": "Lists",
+      "blurb": "TODO: add blurb for lists concept"
+    },
+    {
+      "uuid": "c1dca378-b124-4b9b-8822-ddfa23643047",
+      "slug": "maps",
+      "name": "Maps",
+      "blurb": "TODO: add blurb for maps concept"
+    },
+    {
+      "uuid": "0b4e7214-657f-40db-a30b-ee0a0b0552c3",
+      "slug": "module-attributes-as-constants",
+      "name": "Module Attributes As Constants",
+      "blurb": "TODO: add blurb for module-attributes-as-constants concept"
+    },
+    {
+      "uuid": "01211dc2-c8e1-4621-99a2-6aa66080839a",
+      "slug": "multiple-clause-functions",
+      "name": "Multiple Clause Functions",
+      "blurb": "TODO: add blurb for multiple-clause-functions concept"
+    },
+    {
+      "uuid": "e2868bb9-b384-45b6-8bdf-08e9a1ba4eea",
+      "slug": "nil",
+      "name": "Nil",
+      "blurb": "TODO: add blurb for nil concept"
+    },
+    {
+      "uuid": "bf0232ea-f5e7-465e-a942-b126f118f05a",
+      "slug": "pattern-matching",
+      "name": "Pattern Matching",
+      "blurb": "TODO: add blurb for pattern-matching concept"
+    },
+    {
+      "uuid": "fe428299-37fd-4c7f-a498-fad1977390fb",
+      "slug": "pids",
+      "name": "PIDs",
+      "blurb": "TODO: add blurb for pids concept"
+    },
+    {
+      "uuid": "36c21dce-62d5-4865-bf67-96ca6037a4a4",
+      "slug": "pipe-operator",
+      "name": "Pipe Operator",
+      "blurb": "TODO: add blurb for pipe-operator concept"
+    },
+    {
+      "uuid": "410a2c9b-de5f-4501-a01a-ca65a1f22ef2",
+      "slug": "processes",
+      "name": "Processes",
+      "blurb": "TODO: add blurb for processes concept"
+    },
+    {
+      "uuid": "39a458dd-287f-482c-8fee-111beb4945e4",
+      "slug": "protocols",
+      "name": "Protocols",
+      "blurb": "TODO: add blurb for protocols concept"
+    },
+    {
+      "uuid": "e48688fd-1216-4b3e-ba04-1d69e4d47000",
+      "slug": "randomness",
+      "name": "Randomness",
+      "blurb": "TODO: add blurb for randomness concept"
+    },
+    {
+      "uuid": "b2165ae4-a742-4230-8297-11e65882ce2c",
+      "slug": "ranges",
+      "name": "Ranges",
+      "blurb": "TODO: add blurb for ranges concept"
+    },
+    {
+      "uuid": "fc21f957-faac-41f3-ad94-fd643a4a0787",
+      "slug": "recursion",
+      "name": "Recursion",
+      "blurb": "TODO: add blurb for recursion concept"
+    },
+    {
+      "uuid": "ddd88935-a304-4a9e-8b28-a2a877c22e3b",
+      "slug": "regular-expressions",
+      "name": "Regular Expressions",
+      "blurb": "TODO: add blurb for regular-expressions concept"
+    },
+    {
+      "uuid": "442e8992-9eed-4b11-bd97-edf23ab0dc7b",
+      "slug": "streams",
+      "name": "Streams",
+      "blurb": "TODO: add blurb for streams concept"
+    },
+    {
+      "uuid": "c7ad7fb0-0efc-4d5f-a501-2abe5e048ac7",
+      "slug": "strings",
+      "name": "Strings",
+      "blurb": "TODO: add blurb for strings concept"
+    },
+    {
+      "uuid": "de1ee106-da36-44ed-8eeb-988f079641d6",
+      "slug": "structs",
+      "name": "Structs",
+      "blurb": "TODO: add blurb for structs concept"
+    },
+    {
+      "uuid": "2b2632d6-84a5-45d8-a686-d4b995300beb",
+      "slug": "tail-call-recursion",
+      "name": "Tail Call Recursion",
+      "blurb": "TODO: add blurb for tail-call-recursion concept"
+    },
+    {
+      "uuid": "eef1727c-e5d3-41de-801b-a57b85051363",
+      "slug": "try-rescue",
+      "name": "Try Rescue",
+      "blurb": "TODO: add blurb for try-rescue concept"
+    },
+    {
+      "uuid": "3beba34b-0675-48bf-9fe5-0e7e36eb6eea",
+      "slug": "try-rescue-else-after",
+      "name": "Try Rescue Else After",
+      "blurb": "TODO: add blurb for try-rescue-else-after concept"
+    },
+    {
+      "uuid": "41100681-1d36-4cb6-8968-e9e815ca161d",
+      "slug": "tuples",
+      "name": "Tuples",
+      "blurb": "TODO: add blurb for tuples concept"
+    }
+  ]
 }
