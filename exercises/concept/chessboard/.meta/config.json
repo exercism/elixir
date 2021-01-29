@@ -11,9 +11,10 @@
       "exercism_username": "neenjaw"
     }
   ],
-  "editor": {
-    "solution_files": ["lib/chessboard.ex"],
-    "test_files": ["test/chessboard_test.exs"]
+  "files": {
+    "solution": ["lib/chessboard.ex"],
+    "test": ["test/chessboard_test.exs"],
+    "exemplar": [".meta/exemplar.ex"]
   },
   "language_versions": ">=1.10"
 }

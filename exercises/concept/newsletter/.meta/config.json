@@ -5,9 +5,10 @@
       "exercism_username": "angelikatyborska"
     }
   ],
-  "editor": {
-    "solution_files": ["lib/newsletter.ex"],
-    "test_files": ["test/newsletter_test.exs"]
+  "files": {
+    "solution": ["lib/newsletter.ex"],
+    "test": ["test/newsletter_test.exs"],
+    "exemplar": [".meta/exemplar.ex"]
   },
   "language_versions": ">=1.10"
 }

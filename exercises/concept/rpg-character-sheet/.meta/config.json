@@ -11,9 +11,10 @@
       "exercism_username": "neenjaw"
     }
   ],
-  "editor": {
-    "solution_files": ["lib/rpg/character_sheet.ex"],
-    "test_files": ["test/rpg/character_sheet_test.exs"]
+  "files": {
+    "solution": ["lib/rpg/character_sheet.ex"],
+    "test": ["test/rpg/character_sheet_test.exs"],
+    "exemplar": [".meta/exemplar.ex"]
   },
   "language_versions": ">=1.10"
 }

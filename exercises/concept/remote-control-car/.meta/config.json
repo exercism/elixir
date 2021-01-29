@@ -11,9 +11,10 @@
       "exercism_username": "angelikatyborska"
     }
   ],
-  "editor": {
-    "solution_files": ["lib/remote_control_car.ex"],
-    "test_files": ["test/remote_control_car_test.exs"]
+  "files": {
+    "solution": ["lib/remote_control_car.ex"],
+    "test": ["test/remote_control_car_test.exs"],
+    "exemplar": [".meta/exemplar.ex"]
   },
   "forked_from": ["csharp/classes"],
   "language_versions": ">=1.10"

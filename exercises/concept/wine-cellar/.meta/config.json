@@ -11,9 +11,10 @@
       "exercism_username": "neenjaw"
     }
   ],
-  "editor": {
-    "solution_files": ["lib/wine_cellar.ex"],
-    "test_files": ["test/wine_cellar_test.exs"]
+  "files": {
+    "solution": ["lib/wine_cellar.ex"],
+    "test": ["test/wine_cellar_test.exs"],
+    "exemplar": [".meta/exemplar.ex"]
   },
   "language_versions": ">=1.10"
 }

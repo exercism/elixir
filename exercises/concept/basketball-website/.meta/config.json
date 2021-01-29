@@ -15,9 +15,10 @@
       "exercism_username": "NobbZ"
     }
   ],
-  "editor": {
-    "solution_files": ["lib/basketball_website.ex"],
-    "test_files": ["test/basketball_website_test.exs"]
+  "files": {
+    "solution": ["lib/basketball_website.ex"],
+    "test": ["test/basketball_website_test.exs"],
+    "exemplar": [".meta/exemplar.ex"]
   },
   "language_versions": ">=1.10"
 }

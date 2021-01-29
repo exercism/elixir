@@ -11,9 +11,10 @@
       "exercism_username": "angelikatyborska"
     }
   ],
-  "editor": {
-    "solution_files": ["lib/rpn_calculator/output.ex"],
-    "test_files": ["test/rpn_calculator/output_test.exs"]
+  "files": {
+    "solution": ["lib/rpn_calculator/output.ex"],
+    "test": ["test/rpn_calculator/output_test.exs"],
+    "exemplar": [".meta/exemplar.ex"]
   },
   "language_versions": ">=1.10"
 }
