@@ -1,5 +1,6 @@
 {
   "language": "Elixir",
+  "slug": "elixir",
   "active": true,
   "status": {
     "concept_exercises": false,
