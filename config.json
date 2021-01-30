@@ -1710,7 +1710,7 @@
       "uuid": "36c21dce-62d5-4865-bf67-96ca6037a4a4",
       "slug": "pipe-operator",
       "name": "Pipe Operator",
-      "blurb": "TODO: add blurb for pipe-operator concept"
+      "blurb": "The `|>` operator is called the pipe operator. It can be used to chain function calls together in such a way that the value returned by the previous function call is passed as the first argument to the next function call."
     },
     {
       "uuid": "410a2c9b-de5f-4501-a01a-ca65a1f22ef2",
