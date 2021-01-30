@@ -4,7 +4,7 @@
   - Bytes can represent numbers from `0` to `255`
   - [Hexadecimal][wiki-hexadecimal] integer values are common when working with bytes: `0x00` to `0xFF`.
 - Binary literals are defined using the [`<<>>` special form][special-form].
-  - If you use an integer larger than `255` for a byte, only the last 8 bits are used, unless you specify the [unit and/or size to use][bin-size] using the [`::`][typespec] operator.
+  - If you use an integer larger than `255` for a byte, only the last 8 bits are used, unless you specify the [unit and/or size to use][bin-size] using the [`::`][type-operator] operator.
 - [`<>/2`][bin-concat] can be used to concatenate bitstrings/binaries/strings.
 
 ```elixir
@@ -15,7 +15,7 @@
 <<"Hello">> == <<72, 101, 108, 108, 111>>
 ```
 
-> A _null-byte_ is another name for `<<0>>`
+A _null-byte_ is another name for `<<0>>`.
 
 ## Strings are encoded binary data
 
@@ -64,3 +64,4 @@ This can be also done for strings:
 [wiki-byte]: https://en.wikipedia.org/wiki/Byte
 [wiki-hexadecimal]: https://en.wikipedia.org/wiki/Hexadecimal
 [wiki-utf8]: https://en.wikipedia.org/wiki/UTF-8
+[type-operator]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#%3C%3C%3E%3E/1

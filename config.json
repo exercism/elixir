@@ -1542,7 +1542,7 @@
       "uuid": "d291ca4b-7163-43e4-ab02-383904f19c34",
       "slug": "binaries",
       "name": "Binaries",
-      "blurb": "TODO: add blurb for binaries concept"
+      "blurb": "The binary type is a specialization of the bitstring type. It's a bitstring whose number of bits is divisible by 8."
     },
     {
       "uuid": "ffd52ca2-8d45-4bce-a048-5d6c99dc8571",
