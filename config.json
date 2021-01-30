@@ -1746,7 +1746,7 @@
       "uuid": "ddd88935-a304-4a9e-8b28-a2a877c22e3b",
       "slug": "regular-expressions",
       "name": "Regular Expressions",
-      "blurb": "TODO: add blurb for regular-expressions concept"
+      "blurb": "Regular expressions in Elixir follow the PCRE specification (Perl Compatible Regular Expressions). They are a very powerful tool for working with strings that can be used in situations where the String module is not enough."
     },
     {
       "uuid": "442e8992-9eed-4b11-bd97-edf23ab0dc7b",
