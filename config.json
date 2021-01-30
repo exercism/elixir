@@ -1638,7 +1638,7 @@
       "uuid": "6bafcc9f-7e2b-4240-a487-be15030cf4a3",
       "slug": "if",
       "name": "If",
-      "blurb": "TODO: add blurb for if concept"
+      "blurb": "There are three conditional expressions in Elixir: if, case, and cond. If is usually used when you need to check for only one condition."
     },
     {
       "uuid": "bab00476-4570-41c3-b74a-ba6c1a567c49",
