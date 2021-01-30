@@ -40,7 +40,7 @@ rm -rf tmp-exercises
 cp -a exercises tmp-exercises
 
 # test each exercise
-for exercise in tmp-exercises/*
+for exercise in tmp-exercises/*/*
 do
   if [ -d $exercise ]
   then
@@ -49,15 +49,23 @@ do
     exercise_name=$(basename $exercise)
     test_count=$((test_count+1))
 
-    printf "\\033[33mTesting\\033[0m: $exercise_name"
+    printf "\\033[33mTesting\\033[0m: $exercise_name "
 
     # Move the example into the lib file
-    for file in lib/*.ex
+    for file in lib/*
     do
-      rm "$file"
+      rm -r "$file"
     done
 
-    mv example.exs lib/example.ex
+    # concept exercises have "exemplar" solutions (ideal, to be strived to)
+    if [ -f .meta/exemplar.ex ]; then
+      mv .meta/exemplar.ex lib/solution.ex
+    fi
+
+    # practice exercises have "example" solutions (one of many possible solutions with no single ideal approach)
+    if [ -f .meta/example.ex ]; then
+      mv .meta/example.ex lib/solution.ex
+    fi
 
     # test compilation with --warnings-as-errors flag as the example and test should not raise any
     compiler_results=$(MIX_ENV=test mix compile --force --warnings-as-errors 2>&1)
@@ -66,7 +74,7 @@ do
     if [ "$compile_exit_code" -eq 0 ]
     then
       # perform unit tests
-      test_results=$(mix test --no-compile --color --no-elixir-version-check --include pending 2> /dev/null)
+      test_results=$(mix test --color --no-elixir-version-check --include pending 2> /dev/null)
       test_exit_code="$?"
     else
       # use code 5 to indicate tests skipped
