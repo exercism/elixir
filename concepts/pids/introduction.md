@@ -1,1 +1,1 @@
-Process identifiers are their own datatype. They function as _mailbox addresses_ - if you have a process' PID, you can send a message to that process. PIDs are usually created indirectly, as a return value of functions that create new processes, like `spawn`.
+Process identifiers are their own data type. They function as _mailbox addresses_ - if you have a process' PID, you can send a message to that process. PIDs are usually created indirectly, as a return value of functions that create new processes, like `spawn`.
