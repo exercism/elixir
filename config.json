@@ -1518,7 +1518,7 @@
       "uuid": "a5a3b2bb-fe4d-4a0b-97a3-c56ddfa9b650",
       "slug": "agent",
       "name": "Agent",
-      "blurb": "TODO: add blurb for agent concept"
+      "blurb": "The Agent module facilitates an abstraction for spawning processes and the receive-send loop."
     },
     {
       "uuid": "a5b7f41f-9f07-4996-8032-05225f0ef639",
