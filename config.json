@@ -1752,7 +1752,7 @@
       "uuid": "442e8992-9eed-4b11-bd97-edf23ab0dc7b",
       "slug": "streams",
       "name": "Streams",
-      "blurb": "TODO: add blurb for streams concept"
+      "blurb": "The Stream module is a lazy alternative to the eager Enum module."
     },
     {
       "uuid": "c7ad7fb0-0efc-4d5f-a501-2abe5e048ac7",
