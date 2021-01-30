@@ -15,7 +15,7 @@ end
 
 At run-time, Elixir will test, from top to bottom of the source file, which function clause to invoke.
 
-Variables that are unused in the function body should be prefixed with an underscore.
+Variables that are unused should be prefixed with an underscore.
 
 ## Guards
 
@@ -24,15 +24,17 @@ Guards are used to prevent Elixir from invoking functions based on evaluation of
 - Must be pure and not mutate any global states.
 - Must return strict `true` or `false` values.
 
-A list of common guards are found in the [Elixir documentation][kernel-guards]
+A list of common guards can be found in the [Elixir documentation][kernel-guards]. It includes type checks, basic arithmetic, comparisons, and strictly boolean operators.
 
 ## Default Arguments
 
-Functions may declare default values for one or more arguments. When compiled, Elixir creates a function definition for `number/0` (no arguments), and `number/1` (one argument).
+Functions may declare default values for one or more arguments. Let's consider this function:
 
 ```elixir
 def number(n \\ 13), do: "That's not my favorite"
 ```
+
+When compiled, Elixir creates a function definition for `number/0` (no arguments), and `number/1` (one argument).
 
 If more than one argument has default values, the default values will be applied to the function from left to right to fill in for missing arguments.
 

@@ -1,8 +1,10 @@
 [
   {
     "url": "https://hexdocs.pm/elixir/Enumerable.html",
-    "description": "enumerable"
+    "description": "The Enumerable protocol"
   },
-  { "url": "https://hexdocs.pm/elixir/Stream.html", "description": "stream" },
-  { "url": "https://hexdocs.pm/elixir/Enum.html", "description": "enum" }
+  {
+    "url": "https://hexdocs.pm/elixir/Stream.html",
+    "description": "The Stream module"
+  }
 ]

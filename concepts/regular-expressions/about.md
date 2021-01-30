@@ -1,13 +1,13 @@
 Regular expressions (regex) are a powerful tool for working with strings in Elixir. Regular expressions in Elixir follow the **PCRE** specification (**P**erl **C**ompatible **R**egular **E**xpressions). String patterns representing the regular expression's meaning are first compiled then used for matching all or part of a string.
 
-In Elixir, the most common way to create regular expressions is using [the `~r` sigil][sigils-regex]. Sigils provide _syntactic sugar_ shortcuts for common tasks in Elixir. In this case, `~r` is a shortcut for using `Regex.compile!/2`.
+In Elixir, the most common way to create regular expressions is using [the `~r` sigil][sigils-regex]. Sigils provide _syntactic sugar_ shortcuts for common tasks in Elixir. In this case, `~r` is a shortcut for using [`Regex.compile!/2`][regex-compile].
 
 ```elixir
 Regex.compile!("test") == ~r/test/
 # => true
 ```
 
-The `=~/2` operator is useful to perform a regex match on a string to return a `boolean` result.
+The [`=~/2`][regex-match-operator] operator is useful to perform a regex match on a string to return a `boolean` result.
 
 ```elixir
 "this is a test" =~ ~r/test/
@@ -51,10 +51,10 @@ The behavior of a regular expression can be modified by appending special flags 
 
 - `caseless` `i` - case insensitive
   ```elixir
-    "A" =~ ~r/a/
-    # => false
-    "A" =~ ~r/a/i
-    # => true
+  "A" =~ ~r/a/
+  # => false
+  "A" =~ ~r/a/i
+  # => true
   ```
 - `unicode` `u` - enables Unicode specific patterns like `\p` and causes character classes like `\w` etc. to also match on Unicode
   ```elixir
@@ -67,7 +67,7 @@ The behavior of a regular expression can be modified by appending special flags 
 
 ## Dynamically building regular expressions
 
-Because the `~r` is a shortcut for `"pattern" |> Regex.escape() |> Regex.compile!()`, you may also use string interpolation to dynamically build a regular expression pattern:
+Because the `~r` sigil is a shortcut for `"pattern" |> Regex.escape() |> Regex.compile!()`, you may also use string interpolation to dynamically build a regular expression pattern:
 
 ```elixir
 anchor = "$"
@@ -82,7 +82,7 @@ regex = ~r/end of the line#{anchor}/
 
 Although regular expressions are powerful, it is not always wise to them:
 
-- They must be compiled before use, this takes computation time and memory
+- They must be compiled before use, this takes computation time and memory.
 - They may be slower than using plain string functions.
 
 As a rule of thumb, it is better to use the [functions from the `String` module][string-functions] whenever possible.
@@ -101,3 +101,5 @@ if String.ends_with?("YELLING!", "!"), do: "Whoa, chill out!"
 [regex-character-classes]: https://hexdocs.pm/elixir/Regex.html#module-character-classes
 [regex-run]: https://hexdocs.pm/elixir/Regex.html#run/3
 [regex-named-captures]: https://hexdocs.pm/elixir/Regex.html#named_captures/3
+[regex-match-operator]: https://hexdocs.pm/elixir/master/Kernel.html#=~/2
+[regex-compile]: https://hexdocs.pm/elixir/master/Regex.html#compile!/2

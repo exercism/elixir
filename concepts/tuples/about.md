@@ -1,4 +1,4 @@
-Tuples are used commonly to group information informally. A common pattern through Elixir is to group function return values with a status.
+Tuples are used commonly to group information informally. A common pattern in Elixir is to group function return values with a status.
 
 ```elixir
 File.read("hello.txt")
@@ -9,7 +9,7 @@ File.read("invalid.txt")
 ```
 
 - Tuple literals are enclosed with curly braces, `{}`.
-- Tuples may hold any data-type in contiguous memory, which is allocated when the tuple is created.
+- Tuples may hold any data type in contiguous memory, which is allocated when the tuple is created.
 - Tuples allow for constant-time read-access.
 - When manipulating a tuple, rather than mutating the existing tuple, a new one is created.
 - The performance characteristics of tuples make them ideal for storing related information together, but not for storing collections of items that need iterating or might grow or shrink. In the latter case, [a list is more appropriate][getting-started-lists-or-tuples].

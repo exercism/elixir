@@ -19,7 +19,7 @@ Erlang functions can be called in the same way we call Elixir functions, with on
 
 The most commonly used Erlang modules provide functionality that Elixir's standard library lacks. They are:
 
-- The `timer` module, which provides functions such as [`sleep/1`][erl-timer-sleep], [`send_after/2`][erl-timer-send-after], and [`send_interval`][erl-timer-send-interval].
+- The `timer` module, which provides functions such as [`sleep/1`][erl-timer-sleep], [`send_after/2`][erl-timer-send-after], and [`send_interval/2`][erl-timer-send-interval].
 - The `rand` module, which provides functions such as [`uniform/0`][erl-rand-uniform], [`normal/0`][erl-rand-normal], and [`seed/2`][erl-rand-seed-2].
 - [`:io_lib.format/2`][erl-io-lib-format] which provides C-style string formatting (using control sequences).
 - The `math` module that provides mathematical functions such as [`sin/1`][erl-math-sin], [`cos/1`][erl-math-cos], [`log2/1`][erl-math-log2], [`log10/1`][erl-math-log10], [`pow/2`][erl-math-pow], and more.

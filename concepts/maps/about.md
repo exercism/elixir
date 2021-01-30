@@ -4,8 +4,8 @@
 - Values can be of any type, they do not have to be unique.
 - Maps do not guarantee the order of their contents despite appearing to do so.
   - Their underlying implementation gives this misperception:
-    - At small sized (<=32 entries), they are implemented as an ordered [Keyword list][keyword-list]
-    - At larger sizes (>32 entries), they are implemented as a [hash array mapped trie][hamt] &#91;[1][stackoverflow]&#93;
+    - At small sized (<=32 entries), they are implemented as an ordered [Keyword list][keyword-list].
+    - At larger sizes (>32 entries), they are implemented as a [hash array mapped trie][hamt] &#91;[1][stackoverflow]&#93;.
 - Maps can be declared with a literal form:
 
   ```elixir
@@ -20,6 +20,9 @@
 
   # A map with the map key %{} with the list value [1,2,3]
   %{%{} => [1,2,3]}
+
+  # A map with keys of different types
+  %{:a => 1, "b" => 2}
   ```
 
 - Maps can also be instantiated using [`Map.new`][map-new] from the [Map module][map-module]. This might be used if you already have an enumerable collection to turn into a list:
@@ -30,7 +33,7 @@
   # => %{a: 1, b: 2}
   ```
 
-- Values in a map can be accessed in many different way:
+- Values in a map can be accessed in many different ways:
 
   ```elixir
   my_map = %{key: "value"}

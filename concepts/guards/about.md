@@ -14,7 +14,7 @@ end
   - Type checks: [`is_integer/1`][guard-is-integer], [`is_list/1`][guard-is-list], [`is_nil/1`][guard-is-nil] etc.
   - Arithmetic operators: [`+/2`][guard-plus], [`-/2`][guard-minus] etc.
   - Comparisons: [`==/2`][guard-equals], [`>/2`][guard-greater], [`</2`][guard-less] etc.
-  - Binary operators: [`and/2`][guard-and], [`or/2`][guard-or], [`not/1`][guard-not]
+  - Boolean operators: [`and/2`][guard-and], [`or/2`][guard-or], [`not/1`][guard-not]
   - Membership operator: [`in/2`][guard-in]
 - You can define your own guard with [`defguard`][defguard].
 

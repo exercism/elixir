@@ -4,11 +4,11 @@ To read a whole file, use [`File.read/1`][file-read]. To write to a file, use [`
 
 The module also provides file functions for copying, removing, renaming etc. Their names are similar to their unix equivalents, for example:
 
-- [`File.cp/3`][file-cp] - copy a file
-- [`File.rm/1`][file-rm] - delete a file
-- [`File.rename/2`][file-rename] - rename and/or move a file
-- [`File.mkdir/1`][file-mkdir] - create a directory
-- [`File.cwd/0`][file-cwd] - get the current working directory
+- [`File.cp/3`][file-cp] - copy a file.
+- [`File.rm/1`][file-rm] - delete a file.
+- [`File.rename/2`][file-rename] - rename and/or move a file.
+- [`File.mkdir/1`][file-mkdir] - create a directory.
+- [`File.cwd/0`][file-cwd] - get the current working directory.
 
 All the mentioned functions from the `File` module also have a `!` variant that raises an error instead of returning an error tuple (e.g. [`File.read!/1`][file-read-bang]). Use that variant if you don't intend to handle errors such missing files or lack of permissions.
 
@@ -79,6 +79,7 @@ Path.expand(Path.join(["~", "documents", "important.txt"]))
 [file-rm]: https://hexdocs.pm/elixir/File.html#rm/1
 [file-cwd]: https://hexdocs.pm/elixir/File.html#cwd/0
 [file-rename]: https://hexdocs.pm/elixir/File.html#rename/2
+[file-mkdir]: https://hexdocs.pm/elixir/File.html#mkdir/1
 [file-copy]: https://hexdocs.pm/elixir/File.html#cp/3
 [file-open]: https://hexdocs.pm/elixir/File.html#open/2
 [file-close]: https://hexdocs.pm/elixir/File.html#close/1

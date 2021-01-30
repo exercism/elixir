@@ -1,6 +1,6 @@
 Each Elixir process has its own unique identifier - a _PID_ (process identifier).
 
-- PIDs are their own datatype.
+- PIDs are their own data type.
   - You can check if a variable is a PID with [`is_pid/1`][kernel-is-pid]
 - You can get the current process' PID with `self()`.
 - PIDs function as _mailbox addresses_ - if you have a process' PID, you can send a message to that process.

@@ -14,7 +14,7 @@ Defined errors:
 
 ## Defining an exception
 
-To define an exception from an error module, use the [`defexception`][defexception] macro function:
+To define an exception from an error module, use the [`defexception`][defexception] macro:
 
 ```elixir
 # Defines a minimal error, with the name `MyError`

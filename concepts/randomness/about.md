@@ -41,7 +41,7 @@ Elixir does not have its own functions for picking a random float. To do that, w
 
 ## Normal distribution
 
-All the functions mentioned above choose a random value with every possible value having the same probability of being chosen. That's called a _uniform distribution_. The `rand` module also offers [`normal/0`][erl-rand-normal-0] and [`normal/2`][erl-rand-normal-1] functions that choose a random float with a [normal distribution][normal-distribution].
+All the functions mentioned above choose a random value with every possible value having the same probability of being chosen. That's called a _uniform distribution_. The `rand` module also offers [`normal/0`][erl-rand-normal-0] and [`normal/2`][erl-rand-normal-2] functions that choose a random float with a [normal distribution][normal-distribution].
 
 ## Seed
 

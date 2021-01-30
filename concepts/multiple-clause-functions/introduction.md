@@ -13,4 +13,4 @@ end
 
 At run-time, Elixir will test, from top to bottom of the source file, which function clause to invoke.
 
-Variables that are unused in the function body should be prefixed with an underscore.
+Variables that are unused should be prefixed with an underscore.
