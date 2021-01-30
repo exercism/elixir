@@ -1764,7 +1764,7 @@
       "uuid": "de1ee106-da36-44ed-8eeb-988f079641d6",
       "slug": "structs",
       "name": "Structs",
-      "blurb": "TODO: add blurb for structs concept"
+      "blurb": "Structs are extensions built on top of maps that provide compile-time checks and default values."
     },
     {
       "uuid": "2b2632d6-84a5-45d8-a686-d4b995300beb",
