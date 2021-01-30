@@ -1620,7 +1620,7 @@
       "uuid": "586001b3-974f-468e-9f7c-45a8c74e6f39",
       "slug": "exceptions",
       "name": "Exceptions",
-      "blurb": "TODO: add blurb for exceptions concept"
+      "blurb": "All errors in Elixir implement the Exception Behaviour. It provides an easy way to create your own custom errors."
     },
     {
       "uuid": "a0a894e1-c54d-4c7a-89bf-653e6efb0039",
