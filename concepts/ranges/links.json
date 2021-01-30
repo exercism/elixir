@@ -1,11 +1,14 @@
 [
-  { "url": "https://hexdocs.pm/elixir/Range.html", "description": "range" },
+  {
+    "url": "https://hexdocs.pm/elixir/Range.html",
+    "description": "The Range module"
+  },
   {
     "url": "https://hexdocs.pm/elixir/Kernel.html#../2",
-    "description": "range-operator"
+    "description": "The range operator"
   },
   {
     "url": "https://hexdocs.pm/elixir/Enumerable.html",
-    "description": "enumerable"
+    "description": "The Enumerable module"
   }
 ]

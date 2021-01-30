@@ -1734,7 +1734,7 @@
       "uuid": "b2165ae4-a742-4230-8297-11e65882ce2c",
       "slug": "ranges",
       "name": "Ranges",
-      "blurb": "TODO: add blurb for ranges concept"
+      "blurb": "Ranges represent a sequence of one or many consecutive integers. They are created using the .. operator and can be both ascending or descending."
     },
     {
       "uuid": "fc21f957-faac-41f3-ad94-fd643a4a0787",
