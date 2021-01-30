@@ -1680,7 +1680,7 @@
       "uuid": "0b4e7214-657f-40db-a30b-ee0a0b0552c3",
       "slug": "module-attributes-as-constants",
       "name": "Module Attributes As Constants",
-      "blurb": "TODO: add blurb for module-attributes-as-constants concept"
+      "blurb": "There are no constants in Elixir. Module attributes may be used to play a similar role."
     },
     {
       "uuid": "01211dc2-c8e1-4621-99a2-6aa66080839a",
