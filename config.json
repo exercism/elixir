@@ -1596,7 +1596,7 @@
       "uuid": "c809ee97-03d1-42a9-ae72-af1c4042b974",
       "slug": "dynamic-dispatch",
       "name": "Dynamic Dispatch",
-      "blurb": "TODO: add blurb for dynamic-dispatch concept"
+      "blurb": "Elixir can resolve a function to be invoked at run-time. The module name, the function name, and the list of arguments don't have to be known during compilation."
     },
     {
       "uuid": "34f0a21f-1ec5-4042-9efe-0c3ae7e35fbb",
