@@ -1512,7 +1512,7 @@
       "uuid": "e95023cf-6928-4ccc-ae09-d3cb93d96d0e",
       "slug": "access-behaviour",
       "name": "Access Behaviour",
-      "blurb": "TODO: add blurb for access-behaviour concept"
+      "blurb": "The Access Behaviour provides a common interface for retrieving key-based data from a data structure. It is implemented for maps and keyword lists."
     },
     {
       "uuid": "a5a3b2bb-fe4d-4a0b-97a3-c56ddfa9b650",
