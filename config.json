@@ -1656,7 +1656,7 @@
       "uuid": "a07081f3-c517-46ea-b68f-27f7e048cb5e",
       "slug": "keyword-lists",
       "name": "Keyword Lists",
-      "blurb": "TODO: add blurb for keyword-lists concept"
+      "blurb": "Keyword lists are a key-value data structure. A keyword list is a list of two-tuples, where the first element in the tuple is an atom. They are often used for passing options to functions."
     },
     {
       "uuid": "9db9d827-ea45-46ca-bc0c-ef81363f9492",
