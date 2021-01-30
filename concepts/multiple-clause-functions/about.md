@@ -16,11 +16,18 @@ def number(_n) do
 end
 ```
 
-- Use [multiple function clauses][multi-function-clause] to extract control logic from functions
-- Clauses are attempted in order, from top to bottom of the source file until one succeeds
+- Use [multiple function clauses][multi-function-clause] to extract control logic from functions.
+- Clauses are attempted in order, from top to bottom of the source file until one succeeds.
 - If none succeed, a `FunctionClauseError` is raised by the BEAM VM.
-- If argument variables are unused in the body of the function, they should be prefixed with an `_` otherwise a warning is emitted by the compiler.
+- If argument variables are not used either in the body of the function or in a guard, they should be prefixed with an `_` otherwise a warning is emitted by the compiler.
+- Anonymous functions can also have multiple clauses.
+    ```elixir
+    fn
+      13 -> "Awesome, that's my favorite"
+      _ -> "That's not my favorite"
+    end
+    ```
 
-Note that multiple clause functions should not be confused with function overloading that you might know from other programming languages. In Elixir, functions are identified by their name and arity only, not types of arguments (since there is no static typing). The function `number/1` is considered to be a single function regardless of how many clauses it has.
+Note that multiple clause functions should not be confused with function overloading that you might know from other programming languages. In Elixir, functions are identified by their name and arity only, not types of arguments (since there is no static typing). The function `number/1` from the example is considered to be a single function regardless of how many clauses it has.
 
 [multi-function-clause]: https://elixir-lang.org/getting-started/modules-and-functions.html#named-functions

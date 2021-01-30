@@ -1686,7 +1686,7 @@
       "uuid": "01211dc2-c8e1-4621-99a2-6aa66080839a",
       "slug": "multiple-clause-functions",
       "name": "Multiple Clause Functions",
-      "blurb": "TODO: add blurb for multiple-clause-functions concept"
+      "blurb": "In Elixir, a single function can have multiple clauses. This is achieved by pattern matching the function's arguments and by using guards."
     },
     {
       "uuid": "e2868bb9-b384-45b6-8bdf-08e9a1ba4eea",
