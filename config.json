@@ -1566,7 +1566,7 @@
       "uuid": "cc1d6b46-976a-481f-96e2-7d3eadea7603",
       "slug": "case",
       "name": "Case",
-      "blurb": "TODO: add blurb for case concept"
+      "blurb": "There are three conditional expressions in Elixir: if, case, and cond. Case is usually used when a single variable needs to be matched against multiple patterns."
     },
     {
       "uuid": "7fe6a6a2-34f7-4786-a2af-1d3e2a977bc7",
