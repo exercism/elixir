@@ -1668,7 +1668,7 @@
       "uuid": "68417562-6ef3-4a1d-9983-96b4182d444f",
       "slug": "lists",
       "name": "Lists",
-      "blurb": "TODO: add blurb for lists concept"
+      "blurb": "Lists are a basic data type in Elixir for holding a collection of values. A list can hold values of different types. Lists are immutable, meaning they cannot be modified. Lists in Elixir are implemented as linked lists. Therefore, accessing an element in a list takes linear time depending on the length of the list."
     },
     {
       "uuid": "c1dca378-b124-4b9b-8822-ddfa23643047",

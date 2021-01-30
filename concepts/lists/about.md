@@ -1,6 +1,6 @@
-[Lists][list] are a basic data type in Elixir for holding a collection of values. Lists are _immutable_, meaning they cannot be modified; any operation that changes a list returns a new list. Lists implement the [Enumerable protocol][enum-protocol], which allows the use of [Enum][enum] and [Stream][stream] module functions.
+[Lists][list] are a basic data type in Elixir for holding a collection of values. Lists are _immutable_, meaning they cannot be modified. Any operation that changes a list returns a new list. Lists implement the [Enumerable protocol][enum-protocol], which allows the use of [Enum][enum] and [Stream][stream] module functions.
 
-Lists in Elixir are implemented as a Linked List, and not as an array of contiguous memory location. Therefore, accessing an element in the list takes linear time depending on the length of the list.
+Lists in Elixir are implemented as [linked lists][linked-list-wiki], and not as arrays of contiguous memory location. Therefore, accessing an element in a list takes linear time depending on the length of the list.
 
 Lists can be written in literal form, head-tail notation, (which uses the `cons` operator `|`), or a combination of both:
 
@@ -12,14 +12,14 @@ Lists can be written in literal form, head-tail notation, (which uses the `cons`
 
 # Head-tail Notation
 []
-[1 | []]
-[1 | [2 | [3 | []]]]
+[1 | []] # same as [1]
+[1 | [2 | [3 | []]]] # same as [1, 2, 3]
 
 # Mixed
-[1 | [2, 3]]
+[1 | [2, 3]] # same as [1, 2, 3]
 ```
 
-There can also be more than one element before the _cons_ [`|`] operator.
+There can also be more than one element before the _cons_ (`|`) operator.
 
 ```elixir
 # Multiple prepends
@@ -54,7 +54,7 @@ There are several common functions for lists:
 - [`length/1`][length] returns the number items in the list.
 - [`in/2`][in] returns a boolean value indicating whether the item is an element in the list.
 
-Lists may contain any data-type and a mix of data-types.
+Lists may contain any data type and a mix of different data types.
 
 ```elixir
 list = [1, :a, 2.0, "string"]
@@ -68,3 +68,4 @@ list = [1, :a, 2.0, "string"]
 [list]: https://hexdocs.pm/elixir/List.html
 [stream]: https://hexdocs.pm/elixir/Stream.html
 [tl]: https://hexdocs.pm/elixir/Kernel.html#tl/1
+[linked-list-wiki]: https://en.wikipedia.org/wiki/Linked_list
