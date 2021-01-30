@@ -1,4 +1,7 @@
 defmodule Secrets do
+  # only needed for Elixir < 1.10
+  require Bitwise
+
   def secret_add(secret) do
     fn x -> x + secret end
   end
