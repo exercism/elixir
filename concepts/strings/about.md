@@ -33,7 +33,7 @@ Any Elixir expression is valid inside the interpolation. If a string is given, t
 #        (elixir 1.10.1) lib/string/chars.ex:22: String.Chars.to_string/1
 ```
 
-Elixir provides many functions for working with strings in the _String module_. If you are unsure how to process a string in the way you need it, make sure to browse [functions available in the _String module_][string-module-functions] and you will most likely find what you need.
+Elixir provides many functions for working with strings in the `String` module. If you are unsure how to process a string in the way you need it, make sure to browse [functions available in the `String` module][string-module-functions] and you will most likely find what you need.
 
 ```elixir
 String.downcase("PLEASE NO SHOUTING")
@@ -55,12 +55,6 @@ Some characters need to be [escaped][escape-characters] to be put in a string, e
 
 ```elixir
 "\"A\" is the \#1st letter of the alphabet.\n"
-```
-
-You can print a string to the console using [`IO.puts/2`][io-puts]:
-
-```elixir
-IO.puts("\"A\" is the \#1st letter of the alphabet.\n")
 ```
 
 To comfortably work with texts with a lot of newlines, use the [triple-double-quote heredoc syntax][heredoc-syntax] instead:

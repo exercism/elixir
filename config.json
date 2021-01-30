@@ -1758,7 +1758,7 @@
       "uuid": "c7ad7fb0-0efc-4d5f-a501-2abe5e048ac7",
       "slug": "strings",
       "name": "Strings",
-      "blurb": "TODO: add blurb for strings concept"
+      "blurb": "Strings in Elixir can easily be concatenated and interpolated, and the String module offers a variety of helpful functions for working with strings."
     },
     {
       "uuid": "de1ee106-da36-44ed-8eeb-988f079641d6",
