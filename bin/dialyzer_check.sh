@@ -15,14 +15,14 @@ for example_file in exercises/concept/**/mix.exs
 do
   exercise_dir=$(dirname $example_file)
   exercise=$(basename $exercise_dir)
-  cp "$exercise_dir/.meta/exemplar.ex" "./tmp/src/$exercise.ex"
+  cp "${exercise_dir}/.meta/exemplar.ex" "./tmp/src/${exercise}.ex"
 done
 
 for example_file in exercises/practice/**/mix.exs
 do
-  exercise_dir=$(dirname $example_file)
-  exercise=$(basename $exercise_dir)
-  cp "$exercise_dir/.meta/example.ex" "./tmp/src/$exercise.ex"
+  exercise_dir=$(dirname "${example_file}")
+  exercise=$(basename "${exercise_dir}")
+  cp "${exercise_dir}/.meta/example.ex" "./tmp/src/${exercise}.ex"
 done
 
 elixirc -o ./_build ./tmp/src/*.ex
