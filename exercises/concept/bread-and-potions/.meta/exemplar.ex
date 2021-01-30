@@ -38,7 +38,7 @@ defmodule RPG do
   end
 
   defimpl Edible, for: Poison do
-    def eat(poison, %Character{} = character) do
+    def eat(_poison, %Character{} = character) do
       updated_character = %{character | health: 0}
       {%EmptyBottle{}, updated_character}
     end
