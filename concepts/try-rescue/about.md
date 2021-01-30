@@ -10,15 +10,15 @@ rescue
 end
 ```
 
-- **Line 1**, the block is declared with `try`
-- **Line 2**, the function call which may generate an error is placed here, in this case we are calling `raise/1`
+- **Line 1**, the block is declared with `try`.
+- **Line 2**, the function call which may generate an error is placed here, in this case we are calling `raise/1`.
 - **Line 3**, in the `rescue` section, we pattern match on the _Module_ name of the error raised
   - on the left side of `->`:
-    - `e` is matched to the error struct
-    - `in` is a keyword in this occurrence
+    - `e` is matched to the error struct.
+    - `in` is a keyword in this occurrence.
     - `RuntimeError` is the module to matched, but can match on any error module, or `_` all errors.
   - on the right side:
-    - the instructions to be executed if the error matches
+    - the instructions to be executed if the error matches.
 
 ## Avoid anti-patterns
 

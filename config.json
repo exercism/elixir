@@ -1775,14 +1775,14 @@
     {
       "uuid": "eef1727c-e5d3-41de-801b-a57b85051363",
       "slug": "try-rescue",
-      "name": "Try Rescue",
-      "blurb": "TODO: add blurb for try-rescue concept"
+      "name": "Try/Rescue",
+      "blurb": "Elixir provides a construct for rescuing from errors using try/rescue."
     },
     {
       "uuid": "3beba34b-0675-48bf-9fe5-0e7e36eb6eea",
       "slug": "try-rescue-else-after",
-      "name": "Try Rescue Else After",
-      "blurb": "TODO: add blurb for try-rescue-else-after concept"
+      "name": "Try/Rescue/Else/After",
+      "blurb": "The try/rescue construct can take two additional options: else and after."
     },
     {
       "uuid": "41100681-1d36-4cb6-8968-e9e815ca161d",
