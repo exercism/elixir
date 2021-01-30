@@ -1722,7 +1722,7 @@
       "uuid": "39a458dd-287f-482c-8fee-111beb4945e4",
       "slug": "protocols",
       "name": "Protocols",
-      "blurb": "TODO: add blurb for protocols concept"
+      "blurb": "Protocols are a mechanism to achieve polymorphism in Elixir when you want behavior to vary depending on the data type."
     },
     {
       "uuid": "e48688fd-1216-4b3e-ba04-1d69e4d47000",

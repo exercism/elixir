@@ -1,14 +1,14 @@
 Protocols are:
 
-- a mechanism to achieve polymorphism.
-- defined with `defprotocol`[defprotocol].
-- implemented for a specific data type with `defimpl`[defimpl].
+- A mechanism to achieve polymorphism.
+- Defined with [`defprotocol`][defprotocol].
+- Implemented for a specific data type with [`defimpl`][defimpl].
 
 A big strength of protocols is that the implementation of a protocol for a specific data type doesn't need to be bundled with the data type's definition or the protocol's definition. This allows for writing libraries that can be easily extended by their users to work with the users' custom data types, without having to modify the library.
 
 ## Implementing
 
-It is possible to implement protocols for all Elixir types: structs, `Tuple`, `Atom`, `List`, `BitString`, `Integer`, `Float`, `Function`, `PID`, `Map`, `Port`, `Reference`, and `Any`.
+It is possible to implement protocols for all Elixir types: `Tuple`, `Atom`, `List`, `BitString`, `Integer`, `Float`, `Function`, `PID`, `Map`, `Port`, `Reference`, `Any`, and structs.
 
 Protocols can be implemented for multiple types at once:
 
@@ -45,7 +45,7 @@ to_string({})
 #        (elixir 1.10.3) lib/string/chars.ex:22: String.Chars.to_string/1
 ```
 
-It is possible to avoid that by providing a fallback implementation that would be used in such a case. To do that, set the `@fallback_to_any` module attribute to `true` when defining the protocol and write an implementation for the `Any` type:
+It is possible to avoid that by providing a fallback implementation that would be used in such a case. To do that, set the [`@fallback_to_any` module attribute][fallback-to-any] to `true` when defining the protocol and write an implementation for the `Any` type:
 
 ```elixir
 defprotocol Reversible do
@@ -80,3 +80,4 @@ Note that in most cases, raising an error is the preferable approach because it'
 [enum-into]: https://hexdocs.pm/elixir/Enum.html#into/2
 [kernel-inspect]: https://hexdocs.pm/elixir/Kernel.html#inspect/2
 [kernel-to-string]: https://hexdocs.pm/elixir/Kernel.html#to_string/1
+[fallback-to-any]: https://hexdocs.pm/elixir/Protocol.html#module-fallback-to-any
