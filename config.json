@@ -1728,7 +1728,7 @@
       "uuid": "e48688fd-1216-4b3e-ba04-1d69e4d47000",
       "slug": "randomness",
       "name": "Randomness",
-      "blurb": "TODO: add blurb for randomness concept"
+      "blurb": "To choose a random element from an enumerable data structure, we use Enum.random. Elixir does not have its own functions for picking a random float. To do that, we have to use the Erlang rand module."
     },
     {
       "uuid": "b2165ae4-a742-4230-8297-11e65882ce2c",
