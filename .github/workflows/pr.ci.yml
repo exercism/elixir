@@ -11,6 +11,10 @@ on: pull_request
 jobs:
   precheck:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        elixir: [1.11]
+        otp: [23.2]
 
     steps:
       - name: Checkout PR
@@ -19,8 +23,8 @@ jobs:
       - name: Use Elixir
         uses: actions/setup-elixir@v1
         with:
-          otp-version: '23.2'
-          elixir-version: '1.11.0'
+          otp-version: ${{matrix.otp}}
+          elixir-version: ${{matrix.elixir}}
 
       - name: Retrieve Mix Dependencies Cache
         uses: actions/cache@v1
