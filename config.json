@@ -1632,7 +1632,7 @@
       "uuid": "5dd6841b-3875-499c-9de7-4cf4d033e68f",
       "slug": "guards",
       "name": "Guards",
-      "blurb": "TODO: add blurb for guards concept"
+      "blurb": "Guards are used to prevent function invocation based on evaluation of the arguments by guard functions. Guards begin with the when keyword, followed by a boolean expression. Guards are used to augment pattern matching with more complex checks."
     },
     {
       "uuid": "6bafcc9f-7e2b-4240-a487-be15030cf4a3",

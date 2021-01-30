@@ -3,4 +3,6 @@ Guards are used to prevent Elixir from invoking functions based on evaluation of
 - Must be pure and not mutate any global states.
 - Must return strict `true` or `false` values.
 
-A list of common guards are found in the [Elixir documentation][kernel-guards]
+A list of common guards can be found in the [Elixir documentation][kernel-guards]. It includes type checks, basic arithmetic, comparisons, and strictly boolean operators.
+
+[kernel-guards]: https://hexdocs.pm/elixir/master/Kernel.html#guards
