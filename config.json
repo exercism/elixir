@@ -1506,7 +1506,7 @@
       "uuid": "da243817-5c15-461c-8305-dba188b6a527",
       "slug": "file",
       "name": "File",
-      "blurb": "TODO: add blurb for file concept"
+      "blurb": "Functions for working with files are provided by the File module."
     },
     {
       "uuid": "e95023cf-6928-4ccc-ae09-d3cb93d96d0e",
