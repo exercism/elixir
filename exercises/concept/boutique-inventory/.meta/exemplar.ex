@@ -16,7 +16,7 @@ defmodule BoutiqueInventory do
   end
 
   def total_quantity(item) do
-    Enum.reduce(Map.get(item, :quantity_by_size), 0, fn {size, quantity}, acc ->
+    Enum.reduce(Map.get(item, :quantity_by_size), 0, fn {_size, quantity}, acc ->
       acc + quantity
     end)
   end

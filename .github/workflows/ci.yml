@@ -14,6 +14,10 @@ on:
 jobs:
   precheck:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        elixir: [1.11]
+        otp: [23.2]
 
     steps:
       - name: Checkout code
@@ -22,15 +26,15 @@ jobs:
       - name: Use Elixir
         uses: actions/setup-elixir@v1
         with:
-          otp-version: '22.2'
-          elixir-version: '1.10.0'
+          otp-version: ${{matrix.otp}}
+          elixir-version: ${{matrix.elixir}}
 
       - name: Retrieve Mix Dependencies Cache
         uses: actions/cache@v1
         id: mix-cache # id to use in retrieve action
         with:
           path: deps
-          key: ${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-mix-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}
+          key: ${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-mix-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}-v2
 
       - name: Install Mix Dependencies
         if: steps.mix-cache.outputs.cache-hit != 'true'
@@ -47,7 +51,7 @@ jobs:
         id: plt-cache
         with:
           path: priv/plts
-          key: ${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-plts-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}
+          key: ${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-plts-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}-v2
 
       - name: Create PLTs
         if: steps.plt-cache.outputs.cache-hit != 'true'
@@ -75,6 +79,8 @@ jobs:
             otp: '21.0'
           - elixir: '1.10.0'
             otp: '22.2'
+          - elixir: '1.11.0'
+            otp: '23.2'
 
     steps:
       - uses: actions/checkout@v2
@@ -89,7 +95,7 @@ jobs:
         id: mix-cache # id to use in retrieve action
         with:
           path: deps
-          key: ${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-mix-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}
+          key: ${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-mix-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}-v2
 
       - name: Install Mix Dependencies
         if: steps.mix-cache.outputs.cache-hit != 'true'

@@ -24,11 +24,13 @@
 
 - Return an anonymous function which performs a [bitwise _and_][bitwise-wiki] operation using the argument passed in to the anonymous function and the argument passed in to `Secret.secret_and/1`
 - Functions in the [Bitwise module][bitwise-hexdocs] may be of use.
+- If you are running Elixir version 1.9 or lower, you will need to call `require Bitwise` at the beginning of the module definition to be able to use the _Bitwise_ module.
 
 ## 6. Create an "xor"-er
 
 - Return an anonymous function which performs a [bitwise _xor_][bitwise-wiki] operation using the argument passed in to the anonymous function and the argument passed in to `Secret.secret_xor/1`
 - Functions in the [Bitwise module][bitwise-hexdocs] may be of use.
+- If you are running Elixir version 1.9 or lower, you will need to call `require Bitwise` at the beginning of the module definition to be able to use the _Bitwise_ module.
 
 ## 7. Create a function combiner
 
