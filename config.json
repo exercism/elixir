@@ -1554,7 +1554,7 @@
       "uuid": "71d2383f-fa4e-4309-a0ce-7b05312f3259",
       "slug": "bitstrings",
       "name": "Bitstrings",
-      "blurb": "TODO: add blurb for bitstrings concept"
+      "blurb": "Elixir provides an elegant syntax to write, match, and construct binary data with bitstrings. A bitstring is a contiguous sequence of bits in memory."
     },
     {
       "uuid": "e1c4540a-12ae-4986-a604-07f38d46b498",

@@ -1,6 +1,6 @@
 [Bitstrings][bitstring] allow programmers to work with binary data effectively.
 
-- You can construct bitstrings elegantly using the [`<<>>` special form][bitstring-form]
+- You can construct bitstrings elegantly using the [`<<>>` special form][bitstring-form].
 
   ```elixir
   <<0b101::3>> == <<5::3>> and <<5::3>> == <<5::size(3)>>
@@ -12,7 +12,7 @@
   # => <<49::size(6)>>
   ```
 
-- You can match using the `<<>>` form and use that match to further [decompose binary data][bitstring-matching]
+- You can match using the `<<>>` form and use that match to further [decompose binary data][bitstring-matching].
 
   ```elixir
   <<data_size::32, count::size(data_size)>> = <<8::32, 3::8>>
@@ -23,7 +23,7 @@
   # => 3
   ```
 
-- You can match on the remainder of the bitstring using `::bitstring`
+- You can match on the remainder of the bitstring using `::bitstring`.
 
   ```elixir
   <<_::32, remainder::bitstring>> = <<8::32, 3::8>>
@@ -32,7 +32,7 @@
   # => <<3>>
   ```
 
-- The binary data*type* is a specific type of bitstring where the number of bits is divisible by 8.
+- The binary data *type* is a specific type of bitstring where the number of bits is divisible by 8.
   - All binaries are bitstrings, but not all bitstrings are binaries.
 - Elixir provides syntactic sugar for working with [integer literals][integer-literal] in different forms:
   - `0b1000001 = ?A = 65`
