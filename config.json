@@ -1572,7 +1572,7 @@
       "uuid": "7fe6a6a2-34f7-4786-a2af-1d3e2a977bc7",
       "slug": "charlists",
       "name": "Charlists",
-      "blurb": "TODO: add blurb for charlists concept"
+      "blurb": "Charlists are an alternative to strings for storing text. A charlist is a list of integers - character code points. Charlists are most often useful when interacting with Erlang, but rarely used in Elixir."
     },
     {
       "uuid": "bc688f4f-e8a1-44d8-a5aa-eceb8e725ce2",
