@@ -6,5 +6,9 @@
   {
     "url": "https://hexdocs.pm/elixir/Enum.html",
     "description": "Documentation - Enum"
+  },
+  {
+    "url": "https://angelika.me/elixir-enum-cheatsheet/",
+    "description": "Enum Cheatsheet"
   }
 ]
