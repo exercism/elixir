@@ -1740,7 +1740,7 @@
       "uuid": "fc21f957-faac-41f3-ad94-fd643a4a0787",
       "slug": "recursion",
       "name": "Recursion",
-      "blurb": "TODO: add blurb for recursion concept"
+      "blurb": "Recursive functions are functions that call themselves. In immutable functional languages like Elixir, recursion is necessary to achieve teh behavior that loops have in other languages."
     },
     {
       "uuid": "ddd88935-a304-4a9e-8b28-a2a877c22e3b",

@@ -22,7 +22,7 @@ def fibonacci(1), do: 1
 def fibonacci(n), do: fibonacci(n - 1) + fibonacci(n - 2)
 ```
 
-Counting the number of occurrences of x in a list has two recursive cases:
+Counting the number of occurrences of some given value `x` in a list has two recursive cases:
 
 ```elixir
 def count_occurrences([], _x), do: 0
@@ -48,8 +48,8 @@ The equivalent of a `for` loop in Elixir would look like this:
 def loop([]), do: nil
 
 def loop([head | tail]) do
-  # do something with head
-  each(tail)
+  do_something(head)
+  loop(tail)
 end
 ```
 
@@ -57,7 +57,7 @@ In practice, iterating over lists and other enumerable data structures is most o
 
 ## Infinite execution
 
-Recursive functions, if implemented incorrectly, might never return their result. This can be problematic because each time a function is called, a reference is stored in memory where the VM should return the result (on the [call stack][wiki call stack]). If a recursive function calls itself infinitely, it is possible to run out of memory causing the VM to crash (a [stack overflow error][wiki-stack-overflow]). The Erlang VM, on which Elixir runs, is specially optimized for recursion and reliability, so it may take a long time before infinite recursion errors are apparent or crashes occur.
+Recursive functions, if implemented incorrectly, might never return their result. This can be problematic because each time a function is called, a reference is stored in memory where the VM should return the result (on the [call stack][wiki-call-stack]). If a recursive function calls itself infinitely, it is possible to run out of memory causing the VM to crash (a [stack overflow error][wiki-stack-overflow]). The Erlang VM, on which Elixir runs, is specially optimized for recursion and reliability, so it may take a long time before infinite recursion errors are apparent or crashes occur.
 
 This problem of infinite execution can be caused by:
 
