@@ -1530,7 +1530,7 @@
       "uuid": "0bc1ad03-5ec7-4269-ad33-df6decbb5ee2",
       "slug": "atoms",
       "name": "Atoms",
-      "blurb": "TODO: add blurb for atoms concept"
+      "blurb": "You can use atoms whenever you have a set of constants to express. An atom's value is its own name."
     },
     {
       "uuid": "5bd736ed-290d-4d1b-9668-36a704cbe236",
