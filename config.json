@@ -1770,7 +1770,7 @@
       "uuid": "2b2632d6-84a5-45d8-a686-d4b995300beb",
       "slug": "tail-call-recursion",
       "name": "Tail Call Recursion",
-      "blurb": "TODO: add blurb for tail-call-recursion concept"
+      "blurb": "A recursive function is tail-recursive if the last thing executed by the function is a call to itself. Tail-recursive functions allow for tail call optimization. It's an optimization that allows reusing the last stack frame by the next function call."
     },
     {
       "uuid": "eef1727c-e5d3-41de-801b-a57b85051363",
