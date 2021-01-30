@@ -1590,7 +1590,7 @@
       "uuid": "337ea0be-2978-48a1-ba10-0c29d7018a99",
       "slug": "default-arguments",
       "name": "Default Arguments",
-      "blurb": "TODO: add blurb for default-arguments concept"
+      "blurb": "Named functions may declare default values for one or more of their arguments."
     },
     {
       "uuid": "c809ee97-03d1-42a9-ae72-af1c4042b974",
