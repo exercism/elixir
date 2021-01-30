@@ -1674,7 +1674,7 @@
       "uuid": "c1dca378-b124-4b9b-8822-ddfa23643047",
       "slug": "maps",
       "name": "Maps",
-      "blurb": "TODO: add blurb for maps concept"
+      "blurb": "Maps are a data structure that holds key-value pairs. Keys and values can be of any data type, and the keys must be unique."
     },
     {
       "uuid": "0b4e7214-657f-40db-a30b-ee0a0b0552c3",
