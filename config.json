@@ -1650,7 +1650,7 @@
       "uuid": "776919ef-6e4a-40d6-8977-9da237d8cc14",
       "slug": "io",
       "name": "IO",
-      "blurb": "TODO: add blurb for io concept"
+      "blurb": "Functions for handling input and output are provided by the IO module. A particularly useful function is IO.inspect, often used for debugging, which prints any value is it given and returns it unchanged."
     },
     {
       "uuid": "a07081f3-c517-46ea-b68f-27f7e048cb5e",
