@@ -18,6 +18,7 @@
     "concept": [
       {
         "slug": "lasagna",
+        "name": "Lasagna",
         "uuid": "c29c6092-9d44-4f21-8138-b873384fd90b",
         "concepts": [
           "basics"
@@ -27,6 +28,7 @@
       },
       {
         "slug": "pacman-rules",
+        "name": "Pacman Rules",
         "uuid": "5e743355-1ef3-4b5d-b59d-03bbc9697e6c",
         "concepts": [
           "booleans"
@@ -38,6 +40,7 @@
       },
       {
         "slug": "freelancer-rates",
+        "name": "Freelancer Rates",
         "uuid": "fee79e03-1496-476f-964f-e60632cb13dc",
         "concepts": [
           "integers",
@@ -50,6 +53,7 @@
       },
       {
         "slug": "log-level",
+        "name": "Log Level",
         "uuid": "b26a2f11-d80a-42b9-881a-3575a83ad211",
         "concepts": [
           "cond",
@@ -62,6 +66,7 @@
       },
       {
         "slug": "language-list",
+        "name": "Language List",
         "uuid": "3c53b340-680e-45c1-8979-3d79b441a65e",
         "concepts": [
           "lists"
@@ -73,6 +78,7 @@
       },
       {
         "slug": "guessing-game",
+        "name": "Guessing Game",
         "uuid": "ad01ae6c-bdcf-4512-b55b-c552e2b2e41d",
         "concepts": [
           "multiple-clause-functions",
@@ -86,6 +92,7 @@
       },
       {
         "slug": "secrets",
+        "name": "Secrets",
         "uuid": "1e3ceb20-715c-4157-9192-13284217affc",
         "concepts": [
           "anonymous-functions",
@@ -99,6 +106,7 @@
       },
       {
         "slug": "kitchen-calculator",
+        "name": "Kitchen Calculator",
         "uuid": "f729493d-2249-4c10-9c77-da907d10aae1",
         "concepts": [
           "tuples",
@@ -113,6 +121,7 @@
       },
       {
         "slug": "high-school-sweetheart",
+        "name": "High School Sweetheart",
         "uuid": "335df1cf-6aba-4ab6-b5c3-b4305ade09a4",
         "concepts": [
           "strings"
@@ -125,6 +134,7 @@
       },
       {
         "slug": "name-badge",
+        "name": "Name Badge",
         "uuid": "b6ae6cb4-f908-436f-916c-fa847e4a82fb",
         "concepts": [
           "nil",
@@ -138,6 +148,7 @@
       },
       {
         "slug": "high-score",
+        "name": "High Score",
         "uuid": "e7f3ba2b-a380-45d3-a48d-7ef3dc318a31",
         "concepts": [
           "module-attributes-as-constants",
@@ -153,6 +164,7 @@
       },
       {
         "slug": "bird-count",
+        "name": "Bird Count",
         "uuid": "e17088c8-c40f-4d4c-b5dd-d32f62b8087b",
         "concepts": [
           "recursion"
@@ -167,6 +179,7 @@
       },
       {
         "slug": "german-sysadmin",
+        "name": "German Sysadmin",
         "uuid": "45f3a08f-fe0f-4e3e-b325-47bad3c74ea4",
         "concepts": [
           "charlists",
@@ -182,6 +195,7 @@
       },
       {
         "slug": "basketball-website",
+        "name": "Basketball Website",
         "uuid": "ba03df1d-20e4-4527-a8a7-afc97a834975",
         "concepts": [
           "access-behaviour"
@@ -196,6 +210,7 @@
       },
       {
         "slug": "file-sniffer",
+        "name": "File Sniffer",
         "uuid": "1653d476-5354-4d99-a990-1db418a7281c",
         "concepts": [
           "binaries"
@@ -225,6 +240,7 @@
       },
       {
         "slug": "boutique-inventory",
+        "name": "Boutique Inventory",
         "uuid": "be4ef2d1-2851-425d-9780-0326fbcb9845",
         "concepts": [
           "enum"
@@ -256,6 +272,7 @@
       },
       {
         "slug": "remote-control-car",
+        "name": "Remote Control Car",
         "uuid": "d8d25b93-d918-421e-bb57-cbdaf428d9e2",
         "concepts": [
           "structs"
@@ -273,6 +290,7 @@
       },
       {
         "slug": "stack-underflow",
+        "name": "Stack Underflow",
         "uuid": "9f698b46-fe8d-4641-a928-bcebfd9678df",
         "concepts": [
           "exceptions"
@@ -285,6 +303,7 @@
       },
       {
         "slug": "wine-cellar",
+        "name": "Wine Cellar",
         "uuid": "921a03be-662a-4aea-b8fc-a87d199b1528",
         "concepts": [
           "keyword-lists"
@@ -347,6 +366,7 @@
       },
       {
         "slug": "community-garden",
+        "name": "Community Garden",
         "uuid": "1d6be9ec-5b5c-4c81-9bfa-2e3fc78c978f",
         "concepts": [
           "agent"
@@ -360,6 +380,7 @@
       },
       {
         "slug": "date-parser",
+        "name": "Date Parser",
         "uuid": "57198686-71c9-4f38-973a-a111435560e7",
         "concepts": [
           "regular-expressions"
@@ -371,6 +392,7 @@
       },
       {
         "slug": "boutique-suggestions",
+        "name": "Boutique Suggestions",
         "uuid": "f8208858-901e-4e5a-9f34-689bf8ad156c",
         "concepts": [
           "list-comprehensions"
@@ -386,6 +408,7 @@
       },
       {
         "slug": "bread-and-potions",
+        "name": "Bread And Potions",
         "uuid": "a9fb9efa-ff37-4642-9118-c1351fd343ad",
         "concepts": [
           "protocols"
@@ -440,6 +463,7 @@
           "integers",
           "bitstrings",
           "charlists"
+
         ],
         "status": "wip"
       },
@@ -473,7 +497,7 @@
       },
       {
         "slug": "rna-transcription",
-        "name": "Rna Transcription",
+        "name": "RNA Transcription",
         "uuid": "a4629a60-752f-4234-99f1-6b3ac0b4ba18",
         "prerequisites": [],
         "difficulty": 2,
@@ -752,7 +776,7 @@
       },
       {
         "slug": "dnd-character",
-        "name": "Dnd Character",
+        "name": "DnD Character",
         "uuid": "bd15a0e0-c19e-4a52-be6c-1a61d14c54cd",
         "prerequisites": [],
         "difficulty": 3,
@@ -960,7 +984,7 @@
       },
       {
         "slug": "isbn-verifier",
-        "name": "Isbn Verifier",
+        "name": "ISBN Verifier",
         "uuid": "0fb09d01-1f8b-4654-9004-52baa057412e",
         "prerequisites": [],
         "difficulty": 3,
@@ -1048,7 +1072,7 @@
       },
       {
         "slug": "etl",
-        "name": "Etl",
+        "name": "ETL",
         "uuid": "b3a4c561-344a-403e-b5b3-3533d51e65f4",
         "prerequisites": [],
         "difficulty": 2,
@@ -1092,7 +1116,7 @@
       },
       {
         "slug": "ocr-numbers",
-        "name": "Ocr Numbers",
+        "name": "OCR Numbers",
         "uuid": "3f321191-afb1-4aa1-995b-204aa460269e",
         "prerequisites": [],
         "difficulty": 6,
@@ -1487,7 +1511,7 @@
       },
       {
         "slug": "dot-dsl",
-        "name": "Dot Dsl",
+        "name": "Dot DSL",
         "uuid": "c316b8ef-7b2d-43d4-b402-f7d28b0cdaa7",
         "prerequisites": [],
         "difficulty": 8,
