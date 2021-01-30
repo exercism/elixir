@@ -20,7 +20,7 @@
 
   # A map with the map key %{} with the list value [1,2,3]
   %{%{} => [1,2,3]}
-  
+
   # A map with keys of different types
   %{:a => 1, "b" => 2}
   ```
