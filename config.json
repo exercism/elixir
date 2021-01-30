@@ -1692,7 +1692,7 @@
       "uuid": "e2868bb9-b384-45b6-8bdf-08e9a1ba4eea",
       "slug": "nil",
       "name": "Nil",
-      "blurb": "TODO: add blurb for nil concept"
+      "blurb": "Nil is an English word meaning \"nothing\" or \"zero\". In Elixir, nil is a special value that means an absence of a value."
     },
     {
       "uuid": "bf0232ea-f5e7-465e-a942-b126f118f05a",
