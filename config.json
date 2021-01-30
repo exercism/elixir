@@ -1698,7 +1698,7 @@
       "uuid": "bf0232ea-f5e7-465e-a942-b126f118f05a",
       "slug": "pattern-matching",
       "name": "Pattern Matching",
-      "blurb": "TODO: add blurb for pattern-matching concept"
+      "blurb": "The = operator is called a match operator. It can be used for destructuring complex data types via pattern matching.  Pattern matching is also used for defining multiple clause functions, in the case conditional, in list comprehensions, and when rescuing errors. The use of pattern matching is dominant in idiomatic Elixir code."
     },
     {
       "uuid": "fe428299-37fd-4c7f-a498-fad1977390fb",
