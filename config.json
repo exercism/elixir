@@ -1614,7 +1614,7 @@
       "uuid": "3f8ca849-0546-4fd0-b55d-a617a9e119ee",
       "slug": "errors",
       "name": "Errors",
-      "blurb": "TODO: add blurb for errors concept"
+      "blurb": "Errors happen. In Elixir, while people often say to \"let it crash\", there are times when we need to rescue the function call to a known good state to fulfil a software contract."
     },
     {
       "uuid": "586001b3-974f-468e-9f7c-45a8c74e6f39",
