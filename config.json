@@ -1398,7 +1398,16 @@
         "slug": "grains",
         "name": "Grains",
         "uuid": "b030fa38-8935-4665-98c3-77f8434a6ea1",
-        "prerequisites": [],
+        "prerequisites": [
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "enum",
+          "ranges",
+          "errors",
+          "erlang-libraries",
+          "bit-manipulation"
+        ],
         "difficulty": 3,
         "topics": [
           "recursion",
