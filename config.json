@@ -489,7 +489,7 @@
         "slug": "hello-world",
         "name": "Hello World",
         "uuid": "cc96d65d-1c79-40d0-8fd2-9a6665a43b01",
-        "prerequisites": [],
+        "prerequisites": ["basics"],
         "difficulty": 1,
         "topics": [
           "strings"
@@ -499,7 +499,13 @@
         "slug": "rna-transcription",
         "name": "RNA Transcription",
         "uuid": "a4629a60-752f-4234-99f1-6b3ac0b4ba18",
-        "prerequisites": [],
+        "prerequisites": [
+          "charlists",
+          "pattern-matching",
+          "multiple-clause-functions",
+          "case",
+          "enum"
+        ],
         "difficulty": 2,
         "topics": [
           "strings"
