@@ -553,7 +553,11 @@
         "slug": "bob",
         "name": "Bob",
         "uuid": "d20b49dc-cb6d-45fc-a168-78d002072c75",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "regular-expressions",
+          "cond"
+        ],
         "difficulty": 2,
         "topics": [
           "control_flow",
