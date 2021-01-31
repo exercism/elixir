@@ -792,7 +792,17 @@
         "slug": "protein-translation",
         "name": "Protein Translation",
         "uuid": "84af7be8-8f90-4990-9d48-b5324a0d4354",
-        "prerequisites": [],
+        "prerequisites": [
+          "maps",
+          "enum",
+          "recursion",
+          "case",
+          "pattern-matching",
+          "strings",
+          "binaries",
+          "regular-expressions",
+          "errors"
+        ],
         "difficulty": 2,
         "topics": [
           "pattern_matching",
