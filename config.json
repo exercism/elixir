@@ -1059,7 +1059,16 @@
         "slug": "twelve-days",
         "name": "Twelve Days",
         "uuid": "9dfb5dfc-1123-492b-9383-2a4312c219a4",
-        "prerequisites": [],
+        "prerequisites": [
+          "lists",
+          "strings",
+          "multiple-clause-functions",
+          "case",
+          "enum",
+          "recursion",
+          "maps",
+          "ranges"
+        ],
         "difficulty": 3,
         "topics": [
           "enumerations",
