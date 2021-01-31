@@ -1456,7 +1456,11 @@
         "slug": "etl",
         "name": "ETL",
         "uuid": "b3a4c561-344a-403e-b5b3-3533d51e65f4",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "maps",
+          "enum"
+        ],
         "difficulty": 2,
         "topics": [
           "enumeration",
