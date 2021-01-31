@@ -1257,7 +1257,19 @@
         "slug": "nth-prime",
         "name": "Nth Prime",
         "uuid": "6d0c0785-3514-44fc-9b5a-0758989d1c6a",
-        "prerequisites": [],
+        "prerequisites": [
+          "integers",
+          "cond",
+          "case",
+          "if",
+          "enum",
+          "recursion",
+          "multiple-clause-functions",
+          "guards",
+          "ranges",
+          "streams",
+          "exceptions"
+        ],
         "difficulty": 2,
         "topics": [
           "algorithms",
