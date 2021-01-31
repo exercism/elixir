@@ -702,7 +702,23 @@
         "slug": "forth",
         "name": "Forth",
         "uuid": "2abfa3e5-d358-4a07-91f9-d4ad04eb719d",
-        "prerequisites": [],
+        "prerequisites": [
+          "pattern-matching",
+          "multiple-clause-functions",
+          "guards",
+          "strings",
+          "regular-expressions",
+          "maps",
+          "lists",
+          "enum",
+          "recursion",
+          "cond",
+          "if",
+          "case",
+          "structs",
+          "errors",
+          "exceptions"
+        ],
         "difficulty": 10,
         "topics": [
           "parsers"
