@@ -585,7 +585,16 @@
         "slug": "robot-simulator",
         "name": "Robot Simulator",
         "uuid": "e5e55560-852f-4551-b4da-c9f4a3141470",
-        "prerequisites": [],
+        "prerequisites": [
+          "multiple-clause-functions",
+          "guards",
+          "pattern-matching",
+          "case",
+          "strings",
+          "enum",
+          "structs",
+          "errors"
+        ],
         "difficulty": 6,
         "topics": [
           "pattern_matching",
