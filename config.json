@@ -1355,7 +1355,18 @@
         "slug": "all-your-base",
         "name": "All Your Base",
         "uuid": "f71d5f38-fcc9-4044-ade9-f779a8686c69",
-        "prerequisites": [],
+        "prerequisites": [
+          "integers",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "cond",
+          "case",
+          "if",
+          "recursion",
+          "tail-call-recursion",
+          "enum"
+        ],
         "difficulty": 2,
         "topics": [
           "math",
