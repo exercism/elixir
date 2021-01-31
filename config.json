@@ -901,7 +901,11 @@
         "slug": "acronym",
         "name": "Acronym",
         "uuid": "23989815-1b3f-4377-b6bf-ce9536432517",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "enum",
+          "regular-expressions"
+        ],
         "difficulty": 2,
         "topics": [
           "string_processing"
