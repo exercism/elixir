@@ -964,7 +964,14 @@
         "slug": "dnd-character",
         "name": "DnD Character",
         "uuid": "bd15a0e0-c19e-4a52-be6c-1a61d14c54cd",
-        "prerequisites": [],
+        "prerequisites": [
+          "integers",
+          "enum",
+          "recursion",
+          "structs",
+          "ranges",
+          "randomness"
+        ],
         "difficulty": 3,
         "topics": [
           "random",
