@@ -1115,7 +1115,15 @@
         "slug": "triangle",
         "name": "Triangle",
         "uuid": "546d92c7-c57b-4cbb-a721-9c393817a193",
-        "prerequisites": [],
+        "prerequisites": [
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "cond",
+          "case",
+          "if",
+          "errors"
+        ],
         "difficulty": 2,
         "topics": [
           "algorithms"
