@@ -999,7 +999,12 @@
         "slug": "scrabble-score",
         "name": "Scrabble Score",
         "uuid": "cc198564-72e6-444b-93b6-6b7ecf4d1759",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "maps",
+          "enum",
+          "recursion"
+        ],
         "difficulty": 2,
         "topics": [
           "reduce"
