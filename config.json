@@ -1332,7 +1332,18 @@
         "slug": "tournament",
         "name": "Tournament",
         "uuid": "29a6f3f4-0d20-4447-8916-b98270780e0e",
-        "prerequisites": [],
+        "prerequisites": [
+          "tuples",
+          "strings",
+          "maps",
+          "enum",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "cond",
+          "case",
+          "if"
+        ],
         "difficulty": 4,
         "topics": [
           "formatting",
