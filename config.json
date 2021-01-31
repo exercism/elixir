@@ -1471,7 +1471,18 @@
         "slug": "binary",
         "name": "Binary",
         "uuid": "29c3c9ff-c7f3-4646-9612-7cd768d237ab",
-        "prerequisites": [],
+        "prerequisites": [
+          "cond",
+          "case",
+          "if",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "binaries",
+          "recursion",
+          "tail-call-recursion",
+          "enum",
+          "strings"
+        ],
         "difficulty": 3,
         "topics": [
           "binary_operators",
