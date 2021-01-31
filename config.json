@@ -1044,7 +1044,11 @@
         "slug": "isogram",
         "name": "Isogram",
         "uuid": "55a20a0f-0131-4e4e-b14f-f3cb49e3cc04",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "enum",
+          "regular-expressions"
+        ],
         "difficulty": 3,
         "topics": [
           "algorithms",
