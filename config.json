@@ -1440,7 +1440,13 @@
         "slug": "simple-linked-list",
         "name": "Simple Linked List",
         "uuid": "e5d2386a-3021-4329-a4b7-6164e49df776",
-        "prerequisites": [],
+        "prerequisites": [
+          "tuples",
+          "pattern-matching",
+          "recursion",
+          "tail-call-recursion",
+          "errors"
+        ],
         "difficulty": 1,
         "topics": [
           "recursion"
