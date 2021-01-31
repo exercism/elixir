@@ -1378,7 +1378,16 @@
         "slug": "binary-search-tree",
         "name": "Binary Search Tree",
         "uuid": "77fe5eb6-a35b-4af4-9512-275f140c25d6",
-        "prerequisites": [],
+        "prerequisites": [
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "cond",
+          "case",
+          "if",
+          "enum",
+          "maps"
+        ],
         "difficulty": 3,
         "topics": [
           "algorithms",
