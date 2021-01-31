@@ -1731,7 +1731,7 @@
         "name": "Diffie Hellman",
         "uuid": "92caf2b9-3fca-401c-8daa-aaa0193e704f",
         "prerequisites": [
-          "range",
+          "ranges",
           "randomness",
           "erlang-libraries"
         ],
@@ -1775,7 +1775,11 @@
         "slug": "pascals-triangle",
         "name": "Pascals Triangle",
         "uuid": "b85c37c7-a76e-41fa-9ce6-abcdba2bd683",
-        "prerequisites": [],
+        "prerequisites": [
+          "enum",
+          "ranges",
+          "recursion"
+        ],
         "difficulty": 3,
         "topics": [
           "algorithms",
