@@ -1690,7 +1690,16 @@
         "slug": "perfect-numbers",
         "name": "Perfect Numbers",
         "uuid": "cf4816a5-8cee-4a85-8bbb-236c0676123c",
-        "prerequisites": [],
+        "prerequisites": [
+          "cond",
+          "case",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "enum",
+          "recursion",
+          "errors"
+        ],
         "difficulty": 3,
         "topics": [
           "enumeration",
