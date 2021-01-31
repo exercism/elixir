@@ -1654,7 +1654,10 @@
         "slug": "gigasecond",
         "name": "Gigasecond",
         "uuid": "287331a4-64d5-4b35-b4c1-a1171dc338e1",
-        "prerequisites": [],
+        "prerequisites": [
+          "integers",
+          "erlang-libraries"
+        ],
         "difficulty": 3,
         "topics": [
           "calendar",
