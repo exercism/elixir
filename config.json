@@ -1188,7 +1188,14 @@
         "slug": "hamming",
         "name": "Hamming",
         "uuid": "aca03bcb-eb70-4646-be34-8c1a44026e9b",
-        "prerequisites": [],
+        "prerequisites": [
+          "charlists",
+          "multiple-clause-functions",
+          "guards",
+          "enum",
+          "recursion",
+          "errors"
+        ],
         "difficulty": 2,
         "topics": [
           "string_processing"
