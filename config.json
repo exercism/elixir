@@ -1281,7 +1281,14 @@
         "slug": "binary-search",
         "name": "Binary Search",
         "uuid": "89204af8-3914-404b-8984-39a8d60362c4",
-        "prerequisites": [],
+        "prerequisites": [
+          "tuples",
+          "integers",
+          "recursion",
+          "multiple-clause-functions",
+          "guards",
+          "cond"
+        ],
         "difficulty": 3,
         "topics": [
           "algorithms",
