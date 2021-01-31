@@ -1711,7 +1711,14 @@
         "slug": "prime-factors",
         "name": "Prime Factors",
         "uuid": "47328272-b2f6-42e4-a5a3-a5d276bfbdee",
-        "prerequisites": [],
+        "prerequisites": [
+          "integers",
+          "case",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "recursion"
+        ],
         "difficulty": 3,
         "topics": [
           "math",
