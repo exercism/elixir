@@ -12,7 +12,7 @@ If you have any questions, if you're unsure where to start or you're stuck, do n
 
 ### 1. Create, improve, and review concepts and concept exercises for v3
 
-Check open issues in PRs in the [exercism/v3](https://github.com/exercism/v3/) repository to see which concepts need a new exercise or an improvement.
+Check open issues and PRs in this repository [tagged with the concept-exercise label](https://github.com/exercism/elixir/issues?q=is%3Aopen+sort%3Aupdated-desc+label%3Aconcept-exercise) to see which concepts need a new exercise or an improvement.
 
 You can read through existing concepts and concept exercises, and suggest improvements. Even a fixed typo or a grammar error will be highly appreciated!
 
@@ -30,13 +30,13 @@ One-time ~1h investment to learn how a concept exercise is structured, and then 
 
 #### Useful links for this task
 
-- [Open issues and PRs for Elixir in v3](https://github.com/exercism/v3/issues?q=is%3Aopen+sort%3Aupdated-desc+label%3Atrack%2Felixir)
-- [V3 Elixir concept exercises](https://github.com/exercism/v3/tree/master/languages/elixir/exercises/concept)
-- [V3 Elixir concepts](https://github.com/exercism/v3/tree/master/languages/elixir/concepts)
-- [V3 contributing dashboard](https://v3.exercism.io/elixir/contributing)
-- [The features of v3](https://github.com/exercism/v3/blob/master/docs/features-of-v3.md).
-- [Rationale for v3](https://github.com/exercism/v3/blob/master/docs/rationale-for-v3.md).
-- [What are concept exercise and how they are structured?](https://github.com/exercism/v3/blob/master/docs/concept-exercises.md)
+- [Open issues and PRs for Elixir for v3](https://github.com/exercism/elixir/issues?q=is%3Aopen+sort%3Aupdated-desc+label%3Av3)
+- [V3 Elixir concept exercises](https://github.com/exercism/elixir/tree/master/exercises/concept)
+- [V3 Elixir concepts](https://github.com/exercism/elixir/tree/master/concepts)
+- [V3 staging](https://exercism.lol/)
+- [The features of v3](https://github.com/exercism/v3/blob/master/docs/features-of-v3.md)
+- [Rationale for v3](https://github.com/exercism/v3/blob/master/docs/rationale-for-v3.md)
+- [What are concept exercise and how they are structured?](https://github.com/exercism/docs/blob/main/anatomy/tracks/concept-exercises.md)
 
 ### 2. Create an analyzer for a v3 concept exercise
 
@@ -45,7 +45,7 @@ An analyzer is a tool that analyzes the AST of an exercise solution looking for 
 Some v3 concept exercises must have an analyzer. They won't be mentored, and their goal is to teach how to use specific features of the language, so we need to look out for solutions that pass the tests, but don't use the taught features.
 
 You will recognize the exercises that need an analyzer by their `design.md` file containing an "analyzer" section that outlines what features of a desired solution need to be checked for
-([example](https://github.com/exercism/v3/blob/6576904cbe3ddae26b23a418da8e012162980c4a/languages/elixir/exercises/concept/boutique-inventory/.meta/design.md#L29-L34))
+([example](https://github.com/exercism/elixir/blob/4e18d2385066e46de5ee5ea3e1ba9ce0caffdfa5/exercises/concept/boutique-inventory/.meta/design.md#L29-L34))
 .
 
 You can choose any exercise that doesn't already have an analyzer and try to implement one.
@@ -63,12 +63,12 @@ question, and then ~1-2h for writing the analyzer.
 
 #### Useful links for this task
 
-- [What is an analyzer?](https://github.com/exercism/v3-docs/tree/master/anatomy/track-tooling/analyzers)
-- [V3 Elixir concept exercises](https://github.com/exercism/v3/tree/master/languages/elixir/exercises/concept)
-- [Currently implemented analyzers](https://github.com/exercism/elixir-analyzer/tree/master/lib/elixir_analyzer/exercise_test)
+- [What is an analyzer?](https://github.com/exercism/docs/tree/main/anatomy/track-tooling/analyzers)
+- [V3 Elixir concept exercises](https://github.com/exercism/elixir/tree/master/exercises/concept)
+- [Currently implemented analyzers](https://github.com/exercism/elixir-analyzer/tree/main/lib/test_suite)
 - [How to write an analyzer?](https://github.com/exercism/elixir-analyzer/blob/master/docs/writing-an-analyzer.md)
 - [Example PR adding an analyzer for the pacman-rules exercise](https://github.com/exercism/elixir-analyzer/pull/30/files)
-- [Elixir's automated comments](https://github.com/exercism/website-copy/tree/master/automated-comments/elixir)
+- [Elixir's automated comments](https://github.com/exercism/website-copy/tree/main/analyzer-comments/elixir)
 
 ### 3. Check open issues and PRs in other repos
 
@@ -86,7 +86,7 @@ Anything from 15 minutes to many hours, depending on the specific issue.
 
 #### Useful links for this task
 
-- [What is track tooling?](https://github.com/exercism/v3-docs/tree/master/anatomy/track-tooling#track-tooling)
+- [What is track tooling?](https://github.com/exercism/docs/tree/main/anatomy/track-tooling#track-tooling)
 - [Open issues and PRs in the Elixir analyzer](https://github.com/pulls?q=is%3Aopen+repo%3Aexercism%2Felixir-analyzer)
 - [Open issues and PRs in the Elixir test runner](https://github.com/pulls?q=is%3Aopen+repo%3Aexercism%2Felixir-test-runner)
 - [Open issues and PRs in the Elixir representer](https://github.com/pulls?q=is%3Aopen+repo%3Aexercism%2Felixir-representer)
@@ -108,11 +108,11 @@ One-time ~30 min investment to get familiar with how existing analyzers are writ
 
 #### Useful links for this task
 
-- [What is an analyzer?](https://github.com/exercism/v3-docs/tree/master/anatomy/track-tooling/analyzers)
-- [Currently implemented analyzers](https://github.com/exercism/elixir-analyzer/tree/master/lib/elixir_analyzer/exercise_test)
+- [What is an analyzer?](https://github.com/exercism/docs/tree/main/anatomy/track-tooling/analyzers)
+- [Currently implemented analyzers](https://github.com/exercism/elixir-analyzer/tree/main/lib/test_suite)
 - [How to write an analyzer?](https://github.com/exercism/elixir-analyzer/blob/master/docs/writing-an-analyzer.md)
-- [Two-fer analyzer](https://github.com/exercism/elixir-analyzer/blob/3827403d0f1cd5cd4c4b8d5a9e7736f19cce5ea4/lib/elixir_analyzer/exercise_test/two_fer.ex)
-- [Elixir's automated comments](https://github.com/exercism/website-copy/tree/master/automated-comments/elixir)
+- [Two-fer analyzer](https://github.com/exercism/elixir-analyzer/blob/65832211726bc04b4b35a1840ed55bbb67b4cae2/lib/test_suite/two_fer.ex)
+- [Elixir's automated comments](https://github.com/exercism/website-copy/tree/main/analyzer-comments/elixir)
 - [General Exercism docs](https://github.com/exercism/docs)
 
 ### 5. Port a new practice exercise from problem specifications
@@ -129,8 +129,8 @@ A few hours.
 
 #### Useful links for this task
 
-- [Existing Elixir practice exercises](https://github.com/exercism/elixir/tree/master/exercises)
+- [Existing Elixir practice exercises](https://github.com/exercism/elixir/tree/master/exercises/practice)
 - [Problem specifications repo](https://github.com/exercism/problem-specifications)
-- [Porting an Exercise to Another Language Track](https://github.com/exercism/docs/blob/master/you-can-help/implement-an-exercise-from-specification.md)
+- [Porting an Exercise to Another Language Track](https://github.com/exercism/legacy-docs/blob/main/you-can-help/implement-an-exercise-from-specification.md)
 - [Elixir's CONTRIBUTING.md](https://github.com/exercism/elixir/blob/master/CONTRIBUTING.md)
 - [General Exercism docs](https://github.com/exercism/docs)
