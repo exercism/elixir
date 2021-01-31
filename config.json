@@ -568,7 +568,13 @@
         "slug": "beer-song",
         "name": "Beer Song",
         "uuid": "24db624b-7c80-409d-97d5-e1177f025c67",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "multiple-clause-functions",
+          "ranges",
+          "enum",
+          "recursion"
+        ],
         "difficulty": 3,
         "topics": [
           "pattern_matching",
