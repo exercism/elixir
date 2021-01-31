@@ -1014,7 +1014,11 @@
         "slug": "sum-of-multiples",
         "name": "Sum Of Multiples",
         "uuid": "5b8eece1-845f-4a5a-8a2f-fe2bf66f5e57",
-        "prerequisites": [],
+        "prerequisites": [
+          "enum",
+          "recursion",
+          "ranges"
+        ],
         "difficulty": 2,
         "topics": [
           "algorithms",
