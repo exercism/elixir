@@ -1150,7 +1150,19 @@
         "slug": "matching-brackets",
         "name": "Matching Brackets",
         "uuid": "cf0084a0-7b1d-4714-b7b2-618e3ad6e147",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "regular-expressions",
+          "cond",
+          "case",
+          "if",
+          "recursion",
+          "enum",
+          "maps",
+          "pattern-matching",
+          "multiple-clause-functions",
+          "binaries"
+        ],
         "difficulty": 3,
         "topics": [
           "algorithms",
