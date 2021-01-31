@@ -623,7 +623,16 @@
         "slug": "markdown",
         "name": "Markdown",
         "uuid": "5dfa24bf-e77c-47c6-88e1-e50cbeecd159",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "enum",
+          "recursion",
+          "regular-expressions",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "cond",
+          "if"
+        ],
         "difficulty": 5,
         "topics": [
           "refactoring"
