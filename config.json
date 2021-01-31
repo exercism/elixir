@@ -756,7 +756,12 @@
         "slug": "nucleotide-count",
         "name": "Nucleotide Count",
         "uuid": "7404e885-747a-46fc-be0c-c53f4b0e162f",
-        "prerequisites": [],
+        "prerequisites": [
+          "charlists",
+          "maps",
+          "enum",
+          "recursion"
+        ],
         "difficulty": 2,
         "topics": [
           "enumerables",
