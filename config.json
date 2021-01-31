@@ -1631,7 +1631,19 @@
         "slug": "rail-fence-cipher",
         "name": "Rail Fence Cipher",
         "uuid": "3daeb229-0638-443f-9ae2-222ebb88c11a",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "cond",
+          "case",
+          "if",
+          "multiple-clause-functions",
+          "guards",
+          "pattern-matching",
+          "recursion",
+          "enum",
+          "ranges",
+          "streams"
+        ],
         "difficulty": 6,
         "topics": [
           "encryption",
