@@ -833,7 +833,16 @@
         "slug": "secret-handshake",
         "name": "Secret Handshake",
         "uuid": "ea7da409-6bda-4cff-b26e-0909ba36f4f5",
-        "prerequisites": [],
+        "prerequisites": [
+          "lists",
+          "cond",
+          "if",
+          "case",
+          "multiple-clause-functions",
+          "enum",
+          "recursion",
+          "bit-manipulation"
+        ],
         "difficulty": 2,
         "topics": [
           "binary_representation"
