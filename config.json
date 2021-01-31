@@ -773,7 +773,15 @@
         "slug": "pig-latin",
         "name": "Pig Latin",
         "uuid": "3aa45a2b-d3bc-4763-b11d-5d41a1cf505c",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "regular-expressions",
+          "enum",
+          "recursion",
+          "cond",
+          "if",
+          "case"
+        ],
         "difficulty": 2,
         "topics": [
           "pattern_matching",
