@@ -1493,7 +1493,15 @@
         "slug": "change",
         "name": "Change",
         "uuid": "14bddd31-a68f-4a16-830f-6e8ecf8199f2",
-        "prerequisites": [],
+        "prerequisites": [
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "recursion",
+          "enum",
+          "maps",
+          "errors"
+        ],
         "difficulty": 3,
         "topics": [
           "enumeration",
