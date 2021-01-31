@@ -1418,7 +1418,17 @@
         "slug": "meetup",
         "name": "Meetup",
         "uuid": "68fee2cd-a5bc-40f2-8936-a3bb10463498",
-        "prerequisites": [],
+        "prerequisites": [
+          "cond",
+          "case",
+          "if",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "enum",
+          "ranges",
+          "erlang-libraries"
+        ],
         "difficulty": 4,
         "topics": [
           "calendar",
