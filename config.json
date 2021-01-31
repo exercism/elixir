@@ -742,7 +742,11 @@
         "slug": "two-fer",
         "name": "Two Fer",
         "uuid": "e7f3280e-0bef-4fac-8a69-cbfa2e5f818a",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "guards",
+          "default-arguments"
+        ],
         "difficulty": 1,
         "topics": [
           "strings"
