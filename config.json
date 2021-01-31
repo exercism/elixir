@@ -1205,7 +1205,11 @@
         "slug": "matrix",
         "name": "Matrix",
         "uuid": "f0df392c-8ace-4639-b555-5e61e54a854e",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "enum",
+          "structs"
+        ],
         "difficulty": 3,
         "topics": [
           "string_processing",
