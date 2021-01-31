@@ -1586,7 +1586,19 @@
         "slug": "luhn",
         "name": "Luhn",
         "uuid": "c38ca1a8-9f0e-49de-81f9-5712ce459839",
-        "prerequisites": [],
+        "prerequisites": [
+          "integers",
+          "strings",
+          "regular-expressions",
+          "cond",
+          "case",
+          "if",
+          "multiple-clause-functions",
+          "guards",
+          "pattern-matching",
+          "recursion",
+          "enum"
+        ],
         "difficulty": 5,
         "topics": [
           "enumeration",
