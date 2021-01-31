@@ -1299,7 +1299,15 @@
         "slug": "isbn-verifier",
         "name": "ISBN Verifier",
         "uuid": "0fb09d01-1f8b-4654-9004-52baa057412e",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "regular-expressions",
+          "if",
+          "cond",
+          "case",
+          "ranges",
+          "enum"
+        ],
         "difficulty": 3,
         "topics": [
           "string_processing"
