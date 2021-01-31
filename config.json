@@ -982,7 +982,13 @@
         "slug": "pangram",
         "name": "Pangram",
         "uuid": "20a0bbf8-751c-477a-a2cb-dd7cf4e4896c",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "charlists",
+          "enum",
+          "recursion",
+          "ranges"
+        ],
         "difficulty": 2,
         "topics": [
           "enumerations",
