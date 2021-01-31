@@ -1220,7 +1220,13 @@
         "slug": "phone-number",
         "name": "Phone Number",
         "uuid": "e8b049b7-6648-412c-8a11-0c95a15e2641",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "regular-expressions",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "binaries"
+        ],
         "difficulty": 3,
         "topics": [
           "pattern_matching",
