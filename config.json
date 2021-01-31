@@ -1548,7 +1548,18 @@
         "slug": "kindergarten-garden",
         "name": "Kindergarten Garden",
         "uuid": "ae72ff68-e4c9-472c-8a86-7adaaa9086ee",
-        "prerequisites": [],
+        "prerequisites": [
+          "tuples",
+          "lists",
+          "string",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "recursion",
+          "enum",
+          "maps",
+          "ranges",
+          "regular-expressions"
+        ],
         "difficulty": 3,
         "topics": [
           "string_processing"
