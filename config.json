@@ -1668,7 +1668,17 @@
         "slug": "hexadecimal",
         "name": "Hexadecimal",
         "uuid": "8154a099-5d6f-4e71-83fe-45ab23475778",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "charlists",
+          "ranges",
+          "multiple-clause-functions",
+          "guards",
+          "pattern-matching",
+          "case",
+          "recursion",
+          "enum"
+        ],
         "difficulty": 3,
         "topics": [
           "math",
