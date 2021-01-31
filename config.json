@@ -1569,7 +1569,13 @@
         "slug": "diamond",
         "name": "Diamond",
         "uuid": "89633764-ace4-4ad5-a1aa-22cae7be7d18",
-        "prerequisites": [],
+        "prerequisites": [
+          "charlists",
+          "strings",
+          "enum",
+          "recursion",
+          "ranges"
+        ],
         "difficulty": 5,
         "topics": [
           "algorithms",
