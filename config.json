@@ -678,7 +678,19 @@
         "slug": "bowling",
         "name": "Bowling",
         "uuid": "3b252cc6-cc55-4187-891e-c10aaabac81f",
-        "prerequisites": [],
+        "prerequisites": [
+          "pattern-matching",
+          "multiple-clause-functions",
+          "guards",
+          "lists",
+          "enum",
+          "recursion",
+          "cond",
+          "if",
+          "case",
+          "structs",
+          "errors"
+        ],
         "difficulty": 8,
         "topics": [
           "algorithms",
