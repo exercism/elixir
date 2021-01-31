@@ -728,7 +728,11 @@
         "slug": "resistor-color",
         "name": "Resistor Color",
         "uuid": "12efd520-e3e5-437f-b93e-38af14aa605d",
-        "prerequisites": [],
+        "prerequisites": [
+          "lists",
+          "enum",
+          "recursion"
+        ],
         "difficulty": 1,
         "topics": [
           "enumerables"
