@@ -915,7 +915,15 @@
         "slug": "raindrops",
         "name": "Raindrops",
         "uuid": "4522b139-6f0c-4172-a4fa-6a6adef33a9e",
-        "prerequisites": [],
+        "prerequisites": [
+          "integers",
+          "multiple-clause-functions",
+          "guards",
+          "if",
+          "strings",
+          "maps",
+          "enum"
+        ],
         "difficulty": 2,
         "topics": [
           "conditionals"
