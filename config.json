@@ -1096,7 +1096,15 @@
         "slug": "sublist",
         "name": "Sublist",
         "uuid": "146dd0ed-5210-4b3c-bb4b-8d0a8e832aab",
-        "prerequisites": [],
+        "prerequisites": [
+          "lists",
+          "cond",
+          "case",
+          "if",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "recursion"
+        ],
         "difficulty": 2,
         "topics": [
           "enumeration",
