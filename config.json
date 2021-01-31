@@ -656,7 +656,16 @@
         "slug": "zipper",
         "name": "Zipper",
         "uuid": "bc315734-051c-4735-9a8a-3aacb094d2ca",
-        "prerequisites": [],
+        "prerequisites": [
+          "recursion",
+          "structs",
+          "protocols",
+          "if",
+          "nil",
+          "case",
+          "pattern-matching",
+          "multiple-clause-functions"
+        ],
         "difficulty": 8,
         "topics": [
           "algorithms",
