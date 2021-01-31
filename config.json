@@ -1526,7 +1526,18 @@
         "slug": "ocr-numbers",
         "name": "OCR Numbers",
         "uuid": "3f321191-afb1-4aa1-995b-204aa460269e",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "charlists",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "cond",
+          "case",
+          "if",
+          "enum",
+          "maps",
+          "binaries"
+        ],
         "difficulty": 6,
         "topics": [
           "enumerations",
