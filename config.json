@@ -532,7 +532,17 @@
         "slug": "roman-numerals",
         "name": "Roman Numerals",
         "uuid": "4c0ece49-5710-43a1-88b3-2fb149de8552",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "recursion",
+          "guards",
+          "default-arguments",
+          "multiple-clause-functions",
+          "enum",
+          "maps",
+          "cond",
+          "case"
+        ],
         "difficulty": 2,
         "topics": [
           "algorithms",
