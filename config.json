@@ -813,7 +813,17 @@
         "slug": "rotational-cipher",
         "name": "Rotational Cipher",
         "uuid": "99b344ff-b74c-4af5-9952-7738b493ee7b",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "charlists",
+          "ranges",
+          "enum",
+          "recursion",
+          "cond",
+          "case",
+          "multiple-clause-functions",
+          "guards"
+        ],
         "difficulty": 2,
         "topics": [
           "string_processing"
