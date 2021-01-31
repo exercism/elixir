@@ -1133,7 +1133,13 @@
         "slug": "flatten-array",
         "name": "Flatten Array",
         "uuid": "0aae3af1-7c35-4d7c-aecf-8f89c7fbc300",
-        "prerequisites": [],
+        "prerequisites": [
+          "lists",
+          "recursion",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards"
+        ],
         "difficulty": 3,
         "topics": [
           "lists",
