@@ -1030,7 +1030,11 @@
         "slug": "grade-school",
         "name": "Grade School",
         "uuid": "4e6d3ddf-b696-40dc-ba02-ed998e595be7",
-        "prerequisites": [],
+        "prerequisites": [
+          "lists",
+          "maps",
+          "enum"
+        ],
         "difficulty": 3,
         "topics": [
           "maps"
