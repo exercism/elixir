@@ -1237,7 +1237,17 @@
         "slug": "say",
         "name": "Say",
         "uuid": "5ecbe1c9-12e3-42b6-921a-bc2d32011930",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "multiple-clause-functions",
+          "case",
+          "guards",
+          "enum",
+          "recursion",
+          "maps",
+          "ranges",
+          "errors"
+        ],
         "difficulty": 3,
         "topics": [
           "pattern_matching"
