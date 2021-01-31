@@ -868,7 +868,15 @@
         "slug": "strain",
         "name": "Strain",
         "uuid": "d51edc8a-893b-4b05-912f-759e0d85123b",
-        "prerequisites": [],
+        "prerequisites": [
+          "anonymous-functions",
+          "lists",
+          "recursion",
+          "tail-call-recursion",
+          "cond",
+          "case",
+          "if"
+        ],
         "difficulty": 2,
         "topics": [
           "collections"
