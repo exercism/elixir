@@ -1744,7 +1744,12 @@
         "slug": "parallel-letter-frequency",
         "name": "Parallel Letter Frequency",
         "uuid": "1992eaf7-7fbe-4176-ad46-01e325c27bcb",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "regular-expressions",
+          "enum",
+          "task"
+        ],
         "difficulty": 4,
         "topics": [
           "concurrency",
