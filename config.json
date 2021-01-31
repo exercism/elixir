@@ -1317,7 +1317,12 @@
         "slug": "leap",
         "name": "Leap",
         "uuid": "3d0d82d7-fdff-4dd5-b720-7246317bb023",
-        "prerequisites": [],
+        "prerequisites": [
+          "integers",
+          "booleans",
+          "multiple-clause-functions",
+          "guards"
+        ],
         "difficulty": 3,
         "topics": [
           "algorithms"
