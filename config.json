@@ -1791,7 +1791,11 @@
         "slug": "spiral-matrix",
         "name": "Spiral Matrix",
         "uuid": "cf28d2b2-763e-404b-90b0-637263d3bba6",
-        "prerequisites": [],
+        "prerequisites": [
+          "lists",
+          "enum",
+          "recursion"
+        ],
         "difficulty": 4,
         "topics": [
           "lists",
