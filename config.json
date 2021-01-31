@@ -1174,7 +1174,10 @@
         "slug": "anagram",
         "name": "Anagram",
         "uuid": "21e70267-097e-476f-aaff-233483514802",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "enum"
+        ],
         "difficulty": 2,
         "topics": [
           "enumeration",
