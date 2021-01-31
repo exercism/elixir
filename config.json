@@ -886,7 +886,11 @@
         "slug": "accumulate",
         "name": "Accumulate",
         "uuid": "e7c6a0d2-6aaf-4d55-99e2-8ffa65a5e8f0",
-        "prerequisites": [],
+        "prerequisites": [
+          "anonymous-functions",
+          "lists",
+          "recursion"
+        ],
         "difficulty": 2,
         "topics": [
           "recursion",
