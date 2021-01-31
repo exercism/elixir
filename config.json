@@ -949,7 +949,12 @@
         "slug": "series",
         "name": "Series",
         "uuid": "4a084cb7-335d-41f1-8148-5d3abbce8ab0",
-        "prerequisites": [],
+        "prerequisites": [
+          "multiple-clause-functions",
+          "guards",
+          "strings",
+          "enum"
+        ],
         "difficulty": 2,
         "topics": [
           "string_processing"
