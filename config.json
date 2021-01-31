@@ -933,7 +933,12 @@
         "slug": "run-length-encoding",
         "name": "Run Length Encoding",
         "uuid": "f4f759ea-53e1-42d6-a580-6e7b7d6a99a0",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "regular-expressions",
+          "enum",
+          "if"
+        ],
         "difficulty": 2,
         "topics": [
           "algorithms",
