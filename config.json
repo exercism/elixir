@@ -1080,7 +1080,12 @@
         "slug": "collatz-conjecture",
         "name": "Collatz Conjecture",
         "uuid": "01f7ce73-ad6a-42bb-a401-cbd485c081d4",
-        "prerequisites": [],
+        "prerequisites": [
+          "integers",
+          "recursion",
+          "multiple-clause-functions",
+          "guards"
+        ],
         "difficulty": 2,
         "topics": [
           "math",
