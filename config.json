@@ -852,7 +852,13 @@
         "slug": "space-age",
         "name": "Space Age",
         "uuid": "1d02554e-15f3-46aa-9f14-60b4049f3100",
-        "prerequisites": [],
+        "prerequisites": [
+          "floating-point-numbers",
+          "atoms",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "maps"
+        ],
         "difficulty": 2,
         "topics": [
           "pattern_matching"
