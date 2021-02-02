@@ -15,6 +15,7 @@ defmodule PokerTest do
         |> Enum.map(&Enum.sort/1)
         |> Enum.sort()
       end
+
     assert winning_hands == expected_winning_hands
   end
 
