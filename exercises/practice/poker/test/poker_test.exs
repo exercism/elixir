@@ -3,15 +3,18 @@ defmodule PokerTest do
 
   defp assert_poker(winning_hands, expected_winning_hands) do
     winning_hands =
-      winning_hands
-      |> Enum.map(&Enum.sort/1)
-      |> Enum.sort()
+      if winning_hands do
+        winning_hands
+        |> Enum.map(&Enum.sort/1)
+        |> Enum.sort()
+      end
 
     expected_winning_hands =
-      expected_winning_hands
-      |> Enum.map(&Enum.sort/1)
-      |> Enum.sort()
-
+      if expected_winning_hands do
+        expected_winning_hands
+        |> Enum.map(&Enum.sort/1)
+        |> Enum.sort()
+      end
     assert winning_hands == expected_winning_hands
   end
 
