@@ -792,6 +792,8 @@
         "name": "Protein Translation",
         "uuid": "84af7be8-8f90-4990-9d48-b5324a0d4354",
         "prerequisites": [
+          "atoms",
+          "tuples",
           "maps",
           "enum",
           "recursion",
@@ -799,8 +801,7 @@
           "pattern-matching",
           "strings",
           "binaries",
-          "regular-expressions",
-          "errors"
+          "regular-expressions"
         ],
         "difficulty": 2,
         "topics": [
@@ -1115,13 +1116,14 @@
         "name": "Triangle",
         "uuid": "546d92c7-c57b-4cbb-a721-9c393817a193",
         "prerequisites": [
+          "atoms",
+          "tuples",
           "multiple-clause-functions",
           "pattern-matching",
           "guards",
           "cond",
           "case",
-          "if",
-          "errors"
+          "if"
         ],
         "difficulty": 2,
         "topics": [
@@ -1188,12 +1190,13 @@
         "name": "Hamming",
         "uuid": "aca03bcb-eb70-4646-be34-8c1a44026e9b",
         "prerequisites": [
+          "atoms",
+          "tuples",
           "charlists",
           "multiple-clause-functions",
           "guards",
           "enum",
-          "recursion",
-          "errors"
+          "recursion"
         ],
         "difficulty": 2,
         "topics": [
@@ -1237,6 +1240,8 @@
         "name": "Say",
         "uuid": "5ecbe1c9-12e3-42b6-921a-bc2d32011930",
         "prerequisites": [
+          "atoms",
+          "tuples",
           "strings",
           "multiple-clause-functions",
           "case",
@@ -1244,8 +1249,7 @@
           "enum",
           "recursion",
           "maps",
-          "ranges",
-          "errors"
+          "ranges"
         ],
         "difficulty": 3,
         "topics": [
@@ -1398,12 +1402,13 @@
         "name": "Grains",
         "uuid": "b030fa38-8935-4665-98c3-77f8434a6ea1",
         "prerequisites": [
+          "atoms",
+          "tuples",
           "multiple-clause-functions",
           "pattern-matching",
           "guards",
           "enum",
           "ranges",
-          "errors",
           "erlang-libraries",
           "bit-manipulation"
         ],
@@ -1440,11 +1445,11 @@
         "name": "Simple Linked List",
         "uuid": "e5d2386a-3021-4329-a4b7-6164e49df776",
         "prerequisites": [
+          "atoms",
           "tuples",
           "pattern-matching",
           "recursion",
-          "tail-call-recursion",
-          "errors"
+          "tail-call-recursion"
         ],
         "difficulty": 1,
         "topics": [
@@ -1493,13 +1498,14 @@
         "name": "Change",
         "uuid": "14bddd31-a68f-4a16-830f-6e8ecf8199f2",
         "prerequisites": [
+          "atoms",
+          "tuples",
           "multiple-clause-functions",
           "pattern-matching",
           "guards",
           "recursion",
           "enum",
-          "maps",
-          "errors"
+          "maps"
         ],
         "difficulty": 3,
         "topics": [
@@ -1690,14 +1696,15 @@
         "name": "Perfect Numbers",
         "uuid": "cf4816a5-8cee-4a85-8bbb-236c0676123c",
         "prerequisites": [
+          "atoms",
+          "tuples",
           "cond",
           "case",
           "multiple-clause-functions",
           "pattern-matching",
           "guards",
           "enum",
-          "recursion",
-          "errors"
+          "recursion"
         ],
         "difficulty": 3,
         "topics": [
