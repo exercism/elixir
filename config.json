@@ -1938,7 +1938,15 @@
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "8f40f0f6-95e6-4a4c-a576-3d677ffbbd9f",
-        "prerequisites": [],
+        "prerequisites": [
+          "integers",
+          "lists",
+          "enum",
+          "erlang-libraries"
+        ],
+        "practices": [
+          "integers"
+        ],
         "difficulty": 2,
         "topics": [
           "algorithms",
