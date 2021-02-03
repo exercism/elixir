@@ -2278,7 +2278,22 @@
         "slug": "wordy",
         "name": "Wordy",
         "uuid": "087940a2-5372-4ff3-aa9f-ce2eb982d91c",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "regular-expressions",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "case",
+          "cond",
+          "if",
+          "enum",
+          "errors",
+          "exceptions"
+        ],
+        "practices": [
+          "regular-expressions"
+        ],
         "difficulty": 6,
         "topics": [
           "parsers"
