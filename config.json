@@ -2026,7 +2026,21 @@
         "slug": "largest-series-product",
         "name": "Largest Series Product",
         "uuid": "79525094-76dd-4cf0-8956-fdd33de855e2",
-        "prerequisites": [],
+        "prerequisites": [
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "integers",
+          "strings",
+          "enum",
+          "ranges",
+          "errors",
+          "exceptions"
+        ],
+        "practices": [
+          "integers",
+          "enum"
+        ],
         "difficulty": 4,
         "topics": [
           "enumeration",
