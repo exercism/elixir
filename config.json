@@ -2106,7 +2106,24 @@
         "slug": "poker",
         "name": "Poker",
         "uuid": "53d67dde-5a53-4d89-b77c-027d144135b9",
-        "prerequisites": [],
+        "prerequisites": [
+          "tuples",
+          "lists",
+          "maps",
+          "enum",
+          "recursion",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "case",
+          "cond",
+          "if",
+          "structs"
+        ],
+        "practices": [
+          "enum",
+          "pattern-matching"
+        ],
         "difficulty": 7,
         "topics": [
           "sorting"
