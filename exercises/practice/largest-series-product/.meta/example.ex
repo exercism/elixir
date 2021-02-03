@@ -13,7 +13,7 @@ defmodule Series do
   @spec slices(String.t(), non_neg_integer) :: [list(non_neg_integer)]
   defp slices(number_string, size) do
     digits = digits(number_string)
-    chunk(digits, size, 1)
+    Enum.chunk_every(digits, size, 1, :discard)
   end
 
   @doc """
@@ -33,12 +33,5 @@ defmodule Series do
 
     Enum.map(slices, &Enum.reduce(&1, fn x, acc -> x * acc end))
     |> Enum.max()
-  end
-
-  # Handle Enum.chunks -> Enum.chunk renaming.
-  if {:chunk, 3} not in Enum.__info__(:functions) do
-    defp chunk(coll, n, step), do: Enum.chunks(coll, n, step)
-  else
-    defp chunk(coll, n, step), do: Enum.chunk_every(coll, n, step, :discard)
   end
 end
