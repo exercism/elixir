@@ -1982,7 +1982,16 @@
         "slug": "allergies",
         "name": "Allergies",
         "uuid": "9a1b599c-3175-4166-9b53-491a2f565db6",
-        "prerequisites": [],
+        "prerequisites": [
+          "lists",
+          "maps",
+          "enum",
+          "bit-manipulation"
+        ],
+        "practices": [
+          "bit-manipulation",
+          "enum"
+        ],
         "difficulty": 4,
         "topics": [
           "binary_operators",
