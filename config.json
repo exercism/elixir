@@ -1881,7 +1881,23 @@
         "slug": "minesweeper",
         "name": "Minesweeper",
         "uuid": "8d665135-31dc-490a-8f6d-51c6654099bd",
-        "prerequisites": [],
+        "prerequisites": [
+          "lists",
+          "charlists",
+          "cond",
+          "case",
+          "if",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "strings",
+          "enum",
+          "maps",
+          "ranges"
+        ],
+        "practices": [
+          "enum"
+        ],
         "difficulty": 7,
         "topics": [
           "algorithms",
