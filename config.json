@@ -2303,7 +2303,22 @@
         "slug": "dot-dsl",
         "name": "Dot DSL",
         "uuid": "c316b8ef-7b2d-43d4-b402-f7d28b0cdaa7",
-        "prerequisites": [],
+        "prerequisites": [
+          "structs",
+          "regular-expressions",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "case",
+          "cond",
+          "if",
+          "enum",
+          "errors",
+          "exceptions"
+        ],
+        "practices": [
+          "structs"
+        ],
         "difficulty": 8,
         "topics": [
           "graphs",
