@@ -1957,7 +1957,21 @@
         "slug": "simple-cipher",
         "name": "Simple Cipher",
         "uuid": "dbea6e3b-1c0c-471f-9af3-f8fd3cbb957a",
-        "prerequisites": [],
+        "prerequisites": [
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "ranges",
+          "strings",
+          "charlists",
+          "binaries",
+          "enum",
+          "streams"
+        ],
+        "practices": [
+          "strings",
+          "charlists"
+        ],
         "difficulty": 3,
         "topics": [
           "encryption",
