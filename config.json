@@ -1909,7 +1909,25 @@
         "slug": "queen-attack",
         "name": "Queen Attack",
         "uuid": "5bc0d877-ad13-461e-bdbd-cd262b875dbb",
-        "prerequisites": [],
+        "prerequisites": [
+          "lists",
+          "cond",
+          "case",
+          "if",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "enum",
+          "ranges",
+          "errors",
+          "exceptions",
+          "structs"
+        ],
+        "practices": [
+          "structs",
+          "pattern-matching",
+          "exceptions"
+        ],
         "difficulty": 7,
         "topics": [
           "algorithms",
