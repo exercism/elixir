@@ -2231,7 +2231,23 @@
         "slug": "alphametics",
         "name": "Alphametics",
         "uuid": "7ed99829-acd8-4724-b92f-85146f1709f9",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "regular-expressions",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "case",
+          "cond",
+          "if",
+          "enum",
+          "charlists",
+          "ranges"
+        ],
+        "practices": [
+          "strings",
+          "enum"
+        ],
         "difficulty": 5,
         "topics": [
           "algorithms",
