@@ -2002,7 +2002,20 @@
         "slug": "crypto-square",
         "name": "Crypto Square",
         "uuid": "132981c5-d3cd-426a-8a93-8a72b1cd8564",
-        "prerequisites": [],
+        "prerequisites": [
+          "integers",
+          "floating-point-numbers",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "strings",
+          "regular-expressions",
+          "enum",
+          "erlang-libraries"
+        ],
+        "practices": [
+          "strings",
+          "enum"
+        ],
         "difficulty": 4,
         "topics": [
           "algorithms",
