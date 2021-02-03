@@ -1813,7 +1813,21 @@
         "slug": "custom-set",
         "name": "Custom Set",
         "uuid": "1219528b-3438-4313-84c5-a9c1bbb6ffd3",
-        "prerequisites": [],
+        "prerequisites": [
+          "lists",
+          "cond",
+          "case",
+          "if",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "structs",
+          "maps",
+          "enum"
+        ],
+        "practices": [
+          "maps"
+        ],
         "difficulty": 5,
         "topics": [
           "collections",
