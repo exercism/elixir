@@ -1838,7 +1838,14 @@
         "slug": "saddle-points",
         "name": "Saddle Points",
         "uuid": "8e5c050a-ff42-4a23-ba32-84595b7476f4",
-        "prerequisites": [],
+        "prerequisites": [
+          "lists",
+          "strings",
+          "enum"
+        ],
+        "practices": [
+          "enum"
+        ],
         "difficulty": 5,
         "topics": [
           "enumeration",
