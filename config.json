@@ -643,8 +643,8 @@
         "uuid": "5d5e0f6c-f4b7-418e-88f8-4b1d0f99bfb0",
         "prerequisites": [
           "processes",
-          "agent",
-          "genserver"
+          "pids",
+          "agent"
         ],
         "difficulty": 7,
         "topics": [
@@ -1754,7 +1754,8 @@
           "strings",
           "regular-expressions",
           "enum",
-          "task"
+          "processes",
+          "pids"
         ],
         "difficulty": 4,
         "topics": [
