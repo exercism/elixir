@@ -2082,7 +2082,20 @@
         "slug": "sieve",
         "name": "Sieve",
         "uuid": "78cfa21b-bc7f-426b-9ef3-57b8639e887b",
-        "prerequisites": [],
+        "prerequisites": [
+          "integers",
+          "lists",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "ranges",
+          "enum",
+          "recursion"
+        ],
+        "practices": [
+          "lists",
+          "recursion"
+        ],
         "difficulty": 5,
         "topics": [
           "enumeration",
