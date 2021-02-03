@@ -1857,7 +1857,20 @@
         "slug": "connect",
         "name": "Connect",
         "uuid": "c36fd67a-a370-49b7-b778-9a542e2c5a75",
-        "prerequisites": [],
+        "prerequisites": [
+          "lists",
+          "cond",
+          "case",
+          "if",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "strings",
+          "enum"
+        ],
+        "practices": [
+          "enum"
+        ],
         "difficulty": 7,
         "topics": [
           "reduce",
