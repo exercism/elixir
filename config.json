@@ -2133,7 +2133,19 @@
         "slug": "atbash-cipher",
         "name": "Atbash Cipher",
         "uuid": "eab8a96f-74af-4e3d-8039-d1d74714f72b",
-        "prerequisites": [],
+        "prerequisites": [
+          "strings",
+          "charlists",
+          "regular-expressions",
+          "ranges",
+          "maps",
+          "enum",
+          "recursion"
+        ],
+        "practices": [
+          "strings",
+          "charlists"
+        ],
         "difficulty": 3,
         "topics": [
           "encryption"
