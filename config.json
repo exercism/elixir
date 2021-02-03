@@ -2052,7 +2052,23 @@
         "slug": "clock",
         "name": "Clock",
         "uuid": "e7cb9cd0-5893-4ebb-b801-f5d548945531",
-        "prerequisites": [],
+        "prerequisites": [
+          "integers",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "if",
+          "case",
+          "cond",
+          "strings",
+          "structs",
+          "protocols"
+        ],
+        "practices": [
+          "integers",
+          "structs",
+          "protocols"
+        ],
         "difficulty": 5,
         "topics": [
           "integers",
