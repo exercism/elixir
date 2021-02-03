@@ -2155,7 +2155,23 @@
         "slug": "grep",
         "name": "Grep",
         "uuid": "b2630a58-6ee1-4b3b-ad5c-e09b8bfe2a30",
-        "prerequisites": [],
+        "prerequisites": [
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "case",
+          "cond",
+          "if",
+          "enum",
+          "strings",
+          "regular-expressions",
+          "file"
+        ],
+        "practices": [
+          "strings",
+          "regular-expressions",
+          "file"
+        ],
         "difficulty": 3,
         "topics": [
           "enumerations",
