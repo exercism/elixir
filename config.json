@@ -2201,7 +2201,23 @@
         "slug": "dominoes",
         "name": "Dominoes",
         "uuid": "9fdeb525-90d8-45ca-9a24-ca46b4363e03",
-        "prerequisites": [],
+        "prerequisites": [
+          "tuples",
+          "atoms",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "case",
+          "cond",
+          "if",
+          "enum",
+          "recursion",
+          "tail-call-recursion"
+        ],
+        "practices": [
+          "recursion",
+          "tail-call-recursion"
+        ],
         "difficulty": 4,
         "topics": [
           "algorithms",
