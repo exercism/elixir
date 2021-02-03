@@ -2182,7 +2182,15 @@
         "slug": "difference-of-squares",
         "name": "Difference Of Squares",
         "uuid": "bb9b24da-1ee6-42fb-936f-5fc41d97ee27",
-        "prerequisites": [],
+        "prerequisites": [
+          "integers",
+          "enum",
+          "ranges"
+        ],
+        "practices": [
+          "enum",
+          "ranges"
+        ],
         "difficulty": 4,
         "topics": [
           "math",
