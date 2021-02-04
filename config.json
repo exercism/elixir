@@ -1734,6 +1734,11 @@
           "enum",
           "strings"
         ],
+        "practices": [
+          "recursion",
+          "tail-call-recursion",
+          "strings"
+        ],
         "difficulty": 3,
         "topics": [
           "binary_operators",
@@ -1745,6 +1750,7 @@
         "name": "Change",
         "uuid": "14bddd31-a68f-4a16-830f-6e8ecf8199f2",
         "prerequisites": [
+          "integers",
           "atoms",
           "tuples",
           "multiple-clause-functions",
@@ -1753,6 +1759,10 @@
           "recursion",
           "enum",
           "maps"
+        ],
+        "practices": [
+          "integers",
+          "enum"
         ],
         "difficulty": 3,
         "topics": [
@@ -1765,6 +1775,10 @@
         "name": "Transpose",
         "uuid": "ce270a34-add1-422c-bb86-53b310f05e27",
         "prerequisites": [
+          "strings",
+          "enum"
+        ],
+        "practices": [
           "strings",
           "enum"
         ],
@@ -1790,6 +1804,12 @@
           "maps",
           "binaries"
         ],
+        "practices": [
+          "strings",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "enum"
+        ],
         "difficulty": 6,
         "topics": [
           "enumerations",
@@ -1810,7 +1830,14 @@
           "enum",
           "maps",
           "ranges",
-          "regular-expressions"
+          "regular-expressions",
+          "module-attributes-as-constants"
+        ],
+        "practices": [
+          "string",
+          "enum",
+          "maps",
+          "module-attributes-as-constants"
         ],
         "difficulty": 3,
         "topics": [
@@ -1826,6 +1853,12 @@
           "strings",
           "enum",
           "recursion",
+          "ranges"
+        ],
+        "practices": [
+          "charlists",
+          "strings",
+          "enum",
           "ranges"
         ],
         "difficulty": 5,
