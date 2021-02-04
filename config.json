@@ -489,6 +489,7 @@
         "name": "Hello World",
         "uuid": "cc96d65d-1c79-40d0-8fd2-9a6665a43b01",
         "prerequisites": [],
+        "practices": [],,
         "difficulty": 1,
         "topics": [
           "strings"
@@ -505,6 +506,9 @@
           "case",
           "enum"
         ],
+        "practices": [
+          "charlists"
+        ],
         "difficulty": 2,
         "topics": [
           "strings"
@@ -519,6 +523,10 @@
           "regular-expressions",
           "enum",
           "maps"
+        ],
+        "practices": [
+          "strings",
+          "regular-expressions"
         ],
         "difficulty": 2,
         "topics": [
@@ -542,6 +550,9 @@
           "cond",
           "case"
         ],
+        "practices": [
+          "recursion"
+        ],
         "difficulty": 2,
         "topics": [
           "algorithms",
@@ -555,6 +566,10 @@
         "prerequisites": [
           "strings",
           "regular-expressions",
+          "cond"
+        ],
+        "practices": [
+          "strings",
           "cond"
         ],
         "difficulty": 2,
@@ -573,6 +588,10 @@
           "ranges",
           "enum",
           "recursion"
+        ],
+        "practices": [
+          "multiple-clause-functions",
+          "strings"
         ],
         "difficulty": 3,
         "topics": [
@@ -594,6 +613,10 @@
           "structs",
           "errors"
         ],
+        "practices": [
+          "pattern-matching",
+          "structs"
+        ],
         "difficulty": 6,
         "topics": [
           "pattern_matching",
@@ -610,6 +633,11 @@
           "tail-call-recursion",
           "multiple-clause-functions",
           "pattern-matching"
+        ],
+        "practices": [
+          "lists",
+          "recursion",
+          "tail-call-recursion"
         ],
         "difficulty": 4,
         "topics": [
@@ -630,7 +658,12 @@
           "multiple-clause-functions",
           "pattern-matching",
           "cond",
+          "case",
           "if"
+        ],
+        "practices": [
+          "strings",
+          "regular-expressions"
         ],
         "difficulty": 5,
         "topics": [
@@ -642,6 +675,11 @@
         "name": "Bank Account",
         "uuid": "5d5e0f6c-f4b7-418e-88f8-4b1d0f99bfb0",
         "prerequisites": [
+          "processes",
+          "pids",
+          "agent"
+        ],
+        "practices": [
           "processes",
           "pids",
           "agent"
@@ -664,6 +702,10 @@
           "case",
           "pattern-matching",
           "multiple-clause-functions"
+        ],
+        "practices": [
+          "structs",
+          "recursion"
         ],
         "difficulty": 8,
         "topics": [
@@ -689,6 +731,11 @@
           "case",
           "structs",
           "errors"
+        ],
+        "practices": [
+          "pattern-matching",
+          "guards",
+          "structs"
         ],
         "difficulty": 8,
         "topics": [
@@ -716,6 +763,11 @@
           "case",
           "structs",
           "errors",
+          "exceptions",
+          "dynamic-dispatch"
+        ],
+        "practices": [
+          "regular-expressions",
           "exceptions"
         ],
         "difficulty": 10,
@@ -732,6 +784,9 @@
           "enum",
           "recursion"
         ],
+        "practices": [
+          "enum"
+        ],
         "difficulty": 1,
         "topics": [
           "enumerables"
@@ -742,6 +797,11 @@
         "name": "Two Fer",
         "uuid": "e7f3280e-0bef-4fac-8a69-cbfa2e5f818a",
         "prerequisites": [
+          "strings",
+          "guards",
+          "default-arguments"
+        ],
+        "practices": [
           "strings",
           "guards",
           "default-arguments"
@@ -760,6 +820,10 @@
           "maps",
           "enum",
           "recursion"
+        ],
+        "practices": [
+          "charlists",
+          "enum"
         ],
         "difficulty": 2,
         "topics": [
@@ -780,6 +844,9 @@
           "cond",
           "if",
           "case"
+        ],
+        "practices": [
+          "strings"
         ],
         "difficulty": 2,
         "topics": [
@@ -803,6 +870,11 @@
           "binaries",
           "regular-expressions"
         ],
+        "practices": [
+          "strings",
+          "case",
+          "pattern-matching"
+        ],
         "difficulty": 2,
         "topics": [
           "pattern_matching",
@@ -823,6 +895,10 @@
           "case",
           "multiple-clause-functions",
           "guards"
+        ],
+        "practices": [
+          "charlists",
+          "ranges"
         ],
         "difficulty": 2,
         "topics": [
