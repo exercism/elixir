@@ -919,6 +919,9 @@
           "recursion",
           "bit-manipulation"
         ],
+        "practices": [
+          "bit-manipulation"
+        ],
         "difficulty": 2,
         "topics": [
           "binary_representation"
@@ -934,6 +937,9 @@
           "multiple-clause-functions",
           "pattern-matching",
           "maps"
+        ],
+        "practices": [
+          "floating-point-numbers"
         ],
         "difficulty": 2,
         "topics": [
@@ -953,6 +959,10 @@
           "case",
           "if"
         ],
+        "practices": [
+          "lists",
+          "recursion"
+        ],
         "difficulty": 2,
         "topics": [
           "collections"
@@ -963,6 +973,11 @@
         "name": "Accumulate",
         "uuid": "e7c6a0d2-6aaf-4d55-99e2-8ffa65a5e8f0",
         "prerequisites": [
+          "anonymous-functions",
+          "lists",
+          "recursion"
+        ],
+        "practices": [
           "anonymous-functions",
           "lists",
           "recursion"
@@ -980,7 +995,12 @@
         "prerequisites": [
           "strings",
           "enum",
-          "regular-expressions"
+          "regular-expressions",
+          "pipe-operator"
+        ],
+        "practices": [
+          "regular-expressions",
+          "pipe-operator"
         ],
         "difficulty": 2,
         "topics": [
@@ -998,6 +1018,9 @@
           "if",
           "strings",
           "maps",
+          "enum"
+        ],
+        "practices": [
           "enum"
         ],
         "difficulty": 2,
