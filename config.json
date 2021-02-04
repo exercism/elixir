@@ -1038,6 +1038,10 @@
           "enum",
           "if"
         ],
+        "practices": [
+          "strings",
+          "regular-expressions"
+        ],
         "difficulty": 2,
         "topics": [
           "algorithms",
@@ -1052,7 +1056,13 @@
           "multiple-clause-functions",
           "guards",
           "strings",
-          "enum"
+          "enum",
+          "pipe-operator"
+        ],
+        "practices": [
+          "strings",
+          "enum",
+          "pipe-operator"
         ],
         "difficulty": 2,
         "topics": [
@@ -1069,6 +1079,10 @@
           "recursion",
           "structs",
           "ranges",
+          "randomness"
+        ],
+        "practices": [
+          "structs",
           "randomness"
         ],
         "difficulty": 3,
@@ -1088,6 +1102,10 @@
           "recursion",
           "ranges"
         ],
+        "practices": [
+          "charlists",
+          "ranges"
+        ],
         "difficulty": 2,
         "topics": [
           "enumerations",
@@ -1104,6 +1122,10 @@
           "enum",
           "recursion"
         ],
+        "practices": [
+          "strings",
+          "enum"
+        ],
         "difficulty": 2,
         "topics": [
           "reduce"
@@ -1116,6 +1138,10 @@
         "prerequisites": [
           "enum",
           "recursion",
+          "ranges"
+        ],
+        "practices": [
+          "enum",
           "ranges"
         ],
         "difficulty": 2,
@@ -1134,6 +1160,9 @@
           "maps",
           "enum"
         ],
+        "practices": [
+          "maps"
+        ],
         "difficulty": 3,
         "topics": [
           "maps"
@@ -1145,6 +1174,10 @@
         "uuid": "55a20a0f-0131-4e4e-b14f-f3cb49e3cc04",
         "prerequisites": [
           "strings",
+          "enum",
+          "regular-expressions"
+        ],
+        "practices": [
           "enum",
           "regular-expressions"
         ],
@@ -1168,6 +1201,11 @@
           "maps",
           "ranges"
         ],
+        "practices": [
+          "multiple-clause-functions",
+          "strings",
+          "recursion"
+        ],
         "difficulty": 3,
         "topics": [
           "enumerations",
@@ -1183,6 +1221,11 @@
           "integers",
           "recursion",
           "multiple-clause-functions",
+          "guards"
+        ],
+        "practices": [
+          "integers",
+          "recursion",
           "guards"
         ],
         "difficulty": 2,
@@ -1204,6 +1247,9 @@
           "pattern-matching",
           "recursion"
         ],
+        "practices": [
+          "lists"
+        ],
         "difficulty": 2,
         "topics": [
           "enumeration",
@@ -1224,6 +1270,11 @@
           "case",
           "if"
         ],
+        "practices": [
+          "atoms",
+          "pattern-matching",
+          "guards"
+        ],
         "difficulty": 2,
         "topics": [
           "algorithms"
@@ -1239,6 +1290,10 @@
           "multiple-clause-functions",
           "pattern-matching",
           "guards"
+        ],
+        "practices": [
+          "lists",
+          "recursion"
         ],
         "difficulty": 3,
         "topics": [
@@ -1263,6 +1318,11 @@
           "multiple-clause-functions",
           "binaries"
         ],
+        "practices": [
+          "strings",
+          "recursion",
+          "pattern-matching"
+        ],
         "difficulty": 3,
         "topics": [
           "algorithms",
@@ -1275,6 +1335,10 @@
         "name": "Anagram",
         "uuid": "21e70267-097e-476f-aaff-233483514802",
         "prerequisites": [
+          "strings",
+          "enum"
+        ],
+        "practices": [
           "strings",
           "enum"
         ],
@@ -1297,6 +1361,9 @@
           "enum",
           "recursion"
         ],
+        "practices": [
+          "enum"
+        ],
         "difficulty": 2,
         "topics": [
           "string_processing"
@@ -1307,6 +1374,11 @@
         "name": "Matrix",
         "uuid": "f0df392c-8ace-4639-b555-5e61e54a854e",
         "prerequisites": [
+          "strings",
+          "enum",
+          "structs"
+        ],
+        "practices": [
           "strings",
           "enum",
           "structs"
@@ -1328,6 +1400,10 @@
           "pattern-matching",
           "binaries"
         ],
+        "practices": [
+          "strings",
+          "regular-expressions"
+        ],
         "difficulty": 3,
         "topics": [
           "pattern_matching",
@@ -1339,6 +1415,7 @@
         "name": "Say",
         "uuid": "5ecbe1c9-12e3-42b6-921a-bc2d32011930",
         "prerequisites": [
+          "integers",
           "atoms",
           "tuples",
           "strings",
@@ -1348,7 +1425,13 @@
           "enum",
           "recursion",
           "maps",
-          "ranges"
+          "ranges",
+          "module-attributes-as-constants"
+        ],
+        "practices": [
+          "guards",
+          "maps",
+          "module-attributes-as-constants"
         ],
         "difficulty": 3,
         "topics": [
@@ -1370,7 +1453,14 @@
           "guards",
           "ranges",
           "streams",
+          "errors",
           "exceptions"
+        ],
+        "practices": [
+          "integers",
+          "recursion",
+          "ranges",
+          "errors",
         ],
         "difficulty": 2,
         "topics": [
@@ -1389,6 +1479,11 @@
           "recursion",
           "multiple-clause-functions",
           "guards",
+          "cond"
+        ],
+        "practices": [
+          "tuples",
+          "recursion",
           "cond"
         ],
         "difficulty": 3,
@@ -1410,6 +1505,11 @@
           "ranges",
           "enum"
         ],
+        "practices": [
+          "strings",
+          "regular-expressions",
+          "ranges"
+        ],
         "difficulty": 3,
         "topics": [
           "string_processing"
@@ -1420,6 +1520,12 @@
         "name": "Leap",
         "uuid": "3d0d82d7-fdff-4dd5-b720-7246317bb023",
         "prerequisites": [
+          "integers",
+          "booleans",
+          "multiple-clause-functions",
+          "guards"
+        ],
+        "practices": [
           "integers",
           "booleans",
           "multiple-clause-functions",
@@ -1446,6 +1552,11 @@
           "case",
           "if"
         ],
+        "practices": [
+          "maps",
+          "enum",
+          "pattern-matching"
+        ],
         "difficulty": 4,
         "topics": [
           "formatting",
@@ -1467,7 +1578,14 @@
           "if",
           "recursion",
           "tail-call-recursion",
-          "enum"
+          "enum",
+          "nil"
+        ],
+        "practices": [
+          "integers",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "nil"
         ],
         "difficulty": 2,
         "topics": [
@@ -1488,7 +1606,14 @@
           "case",
           "if",
           "enum",
-          "maps"
+          "maps",
+          "recursion",
+          "nil"
+        ],
+        "practices": [
+          "maps",
+          "recursion",
+          "nil"
         ],
         "difficulty": 3,
         "topics": [
@@ -1511,6 +1636,12 @@
           "erlang-libraries",
           "bit-manipulation"
         ],
+        "practices": [
+          "atoms",
+          "tuples",
+          "enum",
+          "ranges"
+        ],
         "difficulty": 3,
         "topics": [
           "recursion",
@@ -1522,6 +1653,7 @@
         "name": "Meetup",
         "uuid": "68fee2cd-a5bc-40f2-8936-a3bb10463498",
         "prerequisites": [
+          "atoms",
           "cond",
           "case",
           "if",
@@ -1530,6 +1662,11 @@
           "guards",
           "enum",
           "ranges",
+          "erlang-libraries"
+        ],
+        "practices": [
+          "atoms",
+          "pattern-matching",
           "erlang-libraries"
         ],
         "difficulty": 4,
@@ -1550,6 +1687,13 @@
           "recursion",
           "tail-call-recursion"
         ],
+        "practices": [
+          "atoms",
+          "tuples",
+          "pattern-matching",
+          "recursion",
+          "tail-call-recursion"
+        ],
         "difficulty": 1,
         "topics": [
           "recursion"
@@ -1562,7 +1706,11 @@
         "prerequisites": [
           "strings",
           "maps",
-          "enum"
+          "enum",
+          "list-comprehensions"
+        ],
+        "practices": [
+          "list-comprehensions"
         ],
         "difficulty": 2,
         "topics": [
