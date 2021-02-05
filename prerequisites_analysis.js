@@ -24,9 +24,9 @@ console.log('\n\n============================================')
 console.log('\n\nConcepts and their practice exercises:')
 
 conceptSlugs.forEach(concept => {
-  console.log('~*~*~*~ ' + concept + ' ~*~*~*~')
+  console.log('\n~*~*~*~ ' + concept + ' ~*~*~*~')
   console.log('\nPracticed by:')
   console.log(config.exercises.practice.filter(x => x.practices.includes(concept)).map(x => x.slug))
-  console.log('\nRequired by by:')
+  console.log('\nRequired by:')
   console.log(config.exercises.practice.filter(x => x.prerequisites.includes(concept)).map(x => x.slug))
 })
