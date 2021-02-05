@@ -1884,6 +1884,11 @@
           "recursion",
           "enum"
         ],
+        "practices": [
+          "integers",
+          "strings",
+          "enum"
+        ],
         "difficulty": 5,
         "topics": [
           "enumeration",
@@ -1904,7 +1909,14 @@
           "multiple-clause-functions",
           "guards",
           "pattern-matching",
-          "recursion"
+          "recursion",
+          "enum",
+          "module-attributes-as-constants"
+        ],
+        "practices": [
+          "lists",
+          "enum",
+          "module-attributes-as-constants"
         ],
         "difficulty": 5,
         "topics": [
@@ -1929,6 +1941,11 @@
           "ranges",
           "streams"
         ],
+        "practices": [
+          "strings",
+          "enum",
+          "ranges"
+        ],
         "difficulty": 6,
         "topics": [
           "encryption",
@@ -1941,6 +1958,9 @@
         "uuid": "287331a4-64d5-4b35-b4c1-a1171dc338e1",
         "prerequisites": [
           "integers",
+          "erlang-libraries"
+        ],
+        "practices": [
           "erlang-libraries"
         ],
         "difficulty": 3,
@@ -1964,6 +1984,11 @@
           "recursion",
           "enum"
         ],
+        "practices": [
+          "strings",
+          "charlists",
+          "ranges"
+        ],
         "difficulty": 3,
         "topics": [
           "math",
@@ -1986,6 +2011,13 @@
           "enum",
           "recursion"
         ],
+        "practices": [
+          "atoms",
+          "cond",
+          "pattern-matching",
+          "enum",
+          "recursion"
+        ],
         "difficulty": 3,
         "topics": [
           "enumeration",
@@ -2003,7 +2035,14 @@
           "multiple-clause-functions",
           "pattern-matching",
           "guards",
-          "recursion"
+          "recursion",
+          "tail-call-recursion"
+        ],
+        "practices": [
+          "multiple-clause-functions",
+          "pattern-matching",
+          "recursion",
+          "tail-call-recursion"
         ],
         "difficulty": 3,
         "topics": [
@@ -2017,6 +2056,11 @@
         "name": "Diffie Hellman",
         "uuid": "92caf2b9-3fca-401c-8daa-aaa0193e704f",
         "prerequisites": [
+          "ranges",
+          "randomness",
+          "erlang-libraries"
+        ],
+        "practices": [
           "ranges",
           "randomness",
           "erlang-libraries"
@@ -2037,6 +2081,11 @@
           "processes",
           "pids"
         ],
+        "practices": [
+          "strings",
+          "regular-expressions",
+          "processes"
+        ],
         "difficulty": 4,
         "topics": [
           "concurrency",
@@ -2050,7 +2099,13 @@
         "prerequisites": [
           "strings",
           "enum",
-          "ranges"
+          "ranges",
+          "list-comprehensions"
+        ],
+        "practices": [
+          "enum",
+          "ranges",
+          "list-comprehensions"
         ],
         "difficulty": 5,
         "topics": [
@@ -2067,6 +2122,11 @@
           "ranges",
           "recursion"
         ],
+        "practices": [
+          "enum",
+          "ranges",
+          "recursion"
+        ],
         "difficulty": 3,
         "topics": [
           "algorithms",
@@ -2079,6 +2139,11 @@
         "name": "Spiral Matrix",
         "uuid": "cf28d2b2-763e-404b-90b0-637263d3bba6",
         "prerequisites": [
+          "lists",
+          "enum",
+          "recursion"
+        ],
+        "practices": [
           "lists",
           "enum",
           "recursion"
