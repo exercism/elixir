@@ -564,11 +564,13 @@
         "name": "Bob",
         "uuid": "d20b49dc-cb6d-45fc-a168-78d002072c75",
         "prerequisites": [
+          "booleans",
           "strings",
           "regular-expressions",
           "cond"
         ],
         "practices": [
+          "booleans",
           "strings",
           "cond"
         ],
@@ -675,11 +677,13 @@
         "name": "Bank Account",
         "uuid": "5d5e0f6c-f4b7-418e-88f8-4b1d0f99bfb0",
         "prerequisites": [
+          "if",
           "processes",
           "pids",
           "agent"
         ],
         "practices": [
+          "if",
           "processes",
           "pids",
           "agent"
@@ -2513,6 +2517,7 @@
           "file"
         ],
         "practices": [
+          "case",
           "strings",
           "regular-expressions",
           "file"
