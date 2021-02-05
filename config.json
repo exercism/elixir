@@ -2659,9 +2659,11 @@
           "if",
           "enum",
           "errors",
-          "exceptions"
+          "exceptions",
+          "keyword-lists"
         ],
         "practices": [
+          "keyword-lists",
           "structs"
         ],
         "difficulty": 8,
