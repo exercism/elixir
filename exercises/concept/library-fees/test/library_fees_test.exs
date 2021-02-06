@@ -15,27 +15,20 @@ defmodule LibraryFeesTest do
     end
   end
 
-  describe "noon/0" do
-    @tag :pending
-    test "returns the time 12:00" do
-      assert LibraryFees.noon() == ~T[12:00:00]
-    end
-  end
-
-  describe "checked_out_before_noon?/1" do
+  describe "before_noon?/1" do
     @tag :pending
     test "returns true if the given NaiveDateTime is before 12:00" do
-      assert LibraryFees.checked_out_before_noon?(~N[2020-06-06 11:59:59Z]) == true
+      assert LibraryFees.before_noon?(~N[2020-06-06 11:59:59Z]) == true
     end
 
     @tag :pending
     test "returns false if the given NaiveDateTime is after 12:00" do
-      assert LibraryFees.checked_out_before_noon?(~N[2021-01-03 12:01:01Z]) == false
+      assert LibraryFees.before_noon?(~N[2021-01-03 12:01:01Z]) == false
     end
 
     @tag :pending
     test "returns false if the given NaiveDateTime is exactly at 12:00" do
-      assert LibraryFees.checked_out_before_noon?(~N[2018-11-17 12:00:00Z]) == false
+      assert LibraryFees.before_noon?(~N[2018-11-17 12:00:00Z]) == false
     end
   end
 
@@ -56,6 +49,32 @@ defmodule LibraryFeesTest do
     test "adds 29 days if the given NaiveDateTime is exactly at 12:00" do
       result = LibraryFees.return_datetime(~N[2018-12-01 12:00:00Z])
       assert result == ~N[2018-12-30 12:00:00Z]
+    end
+  end
+
+  describe "days_late/2" do
+    @tag :pending
+    test "returns 0 when identical datetimes" do
+      result = LibraryFees.days_late(~N[2021-02-01 12:00:00Z], ~N[2021-02-01 12:00:00Z])
+      assert result == 0
+    end
+
+    @tag :pending
+    test "returns 0 when identical dates, but different times" do
+      result = LibraryFees.days_late(~N[2019-03-11 13:50:00Z], ~N[2019-03-11 12:00:00Z])
+      assert result == 0
+    end
+
+    @tag :pending
+    test "returns 0 when planned return date is later than actual return date" do
+      result = LibraryFees.days_late(~N[2020-12-03 09:50:00Z], ~N[2020-11-29 16:00:00Z])
+      assert result == 0
+    end
+
+    @tag :pending
+    test "returns date difference in numbers of days when planned return date is earlier than actual return date" do
+      result = LibraryFees.days_late(~N[2020-06-12 09:50:00Z], ~N[2020-06-21 16:00:00Z])
+      assert result == 9
     end
   end
 
@@ -88,32 +107,6 @@ defmodule LibraryFeesTest do
     @tag :pending
     test "2019-04-28 was a Sunday" do
       assert LibraryFees.monday?(~N[2019-04-28 11:37:12Z]) == false
-    end
-  end
-
-  describe "days_late/2" do
-    @tag :pending
-    test "returns 0 when identical datetimes" do
-      result = LibraryFees.days_late(~N[2021-02-01 12:00:00Z], ~N[2021-02-01 12:00:00Z])
-      assert result == 0
-    end
-
-    @tag :pending
-    test "returns 0 when identical dates, but different times" do
-      result = LibraryFees.days_late(~N[2019-03-11 13:50:00Z], ~N[2019-03-11 12:00:00Z])
-      assert result == 0
-    end
-
-    @tag :pending
-    test "returns 0 when planned return date is later than actual return date" do
-      result = LibraryFees.days_late(~N[2020-12-03 09:50:00Z], ~N[2020-11-29 16:00:00Z])
-      assert result == 0
-    end
-
-    @tag :pending
-    test "returns date difference in numbers of days when planned return date is earlier than actual return date" do
-      result = LibraryFees.days_late(~N[2020-06-12 09:50:00Z], ~N[2020-06-21 16:00:00Z])
-      assert result == 9
     end
   end
 
@@ -161,9 +154,9 @@ defmodule LibraryFeesTest do
     end
 
     @tag :pending
-    test "late fees are 50% off when the book is returned on a Monday" do
+    test "late fees are 50% off (rounded down) when the book is returned on a Monday" do
       result = LibraryFees.calculate_late_fee("2021-01-01T08:00:00Z", "2021-02-15T08:00:00Z", 111)
-      assert result == 111 * 17 * 0.5
+      assert result == trunc(111 * 17 * 0.5)
     end
   end
 end
