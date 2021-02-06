@@ -1,3 +1,2 @@
 defmodule LibraryFees do
-
 end

@@ -490,8 +490,10 @@
           "dates-and-time"
         ],
         "prerequisites": [
+          "integers",
           "tuples",
-          "erlang-libraries"
+          "atoms",
+          "if"
         ],
         "status": "wip"
       }
