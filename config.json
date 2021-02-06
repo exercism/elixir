@@ -481,6 +481,19 @@
           "pids"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "library-fees",
+        "name": "Library Fees",
+        "uuid": "b5629003-638c-47c0-ad76-a0769f285053",
+        "concepts": [
+          "dates-and-time"
+        ],
+        "prerequisites": [
+          "tuples",
+          "erlang-libraries"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
@@ -1608,6 +1621,12 @@
       "slug": "cond",
       "name": "Cond",
       "blurb": "There are three conditional expressions in Elixir: if, case, and cond. Cond is usually used when there are more than two logical branches and each branch has a condition based on different variables."
+    },
+    {
+      "uuid": "f76e56a7-b8a8-48a3-85f9-2f795acac8c1",
+      "slug": "dates-and-time",
+      "name": "Dates and Time",
+      "blurb": "TODO"
     },
     {
       "uuid": "337ea0be-2978-48a1-ba10-0c29d7018a99",
