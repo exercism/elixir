@@ -14,7 +14,7 @@ installation instructions can be found at
 
 ---
 
-> It is recommended to test BEFORE submitting a PR.  It will test your submission, ensure
+> It is recommended to test BEFORE submitting a PR. It will test your submission, ensure
 > that the repository builds as a whole, and help guard against unintentional, unrelated changes.
 
 ---
@@ -44,11 +44,13 @@ cd exercises/$EXERCISE_NAME
 mix test
 ```
 
-### Testing the Build
+### Dialyzer
 
-TravisCI is used to test the build against different environments.
+To run dialyzer on all exercises, run `./bin/dialyzer_check.sh`. It might take a really long time the first time you run it. It will also be run for you by Github Actions as part of the PR check.
 
-TravisCI's current testing routine can be found in [.travis.yml](https://github.com/exercism/elixir/blob/master/.travis.yml)
+### Code and document formatting
+
+To check formatting of all exercises and all documents, run `./bin/check_formatting.sh`. It will also be run for you by Github Actions as part of the PR check.
 
 ## Contributing Guide
 
