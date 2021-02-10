@@ -18,6 +18,7 @@
 
 - `tuples`
 - `integers`
+- `floating-point-numbers`
 - `if`
 - `atoms`
 

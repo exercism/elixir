@@ -491,6 +491,7 @@
         ],
         "prerequisites": [
           "integers",
+          "floating-point-numbers",
           "tuples",
           "atoms",
           "if"

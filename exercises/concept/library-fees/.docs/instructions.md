@@ -18,7 +18,7 @@ If a book was checked out before noon, the reader has 28 days to return it. If i
 Implement the `LibraryFees.before_noon?/1` function. It should take a `NaiveDateTime` struct and return a boolean.
 
 ```elixir
-LibraryFees.before_noon?(~N[2021-01-12 08:23:03]) 
+LibraryFees.before_noon?(~N[2021-01-12 08:23:03])
 # => true
 ```
 
@@ -37,7 +37,7 @@ LibraryFees.return_datetime(~N[2020-11-28 15:55:33])
 
 The library has a flat rate for late returns. To be able to calculate the fee, we need to know how many days after the return date the book was actually returned.
 
-Implement the `LibraryFees.days_late/2` function. It should take two `NaiveDateTime` structs, the planned return datetime and the actual return datetime. If the planned return datetime is on an earlier or the same day as the actual return datetime, the function should return 0. Otherwise, the function should return the difference between those two datetimes in days. 
+Implement the `LibraryFees.days_late/2` function. It should take two `NaiveDateTime` structs, the planned return datetime and the actual return datetime. If the planned return datetime is on an earlier or the same day as the actual return datetime, the function should return 0. Otherwise, the function should return the difference between those two datetimes in days.
 
 ```elixir
 LibraryFees.days_late(~N[2020-12-27 15:55:33], ~N[2021-01-03 09:23:36])
