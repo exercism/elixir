@@ -1066,7 +1066,12 @@
         "slug": "meetup",
         "name": "Meetup",
         "uuid": "68fee2cd-a5bc-40f2-8936-a3bb10463498",
-        "prerequisites": [],
+        "prerequisites": [
+          "dates-and-time"
+        ],
+        "practices": [
+          "dates-and-time"
+        ],
         "difficulty": 4,
         "topics": [
           "calendar",
@@ -1197,7 +1202,12 @@
         "slug": "gigasecond",
         "name": "Gigasecond",
         "uuid": "287331a4-64d5-4b35-b4c1-a1171dc338e1",
-        "prerequisites": [],
+        "prerequisites": [
+          "dates-and-time"
+        ],
+        "practices": [
+          "dates-and-time"
+        ],
         "difficulty": 3,
         "topics": [
           "calendar",
