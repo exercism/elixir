@@ -1,3 +1,5 @@
+# Resources
+
 ## Elixir Documentation
 
 * [Elixir Docs](http://elixir-lang.org/docs.html)

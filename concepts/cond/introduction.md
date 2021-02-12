@@ -1,3 +1,5 @@
+# Introduction
+
 Often, we want to write code that can branch based on a condition. While there are many ways to do this in Elixir, one of the simplest ways is using `cond/1`.
 
 At its simplest, `cond` follows the first path that evaluates to `true` with one or more branches:

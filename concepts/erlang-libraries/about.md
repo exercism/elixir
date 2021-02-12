@@ -1,3 +1,5 @@
+# About
+
 Elixir code runs in the [BEAM virtual machine][beam]. BEAM is part of the [Erlang][erlang] Run-Time System. Being inspired by Erlang, and sharing its run environment, Elixir provides great interoperability with Erlang libraries. This means that Elixir developers can use Erlang libraries from within their Elixir code. In fact, writing Elixir libraries for functionality already provided by Erlang libraries is discouraged in the Elixir community.
 
 As a result, certain functionality, like mathematical operations or timer functions, is only available in Elixir via Erlang.

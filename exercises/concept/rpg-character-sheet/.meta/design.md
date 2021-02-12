@@ -1,3 +1,5 @@
+# Design
+
 ## Learning objectives
 
 - Know how to write a string to stdio or stderr

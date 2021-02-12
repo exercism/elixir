@@ -1,3 +1,5 @@
+# About
+
 [Ranges][range] represent a sequence of one or many consecutive integers. They:
 
 - Are created using the [`..` operator][range-operator] and can be both ascending or descending.

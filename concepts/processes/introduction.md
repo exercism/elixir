@@ -1,3 +1,5 @@
+# Introduction
+
 In Elixir, all code runs inside processes.
 
 By default, a function will execute in the same process from which it was called. When you need to explicitly run a certain function in a new process, use `spawn/1`:

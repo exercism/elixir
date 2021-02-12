@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Read about using Erlang libraries in the [official Getting Started guide][getting-started-erlang-libraries], and in particular about [formatting strings][getting-started-formatted-text-output].

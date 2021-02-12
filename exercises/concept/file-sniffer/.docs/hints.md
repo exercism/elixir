@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Remember to reference the table in the instructions.

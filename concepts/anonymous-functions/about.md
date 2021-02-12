@@ -1,3 +1,5 @@
+# About
+
 [Anonymous functions][anon-fns] are commonly used throughout Elixir on their own, as return values, and as arguments in higher order functions such as `Enum.map/2`:
 
 ```elixir

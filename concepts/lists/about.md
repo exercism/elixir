@@ -1,3 +1,5 @@
+# About
+
 [Lists][list] are a basic data type in Elixir for holding a collection of values. Lists are _immutable_, meaning they cannot be modified. Any operation that changes a list returns a new list. Lists implement the [Enumerable protocol][enum-protocol], which allows the use of [Enum][enum] and [Stream][stream] module functions.
 
 Lists in Elixir are implemented as [linked lists][linked-list-wiki], and not as arrays of contiguous memory location. Therefore, accessing an element in a list takes linear time depending on the length of the list.

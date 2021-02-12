@@ -1,3 +1,5 @@
+# About
+
 Besides `cond`, Elixir also provides the macros [`if/2` and `unless/2`][getting-started-if-unless] which are useful when you need to check for only one condition.
 
 [`if/2`][kernel-if] accepts a condition and two options. It returns the first option if the condition is _truthy_, and the second option if the condition is _falsy_. [`unless/2`][kernel-unless] does the opposite.

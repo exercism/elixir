@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Read about the [`Agent` module][getting-started-agent] in the Getting Started guide.

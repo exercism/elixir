@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Read the official documentation for [ranges][range].

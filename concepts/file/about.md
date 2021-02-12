@@ -1,3 +1,5 @@
+# About
+
 Functions for working with files are provided by the [`File`][file] module.
 
 To read a whole file, use [`File.read/1`][file-read]. To write to a file, use [`File.write/2`][file-write].

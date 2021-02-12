@@ -1,3 +1,5 @@
+# About
+
 The [`Stream` module][stream] is a _lazy_ alternative to the _eager_ [`Enum` module][enum]. Streams:
 
 - Implement the [_Enumerable protocol_][enumerable].

@@ -1,3 +1,5 @@
+# Introduction
+
 Elixir uses code _Behaviours_ to provide common generic interfaces while facilitating specific implementations for each module which implements it. One such common example is the _Access Behaviour_.
 
 The _Access Behaviour_ provides a common interface for retrieving data from a key-based data structure. The _Access Behaviour_ is implemented for maps and keyword lists, but let's look at its use for maps to get a feel for it. _Access Behaviour_ specifies that when you have a map, you may follow it with _square brackets_ and then use the key to retrieve the value associated with that key.

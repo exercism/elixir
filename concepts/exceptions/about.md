@@ -1,3 +1,5 @@
+# About
+
 The [_Exception Behaviour_][exception-behaviour] defines how [`errors`][getting-started-errors] are raised and displayed.
 
 It includes two optional callbacks:

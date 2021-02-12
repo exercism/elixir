@@ -1,3 +1,5 @@
+# Instructions
+
 You are writing an embedded system for a Take-A-Number machine. It is a very simple model. It can give out consecutive numbers and report what was the last number given out.
 
 ## 1. Start the machine

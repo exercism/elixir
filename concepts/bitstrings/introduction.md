@@ -1,3 +1,5 @@
+# Introduction
+
 Working with binary data is an important concept in any language, and Elixir provides an elegant syntax to write, match, and construct binary data.
 
 In Elixir, binary data is referred to as the bitstring type. The binary data *type* (not to be confused with binary data in general) is a specific form of a bitstring, which we will discuss in a later exercise.

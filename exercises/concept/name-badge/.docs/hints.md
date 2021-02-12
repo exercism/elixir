@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Read about `if` in the official [Getting Started guide][getting-started-if-unless] or on [elixirschool.com][elixirschool-if-unless].

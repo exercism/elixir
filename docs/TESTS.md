@@ -1,4 +1,4 @@
-## Running tests
+# Running tests
 
 From the terminal, change to the base directory of the problem then execute the tests with:
 

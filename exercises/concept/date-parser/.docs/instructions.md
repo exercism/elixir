@@ -1,3 +1,5 @@
+# Instructions
+
 You have been tasked to write a service which ingests events. Each event has a date associated with it, but you notice that 3 different formats are being submitted to your service's endpoint:
 
 - `"01/01/1970"`

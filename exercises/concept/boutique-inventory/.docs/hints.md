@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Read about the `Enum` module in the [official Getting Started guide][getting-started-enum] or on [elixirschool.com][elixir-school-enum].

@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Read about [comprehensions][elixir-comprehensions] in the Getting Started guide.
