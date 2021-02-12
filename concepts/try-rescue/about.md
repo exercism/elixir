@@ -1,3 +1,5 @@
+# About
+
 [`try .. rescue`][docs-try] can be used to capture and evaluate [errors][errors] that are raised inside a block.
 
 For example:

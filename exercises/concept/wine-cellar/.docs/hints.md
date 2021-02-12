@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Read about keyword lists in the official [Getting Started guide][getting-started-keyword-lists].

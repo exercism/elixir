@@ -1,3 +1,5 @@
+# Introduction
+
 Functions may declare default values for one or more arguments. Let's consider this function:
 
 ```elixir

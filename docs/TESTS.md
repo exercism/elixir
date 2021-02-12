@@ -1,4 +1,4 @@
-## Running tests
+# Running tests
 
 From the terminal, change to the base directory of the problem then execute the tests with:
 
@@ -8,7 +8,7 @@ $ mix test
 
 This will execute the test file found in the `test` subfolder -- a file ending in `_test.exs`
 
-### Pending tests
+## Pending tests
 
 In the test suites, all but the first test have been skipped.
 
@@ -31,7 +31,7 @@ Or, you can enable all the tests by commenting out the
 # ExUnit.configure exclude: :pending, trace: true
 ```
 
-### Typespecs and Dialyzer (DIscrepancy AnalYZer for ERlang programs)
+## Typespecs and Dialyzer (DIscrepancy AnalYZer for ERlang programs)
 
 Elixir exercises include a skeleton implementation file in the `lib`
 subdirectory. This file outlines the module and functions that you are

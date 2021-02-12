@@ -1,3 +1,5 @@
+# Instructions
+
 In this exercise, you need to translate some rules from the classic game Pac-Man into Elixir functions.
 
 You have four rules to translate, all related to the game states.

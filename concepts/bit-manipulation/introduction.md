@@ -1,3 +1,5 @@
+# Introduction
+
 Elixir supports many functions for working with bits found in the _Bitwise module_.
 
 - `&&&/2`: bitwise AND

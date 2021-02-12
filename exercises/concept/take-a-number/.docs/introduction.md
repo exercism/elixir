@@ -1,3 +1,5 @@
+# Introduction
+
 ## Processes
 
 In Elixir, all code runs inside processes.

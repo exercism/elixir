@@ -1,3 +1,5 @@
+# Instructions
+
 In your DNA research lab, you have been working through various ways to compress your research data to save storage space. One teammate suggests converting the DNA data to a binary representation:
 
 | Nucleic Acid | Code   |

@@ -1,3 +1,5 @@
+# Instructions
+
 In this exercise, you've been tasked with writing the software for an encryption device that works by performing transformations on data. You need a way to flexibly create complicated functions by combining simpler functions together.
 
 For each task, make use of a closure and return a function that can be invoked from the calling scope.

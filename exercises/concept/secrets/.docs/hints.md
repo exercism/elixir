@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Make use of [anonymous functions][anon-fns].

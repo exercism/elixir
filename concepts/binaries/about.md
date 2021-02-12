@@ -1,3 +1,5 @@
+# About
+
 - The [binary][binary] type is a specialization of the [bitstring][bitstring] type.
 - Binaries are made up of [bytes][wiki-byte].
   - Bytes are 8 [bits][wiki-bit].

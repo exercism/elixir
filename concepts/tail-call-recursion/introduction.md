@@ -1,3 +1,5 @@
+# Introduction
+
 When recursing through enumerables (lists, bitstrings, strings), there are often two concerns:
 
 - how much memory is required to store the trail of recursive function calls

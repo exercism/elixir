@@ -1,3 +1,5 @@
+# Instructions
+
 You and your friends love to play pen-and-paper role-playing games, but you noticed that it's difficult to get new people to join your group. They often struggle with character creation. They don't know where to start. To help new players out, you decided to write a small program that will guide them through the process.
 
 ## 1. Welcome the new player

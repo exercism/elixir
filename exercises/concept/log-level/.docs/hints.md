@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - The [atom type is described here][atom].

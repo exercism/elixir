@@ -1,3 +1,5 @@
+# Introduction
+
 Elixir provides a construct for rescuing from errors using `try .. rescue`
 
 ```elixir

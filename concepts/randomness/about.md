@@ -1,3 +1,5 @@
+# About
+
 In Elixir, to choose a random element from an enumerable data structure (e.g. list, range), we use [`Enum.random/1`][enum-random]. This function will pick a single element, with every element having equal probability of being picked. Picking a single random value from a range is executed in constant time, without traversing the whole range.
 
 ## Random integers and letters

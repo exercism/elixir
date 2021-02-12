@@ -1,3 +1,5 @@
+# About
+
 - Elixir is dynamically-typed.
   - The type of a variable is only checked at run-time.
 - Using the match [`=`][match] operator, we can bind a value of any type to a variable name:

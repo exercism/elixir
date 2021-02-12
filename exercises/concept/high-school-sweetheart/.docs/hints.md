@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Read about strings in the official [Getting Started guide][getting-started-strings].

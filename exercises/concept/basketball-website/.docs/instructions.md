@@ -1,3 +1,5 @@
+# Instructions
+
 You are working with a web development team to maintain a website for a local basketball team. The web development team is less familiar with Elixir and is asking for a function to be able to extract data from a series of nested maps to facilitate rapid development.
 
 ## 1. Extract data from a nested map structure

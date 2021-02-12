@@ -1,3 +1,5 @@
+# Introduction
+
 Working with binary data is an important concept in any language, and Elixir provides an elegant syntax to write, match, and construct binary data.
 
 In Elixir, binary data is referred to as the bitstring type. The binary data *type* (not to be confused with binary data in general) is a specific form of a bitstring, which we will discuss in a later exercise.
@@ -27,7 +29,7 @@ By default, bitstrings are displayed in chunks of 8 bits (a byte).
 # => <<251, 3::size(3)>>
 ```
 
-### Constructing
+## Constructing
 
 We can combine bitstrings stored in variables using the special form:
 
@@ -38,7 +40,7 @@ combined = <<first::bitstring, second::bitstring>>
 # => <<49::size(6)>>
 ```
 
-### Pattern matching
+## Pattern matching
 
 Pattern matching can also be done to obtain the value from within the special form:
 

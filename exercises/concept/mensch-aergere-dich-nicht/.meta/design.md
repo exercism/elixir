@@ -1,3 +1,5 @@
+# Design
+
 ## Learning objectives
 
 - Know about the `|>` pipe operator for chaining function calls.
