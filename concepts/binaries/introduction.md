@@ -14,7 +14,7 @@ Binary literals are defined using the bitstring special form `<<>>`. When defini
 
 A _null-byte_ is another name for `<<0>>`.
 
-### Pattern matching on binary data
+## Pattern matching on binary data
 
 Pattern matching is even extended to binaries, and we can pattern match on a portion of binary data much like we could for a list.
 

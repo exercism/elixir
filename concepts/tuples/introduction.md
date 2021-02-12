@@ -13,7 +13,7 @@ elem(multiple_element_tuple, 2)
 # => "hello"
 ```
 
-### Tuples as grouped information
+## Tuples as grouped information
 
 Tuples are often used in practice to represent grouped information.
 

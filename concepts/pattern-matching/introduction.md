@@ -19,7 +19,7 @@ Remember, matches occur from the right side to the left side.
 
 In the last example if we don't need a variable in a pattern match, we can discard it by referencing `_`. Any variable starting with an `_` is not tracked by the runtime.
 
-### Pattern matching in named functions
+## Pattern matching in named functions
 
 Pattern matching is also a useful tool when creating multiple function clauses. Pattern matching can be used on the functions' arguments which then determines which function clause to invoke -- starting from the top of the file down until the first match. Variables may be bound in a function head and used in the function body.
 
