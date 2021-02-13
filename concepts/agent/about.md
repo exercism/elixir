@@ -1,3 +1,5 @@
+# About
+
 While spawning a process is easy, managing its state and behavior can become very complicated. The [`Agent`][agent-module] module is an abstraction to facilitate managing a shared state in an Elixir process.
 
 When using `Agent` module functions it is customary to encapsulate the agent-related functions in a single module.

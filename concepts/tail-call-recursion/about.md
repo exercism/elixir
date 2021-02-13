@@ -1,3 +1,5 @@
+# About
+
 A function is [tail-recursive][recursion-tc] if the _last_ thing executed by the function is a call to itself.
 
 Each time any function is called, a _stack frame_ with its local variables, arguments etc. is put on top of [the function call stack][call-stack]. When a function returns, the stack frame is removed from the stack.

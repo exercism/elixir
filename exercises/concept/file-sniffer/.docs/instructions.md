@@ -1,3 +1,5 @@
+# Instructions
+
 You have been working on a project which allows users to upload files to the server to be shared with other users. You have been tasked with writing a function to verify that an upload matches its [media type][mimetype]. You do some research and discover that the first few bytes of a file are generally unique to that filetype, giving it a sort of signature.
 
 Use the following table for reference:

@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Use the built-in [(linked) list type][list].

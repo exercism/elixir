@@ -5,51 +5,48 @@ defmodule AllYourBase do
   """
 
   @spec convert(list, integer, integer) :: list
-  def convert(digits, base_a, base_b) do
-    cond do
-      base_a > 1 and base_b > 1 and digits != [] ->
-        do_convert(digits, base_a, base_b)
+  def convert(_, _, output_base) when output_base < 2 do
+    {:error, "output base must be >= 2"}
+  end
 
-      true ->
-        nil
+  def convert(_, input_base, _) when input_base < 2 do
+    {:error, "input base must be >= 2"}
+  end
+
+  def convert(digits, input_base, output_base) do
+    if Enum.all?(digits, &(0 <= &1 && &1 < input_base)) do
+      do_convert(digits, input_base, output_base)
+    else
+      {:error, "all digits must be >= 0 and < input base"}
     end
   end
 
-  defp do_convert(digits, base_a, base_b) do
-    num = convert_to_num(digits, base_a, 0)
+  defp do_convert(digits, input_base, output_base) do
+    num = convert_to_num(digits, input_base, 0)
 
     case num do
-      nil ->
-        nil
-
       0 ->
         [0]
 
       num ->
-        convert_to_digits(num, base_b, [])
+        convert_to_digits(num, output_base, [])
         |> Enum.reverse()
     end
   end
 
-  defp convert_to_num([head | tail], base_a, accumulator) do
-    cond do
-      head < base_a and head >= 0 ->
-        convert_to_num(tail, base_a, accumulator * base_a + head)
-
-      true ->
-        nil
-    end
+  defp convert_to_num([head | tail], input_base, accumulator) do
+    convert_to_num(tail, input_base, accumulator * input_base + head)
   end
 
-  defp convert_to_num([], _base_a, accumulator) do
+  defp convert_to_num([], _input_base, accumulator) do
     accumulator
   end
 
-  defp convert_to_digits(num, base_b, arr) when num > 0 do
-    convert_to_digits(div(num, base_b), base_b, arr ++ [rem(num, base_b)])
+  defp convert_to_digits(num, output_base, arr) when num > 0 do
+    convert_to_digits(div(num, output_base), output_base, arr ++ [rem(num, output_base)])
   end
 
-  defp convert_to_digits(num, _base_b, arr) when num == 0 do
+  defp convert_to_digits(num, _output_base, arr) when num == 0 do
     arr
   end
 end

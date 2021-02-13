@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Review regular expression patterns from the introduction. Remember, when creating the pattern a string, you must escape some characters.

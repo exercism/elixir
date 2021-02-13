@@ -24,7 +24,7 @@
           "basics"
         ],
         "prerequisites": [],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "pacman-rules",
@@ -36,7 +36,7 @@
         "prerequisites": [
           "basics"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "freelancer-rates",
@@ -49,7 +49,7 @@
         "prerequisites": [
           "basics"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "log-level",
@@ -62,7 +62,7 @@
         "prerequisites": [
           "booleans"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "language-list",
@@ -74,7 +74,7 @@
         "prerequisites": [
           "booleans"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "guessing-game",
@@ -88,7 +88,7 @@
         "prerequisites": [
           "cond"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "secrets",
@@ -102,7 +102,7 @@
         "prerequisites": [
           "basics"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "kitchen-calculator",
@@ -117,7 +117,7 @@
           "floating-point-numbers",
           "multiple-clause-functions"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "high-school-sweetheart",
@@ -130,7 +130,7 @@
           "lists",
           "pattern-matching"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "name-badge",
@@ -144,7 +144,7 @@
           "strings",
           "booleans"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "high-score",
@@ -160,7 +160,7 @@
           "anonymous-functions",
           "default-arguments"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "bird-count",
@@ -175,7 +175,7 @@
           "multiple-clause-functions",
           "guards"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "german-sysadmin",
@@ -191,7 +191,7 @@
           "pattern-matching",
           "guards"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "basketball-website",
@@ -206,7 +206,7 @@
           "recursion",
           "nil"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "file-sniffer",
@@ -221,7 +221,7 @@
           "if",
           "bitstrings"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "dna-encoding",
@@ -236,7 +236,7 @@
           "recursion",
           "pattern-matching"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "boutique-inventory",
@@ -253,7 +253,7 @@
           "nil",
           "anonymous-functions"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "rpn-calculator",
@@ -268,7 +268,7 @@
           "pattern-matching",
           "structs"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "remote-control-car",
@@ -286,7 +286,7 @@
           "default-arguments",
           "keyword-lists"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "stack-underflow",
@@ -299,7 +299,7 @@
           "access-behaviour",
           "errors"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "wine-cellar",
@@ -315,7 +315,7 @@
           "if",
           "default-arguments"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "rpn-calculator-output",
@@ -345,7 +345,7 @@
           "pattern-matching",
           "tuples"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "mensch-aergere-dich-nicht",
@@ -376,7 +376,7 @@
           "maps",
           "structs"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "date-parser",
@@ -388,7 +388,7 @@
         "prerequisites": [
           "strings"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "boutique-suggestions",
@@ -404,7 +404,7 @@
           "keyword-lists",
           "tuples"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "bread-and-potions",
@@ -417,7 +417,7 @@
           "structs",
           "nil"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "rpg-character-sheet",
@@ -431,7 +431,7 @@
           "maps",
           "atoms"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "captains-log",
@@ -449,7 +449,7 @@
           "charlists",
           "atoms"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "chessboard",
@@ -464,7 +464,7 @@
           "bitstrings",
           "charlists"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "newsletter",
@@ -480,7 +480,7 @@
           "processes",
           "pids"
         ],
-        "status": "wip"
+        "status": "beta"
       }
     ],
     "practice": [
@@ -1017,7 +1017,10 @@
         "slug": "all-your-base",
         "name": "All Your Base",
         "uuid": "f71d5f38-fcc9-4044-ade9-f779a8686c69",
-        "prerequisites": [],
+        "prerequisites": [
+          "atoms",
+          "tuples"
+        ],
         "difficulty": 2,
         "topics": [
           "math",

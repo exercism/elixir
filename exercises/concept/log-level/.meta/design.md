@@ -1,3 +1,5 @@
+# Design
+
 ## Learning objectives
 
 After completing this exercise, the student should:

@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Read about [errors][getting-started-errors] in the Getting Started guide.

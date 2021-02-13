@@ -1,3 +1,5 @@
+# About
+
 [Bitstrings][bitstring] allow programmers to work with binary data effectively.
 
 - You can construct bitstrings elegantly using the [`<<>>` special form][bitstring-form].

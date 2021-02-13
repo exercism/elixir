@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Read about processes in the official [Getting Started guide][getting-started-processes].

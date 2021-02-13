@@ -1,3 +1,5 @@
+# Instructions
+
 Work is progressing well at _Instruments of Texas_ on the RPN Calculator. Your team now wants to be able to write a string version of the equation to an _IO_ resource.
 
 ## 1. Open a file

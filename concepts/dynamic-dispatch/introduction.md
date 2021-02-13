@@ -1,3 +1,5 @@
+# Introduction
+
 When Elixir resolves the function to be invoked, it uses the Module's name to perform a lookup. The lookup can be done dynamically if the Module's name is bound to a variable.
 
 ```elixir

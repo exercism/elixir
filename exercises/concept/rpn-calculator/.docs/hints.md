@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Read about [errors][errors] in the Getting Started guide.

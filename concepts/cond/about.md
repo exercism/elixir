@@ -1,3 +1,5 @@
+# About
+
 When we want to have branching code, we can use [`cond/1`][cond]:
 
 ```elixir

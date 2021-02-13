@@ -1,3 +1,5 @@
+# Introduction
+
 `case` is a control flow structure that allows us to compare a given value against many patterns. Clauses in a `case` statement are evaluated from top to bottom, until a match is found.
 
 ```elixir

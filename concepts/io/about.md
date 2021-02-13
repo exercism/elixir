@@ -1,3 +1,5 @@
+# About
+
 Functions for handling input and output are provided by the [`IO` module][module-io].
 
 - [`IO.puts/2`][io-puts] writes a string to the standard output, followed by a newline. Returns `:ok`.

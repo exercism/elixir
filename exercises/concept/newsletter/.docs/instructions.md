@@ -1,3 +1,5 @@
+# Instructions
+
 You're a big model train enthusiast and have decided to share your passion with the world by starting a newsletter. You'll start by sending the first issue of your newsletter to your friends and acquaintances that share your hobby. You have a text file with a list of their email addresses.
 
 ## 1. Read email addresses from a file

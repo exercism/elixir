@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - A [map][maps] is an associative data structure of key-value pairs.

@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Read about basic arithmetic in the official [Getting Started guide][getting-started-basic-arithmetic].

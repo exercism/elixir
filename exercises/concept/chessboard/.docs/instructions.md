@@ -1,3 +1,5 @@
+# Instructions
+
 As a chess enthusiast, you would like to write your own version of the game. Yes, there maybe plenty of implementations of chess available online already, but yours will be unique!
 
 But before you can let your imagination run wild, you need to take care of the basics. Let's start by generating the board.

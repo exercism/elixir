@@ -1,3 +1,5 @@
+# About
+
 Each Elixir process has its own unique identifier - a _PID_ (process identifier).
 
 - PIDs are their own data type.

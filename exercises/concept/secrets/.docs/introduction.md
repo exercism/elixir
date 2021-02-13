@@ -1,3 +1,5 @@
+# Introduction
+
 ## Anonymous Functions
 
 Functions are treated as first class citizens in Elixir. This means functions:

@@ -1,3 +1,5 @@
+# Hints
+
 ## 1. General
 
 - Read about files in the official [Getting Started guide][getting-started-file].

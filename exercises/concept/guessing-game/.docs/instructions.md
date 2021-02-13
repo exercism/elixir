@@ -1,3 +1,5 @@
+# Instructions
+
 You are creating a trivial online game where a friend can guess a secret number. You want to give some feedback, but not give away the answer with a guess. You need to devise a function to provide different responses depending on how the guess relates to the secret number.
 
 | Condition                                                     | Response       |

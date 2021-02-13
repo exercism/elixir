@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - [Tuples][tuple-module] are data structures which are arranged in contiguous memory and can hold any data-type.

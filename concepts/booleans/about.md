@@ -1,3 +1,5 @@
+# About
+
 Elixir represents true and false values with the boolean type. There are only two values: `true` and `false`. These values can be combined with boolean operators ([`and/2`][strict-and], [`or/2`][strict-or], [`not/1`][strict-not]):
 
 ```elixir
