@@ -1,3 +1,5 @@
+# Instructions
+
 Your librarian friend has asked you to extend her library software to automatically calculate late fees.
 Her current system stores the exact date and time of a book checkout as an ISO8601 datetime string.
 She runs a local library in a small town in Ghana, which uses the GMT timezone (UTC +0), and doesn't need to worry about other timezones.

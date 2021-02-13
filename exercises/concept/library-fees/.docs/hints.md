@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Review the functions available in the [`NaiveDateTime` module][naive-date-time], the [`Date` module][date], and the [`Time` module][time].
