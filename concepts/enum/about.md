@@ -1,3 +1,5 @@
+# About
+
 `Enum` is a very useful module that provides a set of algorithms for working with enumerables. It offers:
 
 - sorting ([`sort/2`][enum-sort/2], [`sort_by/2`][enum-sort_by/2]),

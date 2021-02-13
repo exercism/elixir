@@ -1,3 +1,5 @@
+# Instructions
+
 You are running an online fashion boutique. Your big annual sale is coming up, so you need to take stock of your inventory to make sure you're ready.
 
 A single item in the inventory is represented by a map, and the whole inventory is a list of such maps.

@@ -1,3 +1,5 @@
+# hint 3
+
 ```elixir
 @type trail :: { :left, any, BinTree.t, trail }
              | { :right, any, BinTree.t, trail }

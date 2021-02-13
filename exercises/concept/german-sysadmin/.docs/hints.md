@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Read about [charlists][getting-started-charlists], [Unicode and code points][getting-started-code-points], and [`case`][getting-started-case] in the official Getting Started guide.

@@ -1,3 +1,5 @@
+# Design
+
 ## Learning objectives
 
 - Know of `try..rescue`'s additional options:

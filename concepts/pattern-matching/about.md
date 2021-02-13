@@ -1,3 +1,5 @@
+# About
+
 When writing Elixir functions, we can make use of an [assertive style][assertive-style] with [pattern matching][pattern-match-doc]:
 
 ```elixir

@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Read about recursion in the official [Getting Started guide][getting-started-recursion].

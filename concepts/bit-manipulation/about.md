@@ -1,3 +1,5 @@
+# About
+
 [Bitwise binary functions][bitwise-wiki] can be performed on integers using functions from the [Bitwise module][bitwise-hexdocs].
 
 - [`&&&/2`][bitwise-and]: bitwise AND

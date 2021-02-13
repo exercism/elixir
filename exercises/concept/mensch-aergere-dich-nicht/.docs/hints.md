@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Read about enumerables and streams in the [official Getting Started guide][getting-started-streams].

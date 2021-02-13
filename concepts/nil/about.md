@@ -1,3 +1,5 @@
+# About
+
 [Nil][nil-dictionary] is an English word meaning "nothing" or "zero". In Elixir, `nil` is a special value that means an _absence_ of a value.
 
 ```elixir

@@ -29,10 +29,9 @@ Please keep the following in mind:
   exercise.
 
 - Each problem should have a test suite, an example solution, and a template
-  file for the real implementation. The example solution should be named
-  `example.exs`.
+  file for the real implementation. Read about [the anatomy of practice exercises][https://github.com/exercism/docs/blob/main/anatomy/tracks/practice-exercises.md] or [the anatomy of concept exercises][https://github.com/exercism/docs/blob/main/anatomy/tracks/concept-exercises.md], depending on to which type of exercise you want to contribute.
 
-- Use typespecs in the example and template files as described [here](http://elixir-lang.org/getting-started/typespecs-and-behaviours.html).
+- For practice exercises, use typespecs in the example and template files as described [here](http://elixir-lang.org/getting-started/typespecs-and-behaviours.html).
 
 - Each test file should have a `test_helper.exs` with code like the following
   at the top of the file. This allows the tests to be run on CI and configures

@@ -1,3 +1,5 @@
+# About
+
 In Elixir, a single function can have multiple clauses. This is achieved by pattern matching the function's arguments and by using guards.
 
 ```elixir

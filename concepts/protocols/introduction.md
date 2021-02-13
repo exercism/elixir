@@ -1,3 +1,5 @@
+# Introduction
+
 Protocols are a mechanism to achieve polymorphism in Elixir when you want behavior to vary depending on the data type.
 
 Protocols are defined using `defprotocol` and contain one or more function header.

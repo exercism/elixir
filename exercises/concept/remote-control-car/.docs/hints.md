@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Read about [structs][getting-started-structs] in the Getting Started guide.

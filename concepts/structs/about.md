@@ -1,3 +1,5 @@
+# About
+
 [Structs][getting-started] are special [maps][maps] with a defined set of keys.
 
 - Structs provide compile-time checks and default values.

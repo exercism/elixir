@@ -1,4 +1,4 @@
-## Access Behaviour
+# Access Behaviour
 
 Elixir uses code _Behaviours_ to provide common generic interfaces while facilitating specific implementations for each module which implements it. One such common example is the _Access Behaviour_.
 

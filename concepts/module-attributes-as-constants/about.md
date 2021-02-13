@@ -1,3 +1,5 @@
+# About
+
 [Module attributes][module-attr] may be used like ["constants"][attr-as-const] which are evaluated at compile-time.
 
 ```elixir

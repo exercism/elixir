@@ -1,3 +1,5 @@
+# About
+
 The basic `try .. rescue` concept can be extended to support `else` and `after` clauses:
 
 - The `else` block:

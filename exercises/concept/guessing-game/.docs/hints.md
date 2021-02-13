@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - In Elixir's ['Getting Started Guide'][guide] there is a nice refresher about named functions.

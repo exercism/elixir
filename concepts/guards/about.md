@@ -1,3 +1,5 @@
+# About
+
 [Guards][guards] are used as a complement to pattern matching. They allow for more complex checks. They can be used in [some, but not all situations][where-guards-can-be-used] where pattern matching can be used, for example in function clauses or case clauses.
 
 ```elixir

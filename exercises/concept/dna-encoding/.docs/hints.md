@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Use `?` to work with the character [code points][codepoint].
