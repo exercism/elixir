@@ -5,7 +5,12 @@
       "exercism_username": "angelikatyborska"
     }
   ],
-  "contributors": [],
+  "contributors": [
+    {
+      "github_username": "neenjaw",
+      "exercism_username": "neenjaw"
+    }
+  ],
   "files": {
     "solution": ["lib/library_fees.ex"],
     "test": ["test/library_fees_test.exs"],
