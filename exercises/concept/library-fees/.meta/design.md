@@ -15,6 +15,7 @@
 ## Out of scope
 
 - Timezones, only mention `DateTime` briefly
+- Calendars other than the gregorian calendar
 
 ## Prerequisites
 

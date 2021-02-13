@@ -17,7 +17,7 @@ Elixir's standard library offers 4 different modules for working with dates and 
     ~N[2021-01-01 12:00:00]
     ```
 
-- The `DateTime` module for datetimes with a timezone. Using this module for timezones other than UTC requires an external dependency with a timezone database.
+- The `DateTime` module for datetimes with a timezone. Using this module for timezones other than UTC requires an external dependency, a timezone database.
 
 ## Comparisons
 
