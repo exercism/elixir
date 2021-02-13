@@ -44,7 +44,7 @@ defmodule AnagramTest do
   end
 
   @tag :pending
-  test "detect anagramss case-insensitively" do
+  test "detect anagrams case-insensitively" do
     matches = Anagram.match("orchestra", ~w(cashregister Carthorse radishes))
     assert matches == ~w(Carthorse)
   end
