@@ -1017,7 +1017,10 @@
         "slug": "all-your-base",
         "name": "All Your Base",
         "uuid": "f71d5f38-fcc9-4044-ade9-f779a8686c69",
-        "prerequisites": [],
+        "prerequisites": [
+          "atoms",
+          "tuples"
+        ],
         "difficulty": 2,
         "topics": [
           "math",
