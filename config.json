@@ -1310,11 +1310,13 @@
           "recursion",
           "multiple-clause-functions",
           "pattern-matching",
-          "guards"
+          "guards",
+          "nil"
         ],
         "practices": [
           "lists",
-          "recursion"
+          "recursion",
+          "nil"
         ],
         "difficulty": 3,
         "topics": [
@@ -2687,7 +2689,8 @@
           "enum",
           "errors",
           "exceptions",
-          "keyword-lists"
+          "keyword-lists",
+          "nil"
         ],
         "practices": [
           "keyword-lists",
