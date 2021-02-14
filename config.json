@@ -538,11 +538,13 @@
           "strings",
           "regular-expressions",
           "enum",
-          "maps"
+          "maps",
+          "pipe-operator"
         ],
         "practices": [
           "strings",
-          "regular-expressions"
+          "regular-expressions",
+          "pipe-operator"
         ],
         "difficulty": 2,
         "topics": [
@@ -1142,11 +1144,13 @@
           "strings",
           "maps",
           "enum",
-          "recursion"
+          "recursion",
+          "pipe-operator"
         ],
         "practices": [
           "strings",
-          "enum"
+          "enum",
+          "pipe-operator"
         ],
         "difficulty": 2,
         "topics": [
