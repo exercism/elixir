@@ -1157,7 +1157,6 @@
         "uuid": "5b8eece1-845f-4a5a-8a2f-fe2bf66f5e57",
         "prerequisites": [
           "enum",
-          "recursion",
           "ranges"
         ],
         "practices": [
