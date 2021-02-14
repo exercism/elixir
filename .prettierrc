@@ -5,8 +5,6 @@
   "endOfLine": "auto",
   "htmlWhitespaceSensitivity": "css",
   "insertPragma": false,
-  "jsxBracketSameLine": false,
-  "jsxSingleQuote": false,
   "printWidth": 80,
   "proseWrap": "preserve",
   "quoteProps": "as-needed",
@@ -15,13 +13,5 @@
   "tabWidth": 2,
   "trailingComma": "es5",
   "useTabs": false,
-  "vueIndentScriptAndStyle": false,
-  "overrides": [
-    {
-      "files": "languages/javascript/**/*.{js,jsx,ts,tsx,mjs}",
-      "options": {
-        "semi": true
-      }
-    }
-  ]
+  "vueIndentScriptAndStyle": false
 }
