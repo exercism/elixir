@@ -837,8 +837,7 @@
         "prerequisites": [
           "charlists",
           "maps",
-          "enum",
-          "recursion"
+          "enum"
         ],
         "practices": [
           "charlists",
