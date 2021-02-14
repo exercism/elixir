@@ -631,7 +631,6 @@
           "strings",
           "enum",
           "structs",
-          "errors",
           "default-arguments"
         ],
         "practices": [
@@ -752,8 +751,7 @@
           "cond",
           "if",
           "case",
-          "structs",
-          "errors"
+          "structs"
         ],
         "practices": [
           "pattern-matching",
@@ -791,6 +789,7 @@
         ],
         "practices": [
           "regular-expressions",
+          "errors",
           "exceptions"
         ],
         "difficulty": 10,
@@ -2297,6 +2296,7 @@
         "practices": [
           "structs",
           "pattern-matching",
+          "errors",
           "exceptions"
         ],
         "difficulty": 7,
