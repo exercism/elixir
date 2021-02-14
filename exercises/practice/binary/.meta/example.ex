@@ -2,8 +2,6 @@ defmodule Binary do
   def to_decimal(string) do
     if !String.match?(string, ~r{[^10]}) do
       string |> bits |> Enum.reverse() |> Enum.with_index() |> sum
-    else
-      0
     end
   end
 
