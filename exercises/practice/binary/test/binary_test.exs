@@ -48,56 +48,31 @@ defmodule BinaryTest do
 
   @tag :pending
   test "2 is not a valid binary digit" do
-    assert Binary.to_decimal("2") == 0
+    assert Binary.to_decimal("2") == nil
   end
 
   @tag :pending
   test "a number containing a non-binary digit is invalid" do
-    assert Binary.to_decimal("01201") == 0
+    assert Binary.to_decimal("01201") == nil
   end
 
   @tag :pending
   test "a number with trailing non-binary characters is invalid" do
-    assert Binary.to_decimal("10nope") == 0
+    assert Binary.to_decimal("10nope") == nil
   end
 
   @tag :pending
   test "a number with leading non-binary characters is invalid" do
-    assert Binary.to_decimal("nope10") == 0
+    assert Binary.to_decimal("nope10") == nil
   end
 
   @tag :pending
   test "a number with internal non-binary characters is invalid" do
-    assert Binary.to_decimal("10nope10") == 0
+    assert Binary.to_decimal("10nope10") == nil
   end
 
   @tag :pending
   test "a number and a word whitespace separated is invalid" do
-    assert Binary.to_decimal("001 nope") == 0
-  end
-
-  @tag :pending
-  test "invalid binary is decimal 0" do
-    assert Binary.to_decimal("carrot") == 0
-  end
-
-  @tag :pending
-  test "invalid binary is decimal 0 II" do
-    assert Binary.to_decimal("convert01") == 0
-  end
-
-  @tag :pending
-  test "invalid binary is decimal 0 III" do
-    assert Binary.to_decimal("10convert") == 0
-  end
-
-  @tag :pending
-  test "invalid binary is decimal 0 IV" do
-    assert Binary.to_decimal("1carrot0") == 0
-  end
-
-  @tag :pending
-  test "22 is not a binary number" do
-    assert Binary.to_decimal("22") == 0
+    assert Binary.to_decimal("001 nope") == nil
   end
 end
