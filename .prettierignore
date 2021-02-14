@@ -1,0 +1,28 @@
+# IDE files
+.idea/
+.vscode/
+.vs/
+.ionide/
+
+# GitHub templates
+.github/ISSUE_TEMPLATE/**/*
+
+# C#-specific files
+languages/csharp/exercises/**/bin/
+languages/csharp/exercises/**/obj/
+
+# F#-specific files
+languages/fsharp/exercises/**/bin/
+languages/fsharp/exercises/**/obj/
+
+# JavaScript-specific files
+languages/javascript/exercises/**/node_modules/
+
+# TypeScript-specific files
+languages/typescript/exercises/**/node_modules/
+
+# Julia-specific files
+languages/julia/exercises/**/.meta/config.json
+
+# Language docs files
+languages/*/docs/**
