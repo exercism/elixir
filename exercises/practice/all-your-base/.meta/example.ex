@@ -4,7 +4,7 @@ defmodule AllYourBase do
   or returns nil if either of the bases are less than 2
   """
 
-  @spec convert(list, integer, integer) :: list
+  @spec convert(list, integer, integer) :: {:ok, list} | {:error, String.t()}
   def convert(_, _, output_base) when output_base < 2 do
     {:error, "output base must be >= 2"}
   end
@@ -15,7 +15,7 @@ defmodule AllYourBase do
 
   def convert(digits, input_base, output_base) do
     if Enum.all?(digits, &(0 <= &1 && &1 < input_base)) do
-      do_convert(digits, input_base, output_base)
+      {:ok, do_convert(digits, input_base, output_base)}
     else
       {:error, "all digits must be >= 0 and < input base"}
     end
