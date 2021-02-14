@@ -354,7 +354,7 @@
           "case",
           "enum"
         ],
-        "practices": ["charlists"],
+        "practices": ["charlists", "enum"],
         "difficulty": 2,
         "topics": ["strings"]
       },
@@ -398,7 +398,7 @@
         "uuid": "d20b49dc-cb6d-45fc-a168-78d002072c75",
         "prerequisites": ["booleans", "strings", "regular-expressions", "cond"],
         "practices": ["booleans", "strings", "cond"],
-        "difficulty": 2,
+        "difficulty": 3,
         "topics": ["control_flow", "string_processing"]
       },
       {
@@ -426,6 +426,7 @@
         "name": "Robot Simulator",
         "uuid": "e5e55560-852f-4551-b4da-c9f4a3141470",
         "prerequisites": [
+          "atoms",
           "multiple-clause-functions",
           "guards",
           "pattern-matching",
@@ -437,7 +438,7 @@
         ],
         "practices": ["pattern-matching", "structs"],
         "difficulty": 6,
-        "topics": ["pattern_matching", "structs"]
+        "topics": ["atoms", "pattern_matching", "structs"]
       },
       {
         "slug": "list-ops",
@@ -477,8 +478,8 @@
         "slug": "bank-account",
         "name": "Bank Account",
         "uuid": "5d5e0f6c-f4b7-418e-88f8-4b1d0f99bfb0",
-        "prerequisites": ["if", "processes", "pids", "agent"],
-        "practices": ["if", "processes", "pids", "agent"],
+        "prerequisites": ["if", "processes", "pids", "agent", "genserver"],
+        "practices": ["if", "processes", "pids", "agent", "genserver"],
         "difficulty": 7,
         "topics": ["otp"]
       },
@@ -516,7 +517,12 @@
           "case",
           "structs"
         ],
-        "practices": ["pattern-matching", "guards", "structs"],
+        "practices": [
+          "pattern-matching",
+          "guards",
+          "structs",
+          "multiple-clause-functions"
+        ],
         "difficulty": 8,
         "topics": ["algorithms", "pattern_matching", "structs"]
       },
@@ -569,7 +575,7 @@
         "name": "Nucleotide Count",
         "uuid": "7404e885-747a-46fc-be0c-c53f4b0e162f",
         "prerequisites": ["charlists", "maps", "enum"],
-        "practices": ["charlists", "enum"],
+        "practices": ["charlists", "enum", "maps"],
         "difficulty": 2,
         "topics": ["enumerables", "maps", "string_processing"]
       },
@@ -584,9 +590,10 @@
           "recursion",
           "cond",
           "if",
-          "case"
+          "case",
+          "binaries"
         ],
-        "practices": ["strings"],
+        "practices": ["strings", "binaries"],
         "difficulty": 2,
         "topics": ["pattern_matching", "string_processing"]
       },
@@ -660,6 +667,7 @@
           "module-attributes-as-constants"
         ],
         "practices": [
+          "atoms",
           "floating-point-numbers",
           "module-attributes-as-constants"
         ],
@@ -679,7 +687,7 @@
           "case",
           "if"
         ],
-        "practices": ["lists", "recursion"],
+        "practices": ["lists", "recursion", "anonymous-functions"],
         "difficulty": 2,
         "topics": ["collections"]
       },
@@ -789,7 +797,7 @@
           "recursion",
           "pipe-operator"
         ],
-        "practices": ["strings", "enum", "pipe-operator"],
+        "practices": ["strings", "enum", "pipe-operator", "maps"],
         "difficulty": 2,
         "topics": ["reduce"]
       },
@@ -946,7 +954,7 @@
           "enum",
           "recursion"
         ],
-        "practices": ["enum"],
+        "practices": ["enum", "recursion"],
         "difficulty": 2,
         "topics": ["string_processing"]
       },
@@ -954,8 +962,8 @@
         "slug": "matrix",
         "name": "Matrix",
         "uuid": "f0df392c-8ace-4639-b555-5e61e54a854e",
-        "prerequisites": ["strings", "enum", "structs"],
-        "practices": ["strings", "enum", "structs"],
+        "prerequisites": ["strings", "enum", "structs", "tuples", "maps"],
+        "practices": ["strings", "enum", "structs", "tuples", "maps"],
         "difficulty": 3,
         "topics": ["string_processing", "structs"]
       },
@@ -1241,7 +1249,7 @@
           "maps"
         ],
         "practices": ["integers", "enum"],
-        "difficulty": 3,
+        "difficulty": 7,
         "topics": ["enumeration", "reduce"]
       },
       {
@@ -1472,9 +1480,10 @@
           "regular-expressions",
           "enum",
           "processes",
-          "pids"
+          "pids",
+          "task"
         ],
-        "practices": ["strings", "regular-expressions", "processes"],
+        "practices": ["strings", "regular-expressions", "processes", "task"],
         "difficulty": 4,
         "topics": ["concurrency", "otp"]
       },
@@ -1535,8 +1544,8 @@
         "slug": "saddle-points",
         "name": "Saddle Points",
         "uuid": "8e5c050a-ff42-4a23-ba32-84595b7476f4",
-        "prerequisites": ["lists", "strings", "enum"],
-        "practices": ["enum"],
+        "prerequisites": ["lists", "strings", "enum", "maps"],
+        "practices": ["enum", "maps"],
         "difficulty": 5,
         "topics": ["enumeration", "matricies", "string_processing"]
       },
@@ -1735,7 +1744,7 @@
           "structs"
         ],
         "practices": ["enum", "pattern-matching"],
-        "difficulty": 7,
+        "difficulty": 8,
         "topics": ["sorting"]
       },
       {
@@ -1772,7 +1781,7 @@
           "file"
         ],
         "practices": ["case", "strings", "regular-expressions", "file"],
-        "difficulty": 3,
+        "difficulty": 4,
         "topics": ["enumerations", "strings"]
       },
       {
@@ -1828,8 +1837,8 @@
           "charlists",
           "ranges"
         ],
-        "practices": ["strings", "enum"],
-        "difficulty": 5,
+        "practices": ["strings", "enum", "pattern-matching"],
+        "difficulty": 7,
         "topics": ["algorithms", "backtracking", "strings"]
       },
       {
@@ -1858,8 +1867,8 @@
           "errors",
           "exceptions"
         ],
-        "practices": ["regular-expressions"],
-        "difficulty": 6,
+        "practices": ["regular-expressions", "pattern-matching"],
+        "difficulty": 7,
         "topics": ["parsers"]
       },
       {
@@ -1879,9 +1888,10 @@
           "errors",
           "exceptions",
           "keyword-lists",
-          "nil"
+          "nil",
+          "macros"
         ],
-        "practices": ["keyword-lists", "structs"],
+        "practices": ["keyword-lists", "structs", "macros"],
         "difficulty": 8,
         "topics": ["graphs", "structs"]
       }
