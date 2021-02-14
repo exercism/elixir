@@ -1599,14 +1599,12 @@
           "if",
           "recursion",
           "tail-call-recursion",
-          "enum",
-          "nil"
+          "enum"
         ],
         "practices": [
           "integers",
           "multiple-clause-functions",
-          "pattern-matching",
-          "nil"
+          "pattern-matching"
         ],
         "difficulty": 2,
         "topics": [
