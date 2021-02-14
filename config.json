@@ -954,10 +954,12 @@
           "atoms",
           "multiple-clause-functions",
           "pattern-matching",
-          "maps"
+          "maps",
+          "module-attributes-as-constants"
         ],
         "practices": [
-          "floating-point-numbers"
+          "floating-point-numbers",
+          "module-attributes-as-constants"
         ],
         "difficulty": 2,
         "topics": [
