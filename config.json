@@ -603,12 +603,14 @@
         "prerequisites": [
           "strings",
           "multiple-clause-functions",
+          "default-arguments",
           "ranges",
           "enum",
           "recursion"
         ],
         "practices": [
           "multiple-clause-functions",
+          "default-arguments",
           "strings"
         ],
         "difficulty": 3,
@@ -629,7 +631,8 @@
           "strings",
           "enum",
           "structs",
-          "errors"
+          "errors",
+          "default-arguments"
         ],
         "practices": [
           "pattern-matching",
@@ -1845,6 +1848,7 @@
           "string",
           "multiple-clause-functions",
           "pattern-matching",
+          "default-arguments",
           "recursion",
           "enum",
           "maps",
@@ -1930,7 +1934,8 @@
           "pattern-matching",
           "recursion",
           "enum",
-          "module-attributes-as-constants"
+          "module-attributes-as-constants",
+          "default-arguments"
         ],
         "practices": [
           "lists",
@@ -2119,7 +2124,8 @@
           "strings",
           "enum",
           "ranges",
-          "list-comprehensions"
+          "list-comprehensions",
+          "default-arguments"
         ],
         "practices": [
           "enum",
@@ -2280,6 +2286,7 @@
           "if",
           "multiple-clause-functions",
           "pattern-matching",
+          "default-arguments",
           "guards",
           "enum",
           "ranges",
