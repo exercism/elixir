@@ -801,8 +801,7 @@
         "uuid": "12efd520-e3e5-437f-b93e-38af14aa605d",
         "prerequisites": [
           "lists",
-          "enum",
-          "recursion"
+          "enum"
         ],
         "practices": [
           "enum"
