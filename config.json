@@ -3,10 +3,10 @@
   "slug": "elixir",
   "active": true,
   "status": {
-    "concept_exercises": false,
-    "test_runner": false,
-    "representer": false,
-    "analyzer": false
+    "concept_exercises": true,
+    "test_runner": true,
+    "representer": true,
+    "analyzer": true
   },
   "blurb": "Elixir is a dynamic, functional language designed for building scalable and maintainable applications. Elixir leverages the Erlang VM, known for running low-latency, distributed and fault-tolerant systems, while also being successfully used in web development and the embedded software domain.",
   "version": 3,
