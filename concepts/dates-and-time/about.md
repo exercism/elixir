@@ -68,28 +68,6 @@ NaiveDateTime.new!(~D[2021-01-01], ~T[12:00:00])
 # => ~N[2021-01-01 12:00:00]
 ```
 
-## Erlang format and `:calendar`
-
-Dates and time in Erlang are represented as tuples. Dates, time, and datetimes can be converted to the Erlang format using the `to_erl/1` function from the corresponding module.
-
-```elixir
-Date.to_erl(~D[2021-01-01])
-# => {2021, 1, 1}
-
-Time.to_erl(~T[12:00:00])
-# => {12, 0, 0}
-
-NaiveDateTime.to_erl(~N[2021-01-01 12:00:00])
-# => {{2021, 1, 1}, {12, 0, 0}}
-```
-
-Erlang offers a [`:calendar` module][erl-calendar] for working with dates, time, and datetimes. You can find some useful functions there that are not available in the Elixir's standard library. To use the Erlang `:calendar` module, you need dates nad time in the Erland tuple format.
-
-```elixir
-:calendar.iso_week_number({2021, 1, 31})
-# => {2021, 4}
-```
-
 [naivedatetime]: https://hexdocs.pm/elixir/NaiveDateTime.html
 [datetime]: https://hexdocs.pm/elixir/DateTime.html
 [time]: https://hexdocs.pm/elixir/Time.html
