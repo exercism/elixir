@@ -1,4 +1,4 @@
-## Binaries
+# Binaries
 
 Elixir provides an elegant syntax for working with binary data as we have seen with the `<<>>` special form provided for working with _bitstrings_.
 
@@ -14,7 +14,7 @@ Binary literals are defined using the bitstring special form `<<>>`. When defini
 
 A _null-byte_ is another name for `<<0>>`.
 
-### Pattern matching on binary data
+## Pattern matching on binary data
 
 Pattern matching is even extended to binaries, and we can pattern match on a portion of binary data much like we could for a list.
 

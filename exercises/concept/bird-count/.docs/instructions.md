@@ -1,3 +1,5 @@
+# Instructions
+
 You're an avid bird watcher that keeps track of how many birds have visited your garden on any given day.
 
 You decided to bring your bird watching to a new level and implement a few tools that will help you track and process the data.

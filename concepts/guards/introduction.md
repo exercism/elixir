@@ -1,3 +1,5 @@
+# Introduction
+
 Guards are used to prevent Elixir from invoking functions based on evaluation of the arguments by guard functions. Guards begin with the `when` keyword, followed by a boolean expression. Guard functions are special functions which:
 
 - Must be pure and not mutate any global states.

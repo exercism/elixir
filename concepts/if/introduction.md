@@ -1,3 +1,5 @@
+# Introduction
+
 Besides `cond`, Elixir also provides the macro [`if/2`][getting-started-if-unless] which is useful when you need to check for only one condition.
 
 [`if/2`][kernel-if] accepts a condition and two options. It returns the first option if the condition is _truthy_, and the second option if the condition is _falsy_.
@@ -22,7 +24,7 @@ if age > 16, do: "beer", else: "no beer"
 
 This syntax is helpful for very short expressions, but should be avoided if the expression won't fit on a single line.
 
-### _Truthy_ and _falsy_
+## _Truthy_ and _falsy_
 
 In Elixir, all datatypes evaluate to a _truthy_ or _falsy_ value when they are encountered in a boolean context (like an `if` expression). All data is considered _truthy_ **except** for _false_ and _nil_.
 

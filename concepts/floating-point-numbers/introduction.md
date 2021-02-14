@@ -1,3 +1,5 @@
+# Introduction
+
 Floats are numbers with one or more digits behind the decimal separator. They use the 64-bit double precision floating-point format.
 
 ```elixir
@@ -5,11 +7,11 @@ float = 3.45
 # => 3.45
 ```
 
-### Working with numbers
+## Working with numbers
 
 In the [`Integer`][integer-functions] and [`Float`][float-functions] modules you can find some useful functions for working with those types. Basic arithmetic operators are defined in the [`Kernel`][kernel-arithmetic-operators] module.
 
-### Conversion
+## Conversion
 
 Integers and floats can be mixed together in a single arithmetic expression. Using a float in an expression ensures the result will be a float too.
 

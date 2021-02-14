@@ -1,3 +1,5 @@
+# About
+
 You can use [atoms][atom] whenever you have a set of constants to express. Atoms provide a type-safe way to compare values. An atom is defined by its name, prefixed by a colon:
 
 ```elixir

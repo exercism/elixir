@@ -1,3 +1,5 @@
+# Introduction
+
 Elixir represents true and false values with the boolean type. There are only two values: `true` and `false`.
 
 ```elixir

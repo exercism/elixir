@@ -1,0 +1,20 @@
+{
+  "authors": [
+    {
+      "github_username": "angelikatyborska",
+      "exercism_username": "angelikatyborska"
+    }
+  ],
+  "contributors": [
+    {
+      "github_username": "neenjaw",
+      "exercism_username": "neenjaw"
+    }
+  ],
+  "files": {
+    "solution": ["lib/library_fees.ex"],
+    "test": ["test/library_fees_test.exs"],
+    "exemplar": [".meta/exemplar.ex"]
+  },
+  "language_versions": ">=1.10"
+}

@@ -1,3 +1,5 @@
+# Instructions
+
 While planning a games night with friends, the group decides they will revisit their childhood favorites. Your German friend proposes _Mensch ärgere Dich nicht_ (_Man, Don't Get Angry_), a classic in many European countries (similar to the English _Ludo_ or the North American _Parcheesi_).
 
 To prepare for the game, you decide to implement the dice rolling function in Elixir.

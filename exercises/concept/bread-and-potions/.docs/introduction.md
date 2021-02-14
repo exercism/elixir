@@ -1,4 +1,4 @@
-## Protocols
+# Protocols
 
 Protocols are a mechanism to achieve polymorphism in Elixir when you want behavior to vary depending on the data type.
 

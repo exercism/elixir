@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Read about [IO][getting-started-io] in the Getting Started guide.

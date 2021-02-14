@@ -1,3 +1,5 @@
+# Design
+
 ## Learning objectives
 
 - Know how to call an Erlang function

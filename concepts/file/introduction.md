@@ -1,3 +1,5 @@
+# Introduction
+
 Functions for working with files are provided by the `File` module.
 
 To read a whole file, use `File.read/1`. To write to a file, use `File.write/2`.

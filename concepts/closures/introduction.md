@@ -1,3 +1,5 @@
+# Introduction
+
 Anonymous functions in Elixir are [closures][closure]. They can access variables that are in scope when the function is defined.
 
 ```elixir

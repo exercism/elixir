@@ -1,3 +1,5 @@
+# Instructions
+
 In this exercise, you're implementing a way to keep track of the high scores for the most popular game in your local arcade hall.
 
 ## 1. Define a new high score map

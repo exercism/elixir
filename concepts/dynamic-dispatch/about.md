@@ -1,3 +1,5 @@
+# About
+
 Functions in Elixir can be dispatched dynamically.
 
 All module names are atoms. All Elixir module names are automatically prefixed with `Elixir.` when compiled.

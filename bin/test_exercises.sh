@@ -84,10 +84,10 @@ do
     # based on compiler and unit test, print results
     if [ "$compile_exit_code" -eq 0 -a "$test_exit_code" -eq 0 ]
     then
-      printf " -- \\033[32mPass\\033[0m\n"
+      printf "-- \\033[32mPass\\033[0m\n"
       pass_count=$((pass_count+1))
     else
-      printf " -- \\033[31mFail\\033[0m\n"
+      printf "-- \\033[31mFail\\033[0m\n"
 
       if [ "$compile_exit_code" -ne 0 ]
       then

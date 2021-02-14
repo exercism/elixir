@@ -1,3 +1,5 @@
+# Introduction
+
 Charlists are created using single quotes.
 
 ```elixir

@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://hexdocs.pm/elixir/Time.html",
+    "description": "Documentation - Time Module"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/Date.html",
+    "description": "Documentation - Date Module"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/NaiveDateTime.html",
+    "description": "Documentation - NaiveDateTime Module"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/DateTime.html",
+    "description": "Documentation - DateTime Module"
+  }
+]

@@ -1,3 +1,5 @@
+# About
+
 Functions may declare [default values][default-arguments] for one or more arguments.
 
 ```elixir

@@ -5,6 +5,6 @@ defmodule AllYourBase do
   """
 
   @spec convert(list, integer, integer) :: list | nil
-  def convert(digits, base_a, base_b) do
+  def convert(digits, input_base, output_base) do
   end
 end

@@ -1,3 +1,5 @@
+# About
+
 [Maps][maps] are a data structure that holds key-value pairs.
 
 - Keys can be of any type, but must be unique.

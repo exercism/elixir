@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - Read about the [`Access` behaviour][access-behaviour] in the documentation.

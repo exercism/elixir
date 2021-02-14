@@ -1,3 +1,5 @@
+# Instructions
+
 You're developing your own role-playing video game. In your game, there are _characters_ and _items_. One of the many actions that you can do with an item is to make a character eat it.
 
 Not all items are edible, and not all edible items have the same effects on the character. Some items, when eaten, turn into a different item (e.g. if you eat an apple, you are left with an apple core).

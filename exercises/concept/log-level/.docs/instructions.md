@@ -1,3 +1,5 @@
+# Instructions
+
 You are running a system that consist of a few applications producing many logs. You want to write a small program that will aggregate those logs and give them labels according to their severity level. All applications in your system use the same log codes, but some of the legacy applications don't support all the codes.
 
 | Log code | Log label | Supported in legacy apps? |
