@@ -2,6 +2,13 @@ defmodule ChangeTest do
   use ExUnit.Case
 
   # @tag :pending
+  test "change for 1 cent" do
+    coins = [1, 5, 10, 25]
+    expected = [1]
+    assert Change.generate(coins, 1) == {:ok, expected}
+  end
+
+  @tag :pending
   test "single coin change" do
     coins = [1, 5, 10, 25, 100]
     expected = [25]
@@ -41,6 +48,13 @@ defmodule ChangeTest do
     coins = [2, 5, 10, 20, 50]
     expected = [2, 2, 2, 5, 10]
     assert Change.generate(coins, 21) == {:ok, expected}
+  end
+
+  @tag :pending
+  test "another possible change without unit coins available" do
+    coins = [4, 5]
+    expected = [4, 4, 4, 5, 5, 5]
+    assert Change.generate(coins, 27) == {:ok, expected}
   end
 
   @tag :pending
