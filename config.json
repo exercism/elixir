@@ -1293,7 +1293,7 @@
         "prerequisites": [
           "tuples",
           "lists",
-          "string",
+          "strings",
           "multiple-clause-functions",
           "pattern-matching",
           "default-arguments",
