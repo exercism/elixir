@@ -1305,7 +1305,7 @@
           "module-attributes-as-constants"
         ],
         "practices": [
-          "string",
+          "strings",
           "enum",
           "maps",
           "module-attributes-as-constants"
