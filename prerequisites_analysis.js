@@ -30,3 +30,16 @@ conceptSlugs.forEach(concept => {
   console.log('\nRequired by:')
   console.log(config.exercises.practice.filter(x => x.prerequisites.includes(concept)).map(x => x.slug))
 })
+
+let usedConcepts = []
+usedConcepts = config.exercises.concept.reduce((acc, x) => [...x.prerequisites, ...acc], usedConcepts)
+usedConcepts = config.exercises.practice.reduce((acc, x) => [...x.practices, ...x.prerequisites, ...acc], usedConcepts)
+const conceptsThatDoNotExist = usedConcepts.filter(uniq).filter(x => !conceptSlugs.includes(x)).sort()
+
+if (conceptsThatDoNotExist !== []) {
+  console.log('\n\n============================================')
+  console.log('\n\nConcepts that do not exist:')
+  console.log(conceptsThatDoNotExist)
+}
+
+console.log('\n')
