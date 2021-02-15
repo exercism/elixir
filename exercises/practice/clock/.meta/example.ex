@@ -25,25 +25,28 @@ defmodule Clock do
     new(hour, minute + add_minute)
   end
 
-  defp rollover(%Clock{hour: hour, minute: minute}) do
-    {carry_hour, minute} = roll_minute(minute)
-    %Clock{hour: roll_hour(hour + carry_hour), minute: minute}
+  defp rollover(%Clock{hour: hour, minute: minute} = clock) do
+    case {hour, minute} do
+      {hour, minute} when minute >= 60 ->
+        %Clock{hour: hour + 1, minute: minute - 60}
+        |> rollover()
+
+      {hour, minute} when minute < 0 ->
+        %Clock{hour: hour - 1, minute: minute + 60}
+        |> rollover()
+
+      {hour, minute} when hour >= 24 ->
+        %Clock{hour: hour - 24, minute: minute}
+        |> rollover()
+
+      {hour, minute} when hour < 0 ->
+        %Clock{hour: hour + 24, minute: minute}
+        |> rollover()
+
+      _ ->
+        clock
+    end
   end
-
-  defp roll_hour(hour) when hour < 0 and rem(hour, 24) == 0, do: 0
-  defp roll_hour(hour) when hour < 0, do: 24 + rem(hour, 24)
-  defp roll_hour(hour) when hour >= 24, do: rem(hour, 24)
-  defp roll_hour(hour), do: hour
-
-  defp roll_minute(minute) when minute < 0 do
-    {div(minute, 60) - 1, 60 + rem(minute, 60)}
-  end
-
-  defp roll_minute(minute) when minute >= 60 do
-    {div(minute, 60), rem(minute, 60)}
-  end
-
-  defp roll_minute(minute), do: {0, minute}
 
   defimpl String.Chars, for: Clock do
     def to_string(%Clock{hour: hour, minute: minute}) do
