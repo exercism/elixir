@@ -9,6 +9,9 @@
 # can calculate public key using private key
 "b4161d8e-53a1-4241-ae8f-48cc86527f22" = true
 
+# can calculate public key when given a different private key
+"0d25f8d7-4897-4338-a033-2d3d7a9af688" = false
+
 # can calculate secret using other party's public key
 "cd02ad45-3f52-4510-99cc-5161dad948a8" = true
 
