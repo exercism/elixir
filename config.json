@@ -1113,7 +1113,8 @@
         "topics": [
           "binary_operators",
           "math"
-        ]
+        ],
+        "status": "deprecated"
       },
       {
         "slug": "change",
@@ -1228,7 +1229,8 @@
           "math",
           "numbers",
           "string_processing"
-        ]
+        ],
+        "status": "deprecated"
       },
       {
         "slug": "perfect-numbers",
