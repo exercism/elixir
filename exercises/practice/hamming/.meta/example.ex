@@ -12,7 +12,7 @@ defmodule Hamming do
     {:ok, distance}
   end
 
-  def hamming_distance(_, _), do: {:error, "Lists must be the same length"}
+  def hamming_distance(_, _), do: {:error, "strands must be of equal length"}
 
   defp pairs(s1, s2), do: Enum.zip(s1, s2)
   defp count_mismatched(pairs), do: Enum.count(pairs, fn {c1, c2} -> c2 && c1 != c2 end)
