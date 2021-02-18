@@ -37,22 +37,22 @@
 "11e71a95-e78b-4909-b8e4-60cdcaec0e91" = true
 
 # empty list
-"613b20b7-1873-4070-a3a6-70ae5f50d7cc" = true
+"36549237-f765-4a4c-bfd9-5d3a8f7b07d2" = true
 
 # direction independent function applied to non-empty list
-"e56df3eb-9405-416a-b13a-aabb4c3b5194" = true
+"7a626a3c-03ec-42bc-9840-53f280e13067" = true
 
 # direction dependent function applied to non-empty list
-"d2cf5644-aee1-4dfc-9b88-06896676fe27" = true
+"d7fcad99-e88e-40e1-a539-4c519681f390" = true
 
 # empty list
-"aeb576b9-118e-4a57-a451-db49fac20fdc" = true
+"17214edb-20ba-42fc-bda8-000a5ab525b0" = true
 
 # direction independent function applied to non-empty list
-"c4b64e58-313e-4c47-9c68-7764964efb8e" = true
+"e1c64db7-9253-4a3d-a7c4-5273b9e2a1bd" = true
 
 # direction dependent function applied to non-empty list
-"be396a53-c074-4db3-8dd6-f7ed003cce7c" = true
+"8066003b-f2ff-437e-9103-66e6df474844" = true
 
 # empty list
 "94231515-050e-4841-943d-d4488ab4ee30" = true
