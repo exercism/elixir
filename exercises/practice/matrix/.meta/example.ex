@@ -47,7 +47,7 @@ defmodule Matrix do
   Given a `matrix` and `index`, return the row at `index`.
   """
   @spec row(matrix :: %Matrix{}, index :: integer) :: list(integer)
-  def row(%Matrix{matrix: rows}, index), do: Enum.at(rows, index)
+  def row(%Matrix{matrix: rows}, index), do: Enum.at(rows, index - 1)
 
   @doc """
   Given a `matrix`, return its columns as a list of lists of integers.
@@ -59,5 +59,5 @@ defmodule Matrix do
   Given a `matrix` and `index`, return the column at `index`.
   """
   @spec column(matrix :: %Matrix{}, index :: integer) :: list(integer)
-  def column(%Matrix{transposed_matrix: cols}, index), do: Enum.at(cols, index)
+  def column(%Matrix{transposed_matrix: cols}, index), do: Enum.at(cols, index - 1)
 end
