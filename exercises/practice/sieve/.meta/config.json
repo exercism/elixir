@@ -1,9 +1,15 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/sieve.ex"
+    ],
+    "test": [
+      "test/sieve_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   },
   "source": "Sieve of Eratosthenes at Wikipedia",
   "source_url": "http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes"

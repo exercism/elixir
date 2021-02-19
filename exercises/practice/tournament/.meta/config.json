@@ -1,8 +1,14 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/tournament.ex"
+    ],
+    "test": [
+      "test/tournament_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   }
 }

@@ -1,8 +1,14 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/parallel_letter_frequency.ex"
+    ],
+    "test": [
+      "test/parallel_letter_frequency_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   }
 }

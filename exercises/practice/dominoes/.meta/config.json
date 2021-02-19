@@ -1,8 +1,14 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/dominoes.ex"
+    ],
+    "test": [
+      "test/dominoes_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   }
 }

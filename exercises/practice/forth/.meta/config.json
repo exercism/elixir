@@ -1,8 +1,14 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/forth.ex"
+    ],
+    "test": [
+      "test/forth_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   }
 }

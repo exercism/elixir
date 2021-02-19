@@ -1,8 +1,14 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/zipper.ex"
+    ],
+    "test": [
+      "test/zipper_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   }
 }
