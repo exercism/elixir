@@ -1,4 +1,4 @@
-defmodule Palindromes do
+defmodule PalindromeProducts do
   @doc """
   Generates all palindrome products from an optionally given min factor (or 1) to a given max factor.
   """

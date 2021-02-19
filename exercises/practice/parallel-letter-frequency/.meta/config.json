@@ -2,10 +2,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "lib/parallel_letter_frequency.ex"
+      "lib/frequency.ex"
     ],
     "test": [
-      "test/parallel_letter_frequency_test.exs"
+      "test/frequency_test.exs"
     ],
     "example": [
       ".meta/example.ex"

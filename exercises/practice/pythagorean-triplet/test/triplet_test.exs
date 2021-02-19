@@ -1,4 +1,4 @@
-defmodule PythagoreanTripletTest do
+defmodule TripletTest do
   use ExUnit.Case
 
   # @tag :pending

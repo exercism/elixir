@@ -2,10 +2,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "lib/leap.ex"
+      "lib/year.ex"
     ],
     "test": [
-      "test/leap_test.exs"
+      "test/year_test.exs"
     ],
     "example": [
       ".meta/example.ex"

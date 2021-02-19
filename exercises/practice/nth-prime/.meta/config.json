@@ -2,10 +2,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "lib/nth_prime.ex"
+      "lib/prime.ex"
     ],
     "test": [
-      "test/nth_prime_test.exs"
+      "test/prime_test.exs"
     ],
     "example": [
       ".meta/example.ex"
