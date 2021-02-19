@@ -1,8 +1,14 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/bank_account.ex"
+    ],
+    "test": [
+      "test/bank_account_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   }
 }

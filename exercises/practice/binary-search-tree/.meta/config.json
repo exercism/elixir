@@ -1,9 +1,15 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/binary_search_tree.ex"
+    ],
+    "test": [
+      "test/binary_search_tree_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   },
   "source": "Josh Cheek",
   "source_url": "https://twitter.com/josh_cheek"

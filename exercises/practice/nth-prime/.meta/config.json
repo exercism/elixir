@@ -1,9 +1,15 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/prime.ex"
+    ],
+    "test": [
+      "test/prime_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   },
   "source": "A variation on Problem 7 at Project Euler",
   "source_url": "http://projecteuler.net/problem=7"

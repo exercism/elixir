@@ -1,8 +1,14 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/minesweeper.ex"
+    ],
+    "test": [
+      "test/minesweeper_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   }
 }

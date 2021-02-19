@@ -1,9 +1,15 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/luhn.ex"
+    ],
+    "test": [
+      "test/luhn_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   },
   "source": "The Luhn Algorithm on Wikipedia",
   "source_url": "http://en.wikipedia.org/wiki/Luhn_algorithm"

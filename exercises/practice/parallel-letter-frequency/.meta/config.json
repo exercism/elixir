@@ -1,8 +1,14 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/frequency.ex"
+    ],
+    "test": [
+      "test/frequency_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   }
 }

@@ -1,9 +1,15 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/pig_latin.ex"
+    ],
+    "test": [
+      "test/pig_latin_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   },
   "source": "The Pig Latin exercise at Test First Teaching by Ultrasaurus",
   "source_url": "https://github.com/ultrasaurus/test-first-teaching/blob/master/learn_ruby/pig_latin/"

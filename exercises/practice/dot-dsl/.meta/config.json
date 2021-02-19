@@ -1,9 +1,16 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/dot.ex",
+      "lib/graph.ex"
+    ],
+    "test": [
+      "test/dot_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/DOT_(graph_description_language)"

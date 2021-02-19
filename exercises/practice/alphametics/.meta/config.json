@@ -1,8 +1,14 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/alphametics.ex"
+    ],
+    "test": [
+      "test/alphametics_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   }
 }

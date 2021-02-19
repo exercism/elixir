@@ -1,8 +1,14 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/scale_generator.ex"
+    ],
+    "test": [
+      "test/scale_generator_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   }
 }

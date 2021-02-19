@@ -1,8 +1,14 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/markdown.ex"
+    ],
+    "test": [
+      "test/markdown_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   }
 }
