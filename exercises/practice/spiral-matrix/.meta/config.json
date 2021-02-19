@@ -2,10 +2,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "lib/spiral_matrix.ex"
+      "lib/spiral.ex"
     ],
     "test": [
-      "test/spiral_matrix_test.exs"
+      "test/spiral_test.exs"
     ],
     "example": [
       ".meta/example.ex"

@@ -2,10 +2,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "lib/series.ex"
+      "lib/string_series.ex"
     ],
     "test": [
-      "test/series_test.exs"
+      "test/string_series_test.exs"
     ],
     "example": [
       ".meta/example.ex"

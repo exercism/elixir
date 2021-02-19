@@ -2,10 +2,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "lib/run_length_encoding.ex"
+      "lib/run_length_encoder.ex"
     ],
     "test": [
-      "test/run_length_encoding_test.exs"
+      "test/run_length_encoder_test.exs"
     ],
     "example": [
       ".meta/example.ex"

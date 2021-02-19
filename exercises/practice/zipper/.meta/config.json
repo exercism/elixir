@@ -2,7 +2,8 @@
   "authors": [],
   "files": {
     "solution": [
-      "lib/zipper.ex"
+      "lib/zipper.ex",
+      "lib/bin_tree.ex"
     ],
     "test": [
       "test/zipper_test.exs"

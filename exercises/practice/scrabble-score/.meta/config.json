@@ -2,10 +2,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "lib/scrabble_score.ex"
+      "lib/scrabble.ex"
     ],
     "test": [
-      "test/scrabble_score_test.exs"
+      "test/scrabble_test.exs"
     ],
     "example": [
       ".meta/example.ex"

@@ -2,10 +2,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "lib/queen_attack.ex"
+      "lib/queens.ex"
     ],
     "test": [
-      "test/queen_attack_test.exs"
+      "test/queens_test.exs"
     ],
     "example": [
       ".meta/example.ex"

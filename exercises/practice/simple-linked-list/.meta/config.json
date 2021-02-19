@@ -2,10 +2,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "lib/simple_linked_list.ex"
+      "lib/linked_list.ex"
     ],
     "test": [
-      "test/simple_linked_list_test.exs"
+      "test/linked_list_test.exs"
     ],
     "example": [
       ".meta/example.ex"
