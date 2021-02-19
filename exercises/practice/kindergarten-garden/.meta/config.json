@@ -2,10 +2,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "lib/kindergarten_garden.ex"
+      "lib/garden.ex"
     ],
     "test": [
-      "test/kindergarten_garden_test.exs"
+      "test/garden_test.exs"
     ],
     "example": [
       ".meta/example.ex"

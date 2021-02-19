@@ -2,10 +2,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "lib/armstrong_numbers.ex"
+      "lib/armstrong_number.ex"
     ],
     "test": [
-      "test/armstrong_numbers_test.exs"
+      "test/armstrong_number_test.exs"
     ],
     "example": [
       ".meta/example.ex"

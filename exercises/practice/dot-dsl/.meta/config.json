@@ -2,10 +2,11 @@
   "authors": [],
   "files": {
     "solution": [
-      "lib/dot_dsl.ex"
+      "lib/dot.ex",
+      "lib/graph.ex"
     ],
     "test": [
-      "test/dot_dsl_test.exs"
+      "test/dot_test.exs"
     ],
     "example": [
       ".meta/example.ex"

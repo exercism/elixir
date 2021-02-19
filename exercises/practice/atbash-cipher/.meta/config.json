@@ -2,10 +2,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "lib/atbash_cipher.ex"
+      "lib/atbash.ex"
     ],
     "test": [
-      "test/atbash_cipher_test.exs"
+      "test/atbash_test.exs"
     ],
     "example": [
       ".meta/example.ex"

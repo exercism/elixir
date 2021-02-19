@@ -2,10 +2,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "lib/grade_school.ex"
+      "lib/school.ex"
     ],
     "test": [
-      "test/grade_school_test.exs"
+      "test/school_test.exs"
     ],
     "example": [
       ".meta/example.ex"

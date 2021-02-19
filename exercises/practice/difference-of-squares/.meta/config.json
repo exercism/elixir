@@ -2,10 +2,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "lib/difference_of_squares.ex"
+      "lib/squares.ex"
     ],
     "test": [
-      "test/difference_of_squares_test.exs"
+      "test/squares_test.exs"
     ],
     "example": [
       ".meta/example.ex"
