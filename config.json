@@ -14,6 +14,20 @@
     "indent_style": "space",
     "indent_size": 2
   },
+  "files": {
+    "solution": [
+      "lib/%{snake_slug}.ex"
+    ],
+    "test": [
+      "test/%{snake_slug}_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
+  },
   "exercises": {
     "concept": [
       {
@@ -1231,7 +1245,8 @@
         ],
         "practices": ["recursion", "tail-call-recursion", "strings"],
         "difficulty": 3,
-        "topics": ["binary_operators", "math"]
+        "topics": ["binary_operators", "math"],
+        "status": "deprecated"
       },
       {
         "slug": "change",
@@ -1419,7 +1434,8 @@
         ],
         "practices": ["strings", "charlists", "ranges"],
         "difficulty": 3,
-        "topics": ["math", "numbers", "string_processing"]
+        "topics": ["math", "numbers", "string_processing"],
+        "status": "deprecated"
       },
       {
         "slug": "perfect-numbers",

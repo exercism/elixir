@@ -32,21 +32,48 @@ defmodule ConnectTest do
   end
 
   @tag :pending
-  test "convulted path" do
+  test "only edges does not make a winner" do
     board =
       remove_spaces([
-        ". X X . .",
-        " X . X . X",
-        "  . X . X .",
-        "   . X X . .",
-        "    O O O O O"
+        "O O O X",
+        " X . . X",
+        "  X . . X",
+        "   X O O O"
       ])
 
-    assert Connect.result_for(board) == :black
+    assert Connect.result_for(board) == :none
   end
 
   @tag :pending
-  test "rectangle, black wins" do
+  test "illegal diagonal does not make a winner" do
+    board =
+      remove_spaces([
+        "X O . .",
+        " O X X X",
+        "  O X O .",
+        "   . O X .",
+        "    X X O O"
+      ])
+
+    assert Connect.result_for(board) == :none
+  end
+
+  @tag :pending
+  test "nobody wins crossing adjacent angles" do
+    board =
+      remove_spaces([
+        "X . . .",
+        " . X O .",
+        "  O . X O",
+        "   . O . X",
+        "    . . O ."
+      ])
+
+    assert Connect.result_for(board) == :none
+  end
+
+  @tag :pending
+  test "black wins crossing from left to right" do
     board =
       remove_spaces([
         ". O . .",
@@ -60,7 +87,7 @@ defmodule ConnectTest do
   end
 
   @tag :pending
-  test "rectangle, white wins" do
+  test "white wins crossing from top to bottom" do
     board =
       remove_spaces([
         ". O . .",
@@ -74,36 +101,34 @@ defmodule ConnectTest do
   end
 
   @tag :pending
-  test "spiral, black wins" do
-    board = [
-      "OXXXXXXXX",
-      "OXOOOOOOO",
-      "OXOXXXXXO",
-      "OXOXOOOXO",
-      "OXOXXXOXO",
-      "OXOOOXOXO",
-      "OXXXXXOXO",
-      "OOOOOOOXO",
-      "XXXXXXXXO"
-    ]
+  test "black wins using a convoluted path" do
+    board =
+      remove_spaces([
+        ". X X . .",
+        " X . X . X",
+        "  . X . X .",
+        "   . X X . .",
+        "    O O O O O"
+      ])
 
     assert Connect.result_for(board) == :black
   end
 
   @tag :pending
-  test "spiral, nobody wins" do
-    board = [
-      "OXXXXXXXX",
-      "OXOOOOOOO",
-      "OXOXXXXXO",
-      "OXOXOOOXO",
-      "OXOX.XOXO",
-      "OXOOOXOXO",
-      "OXXXXXOXO",
-      "OOOOOOOXO",
-      "XXXXXXXXO"
-    ]
+  test "black wins using a spiral path" do
+    board =
+      remove_spaces([
+        "O X X X X X X X X",
+        " O X O O O O O O O",
+        "  O X O X X X X X O",
+        "   O X O X O O O X O",
+        "    O X O X X X O X O",
+        "     O X O O O X O X O",
+        "      O X X X X X O X O",
+        "       O O O O O O O X O",
+        "        X X X X X X X X O"
+      ])
 
-    assert Connect.result_for(board) == :none
+    assert Connect.result_for(board) == :black
   end
 end

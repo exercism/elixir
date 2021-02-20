@@ -23,7 +23,7 @@ defmodule IsbnVerifierTest do
 
   @tag :pending
   test "invalid character in isbn" do
-    refute IsbnVerifier.isbn?("3-598-2K507-0")
+    refute IsbnVerifier.isbn?("3-598-P1581-X")
   end
 
   @tag :pending
@@ -52,6 +52,11 @@ defmodule IsbnVerifierTest do
   end
 
   @tag :pending
+  test "too short isbn" do
+    refute IsbnVerifier.isbn?("00")
+  end
+
+  @tag :pending
   test "isbn without check digit" do
     refute IsbnVerifier.isbn?("3-598-21507")
   end
@@ -64,6 +69,21 @@ defmodule IsbnVerifierTest do
   @tag :pending
   test "check digit of X should not be used for 0" do
     refute IsbnVerifier.isbn?("3-598-21515-X")
+  end
+
+  @tag :pending
+  test "input is 9 characters" do
+    refute IsbnVerifier.isbn?("134456729")
+  end
+
+  @tag :pending
+  test "invalid characters are not ignored" do
+    refute IsbnVerifier.isbn?("3132P34035")
+  end
+
+  @tag :pending
+  test "input is too long but contains a valid isbn" do
+    refute IsbnVerifier.isbn?("98245726788")
   end
 
   # Test cases from international ISBN to test variable dash placement

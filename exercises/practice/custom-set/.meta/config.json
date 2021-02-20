@@ -1,8 +1,14 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/custom_set.ex"
+    ],
+    "test": [
+      "test/custom_set_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   }
 }

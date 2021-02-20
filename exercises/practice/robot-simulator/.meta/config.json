@@ -1,9 +1,15 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/robot_simulator.ex"
+    ],
+    "test": [
+      "test/robot_simulator_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   },
   "source": "Inspired by an interview question at a famous company.",
   "source_url": ""

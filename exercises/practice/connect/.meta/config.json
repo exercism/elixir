@@ -1,8 +1,14 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/connect.ex"
+    ],
+    "test": [
+      "test/connect_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   }
 }

@@ -1,8 +1,14 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/all_your_base.ex"
+    ],
+    "test": [
+      "test/all_your_base_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   }
 }

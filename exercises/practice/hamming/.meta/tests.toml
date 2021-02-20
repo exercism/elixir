@@ -16,13 +16,13 @@
 "cd2273a5-c576-46c8-a52b-dee251c3e6e5" = true
 
 # disallow first strand longer
-"919f8ef0-b767-4d1b-8516-6379d07fcb28" = true
+"b9228bb1-465f-4141-b40f-1f99812de5a8" = true
 
 # disallow second strand longer
-"8a2d4ed0-ead5-4fdd-924d-27c4cf56e60e" = true
+"dab38838-26bb-4fff-acbe-3b0a9bfeba2d" = true
 
-# disallow left empty strand
-"5dce058b-28d4-4ca7-aa64-adfe4e17784c" = true
+# disallow empty first strand
+"b764d47c-83ff-4de2-ab10-6cfe4b15c0f3" = true
 
-# disallow right empty strand
-"38826d4b-16fb-4639-ac3e-ba027dec8b5f" = true
+# disallow empty second strand
+"9ab9262f-3521-4191-81f5-0ed184a5aa89" = true

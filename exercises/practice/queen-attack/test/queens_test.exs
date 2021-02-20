@@ -1,4 +1,4 @@
-defmodule QueenAttackTest do
+defmodule QueensTest do
   use ExUnit.Case
 
   describe "test creation of queens with valid and invalid positions" do
