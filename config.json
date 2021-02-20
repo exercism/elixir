@@ -1295,7 +1295,10 @@
         "slug": "palindrome-products",
         "name": "Palindrome Products",
         "uuid": "5ab8275f-bf1d-472d-9545-8ac622ce6f5d",
-        "prerequisites": [],
+        "prerequisites": [
+          "errors",
+          "exceptions"
+        ],
         "difficulty": 5,
         "topics": [
           "math",
