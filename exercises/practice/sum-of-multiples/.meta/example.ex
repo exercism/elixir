@@ -5,7 +5,7 @@ defmodule SumOfMultiples do
   @spec to(non_neg_integer, [non_neg_integer]) :: non_neg_integer
   def to(limit, factors) do
     Enum.reduce(1..(limit - 1), 0, fn n, acc ->
-      if Enum.any?(factors, &(rem(n, &1) == 0)), do: acc + n, else: acc
+      if Enum.any?(factors, &(&1 != 0 && rem(n, &1) == 0)), do: acc + n, else: acc
     end)
   end
 end
