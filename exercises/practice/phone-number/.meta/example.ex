@@ -58,7 +58,7 @@ defmodule PhoneNumber do
   end
 
   defp validate_area_code(number) do
-    {area_code, rest} = String.split_at(number, 3)
+    {area_code, _} = String.split_at(number, 3)
 
     cond do
       String.starts_with?(area_code, "0") -> {:error, "area code cannot start with zero"}
@@ -68,8 +68,8 @@ defmodule PhoneNumber do
   end
 
   defp validate_exchange_code(number) do
-    {area_code, rest} = String.split_at(number, 3)
-    {exchange_code, rest} = String.split_at(rest, 3)
+    {_area_code, rest} = String.split_at(number, 3)
+    {exchange_code, _} = String.split_at(rest, 3)
 
     cond do
       String.starts_with?(exchange_code, "0") -> {:error, "exchange code cannot start with zero"}
