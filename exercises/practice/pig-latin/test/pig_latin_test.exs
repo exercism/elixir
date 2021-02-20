@@ -45,11 +45,6 @@ defmodule PigLatinTest do
     end
 
     @tag :pending
-    test "word beginning with y" do
-      assert PigLatin.translate("yellow") == "ellowyay"
-    end
-
-    @tag :pending
     test "word beginning with x" do
       assert PigLatin.translate("xenon") == "enonxay"
     end
@@ -70,7 +65,7 @@ defmodule PigLatinTest do
     end
 
     @tag :pending
-    test "word beginning with a serie of consonants : aliens speak Pig Latin too" do
+    test "word beginning with a series of consonants : aliens speak Pig Latin too" do
       assert PigLatin.translate("zkrrkrkrkrzzzkewk") == "ewkzkrrkrkrkrzzzkay"
     end
   end
@@ -126,6 +121,23 @@ defmodule PigLatinTest do
     @tag :pending
     test "word beginning with xb" do
       assert PigLatin.translate("xbot") == "xbotay"
+    end
+  end
+
+  describe "position of y in a word determines if it is a consonant or a vowel" do
+    @tag :pending
+    test "y is treated like a consonant at the beginning of a word" do
+      assert PigLatin.translate("yellow") == "ellowyay"
+    end
+
+    @tag :pending
+    test "y is treated like a vowel at the end of a consonant cluster" do
+      assert PigLatin.translate("rhythm") == "ythmrhay"
+    end
+
+    @tag :pending
+    test "y as second letter in two letter word" do
+      assert PigLatin.translate("my") == "ymay"
     end
   end
 
