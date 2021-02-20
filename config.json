@@ -971,8 +971,22 @@
         "slug": "phone-number",
         "name": "Phone Number",
         "uuid": "e8b049b7-6648-412c-8a11-0c95a15e2641",
-        "prerequisites": [],
-        "difficulty": 3,
+        "prerequisites": [
+          "atoms",
+          "tuples",
+          "if",
+          "case",
+          "cond",
+          "charlists",
+          "enum",
+          "strings",
+          "regular-expressions",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "binaries"
+        ],
+        "practices": ["strings", "regular-expressions"],
+        "difficulty": 4,
         "topics": [
           "pattern_matching",
           "string_processing"
