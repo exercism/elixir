@@ -23,35 +23,15 @@ defmodule Triplet do
     a * a + b * b == c * c
   end
 
-  defp select?(triplet) do
-    pythagorean?(triplet)
-  end
-
-  defp select?(triplet, sum) do
-    pythagorean?(triplet) && sum(triplet) == sum
-  end
-
   @doc """
-  Generates a list of pythagorean triplets from a given min to a given max.
+  Generates a list of pythagorean triplets whose values add up to a given sum.
   """
-  @spec generate(non_neg_integer, non_neg_integer) :: [list(non_neg_integer)]
-  def generate(min, max) do
-    for x <- Enum.to_list(min..max),
-        y <- Enum.to_list(x..max),
-        z <- Enum.to_list(y..max),
-        select?([x, y, z]),
-        do: [x, y, z]
-  end
-
-  @doc """
-  Generates a list of pythagorean triplets from a given min to a given max, whose values add up to a given sum.
-  """
-  @spec generate(non_neg_integer, non_neg_integer, non_neg_integer) :: [list(non_neg_integer)]
-  def generate(min, max, sum) do
-    for x <- Enum.to_list(min..max),
-        y <- Enum.to_list(x..max),
-        z <- Enum.to_list(y..max),
-        select?([x, y, z], sum),
+  @spec generate(non_neg_integer) :: [list(non_neg_integer)]
+  def generate(sum) do
+    for x <- Enum.to_list(1..sum),
+        y <- if((sum - 2 * x) > x, do: Enum.to_list(x..(sum - 2 * x)), else: []),
+        z <- if((sum - x - y) != 0, do: [sum - x - y], else: []),
+        pythagorean?([x, y, z]),
         do: [x, y, z]
   end
 end
