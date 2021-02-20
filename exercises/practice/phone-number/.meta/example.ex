@@ -1,106 +1,80 @@
-defmodule Phone do
-  @moduledoc """
-  Utilities to work with phone numbers.
-  """
-  @invalid "0000000000"
-
+defmodule PhoneNumber do
   @doc """
-  Remove formatting from a phone number.
-
-  Returns "0000000000" if phone number is not valid
-  (10 digits or "1" followed by 10 digits)
-
-  ## Examples
-
-  iex> Phone.number("212-555-0100")
-  "2125550100"
-
-  iex> Phone.number("+1 (212) 555-0100")
-  "2125550100"
-
-  iex> Phone.number("+1 (212) 055-0100")
-  "0000000000"
-
-  iex> Phone.number("(212) 555-0100")
-  "2125550100"
-
-  iex> Phone.number("867.5309")
-  "0000000000"
+  Remove formatting from a phone number if the given number is valid. Return an error otherwise.
   """
-  @spec number(String.t()) :: String.t()
-  def number(raw) do
-    # remove decorations
-    raw
-    |> String.replace(~r/[\s+.()-]/, "")
-    |> valid?
-    |> (fn
-          false -> @invalid
-          num -> String.replace(num, ~r/^1/, "")
-        end).()
+  @spec clean(String.t()) :: {:ok, String.t()} | {:error, String.t()}
+  def clean(raw) do
+    validators = [
+      &validate_digits/1,
+      &validate_length/1,
+      &validate_country_code/1,
+      &validate_area_code/1,
+      &validate_exchange_code/1
+    ]
+
+    Enum.reduce_while(validators, {:ok, remove_separators(raw)}, fn validator, acc ->
+      {:ok, number} = acc
+
+      case validator.(number) do
+        {:ok, number} -> {:cont, {:ok, number}}
+        {:error, error} -> {:halt, {:error, error}}
+      end
+    end)
   end
 
-  defp valid?(num) do
-    Regex.match?(~r/^1?(?:[2-9][0-9]{2}){2}\d{4}$/, num)
-    |> (fn
-          true -> num
-          false -> false
-        end).()
+  defp remove_separators(number) do
+    String.replace(number, ~r/[\s+.()-]/, "")
   end
 
-  @doc """
-  Extract the area code from a phone number
+  defp validate_digits(number) do
+    valid_digits? =
+      number
+      |> String.codepoints()
+      |> Enum.all?(fn <<x>> -> x in ?0..?9 end)
 
-  Returns the first three digits from a phone number,
-  ignoring long distance indicator
-
-  ## Examples
-
-  iex> Phone.area_code("212-555-0100")
-  "212"
-
-  iex> Phone.area_code("+1 (212) 555-0100")
-  "212"
-
-  iex> Phone.area_code("+1 (012) 555-0100")
-  "000"
-
-  iex> Phone.area_code("867.5309")
-  "000"
-  """
-  @spec area_code(String.t()) :: String.t()
-  def area_code(raw) do
-    # the first three digits are area_code
-    raw
-    |> __MODULE__.number()
-    |> String.slice(0, 3)
+    if valid_digits?, do: {:ok, number}, else: {:error, "must contain digits only"}
   end
 
-  @doc """
-  Pretty print a phone number
+  defp validate_length(number) do
+    if String.length(number) in 10..11 do
+      {:ok, number}
+    else
+      {:error, "incorrect number of digits"}
+    end
+  end
 
-  Wraps the area code in parentheses and separates
-  exchange and subscriber number with a dash.
+  defp validate_country_code(number) do
+    case String.length(number) do
+      10 ->
+        {:ok, number}
 
-  ## Examples
+      11 ->
+        if String.starts_with?(number, "1") do
+          {:ok, number |> String.split_at(1) |> elem(1)}
+        else
+          {:error, "11 digits must start with 1"}
+        end
+    end
+  end
 
-  iex> Phone.pretty("212-555-0100")
-  "(212) 555-0100"
+  defp validate_area_code(number) do
+    {area_code, rest} = String.split_at(number, 3)
 
-  iex> Phone.pretty("212-155-0100")
-  "(000) 000-0000"
+    cond do
+      String.starts_with?(area_code, "0") -> {:error, "area code cannot start with zero"}
+      String.starts_with?(area_code, "1") -> {:error, "area code cannot start with one"}
+      true -> {:ok, number}
+    end
+  end
 
-  iex> Phone.pretty("+1 (303) 555-1212")
-  "(303) 555-1212"
+  defp validate_exchange_code(number) do
+    {area_code, rest} = String.split_at(number, 3)
+    {exchange_code, rest} = String.split_at(rest, 3)
 
-  iex> Phone.pretty("867.5309")
-  "(000) 000-0000"
-  """
-  @spec pretty(String.t()) :: String.t()
-  def pretty(raw) do
-    raw
-    |> __MODULE__.number()
-    |> (fn <<area_code::binary-size(3), exchange_code::binary-size(3), rest::binary>> ->
-          "(#{area_code}) #{exchange_code}-#{rest}"
-        end).()
+    cond do
+      String.starts_with?(exchange_code, "0") -> {:error, "exchange code cannot start with zero"}
+      String.starts_with?(exchange_code, "1") -> {:error, "exchange code cannot start with one"}
+      true -> {:ok, number}
+    end
   end
 end
