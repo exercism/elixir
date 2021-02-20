@@ -4,7 +4,12 @@ defmodule PalindromeProducts do
   """
   @spec generate(non_neg_integer) :: map
   @spec generate(non_neg_integer, non_neg_integer) :: map
-  def generate(max_factor, min_factor \\ 1) do
+  def generate(max_factor, min_factor \\ 1)
+  def generate(max_factor, min_factor) when max_factor < min_factor do
+    raise ArgumentError
+  end
+
+  def generate(max_factor, min_factor) do
     Enum.reduce(min_factor..max_factor, %{}, fn x, map ->
       Enum.reduce(x..max_factor, map, fn y, products ->
         if palindrome?(x * y), do: add_factor(products, x, y), else: products
