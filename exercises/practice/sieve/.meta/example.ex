@@ -4,6 +4,7 @@ defmodule Sieve do
   """
   @spec primes_to(non_neg_integer) :: [non_neg_integer]
   def primes_to(1), do: []
+
   def primes_to(limit) do
     Enum.to_list(2..limit) |> do_primes([]) |> Enum.reverse()
   end
