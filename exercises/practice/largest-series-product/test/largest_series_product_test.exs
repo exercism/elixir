@@ -2,18 +2,13 @@ defmodule LargestSeriesProductTest do
   use ExUnit.Case
 
   # @tag :pending
+  test "largest product if span equals length" do
+    assert Series.largest_product("29", 2) == 18
+  end
+
+  @tag :pending
   test "largest product of 2" do
     assert Series.largest_product("0123456789", 2) == 72
-  end
-
-  @tag :pending
-  test "largest product of a tiny number" do
-    assert Series.largest_product("12", 2) == 2
-  end
-
-  @tag :pending
-  test "another tiny number" do
-    assert Series.largest_product("19", 2) == 9
   end
 
   @tag :pending
@@ -83,9 +78,16 @@ defmodule LargestSeriesProductTest do
   end
 
   @tag :pending
+  test "raises with invalid character in digits" do
+    assert_raise ArgumentError, fn ->
+      Series.largest_product("1234a5", 2)
+    end
+  end
+
+  @tag :pending
   test "raises with non-empty string and negative span size" do
     assert_raise ArgumentError, fn ->
-      Series.largest_product("1234", -1)
+      Series.largest_product("12345", -1)
     end
   end
 end

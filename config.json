@@ -3,16 +3,30 @@
   "slug": "elixir",
   "active": true,
   "status": {
-    "concept_exercises": false,
-    "test_runner": false,
-    "representer": false,
-    "analyzer": false
+    "concept_exercises": true,
+    "test_runner": true,
+    "representer": true,
+    "analyzer": true
   },
   "blurb": "Elixir is a dynamic, functional language designed for building scalable and maintainable applications. Elixir leverages the Erlang VM, known for running low-latency, distributed and fault-tolerant systems, while also being successfully used in web development and the embedded software domain.",
   "version": 3,
   "online_editor": {
     "indent_style": "space",
     "indent_size": 2
+  },
+  "files": {
+    "solution": [
+      "lib/%{snake_slug}.ex"
+    ],
+    "test": [
+      "test/%{snake_slug}_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
   "exercises": {
     "concept": [
@@ -481,6 +495,22 @@
           "pids"
         ],
         "status": "beta"
+      },
+      {
+        "slug": "library-fees",
+        "name": "Library Fees",
+        "uuid": "b5629003-638c-47c0-ad76-a0769f285053",
+        "concepts": [
+          "dates-and-time"
+        ],
+        "prerequisites": [
+          "integers",
+          "floating-point-numbers",
+          "tuples",
+          "atoms",
+          "if"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
@@ -1054,7 +1084,12 @@
         "slug": "meetup",
         "name": "Meetup",
         "uuid": "68fee2cd-a5bc-40f2-8936-a3bb10463498",
-        "prerequisites": [],
+        "prerequisites": [
+          "dates-and-time"
+        ],
+        "practices": [
+          "dates-and-time"
+        ],
         "difficulty": 4,
         "topics": [
           "calendar",
@@ -1092,7 +1127,8 @@
         "topics": [
           "binary_operators",
           "math"
-        ]
+        ],
+        "status": "deprecated"
       },
       {
         "slug": "change",
@@ -1185,7 +1221,12 @@
         "slug": "gigasecond",
         "name": "Gigasecond",
         "uuid": "287331a4-64d5-4b35-b4c1-a1171dc338e1",
-        "prerequisites": [],
+        "prerequisites": [
+          "dates-and-time"
+        ],
+        "practices": [
+          "dates-and-time"
+        ],
         "difficulty": 3,
         "topics": [
           "calendar",
@@ -1202,7 +1243,8 @@
           "math",
           "numbers",
           "string_processing"
-        ]
+        ],
+        "status": "deprecated"
       },
       {
         "slug": "perfect-numbers",
@@ -1611,6 +1653,12 @@
       "slug": "cond",
       "name": "Cond",
       "blurb": "There are three conditional expressions in Elixir: if, case, and cond. Cond is usually used when there are more than two logical branches and each branch has a condition based on different variables."
+    },
+    {
+      "uuid": "f76e56a7-b8a8-48a3-85f9-2f795acac8c1",
+      "slug": "dates-and-time",
+      "name": "Dates and Time",
+      "blurb": "Elixir offers 4 different modules for working with dates and time, each with its own struct: Date, Time, NaiveDateTime, and DateTime."
     },
     {
       "uuid": "337ea0be-2978-48a1-ba10-0c29d7018a99",

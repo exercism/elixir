@@ -1,6 +1,7 @@
 defmodule LuhnTest do
   use ExUnit.Case
 
+  # @tag :pending
   test "single digit strings can not be valid" do
     refute Luhn.valid?("1")
   end
@@ -36,6 +37,26 @@ defmodule LuhnTest do
   end
 
   @tag :pending
+  test "invalid long number with an even remainder" do
+    refute Luhn.valid?("1 2345 6789 1234 5678 9012")
+  end
+
+  @tag :pending
+  test "valid number with an even number of digits" do
+    assert Luhn.valid?("095 245 88")
+  end
+
+  @tag :pending
+  test "valid number with an odd number of spaces" do
+    assert Luhn.valid?("234 567 891 234")
+  end
+
+  @tag :pending
+  test "valid strings with a non-digit added at the end become invalid" do
+    refute Luhn.valid?("059a")
+  end
+
+  @tag :pending
   test "valid strings with a non-digit included become invalid" do
     refute Luhn.valid?("055a 444 285")
   end
@@ -47,7 +68,7 @@ defmodule LuhnTest do
 
   @tag :pending
   test "valid strings with symbols included become invalid" do
-    refute Luhn.valid?("055£ 444$ 285")
+    refute Luhn.valid?("055# 444$ 285")
   end
 
   @tag :pending
@@ -63,5 +84,15 @@ defmodule LuhnTest do
   @tag :pending
   test "input digit 9 is correctly converted to output digit 9" do
     assert Luhn.valid?("091")
+  end
+
+  @tag :pending
+  test "using ascii value for non-doubled non-digit isn't allowed" do
+    refute Luhn.valid?("055b 444 285")
+  end
+
+  @tag :pending
+  test "using ascii value for doubled non-digit isn't allowed" do
+    refute Luhn.valid?(":9")
   end
 end

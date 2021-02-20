@@ -1,5 +1,8 @@
 [canonical-tests]
 
+# change for 1 cent
+"d0ebd0e1-9d27-4609-a654-df5c0ba1d83a" = true
+
 # single coin change
 "36887bea-7f92-4a9c-b0cc-c0e886b3ecc8" = true
 

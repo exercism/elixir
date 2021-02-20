@@ -1,8 +1,14 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/sublist.ex"
+    ],
+    "test": [
+      "test/sublist_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   }
 }

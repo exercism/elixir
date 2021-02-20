@@ -28,6 +28,7 @@ The most commonly used Erlang modules provide functionality that Elixir's standa
 - The [`queue`][erl-queue] module which provides a queue data structure.
 - The [`crypto`][erl-crypto] module which provides cryptographic functions.
 - The [`zip`][erl-zip] module which provides functions for working with zip archives.
+- The [`calendar`][erl-calendar] module which provides functions for working with dates and time, such as [`iso_week_number/1`][erl-calendar-iso-week-number]. To pass a `Date`, `Time`, or a `NaiveDateTime` struct to one of the Erlang functions, it needs to be changed to the Erlang format with a `to_erl` function from the corresponding module.
 
 To discover Erlang's standard library, explore the [STDLIB Reference Manual][erl-stdlib-ref].
 
@@ -51,3 +52,5 @@ Elixir interoperability with Erlang libraries is not limited to Erlang's standar
 [erl-queue]: http://erlang.org/doc/man/queue.html
 [erl-crypto]: http://erlang.org/doc/man/crypto.html
 [erl-zip]: http://erlang.org/doc/man/zip.html
+[erl-calendar]: https://erlang.org/doc/man/calendar.html
+[erl-calendar-iso-week-number]: https://erlang.org/doc/man/calendar.html#iso_week_number-1

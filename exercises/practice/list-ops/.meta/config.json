@@ -1,8 +1,14 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/list_ops.ex"
+    ],
+    "test": [
+      "test/list_ops_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   }
 }

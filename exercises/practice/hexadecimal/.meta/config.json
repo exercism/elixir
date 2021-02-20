@@ -1,9 +1,15 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/hexadecimal.ex"
+    ],
+    "test": [
+      "test/hexadecimal_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   },
   "source": "All of Computer Science",
   "source_url": "http://www.wolframalpha.com/examples/NumberBases.html"

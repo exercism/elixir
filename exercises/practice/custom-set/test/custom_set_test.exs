@@ -165,6 +165,13 @@ defmodule CustomSetTest do
       custom_set_2 = CustomSet.new([1, 2, 4])
       assert CustomSet.equal?(custom_set_1, custom_set_2) == false
     end
+
+    @tag :pending
+    test "set is not equal to larger set with same elements" do
+      custom_set_1 = CustomSet.new([1, 2, 3])
+      custom_set_2 = CustomSet.new([1, 2, 3, 4])
+      assert CustomSet.equal?(custom_set_1, custom_set_2) == false
+    end
   end
 
   describe "add" do

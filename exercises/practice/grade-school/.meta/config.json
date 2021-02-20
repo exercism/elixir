@@ -1,9 +1,15 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/school.ex"
+    ],
+    "test": [
+      "test/school_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   },
   "source": "A pairing session with Phil Battos at gSchool",
   "source_url": "http://gschool.it"
