@@ -13,4 +13,5 @@
 "40a45eac-c83f-4740-901a-20b22d15a39f" = true
 
 # strand with invalid nucleotides
-"b4c47851-ee9e-4b0a-be70-a86e343bd851" = false
+"b4c47851-ee9e-4b0a-be70-a86e343bd851" = false # error handling omitted on purpose
+
