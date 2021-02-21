@@ -10,17 +10,24 @@ defmodule TransposeTest do
 
   @tag :pending
   test "two characters in a row" do
-    input = "AB"
-    expected = "A\n" <> "B"
+    input = "A1"
+    expected = "A\n" <> "1"
 
     assert Transpose.transpose(input) == expected
   end
 
   @tag :pending
   test "two characters in one column" do
-    input = "A\n" <> "B"
+    input = "A\n" <> "1"
+    expected = "A1"
 
-    expected = "AB"
+    assert Transpose.transpose(input) == expected
+  end
+
+  @tag :pending
+  test "simple" do
+    input = "ABC\n" <> "123"
+    expected = "A1\n" <> "B2\n" <> "C3"
 
     assert Transpose.transpose(input) == expected
   end
@@ -66,7 +73,45 @@ defmodule TransposeTest do
         "fs\n" <>
         "ie\n" <>
         "rc\n" <>
-        "so\n" <> "tn\n" <> " d\n" <> "l \n" <> "il\n" <> "ni\n" <> "en\n" <> ".e\n" <> " ."
+        "so\n" <>
+        "tn\n" <>
+        " d\n" <>
+        "l \n" <>
+        "il\n" <>
+        "ni\n" <>
+        "en\n" <>
+        ".e\n" <>
+        " ."
+
+    assert Transpose.transpose(input) == expected
+  end
+
+  @tag :pending
+  test "mixed line length" do
+    input =
+      "The longest line.\n" <>
+        "A long line.\n" <>
+        "A longer line.\n" <>
+        "A line."
+
+    expected =
+      "TAAA\n" <>
+        "h   \n" <>
+        "elll\n" <>
+        " ooi\n" <>
+        "lnnn\n" <>
+        "ogge\n" <>
+        "n e.\n" <>
+        "glr\n" <>
+        "ei \n" <>
+        "snl\n" <>
+        "tei\n" <>
+        " .n\n" <>
+        "l e\n" <>
+        "i .\n" <>
+        "n\n" <>
+        "e\n" <>
+        "."
 
     assert Transpose.transpose(input) == expected
   end
@@ -95,6 +140,27 @@ defmodule TransposeTest do
     matrix = "T\n" <> "EE\n" <> "AAA\n" <> "SSSS\n" <> "EEEEE\n" <> "RRRRRR"
 
     expected = "TEASER\n" <> " EASER\n" <> "  ASER\n" <> "   SER\n" <> "    ER\n" <> "     R"
+
+    assert Transpose.transpose(matrix) == expected
+  end
+
+  @tag :pending
+  test "jagged triangle" do
+    matrix =
+      "11\n" <>
+        "2\n" <>
+        "3333\n" <>
+        "444\n" <>
+        "555555\n" <>
+        "66666"
+
+    expected =
+      "123456\n" <>
+        "1 3456\n" <>
+        "  3456\n" <>
+        "  3 56\n" <>
+        "    56\n" <>
+        "    5"
 
     assert Transpose.transpose(matrix) == expected
   end
@@ -167,7 +233,10 @@ defmodule TransposeTest do
         "       f, r   \n" <>
         "       e  e  m\n" <>
         "       .  m  e\n" <>
-        "          o  n\n" <> "          v  d\n" <> "          e  .\n" <> "          ,"
+        "          o  n\n" <>
+        "          v  d\n" <>
+        "          e  .\n" <>
+        "          ,"
 
     assert Transpose.transpose(matrix) == expected
   end
