@@ -65,7 +65,6 @@ defmodule TournamentTest do
     assert Tournament.tally(input) == expected
   end
 
-
   @tag :pending
   test "a draw is one point each" do
     input = [
