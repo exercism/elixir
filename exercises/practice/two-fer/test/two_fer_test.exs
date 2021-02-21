@@ -7,7 +7,12 @@ defmodule TwoFerTest do
 
   @tag :pending
   test "a name given" do
-    assert TwoFer.two_fer("Gilberto Barros") == "One for Gilberto Barros, one for me"
+    assert TwoFer.two_fer("Alice") == "One for Alice, one for me"
+  end
+
+  @tag :pending
+  test "another name given" do
+    assert TwoFer.two_fer("Bob") == "One for Bob, one for me"
   end
 
   @tag :pending
