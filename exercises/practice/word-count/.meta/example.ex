@@ -9,7 +9,7 @@ defmodule WordCount do
     sentence
     |> normalize()
     |> split
-    |> Enum.frequencies()
+    |> frequencies()
   end
 
   defp normalize(string) do
@@ -22,5 +22,13 @@ defmodule WordCount do
     ~r/\b[\w'-]+\b/u
     |> Regex.scan(string)
     |> List.flatten()
+  end
+
+  defp frequencies(strings) do
+    # Enum.frequencies is only available from Elixir 1.10
+    strings
+    |> Enum.reduce(%{}, fn word, count ->
+      Map.update(count, word, 1, &(&1 + 1))
+    end)
   end
 end
