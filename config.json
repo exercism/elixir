@@ -539,7 +539,7 @@
         "name": "Word Count",
         "uuid": "4a24ba2f-ae92-4095-be53-64bc881422ea",
         "prerequisites": [],
-        "difficulty": 2,
+        "difficulty": 3,
         "topics": [
           "lists",
           "maps",
