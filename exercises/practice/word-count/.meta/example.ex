@@ -7,36 +7,28 @@ defmodule WordCount do
   @spec count(String.t()) :: map
   def count(sentence) do
     sentence
-    |> normalize
+    |> normalize()
     |> split
-    |> count_words
+    |> frequencies()
   end
 
   defp normalize(string) do
-    separating_punctuation = ~r/[,_]/u
-    redundant_punctuation = ~r/[^\w\s-_']/u
-    apostrophes_around_words = ~r/(?<=\W)'|'(?=[\W])/u
-    apostrophes_at_the_beginning = ~r/^'|'(?=[\W])/u
-    apostrophes_at_the_end = ~r/(?<=\W)'|'$/u
-
     string
     |> String.downcase()
-    |> String.replace(separating_punctuation, " ")
-    |> String.replace(redundant_punctuation, "")
-    |> String.replace(apostrophes_around_words, "")
-    |> String.replace(apostrophes_at_the_beginning, "")
-    |> String.replace(apostrophes_at_the_end, "")
+    |> String.replace("_", " ", global: true)
   end
 
   defp split(string) do
-    string |> String.split(~r/[\s]+/, trim: true)
+    ~r/\b[\w'-]+\b/u
+    |> Regex.scan(string)
+    |> List.flatten()
   end
 
-  defp count_words(strings) do
-    get_count = fn word, count ->
+  defp frequencies(strings) do
+    # Enum.frequencies is only available from Elixir 1.10
+    strings
+    |> Enum.reduce(%{}, fn word, count ->
       Map.update(count, word, 1, &(&1 + 1))
-    end
-
-    strings |> Enum.reduce(%{}, get_count)
+    end)
   end
 end
