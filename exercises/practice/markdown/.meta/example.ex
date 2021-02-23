@@ -44,6 +44,6 @@ defmodule Markdown do
   defp patch(l) do
     l
     |> String.replace("<li>", "<ul><li>", global: false)
-    |> String.replace(~r/(<\/li>)(?!.*\1)/,"</li></ul>")
+    |> String.replace(~r/(<\/li>)(?!.*\1)/, "</li></ul>")
   end
 end
