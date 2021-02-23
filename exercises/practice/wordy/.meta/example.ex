@@ -8,10 +8,18 @@ defmodule Wordy do
     |> String.replace(["by", "?"], "")
     |> String.split()
     |> Enum.reduce([], fn
-      x, ["multiplied", n | t] -> [n * to_i(x), t]
-      x, ["divided", n | t] ->    [div(n, to_i(x)), t]
-      x, ["plus", n | t] ->       [n + to_i(x), t]
-      x, ["minus", n | t] ->      [n - to_i(x), t]
+      x, ["multiplied", n | t] ->
+        [n * to_i(x), t]
+
+      x, ["divided", n | t] ->
+        [div(n, to_i(x)), t]
+
+      x, ["plus", n | t] ->
+        [n + to_i(x), t]
+
+      x, ["minus", n | t] ->
+        [n - to_i(x), t]
+
       x, acc ->
         case Integer.parse(x) do
           {n, ""} -> [n | acc]
