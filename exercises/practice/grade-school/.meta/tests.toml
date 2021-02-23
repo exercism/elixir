@@ -3,6 +3,9 @@
 # Adding a student adds them to the sorted roster
 "6d0a30e4-1b4e-472e-8e20-c41702125667" = true
 
+# A student can't be in two different grades
+"c125dab7-2a53-492f-a99a-56ad511940d8" = true
+
 # Adding more student adds them to the sorted roster
 "233be705-dd58-4968-889d-fb3c7954c9cc" = true
 
