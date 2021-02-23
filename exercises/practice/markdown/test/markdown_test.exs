@@ -78,7 +78,7 @@ defmodule MarkdownTest do
   # @tag :pending
   test "with markdown symbols in the list item text that should not be interpreted" do
     input = "* Item 1 with a # in the text\n* Item 2 with * in the text"
-    expected = "* Item 1 with a # in the text\n* Item 2 with * in the text"
+    expected = "<ul><li>Item 1 with a # in the text</li><li>Item 2 with * in the text</li></ul>"
 
     assert Markdown.parse(input) == expected
   end
