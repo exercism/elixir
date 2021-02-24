@@ -2,27 +2,25 @@ defmodule PalindromeProducts do
   @doc """
   Generates all palindrome products from an optionally given min factor (or 1) to a given max factor.
   """
-  @spec generate(non_neg_integer) :: map
   @spec generate(non_neg_integer, non_neg_integer) :: map
   def generate(max_factor, min_factor \\ 1)
-  def generate(max_factor, min_factor) when max_factor < min_factor do
-    raise ArgumentError
-  end
+  def generate(max_factor, min_factor) when min_factor > max_factor, do: raise(ArgumentError)
 
   def generate(max_factor, min_factor) do
-    Enum.reduce(min_factor..max_factor, %{}, fn x, map ->
-      Enum.reduce(x..max_factor, map, fn y, products ->
-        if palindrome?(x * y), do: add_factor(products, x, y), else: products
-      end)
-    end)
+    palindromes(max_factor, min_factor)
+    |> Enum.reverse()
+    |> Enum.group_by(fn [f1, f2] -> f1 * f2 end)
   end
 
-  defp palindrome?(number) do
-    String.reverse(to_string(number)) == to_string(number)
+  defp palindromes(max_factor, min_factor) do
+    for f1 <- min_factor..max_factor,
+        f2 <- f1..max_factor,
+        palindrome?(f1 * f2),
+        do: [f1, f2]
   end
 
-  defp add_factor(map, x, y) do
-    product = x * y
-    Map.update(map, product, [[x, y]], fn val -> Enum.concat(val, [[x, y]]) end)
+  defp palindrome?(n) do
+    list = Integer.digits(n)
+    list == Enum.reverse(list)
   end
 end
