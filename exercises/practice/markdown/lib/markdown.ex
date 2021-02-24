@@ -70,10 +70,9 @@ defmodule Markdown do
   end
 
   defp patch(l) do
-    String.replace_suffix(
-      String.replace(l, "<li>", "<ul>" <> "<li>", global: false),
-      "</li>",
-      "</li>" <> "</ul>"
-    )
+    String.replace(l, "<li>", "<ul>" <> "<li>", global: false)
+    |> String.reverse()
+    |> String.replace(String.reverse("</li>"), String.reverse("</li></ul>"), global: false)
+    |> String.reverse()
   end
 end
