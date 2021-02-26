@@ -1,28 +1,39 @@
-[canonical-tests]
+# This is an auto-generated file. Regular comments will be removed when this
+# file is regenerated. Regenerating will not touch any manually added keys,
+# so comments can be added in a "comment" key.
 
-# empty strands
-"f6dcb64f-03b0-4b60-81b1-3c9dbf47e887" = true
+[f6dcb64f-03b0-4b60-81b1-3c9dbf47e887]
+description = "empty strands"
+include = true
 
-# single letter identical strands
-"54681314-eee2-439a-9db0-b0636c656156" = true
+[54681314-eee2-439a-9db0-b0636c656156]
+description = "single letter identical strands"
+include = true
 
-# single letter different strands
-"294479a3-a4c8-478f-8d63-6209815a827b" = true
+[294479a3-a4c8-478f-8d63-6209815a827b]
+description = "single letter different strands"
+include = true
 
-# long identical strands
-"9aed5f34-5693-4344-9b31-40c692fb5592" = true
+[9aed5f34-5693-4344-9b31-40c692fb5592]
+description = "long identical strands"
+include = true
 
-# long different strands
-"cd2273a5-c576-46c8-a52b-dee251c3e6e5" = true
+[cd2273a5-c576-46c8-a52b-dee251c3e6e5]
+description = "long different strands"
+include = true
 
-# disallow first strand longer
-"b9228bb1-465f-4141-b40f-1f99812de5a8" = true
+[b9228bb1-465f-4141-b40f-1f99812de5a8]
+description = "disallow first strand longer"
+include = true
 
-# disallow second strand longer
-"dab38838-26bb-4fff-acbe-3b0a9bfeba2d" = true
+[dab38838-26bb-4fff-acbe-3b0a9bfeba2d]
+description = "disallow second strand longer"
+include = true
 
-# disallow empty first strand
-"b764d47c-83ff-4de2-ab10-6cfe4b15c0f3" = true
+[b764d47c-83ff-4de2-ab10-6cfe4b15c0f3]
+description = "disallow empty first strand"
+include = true
 
-# disallow empty second strand
-"9ab9262f-3521-4191-81f5-0ed184a5aa89" = true
+[9ab9262f-3521-4191-81f5-0ed184a5aa89]
+description = "disallow empty second strand"
+include = true
