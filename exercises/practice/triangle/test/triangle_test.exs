@@ -12,6 +12,11 @@ defmodule TriangleTest do
   end
 
   @tag :pending
+  test "equilateral triangles can have float sides" do
+    assert Triangle.kind(0.5, 0.5, 0.5) == {:ok, :equilateral}
+  end
+
+  @tag :pending
   test "isosceles triangles have last two sides equal" do
     assert Triangle.kind(3, 4, 4) == {:ok, :isosceles}
   end
@@ -32,6 +37,11 @@ defmodule TriangleTest do
   end
 
   @tag :pending
+  test "isosceles triangles can have float sides" do
+    assert Triangle.kind(0.5, 0.4, 0.5) == {:ok, :isosceles}
+  end
+
+  @tag :pending
   test "scalene triangles have no equal sides" do
     assert Triangle.kind(3, 4, 5) == {:ok, :scalene}
   end
@@ -47,7 +57,7 @@ defmodule TriangleTest do
   end
 
   @tag :pending
-  test "very small triangles are legal" do
+  test "scalene triangles can have float sides" do
     assert Triangle.kind(0.4, 0.6, 0.3) == {:ok, :scalene}
   end
 
@@ -62,12 +72,22 @@ defmodule TriangleTest do
   end
 
   @tag :pending
-  test "triangles violating triangle inequality are illegal" do
+  test "first triangle inequality violation" do
     assert Triangle.kind(1, 1, 3) == {:error, "side lengths violate triangle inequality"}
   end
 
   @tag :pending
-  test "triangles violating triangle inequality are illegal 3" do
+  test "second triangle inequality violation" do
+    assert Triangle.kind(1, 3, 1) == {:error, "side lengths violate triangle inequality"}
+  end
+
+  @tag :pending
+  test "third triangle inequality violation" do
+    assert Triangle.kind(3, 1, 1) == {:error, "side lengths violate triangle inequality"}
+  end
+
+  @tag :pending
+  test "another triangle inequality violation" do
     assert Triangle.kind(7, 3, 2) == {:error, "side lengths violate triangle inequality"}
   end
 end

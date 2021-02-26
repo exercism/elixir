@@ -8,11 +8,11 @@ include = true
 
 [33eb6f87-0498-4ccf-9573-7f8c3ce92b7b]
 description = "any side is unequal"
-include = true
+include = false
 
 [c6585b7d-a8c0-4ad8-8a34-e21d36f7ad87]
 description = "no sides are equal"
-include = true
+include = false
 
 [16e8ceb0-eadb-46d1-b892-c50327479251]
 description = "all zero sides is not a triangle"
@@ -36,11 +36,11 @@ include = true
 
 [8d71e185-2bd7-4841-b7e1-71689a5491d8]
 description = "equilateral triangles are also isosceles"
-include = true
+include = false
 
 [840ed5f8-366f-43c5-ac69-8f05e6f10bbb]
 description = "no sides are equal"
-include = true
+include = false
 
 [2eba0cfb-6c65-4c40-8146-30b608905eae]
 description = "first triangle inequality violation"
@@ -64,11 +64,11 @@ include = true
 
 [2510001f-b44d-4d18-9872-2303e7977dc1]
 description = "all sides are equal"
-include = true
+include = false
 
 [c6e15a92-90d9-4fb3-90a2-eef64f8d3e1e]
 description = "two sides are equal"
-include = true
+include = false
 
 [70ad5154-0033-48b7-af2c-b8d739cd9fdc]
 description = "may not violate triangle inequality"
