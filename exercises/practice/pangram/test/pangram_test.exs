@@ -7,6 +7,11 @@ defmodule PangramTest do
   end
 
   @tag :pending
+  test "prefect lower case" do
+    assert Pangram.pangram?("abcdefghijklmnopqrstuvwxyz")
+  end
+
+  @tag :pending
   test "pangram with only lower case" do
     assert Pangram.pangram?("the quick brown fox jumps over the lazy dog")
   end
@@ -19,6 +24,11 @@ defmodule PangramTest do
   @tag :pending
   test "another missing character 'x'" do
     refute Pangram.pangram?("the quick brown fish jumps over the lazy dog")
+  end
+
+  @tag :pending
+  test "missing character 'h'" do
+    refute Pangram.pangram?("five boxing wizards jump quickly at it")
   end
 
   @tag :pending
@@ -38,7 +48,13 @@ defmodule PangramTest do
 
   @tag :pending
   test "pangram with mixed case and punctuation" do
-    assert Pangram.pangram?("Five quacking Zephyrs jolt my wax bed.")
+    assert Pangram.pangram?("\"Five quacking Zephyrs jolt my wax bed.\"")
+  end
+
+  @tag :pending
+  test "case insensitive" do
+    assert Pangram.pangram?("the quick brown fox jumps over the lazy DOG")
+    refute Pangram.pangram?("the quick brown fox jumps over with lazy FX")
   end
 
   @tag :pending

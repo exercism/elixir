@@ -66,4 +66,36 @@ defmodule MarkdownTest do
 
     assert Markdown.parse(input) == expected
   end
+
+  # @tag :pending
+  test "with markdown symbols in the header text that should not be interpreted" do
+    input = "# This is a header with # and * in the text"
+    expected = "<h1>This is a header with # and * in the text</h1>"
+
+    assert Markdown.parse(input) == expected
+  end
+
+  # @tag :pending
+  test "with markdown symbols in the list item text that should not be interpreted" do
+    input = "* Item 1 with a # in the text\n* Item 2 with * in the text"
+    expected = "<ul><li>Item 1 with a # in the text</li><li>Item 2 with * in the text</li></ul>"
+
+    assert Markdown.parse(input) == expected
+  end
+
+  # @tag :pending
+  test "with markdown symbols in the paragraph text that should not be interpreted" do
+    input = "This is a paragraph with # and * in the text"
+    expected = "<p>This is a paragraph with # and * in the text</p>"
+
+    assert Markdown.parse(input) == expected
+  end
+
+  # @tag :pending
+  test "unordered lists close properly with preceding and following lines" do
+    input = "# Start a list\n* Item 1\n* Item 2\nEnd a list"
+    expected = "<h1>Start a list</h1><ul><li>Item 1</li><li>Item 2</li></ul><p>End a list</p>"
+
+    assert Markdown.parse(input) == expected
+  end
 end

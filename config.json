@@ -539,7 +539,7 @@
         "name": "Word Count",
         "uuid": "4a24ba2f-ae92-4095-be53-64bc881422ea",
         "prerequisites": [],
-        "difficulty": 2,
+        "difficulty": 3,
         "topics": [
           "lists",
           "maps",
@@ -595,7 +595,7 @@
         "name": "List Ops",
         "uuid": "86658a31-d401-401b-80df-2c4df35f9b15",
         "prerequisites": [],
-        "difficulty": 4,
+        "difficulty": 6,
         "topics": [
           "enumeration",
           "lists",
@@ -971,8 +971,22 @@
         "slug": "phone-number",
         "name": "Phone Number",
         "uuid": "e8b049b7-6648-412c-8a11-0c95a15e2641",
-        "prerequisites": [],
-        "difficulty": 3,
+        "prerequisites": [
+          "atoms",
+          "tuples",
+          "if",
+          "case",
+          "cond",
+          "charlists",
+          "enum",
+          "strings",
+          "regular-expressions",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "binaries"
+        ],
+        "practices": ["strings", "regular-expressions"],
+        "difficulty": 4,
         "topics": [
           "pattern_matching",
           "string_processing"

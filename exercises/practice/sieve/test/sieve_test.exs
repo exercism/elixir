@@ -2,8 +2,23 @@ defmodule SieveTest do
   use ExUnit.Case
 
   # @tag :pending
-  test "a few primes" do
+  test "no primes under two" do
+    assert Sieve.primes_to(1) == []
+  end
+
+  @tag :pending
+  test "find first prime" do
+    assert Sieve.primes_to(2) == [2]
+  end
+
+  @tag :pending
+  test "primes up to 10" do
     assert Sieve.primes_to(10) == [2, 3, 5, 7]
+  end
+
+  @tag :pending
+  test "limit is prime" do
+    assert Sieve.primes_to(13) == [2, 3, 5, 7, 11, 13]
   end
 
   @tag :pending

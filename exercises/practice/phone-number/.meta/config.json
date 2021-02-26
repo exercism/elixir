@@ -2,10 +2,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "lib/phone.ex"
+      "lib/phone_number.ex"
     ],
     "test": [
-      "test/phone_test.exs"
+      "test/phone_number_test.exs"
     ],
     "example": [
       ".meta/example.ex"

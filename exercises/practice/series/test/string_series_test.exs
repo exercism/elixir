@@ -2,12 +2,32 @@ defmodule StringSeriesTest do
   use ExUnit.Case
 
   # @tag :pending
-  test "slices of size 1" do
+  test "slices of size 1 from one" do
+    assert StringSeries.slices("1", 1) == ["1"]
+  end
+
+  @tag :pending
+  test "slices of size 1 from two" do
+    assert StringSeries.slices("12", 1) == ["1", "2"]
+  end
+
+  @tag :pending
+  test "slices of size 1 from more" do
     assert StringSeries.slices("01234", 1) == ["0", "1", "2", "3", "4"]
   end
 
   @tag :pending
   test "slices of size 2" do
+    assert StringSeries.slices("35", 2) == ["35"]
+  end
+
+  @tag :pending
+  test "slices of size 2 overlap" do
+    assert StringSeries.slices("9142", 2) == ["91", "14", "42"]
+  end
+
+  @tag :pending
+  test "slices of size 2 from more" do
     assert StringSeries.slices("01234", 2) == ["01", "12", "23", "34"]
   end
 
@@ -19,6 +39,25 @@ defmodule StringSeriesTest do
   @tag :pending
   test "slices of size 4" do
     assert StringSeries.slices("01234", 4) == ["0123", "1234"]
+  end
+
+  @tag :pending
+  test "slices include duplicates" do
+    assert StringSeries.slices("777777", 3) == ["777", "777", "777", "777"]
+  end
+
+  @tag :pending
+  test "slices of a long series" do
+    assert StringSeries.slices("918493904243", 5) == [
+             "91849",
+             "18493",
+             "84939",
+             "49390",
+             "93904",
+             "39042",
+             "90424",
+             "04243"
+           ]
   end
 
   @tag :pending

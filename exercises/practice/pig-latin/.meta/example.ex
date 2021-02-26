@@ -1,17 +1,24 @@
 defmodule PigLatin do
+  @vowels "aeiou"
+
+  @prefixes_not_to_be_moved [
+    ~r/^[#{@vowels}]+/,
+    ~r/^x[^#{@vowels}]/,
+    ~r/^y[^#{@vowels}]/
+  ]
+
+  @prefixes_to_be_moved [
+    ~r/^(squ)/,
+    ~r/^(qu)/,
+    ~r/^(thr)/,
+    ~r/^(th)/,
+    ~r/^(sch)/,
+    ~r/^(ch)/,
+    ~r/^([^#{@vowels}]+)[#{@vowels}y]/
+  ]
+
   @doc """
   Given a `phrase`, translate it a word at a time to Pig Latin.
-
-  Words beginning with consonants should have the consonant moved to the end of
-  the word, followed by "ay".
-
-  Words beginning with vowels (aeiou) should have "ay" added to the end of the
-  word.
-
-  Some groups of letters are treated like consonants, including "ch", "qu",
-  "squ", "th", "thr", and "sch".
-
-  Some groups are treated like vowels, including "yt" and "xr".
   """
   @spec translate(phrase :: String.t()) :: String.t()
   def translate(phrase) do
@@ -22,21 +29,31 @@ defmodule PigLatin do
   end
 
   defp translate_word(word) do
-    word
-    |> consonant_prefix_and_rest
-    |> case do
-      ["", _] -> word <> "ay"
-      [consonant_prefix, rest] -> rest <> consonant_prefix <> "ay"
-      _ -> word
-    end
+    word =
+      if prefix_should_be_moved?(word) do
+        prefix = find_prefix_to_be_moved(word)
+        move_prefix_to_the_end(word, prefix)
+      else
+        word
+      end
+
+    word <> "ay"
   end
 
-  defp consonant_prefix_and_rest(word) do
-    if Regex.match?(~r/^[yx][bcdfghjklmnpqrstvwxy]+/, word) do
-      ["", word]
-    else
-      ~r/^(s?qu|(?:[^aeiou]*))?([aeiou].*)$/
-      |> Regex.run(word, capture: :all_but_first)
-    end
+  defp prefix_should_be_moved?(word) do
+    !Enum.any?(@prefixes_not_to_be_moved, &Regex.match?(&1, word))
+  end
+
+  defp find_prefix_to_be_moved(word) do
+    Enum.find_value(@prefixes_to_be_moved, fn regex ->
+      case Regex.run(regex, word) do
+        nil -> nil
+        [_, match] -> match
+      end
+    end)
+  end
+
+  defp move_prefix_to_the_end(string, prefix) do
+    String.slice(string, String.length(prefix)..-1) <> prefix
   end
 end

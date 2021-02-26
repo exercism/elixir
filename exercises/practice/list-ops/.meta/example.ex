@@ -5,11 +5,11 @@ defmodule ListOps do
   # for adding numbers), but please do not use Kernel functions for Lists like
   # `++`, `--`, `hd`, `tl`, `in`, and `length`.
 
-  @spec count(list) :: non_neg_integer
-  def count(l), do: do_count(l, 0)
+  @spec length(list) :: non_neg_integer
+  def length(l), do: do_length(l, 0)
 
-  defp do_count([], acc), do: acc
-  defp do_count([_ | t], acc), do: do_count(t, acc + 1)
+  defp do_length([], acc), do: acc
+  defp do_length([_ | t], acc), do: do_length(t, acc + 1)
 
   @spec reverse(list) :: list
   def reverse(l), do: do_reverse(l, [])
@@ -37,9 +37,13 @@ defmodule ListOps do
   end
 
   @type acc :: any
-  @spec reduce(list, acc, (any, acc -> acc)) :: acc
-  def reduce([], acc, _), do: acc
-  def reduce([h | t], acc, f), do: reduce(t, f.(h, acc), f)
+  @spec foldl(list, acc, (any, acc -> acc)) :: acc
+  def foldl([], acc, _), do: acc
+  def foldl([h | t], acc, f), do: foldl(t, f.(h, acc), f)
+
+  @spec foldr(list, acc, (any, acc -> acc)) :: acc
+  def foldr([], acc, _), do: acc
+  def foldr([h | t], acc, f), do: f.(h, foldr(t, acc, f))
 
   @spec append(list, list) :: list
   def append(a, b), do: do_append(reverse(a), b)
@@ -48,5 +52,5 @@ defmodule ListOps do
   defp do_append([h | t], b), do: do_append(t, [h | b])
 
   @spec concat([[any]]) :: [any]
-  def concat(ll), do: reverse(ll) |> reduce([], &append(&1, &2))
+  def concat(ll), do: reverse(ll) |> foldl([], &append(&1, &2))
 end

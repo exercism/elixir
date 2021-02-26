@@ -27,6 +27,11 @@ defmodule RaindropsTest do
   end
 
   @tag :pending
+  test "8" do
+    assert Raindrops.convert(8) == "8"
+  end
+
+  @tag :pending
   test "9" do
     assert Raindrops.convert(9) == "Pling"
   end
