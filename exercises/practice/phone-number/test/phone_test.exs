@@ -1,102 +1,98 @@
-defmodule PhoneTest do
+defmodule PhoneNumberTest do
   use ExUnit.Case
 
-  test "cleans number" do
-    assert Phone.number("(212) 555-0100") == "2125550100"
-  end
+  describe "number" do
+    test "cleans number" do
+      assert PhoneNumber.clean("(223) 456-7890") == {:ok, "2234567890"}
+    end
 
-  @tag :pending
-  test "cleans number with dots" do
-    assert Phone.number("212.555.0100") == "2125550100"
-  end
+    @tag :pending
+    test "cleans number with dots" do
+      assert PhoneNumber.clean("223.456.7890") == {:ok, "2234567890"}
+    end
 
-  @tag :pending
-  test "valid when 11 digits and first is 1" do
-    assert Phone.number("12125550100") == "2125550100"
-  end
+    @tag :pending
+    test "cleans numbers with multiple spaces" do
+      assert PhoneNumber.clean("223 456   7890   ") == {:ok, "2234567890"}
+    end
 
-  @tag :pending
-  test "valid when 11 digits and some decorations" do
-    assert Phone.number("+1 (212) 555-0100") == "2125550100"
-  end
+    @tag :pending
+    test "invalid when 9 digits" do
+      assert PhoneNumber.clean("212555010") == {:error, "incorrect number of digits"}
+    end
 
-  @tag :pending
-  test "invalid when country calling code is not 1" do
-    assert Phone.number("22125550100") == "0000000000"
-  end
+    @tag :pending
+    test "invalid when 11 digits does not start with a 1" do
+      assert PhoneNumber.clean("22234567890") == {:error, "11 digits must start with 1"}
+    end
 
-  @tag :pending
-  test "invalid when 9 digits" do
-    assert Phone.number("212555010") == "0000000000"
-  end
+    @tag :pending
+    test "valid when 11 digits and first is 1" do
+      assert PhoneNumber.clean("12234567890") == {:ok, "2234567890"}
+    end
 
-  @tag :pending
-  test "invalid when proper number of digits but letters mixed in" do
-    assert Phone.number("2a1a2a5a5a5a0a1a0a0a") == "0000000000"
-  end
+    @tag :pending
+    test "valid when 11 digits and starting with 1 even with punctuation" do
+      assert PhoneNumber.clean("+1 (223) 456-7890") == {:ok, "2234567890"}
+    end
 
-  @tag :pending
-  test "invalid with correct number of characters but some are letters" do
-    assert Phone.number("2a1a2a5a5a") == "0000000000"
-  end
+    @tag :pending
+    test "invalid when more than 11 digits" do
+      assert PhoneNumber.clean("321234567890") == {:error, "incorrect number of digits"}
+    end
 
-  @tag :pending
-  test "invalid when area code begins with 1" do
-    assert Phone.number("1125550100") == "0000000000"
-  end
+    @tag :pending
+    test "invalid with letters" do
+      assert PhoneNumber.clean("123-abc-7890") == {:error, "must contain digits only"}
+    end
 
-  @tag :pending
-  test "invalid when area code begins with 0" do
-    assert Phone.number("0125550100") == "0000000000"
-  end
+    @tag :pending
+    test "invalid with punctuation other than separators" do
+      assert PhoneNumber.clean("123-@:!-7890") == {:error, "must contain digits only"}
+    end
 
-  @tag :pending
-  test "invalid when exchange code begins with 1" do
-    assert Phone.number("2121550100") == "0000000000"
-  end
+    @tag :pending
+    test "invalid if area code starts with 0" do
+      assert PhoneNumber.clean("(023) 456-7890") == {:error, "area code cannot start with zero"}
+    end
 
-  @tag :pending
-  test "invalid when exchange code begins with 0" do
-    assert Phone.number("2120550100") == "0000000000"
-  end
+    @tag :pending
+    test "invalid if area code starts with 1" do
+      assert PhoneNumber.clean("(123) 456-7890") == {:error, "area code cannot start with one"}
+    end
 
-  @tag :pending
-  test "area code" do
-    assert Phone.area_code("2125550100") == "212"
-  end
+    @tag :pending
+    test "invalid if exchange code starts with 0" do
+      assert PhoneNumber.clean("(223) 056-7890") ==
+               {:error, "exchange code cannot start with zero"}
+    end
 
-  @tag :pending
-  test "area code with full US phone number" do
-    assert Phone.area_code("12125550100") == "212"
-  end
+    @tag :pending
+    test "invalid if exchange code starts with 1" do
+      assert PhoneNumber.clean("(223) 156-7890") ==
+               {:error, "exchange code cannot start with one"}
+    end
 
-  @tag :pending
-  test "invalid area code" do
-    assert Phone.area_code("(100) 555-1234") == "000"
-  end
+    @tag :pending
+    test "invalid if area code starts with 0 on valid 11-digit number" do
+      assert PhoneNumber.clean("1 (023) 456-7890") == {:error, "area code cannot start with zero"}
+    end
 
-  @tag :pending
-  test "no area code" do
-    assert Phone.area_code("867.5309") == "000"
-  end
+    @tag :pending
+    test "invalid if area code starts with 1 on valid 11-digit number" do
+      assert PhoneNumber.clean("1 (123) 456-7890") == {:error, "area code cannot start with one"}
+    end
 
-  @tag :pending
-  test "pretty print" do
-    assert Phone.pretty("2125550100") == "(212) 555-0100"
-  end
+    @tag :pending
+    test "invalid if exchange code starts with 0 on valid 11-digit number" do
+      assert PhoneNumber.clean("1 (223) 056-7890") ==
+               {:error, "exchange code cannot start with zero"}
+    end
 
-  @tag :pending
-  test "pretty print with full US phone number" do
-    assert Phone.pretty("+1 (303) 555-1212") == "(303) 555-1212"
-  end
-
-  @tag :pending
-  test "pretty print invalid US phone number" do
-    assert Phone.pretty("212-155-0100") == "(000) 000-0000"
-  end
-
-  @tag :pending
-  test "pretty print invalid, short US phone number" do
-    assert Phone.pretty("867.5309") == "(000) 000-0000"
+    @tag :pending
+    test "invalid if exchange code starts with 1 on valid 11-digit number" do
+      assert PhoneNumber.clean("1 (223) 156-7890") ==
+               {:error, "exchange code cannot start with one"}
+    end
   end
 end

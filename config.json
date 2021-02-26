@@ -384,7 +384,7 @@
           "pipe-operator"
         ],
         "practices": ["strings", "regular-expressions", "pipe-operator"],
-        "difficulty": 2,
+        "difficulty": 3,
         "topics": ["lists", "maps", "reduce"]
       },
       {
@@ -466,7 +466,7 @@
           "pattern-matching"
         ],
         "practices": ["lists", "recursion", "tail-call-recursion"],
-        "difficulty": 4,
+        "difficulty": 6,
         "topics": ["enumeration", "lists", "recursion"]
       },
       {
@@ -986,6 +986,13 @@
         "name": "Phone Number",
         "uuid": "e8b049b7-6648-412c-8a11-0c95a15e2641",
         "prerequisites": [
+          "atoms",
+          "tuples",
+          "if",
+          "case",
+          "cond",
+          "charlists",
+          "enum",
           "strings",
           "regular-expressions",
           "multiple-clause-functions",
@@ -993,8 +1000,11 @@
           "binaries"
         ],
         "practices": ["strings", "regular-expressions"],
-        "difficulty": 3,
-        "topics": ["pattern_matching", "string_processing"]
+        "difficulty": 4,
+        "topics": [
+          "pattern_matching",
+          "string_processing"
+        ]
       },
       {
         "slug": "say",

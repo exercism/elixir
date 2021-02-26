@@ -19,13 +19,13 @@
 "bd5b085e-f612-4f81-97a8-6314258278b0" = true
 
 # slice length is too large
-"6d235d85-46cf-4fae-9955-14b6efef27cd" = true
+"6d235d85-46cf-4fae-9955-14b6efef27cd" = false
 
 # slice length cannot be zero
-"d34004ad-8765-4c09-8ba1-ada8ce776806" = true
+"d34004ad-8765-4c09-8ba1-ada8ce776806" = false
 
 # slice length cannot be negative
-"10ab822d-8410-470a-a85d-23fbeb549e54" = true
+"10ab822d-8410-470a-a85d-23fbeb549e54" = false
 
 # empty series is invalid
-"c7ed0812-0e4b-4bf3-99c4-28cbbfc246a2" = true
+"c7ed0812-0e4b-4bf3-99c4-28cbbfc246a2" = false

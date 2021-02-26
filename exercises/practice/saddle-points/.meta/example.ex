@@ -6,13 +6,13 @@ defmodule SaddlePoints do
   @spec rows(String.t()) :: [[integer]]
   def rows(str) do
     str
-    |> String.split("\n")
+    |> String.split("\n", trim: true)
     |> Enum.map(&parse_row/1)
   end
 
   defp parse_row(str) do
     str
-    |> String.split(" ")
+    |> String.split(" ", trim: true)
     |> Enum.map(&String.to_integer/1)
   end
 
@@ -40,6 +40,7 @@ defmodule SaddlePoints do
     rows
     |> generate_coordinates
     |> Enum.filter(&is_saddle_point?(&1, rows, columns))
+    |> Enum.map(fn {x, y} -> {x + 1, y + 1} end)
   end
 
   defp is_saddle_point?(point, rows, columns) do

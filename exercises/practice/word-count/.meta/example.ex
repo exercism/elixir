@@ -1,23 +1,34 @@
 defmodule WordCount do
-  @ascii_punctuation ~r/!|"|\#|\$|%|&|'|\(|\)|\*|\+|,|\.|\/|:|;|<|=|>|\?|@|\[|\\|]|\^|_|`|\{|\||}|~/
+  @doc """
+  Count the number of words in the sentence.
 
+  Words are compared case-insensitively.
+  """
+  @spec count(String.t()) :: map
   def count(sentence) do
     sentence
+    |> normalize()
+    |> split
+    |> frequencies()
+  end
+
+  defp normalize(string) do
+    string
     |> String.downcase()
-    |> remove_punctuation
-    |> to_words
-    |> summarize
+    |> String.replace("_", " ", global: true)
   end
 
-  defp remove_punctuation(string), do: String.replace(string, @ascii_punctuation, " ")
-
-  defp to_words(sentence), do: List.flatten(String.split(sentence))
-
-  defp summarize(words) do
-    Enum.reduce(words, %{}, &add_count/2)
+  defp split(string) do
+    ~r/\b[\w'-]+\b/u
+    |> Regex.scan(string)
+    |> List.flatten()
   end
 
-  defp add_count(word, counts) do
-    Map.update(counts, word, 1, &(&1 + 1))
+  defp frequencies(strings) do
+    # Enum.frequencies is only available from Elixir 1.10
+    strings
+    |> Enum.reduce(%{}, fn word, count ->
+      Map.update(count, word, 1, &(&1 + 1))
+    end)
   end
 end

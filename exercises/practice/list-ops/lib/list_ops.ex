@@ -5,8 +5,8 @@ defmodule ListOps do
   # for adding numbers), but please do not use Kernel functions for Lists like
   # `++`, `--`, `hd`, `tl`, `in`, and `length`.
 
-  @spec count(list) :: non_neg_integer
-  def count(l) do
+  @spec length(list) :: non_neg_integer
+  def length(l) do
   end
 
   @spec reverse(list) :: list
@@ -22,8 +22,13 @@ defmodule ListOps do
   end
 
   @type acc :: any
-  @spec reduce(list, acc, (any, acc -> acc)) :: acc
-  def reduce(l, acc, f) do
+  @spec foldl(list, acc, (any, acc -> acc)) :: acc
+  def foldl(l, acc, f) do
+  end
+
+  @type acc :: any
+  @spec foldr(list, acc, (any, acc -> acc)) :: acc
+  def foldr(l, acc, f) do
   end
 
   @spec append(list, list) :: list
