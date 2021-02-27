@@ -16,6 +16,6 @@
     "test": ["test/guessing_game_test.exs"],
     "exemplar": [".meta/exemplar.ex"]
   },
-  "forked_from": ["fsharp/pattern-matching"],
+  "forked_from": ["fsharp/guessing-game"],
   "language_versions": ">=1.10"
 }
