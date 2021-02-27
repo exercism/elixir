@@ -6,6 +6,10 @@
 description = "Adding a student adds them to the sorted roster"
 include = true
 
+[c125dab7-2a53-492f-a99a-56ad511940d8]
+description = "A student can't be in two different grades"
+include = true
+
 [233be705-dd58-4968-889d-fb3c7954c9cc]
 description = "Adding more student adds them to the sorted roster"
 include = true
