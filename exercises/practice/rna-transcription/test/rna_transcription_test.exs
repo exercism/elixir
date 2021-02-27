@@ -2,6 +2,11 @@ defmodule RnaTranscriptionTest do
   use ExUnit.Case
 
   # @tag :pending
+  test "empty RNA sequence" do
+    assert RnaTranscription.to_rna('') == ''
+  end
+
+  @tag :pending
   test "transcribes guanine to cytosine" do
     assert RnaTranscription.to_rna('G') == 'C'
   end
