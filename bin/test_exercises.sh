@@ -73,6 +73,13 @@ do
 
     if [ "$compile_exit_code" -eq 0 ]
     then
+      # turn on doctests
+      test_file=`find . -name \*_test.exs`
+      module_name=`cat $test_file | sed -rn 's/^defmodule (.*)Test do$/\1 /p'`
+      doctest_code="doctest ${module_name}"
+
+      sed -I "" 's/use ExUnit.Case\(.*\)/use ExUnit.Case\1\n'" ${doctest_code}"'\n/g' $test_file
+
       # perform unit tests
       test_results=$(mix test --color --no-elixir-version-check --include pending 2> /dev/null)
       test_exit_code="$?"
