@@ -1,23 +1,29 @@
 defmodule SublistTest do
   use ExUnit.Case
 
+  # @tag :pending
   test "empty equals empty" do
     assert Sublist.compare([], []) == :equal
   end
 
   @tag :pending
-  test "empty is a sublist of anything" do
-    assert Sublist.compare([], [nil]) == :sublist
+  test "empty list within non empty list" do
+    assert Sublist.compare([], [1, 2, 3]) == :sublist
   end
 
   @tag :pending
-  test "anything is a superlist of empty" do
-    assert Sublist.compare([nil], []) == :superlist
+  test "non empty list contains empty list" do
+    assert Sublist.compare([1, 2, 3], []) == :superlist
   end
 
   @tag :pending
-  test "1 is not 2" do
-    assert Sublist.compare([1], [2]) == :unequal
+  test "list equals itself" do
+    assert Sublist.compare([1, 2, 3], [1, 2, 3]) == :equal
+  end
+
+  @tag :pending
+  test "different lists" do
+    assert Sublist.compare([1, 2, 3], [2, 3, 4]) == :unequal
   end
 
   @tag :pending
@@ -27,22 +33,32 @@ defmodule SublistTest do
   end
 
   @tag :pending
-  test "sublist at start" do
-    assert Sublist.compare([1, 2, 3], [1, 2, 3, 4, 5]) == :sublist
+  test "false start" do
+    assert Sublist.compare([1, 2, 5], [0, 1, 2, 3, 1, 2, 5, 6]) == :sublist
   end
 
   @tag :pending
-  test "sublist in middle" do
-    assert Sublist.compare([4, 3, 2], [5, 4, 3, 2, 1]) == :sublist
+  test "consecutive" do
+    assert Sublist.compare([1, 1, 2], [0, 1, 1, 1, 2, 1, 2]) == :sublist
   end
 
   @tag :pending
-  test "sublist at end" do
-    assert Sublist.compare([3, 4, 5], [1, 2, 3, 4, 5]) == :sublist
+  test "sublists at start" do
+    assert Sublist.compare([0, 1, 2], [0, 1, 2, 3, 4, 5]) == :sublist
   end
 
   @tag :pending
-  test "partially matching sublist at start" do
+  test "sublists in middle" do
+    assert Sublist.compare([2, 3, 4], [0, 1, 2, 3, 4, 5]) == :sublist
+  end
+
+  @tag :pending
+  test "sublists at end" do
+    assert Sublist.compare([3, 4, 5], [0, 1, 2, 3, 4, 5]) == :sublist
+  end
+
+  @tag :pending
+  test "partially matching sublist at end" do
     assert Sublist.compare([1, 1, 2], [1, 1, 1, 2]) == :sublist
   end
 
@@ -57,33 +73,48 @@ defmodule SublistTest do
   end
 
   @tag :pending
-  test "superlist at start" do
-    assert Sublist.compare([1, 2, 3, 4, 5], [1, 2, 3]) == :superlist
+  test "at start of superlist" do
+    assert Sublist.compare([0, 1, 2, 3, 4, 5], [0, 1, 2]) == :superlist
   end
 
   @tag :pending
-  test "superlist in middle" do
-    assert Sublist.compare([5, 4, 3, 2, 1], [4, 3, 2]) == :superlist
+  test "in middle of superlist" do
+    assert Sublist.compare([0, 1, 2, 3, 4, 5], [2, 3]) == :superlist
   end
 
   @tag :pending
-  test "superlist at end" do
-    assert Sublist.compare([1, 2, 3, 4, 5], [3, 4, 5]) == :superlist
+  test "at end of superlist" do
+    assert Sublist.compare([0, 1, 2, 3, 4, 5], [3, 4, 5]) == :superlist
   end
 
   @tag :pending
-  test "1 and 2 does not contain 3" do
-    assert Sublist.compare([1, 2], [3]) == :unequal
-  end
-
-  @tag :pending
-  test "partially matching superlist at start" do
+  test "at end of partially matching superlist" do
     assert Sublist.compare([1, 1, 1, 2], [1, 1, 2]) == :superlist
   end
 
   @tag :pending
   test "superlist early in huge list" do
     assert Sublist.compare(Enum.to_list(1..1_000_000), [3, 4, 5]) == :superlist
+  end
+
+  @tag :pending
+  test "first list missing element from second list" do
+    assert Sublist.compare([1, 3], [1, 2, 3]) == :unequal
+  end
+
+  @tag :pending
+  test "second list missing element from first list" do
+    assert Sublist.compare([1, 2, 3], [1, 3]) == :unequal
+  end
+
+  @tag :pending
+  test "order matters to a list" do
+    assert Sublist.compare([1, 2, 3], [3, 2, 1]) == :unequal
+  end
+
+  @tag :pending
+  test "same digits but different numbers" do
+    assert Sublist.compare([1, 0, 1], [10, 1]) == :unequal
   end
 
   @tag :pending
