@@ -36,7 +36,14 @@ defmodule Triplet do
             do: [x, y, z]
       end)
     end)
-    |> Task.await_many()
+    |> await()
     |> Enum.reduce([], fn list, acc -> list ++ acc end)
+  end
+
+  # available in Elixir 1.11
+  if {:await_many, 1} in Task.__info__(:functions) do
+    defp await(tasks), do: Task.await_many(tasks)
+  else
+    defp await(tasks), do: Enum.map(tasks, &Task.await(&1))
   end
 end
