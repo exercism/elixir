@@ -1535,7 +1535,12 @@
         "slug": "pythagorean-triplet",
         "name": "Pythagorean Triplet",
         "uuid": "087a2a3b-71e2-4473-ab2f-3be5240567b5",
-        "prerequisites": [],
+        "prerequisites": [
+          "task"
+        ],
+        "practices": [
+          "task"
+        ],
         "difficulty": 5,
         "topics": [
           "algorithms",

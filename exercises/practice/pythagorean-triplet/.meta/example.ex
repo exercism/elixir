@@ -28,10 +28,15 @@ defmodule Triplet do
   """
   @spec generate(non_neg_integer) :: [list(non_neg_integer)]
   def generate(sum) do
-    for x <- Enum.to_list(1..sum),
-        y <- if((sum - 2 * x) > x, do: Enum.to_list(x..(sum - 2 * x)), else: []),
-        z <- if((sum - x - y) != 0, do: [sum - x - y], else: []),
-        pythagorean?([x, y, z]),
-        do: [x, y, z]
+    Enum.map(sum..1, fn x ->
+      Task.async(fn ->
+        for y <- if(sum - 2 * x > x, do: Enum.to_list(x..(sum - 2 * x)), else: []),
+            z <- if(sum - x - y != 0, do: [sum - x - y], else: []),
+            pythagorean?([x, y, z]),
+            do: [x, y, z]
+      end)
+    end)
+    |> Task.await_many()
+    |> Enum.reduce([], fn list, acc -> list ++ acc end)
   end
 end
