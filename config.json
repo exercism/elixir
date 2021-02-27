@@ -138,7 +138,8 @@
         "name": "High School Sweetheart",
         "uuid": "335df1cf-6aba-4ab6-b5c3-b4305ade09a4",
         "concepts": [
-          "strings"
+          "strings",
+          "pipe-operator"
         ],
         "prerequisites": [
           "lists",
@@ -366,8 +367,7 @@
         "name": "Mensch Ärgere Dich Nicht",
         "uuid": "3e2f8bc6-20b4-4e8f-a658-9c270342208e",
         "concepts": [
-          "streams",
-          "pipe-operator"
+          "streams"
         ],
         "prerequisites": [
           "enum",
