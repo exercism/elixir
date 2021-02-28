@@ -78,7 +78,7 @@ do
       module_name=`cat $test_file | sed -rn 's/^defmodule (.*)Test do$/\1 /p'`
       doctest_code="doctest ${module_name}"
 
-      sed -I "" 's/use ExUnit.Case\(.*\)/use ExUnit.Case\1\n'" ${doctest_code}"'\n/g' $test_file
+      sed -i "" 's/use ExUnit.Case\(.*\)/use ExUnit.Case\1\n'" ${doctest_code}"'\n/g' $test_file
 
       # perform unit tests
       test_results=$(mix test --color --no-elixir-version-check --include pending 2> /dev/null)
