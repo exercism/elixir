@@ -30,7 +30,7 @@ defmodule Triplet do
   def generate(sum) do
     Enum.map(sum..1, fn x ->
       Task.async(fn ->
-        for y <- if(sum - 2 * x > x, do: Enum.to_list(x..(sum - 2 * x)), else: []),
+        for y <- if(sum - 2 * x > x, do: x..(sum - 2 * x), else: []),
             z <- if(sum - x - y != 0, do: [sum - x - y], else: []),
             pythagorean?([x, y, z]),
             do: [x, y, z]
