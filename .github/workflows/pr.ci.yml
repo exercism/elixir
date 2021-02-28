@@ -53,13 +53,8 @@ jobs:
           mkdir -p priv/plts
           mix dialyzer --plt
 
-        # Replace <code-extensions> with file extensions that should trigger this check. Replace with .* to allow anything.
-      - name: Run exercism/elixir ci pre-check (stub files, config integrity) for changed exercises
-        run: |
-          PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
-          curl --url $"${PULL_REQUEST_URL}/files" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
-            jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(ex|exs|md|json)$")) | .filename' | \
-            xargs -r bin/pr-check.sh
+      - name: Run exercism/elixir ci pre-check (stub files, config integrity)
+        run: bin/pr-check.sh
 
   ci:
     runs-on: ubuntu-latest
@@ -102,10 +97,5 @@ jobs:
       - name: Build Project
         run: mix
 
-        # Replace <code-extensions> with file extensions that should trigger running tests. Replace with .* to allow anything.
-      - name: Run exercism/elixir ci (runs tests) for changed/added exercises
-        run: |
-          PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
-          curl --url $"${PULL_REQUEST_URL}/files" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
-            jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(ex|exs|md|json)$")) | .filename' | \
-            xargs -r bin/pr.sh
+      - name: Run exercism/elixir ci (runs tests)
+        run: bin/pr.sh

@@ -1,4 +1,4 @@
-defmodule DifferenceOfSquaresTest do
+defmodule SquaresTest do
   use ExUnit.Case
 
   describe "square_of_sum" do

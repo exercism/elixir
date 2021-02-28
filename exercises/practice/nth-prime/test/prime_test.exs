@@ -1,4 +1,4 @@
-defmodule NthPrimeTest do
+defmodule PrimeTest do
   use ExUnit.Case
 
   # @tag :pending

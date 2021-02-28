@@ -6,13 +6,13 @@ defmodule BinarySearch do
 
     ## Examples
 
-      iex> BinarySearch.search([], 2)
+      iex> BinarySearch.search({}, 2)
       :not_found
 
-      iex> BinarySearch.search([1, 3, 5], 2)
+      iex> BinarySearch.search({1, 3, 5}, 2)
       :not_found
 
-      iex> BinarySearch.search([1, 3, 5], 5)
+      iex> BinarySearch.search({1, 3, 5}, 5)
       {:ok, 2}
 
   """
