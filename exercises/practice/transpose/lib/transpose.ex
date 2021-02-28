@@ -9,11 +9,12 @@ defmodule Transpose do
     * Don't pad to the right.
 
   ## Examples
-  iex> Transpose.transpose("ABC\nDE")
-  "AD\nBE\nC"
 
-  iex> Transpose.transpose("AB\nDEF")
-  "AD\nBE\n F"
+    iex> Transpose.transpose("ABC\\nDE")
+    "AD\\nBE\\nC"
+
+    iex> Transpose.transpose("AB\\nDEF")
+    "AD\\nBE\\n F"
   """
 
   @spec transpose(String.t()) :: String.t()

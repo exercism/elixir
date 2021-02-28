@@ -37,6 +37,11 @@ defmodule PrimeFactorsTest do
   end
 
   @tag :pending
+  test "12" do
+    assert PrimeFactors.factors_for(12) == [2, 2, 3]
+  end
+
+  @tag :pending
   test "27" do
     assert PrimeFactors.factors_for(27) == [3, 3, 3]
   end
@@ -60,7 +65,7 @@ defmodule PrimeFactorsTest do
   # @tag timeout: 2000
   #
   # The timeout tag above will set the below test to fail unless it completes
-  # in under two sconds. Uncomment it if you want to test the efficiency of your
+  # in under two seconds. Uncomment it if you want to test the efficiency of your
   # solution.
   test "10000000055" do
     assert PrimeFactors.factors_for(10_000_000_055) == [5, 2_000_000_011]

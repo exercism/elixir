@@ -37,17 +37,6 @@ variable.(1)
 # => 2
 ```
 
-## Closures
-
-Anonymous functions in Elixir are closures. They can access variables that are in scope when the function is defined.
-
-```elixir
-a = 7
-square = fn -> a * a end
-square.()
-# => 49
-```
-
 ## Bit Manipulation
 
 Elixir supports many functions for working with bits found in the _Bitwise module_.

@@ -3,28 +3,23 @@
 The `|>` operator is called [the pipe operator][pipe]. It can be used to chain function calls together in such a way that the value returned by the previous function call is passed as the first argument to the next function call.
 
 ```elixir
-Enum.filter(
-  Enum.map(
-    1..5,
-    fn n -> n * n end
-  ),
-  fn n -> rem(n, 2) == 0 end
-)
+String.replace_suffix(String.upcase(String.duplicate("go ", 3)), " ", "!")
 
 # versus
 
-1..5
-|> Enum.map(fn n -> n * n end)
-|> Enum.filter(fn n -> rem(n, 2) == 0 end)
+"go "
+|> String.duplicate(3)
+|> String.upcase()
+|> String.replace_suffix(" ", "!")
 ```
 
 It can also be used on a single line:
 
 ```elixir
-"hello" |> String.split("") |> Enum.frequencies()
+"go " |> String.duplicate(3) |> String.upcase() |> String.replace_suffix(" ", "!")
 ```
 
-`Kernel` functions are usually used everywhere without the `Kernel` module name, but the module name needed when using those functions in a pipe chain. For example, `2 * 3 == 6` can also be written as:
+`Kernel` functions are usually used everywhere without the `Kernel` module name, but the module name is needed when using those functions in a pipe chain. For example, `2 * 3 == 6` can also be written as:
 
 ```elixir
 2 |> Kernel.*(3) |> Kernel.==(6)
@@ -57,10 +52,10 @@ It is a matter of personal preference when to use the pipe operator and when not
 
   ```elixir
   # do
-  "hello" |> String.split("") |> Enum.frequencies()
+  "hello" |> String.upcase() |> String.split("")
 
   # don't
-  String.split("hello", "") |> Enum.frequencies()
+  String.upcase("hello") |> String.split("")
   ```
 
 [pipe]: https://hexdocs.pm/elixir/Kernel.html#%7C%3E/2

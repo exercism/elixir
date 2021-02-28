@@ -1,38 +1,38 @@
-defmodule TransformTest do
+defmodule ETLTest do
   use ExUnit.Case
 
   # @tag :pending
-  test "transform one value" do
-    old = %{1 => ["WORLD"]}
-    expected = %{"world" => 1}
+  test "single letter" do
+    old = %{1 => ["A"]}
+    expected = %{"a" => 1}
 
     assert ETL.transform(old) == expected
   end
 
   @tag :pending
-  test "transform more values" do
-    old = %{1 => ["WORLD", "GSCHOOLERS"]}
-    expected = %{"world" => 1, "gschoolers" => 1}
+  test "single score with multiple letters" do
+    old = %{1 => ~W(A E I O U)}
+    expected = %{"a" => 1, "e" => 1, "i" => 1, "o" => 1, "u" => 1}
 
     assert ETL.transform(old) == expected
   end
 
   @tag :pending
-  test "more keys" do
-    old = %{1 => ["APPLE", "ARTICHOKE"], 2 => ["BOAT", "BALLERINA"]}
+  test "multiple scores with multiple letters" do
+    old = %{1 => ["A", "E"], 2 => ["D", "G"]}
 
     expected = %{
-      "apple" => 1,
-      "artichoke" => 1,
-      "boat" => 2,
-      "ballerina" => 2
+      "a" => 1,
+      "d" => 2,
+      "e" => 1,
+      "g" => 2
     }
 
     assert ETL.transform(old) == expected
   end
 
   @tag :pending
-  test "full dataset" do
+  test "multiple scores with differing numbers of letters" do
     old = %{
       1 => ~W(A E I O U L N R S T),
       2 => ~W(D G),

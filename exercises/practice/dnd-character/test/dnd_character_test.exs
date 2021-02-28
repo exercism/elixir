@@ -3,8 +3,6 @@ defmodule DndCharacterTest do
 
   import DndCharacter, only: [modifier: 1, ability: 0, character: 0]
 
-  # canonical data version: 1.1.0
-
   describe "ability modifier" do
     # @tag :pending
     test "for score 3 is -4" do
@@ -95,18 +93,19 @@ defmodule DndCharacterTest do
   end
 
   describe "random character" do
-    setup do
-      %{character: character()}
-    end
-
     @tag :pending
-    test "has valid hitpoints", %{character: character} do
-      assert character.hitpoints === 10 + modifier(character.constitution)
-    end
+    test "has each ability within range and valid hitpoints" do
+      Enum.each(1..20, fn _ ->
+        character = character()
 
-    @tag :pending
-    test "has each ability only calculated once", %{character: character} do
-      assert character.strength === character.strength
+        assert character.strength in 3..18
+        assert character.dexterity in 3..18
+        assert character.constitution in 3..18
+        assert character.intelligence in 3..18
+        assert character.wisdom in 3..18
+        assert character.charisma in 3..18
+        assert character.hitpoints === 10 + modifier(character.constitution)
+      end)
     end
   end
 end

@@ -9,11 +9,12 @@ defmodule Transpose do
     * Don't pad to the right.
 
   ## Examples
-  iex> Transpose.transpose("ABC\nDE")
-  "AD\nBE\nC"
 
-  iex> Transpose.transpose("AB\nDEF")
-  "AD\nBE\n F"
+    iex> Transpose.transpose("ABC\\nDE")
+    "AD\\nBE\\nC"
+
+    iex> Transpose.transpose("AB\\nDEF")
+    "AD\\nBE\\n F"
   """
 
   @spec transpose(String.t()) :: String.t()
@@ -28,7 +29,7 @@ defmodule Transpose do
     |> List.zip()
     |> Enum.map(fn x -> Tuple.to_list(x) end)
     |> Enum.map(fn x -> List.to_string(x) end)
-    |> Enum.map(fn x -> String.replace(x, "*", " ") end)
+    |> Enum.map(fn x -> x |> String.trim_trailing("*") |> String.replace("*", " ") end)
     |> Enum.join("\n")
     |> String.trim_trailing()
   end

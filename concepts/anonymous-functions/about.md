@@ -45,7 +45,25 @@ Anonymous functions may be created with the [`&` capture shorthand][kernal-captu
   &<=/2
   ```
 
+Anonymous functions in Elixir are [closures][closure]. They can access variables that are in scope when the function is defined. Variables assigned inside of an anonymous function are not accessible outside of it:
+
+```elixir
+y = 2
+
+square = fn ->
+  x = 3
+  x * y
+end
+
+square.()
+# => 6
+
+x
+# => ** (CompileError): undefined function x/0
+```
+
 [anon-fns]: https://elixir-lang.org/getting-started/basic-types.html#anonymous-functions
 [kernel-fn]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#fn/1
 [kernal-capture]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#&/1
 [capture]: https://dockyard.com/blog/2016/08/05/understand-capture-operator-in-elixir
+[closure]: https://en.wikipedia.org/wiki/Closure_(computer_programming)

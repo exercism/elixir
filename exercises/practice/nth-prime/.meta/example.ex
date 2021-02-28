@@ -3,28 +3,21 @@ defmodule Prime do
   Generates the nth prime.
   """
   @spec nth(non_neg_integer) :: non_neg_integer
-  def nth(count) do
-    if count < 1, do: raise(ArgumentError)
-    nth(count, 1000)
-  end
+  def nth(count) when is_integer(count) and count > 0, do: do_nth(count, 2, [])
 
-  defp nth(count, max) do
-    primes = primes_to(max)
+  defp do_nth(0, value, _), do: value
 
-    cond do
-      Enum.count(primes) < count -> nth(count, max * 4)
-      true -> Enum.at(primes, count - 1)
+  defp do_nth(count, value, primes) do
+    if prime?(value, primes) do
+      do_nth(count - 1, value, [value | primes])
+    else
+      do_nth(count, value + 1, primes)
     end
   end
 
-  defp primes_to(limit) do
-    Enum.reduce(2..limit, [], fn number, primes ->
-      if is_prime?(number, primes), do: [number | primes], else: primes
+  defp prime?(value, lesser_primes) do
+    Enum.all?(lesser_primes, fn prime ->
+      rem(value, prime) != 0
     end)
-    |> Enum.reverse()
-  end
-
-  defp is_prime?(number, primes) do
-    Enum.all?(primes, &(rem(number, &1) != 0))
   end
 end

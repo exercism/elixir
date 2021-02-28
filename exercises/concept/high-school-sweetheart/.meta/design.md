@@ -8,6 +8,7 @@ After completing this exercise, the student should:
 - Know how to manipulate strings.
 - Know how to perform string interpolation.
 - Know how to create multiline strings (heredocs).
+- Know about the `|>` pipe operator for chaining function calls.
 
 ## Out of scope
 
@@ -25,6 +26,7 @@ After completing this exercise, the student should:
 ## Concepts
 
 - `strings`: knows how to concatenate strings, interpolate expressions inside of strings, create multiline strings, and modify strings using the _String module_.
+- `pipe-operator`
 
 ## Analyzer
 

@@ -1,9 +1,15 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/flatten_array.ex"
+    ],
+    "test": [
+      "test/flatten_array_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   },
   "source": "Interview Question",
   "source_url": "https://reference.wolfram.com/language/ref/Flatten.html"

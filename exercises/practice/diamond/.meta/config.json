@@ -1,9 +1,15 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "lib/diamond.ex"
+    ],
+    "test": [
+      "test/diamond_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
   },
   "source": "Seb Rose",
   "source_url": "http://claysnow.co.uk/recycling-tests-in-tdd/"

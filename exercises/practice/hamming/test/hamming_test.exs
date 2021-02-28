@@ -1,36 +1,47 @@
 defmodule HammingTest do
   use ExUnit.Case
 
-  test "no difference between empty strands" do
+  test "empty strands" do
     assert Hamming.hamming_distance('', '') == {:ok, 0}
   end
 
   @tag :pending
-  test "no difference between identical strands" do
-    assert Hamming.hamming_distance('GGACTGA', 'GGACTGA') == {:ok, 0}
+  test "single letter identical strands" do
+    assert Hamming.hamming_distance('A', 'A') == {:ok, 0}
   end
 
   @tag :pending
-  test "small hamming distance in middle somewhere" do
-    assert Hamming.hamming_distance('GGACG', 'GGTCG') == {:ok, 1}
+  test "single letter different strands" do
+    assert Hamming.hamming_distance('G', 'T') == {:ok, 1}
   end
 
   @tag :pending
-  test "distance with same nucleotides in different locations" do
-    assert Hamming.hamming_distance('TAG', 'GAT') == {:ok, 2}
+  test "long identical strands" do
+    assert Hamming.hamming_distance('GGACTGAAATCTG', 'GGACTGAAATCTG') == {:ok, 0}
   end
 
   @tag :pending
-  test "larger distance" do
-    assert Hamming.hamming_distance('ACCAGGG', 'ACTATGG') == {:ok, 2}
+  test "long different strands" do
+    assert Hamming.hamming_distance('GGACGGATTCTG', 'AGGACGGATTCT') == {:ok, 9}
   end
 
   @tag :pending
-  test "hamming distance is undefined for strands of different lengths" do
-    assert {:error, "Lists must be the same length"} =
-             Hamming.hamming_distance('AAAC', 'TAGGGGAGGCTAGCGGTAGGAC')
+  test "disallow first strand longer" do
+    assert {:error, "strands must be of equal length"} = Hamming.hamming_distance('AATG', 'AAA')
+  end
 
-    assert {:error, "Lists must be the same length"} =
-             Hamming.hamming_distance('GACTACGGACAGGACACC', 'GACATCGC')
+  @tag :pending
+  test "disallow second strand longer" do
+    assert {:error, "strands must be of equal length"} = Hamming.hamming_distance('ATA', 'AGTG')
+  end
+
+  @tag :pending
+  test "disallow empty first strand" do
+    assert {:error, "strands must be of equal length"} = Hamming.hamming_distance('', 'G')
+  end
+
+  @tag :pending
+  test "disallow empty second strand" do
+    assert {:error, "strands must be of equal length"} = Hamming.hamming_distance('G', '')
   end
 end

@@ -1,4 +1,4 @@
-defmodule NthPrimeTest do
+defmodule PrimeTest do
   use ExUnit.Case
 
   # @tag :pending
@@ -22,7 +22,12 @@ defmodule NthPrimeTest do
   end
 
   @tag :pending
-  test "weird case" do
+  test "big prime" do
+    assert Prime.nth(10001) == 104_743
+  end
+
+  @tag :pending
+  test "there is no zeroth prime" do
     catch_error(Prime.nth(0))
   end
 end

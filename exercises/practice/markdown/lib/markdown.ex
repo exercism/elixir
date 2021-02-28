@@ -4,11 +4,11 @@ defmodule Markdown do
 
     ## Examples
 
-    iex> Markdown.parse("This is a paragraph")
-    "<p>This is a paragraph</p>"
+      iex> Markdown.parse("This is a paragraph")
+      "<p>This is a paragraph</p>"
 
-    iex> Markdown.parse("#Header!\n* __Bold Item__\n* _Italic Item_")
-    "<h1>Header!</h1><ul><li><em>Bold Item</em></li><li><i>Italic Item</i></li></ul>"
+      iex> Markdown.parse("# Header!\\n* __Bold Item__\\n* _Italic Item_")
+      "<h1>Header!</h1><ul><li><strong>Bold Item</strong></li><li><em>Italic Item</em></li></ul>"
   """
   @spec parse(String.t()) :: String.t()
   def parse(m) do
@@ -70,10 +70,9 @@ defmodule Markdown do
   end
 
   defp patch(l) do
-    String.replace_suffix(
-      String.replace(l, "<li>", "<ul>" <> "<li>", global: false),
-      "</li>",
-      "</li>" <> "</ul>"
-    )
+    String.replace(l, "<li>", "<ul>" <> "<li>", global: false)
+    |> String.reverse()
+    |> String.replace(String.reverse("</li>"), String.reverse("</li></ul>"), global: false)
+    |> String.reverse()
   end
 end

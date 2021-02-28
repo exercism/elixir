@@ -1,6 +1,10 @@
 defmodule School do
   def add(db, name, grade) do
-    Map.update(db, grade, [name], &[name | &1])
+    if name in List.flatten(Map.values(db)) do
+      db
+    else
+      Map.update(db, grade, [name], &[name | &1])
+    end
   end
 
   def grade(db, grade) do
