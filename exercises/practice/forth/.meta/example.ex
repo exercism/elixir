@@ -1,83 +1,39 @@
 defmodule Forth do
-  defmodule State do
-    @type t :: %__MODULE__{}
+  defmodule Builtin do
+    def exec(word, st) when is_integer(word), do: [word | st]
 
-    defstruct stack: [], defs: %{}, input: []
+    def exec("+", [a, b | st]), do: [a + b | st]
+    def exec("+", _), do: raise(Forth.StackUnderflow)
+    def exec("-", [a, b | st]), do: [b - a | st]
+    def exec("-", _), do: raise(Forth.StackUnderflow)
+    def exec("*", [a, b | st]), do: [a * b | st]
+    def exec("*", _), do: raise(Forth.StackUnderflow)
+    def exec("/", [0, _ | _]), do: raise(Forth.DivisionByZero)
+    def exec("/", [a, b | st]), do: [div(b, a) | st]
+    def exec("/", _), do: raise(Forth.StackUnderflow)
+    def exec("DUP", [a | st]), do: [a, a | st]
+    def exec("DUP", _), do: raise(Forth.StackUnderflow)
+    def exec("DROP", [_ | st]), do: st
+    def exec("DROP", _), do: raise(Forth.StackUnderflow)
+    def exec("SWAP", [a, b | st]), do: [b, a | st]
+    def exec("SWAP", _), do: raise(Forth.StackUnderflow)
+    def exec("OVER", [a, b | st]), do: [b, a, b | st]
+    def exec("OVER", _), do: raise(Forth.StackUnderflow)
+    def exec(word, _), do: raise(Forth.UnknownWord, word: word)
   end
 
-  @opaque evaluator :: State.t()
-
-  defmodule Primitives do
-    def defs do
-      %{
-        "+" => &math_op(&1, :+),
-        "-" => &math_op(&1, :-),
-        "*" => &math_op(&1, :*),
-        "/" => &math_op(&1, :/),
-        "DUP" => &dup/1,
-        "DROP" => &drop/1,
-        "SWAP" => &swap/1,
-        "OVER" => &over/1
-      }
-    end
-
-    defp math_op(s, op) do
-      {s, [a, b]} = pop(s, 2)
-
-      res =
-        case op do
-          :+ -> a + b
-          :- -> a - b
-          :* -> a * b
-          :/ when b == 0 -> raise Forth.DivisionByZero
-          :/ -> div(a, b)
-        end
-
-      push(s, res)
-    end
-
-    defp dup(s) do
-      {s, [x]} = pop(s, 1)
-      %{s | stack: [x, x | s.stack]}
-    end
-
-    defp drop(s) do
-      {s, _} = pop(s, 1)
-      s
-    end
-
-    defp swap(s) do
-      {s, [a, b]} = pop(s, 2)
-      %{s | stack: [a, b | s.stack]}
-    end
-
-    defp over(s) do
-      case s.stack do
-        [b, a | t] -> %{s | stack: [a, b, a | t]}
-        _ -> raise Forth.StackUnderflow
-      end
-    end
-
-    # Pops and returns in reverse order (so the patterns catching those args can
-    # be written in the way you'd think about them in Forth).
-    defp pop(s, n) do
-      {stack, acc} = do_pop(s.stack, n, [])
-      {%{s | stack: stack}, acc}
-    end
-
-    defp do_pop(stack, 0, acc), do: {stack, acc}
-    defp do_pop([h | t], n, acc), do: do_pop(t, n - 1, [h | acc])
-    defp do_pop([], _, _), do: raise(Forth.StackUnderflow)
-
-    defp push(s, x), do: %{s | stack: [x | s.stack]}
+  defmodule Evaluator do
+    defstruct state: :start, cmddef: [], stack: [], words: %{}
   end
+
+  @opaque evaluator :: %Evaluator{}
 
   @doc """
   Create a new evaluator.
   """
   @spec new() :: evaluator
   def new() do
-    %State{defs: Primitives.defs()}
+    %Evaluator{}
   end
 
   @doc """
@@ -85,59 +41,59 @@ defmodule Forth do
   """
   @spec eval(evaluator, String.t()) :: evaluator
   def eval(ev, s) do
-    do_eval(%{ev | input: ev.input ++ tokenize(s)})
+    s
+    |> split_words
+    |> eval_words(ev)
   end
 
-  defp do_eval(s = %State{input: []}), do: s
-
-  defp do_eval(s = %State{stack: stack, input: [h | t]}) when is_integer(h) do
-    do_eval(%{s | stack: [h | stack], input: t})
+  defp eval_words(words, ev) do
+    words |> Enum.reduce(ev, &eval_word/2)
   end
 
-  defp do_eval(s = %State{input: [":", h | t]}) do
-    if is_binary(h) do
-      w = String.upcase(h)
-      # Find the ";", otherwise just return the current state and wait for the
-      # user to finish the definition.
-      case Enum.split_while(t, &(&1 != ";")) do
-        # ";" not found
-        {_, []} ->
-          s
+  defp eval_word(":", %Evaluator{state: :start} = ev) do
+    %{ev | state: :defining_word, cmddef: []}
+  end
 
-        {ws, [";" | r]} ->
-          do_eval(%{s | defs: Map.put(s.defs, w, ws), input: r})
-      end
-    else
-      # User tried to define a number.
-      raise Forth.InvalidWord, word: h
+  defp eval_word(word, %Evaluator{state: :start, stack: stack, words: words} = ev) do
+    case Map.get(words, word) do
+      nil -> %{ev | stack: Builtin.exec(word, stack)}
+      ts -> ts |> eval_words(ev)
     end
   end
 
-  defp do_eval(s = %State{defs: defs, input: [h | t]}) when is_binary(h) do
-    w = String.upcase(h)
-
-    case defs[w] do
-      nil ->
-        raise Forth.UnknownWord, word: w
-
-      d when is_function(d) ->
-        do_eval(d.(%{s | input: t}))
-
-      # To evaluate a user defined function we'll just put the function
-      # definition in the input list. That should do the trick.
-      d
-      when is_list(d) ->
-        do_eval(%{s | input: d ++ t})
-    end
+  defp eval_word(";", %Evaluator{state: :defining_word, cmddef: cmddef} = ev) do
+    [cmd | expansion] = cmddef |> Enum.reverse()
+    define_word(ev, cmd, expansion)
   end
 
-  defp tokenize(s) do
-    Regex.scan(~r/[\p{L}\p{N}\p{S}\p{P}]+/u, s)
-    |> Stream.map(&hd/1)
-    |> Enum.map(fn t ->
-      case Integer.parse(t) do
+  defp eval_word(word, %Evaluator{state: :defining_word, cmddef: cmddef} = ev) do
+    %{ev | cmddef: [word | cmddef]}
+  end
+
+  defp define_word(_ev, word, _expansion) when is_integer(word) do
+    raise(Forth.InvalidWord, word: word)
+  end
+
+  defp define_word(%Evaluator{words: words} = ev, word, expansion) do
+    expansion =
+      expansion
+      |> Enum.flat_map(fn t ->
+        case Map.get(words, t) do
+          nil -> [t]
+          ts -> ts
+        end
+      end)
+
+    %{ev | state: :start, words: Map.put(words, word, expansion)}
+  end
+
+  defp split_words(s) do
+    s
+    |> String.split(~r{([^[:print:]]|[[:space:]]| )}u)
+    |> Enum.map(fn word ->
+      case Integer.parse(word) do
         {i, ""} -> i
-        _ -> t
+        _ -> String.upcase(word)
       end
     end)
   end
@@ -147,28 +103,29 @@ defmodule Forth do
   being the rightmost element in the string.
   """
   @spec format_stack(evaluator) :: String.t()
-  def format_stack(%State{stack: stack}) do
-    # Enum.join calls to_string on each element, no need to do that ourselves.
-    Enum.reverse(stack) |> Enum.join(" ")
+  def format_stack(%Evaluator{stack: stack}) do
+    stack
+    |> Enum.reverse()
+    |> Enum.map_join(" ", &Integer.to_string/1)
   end
-end
 
-defmodule Forth.StackUnderflow do
-  defexception []
-  def message(_), do: "stack underflow"
-end
+  defmodule StackUnderflow do
+    defexception []
+    def message(_), do: "stack underflow"
+  end
 
-defmodule Forth.InvalidWord do
-  defexception word: nil
-  def message(e), do: "invalid word: #{inspect(e.word)}"
-end
+  defmodule InvalidWord do
+    defexception word: nil
+    def message(e), do: "invalid word: #{inspect(e.word)}"
+  end
 
-defmodule Forth.UnknownWord do
-  defexception word: nil
-  def message(e), do: "unknown word: #{inspect(e.word)}"
-end
+  defmodule UnknownWord do
+    defexception word: nil
+    def message(e), do: "unknown word: #{inspect(e.word)}"
+  end
 
-defmodule Forth.DivisionByZero do
-  defexception []
-  def message(_), do: "division by zero"
+  defmodule DivisionByZero do
+    defexception []
+    def message(_), do: "division by zero"
+  end
 end
