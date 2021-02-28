@@ -4,17 +4,17 @@ defmodule Bob do
 
   ## Examples
 
-  iex> Bob.hey("")
-  "Fine. Be that way!"
+    iex> Bob.hey("")
+    "Fine. Be that way!"
 
-  iex> Bob.hey("Do you like math?")
-  "Sure."
+    iex> Bob.hey("Do you like math?")
+    "Sure."
 
-  iex> Bob.hey("HELLO!")
-  "Whoa, chill out!"
+    iex> Bob.hey("HELLO!")
+    "Whoa, chill out!"
 
-  iex> Bob.hey("Coding is cool.")
-  "Whatever."
+    iex> Bob.hey("Coding is cool.")
+    "Whatever."
   """
 
   def hey(input) do

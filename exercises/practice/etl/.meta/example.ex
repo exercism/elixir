@@ -4,8 +4,8 @@ defmodule ETL do
 
   ## Examples
 
-  iex> ETL.transform(%{1 => ["A", "E"], "2 => ["D", "G"]})
-  %{"a" => 1, "d" => 2, "e" => 1, "g" => 2}
+    iex> ETL.transform(%{1 => ["A", "E"], 2 => ["D", "G"]})
+    %{"a" => 1, "d" => 2, "e" => 1, "g" => 2}
   """
   def transform(input) do
     input
