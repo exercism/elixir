@@ -110,7 +110,6 @@
         "uuid": "1e3ceb20-715c-4157-9192-13284217affc",
         "concepts": [
           "anonymous-functions",
-          "closures",
           "bit-manipulation"
         ],
         "prerequisites": [
@@ -1658,12 +1657,6 @@
       "slug": "charlists",
       "name": "Charlists",
       "blurb": "Charlists are an alternative to strings for storing text. A charlist is a list of integers - character code points. Charlists are most often useful when interacting with Erlang, but rarely used in Elixir."
-    },
-    {
-      "uuid": "bc688f4f-e8a1-44d8-a5aa-eceb8e725ce2",
-      "slug": "closures",
-      "name": "Closures",
-      "blurb": "Anonymous functions in Elixir are closures. They can access variables that are in scope when the function is defined."
     },
     {
       "uuid": "1e7bb8a6-9620-4474-b01e-a232408e9b65",
