@@ -1,4 +1,4 @@
-defmodule SpageAgeTest do
+defmodule SpaceAgeTest do
   use ExUnit.Case
 
   # @tag :pending
