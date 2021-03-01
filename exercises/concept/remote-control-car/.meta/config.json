@@ -16,6 +16,6 @@
     "test": ["test/remote_control_car_test.exs"],
     "exemplar": [".meta/exemplar.ex"]
   },
-  "forked_from": ["csharp/classes"],
+  "forked_from": ["csharp/elons-toys"],
   "language_versions": ">=1.10"
 }

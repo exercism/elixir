@@ -16,6 +16,6 @@
     "test": ["test/language_list_test.exs"],
     "exemplar": [".meta/exemplar.ex"]
   },
-  "forked_from": ["clojure/lists"],
+  "forked_from": ["clojure/tracks-on-tracks-on-tracks"],
   "language_versions": ">=1.10"
 }
