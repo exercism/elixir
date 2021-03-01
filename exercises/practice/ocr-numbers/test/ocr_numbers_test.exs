@@ -157,7 +157,7 @@ defmodule OcrNumbersTest do
   end
 
   @tag :pending
-  test "Regonizes 7" do
+  test "Recognizes 7" do
     number =
       OcrNumbers.convert([
         " _ ",
