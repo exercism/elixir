@@ -1196,7 +1196,7 @@
           "strings"
         ],
         "practices": ["recursion", "tail-call-recursion", "strings"],
-        "difficulty": 3
+        "difficulty": 3,
         "status": "deprecated"
       },
       {
@@ -1375,7 +1375,7 @@
           "enum"
         ],
         "practices": ["strings", "charlists", "ranges"],
-        "difficulty": 3
+        "difficulty": 3,
         "status": "deprecated"
       },
       {
