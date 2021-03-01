@@ -1,0 +1,11 @@
+# IDE files
+.idea/
+.vscode/
+.vs/
+.ionide/
+
+# GitHub templates
+.github/ISSUE_TEMPLATE/**/*
+
+# Language docs files
+docs/**
