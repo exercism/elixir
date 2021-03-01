@@ -21,16 +21,9 @@ defmodule Triplet do
   end
 
   @doc """
-  Generates a list of pythagorean triplets from a given min (or 1 if no min) to a given max.
+  Generates a list of pythagorean triplets whose values add up to a given sum.
   """
-  @spec generate(non_neg_integer, non_neg_integer) :: [list(non_neg_integer)]
-  def generate(min, max) do
-  end
-
-  @doc """
-  Generates a list of pythagorean triplets from a given min to a given max, whose values add up to a given sum.
-  """
-  @spec generate(non_neg_integer, non_neg_integer, non_neg_integer) :: [list(non_neg_integer)]
-  def generate(min, max, sum) do
+  @spec generate(non_neg_integer) :: [list(non_neg_integer)]
+  def generate(sum) do
   end
 end
