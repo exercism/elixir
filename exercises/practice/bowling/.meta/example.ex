@@ -25,7 +25,7 @@ defmodule Bowling do
         {:error, "Cannot roll after game is over"}
 
       valid_updates?(updates) ->
-        updates
+        {:ok, updates}
 
       true ->
         {:error, "Pin count exceeds pins on the lane"}
@@ -67,7 +67,7 @@ defmodule Bowling do
         {:error, "Score cannot be taken until the end of the game"}
 
       true ->
-        parse_scores(game.scores)
+        {:ok, parse_scores(game.scores)}
     end
   end
 
