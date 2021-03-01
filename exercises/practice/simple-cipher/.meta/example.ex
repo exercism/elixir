@@ -77,4 +77,15 @@ defmodule SimpleCipher do
     |> Enum.zip(keystream)
     |> Enum.map_join(converter)
   end
+
+  @doc """
+  Generate a random key of a given length. It should contain lowercase letters only.
+  """
+  def generate_key(length) do
+    for <<byte <- :crypto.strong_rand_bytes(length)>> do
+      delta = rem(byte, ?z - ?a + 1)
+      <<?a + delta>>
+    end
+    |> Enum.join()
+  end
 end

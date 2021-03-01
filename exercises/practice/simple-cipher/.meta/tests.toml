@@ -4,11 +4,11 @@
 
 [b8bdfbe1-bea3-41bb-a999-b41403f2b15d]
 description = "Can encode"
-include = true
+include = false
 
 [3dff7f36-75db-46b4-ab70-644b3f38b81c]
 description = "Can decode"
-include = true
+include = false
 
 [8143c684-6df6-46ba-bd1f-dea8fcb5d265]
 description = "Is reversible. I.e., if you apply decode in a encoded result, you must see the same plaintext encode parameter as a result of the decode method"

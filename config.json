@@ -1413,7 +1413,13 @@
         "slug": "simple-cipher",
         "name": "Simple Cipher",
         "uuid": "dbea6e3b-1c0c-471f-9af3-f8fd3cbb957a",
-        "prerequisites": [],
+        "prerequisites": [
+          "randomness",
+          "erlang-libraries"
+        ],
+        "practices": [
+          "randomness"
+        ],
         "difficulty": 3,
         "topics": [
           "encryption",

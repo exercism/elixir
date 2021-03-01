@@ -45,4 +45,10 @@ defmodule SimpleCipher do
   """
   def decode(ciphertext, key) do
   end
+
+  @doc """
+  Generate a random key of a given length. It should contain lowercase letters only.
+  """
+  def generate_key(length) do
+  end
 end
