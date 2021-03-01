@@ -2,7 +2,6 @@
 
 ## Learning objectives
 
-- Know about the `|>` pipe operator for chaining function calls.
 - Know about streams.
   - `Enum` functions are eager, `Stream` functions are lazy.
   - Potentially infinite.
@@ -13,7 +12,6 @@
 ## Concepts
 
 - `streams`
-- `pipe-operator`
 
 ## Prerequisites
 

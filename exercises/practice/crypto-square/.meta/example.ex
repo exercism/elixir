@@ -1,6 +1,7 @@
 defmodule CryptoSquare do
   @doc """
   Encode string square methods
+
   ## Examples
 
     iex> CryptoSquare.encode("abcd")

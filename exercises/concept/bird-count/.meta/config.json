@@ -16,6 +16,6 @@
     "test": ["test/bird_count_test.exs"],
     "exemplar": [".meta/exemplar.ex"]
   },
-  "forked_from": ["csharp/arrays"],
+  "forked_from": ["csharp/bird-watcher"],
   "language_versions": ">=1.10"
 }

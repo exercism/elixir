@@ -1,4 +1,4 @@
-defmodule LargestSeriesProductTest do
+defmodule SeriesTest do
   use ExUnit.Case
 
   # @tag :pending

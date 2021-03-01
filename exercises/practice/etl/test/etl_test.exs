@@ -1,4 +1,4 @@
-defmodule TransformTest do
+defmodule ETLTest do
   use ExUnit.Case
 
   # @tag :pending

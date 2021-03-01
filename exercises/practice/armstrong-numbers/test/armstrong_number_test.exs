@@ -6,6 +6,7 @@ defmodule ArmstrongNumberTest do
     assert ArmstrongNumber.valid?(0)
   end
 
+  @tag :pending
   test "Single digit numbers are Armstrong numbers" do
     assert ArmstrongNumber.valid?(5)
   end

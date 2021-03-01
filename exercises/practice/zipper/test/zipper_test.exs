@@ -73,4 +73,9 @@ defmodule ZipperTest do
   test "set_value on deep focus" do
     assert t1() |> from_tree() |> left() |> right() |> set_value(5) |> to_tree() == t6()
   end
+
+  @tag :pending
+  test "different paths to same zipper" do
+    assert t1() |> from_tree() |> left() |> up() |> right() |> to_tree() == t1()
+  end
 end

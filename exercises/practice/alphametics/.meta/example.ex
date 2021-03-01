@@ -9,11 +9,11 @@ defmodule Alphametics do
 
   ## Examples
 
-      iex> Alphametics.solve("I + BB == ILL")
-      %{?I => 1, ?B => 9, ?L => 0}
+    iex> Alphametics.solve("I + BB == ILL")
+    %{?I => 1, ?B => 9, ?L => 0}
 
-      iex> Alphametics.solve("A == B")
-      nil
+    iex> Alphametics.solve("A == B")
+    nil
   """
   @spec solve(puzzle) :: solution | nil
   def solve(puzzle) do

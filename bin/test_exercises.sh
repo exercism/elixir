@@ -73,6 +73,14 @@ do
 
     if [ "$compile_exit_code" -eq 0 ]
     then
+      # turn on doctests
+      test_file=`find . -name \*_test.exs`
+      module_name=`cat $test_file | sed -rn 's/^defmodule (.*)Test do$/\1 /p'`
+      doctest_code="doctest ${module_name}"
+
+      # Warning: GNU sed necessary, BSD (macOS) sed has incompatible options
+      sed -i 's/use ExUnit.Case\(.*\)/use ExUnit.Case\1\n'" ${doctest_code}"'\n/g' $test_file
+
       # perform unit tests
       test_results=$(mix test --color --no-elixir-version-check --include pending 2> /dev/null)
       test_exit_code="$?"
@@ -84,19 +92,19 @@ do
     # based on compiler and unit test, print results
     if [ "$compile_exit_code" -eq 0 -a "$test_exit_code" -eq 0 ]
     then
-      printf "-- \\033[32mPass\\033[0m\n"
+      printf "\\033[32mPass\\033[0m\n"
       pass_count=$((pass_count+1))
     else
-      printf "-- \\033[31mFail\\033[0m\n"
+      printf "\\033[31mFail\\033[0m\n"
 
       if [ "$compile_exit_code" -ne 0 ]
       then
-        printf -- "-- \\033[36mcompiler output\\033[0m "; printf -- '-%.0s' {1..61}; echo ""
+        printf "\\033[36mcompiler output\\033[0m "; printf -- '-%.0s' {1..61}; echo ""
         printf "${compiler_results}\n"
       fi
       if [ "$test_exit_code" -ne 0 -a "$test_exit_code" -ne 5 ]
       then
-        printf -- "-- \\033[36mtest output\\033[0m "; printf -- '-%.0s' {1..65}; echo ""
+        printf "\\033[36mtest output\\033[0m "; printf -- '-%.0s' {1..65}; echo ""
         printf "${test_results}\n"
       fi
       printf -- '-%.0s' {1..80}; echo ""

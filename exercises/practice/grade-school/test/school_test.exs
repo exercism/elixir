@@ -8,6 +8,15 @@ defmodule SchoolTest do
     assert actual == %{2 => ["Aimee"]}
   end
 
+  test "a student can't be in two different grades" do
+    actual =
+      @db
+      |> School.add("Aimee", 2)
+      |> School.add("Aimee", 1)
+
+    assert actual == %{2 => ["Aimee"]}
+  end
+
   @tag :pending
   test "add more students in same class" do
     actual =
@@ -50,17 +59,19 @@ defmodule SchoolTest do
   test "sort school by grade and by student name" do
     actual =
       @db
-      |> School.add("Bart", 4)
-      |> School.add("Jennifer", 4)
-      |> School.add("Christopher", 4)
-      |> School.add("Kareem", 6)
-      |> School.add("Kyle", 3)
+      |> School.add("Peter", 2)
+      |> School.add("Anna", 1)
+      |> School.add("Barb", 1)
+      |> School.add("Zoe", 2)
+      |> School.add("Alex", 2)
+      |> School.add("Jim", 3)
+      |> School.add("Charlie", 1)
       |> School.sort()
 
     expected = [
-      {3, ["Kyle"]},
-      {4, ["Bart", "Christopher", "Jennifer"]},
-      {6, ["Kareem"]}
+      {1, ["Anna", "Barb", "Charlie"]},
+      {2, ["Alex", "Peter", "Zoe"]},
+      {3, ["Jim"]}
     ]
 
     assert expected == actual

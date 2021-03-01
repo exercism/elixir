@@ -26,20 +26,52 @@ defmodule TripletTest do
   end
 
   @tag :pending
-  test "triplets up to 10" do
-    triplets = Triplet.generate(1, 10)
-    assert Enum.map(triplets, &Triplet.product/1) == [60, 480]
+  test "triplets whose sum is 10" do
+    assert Triplet.generate(12) == [[3, 4, 5]]
   end
 
   @tag :pending
-  test "triplets from 11 up to 20" do
-    triplets = Triplet.generate(11, 20)
-    assert Enum.map(triplets, &Triplet.product/1) == [3840]
+  test "triplets whose sum is 108" do
+    assert Triplet.generate(108) == [[27, 36, 45]]
   end
 
   @tag :pending
-  test "triplets where sum is 180 and max factor is 100" do
-    triplets = Triplet.generate(1, 100, 180)
-    assert Enum.map(triplets, &Triplet.product/1) == [118_080, 168_480, 202_500]
+  test "triplets whose sum is 1000" do
+    assert Triplet.generate(1000) == [[200, 375, 425]]
+  end
+
+  @tag :pending
+  test "no matching triplets for 1001" do
+    assert Triplet.generate(1001) == []
+  end
+
+  @tag :pending
+  test "returns all matching triplets" do
+    assert Triplet.generate(90) == [[9, 40, 41], [15, 36, 39]]
+  end
+
+  @tag :pending
+  test "several matching triplets" do
+    assert Triplet.generate(840) == [
+             [40, 399, 401],
+             [56, 390, 394],
+             [105, 360, 375],
+             [120, 350, 370],
+             [140, 336, 364],
+             [168, 315, 357],
+             [210, 280, 350],
+             [240, 252, 348]
+           ]
+  end
+
+  @tag :pending
+  test "triplets for large number" do
+    assert Triplet.generate(30000) == [
+             [1200, 14375, 14425],
+             [1875, 14000, 14125],
+             [5000, 12000, 13000],
+             [6000, 11250, 12750],
+             [7500, 10000, 12500]
+           ]
   end
 end

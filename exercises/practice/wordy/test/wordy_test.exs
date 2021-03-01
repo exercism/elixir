@@ -1,6 +1,12 @@
 defmodule WordyTest do
   use ExUnit.Case
 
+  # @tag :pending
+  test "just a number" do
+    assert Wordy.answer("What is 5?") == 5
+  end
+
+  @tag :pending
   test "addition" do
     assert Wordy.answer("What is 1 plus 1?") == 2
   end
@@ -81,6 +87,41 @@ defmodule WordyTest do
   test "Non math question" do
     assert_raise ArgumentError, fn ->
       Wordy.answer("Who is the President of the United States?")
+    end
+  end
+
+  @tag :pending
+  test "reject problem missing an operand" do
+    assert_raise ArgumentError, fn ->
+      Wordy.answer("What is 1 plus?")
+    end
+  end
+
+  @tag :pending
+  test "reject two operations in a row" do
+    assert_raise ArgumentError, fn ->
+      Wordy.answer("What is 1 plus plus 2?")
+    end
+  end
+
+  @tag :pending
+  test "reject two numbers in a row" do
+    assert_raise ArgumentError, fn ->
+      Wordy.answer("What is 1 plus 2 1?")
+    end
+  end
+
+  @tag :pending
+  test "reject postfix notation" do
+    assert_raise ArgumentError, fn ->
+      Wordy.answer("What is 1 2 plus?")
+    end
+  end
+
+  @tag :pending
+  test "reject prefix notation" do
+    assert_raise ArgumentError, fn ->
+      Wordy.answer("What is plus 1 2?")
     end
   end
 end
