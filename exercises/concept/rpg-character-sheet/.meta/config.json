@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for rpg-character-sheet exercise",
   "authors": [
     {
       "github_username": "angelikatyborska",
@@ -12,9 +13,15 @@
     }
   ],
   "files": {
-    "solution": ["lib/rpg/character_sheet.ex"],
-    "test": ["test/rpg/character_sheet_test.exs"],
-    "exemplar": [".meta/exemplar.ex"]
+    "solution": [
+      "lib/rpg/character_sheet.ex"
+    ],
+    "test": [
+      "test/rpg/character_sheet_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
   "language_versions": ">=1.10"
 }

@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for high-score exercise",
   "authors": [
     {
       "github_username": "neenjaw",
@@ -6,9 +7,15 @@
     }
   ],
   "files": {
-    "solution": ["lib/high_score.ex"],
-    "test": ["test/high_score_test.exs"],
-    "exemplar": [".meta/exemplar.ex"]
+    "solution": [
+      "lib/high_score.ex"
+    ],
+    "test": [
+      "test/high_score_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
   "language_versions": ">=1.10"
 }

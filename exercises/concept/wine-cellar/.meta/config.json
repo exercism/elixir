@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for wine-cellar exercise",
   "authors": [
     {
       "github_username": "angelikatyborska",
@@ -12,9 +13,15 @@
     }
   ],
   "files": {
-    "solution": ["lib/wine_cellar.ex"],
-    "test": ["test/wine_cellar_test.exs"],
-    "exemplar": [".meta/exemplar.ex"]
+    "solution": [
+      "lib/wine_cellar.ex"
+    ],
+    "test": [
+      "test/wine_cellar_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
   "language_versions": ">=1.10"
 }

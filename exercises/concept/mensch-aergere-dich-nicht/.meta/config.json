@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for mensch-aergere-dich-nicht exercise",
   "authors": [
     {
       "github_username": "angelikatyborska",
@@ -12,9 +13,15 @@
     }
   ],
   "files": {
-    "solution": ["lib/mensch_aergere_dich_nicht.ex"],
-    "test": ["test/mensch_aergere_dich_nicht_test.exs"],
-    "exemplar": [".meta/exemplar.ex"]
+    "solution": [
+      "lib/mensch_aergere_dich_nicht.ex"
+    ],
+    "test": [
+      "test/mensch_aergere_dich_nicht_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
   "language_versions": ">=1.10"
 }

@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for captains-log exercise",
   "authors": [
     {
       "github_username": "angelikatyborska",
@@ -12,9 +13,15 @@
     }
   ],
   "files": {
-    "solution": ["lib/captains_log.ex"],
-    "test": ["test/captains_log_test.exs"],
-    "exemplar": [".meta/exemplar.ex"]
+    "solution": [
+      "lib/captains_log.ex"
+    ],
+    "test": [
+      "test/captains_log_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
   "language_versions": ">=1.10"
 }

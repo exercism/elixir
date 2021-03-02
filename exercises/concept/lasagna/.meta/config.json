@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for lasagna exercise",
   "authors": [
     {
       "github_username": "neenjaw",
@@ -12,10 +13,18 @@
     }
   ],
   "files": {
-    "solution": ["lib/lasagna.ex"],
-    "test": ["test/lasagna_test.exs"],
-    "exemplar": [".meta/exemplar.ex"]
+    "solution": [
+      "lib/lasagna.ex"
+    ],
+    "test": [
+      "test/lasagna_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
-  "forked_from": ["csharp/lucians-luscious-lasagna"],
+  "forked_from": [
+    "csharp/lucians-luscious-lasagna"
+  ],
   "language_versions": ">=1.10"
 }

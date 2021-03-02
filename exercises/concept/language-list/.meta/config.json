@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for language-list exercise",
   "authors": [
     {
       "github_username": "neenjaw",
@@ -12,10 +13,18 @@
     }
   ],
   "files": {
-    "solution": ["lib/language_list.ex"],
-    "test": ["test/language_list_test.exs"],
-    "exemplar": [".meta/exemplar.ex"]
+    "solution": [
+      "lib/language_list.ex"
+    ],
+    "test": [
+      "test/language_list_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
-  "forked_from": ["clojure/tracks-on-tracks-on-tracks"],
+  "forked_from": [
+    "clojure/tracks-on-tracks-on-tracks"
+  ],
   "language_versions": ">=1.10"
 }
