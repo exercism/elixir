@@ -1,0 +1,10 @@
+[
+  {
+    "url": "https://elixir-lang.org/getting-started/mix-otp/task-and-gen-tcp.html#tasks",
+    "description": "Getting Started - Task"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/Task.html",
+    "description": "Documentation - Task Module"
+  }
+]
