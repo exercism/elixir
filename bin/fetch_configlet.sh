@@ -1,5 +1,29 @@
-#!/bin/bash
-set -euo pipefail
+#!/usr/bin/env bash
+
+set -eo pipefail
+
+readonly LATEST='https://api.github.com/repos/exercism/configlet/releases/latest'
+
+case "$(uname)" in
+  Darwin*)   os='mac'     ;;
+  Linux*)    os='linux'   ;;
+  Windows*)  os='windows' ;;
+  MINGW*)    os='windows' ;;
+  MSYS_NT-*) os='windows' ;;
+  *)         os='linux'   ;;
+esac
+
+case "${os}" in
+  windows*) ext='zip' ;;
+  *)        ext='tgz' ;;
+esac
+
+case "$(uname -m)" in
+  *64*)  arch='64bit' ;;
+  *686*) arch='32bit' ;;
+  *386*) arch='32bit' ;;
+  *)     arch='64bit' ;;
+esac
 
 curlopts=(
   --silent
@@ -9,33 +33,26 @@ curlopts=(
   --retry 3
 )
 
+if [[ -n "${GITHUB_TOKEN}" ]]; then
+  curlopts+=(--header "authorization: Bearer ${GITHUB_TOKEN}")
+fi
+
+suffix="${os}-${arch}.${ext}"
+
 get_download_url() {
-  # Returns the download URL of the latest configlet Linux release from the GitHub API
-  local api_url='https://api.github.com/repos/exercism/configlet/releases/latest'
-  local asset_name="configlet-${1}-64bit.tgz"
-  curl "${curlopts[@]}" --header "Accept: application/vnd.github.v3+json" "${api_url}" |
-    jq --arg name "${asset_name}" -r '.assets[] | select(.name==$name).browser_download_url'
+  curl "${curlopts[@]}" --header 'Accept: application/vnd.github.v3+json' "${LATEST}" |
+    grep "\"browser_download_url\": \".*/download/.*/configlet.*${suffix}\"$" |
+    cut -d'"' -f4
 }
 
-case ${1-} in
+download_url="$(get_download_url)"
+output_dir="bin"
+output_path="${output_dir}/latest-configlet.${ext}"
+curl "${curlopts[@]}" --output "${output_path}" "${download_url}"
 
-  mac)
-    download_url="$(get_download_url 'mac' )"
-    ;;
-
-  linux)
-    download_url="$(get_download_url 'linux' )"
-    ;;
-
-  windows)
-    download_url="$(get_download_url 'windows' )"
-    ;;
-
-  *)
-    echo 'usage: fetch_configlet.sh mac | linux | windows'
-    exit 1
-    ;;
+case "${ext}" in
+  *zip) unzip "${output_path}" -d "${output_dir}"   ;;
+  *)    tar xzf "${output_path}" -C "${output_dir}" ;;
 esac
 
-curl "${curlopts[@]}" "${download_url}" | tar xz -C bin/
-echo 'done'
+rm -f "${output_path}"
