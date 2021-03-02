@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for community-garden exercise",
   "authors": [
     {
       "github_username": "neenjaw",
@@ -20,9 +21,15 @@
     }
   ],
   "files": {
-    "solution": ["lib/community_garden.ex"],
-    "test": ["test/community_garden_test.exs"],
-    "exemplar": [".meta/exemplar.ex"]
+    "solution": [
+      "lib/community_garden.ex"
+    ],
+    "test": [
+      "test/community_garden_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
   "language_versions": ">=1.10"
 }

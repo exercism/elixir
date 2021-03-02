@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for log-level exercise",
   "authors": [
     {
       "github_username": "neenjaw",
@@ -6,10 +7,18 @@
     }
   ],
   "files": {
-    "solution": ["lib/log_level.ex"],
-    "test": ["test/log_level_test.exs"],
-    "exemplar": [".meta/exemplar.ex"]
+    "solution": [
+      "lib/log_level.ex"
+    ],
+    "test": [
+      "test/log_level_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
-  "forked_from": ["csharp/logs-logs-logs"],
+  "forked_from": [
+    "csharp/logs-logs-logs"
+  ],
   "language_versions": ">=1.10"
 }

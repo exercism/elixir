@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for guessing-game exercise",
   "authors": [
     {
       "github_username": "neenjaw",
@@ -12,10 +13,18 @@
     }
   ],
   "files": {
-    "solution": ["lib/guessing_game.ex"],
-    "test": ["test/guessing_game_test.exs"],
-    "exemplar": [".meta/exemplar.ex"]
+    "solution": [
+      "lib/guessing_game.ex"
+    ],
+    "test": [
+      "test/guessing_game_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
-  "forked_from": ["fsharp/guessing-game"],
+  "forked_from": [
+    "fsharp/guessing-game"
+  ],
   "language_versions": ">=1.10"
 }

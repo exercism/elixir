@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for rpn-calculator exercise",
   "authors": [
     {
       "github_username": "neenjaw",
@@ -12,9 +13,15 @@
     }
   ],
   "files": {
-    "solution": ["lib/rpn_calculator.ex"],
-    "test": ["test/rpn_calculator_test.exs"],
-    "exemplar": [".meta/exemplar.ex"]
+    "solution": [
+      "lib/rpn_calculator.ex"
+    ],
+    "test": [
+      "test/rpn_calculator_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
   "language_versions": ">=1.10"
 }

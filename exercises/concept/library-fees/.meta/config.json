@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for library-fees exercise",
   "authors": [
     {
       "github_username": "angelikatyborska",
@@ -12,9 +13,15 @@
     }
   ],
   "files": {
-    "solution": ["lib/library_fees.ex"],
-    "test": ["test/library_fees_test.exs"],
-    "exemplar": [".meta/exemplar.ex"]
+    "solution": [
+      "lib/library_fees.ex"
+    ],
+    "test": [
+      "test/library_fees_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
   "language_versions": ">=1.10"
 }

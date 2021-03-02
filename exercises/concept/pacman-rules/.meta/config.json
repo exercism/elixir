@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for pacman-rules exercise",
   "authors": [
     {
       "github_username": "neenjaw",
@@ -12,9 +13,15 @@
     }
   ],
   "files": {
-    "solution": ["lib/rules.ex"],
-    "test": ["test/rules_test.exs"],
-    "exemplar": [".meta/exemplar.ex"]
+    "solution": [
+      "lib/rules.ex"
+    ],
+    "test": [
+      "test/rules_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
   "language_versions": ">=1.10"
 }
