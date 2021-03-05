@@ -1,7 +1,5 @@
 defmodule Bob do
+  @spec String.t() :: String.t()
   def hey(input) do
-    cond do
-      true -> raise "Your implementation goes here"
-    end
   end
 end
