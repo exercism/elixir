@@ -42,13 +42,15 @@ Process.alive?(parent_pid)
 
 Processes can be spawned already linked to the calling process using `spawn_link/1` which is an atomic operation, or they can be linked later with `Process.link/1`.
 
-Linking processes can be useful when doing parallelized work when each chunk of work shouldn't be continued in case another chunk fails.
+Linking processes can be useful when doing parallelized work when each chunk of work shouldn't be continued in case another chunk fails to finish.
 
 ## Trapping exits
 
 Linking can also be used for _supervising_ processes. If a process _traps exits_, it will not crash when a process to which it's linked crashes. It will instead receive a message about the crash. This allows it to deal with the crash gracefully, for example by restarting the crashed process.
 
 A process can be configured to trap exists by calling `Process.flag(:trap_exit, true)`.
+
+The message that will be sent to the process in case of a linked process crash will match the pattern `{:EXIT, from, reason}`, where `from` is a PID.
 
 ```elixir
 parent_pid =
