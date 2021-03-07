@@ -6,5 +6,9 @@
   {
     "url": "https://samuelmullen.com/articles/elixir-processes-linking-and-monitoring/",
     "description": "Elixir Processes: Linking and Monitoring"
+  },
+  {
+    "url": "https://crypt.codemancers.com/posts/2016-01-24-understanding-exit-signals-in-erlang-slash-elixir/",
+    "description": "Understanding Exit Signals in Erlang/Elixir"
   }
 ]
