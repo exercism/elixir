@@ -18,6 +18,12 @@ defmodule RPNCalculatorInspectionTest do
     end
   end
 
+  setup_all do
+    # turning off the logger to avoid error logs spamming the output
+    # when the functions are expected to crash
+    Logger.configure(level: :none)
+  end
+
   setup do
     # just in case, we clear the test process inbox before each test
     flush_messages()
@@ -119,6 +125,7 @@ defmodule RPNCalculatorInspectionTest do
       Task.await(task)
     end
 
+    @tag :pending
     test "normal exit messages from processes whose pids don't match are ignored" do
       caller_process_pid = self()
       other_process_pid = spawn(fn -> nil end)
@@ -136,6 +143,7 @@ defmodule RPNCalculatorInspectionTest do
                expected_result
     end
 
+    @tag :pending
     test "abnormal exit messages from processes whose pids don't match are ignored" do
       caller_process_pid = self()
       other_process_pid = spawn(fn -> nil end)
@@ -153,6 +161,7 @@ defmodule RPNCalculatorInspectionTest do
                expected_result
     end
 
+    @tag :pending
     test "any other messages are ignored" do
       caller_process_pid = self()
       test_data = %{pid: caller_process_pid, input: "4 2 /"}
@@ -171,6 +180,7 @@ defmodule RPNCalculatorInspectionTest do
                expected_result
     end
 
+    @tag :pending
     test "doesn't change the trap_exit flag of the caller process" do
       caller_process_pid = self()
       Process.flag(:trap_exit, false)
@@ -257,14 +267,14 @@ defmodule RPNCalculatorInspectionTest do
       assert RPNCalculatorInspection.reliability_check(calculator, inputs) == outputs
     end
 
-    #    @tag :pending
-    #    test "returns a map when input list has 1000 elements and all of them crash" do
-    #      inputs = Enum.map(1..1000, &"#{2 * &1} 0 /")
-    #      calculator = &RPNCalculator.unsafe_division/1
-    #      outputs = 1..1000 |> Enum.map(&{"#{2 * &1} 0 /", :error}) |> Enum.into(%{})
-    #
-    #      assert RPNCalculatorInspection.reliability_check(calculator, inputs) == outputs
-    #    end
+    @tag :pending
+    test "returns a map when input list has 1000 elements and all of them crash" do
+      inputs = Enum.map(1..1000, &"#{2 * &1} 0 /")
+      calculator = &RPNCalculator.unsafe_division/1
+      outputs = 1..1000 |> Enum.map(&{"#{2 * &1} 0 /", :error}) |> Enum.into(%{})
+
+      assert RPNCalculatorInspection.reliability_check(calculator, inputs) == outputs
+    end
 
     @tag :pending
     test "restores the original value of the trap_exit flag" do
