@@ -6,5 +6,9 @@
   {
     "url": "https://hexdocs.pm/elixir/Task.html",
     "description": "Documentation - Task Module"
+  },
+  {
+    "url": "https://blog.appsignal.com/2017/05/18/elixir-alchemy-demystifying-processes-in-elixir.html",
+    "description": "Demystifying processes in Elixir"
   }
 ]

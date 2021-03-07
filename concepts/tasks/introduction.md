@@ -7,7 +7,7 @@ Tasks are commonly used to parallelize work.
 
 ## `async`/`await`
 
-To start a task, use `Task.async/1`. It takes an anonymous function as an argument and executes it in a new process. It returns a `%Task{}` struct.
+To start a task, use `Task.async/1`. It takes an anonymous function as an argument and executes it in a new process that is linked to the caller process. It returns a `%Task{}` struct.
 
 To get the result of the execution, pass the `%Task{}` struct to `Task.await/2`. It will wait for the task to finish and return its result. The second argument is a timeout in milliseconds, defaulting to 5000.
 
@@ -29,4 +29,4 @@ Any task started with `Task.async/1` should be awaited on because it will send a
 
 ## `start`/`start_link`
 
-If you want to start a task for side-effects only, use `Task.start/1` or `Task.start_link/1`. `Task.start/1` will start a task that is not linked to the calling process, and `Task.start_link/1` will start a task that is linked to the calling process.
+If you want to start a task for side-effects only, use `Task.start/1` or `Task.start_link/1`. `Task.start/1` will start a task that is not linked to the calling process, and `Task.start_link/1` will start a task that is linked to the calling process. Both functions return a `{:ok, pid}` tuple.
