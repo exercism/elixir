@@ -1,6 +1,6 @@
 # About
 
-Elixir processes are isolated and don't share anything by default. When a child process crashes, its parent process is not affected.
+Elixir processes are isolated and don't share anything by default. When an unlinked child process crashes, its parent process is not affected.
 
 ```elixir
 parent_pid =

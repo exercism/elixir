@@ -29,7 +29,7 @@ If it receives an exit message (`{:EXIT, from, reason}`) with the reason `:norma
 
 If it receives an exit message with a different reason from the same process that runs the reliability check, it should return the results map with the value `:error` added under the key `input`.
 
-If it doesn't receive any messages in 100ms, it should return the results map with the value `:timeout` added under the key `input`.
+If it doesn't receive any messages matching those criteria in 100ms, it should return the results map with the value `:timeout` added under the key `input`.
 
 ```elixir
 send(self(), {:EXIT, self(), :normal})

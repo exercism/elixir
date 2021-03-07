@@ -1,6 +1,6 @@
 # Introduction
 
-Elixir processes are isolated and don't share anything by default. When a child process crashes, its parent process is not affected.
+Elixir processes are isolated and don't share anything by default. When an unlinked child process crashes, its parent process is not affected.
 
 This behavior can be changed by _linking_ processes to one another. If two processes are linked, a failure in one process will be propagated to the other process. Links are bidirectional.
 

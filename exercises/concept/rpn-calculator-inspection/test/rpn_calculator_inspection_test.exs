@@ -43,7 +43,7 @@ defmodule RPNCalculatorInspectionTest do
 
     @tag :pending
     test "starts a linked process" do
-      Process.flag(:trap_exit, true)
+      old_value = Process.flag(:trap_exit, true)
 
       calculator = fn _ -> :timer.sleep(50) end
       input = "1 2 +"
@@ -53,7 +53,7 @@ defmodule RPNCalculatorInspectionTest do
       assert pid in Keyword.get(Process.info(self()), :links)
       assert_receive {:EXIT, ^pid, :normal}
 
-      Process.flag(:trap_exit, false)
+      Process.flag(:trap_exit, old_value)
     end
 
     @tag :pending
@@ -126,7 +126,7 @@ defmodule RPNCalculatorInspectionTest do
     end
 
     @tag :pending
-    test "normal exit messages from processes whose pids don't match are ignored" do
+    test "normal exit messages from processes whose pids don't match stay in the inbox" do
       caller_process_pid = self()
       other_process_pid = spawn(fn -> nil end)
       test_data = %{pid: caller_process_pid, input: "5 0 /"}
@@ -141,10 +141,12 @@ defmodule RPNCalculatorInspectionTest do
                check_results_so_far
              ) ==
                expected_result
+
+      assert Keyword.get(Process.info(self()), :message_queue_len) == 1
     end
 
     @tag :pending
-    test "abnormal exit messages from processes whose pids don't match are ignored" do
+    test "abnormal exit messages from processes whose pids don't match stay in the inbox" do
       caller_process_pid = self()
       other_process_pid = spawn(fn -> nil end)
       test_data = %{pid: caller_process_pid, input: "2 2 +"}
@@ -159,10 +161,12 @@ defmodule RPNCalculatorInspectionTest do
                check_results_so_far
              ) ==
                expected_result
+
+      assert Keyword.get(Process.info(self()), :message_queue_len) == 1
     end
 
     @tag :pending
-    test "any other messages are ignored" do
+    test "any other messages stay in the inbox" do
       caller_process_pid = self()
       test_data = %{pid: caller_process_pid, input: "4 2 /"}
       check_results_so_far = %{"4 0 /" => :error}
@@ -178,6 +182,8 @@ defmodule RPNCalculatorInspectionTest do
                check_results_so_far
              ) ==
                expected_result
+
+      assert Keyword.get(Process.info(self()), :message_queue_len) == 3
     end
 
     @tag :pending
