@@ -32,15 +32,18 @@ If it receives an exit message with a different reason from the same process tha
 If it doesn't receive any messages matching those criteria in 100ms, it should return the results map with the value `:timeout` added under the key `input`.
 
 ```elixir
-send(self(), {:EXIT, self(), :normal})
+# when an exit message is waiting for the process in its inbox
+send(self(), {:EXIT, pid, :normal})
+
 RPNCalculatorInspection.await_reliability_check_result(
-  %{input: "5 7 -", pid: self()},
+  %{input: "5 7 -", pid: pid},
   %{}
 )
 # => %{"5 7 -" => :ok}
 
+# when there are no messages in the process inbox
 RPNCalculatorInspection.await_reliability_check_result(
-  %{input: "3 2 *", pid: self()},
+  %{input: "3 2 *", pid: pid},
   %{"5 7 -" => :ok}
 )
 # => %{"5 7 -" => :ok, "3 2 *" => :timeout}
