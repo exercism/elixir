@@ -62,7 +62,7 @@ parent_pid =
     receive do
       message ->
         IO.inspect(message, label: "received message")
-        
+
         receive do
           _ -> nil
         end

@@ -1,19 +1,18 @@
 # Instructions
 
-Your work at _Instruments of Texas_ on an experimental RPN calculator continues. Your team has  
-built a few prototypes that need to undergo a thorough inspection, to choose the best one that can be mass-produced.
+Your work at _Instruments of Texas_ on an experimental RPN calculator continues. Your team has built a few prototypes that need to undergo a thorough inspection, to choose the best one that can be mass-produced.
 
 You want to conduct two types of checks.
 
-Firstly, a reliability check that will detect inputs for which the calculator under inspection either crashes or doesn't respond fast enough. To isolate failures, the calculations for each input need to be run in a separate process. Linking and trapping exits in the caller process can be used to detect if the calculation finished or crashed. 
+Firstly, a reliability check that will detect inputs for which the calculator under inspection either crashes or doesn't respond fast enough. To isolate failures, the calculations for each input need to be run in a separate process. Linking and trapping exits in the caller process can be used to detect if the calculation finished or crashed.
 
-Secondly, a correctness check that will check if for a given input, the result returned by the calculator is as expected. Only calculators that already passed the reliability check will undergo a correctness check, so crashes are not a concern. However, the operations should be run concurrently to speed up the process, which makes it the perfect use case for asynchronous tasks. 
+Secondly, a correctness check that will check if for a given input, the result returned by the calculator is as expected. Only calculators that already passed the reliability check will undergo a correctness check, so crashes are not a concern. However, the operations should be run concurrently to speed up the process, which makes it the perfect use case for asynchronous tasks.
 
 ## 1. Start a reliability check for a single input
 
 Implement the `RPNCalculatorInspection.start_reliability_check/2` function. It should take 2 arguments, a function (the calculator), and an input for the calculator. It should return a map that contains the input and the PID of the spawned process.
 
-The spawned process should call the given calculator function with the given input. The process should be linked to the caller process. 
+The spawned process should call the given calculator function with the given input. The process should be linked to the caller process.
 
 ```elixir
 RPNCalculatorInspection.start_reliability_check(fn _ -> 0 end, "2 3 +")
@@ -53,7 +52,7 @@ Implement the `RPNCalculatorInspection.reliability_check/2` function. It should 
 
 For every input on the list, it should start the reliability check in a new linked process by using `start_reliability_check/2`. Then, for every process started this way, it should await its results by using `await_reliability_check_result/2`.
 
-Before starting any processes, the function needs to flag the current process to trap exits, to be able to receive exit messages. Afterwards, it should reset this flag to its original value. 
+Before starting any processes, the function needs to flag the current process to trap exits, to be able to receive exit messages. Afterwards, it should reset this flag to its original value.
 
 The function should return a map with the results of reliability checks of all the inputs.
 
