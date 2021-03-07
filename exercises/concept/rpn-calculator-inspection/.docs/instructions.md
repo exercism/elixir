@@ -76,7 +76,7 @@ RPNCalculatorInspection.reliability_check(fake_broken_calculator, inputs)
 
 Implement the `RPNCalculatorInspection.correctness_check/2` function. It should take 2 arguments, a function (the calculator), and a list of inputs for the calculator.
 
-For every input on the list, it should start an asynchronous task that will call the calculator with the given input. Then, for every task started this way, it should await its results.
+For every input on the list, it should start an asynchronous task that will call the calculator with the given input. Then, for every task started this way, it should await its results for 100ms.
 
 ```elixir
 fast_cheating_calculator = fn input -> 14 end
