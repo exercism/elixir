@@ -53,7 +53,9 @@ Implement the `RPNCalculatorInspection.reliability_check/2` function. It should 
 
 For every input on the list, it should start the reliability check in a new linked process by using `start_reliability_check/2`. Then, for every process started this way, it should await its results by using `await_reliability_check_result/2`.
 
-It should return a map with the results of reliability checks of all the inputs.
+Before starting any processes, the function needs to flag the current process to trap exits, to be able to receive exit messages. Afterwards, it should reset this flag to its original value. 
+
+The function should return a map with the results of reliability checks of all the inputs.
 
 ```elixir
 fake_broken_calculator = fn input ->

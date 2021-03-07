@@ -170,6 +170,36 @@ defmodule RPNCalculatorInspectionTest do
              ) ==
                expected_result
     end
+
+    test "doesn't change the trap_exit flag of the caller process" do
+      caller_process_pid = self()
+      Process.flag(:trap_exit, false)
+
+      test_data = %{pid: caller_process_pid, input: "30 3 /"}
+      check_results_so_far = %{}
+      expected_result = %{"30 3 /" => :ok}
+
+      send(caller_process_pid, {:EXIT, caller_process_pid, :normal})
+
+      assert RPNCalculatorInspection.await_reliability_check_result(
+               test_data,
+               check_results_so_far
+             ) ==
+               expected_result
+
+      assert Keyword.get(Process.info(self()), :trap_exit) == false
+      Process.flag(:trap_exit, true)
+
+      send(caller_process_pid, {:EXIT, caller_process_pid, :normal})
+
+      assert RPNCalculatorInspection.await_reliability_check_result(
+               test_data,
+               check_results_so_far
+             ) ==
+               expected_result
+
+      assert Keyword.get(Process.info(self()), :trap_exit) == true
+    end
   end
 
   describe "reliability_check" do
@@ -227,14 +257,34 @@ defmodule RPNCalculatorInspectionTest do
       assert RPNCalculatorInspection.reliability_check(calculator, inputs) == outputs
     end
 
-#    @tag :pending
-#    test "returns a map when input list has 1000 elements and all of them crash" do
-#      inputs = Enum.map(1..1000, &"#{2 * &1} 0 /")
-#      calculator = &RPNCalculator.unsafe_division/1
-#      outputs = 1..1000 |> Enum.map(&{"#{2 * &1} 0 /", :error}) |> Enum.into(%{})
-#
-#      assert RPNCalculatorInspection.reliability_check(calculator, inputs) == outputs
-#    end
+    #    @tag :pending
+    #    test "returns a map when input list has 1000 elements and all of them crash" do
+    #      inputs = Enum.map(1..1000, &"#{2 * &1} 0 /")
+    #      calculator = &RPNCalculator.unsafe_division/1
+    #      outputs = 1..1000 |> Enum.map(&{"#{2 * &1} 0 /", :error}) |> Enum.into(%{})
+    #
+    #      assert RPNCalculatorInspection.reliability_check(calculator, inputs) == outputs
+    #    end
+
+    @tag :pending
+    test "restores the original value of the trap_exit flag" do
+      inputs = ["3 0 /", "22 11 /", "4 0 /"]
+      calculator = &RPNCalculator.unsafe_division/1
+
+      outputs = %{
+        "3 0 /" => :error,
+        "22 11 /" => :ok,
+        "4 0 /" => :error
+      }
+
+      Process.flag(:trap_exit, false)
+      assert RPNCalculatorInspection.reliability_check(calculator, inputs) == outputs
+      assert Keyword.get(Process.info(self()), :trap_exit) == false
+
+      Process.flag(:trap_exit, true)
+      assert RPNCalculatorInspection.reliability_check(calculator, inputs) == outputs
+      assert Keyword.get(Process.info(self()), :trap_exit) == true
+    end
   end
 
   describe "correctness_check" do
