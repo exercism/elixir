@@ -17,6 +17,7 @@
 - `pids`
 - `enum`
 - `errors`
+- `maps`
 
 ## Analyzer
 
