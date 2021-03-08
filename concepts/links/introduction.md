@@ -14,4 +14,4 @@ Linking can also be used for _supervising_ processes. If a process _traps exits_
 
 A process can be configured to trap exists by calling `Process.flag(:trap_exit, true)`. Note that `Process.flag/2` returns the _old_ value of the flag, not the new one.
 
-The message that will be sent to the process in case of a linked process crash will match the pattern `{:EXIT, from, reason}`, where `from` is a PID. If `reason` is anything other than the atom `:normal`, that means that the process crashed or was forcefully killed.
+The message that will be sent to the process in case a linked process crash will match the pattern `{:EXIT, from, reason}`, where `from` is a PID. If `reason` is anything other than the atom `:normal`, that means that the process crashed or was forcefully killed.
