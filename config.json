@@ -1994,7 +1994,7 @@
       "uuid": "59a617b4-4f31-4e27-8af5-5d5283933f55",
       "slug": "links",
       "name": "Links",
-      "blurb": "TODO: links blurb"
+      "blurb": "Process links allow propagating failure form one process to another. Combined with trapping exits, they allow one process to function as a supervisor for other processes."
     },
     {
       "uuid": "9db9d827-ea45-46ca-bc0c-ef81363f9492",
