@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for dna-encoding exercise",
   "authors": [
     {
       "github_username": "neenjaw",
@@ -16,9 +17,15 @@
     }
   ],
   "files": {
-    "solution": ["lib/dna.ex"],
-    "test": ["test/dna_test.exs"],
-    "exemplar": [".meta/exemplar.ex"]
+    "solution": [
+      "lib/dna.ex"
+    ],
+    "test": [
+      "test/dna_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
   "language_versions": ">=1.10"
 }

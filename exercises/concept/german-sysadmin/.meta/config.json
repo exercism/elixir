@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for german-sysadmin exercise",
   "authors": [
     {
       "github_username": "angelikatyborska",
@@ -12,9 +13,15 @@
     }
   ],
   "files": {
-    "solution": ["lib/username.ex"],
-    "test": ["test/username_test.exs"],
-    "exemplar": [".meta/exemplar.ex"]
+    "solution": [
+      "lib/username.ex"
+    ],
+    "test": [
+      "test/username_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
   "language_versions": ">=1.10"
 }

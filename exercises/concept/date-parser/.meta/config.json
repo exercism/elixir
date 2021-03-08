@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for date-parser exercise",
   "authors": [
     {
       "github_username": "neenjaw",
@@ -12,9 +13,15 @@
     }
   ],
   "files": {
-    "solution": ["lib/date_parser.ex"],
-    "test": ["test/date_parser_test.exs"],
-    "exemplar": [".meta/exemplar.ex"]
+    "solution": [
+      "lib/date_parser.ex"
+    ],
+    "test": [
+      "test/date_parser_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
   "language_versions": ">=1.10"
 }

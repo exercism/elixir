@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for newsletter exercise",
   "authors": [
     {
       "github_username": "angelikatyborska",
@@ -6,9 +7,15 @@
     }
   ],
   "files": {
-    "solution": ["lib/newsletter.ex"],
-    "test": ["test/newsletter_test.exs"],
-    "exemplar": [".meta/exemplar.ex"]
+    "solution": [
+      "lib/newsletter.ex"
+    ],
+    "test": [
+      "test/newsletter_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
   "language_versions": ">=1.10"
 }

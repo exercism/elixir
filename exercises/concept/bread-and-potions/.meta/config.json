@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for bread-and-potions exercise",
   "authors": [
     {
       "github_username": "angelikatyborska",
@@ -12,9 +13,15 @@
     }
   ],
   "files": {
-    "solution": ["lib/rpg.ex"],
-    "test": ["test/rpg_test.exs"],
-    "exemplar": [".meta/exemplar.ex"]
+    "solution": [
+      "lib/rpg.ex"
+    ],
+    "test": [
+      "test/rpg_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
   "language_versions": ">=1.10"
 }

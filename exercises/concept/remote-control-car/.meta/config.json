@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for remote-control-car exercise",
   "authors": [
     {
       "github_username": "neenjaw",
@@ -12,10 +13,18 @@
     }
   ],
   "files": {
-    "solution": ["lib/remote_control_car.ex"],
-    "test": ["test/remote_control_car_test.exs"],
-    "exemplar": [".meta/exemplar.ex"]
+    "solution": [
+      "lib/remote_control_car.ex"
+    ],
+    "test": [
+      "test/remote_control_car_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
-  "forked_from": ["csharp/elons-toys"],
+  "forked_from": [
+    "csharp/elons-toys"
+  ],
   "language_versions": ">=1.10"
 }

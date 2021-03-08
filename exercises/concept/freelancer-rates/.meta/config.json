@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for freelancer-rates exercise",
   "authors": [
     {
       "github_username": "angelikatyborska",
@@ -12,10 +13,18 @@
     }
   ],
   "files": {
-    "solution": ["lib/freelancer_rates.ex"],
-    "test": ["test/freelancer_rates_test.exs"],
-    "exemplar": [".meta/exemplar.ex"]
+    "solution": [
+      "lib/freelancer_rates.ex"
+    ],
+    "test": [
+      "test/freelancer_rates_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
-  "forked_from": ["javascript/numbers"],
+  "forked_from": [
+    "javascript/numbers"
+  ],
   "language_versions": ">=1.10"
 }
