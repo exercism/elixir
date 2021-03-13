@@ -4,7 +4,7 @@ You are writing an embedded system for a Take-A-Number machine. It is a very sim
 
 ## 1. Start the machine
 
-Implement the `start/0` function. It should spawn a new process that has an initial state of `0` and is ready to receive messages. It should return the process' PID.
+Implement the `start/0` function. It should spawn a new process that has an initial state of `0` and is ready to receive messages. It should return the process's PID.
 
 ```elixir
 TakeANumber.start()
