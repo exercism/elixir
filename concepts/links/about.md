@@ -103,7 +103,7 @@ Process.alive?(parent_pid)
 # => true
 ```
 
-Note that trapping exits makes the process immune to crashes in _all_ of its linked processes, and exit messages might accumulate in the process' mailbox if left unread. For this reason, you should keep track of all the processes started by a process that traps exits. Usually, processes that trap exits are only responsible for supervising other processes and don't do anything else.
+Note that trapping exits makes the process immune to crashes in _all_ of its linked processes, and exit messages might accumulate in the process' mailbox if left unread. For this reason, you should keep track of all the processes linked to a process that traps exits. Usually, processes that trap exits are only responsible for supervising other processes and don't do anything else.
 
 In practice, you wouldn't implement a supervisor process from scratch yourself. Elixir provides an abstraction for this kind of functionality in the form of the [`Supervisor` behaviour][supervisor].
 
