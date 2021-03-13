@@ -11,9 +11,9 @@ To start a task, use `Task.async/1`. It takes an anonymous function as an argume
 
 To get the result of the execution, pass the `%Task{}` struct to `Task.await/2`. It will wait for the task to finish and return its result. The second argument is a timeout in milliseconds, defaulting to 5000.
 
-Note that between starting the task and awaiting on the task, the process that started the task is not blocked and might do other operations.
+Note that between starting the task and awaiting the task, the process that started the task is not blocked and might do other operations.
 
-Any task started with `Task.async/1` should be awaited on because it will send a message to the calling process. `Task.await/2` can be called for each task only once.
+Any task started with `Task.async/1` should be awaited because it will send a message to the calling process. `Task.await/2` can be called for each task only once.
 
 ## `start`/`start_link`
 
