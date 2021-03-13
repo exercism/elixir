@@ -6,6 +6,12 @@
       "exercism_username": "neenjaw"
     }
   ],
+  "contributors": [
+    {
+      "github_username": "angelikatyborska",
+      "exercism_username": "angelikatyborska"
+    }
+  ],
   "files": {
     "solution": ["lib/lucas_numbers.ex"],
     "test": ["test/lucas_numbers_test.exs"],
