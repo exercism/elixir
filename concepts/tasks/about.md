@@ -37,8 +37,8 @@ It's a common pattern to start async tasks and then await them using `Enum.map/2
 
 ```elixir
 inputs
-|> Enum.map(& Task.async(fn -> function.(&1) end))
-|> Enum.map(& Task.await(&1, 1_000))
+|> Enum.map(&Task.async(fn -> function.(&1) end))
+|> Enum.map(&Task.await(&1, 1_000))
 ```
 
 It's important to be aware that `Task.await` is synchronous, and every time it is called, it starts its timeout clock from 0. That means that when it's used in this way, sequentially, the timeouts add up.
@@ -57,8 +57,8 @@ We can use [`:timer.tc/1`][erlang-timer-tc], an Erlang function, to measure how 
 ```elixir
 :timer.tc(fn ->
   inputs
-  |> Enum.map(& Task.async(fn -> function.(&1) end))
-  |> Enum.map(& Task.await(&1, 1_000))
+  |> Enum.map(&Task.async(fn -> function.(&1) end))
+  |> Enum.map(&Task.await(&1, 1_000))
 end)
 
 # => {9004517, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
@@ -96,7 +96,7 @@ If you need to run tasks that perform different operations, you might need `Task
 
 ```elixir
 inputs
-|> Enum.map(& Task.async(fn -> function.(&1) end))
+|> Enum.map(&Task.async(fn -> function.(&1) end))
 |> Task.await_many(1_000)
 # => ** (exit) exited in: Task.await_many([...], 1000)
 #        ** (EXIT) time out
