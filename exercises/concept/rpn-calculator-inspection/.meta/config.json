@@ -5,6 +5,12 @@
       "exercism_username": "angelikatyborska"
     }
   ],
+  "contributors": [
+    {
+      "github_username": "neenjaw",
+      "exercism_username": "neenjaw"
+    }
+  ],
   "files": {
     "solution": ["lib/rpn_calculator_inspection.ex"],
     "test": ["test/rpn_calculator_inspection_test.exs"],

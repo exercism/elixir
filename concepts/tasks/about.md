@@ -43,7 +43,7 @@ inputs
 
 It's important to be aware that `Task.await` is synchronous, and every time it is called, it starts its timeout clock from 0. That means that when it's used in this way, sequentially, the timeouts add up.
 
-The first task that is awaited will run no longer than the timout, but the second task that is awaited will get to run for however long the first task ran, plus the timeout.
+The first task that is awaited will run no longer than the timeout, but the second task that is awaited will get to run for however long the first task ran, plus the timeout.
 
 Consider a situation where each task takes a little bit longer to run than the previous one, but the difference in task run duration is smaller than the await timeout.
 
@@ -66,7 +66,7 @@ end)
 
 9004517 microseconds is 9 seconds, much more than the given timeout of 1 second (1000 milliseconds).
 
-If this is the behaviour you want - great, go for it! If not, the alternative is to use either [`Task.async_stream/3`][task-async-stream] or [`Task.await_many/2`][task-await-many].
+If this is the behavior you want - great, go for it! If not, the alternative is to use either [`Task.async_stream/3`][task-async-stream] or [`Task.await_many/2`][task-await-many].
 
 ### `Task.async_stream/3`
 

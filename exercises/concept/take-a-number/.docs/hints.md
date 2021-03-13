@@ -13,7 +13,7 @@
 ## 2. Report the machine state
 
 - The machine's process needs to respond to messages.
-- There is [a built-in function that waits for a message to arrive in the process' mailbox][kernel-receive].
+- There is [a built-in function that waits for a message to arrive in the process's mailbox][kernel-receive].
 - There is [a built-in function that sends a message to another process][kernel-send].
 - Use recursion to wait for more than one message.
 - Pass the machine's state as an argument to the recursive function.
