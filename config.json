@@ -15,18 +15,10 @@
     "indent_size": 2
   },
   "files": {
-    "solution": [
-      "lib/%{snake_slug}.ex"
-    ],
-    "test": [
-      "test/%{snake_slug}_test.exs"
-    ],
-    "example": [
-      ".meta/example.ex"
-    ],
-    "exemplar": [
-      ".meta/exemplar.ex"
-    ]
+    "solution": ["lib/%{snake_slug}.ex"],
+    "test": ["test/%{snake_slug}_test.exs"],
+    "example": [".meta/example.ex"],
+    "exemplar": [".meta/exemplar.ex"]
   },
   "exercises": {
     "concept": [
@@ -352,6 +344,14 @@
         "uuid": "d99155cd-e03e-48a9-b1f0-ea8d2070a2fb",
         "concepts": ["links", "tasks"],
         "prerequisites": ["processes", "pids", "enum", "errors", "maps"],
+        "status": "wip"
+      },
+      {
+        "slug": "lucas-numbers",
+        "name": "Lucas Numbers",
+        "uuid": "b82ecdf0-9739-4e25-a261-aa815f8dbf0d",
+        "concepts": "streams",
+        "prerequisites": ["guards", "tuples", "lists", "anonymous-functions"],
         "status": "wip"
       }
     ],
