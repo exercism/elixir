@@ -7,7 +7,7 @@ defmodule LucasNumbers do
   """
   @spec generate(integer()) :: list(integer())
   def generate(count) when not is_integer(count) or count < 1 do
-    raise ArgumentError, "must generate at least 1 number"
+    raise ArgumentError, "count must be specified as an integer >= 1"
   end
 
   def generate(1) do

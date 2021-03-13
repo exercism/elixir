@@ -84,4 +84,16 @@ defmodule LucasNumbersTest do
 
     assert LucasNumbers.generate(25) == sequence
   end
+
+  test "catch incorrect non-integer arguments" do
+    assert_raise ArgumentError, "count must be specified as an integer >= 1", fn ->
+      LucasNumbers.generate("Hello world!")
+    end
+  end
+
+  test "catch incorrect integer arguments" do
+    assert_raise ArgumentError, "count must be specified as an integer >= 1", fn ->
+      LucasNumbers.generate(-1)
+    end
+  end
 end
