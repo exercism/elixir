@@ -345,6 +345,14 @@
           "if"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "rpn-calculator-inspection",
+        "name": "RPN Calculator Inspection",
+        "uuid": "d99155cd-e03e-48a9-b1f0-ea8d2070a2fb",
+        "concepts": ["links", "tasks"],
+        "prerequisites": ["processes", "pids", "enum", "errors", "maps"],
+        "status": "wip"
       }
     ],
     "practice": [
@@ -1435,9 +1443,9 @@
           "enum",
           "processes",
           "pids",
-          "task"
+          "tasks"
         ],
-        "practices": ["strings", "regular-expressions", "processes", "task"],
+        "practices": ["strings", "regular-expressions", "processes", "tasks"],
         "difficulty": 4
       },
       {
@@ -1775,8 +1783,8 @@
         "slug": "pythagorean-triplet",
         "name": "Pythagorean Triplet",
         "uuid": "087a2a3b-71e2-4473-ab2f-3be5240567b5",
-        "prerequisites": ["integers", "ranges", "list-comprehensions", "task"],
-        "practices": ["list-comprehensions", "task"],
+        "prerequisites": ["integers", "ranges", "list-comprehensions", "tasks"],
+        "practices": ["list-comprehensions", "tasks"],
         "difficulty": 5
       },
       {
@@ -1826,12 +1834,6 @@
     "foregone": ["robot-name"]
   },
   "concepts": [
-    {
-      "uuid": "da243817-5c15-461c-8305-dba188b6a527",
-      "slug": "file",
-      "name": "File",
-      "blurb": "Functions for working with files are provided by the File module."
-    },
     {
       "uuid": "e95023cf-6928-4ccc-ae09-d3cb93d96d0e",
       "slug": "access-behaviour",
@@ -1947,6 +1949,12 @@
       "blurb": "All errors in Elixir implement the Exception Behaviour. It provides an easy way to create your own custom errors."
     },
     {
+      "uuid": "da243817-5c15-461c-8305-dba188b6a527",
+      "slug": "file",
+      "name": "File",
+      "blurb": "Functions for working with files are provided by the File module."
+    },
+    {
       "uuid": "a0a894e1-c54d-4c7a-89bf-653e6efb0039",
       "slug": "floating-point-numbers",
       "name": "Floating Point Numbers",
@@ -1981,6 +1989,12 @@
       "slug": "keyword-lists",
       "name": "Keyword Lists",
       "blurb": "Keyword lists are a key-value data structure. A keyword list is a list of two-tuples, where the first element in the tuple is an atom. They are often used for passing options to functions."
+    },
+    {
+      "uuid": "59a617b4-4f31-4e27-8af5-5d5283933f55",
+      "slug": "links",
+      "name": "Links",
+      "blurb": "Process links allow propagating failure form one process to another. Combined with trapping exits, they allow one process to function as a supervisor for other processes."
     },
     {
       "uuid": "9db9d827-ea45-46ca-bc0c-ef81363f9492",
@@ -2095,6 +2109,12 @@
       "slug": "tail-call-recursion",
       "name": "Tail Call Recursion",
       "blurb": "A recursive function is tail-recursive if the last thing executed by the function is a call to itself. Tail-recursive functions allow for tail call optimization. It's an optimization that allows reusing the last stack frame by the next function call."
+    },
+    {
+      "uuid": "08e88033-01be-406b-a1a1-3657d920363c",
+      "slug": "tasks",
+      "name": "Tasks",
+      "blurb": "Tasks are processes meant to execute one specific operation. They usually don't communicate with other processes, but they can return a result to the process that started the task."
     },
     {
       "uuid": "eef1727c-e5d3-41de-801b-a57b85051363",
