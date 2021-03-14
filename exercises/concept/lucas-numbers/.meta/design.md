@@ -14,6 +14,9 @@ After completing this exercise, the student should:
 
 ## Prerequisites
 
-- `tuples`
+- `enum`
 - `guards`
+- `tuples`
+- `lists`
 - `anonymous-functions`
+- `errors`
