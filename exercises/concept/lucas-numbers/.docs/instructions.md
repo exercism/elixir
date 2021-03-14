@@ -16,9 +16,9 @@ LucasNumbers.generate(2)
 # => [2, 1]
 ```
 
-## 2. Create the streaming cases
+## 2. Create the generalized case
 
-For any sequence longer than 2, you know that you need to add the previous two numbers to get the next number and so on.
+For any sequence longer than 2, you know that you need to add the previous two numbers to get the next number and so on. Write the generalized case.
 
 ```elixir
 LucasNumbers.generate(3)

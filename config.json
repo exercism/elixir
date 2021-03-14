@@ -351,7 +351,13 @@
         "name": "Lucas Numbers",
         "uuid": "b82ecdf0-9739-4e25-a261-aa815f8dbf0d",
         "concepts": ["streams"],
-        "prerequisites": ["guards", "tuples", "lists", "anonymous-functions"],
+        "prerequisites": [
+          "guards",
+          "tuples",
+          "lists",
+          "anonymous-functions",
+          "errors"
+        ],
         "status": "wip"
       }
     ],
