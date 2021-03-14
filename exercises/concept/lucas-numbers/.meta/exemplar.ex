@@ -23,8 +23,7 @@ defmodule LucasNumbers do
       {2, 1}
       |> Stream.iterate(fn {a, b} -> {b, a + b} end)
       |> Stream.map(&elem(&1, 1))
-      |> Stream.take(count - 1)
-      |> Enum.to_list()
+      |> Enum.take(count - 1)
 
     [2 | sequence]
   end
