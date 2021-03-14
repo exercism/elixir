@@ -1,6 +1,6 @@
 # Instructions
 
-You are a huge fan of the [Numberphile Youtube channel](https://www.youtube.com/watch?v=PeUbRXnbmms) and you just saw a cool video about the _Lucas Number Sequence_. You want to create this sequence using elixir.
+You are a huge fan of the [Numberphile Youtube channel](https://www.youtube.com/watch?v=PeUbRXnbmms) and you just saw a cool video about the _Lucas Number Sequence_. You want to create this sequence using Elixir.
 
 While designing your function, you want to make use of _lazy evaluation_, so that you can generate as many numbers as you want, but only if you need to -- So you decide to use a stream:
 
