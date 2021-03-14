@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for rpn-calculator exercise",
+  "blurb": "Learn about errors and rescuing them by working on an experimental Reverse Polish Notation calculator.",
   "authors": [
     {
       "github_username": "neenjaw",

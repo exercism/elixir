@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for file-sniffer exercise",
+  "blurb": "Learn about binaries by verifying the mime type of files uploaded to your server.",
   "authors": [
     {
       "github_username": "neenjaw",

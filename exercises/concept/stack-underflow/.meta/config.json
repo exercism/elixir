@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for stack-underflow exercise",
+  "blurb": "Learn about defining custom exceptions by continuing work on your experimental Reverse Polish Notation calculator.",
   "authors": [
     {
       "github_username": "neenjaw",

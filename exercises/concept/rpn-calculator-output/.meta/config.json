@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for rpn-calculator-output exercise",
+  "blurb": "Learn about dynamic dispatch and advanced options for rescuing errors by implementing an output in your experimental Reverse Polish Notation calculator.",
   "authors": [
     {
       "github_username": "neenjaw",

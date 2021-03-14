@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for kitchen-calculator exercise",
+  "blurb": "Learn about tuples and pattern matching by converting common US baking measurements to the metric system.",
   "authors": [
     {
       "github_username": "neenjaw",
