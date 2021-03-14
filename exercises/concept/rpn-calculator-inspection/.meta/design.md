@@ -8,7 +8,7 @@
 
 ## Concepts
 
-- `task`
+- `tasks`
 - `links`
 
 ## Prerequisites
