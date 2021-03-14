@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for dna-encoding exercise",
+  "blurb": "Learn about bitstrings and tail call recursion by encoding DNA sequences as binary data.",
   "authors": [
     {
       "github_username": "neenjaw",
