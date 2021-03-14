@@ -2,7 +2,7 @@ defmodule Grains do
   @doc """
   Calculate two to the power of the input minus one.
   """
-  @spec square(pos_integer) :: {atom, pos_integer | String.t()}
+  @spec square(pos_integer) :: {:ok, pos_integer} | {:error, String.t()}
   def square(number) do
   end
 
