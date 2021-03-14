@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for log-level exercise",
+  "blurb": "Learn about atoms and the cond conditional expression by aggregating application logs.",
   "authors": [
     {
       "github_username": "neenjaw",
