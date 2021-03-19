@@ -1,0 +1,32 @@
+{
+  "docs": [
+    {
+      "uuid": "4450bb26-4bd7-4eee-878d-07a287bf3169",
+      "slug": "installation",
+      "path": "docs/INSTALLATION.md",
+      "title": "Installing Elixir locally",
+      "blurb": "Learn how to install Elixir locally to solve Exercism's exercises on your own machine"
+    },
+    {
+      "uuid": "eb148270-24b7-4f51-b0ad-b1c67a692a70",
+      "slug": "learning",
+      "path": "docs/LEARNING.md",
+      "title": "How to learn Elixir",
+      "blurb": "An overview of how to get started from scratch with Elixir"
+    },
+    {
+      "uuid": "554258a2-7e2e-418c-93de-2b19986261e8",
+      "slug": "tests",
+      "path": "docs/TESTS.md",
+      "title": "Testing on the Elixir track",
+      "blurb": "Learn how to test your Elixir exercises on Exercism"
+    },
+    {
+      "uuid": "e8a6e945-1d3c-43ba-a73a-27f530c6588e",
+      "slug": "resources",
+      "path": "docs/RESOURCES.md",
+      "title": "Useful Elixir resources",
+      "blurb": "A collection of useful resources to help you master Elixir"
+    }
+  ]
+}
