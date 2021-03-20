@@ -6,11 +6,12 @@ defmodule Form do
   defmodule Address do
     defstruct [:street, :postal_code, :city]
 
-    @type t() :: %__MODULE__{
-                   street: String.t(),
-                   postal_code: String.t(),
-                   city: String.t()
-                 }
+    @type t() ::
+            %__MODULE__{
+              street: String.t(),
+              postal_code: String.t(),
+              city: String.t()
+            }
   end
 
   @doc """
