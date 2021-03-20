@@ -1,0 +1,27 @@
+{
+  "blurb": "TODO",
+  "authors": [
+    {
+      "github_username": "angelikatyborska",
+      "exercism_username": "angelikatyborska"
+    }
+  ],
+  "contributors": [
+    {
+      "github_username": "neenjaw",
+      "exercism_username": "neenjaw"
+    }
+  ],
+  "files": {
+    "solution": [
+      "lib/form.ex"
+    ],
+    "test": [
+      "test/form_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
+  },
+  "language_versions": ">=1.10"
+}
