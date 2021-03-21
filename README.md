@@ -6,7 +6,7 @@ Exercism Exercises in Elixir
 
 ## Setup
 
-The exercises currently target Elixir >= 1.6 and Erlang/OTP >= 20. Detailed
+The exercises currently target Elixir >= 1.7 and Erlang/OTP >= 20. Detailed
 installation instructions can be found at
 [http://elixir-lang.org/install.html](http://elixir-lang.org/install.html).
 
@@ -57,4 +57,3 @@ To check formatting of all exercises and all documents, run `./bin/check_formatt
 If you want to help maintain the Elixir track, take a look at [HELLO.md](https://github.com/exercism/elixir/blob/master/HELLO.md). You will find there an introduction to all the possible ways you can help us.
 
 If you want to contribute to this repository specifically, please see [CONTRIBUTING.md](https://github.com/exercism/elixir/blob/master/CONTRIBUTING.md).
-
