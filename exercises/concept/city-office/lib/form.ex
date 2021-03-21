@@ -29,4 +29,9 @@ defmodule Form do
     #{String.upcase(postal_code)} #{String.upcase(city)}
     """
   end
+
+  @doc "very foo"
+  defp foo() do
+    "foo"
+  end
 end

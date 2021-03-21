@@ -1,6 +1,10 @@
 [
   {
-    "url": "",
-    "description": ""
+    "url": "https://hexdocs.pm/elixir/typespecs.html",
+    "description": "Documentation - Typespecs"
+  },
+  {
+    "url": "https://elixirschool.com/en/lessons/advanced/typespec/",
+    "description": "Elixir School - Typespecs"
   }
 ]

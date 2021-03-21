@@ -1,6 +1,10 @@
 [
   {
-    "url": "",
-    "description": ""
+    "url": "https://hexdocs.pm/elixir/writing-documentation.html",
+    "description": "Documentation - Writing Documentation"
+  },
+  {
+    "url": "https://elixirschool.com/en/lessons/basics/documentation/",
+    "description": "Elixir School - Documentation"
   }
 ]
