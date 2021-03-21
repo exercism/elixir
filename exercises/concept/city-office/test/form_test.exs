@@ -68,14 +68,16 @@ defmodule FormTest do
       {:ok, types} = Code.Typespec.fetch_types(unquote(module_name))
 
       type =
-        Enum.find(types, fn {:type, {type_name, _, _}} -> type_name == unquote(type_name) end)
+        Enum.find(types, fn {declaration, {type_name, _, _}} ->
+          declaration == :type && type_name == unquote(type_name)
+        end)
 
       {:type, type} = type
 
       {:"::", _, [_, type_definition]} = Code.Typespec.type_to_quoted(type)
 
       assert type,
-             "expected the module#{unquote(module_name)} to have a type named #{
+             "expected the module#{unquote(module_name)} to have a public type named #{
                unquote(type_name)
              }"
 
@@ -177,19 +179,31 @@ defmodule FormTest do
     end
   end
 
-  describe "the Form.Address module" do
-    test "has a custom 't' type" do
+  describe "custom types in the Form module" do
+    test "has a custom 'address_map' type" do
       expected_type_definition =
-        assert_type(
-          {Form.Address, :t},
-          "%Form.Address{city: String.t(), postal_code: String.t(), street: String.t()}"
-        )
+        "%{street: String.t(), postal_code: String.t(), city: String.t()}"
+
+      assert_type({Form, :address_map}, expected_type_definition)
+    end
+
+    test "has a custom 'address_tuple' type with named arguments" do
+      expected_type_definition =
+        "{street :: String.t(), postal_code :: String.t(), city :: String.t()}"
+
+      assert_type({Form, :address_tuple}, expected_type_definition)
+    end
+
+    test "has a custom 'address' type that is a union of 'address_map' and 'address_tuple'" do
+      expected_type_definition = "address_map() | address_tuple()"
+
+      assert_type({Form, :address}, expected_type_definition)
     end
   end
 
   describe "format_address/1" do
-    test "accepts a struct" do
-      input = %Form.Address{
+    test "accepts a map" do
+      input = %{
         street: "Wiejska 4/6/8",
         postal_code: "00-902",
         city: "Warsaw"
@@ -221,11 +235,7 @@ defmodule FormTest do
     end
 
     test "has a typespec" do
-      assert_spec(
-        {:format_address, 1},
-        "Form.Address.t() | {street :: String.t(), postal_code :: String.t(), city :: String.t()}",
-        "String.t()"
-      )
+      assert_spec({:format_address, 1}, "address()", "String.t()")
     end
   end
 end

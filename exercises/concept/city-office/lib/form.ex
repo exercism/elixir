@@ -1,8 +1,4 @@
 defmodule Form do
-  defmodule Address do
-    defstruct [:street, :postal_code, :city]
-  end
-
   def blanks(n) do
     String.duplicate("X", n)
   end
@@ -23,8 +19,8 @@ defmodule Form do
     end
   end
 
-  def format_address(%Address{} = address) do
-    format_address({address.street, address.postal_code, address.city})
+  def format_address(%{street: street, postal_code: postal_code, city: city}) do
+    format_address({street, postal_code, city})
   end
 
   def format_address({street, postal_code, city}) do
