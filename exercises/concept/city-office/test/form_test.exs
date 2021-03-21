@@ -1,6 +1,15 @@
 defmodule FormTest do
   use ExUnit.Case
 
+  # Dear Elixir learner,
+  # If you're reading this test suite to gain some insights,
+  # please be advised that it is somewhat unusual.
+  #
+  # Don't worry if you don't understand this test suite at this stage of your learning journey.
+  # We had to use some advanced features to be able to write assertions about docs and typespecs.
+  # You wouldn't normally write assertions for that in a typical codebase.
+  # We're doing it here strictly for educational purposes.
+
   defmacrop assert_moduledoc(expected_moduledoc) do
     quote do
       {:docs_v1, _, _, _, module_doc, _, _} = Code.fetch_docs(Form)
