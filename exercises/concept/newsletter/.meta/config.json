@@ -1,10 +1,7 @@
 {
   "blurb": "Learn about working with files by sending out a newsletter.",
   "authors": [
-    {
-      "github_username": "angelikatyborska",
-      "exercism_username": "angelikatyborska"
-    }
+    "angelikatyborska"
   ],
   "files": {
     "solution": [

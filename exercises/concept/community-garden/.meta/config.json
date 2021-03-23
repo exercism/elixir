@@ -1,24 +1,12 @@
 {
   "blurb": "Learn about the Agent module by helping your local community handle community garden registrations.",
   "authors": [
-    {
-      "github_username": "neenjaw",
-      "exercism_username": "neenjaw"
-    }
+    "neenjaw"
   ],
   "contributors": [
-    {
-      "github_username": "angelikatyborska",
-      "exercism_username": "angelikatyborska"
-    },
-    {
-      "github_username": "jrr",
-      "exercism_username": "jrr"
-    },
-    {
-      "github_username": "efx",
-      "exercism_username": "efx"
-    }
+    "angelikatyborska",
+    "jrr",
+    "efx"
   ],
   "files": {
     "solution": [
