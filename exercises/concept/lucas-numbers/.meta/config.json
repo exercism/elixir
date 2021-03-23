@@ -1,21 +1,21 @@
 {
   "blurb": "Learn about streams by generating the Lucas number sequence.",
   "authors": [
-    {
-      "github_username": "neenjaw",
-      "exercism_username": "neenjaw"
-    }
+    "neenjaw"
   ],
   "contributors": [
-    {
-      "github_username": "angelikatyborska",
-      "exercism_username": "angelikatyborska"
-    }
+    "angelikatyborska"
   ],
   "files": {
-    "solution": ["lib/lucas_numbers.ex"],
-    "test": ["test/lucas_numbers_test.exs"],
-    "exemplar": [".meta/exemplar.ex"]
+    "solution": [
+      "lib/lucas_numbers.ex"
+    ],
+    "test": [
+      "test/lucas_numbers_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
   "forked_from": [],
   "language_versions": ">=1.10"

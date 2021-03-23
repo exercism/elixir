@@ -1,20 +1,11 @@
 {
   "blurb": "Learn about Access Behaviour by helping extract deeply nested data for the basketball team's website.",
   "authors": [
-    {
-      "github_username": "neenjaw",
-      "exercism_username": "neenjaw"
-    }
+    "neenjaw"
   ],
   "contributors": [
-    {
-      "github_username": "angelikatyborska",
-      "exercism_username": "angelikatyborska"
-    },
-    {
-      "github_username": "NobbZ",
-      "exercism_username": "NobbZ"
-    }
+    "angelikatyborska",
+    "NobbZ"
   ],
   "files": {
     "solution": [

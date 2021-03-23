@@ -1,16 +1,10 @@
 {
   "blurb": "Learn about dynamic dispatch and advanced options for rescuing errors by implementing an output in your experimental Reverse Polish Notation calculator.",
   "authors": [
-    {
-      "github_username": "neenjaw",
-      "exercism_username": "neenjaw"
-    }
+    "neenjaw"
   ],
   "contributors": [
-    {
-      "github_username": "angelikatyborska",
-      "exercism_username": "angelikatyborska"
-    }
+    "angelikatyborska"
   ],
   "files": {
     "solution": [

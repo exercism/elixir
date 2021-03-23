@@ -1,16 +1,10 @@
 {
   "blurb": "Learn about nil and the if conditional expression by printing name badges for factory employees.",
   "authors": [
-    {
-      "github_username": "angelikatyborska",
-      "exercism_username": "angelikatyborska"
-    }
+    "angelikatyborska"
   ],
   "contributors": [
-    {
-      "github_username": "neenjaw",
-      "exercism_username": "neenjaw"
-    }
+    "neenjaw"
   ],
   "files": {
     "solution": [

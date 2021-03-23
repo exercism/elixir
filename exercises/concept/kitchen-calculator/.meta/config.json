@@ -1,16 +1,10 @@
 {
   "blurb": "Learn about tuples and pattern matching by converting common US baking measurements to the metric system.",
   "authors": [
-    {
-      "github_username": "neenjaw",
-      "exercism_username": "neenjaw"
-    }
+    "neenjaw"
   ],
   "contributors": [
-    {
-      "github_username": "angelikatyborska",
-      "exercism_username": "angelikatyborska"
-    }
+    "angelikatyborska"
   ],
   "files": {
     "solution": [

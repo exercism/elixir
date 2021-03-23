@@ -1,20 +1,11 @@
 {
   "blurb": "Learn about bitstrings and tail call recursion by encoding DNA sequences as binary data.",
   "authors": [
-    {
-      "github_username": "neenjaw",
-      "exercism_username": "neenjaw"
-    }
+    "neenjaw"
   ],
   "contributors": [
-    {
-      "github_username": "angelikatyborska",
-      "exercism_username": "angelikatyborska"
-    },
-    {
-      "github_username": "NobbZ",
-      "exercism_username": "NobbZ"
-    }
+    "angelikatyborska",
+    "NobbZ"
   ],
   "files": {
     "solution": [

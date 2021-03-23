@@ -1,21 +1,21 @@
 {
   "blurb": "Learn about tasks and links by inspecting a working prototype of your experimental Reverse Polish Notation calculator.",
   "authors": [
-    {
-      "github_username": "angelikatyborska",
-      "exercism_username": "angelikatyborska"
-    }
+    "angelikatyborska"
   ],
   "contributors": [
-    {
-      "github_username": "neenjaw",
-      "exercism_username": "neenjaw"
-    }
+    "neenjaw"
   ],
   "files": {
-    "solution": ["lib/rpn_calculator_inspection.ex"],
-    "test": ["test/rpn_calculator_inspection_test.exs"],
-    "exemplar": [".meta/exemplar.ex"]
+    "solution": [
+      "lib/rpn_calculator_inspection.ex"
+    ],
+    "test": [
+      "test/rpn_calculator_inspection_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
   "language_versions": ">=1.10"
 }
