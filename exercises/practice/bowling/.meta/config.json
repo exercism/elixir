@@ -1,6 +1,19 @@
 {
   "blurb": "Score a bowling game",
-  "authors": [],
+  "authors": [
+    "devonestes"
+  ],
+  "contributors": [
+    "angelikatyborska",
+    "britto",
+    "Cohen-Carlisle",
+    "lpil",
+    "neenjaw",
+    "NickNeck",
+    "parkerl",
+    "sotojuan",
+    "waiting-for-dev"
+  ],
   "files": {
     "solution": [
       "lib/bowling.ex"

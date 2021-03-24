@@ -1,6 +1,18 @@
 {
   "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base.",
-  "authors": [],
+  "authors": [
+    "ananthamapod"
+  ],
+  "contributors": [
+    "angelikatyborska",
+    "ChristianTovar",
+    "Cohen-Carlisle",
+    "devonestes",
+    "neenjaw",
+    "parkerl",
+    "sotojuan",
+    "ybod"
+  ],
   "files": {
     "solution": [
       "lib/all_your_base.ex"

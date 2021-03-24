@@ -1,6 +1,19 @@
 {
   "blurb": "Compute Pascal's triangle up to a given number of rows.",
-  "authors": [],
+  "authors": [
+    "dalexj"
+  ],
+  "contributors": [
+    "amencarini",
+    "angelikatyborska",
+    "Cohen-Carlisle",
+    "devonestes",
+    "lpil",
+    "neenjaw",
+    "parkerl",
+    "sotojuan",
+    "waiting-for-dev"
+  ],
   "files": {
     "solution": [
       "lib/pascals_triangle.ex"

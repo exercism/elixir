@@ -1,6 +1,18 @@
 {
   "blurb": "Refactor a Markdown parser",
   "authors": [],
+  "contributors": [
+    "angelikatyborska",
+    "Cohen-Carlisle",
+    "DanCouper",
+    "devonestes",
+    "lpil",
+    "martinsvalin",
+    "MeerKatDev",
+    "neenjaw",
+    "parkerl",
+    "sotojuan"
+  ],
   "files": {
     "solution": [
       "lib/markdown.ex"

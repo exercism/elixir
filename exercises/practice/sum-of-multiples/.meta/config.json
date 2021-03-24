@@ -1,6 +1,27 @@
 {
   "blurb": "Given a number, find the sum of all the multiples of particular numbers up to but not including that number.",
-  "authors": [],
+  "authors": [
+    "petehuang"
+  ],
+  "contributors": [
+    "andrewsardone",
+    "angelikatyborska",
+    "CoderDennis",
+    "Cohen-Carlisle",
+    "dalexj",
+    "devonestes",
+    "elasticdog",
+    "jinyeow",
+    "krishandley",
+    "kytrinyx",
+    "lpil",
+    "neenjaw",
+    "parkerl",
+    "rubysolo",
+    "sotojuan",
+    "Teapane",
+    "waiting-for-dev"
+  ],
   "files": {
     "solution": [
       "lib/sum_of_multiples.ex"

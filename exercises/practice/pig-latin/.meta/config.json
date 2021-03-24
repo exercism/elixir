@@ -1,6 +1,17 @@
 {
   "blurb": "Implement a program that translates from English to Pig Latin",
-  "authors": [],
+  "authors": [
+    "DoggettCK"
+  ],
+  "contributors": [
+    "alarregoity",
+    "angelikatyborska",
+    "Cohen-Carlisle",
+    "devonestes",
+    "moxley",
+    "neenjaw",
+    "sotojuan"
+  ],
   "files": {
     "solution": [
       "lib/pig_latin.ex"

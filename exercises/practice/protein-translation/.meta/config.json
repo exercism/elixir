@@ -1,6 +1,16 @@
 {
   "blurb": "Translate RNA sequences into proteins.",
-  "authors": [],
+  "authors": [
+    "DoggettCK"
+  ],
+  "contributors": [
+    "angelikatyborska",
+    "Cohen-Carlisle",
+    "devonestes",
+    "neenjaw",
+    "nwshane",
+    "sotojuan"
+  ],
   "files": {
     "solution": [
       "lib/protein_translation.ex"
