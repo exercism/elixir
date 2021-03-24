@@ -1944,7 +1944,7 @@
       "uuid": "868f024a-d84b-4893-a21f-1b27330d9788",
       "slug": "docs",
       "name": "Docs",
-      "blurb": "TODO: docs blurb"
+      "blurb": "Documentation in Elixir is a first-class citizen. Written in Markdown, it can be turned into beautiful webpages like Elixir's own documentation at hexdocs.pm/elixir."
     },
     {
       "uuid": "c809ee97-03d1-42a9-ae72-af1c4042b974",
