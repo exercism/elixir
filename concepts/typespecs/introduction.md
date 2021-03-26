@@ -2,7 +2,7 @@
 
 Elixir is a dynamically typed language, which means it doesn't provide compile-time type checks. Still, type specifications can be used as a form of documentation.
 
-A type specification can be added to a function using the `@spec` module attribute right before the function definition. `@spec` is followed by the function name and a list of all of its arguments' types, in brackets, separated by commas. The type of the return value is separated from the function's arguments with a double colon `::`.
+A type specification can be added to a function using the `@spec` module attribute right before the function definition. `@spec` is followed by the function name and a list of all of its arguments' types, in parentheses, separated by commas. The type of the return value is separated from the function's arguments with a double colon `::`.
 
 ```elixir
 @spec longer_than?(String.t(), non_neg_integer()) :: boolean()
