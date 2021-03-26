@@ -1,17 +1,7 @@
 {
   "blurb": "Learn about writing documentation and typespecs by getting your code ready for the arrival of a new colleague at the city office.",
-  "authors": [
-    {
-      "github_username": "angelikatyborska",
-      "exercism_username": "angelikatyborska"
-    }
-  ],
-  "contributors": [
-    {
-      "github_username": "neenjaw",
-      "exercism_username": "neenjaw"
-    }
-  ],
+  "authors": ["angelikatyborska"],
+  "contributors": ["neenjaw"],
   "files": {
     "solution": [
       "lib/form.ex"
