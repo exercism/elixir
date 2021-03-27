@@ -1,0 +1,17 @@
+{
+  "blurb": "Learn about writing documentation and typespecs by getting your code ready for the arrival of a new colleague at the city office.",
+  "authors": ["angelikatyborska"],
+  "contributors": ["neenjaw"],
+  "files": {
+    "solution": [
+      "lib/form.ex"
+    ],
+    "test": [
+      "test/form_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
+  },
+  "language_versions": ">=1.10"
+}

@@ -360,6 +360,21 @@
           "errors"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "city-office",
+        "name": "City Office",
+        "uuid": "07125322-4dce-4275-936e-4452a6aad32a",
+        "concepts": ["docs", "typespecs"],
+        "prerequisites": [
+          "integers",
+          "tuples",
+          "lists",
+          "strings",
+          "maps",
+          "multiple-clause-functions"
+        ],
+        "status": "wip"
       }
     ],
     "practice": [
@@ -1926,6 +1941,12 @@
       "blurb": "Named functions may declare default values for one or more of their arguments."
     },
     {
+      "uuid": "868f024a-d84b-4893-a21f-1b27330d9788",
+      "slug": "docs",
+      "name": "Docs",
+      "blurb": "Documentation in Elixir is a first-class citizen. Written in Markdown, it can be turned into beautiful webpages like Elixir's own documentation at hexdocs.pm/elixir."
+    },
+    {
       "uuid": "c809ee97-03d1-42a9-ae72-af1c4042b974",
       "slug": "dynamic-dispatch",
       "name": "Dynamic Dispatch",
@@ -2140,6 +2161,12 @@
       "slug": "tuples",
       "name": "Tuples",
       "blurb": "A tuple is a data structure which organizes data, holding a fixed number of items of any type, but without explicit names for each element. Tuples are ideal for storing related information together, but not for storing collections of items that need iterating or might grow or shrink."
+    },
+    {
+      "uuid": "cf4b56eb-d8c5-4180-820a-d839eaa0962a",
+      "slug": "typespecs",
+      "name": "Typespecs",
+      "blurb": "Elixir is a dynamically typed language, which means it doesn't provide compile-time type checks. Still, type specifications can be used as a form of documentation."
     }
   ],
   "key_features": [

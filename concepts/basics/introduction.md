@@ -63,13 +63,9 @@ Most built-in data types have a corresponding module that offers functions for w
 
 A notable module is the `Kernel` module. It provides the basic capabilities on top of which the rest of the standard library is built, like arithmetic operators, control-flow macros, and much more. Functions for the `Kernel` module are automatically imported, so you can use them without the `Kernel.` prefix.
 
-## Documentation
+## Code comments
 
-Documentation is a priority in high-quality Elixir code bases, and there are 3 ways to write inline documentation:
-
-- Comments can be used for inline documentation. Single line comments in Elixir are preceded by `#`.
-- Function-level documentation uses the `@doc` annotation preceding named function definitions
-- Module-level documentation uses the `@moduledoc` annotation following the module definition
+Comments can be used to leave notes for other developers reading the source code. Single line comments in Elixir are preceded by `#`.
 
 [functional-programming]: https://en.wikipedia.org/wiki/Functional_programming
 [docs]: https://hexdocs.pm/elixir/Kernel.html#content
