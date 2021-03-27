@@ -20,6 +20,7 @@ Anything that would put this exercise at the end of the concept tree or is not p
 - `@callback`
 - improper lists
 - structs
+- behaviours
 
 ## Prerequisites
 

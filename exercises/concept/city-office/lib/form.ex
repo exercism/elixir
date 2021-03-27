@@ -1,4 +1,5 @@
 defmodule Form do
+
   def blanks(n) do
     String.duplicate("X", n)
   end
@@ -28,10 +29,5 @@ defmodule Form do
     #{String.upcase(street)}
     #{String.upcase(postal_code)} #{String.upcase(city)}
     """
-  end
-
-  @doc "very foo"
-  defp foo() do
-    "foo"
   end
 end

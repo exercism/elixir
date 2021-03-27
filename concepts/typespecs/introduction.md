@@ -9,9 +9,9 @@ A type specification can be added to a function using the `@spec` module attribu
 def longer_than?(string, length), do: String.length(string) > length
 ```
 
-## Built-in types
+## Types
 
-Most commonly used built-in types include:
+Most commonly used types include:
 
 - booleans: `boolean()`
 - strings: `String.t()`
@@ -19,13 +19,17 @@ Most commonly used built-in types include:
 - lists: `list()`
 - a value of any type: `any()`
 
-Some types can also be parametrized, for example `list(integer)` is a list of integers. Literal values can be used as types.
+Some types can also be parameterized, for example `list(integer)` is a list of integers.
+
+Literal values can also be used as types.
+
+A union of types can be written using the pipe `|`. For example, `integer() | :error` means either an integer of the atom literal `:error`.
 
 A full list of all types can be found in the ["Typespecs" section in the official documentation][types].
 
 ## Naming arguments
 
-Arguments in the typespec could also be named which is useful for distinguishing multiple arguments of the same type. The argument name, followed by a double color, goes before the argument's type.
+Arguments in the typespec could also be named which is useful for distinguishing multiple arguments of the same type. The argument name, followed by a double colon, goes before the argument's type.
 
 ```elixir
 @spec to_hex({hue :: integer, saturation :: integer, lightness :: integer}) :: String.t()

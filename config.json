@@ -2166,7 +2166,7 @@
       "uuid": "cf4b56eb-d8c5-4180-820a-d839eaa0962a",
       "slug": "typespecs",
       "name": "Typespecs",
-      "blurb": "TODO: typespecs blurb"
+      "blurb": "Elixir is a dynamically typed language, which means it doesn't provide compile-time type checks. Still, type specifications can be used as a form of documentation."
     }
   ],
   "key_features": [
