@@ -1,5 +1,4 @@
 defmodule Form do
-
   def blanks(n) do
     String.duplicate("X", n)
   end
