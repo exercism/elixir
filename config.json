@@ -930,7 +930,7 @@
           "multiple-clause-functions",
           "binaries"
         ],
-        "practices": ["recursion", "lists"],
+        "practices": ["recursion"],
         "difficulty": 3
       },
       {
@@ -954,7 +954,7 @@
           "enum",
           "recursion"
         ],
-        "practices": ["enum", "recursion"],
+        "practices": ["enum"],
         "difficulty": 2
       },
       {
@@ -1211,7 +1211,7 @@
           "enum",
           "strings"
         ],
-        "practices": ["recursion", "tail-call-recursion"],
+        "practices": ["tail-call-recursion"],
         "difficulty": 3,
         "status": "deprecated"
       },
@@ -1292,7 +1292,7 @@
           "recursion",
           "ranges"
         ],
-        "practices": ["strings", "charlists"],
+        "practices": ["charlists"],
         "difficulty": 5
       },
       {
