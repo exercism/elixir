@@ -76,6 +76,11 @@ defmodule ListOpsTest do
     test "huge list" do
       assert L.filter(Enum.to_list(1..1_000_000), &odd?/1) == Enum.map(1..500_000, &(&1 * 2 - 1))
     end
+
+    @tag :pending
+    test "truthy values filter the list" do
+      assert L.filter([true, false, nil, 0, 1, ""], & &1) == [true, 0, 1, ""]
+    end
   end
 
   describe "foldl" do
