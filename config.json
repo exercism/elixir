@@ -411,7 +411,7 @@
           "maps",
           "pipe-operator"
         ],
-        "practices": ["strings", "regular-expressions", "pipe-operator"],
+        "practices": ["regular-expressions", "pipe-operator"],
         "difficulty": 3
       },
       {
@@ -437,7 +437,7 @@
         "name": "Bob",
         "uuid": "d20b49dc-cb6d-45fc-a168-78d002072c75",
         "prerequisites": ["booleans", "strings", "regular-expressions", "cond"],
-        "practices": ["booleans", "strings", "cond"],
+        "practices": ["booleans", "cond"],
         "difficulty": 3
       },
       {
@@ -452,11 +452,7 @@
           "enum",
           "recursion"
         ],
-        "practices": [
-          "multiple-clause-functions",
-          "default-arguments",
-          "strings"
-        ],
+        "practices": ["multiple-clause-functions", "default-arguments"],
         "difficulty": 3
       },
       {
@@ -474,7 +470,7 @@
           "structs",
           "default-arguments"
         ],
-        "practices": ["pattern-matching", "structs"],
+        "practices": ["structs", "multiple-clause-functions"],
         "difficulty": 6
       },
       {
@@ -488,7 +484,7 @@
           "multiple-clause-functions",
           "pattern-matching"
         ],
-        "practices": ["lists", "recursion", "tail-call-recursion"],
+        "practices": ["lists", "tail-call-recursion"],
         "difficulty": 6
       },
       {
@@ -506,7 +502,7 @@
           "case",
           "if"
         ],
-        "practices": ["strings", "regular-expressions"],
+        "practices": ["regular-expressions"],
         "difficulty": 5
       },
       {
@@ -531,7 +527,7 @@
           "pattern-matching",
           "multiple-clause-functions"
         ],
-        "practices": ["structs", "recursion"],
+        "practices": ["structs"],
         "difficulty": 8
       },
       {
@@ -596,7 +592,7 @@
         "name": "Two Fer",
         "uuid": "e7f3280e-0bef-4fac-8a69-cbfa2e5f818a",
         "prerequisites": ["strings", "guards", "default-arguments"],
-        "practices": ["strings", "guards", "default-arguments"],
+        "practices": ["guards", "default-arguments"],
         "difficulty": 1
       },
       {
@@ -604,7 +600,7 @@
         "name": "Nucleotide Count",
         "uuid": "7404e885-747a-46fc-be0c-c53f4b0e162f",
         "prerequisites": ["charlists", "maps", "enum"],
-        "practices": ["charlists", "enum", "maps"],
+        "practices": ["charlists", "maps"],
         "difficulty": 2
       },
       {
@@ -640,7 +636,7 @@
           "binaries",
           "regular-expressions"
         ],
-        "practices": ["strings", "case", "pattern-matching"],
+        "practices": ["case", "pattern-matching"],
         "difficulty": 2
       },
       {
@@ -769,7 +765,7 @@
           "enum",
           "pipe-operator"
         ],
-        "practices": ["strings", "enum", "pipe-operator"],
+        "practices": ["pipe-operator"],
         "difficulty": 2
       },
       {
@@ -812,7 +808,7 @@
           "recursion",
           "pipe-operator"
         ],
-        "practices": ["strings", "enum", "pipe-operator", "maps"],
+        "practices": ["pipe-operator", "maps"],
         "difficulty": 2
       },
       {
@@ -836,7 +832,7 @@
         "name": "Isogram",
         "uuid": "55a20a0f-0131-4e4e-b14f-f3cb49e3cc04",
         "prerequisites": ["strings", "enum", "regular-expressions"],
-        "practices": ["enum", "regular-expressions"],
+        "practices": ["regular-expressions"],
         "difficulty": 3
       },
       {
@@ -853,7 +849,7 @@
           "maps",
           "ranges"
         ],
-        "practices": ["multiple-clause-functions", "strings", "recursion"],
+        "practices": ["multiple-clause-functions"],
         "difficulty": 3
       },
       {
@@ -866,7 +862,7 @@
           "multiple-clause-functions",
           "guards"
         ],
-        "practices": ["integers", "recursion", "guards"],
+        "practices": ["integers", "guards"],
         "difficulty": 2
       },
       {
@@ -914,7 +910,7 @@
           "guards",
           "nil"
         ],
-        "practices": ["lists", "recursion", "nil"],
+        "practices": ["lists", "nil"],
         "difficulty": 3
       },
       {
@@ -934,7 +930,7 @@
           "multiple-clause-functions",
           "binaries"
         ],
-        "practices": ["strings", "recursion", "pattern-matching"],
+        "practices": ["recursion"],
         "difficulty": 3
       },
       {
@@ -958,7 +954,7 @@
           "enum",
           "recursion"
         ],
-        "practices": ["enum", "recursion"],
+        "practices": ["enum"],
         "difficulty": 2
       },
       {
@@ -966,7 +962,7 @@
         "name": "Matrix",
         "uuid": "f0df392c-8ace-4639-b555-5e61e54a854e",
         "prerequisites": ["strings", "enum", "structs", "tuples", "maps"],
-        "practices": ["strings", "enum", "structs", "tuples", "maps"],
+        "practices": ["structs", "tuples", "maps"],
         "difficulty": 3
       },
       {
@@ -1008,7 +1004,7 @@
           "ranges",
           "module-attributes-as-constants"
         ],
-        "practices": ["guards", "maps", "module-attributes-as-constants"],
+        "practices": ["guards", "module-attributes-as-constants"],
         "difficulty": 3
       },
       {
@@ -1029,7 +1025,7 @@
           "errors",
           "exceptions"
         ],
-        "practices": ["integers", "recursion", "ranges", "errors"],
+        "practices": ["integers", "ranges", "errors"],
         "difficulty": 2
       },
       {
@@ -1060,7 +1056,7 @@
           "ranges",
           "enum"
         ],
-        "practices": ["strings", "regular-expressions", "ranges"],
+        "practices": ["regular-expressions", "ranges"],
         "difficulty": 3
       },
       {
@@ -1097,7 +1093,7 @@
           "case",
           "if"
         ],
-        "practices": ["maps", "enum", "pattern-matching"],
+        "practices": ["maps", "pattern-matching"],
         "difficulty": 4
       },
       {
@@ -1118,11 +1114,7 @@
           "tail-call-recursion",
           "enum"
         ],
-        "practices": [
-          "integers",
-          "multiple-clause-functions",
-          "pattern-matching"
-        ],
+        "practices": ["integers", "multiple-clause-functions"],
         "difficulty": 2
       },
       {
@@ -1159,7 +1151,7 @@
           "erlang-libraries",
           "bit-manipulation"
         ],
-        "practices": ["atoms", "tuples", "enum", "ranges"],
+        "practices": ["atoms", "tuples", "ranges"],
         "difficulty": 3
       },
       {
@@ -1192,13 +1184,7 @@
           "recursion",
           "tail-call-recursion"
         ],
-        "practices": [
-          "atoms",
-          "tuples",
-          "pattern-matching",
-          "recursion",
-          "tail-call-recursion"
-        ],
+        "practices": ["atoms", "tuples", "tail-call-recursion"],
         "difficulty": 1
       },
       {
@@ -1225,7 +1211,7 @@
           "enum",
           "strings"
         ],
-        "practices": ["recursion", "tail-call-recursion", "strings"],
+        "practices": ["tail-call-recursion"],
         "difficulty": 3,
         "status": "deprecated"
       },
@@ -1244,7 +1230,7 @@
           "enum",
           "maps"
         ],
-        "practices": ["integers", "enum"],
+        "practices": ["integers"],
         "difficulty": 7
       },
       {
@@ -1252,7 +1238,7 @@
         "name": "Transpose",
         "uuid": "ce270a34-add1-422c-bb86-53b310f05e27",
         "prerequisites": ["strings", "enum"],
-        "practices": ["strings", "enum"],
+        "practices": ["enum"],
         "difficulty": 5
       },
       {
@@ -1271,12 +1257,7 @@
           "maps",
           "binaries"
         ],
-        "practices": [
-          "strings",
-          "multiple-clause-functions",
-          "pattern-matching",
-          "enum"
-        ],
+        "practices": ["strings", "multiple-clause-functions"],
         "difficulty": 6
       },
       {
@@ -1297,12 +1278,7 @@
           "regular-expressions",
           "module-attributes-as-constants"
         ],
-        "practices": [
-          "strings",
-          "enum",
-          "maps",
-          "module-attributes-as-constants"
-        ],
+        "practices": ["maps", "module-attributes-as-constants"],
         "difficulty": 3
       },
       {
@@ -1316,7 +1292,7 @@
           "recursion",
           "ranges"
         ],
-        "practices": ["charlists", "strings", "enum", "ranges"],
+        "practices": ["charlists"],
         "difficulty": 5
       },
       {
@@ -1336,7 +1312,7 @@
           "recursion",
           "enum"
         ],
-        "practices": ["integers", "strings", "enum"],
+        "practices": ["integers"],
         "difficulty": 5
       },
       {
@@ -1358,7 +1334,7 @@
           "module-attributes-as-constants",
           "default-arguments"
         ],
-        "practices": ["lists", "enum", "module-attributes-as-constants"],
+        "practices": ["lists", "module-attributes-as-constants"],
         "difficulty": 5
       },
       {
@@ -1378,7 +1354,7 @@
           "ranges",
           "streams"
         ],
-        "practices": ["strings", "enum", "ranges"],
+        "practices": ["ranges"],
         "difficulty": 6
       },
       {
@@ -1404,7 +1380,7 @@
           "recursion",
           "enum"
         ],
-        "practices": ["strings", "charlists", "ranges"],
+        "practices": ["charlists"],
         "difficulty": 3,
         "status": "deprecated"
       },
@@ -1423,7 +1399,7 @@
           "enum",
           "recursion"
         ],
-        "practices": ["atoms", "cond", "pattern-matching", "enum", "recursion"],
+        "practices": ["atoms", "cond", "pattern-matching"],
         "difficulty": 3
       },
       {
@@ -1441,7 +1417,6 @@
         ],
         "practices": [
           "multiple-clause-functions",
-          "pattern-matching",
           "recursion",
           "tail-call-recursion"
         ],
@@ -1467,7 +1442,7 @@
           "pids",
           "tasks"
         ],
-        "practices": ["strings", "regular-expressions", "processes", "tasks"],
+        "practices": ["processes", "tasks"],
         "difficulty": 4
       },
       {
@@ -1483,7 +1458,7 @@
           "errors",
           "exceptions"
         ],
-        "practices": ["enum", "ranges", "list-comprehensions"],
+        "practices": ["ranges", "list-comprehensions"],
         "difficulty": 5
       },
       {
@@ -1491,7 +1466,7 @@
         "name": "Pascals Triangle",
         "uuid": "b85c37c7-a76e-41fa-9ce6-abcdba2bd683",
         "prerequisites": ["enum", "ranges", "recursion"],
-        "practices": ["enum", "ranges", "recursion"],
+        "practices": ["recursion"],
         "difficulty": 3
       },
       {
@@ -1499,7 +1474,7 @@
         "name": "Spiral Matrix",
         "uuid": "cf28d2b2-763e-404b-90b0-637263d3bba6",
         "prerequisites": ["lists", "enum", "recursion"],
-        "practices": ["lists", "enum", "recursion"],
+        "practices": ["lists", "recursion"],
         "difficulty": 4
       },
       {
@@ -1526,7 +1501,7 @@
         "name": "Saddle Points",
         "uuid": "8e5c050a-ff42-4a23-ba32-84595b7476f4",
         "prerequisites": ["lists", "strings", "enum", "maps"],
-        "practices": ["enum", "maps"],
+        "practices": ["maps"],
         "difficulty": 5
       },
       {
@@ -1615,7 +1590,7 @@
           "randomness",
           "erlang-libraries"
         ],
-        "practices": ["strings", "charlists", "randomness"],
+        "practices": ["charlists", "randomness"],
         "difficulty": 3
       },
       {
@@ -1623,7 +1598,7 @@
         "name": "Allergies",
         "uuid": "9a1b599c-3175-4166-9b53-491a2f565db6",
         "prerequisites": ["lists", "maps", "enum", "bit-manipulation"],
-        "practices": ["bit-manipulation", "enum"],
+        "practices": ["bit-manipulation"],
         "difficulty": 4
       },
       {
@@ -1640,7 +1615,7 @@
           "enum",
           "erlang-libraries"
         ],
-        "practices": ["strings", "enum"],
+        "practices": ["strings"],
         "difficulty": 4
       },
       {
@@ -1658,7 +1633,7 @@
           "errors",
           "exceptions"
         ],
-        "practices": ["integers", "enum"],
+        "practices": ["integers"],
         "difficulty": 4
       },
       {
@@ -1715,7 +1690,7 @@
           "if",
           "structs"
         ],
-        "practices": ["enum", "pattern-matching"],
+        "practices": ["pattern-matching"],
         "difficulty": 8
       },
       {
@@ -1750,7 +1725,7 @@
           "regular-expressions",
           "file"
         ],
-        "practices": ["case", "strings", "regular-expressions", "file"],
+        "practices": ["case", "regular-expressions", "file"],
         "difficulty": 4
       },
       {
@@ -1758,7 +1733,7 @@
         "name": "Difference Of Squares",
         "uuid": "bb9b24da-1ee6-42fb-936f-5fc41d97ee27",
         "prerequisites": ["integers", "enum", "ranges"],
-        "practices": ["enum", "ranges"],
+        "practices": ["ranges"],
         "difficulty": 4
       },
       {
@@ -1778,7 +1753,7 @@
           "recursion",
           "tail-call-recursion"
         ],
-        "practices": ["recursion", "tail-call-recursion"],
+        "practices": ["tail-call-recursion"],
         "difficulty": 4
       },
       {
@@ -1798,7 +1773,7 @@
           "charlists",
           "ranges"
         ],
-        "practices": ["strings", "enum", "pattern-matching"],
+        "practices": ["strings", "pattern-matching"],
         "difficulty": 7
       },
       {
@@ -1826,7 +1801,7 @@
           "errors",
           "exceptions"
         ],
-        "practices": ["regular-expressions", "pattern-matching"],
+        "practices": ["pattern-matching"],
         "difficulty": 7
       },
       {
