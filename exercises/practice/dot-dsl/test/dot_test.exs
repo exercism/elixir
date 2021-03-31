@@ -25,7 +25,7 @@ defmodule DotTest do
 
   @tag :pending
   test "graph with one node" do
-    assert %Graph{nodes: [{:a, []}]} ==
+    assert %Graph{nodes: %{a: %{}}} ==
              exprt(
                Dot.graph do
                  a
@@ -35,7 +35,7 @@ defmodule DotTest do
 
   @tag :pending
   test "graph with one node with keywords" do
-    assert %Graph{nodes: [{:a, [color: :green]}]} ==
+    assert %Graph{nodes: %{a: %{color: :green}}} ==
              exprt(
                Dot.graph do
                  a(color: :green)
@@ -45,7 +45,10 @@ defmodule DotTest do
 
   @tag :pending
   test "graph with one edge" do
-    assert %Graph{edges: [{:a, :b, []}]} ==
+    assert %Graph{
+             nodes: %{a: %{}, b: %{}},
+             edges: [{:a, :b, %{}}]
+           } ==
              exprt(
                Dot.graph do
                  a -- b
@@ -55,7 +58,7 @@ defmodule DotTest do
 
   @tag :pending
   test "graph with just attribute" do
-    assert %Graph{attrs: [foo: 1]} ==
+    assert %Graph{attrs: %{foo: 1}} ==
              exprt(
                Dot.graph do
                  graph(foo: 1)
@@ -64,11 +67,11 @@ defmodule DotTest do
   end
 
   @tag :pending
-  test "graph with attributes" do
+  test "graph with attrs" do
     assert %Graph{
-             attrs: [bar: true, foo: 1, title: "Testing Attrs"],
-             nodes: [{:a, [color: :green]}, {:b, [label: "Beta!"]}, {:c, []}],
-             edges: [{:a, :b, [color: :blue]}, {:b, :c, []}]
+             attrs: %{bar: true, foo: 1, title: "Testing Attrs"},
+             nodes: %{a: %{color: :green}, b: %{label: "Beta!"}, c: %{}},
+             edges: [{:a, :b, %{color: :blue}}, {:b, :c, %{}}]
            } ==
              exprt(
                Dot.graph do
