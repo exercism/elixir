@@ -1,6 +1,14 @@
 {
   "blurb": "Randomly generate Dungeons & Dragons characters",
-  "authors": [],
+  "authors": [
+    "Br1ght0ne"
+  ],
+  "contributors": [
+    "angelikatyborska",
+    "Cohen-Carlisle",
+    "devonestes",
+    "neenjaw"
+  ],
   "files": {
     "solution": [
       "lib/dnd_character.ex"

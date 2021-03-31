@@ -1,6 +1,26 @@
 {
   "blurb": "Calculate the date of meetups.",
-  "authors": [],
+  "authors": [
+    "rubysolo"
+  ],
+  "contributors": [
+    "andrewsardone",
+    "angelikatyborska",
+    "Br1ght0ne",
+    "Cohen-Carlisle",
+    "dalexj",
+    "devonestes",
+    "henrik",
+    "jinyeow",
+    "lpil",
+    "neenjaw",
+    "olleolleolle",
+    "parkerl",
+    "pminten",
+    "sotojuan",
+    "Teapane",
+    "waiting-for-dev"
+  ],
   "files": {
     "solution": [
       "lib/meetup.ex"

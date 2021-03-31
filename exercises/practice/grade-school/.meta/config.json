@@ -1,6 +1,30 @@
 {
   "blurb": "Given students' names along with the grade that they are in, create a roster for the school",
-  "authors": [],
+  "authors": [
+    "rubysolo"
+  ],
+  "contributors": [
+    "andrewsardone",
+    "angelikatyborska",
+    "bartj3",
+    "Cohen-Carlisle",
+    "dalexj",
+    "devonestes",
+    "drueck",
+    "elasticdog",
+    "jinyeow",
+    "kytrinyx",
+    "lpil",
+    "neenjaw",
+    "parkerl",
+    "petehuang",
+    "pminten",
+    "sotojuan",
+    "Teapane",
+    "veelenga",
+    "victorlcampos",
+    "waiting-for-dev"
+  ],
   "files": {
     "solution": [
       "lib/school.ex"

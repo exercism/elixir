@@ -1,6 +1,16 @@
 {
   "blurb": "Output the lyrics to 'The Twelve Days of Christmas'",
-  "authors": [],
+  "authors": [
+    "DoggettCK"
+  ],
+  "contributors": [
+    "angelikatyborska",
+    "Cohen-Carlisle",
+    "devonestes",
+    "neenjaw",
+    "PatrickMcSweeny",
+    "sotojuan"
+  ],
   "files": {
     "solution": [
       "lib/twelve_days.ex"

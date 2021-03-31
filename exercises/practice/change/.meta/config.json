@@ -1,6 +1,20 @@
 {
   "blurb": "Correctly determine change to be given using the least number of coins",
-  "authors": [],
+  "authors": [
+    "bernardoamc"
+  ],
+  "contributors": [
+    "angelikatyborska",
+    "Cohen-Carlisle",
+    "devonestes",
+    "lpil",
+    "neenjaw",
+    "parkerl",
+    "sotojuan",
+    "veelenga",
+    "waiting-for-dev",
+    "weapp"
+  ],
   "files": {
     "solution": [
       "lib/change.ex"

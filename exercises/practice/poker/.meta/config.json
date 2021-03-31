@@ -1,6 +1,15 @@
 {
   "blurb": "Pick the best hand(s) from a list of poker hands.",
   "authors": [],
+  "contributors": [
+    "angelikatyborska",
+    "britto",
+    "Cohen-Carlisle",
+    "devonestes",
+    "neenjaw",
+    "parkerl",
+    "sotojuan"
+  ],
   "files": {
     "solution": [
       "lib/poker.ex"

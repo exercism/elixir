@@ -1,6 +1,17 @@
 {
   "blurb": "Write a robot simulator.",
   "authors": [],
+  "contributors": [
+    "amencarini",
+    "angelikatyborska",
+    "Cohen-Carlisle",
+    "devonestes",
+    "ebiven",
+    "lpil",
+    "neenjaw",
+    "parkerl",
+    "sotojuan"
+  ],
   "files": {
     "solution": [
       "lib/robot_simulator.ex"

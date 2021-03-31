@@ -1,6 +1,29 @@
 {
   "blurb": "Given a phrase, count the occurrences of each word in that phrase.",
-  "authors": [],
+  "authors": [
+    "rubysolo"
+  ],
+  "contributors": [
+    "andrewsardone",
+    "angelikatyborska",
+    "chriseyre2000",
+    "Cohen-Carlisle",
+    "dalexj",
+    "dantswain",
+    "devonestes",
+    "henrik",
+    "kronn",
+    "kytrinyx",
+    "lpil",
+    "lucasprag",
+    "MarcosX",
+    "neenjaw",
+    "parkerl",
+    "patrickgombert",
+    "sotojuan",
+    "Teapane",
+    "waiting-for-dev"
+  ],
   "files": {
     "solution": [
       "lib/word_count.ex"
