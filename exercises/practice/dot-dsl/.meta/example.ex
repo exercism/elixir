@@ -1,5 +1,5 @@
 defmodule Graph do
-  defstruct attrs: [], nodes: [], edges: []
+  defstruct attrs: [], nodes: %{}, edges: []
 end
 
 defmodule Dot do
@@ -9,10 +9,10 @@ defmodule Dot do
   defmacro graph(do: ast) do
     g = do_graph(ast)
 
-    Macro.escape(%Graph{
-      attrs: Enum.sort(g.attrs),
-      nodes: Enum.sort(g.nodes),
-      edges: Enum.sort(g.edges)
+    Macro.escape(%{
+      g
+      | attrs: Enum.sort(g.attrs),
+        edges: Enum.sort(g.edges)
     })
   end
 
@@ -37,13 +37,13 @@ defmodule Dot do
   end
 
   defp do_stmt({atom, _, nil}, g) when is_atom(atom) and atom != :-- do
-    %{g | nodes: [{atom, []} | g.nodes]}
+    %{g | nodes: Map.put(g.nodes, atom, [])}
   end
 
   defp do_stmt(stmt = {atom, _, [kws]}, g)
        when is_atom(atom) and atom != :-- and is_list(kws) do
     if Keyword.keyword?(kws) do
-      %{g | nodes: [{atom, kws} | g.nodes]}
+      %{g | nodes: Map.put(g.nodes, atom, kws)}
     else
       raise_invalid_stmt(stmt)
     end
