@@ -1,0 +1,9 @@
+{
+  "blurb": "The binary type is a specialization of the bitstring type. It's a bitstring whose number of bits is divisible by 8.",
+  "authors": [
+    "neenjaw"
+  ],
+  "contributors": [
+    "angelikatyborska"
+  ]
+}

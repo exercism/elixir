@@ -1,0 +1,9 @@
+{
+  "blurb": "Recursive functions are functions that call themselves. In immutable functional languages like Elixir, recursion is necessary to achieve teh behavior that loops have in other languages.",
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [
+    "neenjaw"
+  ]
+}

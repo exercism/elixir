@@ -1,0 +1,9 @@
+{
+  "blurb": "Elixir is a functional, dynamically-typed language. Elixir code is organized into modules which contain public and private named functions. There are no compile-time type checks. Variables can be bound and re-bound to data of any type.",
+  "authors": [
+    "neenjaw"
+  ],
+  "contributors": [
+    "angelikatyborska"
+  ]
+}

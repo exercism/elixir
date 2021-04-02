@@ -1,0 +1,7 @@
+{
+  "blurb": "Bitwise operations, such as AND, OR, and XOR, can be performed on integers using functions from the Bitwise module.",
+  "authors": [
+    "neenjaw"
+  ],
+  "contributors": []
+}

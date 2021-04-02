@@ -1,0 +1,9 @@
+{
+  "blurb": "Elixir provides a construct for rescuing from errors using try/rescue.",
+  "authors": [
+    "neenjaw"
+  ],
+  "contributors": [
+    "angelikatyborska"
+  ]
+}

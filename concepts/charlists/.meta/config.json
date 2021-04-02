@@ -1,0 +1,9 @@
+{
+  "blurb": "Charlists are an alternative to strings for storing text. A charlist is a list of integers - character code points. Charlists are most often useful when interacting with Erlang, but rarely used in Elixir.",
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [
+    "neenjaw"
+  ]
+}

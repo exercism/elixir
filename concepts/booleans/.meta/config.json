@@ -1,0 +1,9 @@
+{
+  "blurb": "Elixir represents true and false values with the boolean type. Booleans can be combined into expressions using boolean operators \"not\", \"or\", and \"and\".",
+  "authors": [
+    "neenjaw"
+  ],
+  "contributors": [
+    "Cohen-Carlisle"
+  ]
+}

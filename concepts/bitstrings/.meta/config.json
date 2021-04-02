@@ -1,0 +1,10 @@
+{
+  "blurb": "Elixir provides an elegant syntax to write, match, and construct binary data with bitstrings. A bitstring is a contiguous sequence of bits in memory.",
+  "authors": [
+    "neenjaw"
+  ],
+  "contributors": [
+    "angelikatyborska",
+    "NobbZ"
+  ]
+}

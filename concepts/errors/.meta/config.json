@@ -1,0 +1,9 @@
+{
+  "blurb": "Errors happen. In Elixir, while people often say to \"let it crash\", there are times when we need to rescue the function call to a known good state to fulfil a software contract.",
+  "authors": [
+    "neenjaw"
+  ],
+  "contributors": [
+    "angelikatyborska"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "blurb": "Elixir can resolve a function to be invoked at run-time. The module name, the function name, and the list of arguments don't have to be known during compilation.",
+  "authors": [
+    "neenjaw"
+  ],
+  "contributors": [
+    "angelikatyborska"
+  ]
+}

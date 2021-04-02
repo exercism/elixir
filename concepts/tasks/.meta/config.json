@@ -1,0 +1,9 @@
+{
+  "blurb": "Tasks are processes meant to execute one specific operation. They usually don't communicate with other processes, but they can return a result to the process that started the task.",
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [
+    "neenjaw"
+  ]
+}

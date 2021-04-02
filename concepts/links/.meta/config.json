@@ -1,0 +1,9 @@
+{
+  "blurb": "Process links allow propagating failure form one process to another. Combined with trapping exits, they allow one process to function as a supervisor for other processes.",
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [
+    "neenjaw"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "blurb": "The try/rescue construct can take two additional options: else and after.",
+  "authors": [
+    "neenjaw"
+  ],
+  "contributors": [
+    "angelikatyborska"
+  ]
+}
