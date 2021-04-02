@@ -249,8 +249,8 @@
         "slug": "mensch-aergere-dich-nicht",
         "name": "Mensch Ärgere Dich Nicht",
         "uuid": "3e2f8bc6-20b4-4e8f-a658-9c270342208e",
-        "concepts": ["streams"],
-        "prerequisites": ["enum", "tuples", "if", "ranges", "randomness"],
+        "concepts": [],
+        "prerequisites": [],
         "status": "deprecated"
       },
       {
