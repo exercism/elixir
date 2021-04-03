@@ -1,0 +1,9 @@
+{
+  "blurb": "Strings in Elixir can easily be concatenated and interpolated, and the String module offers a variety of helpful functions for working with strings.",
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [
+    "neenjaw"
+  ]
+}

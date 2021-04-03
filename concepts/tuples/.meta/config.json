@@ -1,0 +1,9 @@
+{
+  "blurb": "A tuple is a data structure which organizes data, holding a fixed number of items of any type, but without explicit names for each element. Tuples are ideal for storing related information together, but not for storing collections of items that need iterating or might grow or shrink.",
+  "authors": [
+    "neenjaw"
+  ],
+  "contributors": [
+    "angelikatyborska"
+  ]
+}

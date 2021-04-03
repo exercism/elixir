@@ -1,0 +1,9 @@
+{
+  "blurb": "All errors in Elixir implement the Exception Behaviour. It provides an easy way to create your own custom errors.",
+  "authors": [
+    "neenjaw"
+  ],
+  "contributors": [
+    "angelikatyborska"
+  ]
+}

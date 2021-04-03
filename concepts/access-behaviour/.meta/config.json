@@ -1,0 +1,10 @@
+{
+  "blurb": "The Access Behaviour provides a common interface for retrieving key-based data from a data structure. It is implemented for maps and keyword lists.",
+  "authors": [
+    "neenjaw"
+  ],
+  "contributors": [
+    "angelikatyborska",
+    "NobbZ"
+  ]
+}

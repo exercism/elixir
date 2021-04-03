@@ -15,10 +15,18 @@
     "indent_size": 2
   },
   "files": {
-    "solution": ["lib/%{snake_slug}.ex"],
-    "test": ["test/%{snake_slug}_test.exs"],
-    "example": [".meta/example.ex"],
-    "exemplar": [".meta/exemplar.ex"]
+    "solution": [
+      "lib/%{snake_slug}.ex"
+    ],
+    "test": [
+      "test/%{snake_slug}_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
   },
   "exercises": {
     "concept": [
@@ -26,7 +34,9 @@
         "slug": "lasagna",
         "name": "Lasagna",
         "uuid": "c29c6092-9d44-4f21-8138-b873384fd90b",
-        "concepts": ["basics"],
+        "concepts": [
+          "basics"
+        ],
         "prerequisites": [],
         "status": "beta"
       },
@@ -34,32 +44,50 @@
         "slug": "pacman-rules",
         "name": "Pacman Rules",
         "uuid": "5e743355-1ef3-4b5d-b59d-03bbc9697e6c",
-        "concepts": ["booleans"],
-        "prerequisites": ["basics"],
+        "concepts": [
+          "booleans"
+        ],
+        "prerequisites": [
+          "basics"
+        ],
         "status": "beta"
       },
       {
         "slug": "freelancer-rates",
         "name": "Freelancer Rates",
         "uuid": "fee79e03-1496-476f-964f-e60632cb13dc",
-        "concepts": ["integers", "floating-point-numbers"],
-        "prerequisites": ["basics"],
+        "concepts": [
+          "integers",
+          "floating-point-numbers"
+        ],
+        "prerequisites": [
+          "basics"
+        ],
         "status": "beta"
       },
       {
         "slug": "log-level",
         "name": "Log Level",
         "uuid": "b26a2f11-d80a-42b9-881a-3575a83ad211",
-        "concepts": ["cond", "atoms"],
-        "prerequisites": ["booleans"],
+        "concepts": [
+          "cond",
+          "atoms"
+        ],
+        "prerequisites": [
+          "booleans"
+        ],
         "status": "beta"
       },
       {
         "slug": "language-list",
         "name": "Language List",
         "uuid": "3c53b340-680e-45c1-8979-3d79b441a65e",
-        "concepts": ["lists"],
-        "prerequisites": ["booleans"],
+        "concepts": [
+          "lists"
+        ],
+        "prerequisites": [
+          "booleans"
+        ],
         "status": "beta"
       },
       {
@@ -71,22 +99,32 @@
           "guards",
           "default-arguments"
         ],
-        "prerequisites": ["cond"],
+        "prerequisites": [
+          "cond"
+        ],
         "status": "beta"
       },
       {
         "slug": "secrets",
         "name": "Secrets",
         "uuid": "1e3ceb20-715c-4157-9192-13284217affc",
-        "concepts": ["anonymous-functions", "bit-manipulation"],
-        "prerequisites": ["basics"],
+        "concepts": [
+          "anonymous-functions",
+          "bit-manipulation"
+        ],
+        "prerequisites": [
+          "basics"
+        ],
         "status": "beta"
       },
       {
         "slug": "kitchen-calculator",
         "name": "Kitchen Calculator",
         "uuid": "f729493d-2249-4c10-9c77-da907d10aae1",
-        "concepts": ["tuples", "pattern-matching"],
+        "concepts": [
+          "tuples",
+          "pattern-matching"
+        ],
         "prerequisites": [
           "atoms",
           "floating-point-numbers",
@@ -98,23 +136,38 @@
         "slug": "high-school-sweetheart",
         "name": "High School Sweetheart",
         "uuid": "335df1cf-6aba-4ab6-b5c3-b4305ade09a4",
-        "concepts": ["strings", "pipe-operator"],
-        "prerequisites": ["lists", "pattern-matching"],
+        "concepts": [
+          "strings",
+          "pipe-operator"
+        ],
+        "prerequisites": [
+          "lists",
+          "pattern-matching"
+        ],
         "status": "beta"
       },
       {
         "slug": "name-badge",
         "name": "Name Badge",
         "uuid": "b6ae6cb4-f908-436f-916c-fa847e4a82fb",
-        "concepts": ["nil", "if"],
-        "prerequisites": ["strings", "booleans"],
+        "concepts": [
+          "nil",
+          "if"
+        ],
+        "prerequisites": [
+          "strings",
+          "booleans"
+        ],
         "status": "beta"
       },
       {
         "slug": "high-score",
         "name": "High Score",
         "uuid": "e7f3ba2b-a380-45d3-a48d-7ef3dc318a31",
-        "concepts": ["module-attributes-as-constants", "maps"],
+        "concepts": [
+          "module-attributes-as-constants",
+          "maps"
+        ],
         "prerequisites": [
           "lists",
           "tuples",
@@ -127,7 +180,9 @@
         "slug": "bird-count",
         "name": "Bird Count",
         "uuid": "e17088c8-c40f-4d4c-b5dd-d32f62b8087b",
-        "concepts": ["recursion"],
+        "concepts": [
+          "recursion"
+        ],
         "prerequisites": [
           "lists",
           "pattern-matching",
@@ -140,39 +195,70 @@
         "slug": "german-sysadmin",
         "name": "German Sysadmin",
         "uuid": "45f3a08f-fe0f-4e3e-b325-47bad3c74ea4",
-        "concepts": ["charlists", "case"],
-        "prerequisites": ["lists", "recursion", "pattern-matching", "guards"],
+        "concepts": [
+          "charlists",
+          "case"
+        ],
+        "prerequisites": [
+          "lists",
+          "recursion",
+          "pattern-matching",
+          "guards"
+        ],
         "status": "beta"
       },
       {
         "slug": "basketball-website",
         "name": "Basketball Website",
         "uuid": "ba03df1d-20e4-4527-a8a7-afc97a834975",
-        "concepts": ["access-behaviour"],
-        "prerequisites": ["maps", "strings", "recursion", "nil"],
+        "concepts": [
+          "access-behaviour"
+        ],
+        "prerequisites": [
+          "maps",
+          "strings",
+          "recursion",
+          "nil"
+        ],
         "status": "beta"
       },
       {
         "slug": "file-sniffer",
         "name": "File Sniffer",
         "uuid": "1653d476-5354-4d99-a990-1db418a7281c",
-        "concepts": ["binaries"],
-        "prerequisites": ["strings", "pattern-matching", "if", "bitstrings"],
+        "concepts": [
+          "binaries"
+        ],
+        "prerequisites": [
+          "strings",
+          "pattern-matching",
+          "if",
+          "bitstrings"
+        ],
         "status": "beta"
       },
       {
         "slug": "dna-encoding",
         "name": "DNA Encoding",
         "uuid": "994c8760-8a58-4ef3-8a28-a0f9182f4d9f",
-        "concepts": ["bitstrings", "tail-call-recursion"],
-        "prerequisites": ["charlists", "recursion", "pattern-matching"],
+        "concepts": [
+          "bitstrings",
+          "tail-call-recursion"
+        ],
+        "prerequisites": [
+          "charlists",
+          "recursion",
+          "pattern-matching"
+        ],
         "status": "beta"
       },
       {
         "slug": "boutique-inventory",
         "name": "Boutique Inventory",
         "uuid": "be4ef2d1-2851-425d-9780-0326fbcb9845",
-        "concepts": ["enum"],
+        "concepts": [
+          "enum"
+        ],
         "prerequisites": [
           "lists",
           "maps",
@@ -187,15 +273,24 @@
         "slug": "rpn-calculator",
         "name": "RPN Calculator",
         "uuid": "f660a2e1-bb50-4626-8d3f-6cd7c44fa8db",
-        "concepts": ["errors", "try-rescue"],
-        "prerequisites": ["anonymous-functions", "pattern-matching", "structs"],
+        "concepts": [
+          "errors",
+          "try-rescue"
+        ],
+        "prerequisites": [
+          "anonymous-functions",
+          "pattern-matching",
+          "structs"
+        ],
         "status": "beta"
       },
       {
         "slug": "remote-control-car",
         "name": "Remote Control Car",
         "uuid": "d8d25b93-d918-421e-bb57-cbdaf428d9e2",
-        "concepts": ["structs"],
+        "concepts": [
+          "structs"
+        ],
         "prerequisites": [
           "maps",
           "multiple-clause-functions",
@@ -211,15 +306,22 @@
         "slug": "stack-underflow",
         "name": "Stack Underflow",
         "uuid": "9f698b46-fe8d-4641-a928-bcebfd9678df",
-        "concepts": ["exceptions"],
-        "prerequisites": ["access-behaviour", "errors"],
+        "concepts": [
+          "exceptions"
+        ],
+        "prerequisites": [
+          "access-behaviour",
+          "errors"
+        ],
         "status": "beta"
       },
       {
         "slug": "wine-cellar",
         "name": "Wine Cellar",
         "uuid": "921a03be-662a-4aea-b8fc-a87d199b1528",
-        "concepts": ["keyword-lists"],
+        "concepts": [
+          "keyword-lists"
+        ],
         "prerequisites": [
           "lists",
           "tuples",
@@ -233,16 +335,30 @@
         "slug": "rpn-calculator-output",
         "name": "RPN Calculator Output",
         "uuid": "68a8f721-5db4-4b31-95c8-fa6c38f64327",
-        "concepts": ["try-rescue-else-after", "dynamic-dispatch"],
-        "prerequisites": ["file", "try-rescue"],
+        "concepts": [
+          "try-rescue-else-after",
+          "dynamic-dispatch"
+        ],
+        "prerequisites": [
+          "file",
+          "try-rescue"
+        ],
         "status": "wip"
       },
       {
         "slug": "take-a-number",
         "name": "Take-A-Number",
         "uuid": "bec0b00f-816e-443a-af94-14ab4125e505",
-        "concepts": ["processes", "pids"],
-        "prerequisites": ["atoms", "recursion", "pattern-matching", "tuples"],
+        "concepts": [
+          "processes",
+          "pids"
+        ],
+        "prerequisites": [
+          "atoms",
+          "recursion",
+          "pattern-matching",
+          "tuples"
+        ],
         "status": "beta"
       },
       {
@@ -257,47 +373,79 @@
         "slug": "community-garden",
         "name": "Community Garden",
         "uuid": "1d6be9ec-5b5c-4c81-9bfa-2e3fc78c978f",
-        "concepts": ["agent"],
-        "prerequisites": ["processes", "maps", "structs"],
+        "concepts": [
+          "agent"
+        ],
+        "prerequisites": [
+          "processes",
+          "maps",
+          "structs"
+        ],
         "status": "beta"
       },
       {
         "slug": "date-parser",
         "name": "Date Parser",
         "uuid": "57198686-71c9-4f38-973a-a111435560e7",
-        "concepts": ["regular-expressions"],
-        "prerequisites": ["strings"],
+        "concepts": [
+          "regular-expressions"
+        ],
+        "prerequisites": [
+          "strings"
+        ],
         "status": "beta"
       },
       {
         "slug": "boutique-suggestions",
         "name": "Boutique Suggestions",
         "uuid": "f8208858-901e-4e5a-9f34-689bf8ad156c",
-        "concepts": ["list-comprehensions"],
-        "prerequisites": ["enum", "lists", "maps", "keyword-lists", "tuples"],
+        "concepts": [
+          "list-comprehensions"
+        ],
+        "prerequisites": [
+          "enum",
+          "lists",
+          "maps",
+          "keyword-lists",
+          "tuples"
+        ],
         "status": "beta"
       },
       {
         "slug": "bread-and-potions",
         "name": "Bread And Potions",
         "uuid": "a9fb9efa-ff37-4642-9118-c1351fd343ad",
-        "concepts": ["protocols"],
-        "prerequisites": ["structs", "nil"],
+        "concepts": [
+          "protocols"
+        ],
+        "prerequisites": [
+          "structs",
+          "nil"
+        ],
         "status": "beta"
       },
       {
         "slug": "rpg-character-sheet",
         "name": "RPG Character Sheet",
         "uuid": "83c31f5f-fc94-4315-9053-df5a5f5d5fb7",
-        "concepts": ["io"],
-        "prerequisites": ["strings", "maps", "atoms"],
+        "concepts": [
+          "io"
+        ],
+        "prerequisites": [
+          "strings",
+          "maps",
+          "atoms"
+        ],
         "status": "beta"
       },
       {
         "slug": "captains-log",
         "name": "Captain's Log",
         "uuid": "d805ae23-b5c9-494f-ab13-78a0e836391c",
-        "concepts": ["erlang-libraries", "randomness"],
+        "concepts": [
+          "erlang-libraries",
+          "randomness"
+        ],
         "prerequisites": [
           "enum",
           "ranges",
@@ -312,23 +460,40 @@
         "slug": "chessboard",
         "name": "Chessboard",
         "uuid": "6ea28f3e-a59a-45b0-83a7-38a2e96bdff7",
-        "concepts": ["ranges"],
-        "prerequisites": ["enum", "integers", "bitstrings", "charlists"],
+        "concepts": [
+          "ranges"
+        ],
+        "prerequisites": [
+          "enum",
+          "integers",
+          "bitstrings",
+          "charlists"
+        ],
         "status": "beta"
       },
       {
         "slug": "newsletter",
         "name": "Newsletter",
         "uuid": "5564c89c-4706-4a48-99a4-2ad26457f66f",
-        "concepts": ["file"],
-        "prerequisites": ["strings", "enum", "io", "processes", "pids"],
+        "concepts": [
+          "file"
+        ],
+        "prerequisites": [
+          "strings",
+          "enum",
+          "io",
+          "processes",
+          "pids"
+        ],
         "status": "beta"
       },
       {
         "slug": "library-fees",
         "name": "Library Fees",
         "uuid": "b5629003-638c-47c0-ad76-a0769f285053",
-        "concepts": ["dates-and-time"],
+        "concepts": [
+          "dates-and-time"
+        ],
         "prerequisites": [
           "integers",
           "floating-point-numbers",
@@ -342,15 +507,26 @@
         "slug": "rpn-calculator-inspection",
         "name": "RPN Calculator Inspection",
         "uuid": "d99155cd-e03e-48a9-b1f0-ea8d2070a2fb",
-        "concepts": ["links", "tasks"],
-        "prerequisites": ["processes", "pids", "enum", "errors", "maps"],
+        "concepts": [
+          "links",
+          "tasks"
+        ],
+        "prerequisites": [
+          "processes",
+          "pids",
+          "enum",
+          "errors",
+          "maps"
+        ],
         "status": "wip"
       },
       {
         "slug": "lucas-numbers",
         "name": "Lucas Numbers",
         "uuid": "b82ecdf0-9739-4e25-a261-aa815f8dbf0d",
-        "concepts": ["streams"],
+        "concepts": [
+          "streams"
+        ],
         "prerequisites": [
           "enum",
           "guards",
@@ -365,7 +541,10 @@
         "slug": "city-office",
         "name": "City Office",
         "uuid": "07125322-4dce-4275-936e-4452a6aad32a",
-        "concepts": ["docs", "typespecs"],
+        "concepts": [
+          "docs",
+          "typespecs"
+        ],
         "prerequisites": [
           "integers",
           "tuples",
@@ -397,7 +576,10 @@
           "case",
           "enum"
         ],
-        "practices": ["charlists", "enum"],
+        "practices": [
+          "charlists",
+          "enum"
+        ],
         "difficulty": 2
       },
       {
@@ -411,7 +593,10 @@
           "maps",
           "pipe-operator"
         ],
-        "practices": ["regular-expressions", "pipe-operator"],
+        "practices": [
+          "regular-expressions",
+          "pipe-operator"
+        ],
         "difficulty": 3
       },
       {
@@ -429,15 +614,25 @@
           "cond",
           "case"
         ],
-        "practices": ["recursion"],
+        "practices": [
+          "recursion"
+        ],
         "difficulty": 2
       },
       {
         "slug": "bob",
         "name": "Bob",
         "uuid": "d20b49dc-cb6d-45fc-a168-78d002072c75",
-        "prerequisites": ["booleans", "strings", "regular-expressions", "cond"],
-        "practices": ["booleans", "cond"],
+        "prerequisites": [
+          "booleans",
+          "strings",
+          "regular-expressions",
+          "cond"
+        ],
+        "practices": [
+          "booleans",
+          "cond"
+        ],
         "difficulty": 3
       },
       {
@@ -452,7 +647,10 @@
           "enum",
           "recursion"
         ],
-        "practices": ["multiple-clause-functions", "default-arguments"],
+        "practices": [
+          "multiple-clause-functions",
+          "default-arguments"
+        ],
         "difficulty": 3
       },
       {
@@ -470,7 +668,10 @@
           "structs",
           "default-arguments"
         ],
-        "practices": ["structs", "multiple-clause-functions"],
+        "practices": [
+          "structs",
+          "multiple-clause-functions"
+        ],
         "difficulty": 6
       },
       {
@@ -484,7 +685,10 @@
           "multiple-clause-functions",
           "pattern-matching"
         ],
-        "practices": ["lists", "tail-call-recursion"],
+        "practices": [
+          "lists",
+          "tail-call-recursion"
+        ],
         "difficulty": 6
       },
       {
@@ -502,15 +706,27 @@
           "case",
           "if"
         ],
-        "practices": ["regular-expressions"],
+        "practices": [
+          "regular-expressions"
+        ],
         "difficulty": 5
       },
       {
         "slug": "bank-account",
         "name": "Bank Account",
         "uuid": "5d5e0f6c-f4b7-418e-88f8-4b1d0f99bfb0",
-        "prerequisites": ["if", "processes", "pids", "agent"],
-        "practices": ["if", "processes", "pids", "agent"],
+        "prerequisites": [
+          "if",
+          "processes",
+          "pids",
+          "agent"
+        ],
+        "practices": [
+          "if",
+          "processes",
+          "pids",
+          "agent"
+        ],
         "difficulty": 7
       },
       {
@@ -527,7 +743,9 @@
           "pattern-matching",
           "multiple-clause-functions"
         ],
-        "practices": ["structs"],
+        "practices": [
+          "structs"
+        ],
         "difficulty": 8
       },
       {
@@ -576,31 +794,54 @@
           "exceptions",
           "dynamic-dispatch"
         ],
-        "practices": ["regular-expressions", "errors", "exceptions"],
+        "practices": [
+          "regular-expressions",
+          "errors",
+          "exceptions"
+        ],
         "difficulty": 10
       },
       {
         "slug": "resistor-color",
         "name": "Resistor Color",
         "uuid": "12efd520-e3e5-437f-b93e-38af14aa605d",
-        "prerequisites": ["lists", "enum"],
-        "practices": ["enum"],
+        "prerequisites": [
+          "lists",
+          "enum"
+        ],
+        "practices": [
+          "enum"
+        ],
         "difficulty": 1
       },
       {
         "slug": "two-fer",
         "name": "Two Fer",
         "uuid": "e7f3280e-0bef-4fac-8a69-cbfa2e5f818a",
-        "prerequisites": ["strings", "guards", "default-arguments"],
-        "practices": ["guards", "default-arguments"],
+        "prerequisites": [
+          "strings",
+          "guards",
+          "default-arguments"
+        ],
+        "practices": [
+          "guards",
+          "default-arguments"
+        ],
         "difficulty": 1
       },
       {
         "slug": "nucleotide-count",
         "name": "Nucleotide Count",
         "uuid": "7404e885-747a-46fc-be0c-c53f4b0e162f",
-        "prerequisites": ["charlists", "maps", "enum"],
-        "practices": ["charlists", "maps"],
+        "prerequisites": [
+          "charlists",
+          "maps",
+          "enum"
+        ],
+        "practices": [
+          "charlists",
+          "maps"
+        ],
         "difficulty": 2
       },
       {
@@ -617,7 +858,10 @@
           "case",
           "binaries"
         ],
-        "practices": ["strings", "binaries"],
+        "practices": [
+          "strings",
+          "binaries"
+        ],
         "difficulty": 2
       },
       {
@@ -636,7 +880,10 @@
           "binaries",
           "regular-expressions"
         ],
-        "practices": ["case", "pattern-matching"],
+        "practices": [
+          "case",
+          "pattern-matching"
+        ],
         "difficulty": 2
       },
       {
@@ -654,7 +901,10 @@
           "multiple-clause-functions",
           "guards"
         ],
-        "practices": ["charlists", "ranges"],
+        "practices": [
+          "charlists",
+          "ranges"
+        ],
         "difficulty": 2
       },
       {
@@ -671,7 +921,9 @@
           "recursion",
           "bit-manipulation"
         ],
-        "practices": ["bit-manipulation"],
+        "practices": [
+          "bit-manipulation"
+        ],
         "difficulty": 2
       },
       {
@@ -706,15 +958,27 @@
           "case",
           "if"
         ],
-        "practices": ["lists", "recursion", "anonymous-functions"],
+        "practices": [
+          "lists",
+          "recursion",
+          "anonymous-functions"
+        ],
         "difficulty": 2
       },
       {
         "slug": "accumulate",
         "name": "Accumulate",
         "uuid": "e7c6a0d2-6aaf-4d55-99e2-8ffa65a5e8f0",
-        "prerequisites": ["anonymous-functions", "lists", "recursion"],
-        "practices": ["anonymous-functions", "lists", "recursion"],
+        "prerequisites": [
+          "anonymous-functions",
+          "lists",
+          "recursion"
+        ],
+        "practices": [
+          "anonymous-functions",
+          "lists",
+          "recursion"
+        ],
         "difficulty": 2
       },
       {
@@ -727,7 +991,10 @@
           "regular-expressions",
           "pipe-operator"
         ],
-        "practices": ["regular-expressions", "pipe-operator"],
+        "practices": [
+          "regular-expressions",
+          "pipe-operator"
+        ],
         "difficulty": 2
       },
       {
@@ -743,15 +1010,25 @@
           "maps",
           "enum"
         ],
-        "practices": ["enum"],
+        "practices": [
+          "enum"
+        ],
         "difficulty": 2
       },
       {
         "slug": "run-length-encoding",
         "name": "Run Length Encoding",
         "uuid": "f4f759ea-53e1-42d6-a580-6e7b7d6a99a0",
-        "prerequisites": ["strings", "regular-expressions", "enum", "if"],
-        "practices": ["strings", "regular-expressions"],
+        "prerequisites": [
+          "strings",
+          "regular-expressions",
+          "enum",
+          "if"
+        ],
+        "practices": [
+          "strings",
+          "regular-expressions"
+        ],
         "difficulty": 2
       },
       {
@@ -765,7 +1042,9 @@
           "enum",
           "pipe-operator"
         ],
-        "practices": ["pipe-operator"],
+        "practices": [
+          "pipe-operator"
+        ],
         "difficulty": 2
       },
       {
@@ -780,7 +1059,10 @@
           "ranges",
           "randomness"
         ],
-        "practices": ["structs", "randomness"],
+        "practices": [
+          "structs",
+          "randomness"
+        ],
         "difficulty": 3
       },
       {
@@ -794,7 +1076,10 @@
           "recursion",
           "ranges"
         ],
-        "practices": ["charlists", "ranges"],
+        "practices": [
+          "charlists",
+          "ranges"
+        ],
         "difficulty": 2
       },
       {
@@ -808,31 +1093,52 @@
           "recursion",
           "pipe-operator"
         ],
-        "practices": ["pipe-operator", "maps"],
+        "practices": [
+          "pipe-operator",
+          "maps"
+        ],
         "difficulty": 2
       },
       {
         "slug": "sum-of-multiples",
         "name": "Sum Of Multiples",
         "uuid": "5b8eece1-845f-4a5a-8a2f-fe2bf66f5e57",
-        "prerequisites": ["enum", "ranges"],
-        "practices": ["enum", "ranges"],
+        "prerequisites": [
+          "enum",
+          "ranges"
+        ],
+        "practices": [
+          "enum",
+          "ranges"
+        ],
         "difficulty": 2
       },
       {
         "slug": "grade-school",
         "name": "Grade School",
         "uuid": "4e6d3ddf-b696-40dc-ba02-ed998e595be7",
-        "prerequisites": ["lists", "maps", "enum"],
-        "practices": ["maps"],
+        "prerequisites": [
+          "lists",
+          "maps",
+          "enum"
+        ],
+        "practices": [
+          "maps"
+        ],
         "difficulty": 3
       },
       {
         "slug": "isogram",
         "name": "Isogram",
         "uuid": "55a20a0f-0131-4e4e-b14f-f3cb49e3cc04",
-        "prerequisites": ["strings", "enum", "regular-expressions"],
-        "practices": ["regular-expressions"],
+        "prerequisites": [
+          "strings",
+          "enum",
+          "regular-expressions"
+        ],
+        "practices": [
+          "regular-expressions"
+        ],
         "difficulty": 3
       },
       {
@@ -849,7 +1155,9 @@
           "maps",
           "ranges"
         ],
-        "practices": ["multiple-clause-functions"],
+        "practices": [
+          "multiple-clause-functions"
+        ],
         "difficulty": 3
       },
       {
@@ -862,7 +1170,10 @@
           "multiple-clause-functions",
           "guards"
         ],
-        "practices": ["integers", "guards"],
+        "practices": [
+          "integers",
+          "guards"
+        ],
         "difficulty": 2
       },
       {
@@ -878,7 +1189,9 @@
           "pattern-matching",
           "recursion"
         ],
-        "practices": ["lists"],
+        "practices": [
+          "lists"
+        ],
         "difficulty": 2
       },
       {
@@ -895,7 +1208,11 @@
           "case",
           "if"
         ],
-        "practices": ["atoms", "pattern-matching", "guards"],
+        "practices": [
+          "atoms",
+          "pattern-matching",
+          "guards"
+        ],
         "difficulty": 2
       },
       {
@@ -910,7 +1227,10 @@
           "guards",
           "nil"
         ],
-        "practices": ["lists", "nil"],
+        "practices": [
+          "lists",
+          "nil"
+        ],
         "difficulty": 3
       },
       {
@@ -930,15 +1250,23 @@
           "multiple-clause-functions",
           "binaries"
         ],
-        "practices": ["recursion"],
+        "practices": [
+          "recursion"
+        ],
         "difficulty": 3
       },
       {
         "slug": "anagram",
         "name": "Anagram",
         "uuid": "21e70267-097e-476f-aaff-233483514802",
-        "prerequisites": ["strings", "enum"],
-        "practices": ["strings", "enum"],
+        "prerequisites": [
+          "strings",
+          "enum"
+        ],
+        "practices": [
+          "strings",
+          "enum"
+        ],
         "difficulty": 2
       },
       {
@@ -954,15 +1282,27 @@
           "enum",
           "recursion"
         ],
-        "practices": ["enum"],
+        "practices": [
+          "enum"
+        ],
         "difficulty": 2
       },
       {
         "slug": "matrix",
         "name": "Matrix",
         "uuid": "f0df392c-8ace-4639-b555-5e61e54a854e",
-        "prerequisites": ["strings", "enum", "structs", "tuples", "maps"],
-        "practices": ["structs", "tuples", "maps"],
+        "prerequisites": [
+          "strings",
+          "enum",
+          "structs",
+          "tuples",
+          "maps"
+        ],
+        "practices": [
+          "structs",
+          "tuples",
+          "maps"
+        ],
         "difficulty": 3
       },
       {
@@ -983,7 +1323,10 @@
           "pattern-matching",
           "binaries"
         ],
-        "practices": ["strings", "regular-expressions"],
+        "practices": [
+          "strings",
+          "regular-expressions"
+        ],
         "difficulty": 4
       },
       {
@@ -1004,7 +1347,10 @@
           "ranges",
           "module-attributes-as-constants"
         ],
-        "practices": ["guards", "module-attributes-as-constants"],
+        "practices": [
+          "guards",
+          "module-attributes-as-constants"
+        ],
         "difficulty": 3
       },
       {
@@ -1025,7 +1371,11 @@
           "errors",
           "exceptions"
         ],
-        "practices": ["integers", "ranges", "errors"],
+        "practices": [
+          "integers",
+          "ranges",
+          "errors"
+        ],
         "difficulty": 2
       },
       {
@@ -1040,7 +1390,11 @@
           "guards",
           "cond"
         ],
-        "practices": ["tuples", "recursion", "cond"],
+        "practices": [
+          "tuples",
+          "recursion",
+          "cond"
+        ],
         "difficulty": 3
       },
       {
@@ -1056,7 +1410,10 @@
           "ranges",
           "enum"
         ],
-        "practices": ["regular-expressions", "ranges"],
+        "practices": [
+          "regular-expressions",
+          "ranges"
+        ],
         "difficulty": 3
       },
       {
@@ -1093,7 +1450,10 @@
           "case",
           "if"
         ],
-        "practices": ["maps", "pattern-matching"],
+        "practices": [
+          "maps",
+          "pattern-matching"
+        ],
         "difficulty": 4
       },
       {
@@ -1114,7 +1474,10 @@
           "tail-call-recursion",
           "enum"
         ],
-        "practices": ["integers", "multiple-clause-functions"],
+        "practices": [
+          "integers",
+          "multiple-clause-functions"
+        ],
         "difficulty": 2
       },
       {
@@ -1133,7 +1496,11 @@
           "recursion",
           "nil"
         ],
-        "practices": ["maps", "recursion", "nil"],
+        "practices": [
+          "maps",
+          "recursion",
+          "nil"
+        ],
         "difficulty": 3
       },
       {
@@ -1151,7 +1518,11 @@
           "erlang-libraries",
           "bit-manipulation"
         ],
-        "practices": ["atoms", "tuples", "ranges"],
+        "practices": [
+          "atoms",
+          "tuples",
+          "ranges"
+        ],
         "difficulty": 3
       },
       {
@@ -1170,7 +1541,11 @@
           "ranges",
           "dates-and-time"
         ],
-        "practices": ["atoms", "pattern-matching", "dates-and-time"],
+        "practices": [
+          "atoms",
+          "pattern-matching",
+          "dates-and-time"
+        ],
         "difficulty": 4
       },
       {
@@ -1184,15 +1559,26 @@
           "recursion",
           "tail-call-recursion"
         ],
-        "practices": ["atoms", "tuples", "tail-call-recursion"],
+        "practices": [
+          "atoms",
+          "tuples",
+          "tail-call-recursion"
+        ],
         "difficulty": 1
       },
       {
         "slug": "etl",
         "name": "ETL",
         "uuid": "b3a4c561-344a-403e-b5b3-3533d51e65f4",
-        "prerequisites": ["strings", "maps", "enum", "list-comprehensions"],
-        "practices": ["list-comprehensions"],
+        "prerequisites": [
+          "strings",
+          "maps",
+          "enum",
+          "list-comprehensions"
+        ],
+        "practices": [
+          "list-comprehensions"
+        ],
         "difficulty": 2
       },
       {
@@ -1211,7 +1597,9 @@
           "enum",
           "strings"
         ],
-        "practices": ["tail-call-recursion"],
+        "practices": [
+          "tail-call-recursion"
+        ],
         "difficulty": 3,
         "status": "deprecated"
       },
@@ -1230,15 +1618,22 @@
           "enum",
           "maps"
         ],
-        "practices": ["integers"],
+        "practices": [
+          "integers"
+        ],
         "difficulty": 7
       },
       {
         "slug": "transpose",
         "name": "Transpose",
         "uuid": "ce270a34-add1-422c-bb86-53b310f05e27",
-        "prerequisites": ["strings", "enum"],
-        "practices": ["enum"],
+        "prerequisites": [
+          "strings",
+          "enum"
+        ],
+        "practices": [
+          "enum"
+        ],
         "difficulty": 5
       },
       {
@@ -1257,7 +1652,10 @@
           "maps",
           "binaries"
         ],
-        "practices": ["strings", "multiple-clause-functions"],
+        "practices": [
+          "strings",
+          "multiple-clause-functions"
+        ],
         "difficulty": 6
       },
       {
@@ -1278,7 +1676,10 @@
           "regular-expressions",
           "module-attributes-as-constants"
         ],
-        "practices": ["maps", "module-attributes-as-constants"],
+        "practices": [
+          "maps",
+          "module-attributes-as-constants"
+        ],
         "difficulty": 3
       },
       {
@@ -1292,7 +1693,9 @@
           "recursion",
           "ranges"
         ],
-        "practices": ["charlists"],
+        "practices": [
+          "charlists"
+        ],
         "difficulty": 5
       },
       {
@@ -1312,7 +1715,9 @@
           "recursion",
           "enum"
         ],
-        "practices": ["integers"],
+        "practices": [
+          "integers"
+        ],
         "difficulty": 5
       },
       {
@@ -1334,7 +1739,10 @@
           "module-attributes-as-constants",
           "default-arguments"
         ],
-        "practices": ["lists", "module-attributes-as-constants"],
+        "practices": [
+          "lists",
+          "module-attributes-as-constants"
+        ],
         "difficulty": 5
       },
       {
@@ -1354,15 +1762,22 @@
           "ranges",
           "streams"
         ],
-        "practices": ["ranges"],
+        "practices": [
+          "ranges"
+        ],
         "difficulty": 6
       },
       {
         "slug": "gigasecond",
         "name": "Gigasecond",
         "uuid": "287331a4-64d5-4b35-b4c1-a1171dc338e1",
-        "prerequisites": ["integers", "dates-and-time"],
-        "practices": ["dates-and-time"],
+        "prerequisites": [
+          "integers",
+          "dates-and-time"
+        ],
+        "practices": [
+          "dates-and-time"
+        ],
         "difficulty": 3
       },
       {
@@ -1380,7 +1795,9 @@
           "recursion",
           "enum"
         ],
-        "practices": ["charlists"],
+        "practices": [
+          "charlists"
+        ],
         "difficulty": 3,
         "status": "deprecated"
       },
@@ -1399,7 +1816,11 @@
           "enum",
           "recursion"
         ],
-        "practices": ["atoms", "cond", "pattern-matching"],
+        "practices": [
+          "atoms",
+          "cond",
+          "pattern-matching"
+        ],
         "difficulty": 3
       },
       {
@@ -1426,8 +1847,16 @@
         "slug": "diffie-hellman",
         "name": "Diffie Hellman",
         "uuid": "92caf2b9-3fca-401c-8daa-aaa0193e704f",
-        "prerequisites": ["ranges", "randomness", "erlang-libraries"],
-        "practices": ["ranges", "randomness", "erlang-libraries"],
+        "prerequisites": [
+          "ranges",
+          "randomness",
+          "erlang-libraries"
+        ],
+        "practices": [
+          "ranges",
+          "randomness",
+          "erlang-libraries"
+        ],
         "difficulty": 4
       },
       {
@@ -1442,7 +1871,10 @@
           "pids",
           "tasks"
         ],
-        "practices": ["processes", "tasks"],
+        "practices": [
+          "processes",
+          "tasks"
+        ],
         "difficulty": 4
       },
       {
@@ -1458,23 +1890,39 @@
           "errors",
           "exceptions"
         ],
-        "practices": ["ranges", "list-comprehensions"],
+        "practices": [
+          "ranges",
+          "list-comprehensions"
+        ],
         "difficulty": 5
       },
       {
         "slug": "pascals-triangle",
         "name": "Pascals Triangle",
         "uuid": "b85c37c7-a76e-41fa-9ce6-abcdba2bd683",
-        "prerequisites": ["enum", "ranges", "recursion"],
-        "practices": ["recursion"],
+        "prerequisites": [
+          "enum",
+          "ranges",
+          "recursion"
+        ],
+        "practices": [
+          "recursion"
+        ],
         "difficulty": 3
       },
       {
         "slug": "spiral-matrix",
         "name": "Spiral Matrix",
         "uuid": "cf28d2b2-763e-404b-90b0-637263d3bba6",
-        "prerequisites": ["lists", "enum", "recursion"],
-        "practices": ["lists", "recursion"],
+        "prerequisites": [
+          "lists",
+          "enum",
+          "recursion"
+        ],
+        "practices": [
+          "lists",
+          "recursion"
+        ],
         "difficulty": 4
       },
       {
@@ -1493,15 +1941,24 @@
           "maps",
           "enum"
         ],
-        "practices": ["maps"],
+        "practices": [
+          "maps"
+        ],
         "difficulty": 5
       },
       {
         "slug": "saddle-points",
         "name": "Saddle Points",
         "uuid": "8e5c050a-ff42-4a23-ba32-84595b7476f4",
-        "prerequisites": ["lists", "strings", "enum", "maps"],
-        "practices": ["maps"],
+        "prerequisites": [
+          "lists",
+          "strings",
+          "enum",
+          "maps"
+        ],
+        "practices": [
+          "maps"
+        ],
         "difficulty": 5
       },
       {
@@ -1519,7 +1976,9 @@
           "strings",
           "enum"
         ],
-        "practices": ["enum"],
+        "practices": [
+          "enum"
+        ],
         "difficulty": 7
       },
       {
@@ -1540,7 +1999,9 @@
           "maps",
           "ranges"
         ],
-        "practices": ["enum"],
+        "practices": [
+          "enum"
+        ],
         "difficulty": 7
       },
       {
@@ -1562,15 +2023,27 @@
           "exceptions",
           "structs"
         ],
-        "practices": ["structs", "pattern-matching", "errors", "exceptions"],
+        "practices": [
+          "structs",
+          "pattern-matching",
+          "errors",
+          "exceptions"
+        ],
         "difficulty": 7
       },
       {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "8f40f0f6-95e6-4a4c-a576-3d677ffbbd9f",
-        "prerequisites": ["integers", "lists", "enum", "erlang-libraries"],
-        "practices": ["integers"],
+        "prerequisites": [
+          "integers",
+          "lists",
+          "enum",
+          "erlang-libraries"
+        ],
+        "practices": [
+          "integers"
+        ],
         "difficulty": 2
       },
       {
@@ -1590,15 +2063,25 @@
           "randomness",
           "erlang-libraries"
         ],
-        "practices": ["charlists", "randomness"],
+        "practices": [
+          "charlists",
+          "randomness"
+        ],
         "difficulty": 3
       },
       {
         "slug": "allergies",
         "name": "Allergies",
         "uuid": "9a1b599c-3175-4166-9b53-491a2f565db6",
-        "prerequisites": ["lists", "maps", "enum", "bit-manipulation"],
-        "practices": ["bit-manipulation"],
+        "prerequisites": [
+          "lists",
+          "maps",
+          "enum",
+          "bit-manipulation"
+        ],
+        "practices": [
+          "bit-manipulation"
+        ],
         "difficulty": 4
       },
       {
@@ -1615,7 +2098,9 @@
           "enum",
           "erlang-libraries"
         ],
-        "practices": ["strings"],
+        "practices": [
+          "strings"
+        ],
         "difficulty": 4
       },
       {
@@ -1633,7 +2118,9 @@
           "errors",
           "exceptions"
         ],
-        "practices": ["integers"],
+        "practices": [
+          "integers"
+        ],
         "difficulty": 4
       },
       {
@@ -1652,7 +2139,11 @@
           "structs",
           "protocols"
         ],
-        "practices": ["integers", "structs", "protocols"],
+        "practices": [
+          "integers",
+          "structs",
+          "protocols"
+        ],
         "difficulty": 5
       },
       {
@@ -1669,7 +2160,10 @@
           "enum",
           "recursion"
         ],
-        "practices": ["lists", "recursion"],
+        "practices": [
+          "lists",
+          "recursion"
+        ],
         "difficulty": 5
       },
       {
@@ -1690,7 +2184,9 @@
           "if",
           "structs"
         ],
-        "practices": ["pattern-matching"],
+        "practices": [
+          "pattern-matching"
+        ],
         "difficulty": 8
       },
       {
@@ -1706,7 +2202,10 @@
           "enum",
           "recursion"
         ],
-        "practices": ["strings", "charlists"],
+        "practices": [
+          "strings",
+          "charlists"
+        ],
         "difficulty": 3
       },
       {
@@ -1725,15 +2224,25 @@
           "regular-expressions",
           "file"
         ],
-        "practices": ["case", "regular-expressions", "file"],
+        "practices": [
+          "case",
+          "regular-expressions",
+          "file"
+        ],
         "difficulty": 4
       },
       {
         "slug": "difference-of-squares",
         "name": "Difference Of Squares",
         "uuid": "bb9b24da-1ee6-42fb-936f-5fc41d97ee27",
-        "prerequisites": ["integers", "enum", "ranges"],
-        "practices": ["ranges"],
+        "prerequisites": [
+          "integers",
+          "enum",
+          "ranges"
+        ],
+        "practices": [
+          "ranges"
+        ],
         "difficulty": 4
       },
       {
@@ -1753,7 +2262,9 @@
           "recursion",
           "tail-call-recursion"
         ],
-        "practices": ["tail-call-recursion"],
+        "practices": [
+          "tail-call-recursion"
+        ],
         "difficulty": 4
       },
       {
@@ -1773,15 +2284,26 @@
           "charlists",
           "ranges"
         ],
-        "practices": ["strings", "pattern-matching"],
+        "practices": [
+          "strings",
+          "pattern-matching"
+        ],
         "difficulty": 7
       },
       {
         "slug": "pythagorean-triplet",
         "name": "Pythagorean Triplet",
         "uuid": "087a2a3b-71e2-4473-ab2f-3be5240567b5",
-        "prerequisites": ["integers", "ranges", "list-comprehensions", "tasks"],
-        "practices": ["list-comprehensions", "tasks"],
+        "prerequisites": [
+          "integers",
+          "ranges",
+          "list-comprehensions",
+          "tasks"
+        ],
+        "practices": [
+          "list-comprehensions",
+          "tasks"
+        ],
         "difficulty": 5
       },
       {
@@ -1801,7 +2323,9 @@
           "errors",
           "exceptions"
         ],
-        "practices": ["pattern-matching"],
+        "practices": [
+          "pattern-matching"
+        ],
         "difficulty": 7
       },
       {
@@ -1824,324 +2348,278 @@
           "nil",
           "macros"
         ],
-        "practices": ["keyword-lists", "structs", "macros"],
+        "practices": [
+          "keyword-lists",
+          "structs",
+          "macros"
+        ],
         "difficulty": 8
       }
     ],
-    "foregone": ["robot-name"]
+    "foregone": [
+      "robot-name"
+    ]
   },
   "concepts": [
     {
       "uuid": "e95023cf-6928-4ccc-ae09-d3cb93d96d0e",
       "slug": "access-behaviour",
-      "name": "Access Behaviour",
-      "blurb": "The Access Behaviour provides a common interface for retrieving key-based data from a data structure. It is implemented for maps and keyword lists."
+      "name": "Access Behaviour"
     },
     {
       "uuid": "a5a3b2bb-fe4d-4a0b-97a3-c56ddfa9b650",
       "slug": "agent",
-      "name": "Agent",
-      "blurb": "The Agent module facilitates an abstraction for spawning processes and the receive-send loop."
+      "name": "Agent"
     },
     {
       "uuid": "a5b7f41f-9f07-4996-8032-05225f0ef639",
       "slug": "anonymous-functions",
-      "name": "Anonymous Functions",
-      "blurb": "In addition to named functions organized in modules, Elixir has anonymous functions that can be defined dynamically as needed."
+      "name": "Anonymous Functions"
     },
     {
       "uuid": "0bc1ad03-5ec7-4269-ad33-df6decbb5ee2",
       "slug": "atoms",
-      "name": "Atoms",
-      "blurb": "You can use atoms whenever you have a set of constants to express. An atom's value is its own name."
+      "name": "Atoms"
     },
     {
       "uuid": "5bd736ed-290d-4d1b-9668-36a704cbe236",
       "slug": "basics",
-      "name": "Basics",
-      "blurb": "Elixir is a functional, dynamically-typed language. Elixir code is organized into modules which contain public and private named functions. There are no compile-time type checks. Variables can be bound and re-bound to data of any type."
+      "name": "Basics"
     },
     {
       "uuid": "d291ca4b-7163-43e4-ab02-383904f19c34",
       "slug": "binaries",
-      "name": "Binaries",
-      "blurb": "The binary type is a specialization of the bitstring type. It's a bitstring whose number of bits is divisible by 8."
+      "name": "Binaries"
     },
     {
       "uuid": "ffd52ca2-8d45-4bce-a048-5d6c99dc8571",
       "slug": "bit-manipulation",
-      "name": "Bit Manipulation",
-      "blurb": "Bitwise operations, such as AND, OR, and XOR, can be performed on integers using functions from the Bitwise module."
+      "name": "Bit Manipulation"
     },
     {
       "uuid": "71d2383f-fa4e-4309-a0ce-7b05312f3259",
       "slug": "bitstrings",
-      "name": "Bitstrings",
-      "blurb": "Elixir provides an elegant syntax to write, match, and construct binary data with bitstrings. A bitstring is a contiguous sequence of bits in memory."
+      "name": "Bitstrings"
     },
     {
       "uuid": "e1c4540a-12ae-4986-a604-07f38d46b498",
       "slug": "booleans",
-      "name": "Booleans",
-      "blurb": "Elixir represents true and false values with the boolean type. Booleans can be combined into expressions using boolean operators \"not\", \"or\", and \"and\"."
+      "name": "Booleans"
     },
     {
       "uuid": "cc1d6b46-976a-481f-96e2-7d3eadea7603",
       "slug": "case",
-      "name": "Case",
-      "blurb": "There are three conditional expressions in Elixir: if, case, and cond. Case is usually used when a single variable needs to be matched against multiple patterns."
+      "name": "Case"
     },
     {
       "uuid": "7fe6a6a2-34f7-4786-a2af-1d3e2a977bc7",
       "slug": "charlists",
-      "name": "Charlists",
-      "blurb": "Charlists are an alternative to strings for storing text. A charlist is a list of integers - character code points. Charlists are most often useful when interacting with Erlang, but rarely used in Elixir."
+      "name": "Charlists"
     },
     {
       "uuid": "1e7bb8a6-9620-4474-b01e-a232408e9b65",
       "slug": "cond",
-      "name": "Cond",
-      "blurb": "There are three conditional expressions in Elixir: if, case, and cond. Cond is usually used when there are more than two logical branches and each branch has a condition based on different variables."
+      "name": "Cond"
     },
     {
       "uuid": "f76e56a7-b8a8-48a3-85f9-2f795acac8c1",
       "slug": "dates-and-time",
-      "name": "Dates and Time",
-      "blurb": "Elixir offers 4 different modules for working with dates and time, each with its own struct: Date, Time, NaiveDateTime, and DateTime."
+      "name": "Dates and Time"
     },
     {
       "uuid": "337ea0be-2978-48a1-ba10-0c29d7018a99",
       "slug": "default-arguments",
-      "name": "Default Arguments",
-      "blurb": "Named functions may declare default values for one or more of their arguments."
+      "name": "Default Arguments"
     },
     {
       "uuid": "868f024a-d84b-4893-a21f-1b27330d9788",
       "slug": "docs",
-      "name": "Docs",
-      "blurb": "Documentation in Elixir is a first-class citizen. Written in Markdown, it can be turned into beautiful webpages like Elixir's own documentation at hexdocs.pm/elixir."
+      "name": "Docs"
     },
     {
       "uuid": "c809ee97-03d1-42a9-ae72-af1c4042b974",
       "slug": "dynamic-dispatch",
-      "name": "Dynamic Dispatch",
-      "blurb": "Elixir can resolve a function to be invoked at run-time. The module name, the function name, and the list of arguments don't have to be known during compilation."
+      "name": "Dynamic Dispatch"
     },
     {
       "uuid": "34f0a21f-1ec5-4042-9efe-0c3ae7e35fbb",
       "slug": "enum",
-      "name": "Enum",
-      "blurb": "Enum is a module that provides a set of algorithms for working with enumerables. An enumerable is any data type that implements the Enumerable protocol. The most common of those are lists and maps."
+      "name": "Enum"
     },
     {
       "uuid": "4d8c1cac-ab6b-4d7a-b0c9-faef14b523a8",
       "slug": "erlang-libraries",
-      "name": "Erlang Libraries",
-      "blurb": "Being inspired by Erlang, and sharing its run environment, Elixir provides great interoperability with Erlang libraries. This means that Elixir developers can use Erlang libraries from within their Elixir code."
+      "name": "Erlang Libraries"
     },
     {
       "uuid": "3f8ca849-0546-4fd0-b55d-a617a9e119ee",
       "slug": "errors",
-      "name": "Errors",
-      "blurb": "Errors happen. In Elixir, while people often say to \"let it crash\", there are times when we need to rescue the function call to a known good state to fulfil a software contract."
+      "name": "Errors"
     },
     {
       "uuid": "586001b3-974f-468e-9f7c-45a8c74e6f39",
       "slug": "exceptions",
-      "name": "Exceptions",
-      "blurb": "All errors in Elixir implement the Exception Behaviour. It provides an easy way to create your own custom errors."
+      "name": "Exceptions"
     },
     {
       "uuid": "da243817-5c15-461c-8305-dba188b6a527",
       "slug": "file",
-      "name": "File",
-      "blurb": "Functions for working with files are provided by the File module."
+      "name": "File"
     },
     {
       "uuid": "a0a894e1-c54d-4c7a-89bf-653e6efb0039",
       "slug": "floating-point-numbers",
-      "name": "Floating Point Numbers",
-      "blurb": "There are two different kinds of numbers in Elixir - integers and floats. Floats are numbers with one or more digits behind the decimal separator."
+      "name": "Floating Point Numbers"
     },
     {
       "uuid": "5dd6841b-3875-499c-9de7-4cf4d033e68f",
       "slug": "guards",
-      "name": "Guards",
-      "blurb": "Guards are used to prevent function invocation based on evaluation of the arguments by guard functions. Guards begin with the when keyword, followed by a boolean expression. Guards are used to augment pattern matching with more complex checks."
+      "name": "Guards"
     },
     {
       "uuid": "6bafcc9f-7e2b-4240-a487-be15030cf4a3",
       "slug": "if",
-      "name": "If",
-      "blurb": "There are three conditional expressions in Elixir: if, case, and cond. If is usually used when you need to check for only one condition."
+      "name": "If"
     },
     {
       "uuid": "bab00476-4570-41c3-b74a-ba6c1a567c49",
       "slug": "integers",
-      "name": "Integers",
-      "blurb": "There are two different kinds of numbers in Elixir - integers and floats. Integers are whole numbers."
+      "name": "Integers"
     },
     {
       "uuid": "776919ef-6e4a-40d6-8977-9da237d8cc14",
       "slug": "io",
-      "name": "IO",
-      "blurb": "Functions for handling input and output are provided by the IO module. A particularly useful function is IO.inspect, often used for debugging, which prints any value is it given and returns it unchanged."
+      "name": "IO"
     },
     {
       "uuid": "a07081f3-c517-46ea-b68f-27f7e048cb5e",
       "slug": "keyword-lists",
-      "name": "Keyword Lists",
-      "blurb": "Keyword lists are a key-value data structure. A keyword list is a list of two-tuples, where the first element in the tuple is an atom. They are often used for passing options to functions."
+      "name": "Keyword Lists"
     },
     {
       "uuid": "59a617b4-4f31-4e27-8af5-5d5283933f55",
       "slug": "links",
-      "name": "Links",
-      "blurb": "Process links allow propagating failure form one process to another. Combined with trapping exits, they allow one process to function as a supervisor for other processes."
+      "name": "Links"
     },
     {
       "uuid": "9db9d827-ea45-46ca-bc0c-ef81363f9492",
       "slug": "list-comprehensions",
-      "name": "List Comprehensions",
-      "blurb": "Comprehension provide a facility for transforming Enumerables easily and declaratively. They are syntactic sugar for iterating through enumerables in Elixir."
+      "name": "List Comprehensions"
     },
     {
       "uuid": "68417562-6ef3-4a1d-9983-96b4182d444f",
       "slug": "lists",
-      "name": "Lists",
-      "blurb": "Lists are a basic data type in Elixir for holding a collection of values. A list can hold values of different types. Lists are immutable, meaning they cannot be modified. Lists in Elixir are implemented as linked lists. Therefore, accessing an element in a list takes linear time depending on the length of the list."
+      "name": "Lists"
     },
     {
       "uuid": "c1dca378-b124-4b9b-8822-ddfa23643047",
       "slug": "maps",
-      "name": "Maps",
-      "blurb": "Maps are a data structure that holds key-value pairs. Keys and values can be of any data type, and the keys must be unique."
+      "name": "Maps"
     },
     {
       "uuid": "0b4e7214-657f-40db-a30b-ee0a0b0552c3",
       "slug": "module-attributes-as-constants",
-      "name": "Module Attributes As Constants",
-      "blurb": "There are no constants in Elixir. Module attributes may be used to play a similar role."
+      "name": "Module Attributes As Constants"
     },
     {
       "uuid": "01211dc2-c8e1-4621-99a2-6aa66080839a",
       "slug": "multiple-clause-functions",
-      "name": "Multiple Clause Functions",
-      "blurb": "In Elixir, a single function can have multiple clauses. This is achieved by pattern matching the function's arguments and by using guards."
+      "name": "Multiple Clause Functions"
     },
     {
       "uuid": "e2868bb9-b384-45b6-8bdf-08e9a1ba4eea",
       "slug": "nil",
-      "name": "Nil",
-      "blurb": "Nil is an English word meaning \"nothing\" or \"zero\". In Elixir, nil is a special value that means an absence of a value."
+      "name": "Nil"
     },
     {
       "uuid": "bf0232ea-f5e7-465e-a942-b126f118f05a",
       "slug": "pattern-matching",
-      "name": "Pattern Matching",
-      "blurb": "The = operator is called a match operator. It can be used for destructuring complex data types via pattern matching.  Pattern matching is also used for defining multiple clause functions, in the case conditional, in list comprehensions, and when rescuing errors. The use of pattern matching is dominant in idiomatic Elixir code."
+      "name": "Pattern Matching"
     },
     {
       "uuid": "fe428299-37fd-4c7f-a498-fad1977390fb",
       "slug": "pids",
-      "name": "PIDs",
-      "blurb": "Each Elixir process has its own unique identifier - a PID. They function as _mailbox addresses_ - if you have a process' PID, you can send a message to that process."
+      "name": "PIDs"
     },
     {
       "uuid": "36c21dce-62d5-4865-bf67-96ca6037a4a4",
       "slug": "pipe-operator",
-      "name": "Pipe Operator",
-      "blurb": "The |> operator is called the pipe operator. It can be used to chain function calls together in such a way that the value returned by the previous function call is passed as the first argument to the next function call."
+      "name": "Pipe Operator"
     },
     {
       "uuid": "410a2c9b-de5f-4501-a01a-ca65a1f22ef2",
       "slug": "processes",
-      "name": "Processes",
-      "blurb": "In Elixir, all code runs inside processes. Elixir processes can be used to keep global statue, contain failure, and allow for concurrent and asynchronous code. Processes do not directly share any data with one another. They send messages to share data."
+      "name": "Processes"
     },
     {
       "uuid": "39a458dd-287f-482c-8fee-111beb4945e4",
       "slug": "protocols",
-      "name": "Protocols",
-      "blurb": "Protocols are a mechanism to achieve polymorphism in Elixir when you want behavior to vary depending on the data type."
+      "name": "Protocols"
     },
     {
       "uuid": "e48688fd-1216-4b3e-ba04-1d69e4d47000",
       "slug": "randomness",
-      "name": "Randomness",
-      "blurb": "To choose a random element from an enumerable data structure, we use Enum.random. Elixir does not have its own functions for picking a random float. To do that, we have to use the Erlang rand module."
+      "name": "Randomness"
     },
     {
       "uuid": "b2165ae4-a742-4230-8297-11e65882ce2c",
       "slug": "ranges",
-      "name": "Ranges",
-      "blurb": "Ranges represent a sequence of one or many consecutive integers. They are created using the .. operator and can be both ascending or descending."
+      "name": "Ranges"
     },
     {
       "uuid": "fc21f957-faac-41f3-ad94-fd643a4a0787",
       "slug": "recursion",
-      "name": "Recursion",
-      "blurb": "Recursive functions are functions that call themselves. In immutable functional languages like Elixir, recursion is necessary to achieve teh behavior that loops have in other languages."
+      "name": "Recursion"
     },
     {
       "uuid": "ddd88935-a304-4a9e-8b28-a2a877c22e3b",
       "slug": "regular-expressions",
-      "name": "Regular Expressions",
-      "blurb": "Regular expressions in Elixir follow the PCRE specification (Perl Compatible Regular Expressions). They are a very powerful tool for working with strings that can be used in situations where the String module is not enough."
+      "name": "Regular Expressions"
     },
     {
       "uuid": "442e8992-9eed-4b11-bd97-edf23ab0dc7b",
       "slug": "streams",
-      "name": "Streams",
-      "blurb": "The Stream module is a lazy alternative to the eager Enum module."
+      "name": "Streams"
     },
     {
       "uuid": "c7ad7fb0-0efc-4d5f-a501-2abe5e048ac7",
       "slug": "strings",
-      "name": "Strings",
-      "blurb": "Strings in Elixir can easily be concatenated and interpolated, and the String module offers a variety of helpful functions for working with strings."
+      "name": "Strings"
     },
     {
       "uuid": "de1ee106-da36-44ed-8eeb-988f079641d6",
       "slug": "structs",
-      "name": "Structs",
-      "blurb": "Structs are extensions built on top of maps that provide compile-time checks and default values."
+      "name": "Structs"
     },
     {
       "uuid": "2b2632d6-84a5-45d8-a686-d4b995300beb",
       "slug": "tail-call-recursion",
-      "name": "Tail Call Recursion",
-      "blurb": "A recursive function is tail-recursive if the last thing executed by the function is a call to itself. Tail-recursive functions allow for tail call optimization. It's an optimization that allows reusing the last stack frame by the next function call."
+      "name": "Tail Call Recursion"
     },
     {
       "uuid": "08e88033-01be-406b-a1a1-3657d920363c",
       "slug": "tasks",
-      "name": "Tasks",
-      "blurb": "Tasks are processes meant to execute one specific operation. They usually don't communicate with other processes, but they can return a result to the process that started the task."
+      "name": "Tasks"
     },
     {
       "uuid": "eef1727c-e5d3-41de-801b-a57b85051363",
       "slug": "try-rescue",
-      "name": "Try/Rescue",
-      "blurb": "Elixir provides a construct for rescuing from errors using try/rescue."
+      "name": "Try/Rescue"
     },
     {
       "uuid": "3beba34b-0675-48bf-9fe5-0e7e36eb6eea",
       "slug": "try-rescue-else-after",
-      "name": "Try/Rescue/Else/After",
-      "blurb": "The try/rescue construct can take two additional options: else and after."
+      "name": "Try/Rescue/Else/After"
     },
     {
       "uuid": "41100681-1d36-4cb6-8968-e9e815ca161d",
       "slug": "tuples",
-      "name": "Tuples",
-      "blurb": "A tuple is a data structure which organizes data, holding a fixed number of items of any type, but without explicit names for each element. Tuples are ideal for storing related information together, but not for storing collections of items that need iterating or might grow or shrink."
+      "name": "Tuples"
     },
     {
       "uuid": "cf4b56eb-d8c5-4180-820a-d839eaa0962a",
       "slug": "typespecs",
-      "name": "Typespecs",
-      "blurb": "Elixir is a dynamically typed language, which means it doesn't provide compile-time type checks. Still, type specifications can be used as a form of documentation."
+      "name": "Typespecs"
     }
   ],
   "key_features": [

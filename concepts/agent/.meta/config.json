@@ -1,0 +1,11 @@
+{
+  "blurb": "The Agent module facilitates an abstraction for spawning processes and the receive-send loop.",
+  "authors": [
+    "neenjaw"
+  ],
+  "contributors": [
+    "angelikatyborska",
+    "jrr",
+    "efx"
+  ]
+}

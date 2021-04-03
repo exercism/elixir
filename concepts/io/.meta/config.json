@@ -1,0 +1,9 @@
+{
+  "blurb": "Functions for handling input and output are provided by the IO module. A particularly useful function is IO.inspect, often used for debugging, which prints any value is it given and returns it unchanged.",
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [
+    "neenjaw"
+  ]
+}

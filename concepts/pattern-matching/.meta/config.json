@@ -1,0 +1,9 @@
+{
+  "blurb": "The = operator is called a match operator. It can be used for destructuring complex data types via pattern matching.  Pattern matching is also used for defining multiple clause functions, in the case conditional, in list comprehensions, and when rescuing errors. The use of pattern matching is dominant in idiomatic Elixir code.",
+  "authors": [
+    "neenjaw"
+  ],
+  "contributors": [
+    "angelikatyborska"
+  ]
+}

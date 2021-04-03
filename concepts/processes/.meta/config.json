@@ -1,0 +1,9 @@
+{
+  "blurb": "In Elixir, all code runs inside processes. Elixir processes can be used to keep global statue, contain failure, and allow for concurrent and asynchronous code. Processes do not directly share any data with one another. They send messages to share data.",
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [
+    "neenjaw"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "blurb": "Comprehension provide a facility for transforming Enumerables easily and declaratively. They are syntactic sugar for iterating through enumerables in Elixir.",
+  "authors": [
+    "neenjaw"
+  ],
+  "contributors": [
+    "angelikatyborska"
+  ]
+}

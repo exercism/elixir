@@ -1,0 +1,9 @@
+{
+  "blurb": "Regular expressions in Elixir follow the PCRE specification (Perl Compatible Regular Expressions). They are a very powerful tool for working with strings that can be used in situations where the String module is not enough.",
+  "authors": [
+    "neenjaw"
+  ],
+  "contributors": [
+    "angelikatyborska"
+  ]
+}

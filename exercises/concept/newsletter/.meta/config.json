@@ -3,6 +3,9 @@
   "authors": [
     "angelikatyborska"
   ],
+  "contributors": [
+    "neenjaw"
+  ],
   "files": {
     "solution": [
       "lib/newsletter.ex"

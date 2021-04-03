@@ -1,0 +1,9 @@
+{
+  "blurb": "The Stream module is a lazy alternative to the eager Enum module.",
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [
+    "neenjaw"
+  ]
+}
