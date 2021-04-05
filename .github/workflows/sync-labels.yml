@@ -1,4 +1,4 @@
-name: Tools
+name: sync-labels
 
 on:
   push:
