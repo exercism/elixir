@@ -73,7 +73,3 @@
 - name: "won't fix ⛔️"
   color: "fce0e2"
   description: ""
-
-- name: "xyz️ test label"
-  color: "631d66"
-  description: "this is a test label to check if the label syncer works"
