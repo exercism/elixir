@@ -2,7 +2,7 @@ name: sync-labels
 
 on:
   push:
-    branches: [main]
+    branches: [label-syncer-one-more-fix]
     paths:
       - .github/labels.yml
       - .github/workflows/sync-labels.yml
@@ -18,3 +18,5 @@ jobs:
       - uses: micnncim/action-label-syncer@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          manifest: .github/labels.yml
