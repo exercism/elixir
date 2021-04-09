@@ -14,19 +14,13 @@
     "rubysolo",
     "sotojuan",
     "Teapane",
-    "waiting-for-dev"
+    "waiting-for-dev",
+    "marcandre"
   ],
   "files": {
-    "solution": [
-      "lib/dot.ex",
-      "lib/graph.ex"
-    ],
-    "test": [
-      "test/dot_test.exs"
-    ],
-    "example": [
-      ".meta/example.ex"
-    ]
+    "solution": ["lib/dot.ex"],
+    "test": ["test/dot_test.exs"],
+    "example": [".meta/example.ex"]
   },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/DOT_(graph_description_language)"
