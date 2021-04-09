@@ -36,12 +36,9 @@ defmodule Graph do
   """
   @spec add_node(t, id, attrs) :: t
   def add_node(%Graph{} = g, id, attrs) do
-    {_, nodes} =
-      Map.get_and_update(g.nodes, id, fn cur ->
-        {cur, Enum.into(attrs, cur || %{})}
-      end)
-
-    %{g | nodes: nodes}
+    update_in(g.nodes[id], fn cur ->
+      Enum.into(attrs, cur || %{})
+    end)
   end
 
   def add_node(%Graph{} = g, id) do
