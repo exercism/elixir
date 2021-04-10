@@ -1,0 +1,7 @@
+on: [pull_request]
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: angelikatyborska/pr-commenter-action@367f5292686ff57c591ca25a18ea36ddc86f9337

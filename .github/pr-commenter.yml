@@ -1,0 +1,17 @@
+comment:
+  on-update: recreate
+  header: This is an automated comment.
+  footer: |
+    ---
+
+    > This is an automated comment created by [pr-commenter.yml](https://github.com/angelikatyborska/pr-commenter-action).
+
+  snippets:
+    - id: readme
+      files:
+        - 'README.md'
+      body: |
+        This is a test list :tada:
+        - one
+        - two
+        - three :rocket:
