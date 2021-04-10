@@ -1,5 +1,5 @@
 comment:
-  on-update: edit
+  on-update: recreate
   header: |
     Thank you for contributing to `exercism/elixir` :purple_heart:. This is an automated PR comment for the **maintainers** of this repository and you can just ignore it.
 
