@@ -21,7 +21,7 @@ the [Graphviz](http://graphviz.org/) tools (such as `dot`). A simple graph looks
 Putting this in a file `example.dot` and running `dot example.dot -T png -o example.png` creates an image `example.png` with red and blue circle
 connected by a green line on a yellow background.
 
-Write a Domain Specific Language similar to the Graphviz dot language using the provided `Graph` data structure.
+Write a Domain Specific Language similar to the Graphviz dot language using the provided `Graph` data structure and functions.
 
 Our DSL is similar to the Graphviz dot language in that our DSL will be used
 to create graph data structures. However, unlike the DOT Language, our DSL will
