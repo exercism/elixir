@@ -1,38 +1,4 @@
-defmodule BinTree do
-  @moduledoc """
-  A node in a binary tree.
-
-  `value` is the value of a node.
-  `left` is the left subtree (nil if no subtree).
-  `right` is the right subtree (nil if no subtree).
-  """
-
-  @type t :: %BinTree{value: any, left: t() | nil, right: t() | nil}
-
-  defstruct [:value, :left, :right]
-end
-
-defimpl Inspect, for: BinTree do
-  import Inspect.Algebra
-
-  # A custom inspect instance purely for the tests, this makes error messages
-  # much more readable.
-  #
-  # %BinTree{value: 3, left: %BinTree{value: 5, right: %BinTree{value: 6}}} becomes (3:(5::(6::)):)
-  def inspect(%BinTree{value: value, left: left, right: right}, opts) do
-    concat([
-      "(",
-      to_doc(value, opts),
-      ":",
-      if(left, do: to_doc(left, opts), else: ""),
-      ":",
-      if(right, do: to_doc(right, opts), else: ""),
-      ")"
-    ])
-  end
-end
-
-defmodule BinTree.Zipper do
+defmodule Zipper do
   @moduledoc """
   A binary tree zipper.
 
@@ -44,18 +10,17 @@ defmodule BinTree.Zipper do
   The trail stores the path that a zipper has taken into the tree from the root
   and the alternative branches.
   """
-  @type t :: %BinTree.Zipper{
+
+  alias BinTree, as: BT
+  alias __MODULE__, as: Z
+
+  @type t :: %Z{
           value: any,
-          left: BinTree.Zipper.t() | nil,
-          right: BinTree.Zipper.t() | nil,
-          trail: [{:left, any, BinTree.t()} | {:right, any, BinTree.t()}]
+          left: BT.t() | nil,
+          right: BT.t() | nil,
+          trail: [{:left, any, BT.t()} | {:right, any, BT.t()}]
         }
   defstruct value: nil, left: nil, right: nil, trail: []
-end
-
-defmodule Zipper do
-  alias BinTree, as: BT
-  alias BinTree.Zipper, as: Z
 
   @doc """
   Get a zipper focussed on the root node.
