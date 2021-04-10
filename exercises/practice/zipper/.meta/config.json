@@ -22,15 +22,9 @@
     "waiting-for-dev"
   ],
   "files": {
-    "solution": [
-      "lib/zipper.ex",
-      "lib/bin_tree.ex"
-    ],
-    "test": [
-      "test/zipper_test.exs"
-    ],
-    "example": [
-      ".meta/example.ex"
-    ]
+    "solution": ["lib/zipper.ex"],
+    "test": ["test/zipper_test.exs"],
+    "editor": ["lib/bin_tree.ex"],
+    "example": [".meta/example.ex"]
   }
 }

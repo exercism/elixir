@@ -1,7 +1,3 @@
-defmodule Graph do
-  defstruct attrs: [], nodes: [], edges: []
-end
-
 defmodule Dot do
   # Normally matching on keywords is a bad idea as keyword lists can have
   # several orders (i.e. `[a: 1, b: 2]` and `[b: 2, a: 1]`). But in this case
