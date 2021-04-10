@@ -1,6 +1,24 @@
 {
   "blurb": "Use the Sieve of Eratosthenes to find all the primes from 2 up to a given number.",
-  "authors": [],
+  "authors": [
+    "petehuang"
+  ],
+  "contributors": [
+    "andrewsardone",
+    "angelikatyborska",
+    "Cohen-Carlisle",
+    "dalexj",
+    "devonestes",
+    "drueck",
+    "jinyeow",
+    "lpil",
+    "neenjaw",
+    "parkerl",
+    "rubysolo",
+    "sotojuan",
+    "Teapane",
+    "waiting-for-dev"
+  ],
   "files": {
     "solution": [
       "lib/sieve.ex"

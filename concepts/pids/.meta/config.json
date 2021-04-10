@@ -1,0 +1,9 @@
+{
+  "blurb": "Each Elixir process has its own unique identifier - a PID. They function as _mailbox addresses_ - if you have a process' PID, you can send a message to that process.",
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [
+    "neenjaw"
+  ]
+}

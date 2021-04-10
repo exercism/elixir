@@ -1,6 +1,15 @@
 {
   "blurb": "Tally the results of a small football competition.",
-  "authors": [],
+  "authors": [
+    "DoggettCK"
+  ],
+  "contributors": [
+    "angelikatyborska",
+    "Cohen-Carlisle",
+    "devonestes",
+    "neenjaw",
+    "sotojuan"
+  ],
   "files": {
     "solution": [
       "lib/tournament.ex"

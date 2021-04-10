@@ -1,6 +1,23 @@
 {
   "blurb": "Given a number n, determine what the nth prime is.",
-  "authors": [],
+  "authors": [
+    "petehuang"
+  ],
+  "contributors": [
+    "andrewsardone",
+    "angelikatyborska",
+    "Cohen-Carlisle",
+    "dalexj",
+    "devonestes",
+    "jinyeow",
+    "lpil",
+    "neenjaw",
+    "parkerl",
+    "rubysolo",
+    "sotojuan",
+    "Teapane",
+    "waiting-for-dev"
+  ],
   "files": {
     "solution": [
       "lib/prime.ex"

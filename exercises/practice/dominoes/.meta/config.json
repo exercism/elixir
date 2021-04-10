@@ -1,6 +1,15 @@
 {
   "blurb": "Make a chain of dominoes.",
-  "authors": [],
+  "authors": [
+    "Tuxified"
+  ],
+  "contributors": [
+    "angelikatyborska",
+    "Cohen-Carlisle",
+    "devonestes",
+    "neenjaw",
+    "sotojuan"
+  ],
   "files": {
     "solution": [
       "lib/dominoes.ex"

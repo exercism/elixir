@@ -1,22 +1,5 @@
 defmodule Bob do
-  @doc """
-  Answers to `hey` like a teenager.
-
-  ## Examples
-
-    iex> Bob.hey("")
-    "Fine. Be that way!"
-
-    iex> Bob.hey("Do you like math?")
-    "Sure."
-
-    iex> Bob.hey("HELLO!")
-    "Whoa, chill out!"
-
-    iex> Bob.hey("Coding is cool.")
-    "Whatever."
-  """
-
+  @spec hey(String.t()) :: String.t()
   def hey(input) do
     input = String.trim(input)
 

@@ -1,0 +1,9 @@
+{
+  "blurb": "There are three conditional expressions in Elixir: if, case, and cond. If is usually used when you need to check for only one condition.",
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [
+    "neenjaw"
+  ]
+}

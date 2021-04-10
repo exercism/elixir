@@ -22,7 +22,7 @@ function_variable.(1)
 # => 2
 ```
 
-Anonymous functions may be created with the [`&` capture shorthand][kernal-capture].
+Anonymous functions may be created with the [`&` capture shorthand][kernel-capture].
 
 - The initial `&` declares the start of the capture expression.
 - `&1`, `&2`, and so on refer to the positional arguments of the anonymous function.
@@ -64,6 +64,6 @@ x
 
 [anon-fns]: https://elixir-lang.org/getting-started/basic-types.html#anonymous-functions
 [kernel-fn]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#fn/1
-[kernal-capture]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#&/1
+[kernel-capture]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#&/1
 [capture]: https://dockyard.com/blog/2016/08/05/understand-capture-operator-in-elixir
 [closure]: https://en.wikipedia.org/wiki/Closure_(computer_programming)

@@ -1,6 +1,18 @@
 {
   "blurb": "Determine if a word or phrase is an isogram.",
-  "authors": [],
+  "authors": [
+    "jimmbraddock"
+  ],
+  "contributors": [
+    "angelikatyborska",
+    "awochna",
+    "Cohen-Carlisle",
+    "devonestes",
+    "lpil",
+    "neenjaw",
+    "parkerl",
+    "sotojuan"
+  ],
   "files": {
     "solution": [
       "lib/isogram.ex"

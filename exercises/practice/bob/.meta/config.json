@@ -1,6 +1,35 @@
 {
   "blurb": "Bob is a lackadaisical teenager. In conversation, his responses are very limited.",
-  "authors": [],
+  "authors": [
+    "rubysolo"
+  ],
+  "contributors": [
+    "andrewsardone",
+    "angelikatyborska",
+    "austinlyons",
+    "cbliard",
+    "Cohen-Carlisle",
+    "dalexj",
+    "devonestes",
+    "digitalronin",
+    "doncruse",
+    "etrepum",
+    "ghajba",
+    "kytrinyx",
+    "lpil",
+    "neenjaw",
+    "parkerl",
+    "pminten",
+    "rsslldnphy",
+    "seeflanigan",
+    "sotojuan",
+    "Teapane",
+    "tjcelaya",
+    "Tonkpils",
+    "victorpre",
+    "vladimir-tikhonov",
+    "waiting-for-dev"
+  ],
   "files": {
     "solution": [
       "lib/bob.ex"

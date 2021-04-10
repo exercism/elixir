@@ -1,16 +1,30 @@
 {
   "blurb": "Creating a zipper for a binary tree.",
   "authors": [],
+  "contributors": [
+    "adriankumpf",
+    "andrewsardone",
+    "angelikatyborska",
+    "CoderDennis",
+    "Cohen-Carlisle",
+    "dalexj",
+    "devonestes",
+    "jinyeow",
+    "kytrinyx",
+    "lpil",
+    "neenjaw",
+    "parkerl",
+    "pminten",
+    "rubysolo",
+    "sotojuan",
+    "Teapane",
+    "tjcelaya",
+    "waiting-for-dev"
+  ],
   "files": {
-    "solution": [
-      "lib/zipper.ex",
-      "lib/bin_tree.ex"
-    ],
-    "test": [
-      "test/zipper_test.exs"
-    ],
-    "example": [
-      ".meta/example.ex"
-    ]
+    "solution": ["lib/zipper.ex"],
+    "test": ["test/zipper_test.exs"],
+    "editor": ["lib/bin_tree.ex"],
+    "example": [".meta/example.ex"]
   }
 }

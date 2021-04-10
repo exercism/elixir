@@ -1,0 +1,9 @@
+{
+  "blurb": "Ranges represent a sequence of one or many consecutive integers. They are created using the .. operator and can be both ascending or descending.",
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [
+    "neenjaw"
+  ]
+}

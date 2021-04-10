@@ -1,16 +1,10 @@
 {
-  "blurb": "TODO: add blurb for take-a-number exercise",
+  "blurb": "Learn about processes and process identifiers by writing an embedded system for a Take-A-Number machine.",
   "authors": [
-    {
-      "github_username": "angelikatyborska",
-      "exercism_username": "angelikatyborska"
-    }
+    "angelikatyborska"
   ],
   "contributors": [
-    {
-      "github_username": "neenjaw",
-      "exercism_username": "neenjaw"
-    }
+    "neenjaw"
   ],
   "files": {
     "solution": [

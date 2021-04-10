@@ -65,34 +65,11 @@ string = "this is a string! 1, 2, 3!"
   - Automatically imported.
   - Its functions can be used without the `Kernel.` prefix.
 
-## Documentation
+## Code comments
 
-- Elixir provides 3 ways to write [inline documentation][inline-documentation].
-
-  - Single line comments are preceded by `#`.
-  - Functions may be documented with `@doc` preceding the named function definition
-
-    ```elixir
-    @doc """
-    Function Documentation
-    """
-    def function(), do: true
-    ```
-
-  - Modules may be documented with `@moduledoc` immediately following the module definition
-
-    ```elixir
-    defmodule Example do
-      @moduledoc """
-      Module documentation
-      """
-
-      #...
-    end
-    ```
+Comments can be used to leave notes for other developers reading the source code. Single line comments in Elixir are preceded by `#`.
 
 [match]: https://elixirschool.com/en/lessons/basics/pattern-matching/
-[inline-documentation]: https://elixirschool.com/en/lessons/basics/documentation/#inline-documentation
 [operators]: https://elixir-lang.org/getting-started/basic-types.html#basic-arithmetic
 [modules]: https://elixirschool.com/en/lessons/basics/modules/#modules
 [functions]: https://elixirschool.com/en/lessons/basics/functions/#named-functions

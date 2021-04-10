@@ -1,16 +1,10 @@
 {
-  "blurb": "TODO: add blurb for date-parser exercise",
+  "blurb": "Learn about regular expressions by parsing dates.",
   "authors": [
-    {
-      "github_username": "neenjaw",
-      "exercism_username": "neenjaw"
-    }
+    "neenjaw"
   ],
   "contributors": [
-    {
-      "github_username": "angelikatyborska",
-      "exercism_username": "angelikatyborska"
-    }
+    "angelikatyborska"
   ],
   "files": {
     "solution": [

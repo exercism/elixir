@@ -1,6 +1,16 @@
 {
   "blurb": "Diffie-Hellman key exchange.",
-  "authors": [],
+  "authors": [
+    "DoggettCK"
+  ],
+  "contributors": [
+    "angelikatyborska",
+    "Cohen-Carlisle",
+    "devonestes",
+    "MeerKatDev",
+    "neenjaw",
+    "sotojuan"
+  ],
   "files": {
     "solution": [
       "lib/diffie_hellman.ex"

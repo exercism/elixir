@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Use Elixir
-        uses: erlef/setup-elixir@v1
+        uses: erlef/setup-beam@v1.7
         with:
           otp-version: ${{matrix.otp}}
           elixir-version: ${{matrix.elixir}}
@@ -48,7 +48,7 @@ jobs:
         id: plt-cache
         with:
           path: priv/plts
-          key: ${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-plts-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}-v2
+          key: ${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-plts-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}-v3
 
       - name: Create PLTs
         if: steps.plt-cache.outputs.cache-hit != 'true'
@@ -64,10 +64,9 @@ jobs:
 
     strategy:
       matrix:
-        #Note: pick a canonical set of supported versions
-        elixir: ['1.6.0', '1.7.0']
-        otp: ['20.0']
         include:
+          - elixir: '1.7.0'
+            otp: '20.0'
           - elixir: '1.8.0'
             otp: '20.0'
           - elixir: '1.9.0'
@@ -82,7 +81,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Use Elixir ${{matrix.elixir}} / OTP ${{matrix.otp}}
-        uses: erlef/setup-elixir@v1
+        uses: erlef/setup-beam@v1.7
         with:
           otp-version: ${{matrix.otp}}
           elixir-version: ${{matrix.elixir}}

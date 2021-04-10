@@ -1,0 +1,75 @@
+- name: "CI 🤖"
+  color: "d2e1f2"
+  description: "Changes related to continuous integration"
+
+- name: "bug 🐛"
+  color: "8e2c2c"
+  description: ""
+
+- name: "canonical sync 🔄"
+  color: "99C8EA"
+  description: "For issues/changes related to synchronization between test suites and the canonical data"
+
+- name: "concept-exercise"
+  color: "dbf2a2"
+  description: "Adding or improving a concept exercise"
+
+- name: "dependencies"
+  color: "0366d6"
+  description: "Pull requests that update a dependency file"
+
+- name: "discussion 💬"
+  color: "23296d"
+  description: ""
+
+- name: "documentation 📖"
+  color: "23296d"
+  description: "Changing the documentation only, no coding involved"
+
+- name: "duplicate"
+  color: "cccccc"
+  description: null
+
+- name: "enhancement ⭐️"
+  color: "c3dcf7"
+  description: "A nice-to-have"
+
+- name: "good first issue 🐥"
+  color: "C2E0C6"
+  description: ""
+
+- name: "help wanted 🤝"
+  color: "ccd4fc"
+  description: ""
+
+- name: "in progress 🚧"
+  color: "FEF6EE"
+  description: "Already being worked on"
+
+- name: "question ❔"
+  color: "23296d"
+  description: ""
+
+- name: "reputation/contributed_code/major"
+  color: "fcfa9f"
+  description: "Increases the number of reputation points awarded by this PR"
+
+- name: "reputation/contributed_code/minor"
+  color: "fcfa9f"
+  description: "Decreases the number of reputation points awarded by this PR"
+
+- name: "v3"
+  color: "dbf2a2"
+  description: "Related to Exercism v3"
+
+- name: "v3-migration 🤖"
+  color: "E99695"
+  description: "Preparing for Exercism v3"
+
+- name: "waiting ⏳"
+  color: "FEF6EE"
+  description: "Waiting for something else to happen first"
+
+- name: "won't fix ⛔️"
+  color: "fce0e2"
+  description: ""

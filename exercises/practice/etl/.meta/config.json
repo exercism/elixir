@@ -1,6 +1,29 @@
 {
   "blurb": "We are going to do the `Transform` step of an Extract-Transform-Load.",
-  "authors": [],
+  "authors": [
+    "rubysolo"
+  ],
+  "contributors": [
+    "andrewsardone",
+    "angelikatyborska",
+    "bartj3",
+    "Cohen-Carlisle",
+    "dalexj",
+    "dantswain",
+    "devonestes",
+    "etrepum",
+    "henrik",
+    "herminiotorres",
+    "jinyeow",
+    "kytrinyx",
+    "lpil",
+    "neenjaw",
+    "parkerl",
+    "pminten",
+    "sotojuan",
+    "Teapane",
+    "waiting-for-dev"
+  ],
   "files": {
     "solution": [
       "lib/etl.ex"

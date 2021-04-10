@@ -57,9 +57,9 @@ Processes do not directly share information with one another. Processes _send me
 - You can receive a message sent to the current process using [`receive/1`][kernel-receive].
 
   - You need to pattern match on messages.
-  - `receive` waits until one message matching any given pattern is in the processes mailbox.
+  - `receive` waits until one message matching any given pattern is in the process's mailbox.
     - By default, it waits indefinitely, but can be given a timeout using an `after` block.
-  - Read messages are removed from the process' mailbox. Unread messages will stay there indefinitely.
+  - Read messages are removed from the process's mailbox. Unread messages will stay there indefinitely.
     - Always write a catch-all `_` clause in `receive/1` to avoid running of out memory due to piled up unread messages.
 
   ```elixir

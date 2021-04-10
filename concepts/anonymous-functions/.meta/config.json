@@ -1,0 +1,9 @@
+{
+  "blurb": "In addition to named functions organized in modules, Elixir has anonymous functions that can be defined dynamically as needed.",
+  "authors": [
+    "neenjaw"
+  ],
+  "contributors": [
+    "ErikSchierboom"
+  ]
+}

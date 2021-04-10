@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# ###
-# test_exercises.sh, by Tim Austin (neenjaw) tim@neenjaw.com
+set -euo pipefail
+
 # ###
 # Script is to test each exercise against it's test unit individually
 # against the example solution to prove the test works, and the problem
@@ -42,17 +42,20 @@ cp -a exercises tmp-exercises
 # test each exercise
 for exercise in tmp-exercises/*/*
 do
-  if [ -d $exercise ]
+  if [ -d ${exercise} ]
   then
-    cd "$exercise"
+    cd "${exercise}"
 
     exercise_name=$(basename $exercise)
     test_count=$((test_count+1))
 
     printf "\\033[33mTesting\\033[0m: $exercise_name "
 
+    exercise_config=".meta/config.json"
+    files_to_remove=($(jq -r '.files.solution[]' "${exercise_config}"))
+
     # Move the example into the lib file
-    for file in lib/*
+    for file in "${files_to_remove[@]}"
     do
       rm -r "$file"
     done
@@ -71,15 +74,15 @@ do
     compiler_results=$(MIX_ENV=test mix compile --force --warnings-as-errors 2>&1)
     compile_exit_code="$?"
 
-    if [ "$compile_exit_code" -eq 0 ]
+    if [ "${compile_exit_code}" -eq 0 ]
     then
       # turn on doctests
-      test_file=`find . -name \*_test.exs`
-      module_name=`cat $test_file | sed -rn 's/^defmodule (.*)Test do$/\1 /p'`
+      test_file=$(find . -name \*_test.exs)
+      module_name=$(cat "${test_file}" | sed -rn 's/^defmodule (.*)Test do$/\1 /p')
       doctest_code="doctest ${module_name}"
 
       # Warning: GNU sed necessary, BSD (macOS) sed has incompatible options
-      sed -i 's/use ExUnit.Case\(.*\)/use ExUnit.Case\1\n'" ${doctest_code}"'\n/g' $test_file
+      sed -i 's/use ExUnit.Case\(.*\)/use ExUnit.Case\1\n'" ${doctest_code}"'\n/g' "${test_file}"
 
       # perform unit tests
       test_results=$(mix test --color --no-elixir-version-check --include pending 2> /dev/null)
@@ -90,19 +93,19 @@ do
     fi
 
     # based on compiler and unit test, print results
-    if [ "$compile_exit_code" -eq 0 -a "$test_exit_code" -eq 0 ]
+    if [ "${compile_exit_code}" -eq 0 -a "${test_exit_code}" -eq 0 ]
     then
       printf "\\033[32mPass\\033[0m\n"
       pass_count=$((pass_count+1))
     else
       printf "\\033[31mFail\\033[0m\n"
 
-      if [ "$compile_exit_code" -ne 0 ]
+      if [ "${compile_exit_code}" -ne 0 ]
       then
         printf "\\033[36mcompiler output\\033[0m "; printf -- '-%.0s' {1..61}; echo ""
         printf "${compiler_results}\n"
       fi
-      if [ "$test_exit_code" -ne 0 -a "$test_exit_code" -ne 5 ]
+      if [ "${test_exit_code}" -ne 0 -a "${test_exit_code}" -ne 5 ]
       then
         printf "\\033[36mtest output\\033[0m "; printf -- '-%.0s' {1..65}; echo ""
         printf "${test_results}\n"
@@ -113,7 +116,7 @@ do
       failing_exercises+=( $exercise_name )
     fi
 
-    cd "$relative_root"
+    cd "${relative_root}"
   fi
 done
 
@@ -124,13 +127,13 @@ rm -rf tmp-exercises
 printf -- '-%.0s' {1..80}; echo ""
 printf "${pass_count}/${test_count} tests passed.\n"
 
-if [ "$fail_count" -eq 0 ]
+if [ "${fail_count}" -eq 0 ]
 then
   # everything is good, exit
   exit 0;
 else
   # There was at least one problem, list the exercises with problems.
-  printf "${fail_count} $(test_or_tests "$fail_count") failing:\n"
+  printf "${fail_count} $(test_or_tests "${fail_count}") failing:\n"
 
   for exercise in ${failing_exercises[@]}
   do

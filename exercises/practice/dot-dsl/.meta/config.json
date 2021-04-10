@@ -1,17 +1,27 @@
 {
   "blurb": "Write a Domain Specific Language similar to the Graphviz dot language",
   "authors": [],
+  "contributors": [
+    "angelikatyborska",
+    "Cohen-Carlisle",
+    "dalexj",
+    "devonestes",
+    "gvaughn",
+    "jinyeow",
+    "lpil",
+    "neenjaw",
+    "parkerl",
+    "rubysolo",
+    "sotojuan",
+    "Teapane",
+    "waiting-for-dev",
+    "marcandre"
+  ],
   "files": {
-    "solution": [
-      "lib/dot.ex",
-      "lib/graph.ex"
-    ],
-    "test": [
-      "test/dot_test.exs"
-    ],
-    "example": [
-      ".meta/example.ex"
-    ]
+    "solution": ["lib/dot.ex"],
+    "test": ["test/dot_test.exs"],
+    "editor": ["lib/graph.ex"],
+    "example": [".meta/example.ex"]
   },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/DOT_(graph_description_language)"

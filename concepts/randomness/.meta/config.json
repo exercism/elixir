@@ -1,0 +1,9 @@
+{
+  "blurb": "To choose a random element from an enumerable data structure, we use Enum.random. Elixir does not have its own functions for picking a random float. To do that, we have to use the Erlang rand module.",
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [
+    "neenjaw"
+  ]
+}

@@ -1,6 +1,27 @@
 {
   "blurb": "Simulate a bank account supporting opening/closing, withdraws, and deposits of money. Watch out for concurrent transactions!",
   "authors": [],
+  "contributors": [
+    "angelikatyborska",
+    "awochna",
+    "Cohen-Carlisle",
+    "dalexj",
+    "devonestes",
+    "elasticdog",
+    "jinyeow",
+    "kytrinyx",
+    "lpil",
+    "martinsvalin",
+    "neenjaw",
+    "nilvon9wo",
+    "parkerl",
+    "pminten",
+    "rubysolo",
+    "sotojuan",
+    "Teapane",
+    "tjcelaya",
+    "waiting-for-dev"
+  ],
   "files": {
     "solution": [
       "lib/bank_account.ex"

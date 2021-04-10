@@ -1,0 +1,10 @@
+{
+  "blurb": "There are three conditional expressions in Elixir: if, case, and cond. Cond is usually used when there are more than two logical branches and each branch has a condition based on different variables.",
+  "authors": [
+    "neenjaw"
+  ],
+  "contributors": [
+    "gwaerondor",
+    "ErikSchierboom"
+  ]
+}

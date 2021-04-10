@@ -1,0 +1,9 @@
+{
+  "blurb": "Documentation in Elixir is a first-class citizen. Written in Markdown, it can be turned into beautiful webpages like Elixir's own documentation at hexdocs.pm/elixir.",
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [
+    "neenjaw"
+  ]
+}

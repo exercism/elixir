@@ -1,6 +1,24 @@
 {
   "blurb": "Convert a binary number, represented as a string (e.g. '101010'), to its decimal equivalent using first principles",
-  "authors": [],
+  "authors": [
+    "rubysolo"
+  ],
+  "contributors": [
+    "andrewsardone",
+    "angelikatyborska",
+    "Cohen-Carlisle",
+    "dalexj",
+    "devonestes",
+    "jinyeow",
+    "kytrinyx",
+    "lpil",
+    "neenjaw",
+    "NobbZ",
+    "parkerl",
+    "sotojuan",
+    "Teapane",
+    "waiting-for-dev"
+  ],
   "files": {
     "solution": [
       "lib/binary.ex"

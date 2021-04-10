@@ -1,6 +1,19 @@
 {
   "blurb": "Write a simple linked list implementation that uses Elements and a List",
-  "authors": [],
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+    "angelikatyborska",
+    "AnilRedshift",
+    "Cohen-Carlisle",
+    "devonestes",
+    "mlevesquedion",
+    "neenjaw",
+    "parkerl",
+    "percygrunwald",
+    "sotojuan"
+  ],
   "files": {
     "solution": [
       "lib/linked_list.ex"

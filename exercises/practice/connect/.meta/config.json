@@ -1,6 +1,18 @@
 {
   "blurb": "Compute the result for a game of Hex / Polygon",
-  "authors": [],
+  "authors": [
+    "dalexj"
+  ],
+  "contributors": [
+    "angelikatyborska",
+    "Cohen-Carlisle",
+    "devonestes",
+    "lpil",
+    "neenjaw",
+    "parkerl",
+    "sotojuan",
+    "waiting-for-dev"
+  ],
   "files": {
     "solution": [
       "lib/connect.ex"

@@ -1,0 +1,9 @@
+{
+  "blurb": "Being inspired by Erlang, and sharing its run environment, Elixir provides great interoperability with Erlang libraries. This means that Elixir developers can use Erlang libraries from within their Elixir code.",
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [
+    "neenjaw"
+  ]
+}

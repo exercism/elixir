@@ -1,6 +1,24 @@
 {
   "blurb": "Given a word, compute the Scrabble score for that word.",
-  "authors": [],
+  "authors": [
+    "rubysolo"
+  ],
+  "contributors": [
+    "andrewsardone",
+    "angelikatyborska",
+    "Cohen-Carlisle",
+    "dalexj",
+    "devonestes",
+    "etrepum",
+    "jinyeow",
+    "kytrinyx",
+    "lpil",
+    "neenjaw",
+    "parkerl",
+    "sotojuan",
+    "Teapane",
+    "waiting-for-dev"
+  ],
   "files": {
     "solution": [
       "lib/scrabble.ex"

@@ -31,4 +31,4 @@ If an expensive job should be done in another process, a _task process_ (using [
 
 [task-module]: https://hexdocs.pm/elixir/Task.html
 [genserver-module]: https://hexdocs.pm/elixir/GenServer.html
-[agent-module]: https://elixir-lang.org/getting-started/mix-otp/agent.html#agents
+[agent-module]: https://hexdocs.pm/elixir/Agent.html

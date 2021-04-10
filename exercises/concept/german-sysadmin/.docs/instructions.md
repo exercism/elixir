@@ -1,6 +1,6 @@
 # Instructions
 
-You are working as a system administrator for a big company in Münich, Germany. One of your responsibilities is managing email accounts.
+You are working as a system administrator for a big company in Munich, Germany. One of your responsibilities is managing email accounts.
 
 You have been hearing complaints from people saying they are unable to write emails to Mr. Müller. You quickly realize that most of the company uses an old email client that doesn't recognize `müller@firma.de` as a valid email address because of the non-latin character.
 

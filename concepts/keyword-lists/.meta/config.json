@@ -1,0 +1,9 @@
+{
+  "blurb": "Keyword lists are a key-value data structure. A keyword list is a list of two-tuples, where the first element in the tuple is an atom. They are often used for passing options to functions.",
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [
+    "neenjaw"
+  ]
+}

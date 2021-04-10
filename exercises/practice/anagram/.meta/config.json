@@ -1,6 +1,30 @@
 {
   "blurb": "Given a word and a list of possible anagrams, select the correct sublist.",
-  "authors": [],
+  "authors": [
+    "rubysolo"
+  ],
+  "contributors": [
+    "andrewsardone",
+    "angelikatyborska",
+    "Br1ght0ne",
+    "Cohen-Carlisle",
+    "crazymykl",
+    "dalexj",
+    "devonestes",
+    "henrik",
+    "jeremy-w",
+    "jinyeow",
+    "kytrinyx",
+    "lpil",
+    "markijbema",
+    "neenjaw",
+    "parkerl",
+    "pminten",
+    "sotojuan",
+    "Teapane",
+    "tjcelaya",
+    "waiting-for-dev"
+  ],
   "files": {
     "solution": [
       "lib/anagram.ex"

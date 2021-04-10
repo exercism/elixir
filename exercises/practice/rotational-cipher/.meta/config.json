@@ -1,6 +1,15 @@
 {
   "blurb": "Create an implementation of the rotational cipher, also sometimes called the Caesar cipher.",
-  "authors": [],
+  "authors": [
+    "DoggettCK"
+  ],
+  "contributors": [
+    "angelikatyborska",
+    "Cohen-Carlisle",
+    "devonestes",
+    "neenjaw",
+    "sotojuan"
+  ],
   "files": {
     "solution": [
       "lib/rotational_cipher.ex"

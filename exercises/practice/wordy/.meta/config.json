@@ -1,6 +1,20 @@
 {
   "blurb": "Parse and evaluate simple math word problems returning the answer as an integer.",
-  "authors": [],
+  "authors": [
+    "davinlagerroos"
+  ],
+  "contributors": [
+    "angelikatyborska",
+    "Cohen-Carlisle",
+    "devonestes",
+    "lpil",
+    "martinsvalin",
+    "MeerKatDev",
+    "neenjaw",
+    "parkerl",
+    "sotojuan",
+    "waiting-for-dev"
+  ],
   "files": {
     "solution": [
       "lib/wordy.ex"

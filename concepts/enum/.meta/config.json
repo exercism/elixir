@@ -1,0 +1,9 @@
+{
+  "blurb": "Enum is a module that provides a set of algorithms for working with enumerables. An enumerable is any data type that implements the Enumerable protocol. The most common of those are lists and maps.",
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [
+    "neenjaw"
+  ]
+}

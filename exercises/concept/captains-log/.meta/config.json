@@ -1,16 +1,10 @@
 {
-  "blurb": "TODO: add blurb for captains-log exercise",
+  "blurb": "Learn about randomness and using Erlang libraries from Elixir by helping Mary generate stardates and starship registry numbers for her Star Trek themed pen-and-paper role playing sessions.",
   "authors": [
-    {
-      "github_username": "angelikatyborska",
-      "exercism_username": "angelikatyborska"
-    }
+    "angelikatyborska"
   ],
   "contributors": [
-    {
-      "github_username": "neenjaw",
-      "exercism_username": "neenjaw"
-    }
+    "neenjaw"
   ],
   "files": {
     "solution": [

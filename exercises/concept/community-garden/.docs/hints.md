@@ -33,5 +33,4 @@
 
 [elixircasts-agent]: https://elixircasts.io/intro-to-agents
 [elixir-doc-agent]: https://hexdocs.pm/elixir/Agent.html
-[getting-started-structs]: https://elixir-lang.org/getting-started/structs.html
-[getting-started-elixir]: https://elixir-lang.org/getting-started/mix-otp/agent.html
+[getting-started-agent]: https://elixir-lang.org/getting-started/mix-otp/agent.html

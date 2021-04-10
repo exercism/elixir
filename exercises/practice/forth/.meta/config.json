@@ -1,6 +1,26 @@
 {
   "blurb": "Implement an evaluator for a very simple subset of Forth",
   "authors": [],
+  "contributors": [
+    "andrewsardone",
+    "angelikatyborska",
+    "Cohen-Carlisle",
+    "dalexj",
+    "devonestes",
+    "frerich",
+    "jinyeow",
+    "kytrinyx",
+    "lpil",
+    "martinsvalin",
+    "neenjaw",
+    "parkerl",
+    "pminten",
+    "rubysolo",
+    "sotojuan",
+    "Teapane",
+    "tjcelaya",
+    "waiting-for-dev"
+  ],
   "files": {
     "solution": [
       "lib/forth.ex"

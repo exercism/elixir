@@ -1,16 +1,10 @@
 {
-  "blurb": "TODO: add blurb for guessing-game exercise",
+  "blurb": "Learn about multiple clause functions, guards, and default arguments by implementing a simple game in which the player needs to guess a secret number.",
   "authors": [
-    {
-      "github_username": "neenjaw",
-      "exercism_username": "neenjaw"
-    }
+    "neenjaw"
   ],
   "contributors": [
-    {
-      "github_username": "angelikatyborska",
-      "exercism_username": "angelikatyborska"
-    }
+    "angelikatyborska"
   ],
   "files": {
     "solution": [

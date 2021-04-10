@@ -1,16 +1,10 @@
 {
-  "blurb": "TODO: add blurb for boutique-inventory exercise",
+  "blurb": "Learn about the Enum module by preparing your fashion boutique for the big annual sale.",
   "authors": [
-    {
-      "github_username": "angelikatyborska",
-      "exercism_username": "angelikatyborska"
-    }
+    "angelikatyborska"
   ],
   "contributors": [
-    {
-      "github_username": "neenjaw",
-      "exercism_username": "neenjaw"
-    }
+    "neenjaw"
   ],
   "files": {
     "solution": [

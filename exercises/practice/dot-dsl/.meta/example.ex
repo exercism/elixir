@@ -1,7 +1,3 @@
-defmodule Graph do
-  defstruct attrs: [], nodes: [], edges: []
-end
-
 defmodule Dot do
   # Normally matching on keywords is a bad idea as keyword lists can have
   # several orders (i.e. `[a: 1, b: 2]` and `[b: 2, a: 1]`). But in this case
@@ -9,41 +5,37 @@ defmodule Dot do
   defmacro graph(do: ast) do
     g = do_graph(ast)
 
-    Macro.escape(%Graph{
-      attrs: Enum.sort(g.attrs),
-      nodes: Enum.sort(g.nodes),
-      edges: Enum.sort(g.edges)
-    })
+    g |> Graph.canonical() |> Macro.escape()
   end
 
   defp do_graph(nil) do
-    %Graph{}
+    Graph.new()
   end
 
   defp do_graph({:__block__, _, stmts}) do
-    Enum.reduce(stmts, %Graph{}, &do_stmt/2)
+    Enum.reduce(stmts, Graph.new(), &do_stmt/2)
   end
 
   defp do_graph(stmt) do
-    do_stmt(stmt, %Graph{})
+    do_stmt(stmt, Graph.new())
   end
 
   defp do_stmt(stmt = {:graph, _, [kws]}, g) when is_list(kws) do
     if Keyword.keyword?(kws) do
-      %{g | attrs: kws ++ g.attrs}
+      g |> Graph.put_attrs(kws)
     else
       raise_invalid_stmt(stmt)
     end
   end
 
   defp do_stmt({atom, _, nil}, g) when is_atom(atom) and atom != :-- do
-    %{g | nodes: [{atom, []} | g.nodes]}
+    g |> Graph.add_node(atom)
   end
 
   defp do_stmt(stmt = {atom, _, [kws]}, g)
        when is_atom(atom) and atom != :-- and is_list(kws) do
     if Keyword.keyword?(kws) do
-      %{g | nodes: [{atom, kws} | g.nodes]}
+      g |> Graph.add_node(atom, kws)
     else
       raise_invalid_stmt(stmt)
     end
@@ -51,13 +43,13 @@ defmodule Dot do
 
   defp do_stmt({:--, _, [{a, _, nil}, {b, _, nil}]}, g)
        when is_atom(a) and is_atom(b) do
-    %{g | edges: [{a, b, []} | g.edges]}
+    g |> Graph.add_edge(a, b)
   end
 
   defp do_stmt(stmt = {:--, _, [{a, _, nil}, {b, _, [kws]}]}, g)
        when is_atom(a) and is_atom(b) and is_list(kws) do
     if Keyword.keyword?(kws) do
-      %{g | edges: [{a, b, kws} | g.edges]}
+      g |> Graph.add_edge(a, b, kws)
     else
       raise_invalid_stmt(stmt)
     end

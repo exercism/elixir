@@ -1,6 +1,15 @@
 {
   "blurb": "Given a string representing a matrix of numbers, return the rows and columns of that matrix.",
-  "authors": [],
+  "authors": [
+    "DoggettCK"
+  ],
+  "contributors": [
+    "angelikatyborska",
+    "Cohen-Carlisle",
+    "devonestes",
+    "neenjaw",
+    "sotojuan"
+  ],
   "files": {
     "solution": [
       "lib/matrix.ex"

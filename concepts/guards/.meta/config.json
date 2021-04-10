@@ -1,0 +1,9 @@
+{
+  "blurb": "Guards are used to prevent function invocation based on evaluation of the arguments by guard functions. Guards begin with the when keyword, followed by a boolean expression. Guards are used to augment pattern matching with more complex checks.",
+  "authors": [
+    "neenjaw"
+  ],
+  "contributors": [
+    "angelikatyborska"
+  ]
+}
