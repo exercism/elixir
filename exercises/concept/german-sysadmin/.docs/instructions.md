@@ -35,7 +35,7 @@ There are 4 non-Latin characters in the German alphabet, and all of them have co
 | ü                | ue               |
 | ß                | ss               |
 
-Extend the `sanitize/1` function. It should substitute German characters according to the table. Assume all usernames are already downcase.
+Extend the `sanitize/1` function. It should substitute German characters according to the table. You can safely assume all usernames are already downcase.
 
 ```elixir
 Username.sanitize('cäcilie_weiß')
