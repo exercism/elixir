@@ -16,7 +16,7 @@ comment:
         - '**/*'
       body: |
         - **General steps**
-            - :trophy: Does this PR need to receive a label with a reputation modifier (`reputation/contributed_code/{minor,major}`)? (A medium reputation amount is awarded by default)
+            - :trophy: Does this PR need to receive a label with a modifier (`reputation/contributed_code/{minor,major}`)? (A medium reputation amount is awarded by default, see [docs](https://github.com/exercism/docs/blob/main/product/reputation.md#4-creating-pull-requests))
 
     - id: any-exercise-changed
       files:
