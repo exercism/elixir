@@ -23,7 +23,7 @@ comment:
         - 'exercises/**/*'
       body: |
         - **Any exercise changed**
-            - :bust_in_silhouette: Does the author of the PR need to be added as an author or contributor in `<exercise>/.meta/config.json`?
+            - :bust_in_silhouette: Does the author of the PR need to be added as an author or contributor in `<exercise>/.meta/config.json` (see [docs](https://github.com/exercism/docs/blob/main/building/tracks/practice-exercises.md#file-metaconfigjson))?
             - :microscope: Do the [analyzer](https://github.com/exercism/elixir-analyzer/tree/main/test/elixir_analyzer/test_suite) and the [analyzer comments](https://github.com/exercism/website-copy/tree/main/analyzer-comments/elixir) exist for this exercise? Do they need to be changed?
             - :scroll: Does the design file (`<exercise>/.meta/design.md`) need to be updated to document new implementation decisions?
 
@@ -63,5 +63,5 @@ comment:
         - 'concepts/**/*'
       body: |
         - **Concept changed**
-            - :bust_in_silhouette: Does the author of the PR need to be added as an author or contributor in `<concept>/.meta/config.json`?
+            - :bust_in_silhouette: Does the author of the PR need to be added as an author or contributor in `<concept>/.meta/config.json` (see [docs](https://github.com/exercism/docs/blob/main/building/tracks/concepts.md#file-metaconfigjson))?
             - :book: Does the concept introduction provide all necessary information to solve this exercise?
