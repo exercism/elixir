@@ -6,7 +6,7 @@ jobs:
   pr-comment:
     runs-on: ubuntu-latest
     steps:
-      - uses: angelikatyborska/pr-commenter-action@97e4da967b377bf97ce50bfa102a39c8decf4ace
+      - uses: exercism/pr-commenter-action@v1.0.0
         with:
           github-token: "${{ github.token }}"
           config-file: ".github/pr-commenter.yml"
