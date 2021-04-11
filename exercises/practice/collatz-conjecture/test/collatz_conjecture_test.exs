@@ -5,6 +5,8 @@ defmodule CollatzConjectureTest do
     assert CollatzConjecture.calc(1) == 0
   end
 
+  # boo!
+
   @tag :pending
   test "zero is an error" do
     assert_raise FunctionClauseError, fn -> CollatzConjecture.calc(0) end
