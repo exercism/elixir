@@ -1,0 +1,67 @@
+comment:
+  on-update: recreate
+  header: |
+    Thank you for contributing to `exercism/elixir` 💜 🎉. This is an automated PR comment 🤖 for the **maintainers** of this repository that helps with the PR review process. You can safely ignore it and wait for a maintainer to review your changes.
+
+    Based on the files changed in this PR, it would be good to pay attention to the following details when reviewing the PR:
+
+  footer: |
+    ---
+    Automated comment created by [PR Commenter](https://github.com/exercism/pr-commenter-action) 🤖.
+
+  snippets:
+    - id: any-file-changed
+      files:
+        - '*'
+        - '**/*'
+      body: |
+        - **General steps**
+            - 🏆 Does this PR need to receive a label with a reputation modifier (`reputation/contributed_code/{minor,major}`)? (A medium reputation amount is awarded by default, see [docs](https://github.com/exercism/docs/blob/main/product/reputation.md#4-creating-pull-requests))
+
+    - id: any-exercise-changed
+      files:
+        - 'exercises/**/*'
+      body: |
+        - **Any exercise changed**
+            - 👤 Does the author of the PR need to be added as an author or contributor in `<exercise>/.meta/config.json` (see [docs](https://github.com/exercism/docs/blob/main/building/tracks/practice-exercises.md#file-metaconfigjson))?
+            - 🔬 Do the [analyzer](https://github.com/exercism/elixir-analyzer/tree/main/test/elixir_analyzer/test_suite) and the [analyzer comments](https://github.com/exercism/website-copy/tree/main/analyzer-comments/elixir) exist for this exercise? Do they need to be changed?
+            - 📜 Does the design file (`<exercise>/.meta/design.md`) need to be updated to document new implementation decisions?
+
+    - id: practice-exercise-changed
+      files:
+        - 'exercises/practice/**/*'
+      body: |
+        - **Practice exercise changed**
+            - 🌲 Do `prerequisites`, `practices`, and `difficulty` in `config.json` need to be updated?
+            - 🧑‍🏫 Are the changes in accordance with the community-wide [problem specifiations](https://github.com/exercism/problem-specifications/tree/main/exercises)?
+
+    - id: practice-exercise-tests-changed
+      files:
+        - 'exercises/practice/**/test/**/*'
+      body: |
+        - **Practice exercise tests changed**
+            - ⚪️ Are all tests except the first one _skipped_?
+            - 📜 Does `<exercise>/.meta/tests.toml` need updating?
+
+    - id: concept-exercise-changed
+      files:
+        - 'exercises/concept/**/*'
+      body: |
+        - **Concept exercise changed**
+            - 🌲 Do `prerequisites` and `practices` in `config.json` need to be updated?
+            - 📖 Does the concept introduction provide all necessary information to solve this exercise?
+
+    - id: concept-exercise-test-changed
+      files:
+        - 'exercises/concept/**/test/**/*'
+      body: |
+        - **Concept exercise tests changed**
+            - ⚪️ Are all tests _un-skipped_?
+
+    - id: concept-changed
+      files:
+        - 'concepts/**/*'
+      body: |
+        - **Concept changed**
+            - 👤 Does the author of the PR need to be added as an author or contributor in `<concept>/.meta/config.json` (see [docs](https://github.com/exercism/docs/blob/main/building/tracks/concepts.md#file-metaconfigjson))?
+            - 📖 Does the concept introduction provide all necessary information to solve this exercise?
