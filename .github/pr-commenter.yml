@@ -7,7 +7,7 @@ comment:
 
   footer: |
     ---
-    Automated comment created by [PR Commenter](https://github.com/angelikatyborska/pr-commenter-action) 🤖.
+    Automated comment created by [PR Commenter](https://github.com/exercism/pr-commenter-action) 🤖.
 
   snippets:
     - id: any-file-changed
