@@ -1,7 +1,7 @@
 comment:
   on-update: recreate
   header: |
-    Thank you for contributing to `exercism/elixir` :purple_heart: :tada:. This is an automated PR comment :robot: for the **maintainers** of this repository that is supposed to help with the PR review process. You can safely ignore it and wait for a maintainer to come over and review your changes.
+    Thank you for contributing to `exercism/elixir` :purple_heart: :tada:. This is an automated PR comment :robot: for the **maintainers** of this repository that helps with the PR review process. You can safely ignore it and wait for a maintainer to review your changes.
 
     Based on the files changed in this PR, it would be good to pay attention to the following details when reviewing the PR:
 
@@ -16,7 +16,7 @@ comment:
         - '**/*'
       body: |
         - **General steps**
-            - :trophy: Does this PR need to receive a label with a reputation modifier (`reputation/contributed_code/{minor,major}`)?
+            - :trophy: Does this PR need to receive a label with a reputation modifier (`reputation/contributed_code/{minor,major}`)? (A medium reputation amount is awarded by default)
 
     - id: any-exercise-changed
       files:
@@ -33,7 +33,7 @@ comment:
       body: |
         - **Practice exercise changed**
             - :evergreen_tree: Do `prerequisites`, `practices`, and `difficulty` in `config.json` need to be updated?
-            - :teacher: Are the changes in accordance with [problem specifiations](https://github.com/exercism/problem-specifications/tree/main/exercises)?
+            - :teacher: Are the changes in accordance with the community [problem specifiations](https://github.com/exercism/problem-specifications/tree/main/exercises)?
 
     - id: practice-exercise-tests-changed
       files:
