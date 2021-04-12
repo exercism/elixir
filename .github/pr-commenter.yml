@@ -1,5 +1,7 @@
 comment:
   on-update: recreate
+  glob-options:
+    dot: true
   header: |
     Thank you for contributing to `exercism/elixir` 💜 🎉. This is an automated PR comment 🤖 for the **maintainers** of this repository that helps with the PR review process. You can safely ignore it and wait for a maintainer to review your changes.
 
