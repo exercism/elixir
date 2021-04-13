@@ -2350,7 +2350,6 @@
         ],
         "practices": [
           "keyword-lists",
-          "structs",
           "macros"
         ],
         "difficulty": 8
