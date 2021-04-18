@@ -2,7 +2,6 @@ defmodule WineCellarTest do
   use ExUnit.Case
 
   describe "explain_colors/0" do
-    # @tag :pending
     test "returns a keyword list" do
       assert WineCellar.explain_colors() == [
                white: "Fermented without skin contact.",
@@ -13,12 +12,10 @@ defmodule WineCellarTest do
   end
 
   describe "filter/3" do
-    @tag :pending
     test "works for empty cellar" do
       assert WineCellar.filter([], :rose) == []
     end
 
-    @tag :pending
     test "returns all wines of a chosen color" do
       cellar = [
         white: {"Chardonnay", 2015, "Italy"},
@@ -41,7 +38,6 @@ defmodule WineCellarTest do
       assert WineCellar.filter(cellar, :rose) == [{"Dornfelder", 2018, "Germany"}]
     end
 
-    @tag :pending
     test "filters wines of chosen color by year" do
       cellar = [
         white: {"Chardonnay", 2015, "Italy"},
@@ -60,7 +56,6 @@ defmodule WineCellarTest do
              ]
     end
 
-    @tag :pending
     test "filters wines of chosen color by country" do
       cellar = [
         white: {"Chardonnay", 2015, "Italy"},
@@ -79,7 +74,6 @@ defmodule WineCellarTest do
              ]
     end
 
-    @tag :pending
     test "filters wines of chosen color by year and country" do
       cellar = [
         white: {"Chardonnay", 2015, "Italy"},
@@ -97,7 +91,6 @@ defmodule WineCellarTest do
              ]
     end
 
-    @tag :pending
     test "filters wines of chosen color by country and year" do
       cellar = [
         white: {"Chardonnay", 2015, "Italy"},

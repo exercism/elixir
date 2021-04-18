@@ -96,7 +96,6 @@ defmodule FormTest do
   end
 
   describe "the Form module" do
-    # @tag :pending
     test "has documentation" do
       expected_moduledoc = """
       A collection of loosely related functions helpful for filling out various forms at the city office.
@@ -107,17 +106,14 @@ defmodule FormTest do
   end
 
   describe "blanks/1" do
-    @tag :pending
     test "returns a string with Xs of a given length" do
       assert Form.blanks(5) == "XXXXX"
     end
 
-    @tag :pending
     test "returns an empty string when given length is 0" do
       assert Form.blanks(0) == ""
     end
 
-    @tag :pending
     test "has documentation" do
       expected_doc = """
       Generates a string of a given length.
@@ -129,24 +125,20 @@ defmodule FormTest do
       assert_doc({:blanks, 1}, expected_doc)
     end
 
-    @tag :pending
     test "has a correct spec" do
       assert_spec({:blanks, 1}, "non_neg_integer()", "String.t()")
     end
   end
 
   describe "letters/1" do
-    @tag :pending
     test "returns a list of upcase letters" do
       assert Form.letters("Sao Paulo") == ["S", "A", "O", " ", "P", "A", "U", "L", "O"]
     end
 
-    @tag :pending
     test "returns an empty list when given an empty string" do
       assert Form.letters("") == []
     end
 
-    @tag :pending
     test "has documentation" do
       expected_doc = """
       Splits the string into a list of uppercase letters.
@@ -158,29 +150,24 @@ defmodule FormTest do
       assert_doc({:letters, 1}, expected_doc)
     end
 
-    @tag :pending
     test "has a typespec" do
       assert_spec({:letters, 1}, "String.t()", "[String.t()]")
     end
   end
 
   describe "check_length/2" do
-    @tag :pending
     test "returns :ok is value is below max length" do
       assert Form.check_length("Ruiz", 6) == :ok
     end
 
-    @tag :pending
     test "returns :ok is value is of exactly max length" do
       assert Form.check_length("Martinez-Cooper", 15) == :ok
     end
 
-    @tag :pending
     test "returns an error tuple with the difference between max length and actual length" do
       assert Form.check_length("Martinez-Campbell", 10) == {:error, 7}
     end
 
-    @tag :pending
     test "has documentation" do
       expected_doc = """
       Checks if the value has no more than the maximum allowed number of letters.
@@ -192,7 +179,6 @@ defmodule FormTest do
       assert_doc({:check_length, 2}, expected_doc)
     end
 
-    @tag :pending
     test "has a typespec" do
       assert_spec(
         {:check_length, 2},
@@ -203,7 +189,6 @@ defmodule FormTest do
   end
 
   describe "custom types in the Form module" do
-    @tag :pending
     test "has a custom 'address_map' type" do
       expected_type_definition =
         "%{street: String.t(), postal_code: String.t(), city: String.t()}"
@@ -211,7 +196,6 @@ defmodule FormTest do
       assert_type({Form, :address_map}, expected_type_definition)
     end
 
-    @tag :pending
     test "has a custom 'address_tuple' type with named arguments" do
       expected_type_definition =
         "{street :: String.t(), postal_code :: String.t(), city :: String.t()}"
@@ -219,7 +203,6 @@ defmodule FormTest do
       assert_type({Form, :address_tuple}, expected_type_definition)
     end
 
-    @tag :pending
     test "has a custom 'address' type that is a union of 'address_map' and 'address_tuple'" do
       expected_type_definition = "address_map() | address_tuple()"
 
@@ -228,7 +211,6 @@ defmodule FormTest do
   end
 
   describe "format_address/1" do
-    @tag :pending
     test "accepts a map" do
       input = %{
         street: "Wiejska 4/6/8",
@@ -244,7 +226,6 @@ defmodule FormTest do
       assert Form.format_address(input) == result
     end
 
-    @tag :pending
     test "accepts a 3 string tuple" do
       result = """
       PLATZ DER REPUBLIK 1
@@ -254,7 +235,6 @@ defmodule FormTest do
       assert Form.format_address({"Platz der Republik 1", "11011", "Berlin"}) == result
     end
 
-    @tag :pending
     test "has documentation" do
       expected_doc = """
       Formats the address as an uppercase multiline string.
@@ -263,7 +243,6 @@ defmodule FormTest do
       assert_doc({:format_address, 1}, expected_doc)
     end
 
-    @tag :pending
     test "has a typespec" do
       assert_spec({:format_address, 1}, "address()", "String.t()")
     end
