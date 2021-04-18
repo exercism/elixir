@@ -42,7 +42,7 @@ Please keep the following in mind:
     ExUnit.configure exclude: :pending, trace: true
     ```
 
-- All but the initial test for each exercise should be tagged `:pending`.
+- All but the initial test for each practice exercise should be tagged `:pending`.
 
     ```elixir
     @tag :pending
@@ -50,6 +50,8 @@ Please keep the following in mind:
       assert Bob.hey("WATCH OUT!") == "Whoa, chill out!"
     end
     ```
+
+- No tests should be skipped for concept exercises.
 
 All the tests for Exercism Elixir Track exercises can be run from the top level of the repo
 with `$ ./bin/test_exercises.sh`. Please run this command before submitting your PR. Watch out
