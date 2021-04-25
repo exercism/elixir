@@ -34,6 +34,8 @@ FreelancerRates.monthly_rate(77, 10.5)
 
 The returned monthly rate should be rounded up to the nearest integer.
 
+Applying a discount is an operation will also be needed in the next step. Implement it in a private function `apply_discount/2` so that it can be reused.
+
 ## 3. Calculate the number of workdays given a budget, hourly rate and discount
 
 Implement a function that takes a budget, a hourly rate, and a discount, and calculates how many days of work that covers.
