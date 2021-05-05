@@ -15,6 +15,20 @@ defmodule FreelancerRatesTest do
     end
   end
 
+  describe "apply_discount" do
+    test "a discount of 10% leaves 90% of the original price" do
+      assert FreelancerRates.apply_discount(140.0, 10) == 126.0
+    end
+
+    test "it always returns a float" do
+      assert FreelancerRates.apply_discount(100, 10) == 90.0
+    end
+
+    test "it doesn't round" do
+      assert FreelancerRates.apply_discount(111.11, 13.5) == 96.11015
+    end
+  end
+
   describe "monthly_rate/1" do
     test "it's the daily_rate times 22" do
       assert FreelancerRates.monthly_rate(62, 0.0) == 10_912
