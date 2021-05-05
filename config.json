@@ -12,7 +12,9 @@
   "version": 3,
   "online_editor": {
     "indent_style": "space",
-    "indent_size": 2
+    "indent_size": 2,
+    "ace_editor_language": "elixir",
+    "highlightjs_language": "elixir"
   },
   "files": {
     "solution": [
@@ -804,7 +806,7 @@
       {
         "slug": "resistor-color",
         "name": "Resistor Color",
-        "uuid": "12efd520-e3e5-437f-b93e-38af14aa605d",
+        "uuid": "c1532449-bf9e-446a-8e8f-97a6c19608e5",
         "prerequisites": [
           "lists",
           "enum"
@@ -817,7 +819,7 @@
       {
         "slug": "two-fer",
         "name": "Two Fer",
-        "uuid": "e7f3280e-0bef-4fac-8a69-cbfa2e5f818a",
+        "uuid": "6a130540-1b84-4147-8e6f-776dbf750489",
         "prerequisites": [
           "strings",
           "guards",
@@ -1419,7 +1421,7 @@
       {
         "slug": "leap",
         "name": "Leap",
-        "uuid": "3d0d82d7-fdff-4dd5-b720-7246317bb023",
+        "uuid": "f231c263-61fa-4139-a1c9-a69e6986a4cd",
         "prerequisites": [
           "integers",
           "booleans",
