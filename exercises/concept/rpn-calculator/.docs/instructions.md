@@ -27,12 +27,12 @@ When doing more research you notice that many functions use atoms and tuples to 
 ```elixir
 stack = []
 operation = fn _ -> "operation completed" end
-RPNCalculator.calculate!(stack, operation)
+RPNCalculator.calculate(stack, operation)
 # => {:ok, "operation completed"}
 
 stack = []
 operation = fn _ -> raise ArgumentError, "An error occurred" end
-RPNCalculator.calculate!(stack, operation)
+RPNCalculator.calculate(stack, operation)
 # => :error
 ```
 
@@ -43,11 +43,11 @@ Some of the errors contain important information that your coworkers need to hav
 ```elixir
 stack = []
 operation = fn _ -> "operation completed" end
-RPNCalculator.calculate!(stack, operation)
+RPNCalculator.calculate_verbose(stack, operation)
 # => {:ok, "operation completed"}
 
 stack = []
 operation = fn _ -> raise ArgumentError, "An error occurred" end
-RPNCalculator.calculate!(stack, operation)
+RPNCalculator.calculate_verbose(stack, operation)
 # => {:error, "An error occurred"}
 ```
