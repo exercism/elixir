@@ -4,8 +4,8 @@ defmodule HighScoreTest do
   # Trivia: Scores used in this test suite are based on lines of code
   # added to the elixir-lang/elixir github repository as of Apr 27, 2020.
 
+  @task_id 1
   test "new/1 result in empty score map" do
-    @task_id 1
     assert HighScore.new() == %{}
   end
 
