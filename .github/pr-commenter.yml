@@ -59,6 +59,7 @@ comment:
       body: |
         - **Concept exercise tests changed**
             - ⚪️ Are all tests _un-skipped_?
+            - 🔢 Are all tests annotated with `@task_id`?
 
     - id: concept-changed
       files:
