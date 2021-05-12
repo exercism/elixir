@@ -16,6 +16,9 @@
     "ace_editor_language": "elixir",
     "highlightjs_language": "elixir"
   },
+  "test_runner": {
+    "average_run_time": 4.0
+  },
   "files": {
     "solution": [
       "lib/%{snake_slug}.ex"
