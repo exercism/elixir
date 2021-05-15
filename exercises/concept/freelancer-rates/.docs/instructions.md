@@ -23,7 +23,18 @@ FreelancerRates.daily_rate(60)
 
 The returned daily rate should be a float.
 
-## 2. Calculate the monthly rate, given an hourly rate and a discount
+## 2. Calculate a discounted price
+
+Implement a function to calculate the price after a discount.
+
+```elixir
+FreelancerRates.apply_discount(150, 10)
+# => 135.0
+```
+
+The returned value should always be a float, not rounded in any way.
+
+## 3. Calculate the monthly rate, given an hourly rate and a discount
 
 Implement a function to calculate the monthly rate, and apply a discount:
 
@@ -34,7 +45,7 @@ FreelancerRates.monthly_rate(77, 10.5)
 
 The returned monthly rate should be rounded up to the nearest integer.
 
-## 3. Calculate the number of workdays given a budget, hourly rate and discount
+## 4. Calculate the number of workdays given a budget, hourly rate and discount
 
 Implement a function that takes a budget, a hourly rate, and a discount, and calculates how many days of work that covers.
 

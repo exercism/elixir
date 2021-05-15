@@ -21,3 +21,8 @@
 ## Prerequisites
 
 - `basics`
+
+## Analyzer
+
+- assert that `monthly_rate` calls `apply_discount/2`
+- assert that `days_in_budget` calls `apply_discount/2`

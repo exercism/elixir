@@ -9,12 +9,16 @@
 
 - [Basic arithmetic operations][kernel-arithmetic-operators] where one argument is an integer, and the other is a float, will return a float.
 
-## 2. Calculate the monthly rate, given an hourly rate and a discount
+## 2. Calculate a discounted price
+
+- [Basic arithmetic operations][kernel-arithmetic-operators] where one argument is an integer, and the other is a float, will return a float.
+
+## 3. Calculate the monthly rate, given an hourly rate and a discount
 
 - There is a [built-in function][kernel-trunc] for changing floats to integers.
 - There is a [built-in function][float-ceil] for rounding floats up.
 
-## 3. Calculate the number of workdays given a budget, hourly rate and discount
+## 4. Calculate the number of workdays given a budget, hourly rate and discount
 
 - There is a [built-in function][float-floor] for rounding floats down with desired precision.
 
