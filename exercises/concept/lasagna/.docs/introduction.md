@@ -2,6 +2,8 @@
 
 ## Basics
 
+### Variables
+
 Elixir is a dynamically-typed language, meaning that the type of a variable is only checked at runtime. Using the match `=` operator, we can bind a value of any type to a variable name:
 
 ```elixir
