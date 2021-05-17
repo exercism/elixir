@@ -1,4 +1,6 @@
-# Exceptions
+# Introduction
+
+## Exceptions
 
 All errors in Elixir implement the _Exception Behaviour_. Just like the _Access Behaviour_, the _Exception Behaviour_ defines callback functions that a module must implement to fulfill the software contract of the behaviour. Once an error is defined, it has the following properties:
 
@@ -9,7 +11,7 @@ All errors in Elixir implement the _Exception Behaviour_. Just like the _Access 
 
 The _Exception Behaviour_ also specifies two callbacks: `message/1` and `exception/1`. If unimplemented, default implementations will be used. `message/1` transforms the error-struct to a readable message when called with `raise`. `exception/1` allows additional context to be added to the message when it is called with `raise/2`
 
-## Defining an exception
+### Defining an exception
 
 To define an exception from an error module, we use the `defexception` macro:
 
@@ -35,7 +37,7 @@ defmodule MyCustomizedError do
 end
 ```
 
-## Using exceptions
+### Using exceptions
 
 Defined errors may be used like a built in error using either `raise/1` or `raise/2`.
 
