@@ -12,7 +12,12 @@
 
 ## Prerequisites
 
-TODO
+- `strings`
+- `tuples`
+- `keyword-lists`
+- `enum`
+- `structs`
+- `io`
 
 ## Analyzer
 

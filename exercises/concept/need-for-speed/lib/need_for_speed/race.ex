@@ -5,7 +5,7 @@ defmodule NeedForSpeed.Race do
     cars: []
   ]
 
-  def display_status(%__MODULE__{} = race) do
+  def display_status(%NeedForSpeed.Race{} = race) do
     cond do
       Enum.any?(race.cars, &(&1.distance_driven_in_meters >= race.total_distance_in_meters)) ->
         "Finished"
@@ -18,7 +18,7 @@ defmodule NeedForSpeed.Race do
     end
   end
 
-  def display_distance(%__MODULE__{total_distance_in_meters: d}) do
+  def display_distance(%NeedForSpeed.Race{total_distance_in_meters: d}) do
     "#{d} meters"
   end
 end
