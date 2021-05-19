@@ -48,7 +48,7 @@ Please keep the following in mind:
     ExUnit.start()
     ExUnit.configure(exclude: :pending, trace: true, seed: 0)
     ```
-  
+
 - All but the initial test for each practice exercise should be tagged `:pending`.
 
     ```elixir
