@@ -33,13 +33,20 @@ Please keep the following in mind:
 
 - For practice exercises, use typespecs in the example and template files as described [here](http://elixir-lang.org/getting-started/typespecs-and-behaviours.html).
 
-- Each test file should have a `test_helper.exs` with code like the following
-  at the top of the file. This allows the tests to be run on CI and configures
-  tests to be skipped with the `:pending` flag.
+- Each practice exercise test file should have a `test_helper.exs` with code like the following at the top of the file.
+  This allows the tests to be run on CI and configures tests to be skipped with the `:pending` flag.
 
     ```elixir
-    ExUnit.start
-    ExUnit.configure exclude: :pending, trace: true
+    ExUnit.start()
+    ExUnit.configure(exclude: :pending, trace: true)
+    ```
+
+- Each concept exercise test file should have a `test_helper.exs` with code like the following at the top of the file.
+  This allows the tests to always run in the order in which they're defined in the test file, to encourage solving the exercises task by task.
+
+    ```elixir
+    ExUnit.start()
+    ExUnit.configure(exclude: :pending, trace: true, seed: 0)
     ```
 
 - All but the initial test for each practice exercise should be tagged `:pending`.
