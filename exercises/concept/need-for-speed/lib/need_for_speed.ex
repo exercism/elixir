@@ -19,17 +19,20 @@ defmodule NeedForSpeed do
   end
 
   defp print_car(%Car{} = car, index) do
-    color =
-      case car.color do
-        :red -> red()
-        :blue -> cyan()
-        :green -> green()
-      end
+    color = color(car)
 
     puts("""
       #{index}. #{color}#{car.nickname}#{default_color()}
       Distance: #{Car.display_distance(car)}
       Battery: #{Car.display_battery(car)}
     """)
+  end
+
+  defp color(%Car{} = car) do
+    case car.color do
+      :red -> red()
+      :blue -> cyan()
+      :green -> green()
+    end
   end
 end
