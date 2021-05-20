@@ -506,7 +506,7 @@
           "atoms",
           "if"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "rpn-calculator-inspection",
@@ -523,7 +523,7 @@
           "errors",
           "maps"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "lucas-numbers",
@@ -540,7 +540,7 @@
           "anonymous-functions",
           "errors"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "city-office",
@@ -558,7 +558,7 @@
           "maps",
           "multiple-clause-functions"
         ],
-        "status": "wip"
+        "status": "beta"
       }
     ],
     "practice": [
