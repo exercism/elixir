@@ -559,6 +559,24 @@
           "multiple-clause-functions"
         ],
         "status": "wip"
+      },
+      {
+        "slug": "need-for-speed",
+        "name": "Need For Speed",
+        "uuid": "ed189325-7c73-49c7-8572-3dfc0b18b983",
+        "concepts": [
+          "alias",
+          "import"
+        ],
+        "prerequisites": [
+          "strings",
+          "tuples",
+          "keyword-lists",
+          "enum",
+          "structs",
+          "io"
+        ],
+        "status": "beta"
       }
     ],
     "practice": [
@@ -2376,6 +2394,11 @@
       "name": "Agent"
     },
     {
+      "uuid": "65a123c8-0d24-4cc9-949c-b0f8efa6ccc8",
+      "slug": "alias",
+      "name": "Alias"
+    },
+    {
       "uuid": "a5b7f41f-9f07-4996-8032-05225f0ef639",
       "slug": "anonymous-functions",
       "name": "Anonymous Functions"
@@ -2484,6 +2507,11 @@
       "uuid": "6bafcc9f-7e2b-4240-a487-be15030cf4a3",
       "slug": "if",
       "name": "If"
+    },
+    {
+      "uuid": "99c8ec25-976e-479e-ae08-55d5da3cf098",
+      "slug": "import",
+      "name": "Import"
     },
     {
       "uuid": "bab00476-4570-41c3-b74a-ba6c1a567c49",
