@@ -15,7 +15,7 @@ defmodule NeedForSpeed do
     """)
 
     race.cars
-    |> Enum.sort_by(& &1.distance_driven_in_meters, :desc)
+    |> Enum.sort_by(& -1 * &1.distance_driven_in_meters)
     |> Enum.with_index()
     |> Enum.each(fn {car, index} -> print_car(car, index + 1) end)
   end

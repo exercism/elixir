@@ -1,7 +1,9 @@
 defmodule NeedForSpeed do
-  # Add missing aliases and imports here.
+  alias NeedForSpeed.Race
+  alias NeedForSpeed.RemoteControlCar, as: Car
 
-  # Do not edit the code below.
+  import IO, only: [puts: 1]
+  import IO.ANSI, except: [color: 1]
 
   def print_race(%Race{} = race) do
     puts("""
@@ -13,7 +15,7 @@ defmodule NeedForSpeed do
     """)
 
     race.cars
-    |> Enum.sort_by(& &1.distance_driven_in_meters, :desc)
+    |> Enum.sort_by(& -1 * &1.distance_driven_in_meters)
     |> Enum.with_index()
     |> Enum.each(fn {car, index} -> print_car(car, index + 1) end)
   end
