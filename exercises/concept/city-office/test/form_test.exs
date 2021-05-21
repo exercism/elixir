@@ -86,9 +86,7 @@ defmodule FormTest do
       {:"::", _, [_, type_definition]} = Code.Typespec.type_to_quoted(type)
 
       assert type,
-             "expected the module#{unquote(module_name)} to have a public type named #{
-               unquote(type_name)
-             }"
+             "expected the module#{unquote(module_name)} to have a public type named #{unquote(type_name)}"
 
       actual_type_definition = Macro.to_string(type_definition)
       assert actual_type_definition == unquote(expected_type_definition)
