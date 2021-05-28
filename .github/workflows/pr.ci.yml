@@ -27,7 +27,7 @@ jobs:
           elixir-version: ${{matrix.elixir}}
 
       - name: Retrieve Mix Dependencies Cache
-        uses: actions/cache@v2.1.5
+        uses: actions/cache@v2.1.6
         id: mix-cache # id to use in retrieve action
         with:
           path: deps
@@ -41,7 +41,7 @@ jobs:
         run: mix
 
       - name: Retrieve PLT Cache
-        uses: actions/cache@v2.1.5
+        uses: actions/cache@v2.1.6
         id: plt-cache
         with:
           path: priv/plts
@@ -86,7 +86,7 @@ jobs:
           elixir-version: ${{matrix.elixir}}
 
       - name: Retrieve Mix Dependencies Cache
-        uses: actions/cache@v2.1.5
+        uses: actions/cache@v2.1.6
         id: mix-cache # id to use in retrieve action
         with:
           path: deps
