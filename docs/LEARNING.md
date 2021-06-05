@@ -5,12 +5,13 @@ those learning Elixir for the first time. These resources can help you get
 started:
 
 * [Elixir Getting Started Guide](http://elixir-lang.org/getting-started/introduction.html)
-* [Elixir Documentation](http://elixir-lang.org/docs/stable/elixir/)
-* [Programming Elixir](https://pragprog.com/book/elixir13/programming-elixir-1-3), by Dave Thomas
+* [Elixir Documentation](https://hexdocs.pm/elixir/)
+* [Programming Elixir](https://pragprog.com/titles/elixir16/programming-elixir-1-6/), by Dave Thomas
+* [Elixir in Action](https://www.manning.com/books/elixir-in-action-second-edition), by Saša Jurić
 * [StackOverflow](http://stackoverflow.com/questions/tagged/elixir)
-* [Introducing Elixir](http://shop.oreilly.com/product/0636920030584.do), by Simon St. Laurent, J. David Eisenberg
-* [Etudes for Elixir](https://github.com/oreillymedia/etudes-for-elixir), by J. David Eisenberg (exercise companion for Introducing Elixir)
+* [Introducing Elixir](https://www.oreilly.com/library/view/introducing-elixir-2nd/9781491956847/), by Simon St. Laurent, J. David Eisenberg
 * [Elixir School](https://elixirschool.com)
+* [Joy of Elixir](https://joyofelixir.com/toc.html)
 * [Elixir Examples](https://elixir-examples.github.io/)
 * [Exercism's BEAM Gitter channel](https://gitter.im/exercism/xerlang)
 * [Elixir Forum](https://elixirforum.com/)
