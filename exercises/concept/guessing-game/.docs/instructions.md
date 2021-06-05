@@ -6,8 +6,8 @@ You are creating a trivial online game where a friend can guess a secret number.
 | ------------------------------------------------------------- | -------------- |
 | When the guess matches the secret number                      | "Correct"      |
 | When the guess is one more or one less than the secret number | "So close"     |
-| When the guess is greater than the secret number              | "Too High"     |
-| When the guess is less than the secret number                 | "Too Low"      |
+| When the guess is greater than the secret number              | "Too high"     |
+| When the guess is less than the secret number                 | "Too low"      |
 | When a guess isn't made                                       | "Make a guess" |
 
 All guesses and secret numbers are integer numbers.
@@ -27,7 +27,7 @@ Modify the `compare` function to respond to guesses that are higher than the sec
 
 ```elixir
 GuessingGame.compare(5, 8)
-# => "Too High"
+# => "Too high"
 ```
 
 ## 3. Make the response when the guess is less than the secret number
@@ -36,7 +36,7 @@ Modify the `compare` function to respond to guesses that are lower than the secr
 
 ```elixir
 GuessingGame.compare(5, 2)
-# => "Too Low"
+# => "Too low"
 ```
 
 ## 4. Make the responses when the guess is one more or one less than the secret number
