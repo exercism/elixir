@@ -2,7 +2,7 @@
 
 ## Elixir Documentation
 
-* [Elixir Docs](http://elixir-lang.org/docs.html)
+* [Elixir Docs](https://hexdocs.pm/elixir/)
 
 ## Hex - A package manager for the Erlang ecosystem.
 
