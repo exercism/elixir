@@ -2361,19 +2361,24 @@
       {
         "slug": "pov",
         "name": "POV",
-        "uuid": "??? Do I need to create one? How about: 7",
+        "uuid": "ABC93451-451D-4497-B590-68CBF82E0A20",
         "prerequisites": [
           "pattern-matching",
           "case",
+          "if",
           "errors",
           "recursion",
-          "enum"
+          "enum",
+          "protocols",
+          "nil",
+          "structs",
+          "multiple-clause-functions"
         ],
         "practices": [
           "recursion",
           "pattern-matching"
         ],
-        "difficulty": 8
+        "difficulty": 9
       }
     ],
     "foregone": [
