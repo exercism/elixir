@@ -1,0 +1,20 @@
+{
+  "blurb": "Reparent a graph on a selected node.",
+  "authors": [
+    "jiegillet"
+  ],
+  "contributors": [],
+  "files": {
+    "solution": [
+      "lib/pov.ex"
+    ],
+    "test": [
+      "test/pov_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
+  },
+  "source": "Adaptation of exercise from 4clojure",
+  "source_url": "https://www.4clojure.com/"
+}

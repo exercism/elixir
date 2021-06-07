@@ -2357,6 +2357,23 @@
           "macros"
         ],
         "difficulty": 8
+      },
+      {
+        "slug": "pov",
+        "name": "POV",
+        "uuid": "??? Do I need to create one? How about: 7",
+        "prerequisites": [
+          "pattern-matching",
+          "case",
+          "errors",
+          "recursion",
+          "enum"
+        ],
+        "practices": [
+          "recursion",
+          "pattern-matching"
+        ],
+        "difficulty": 8
       }
     ],
     "foregone": [
