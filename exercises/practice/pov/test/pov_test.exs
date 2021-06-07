@@ -83,14 +83,14 @@ defmodule PovTest do
     test "Errors if target does not exist in a singleton tree" do
       t = {:x, []}
       error = {:error, :nonexistent_target}
-      assert Pov.from_pov(t, :nonexistent)
+      assert Pov.from_pov(t, :nonexistent) == error
     end
 
     @tag :pending
     test "Errors if target does not exist in a large tree" do
       t = {:parent, [{:x, [leaf(:kid0), leaf(:kid1)]}, leaf(:sib1), leaf(:sib2)]}
       error = {:error, :nonexistent_target}
-      assert Pov.from_pov(t, :nonexistent)
+      assert Pov.from_pov(t, :nonexistent) == error
     end
   end
 
