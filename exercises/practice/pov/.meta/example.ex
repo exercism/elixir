@@ -6,14 +6,14 @@ defmodule Pov do
   """
   @type tree :: {any, [tree]}
 
-  defmodule Zipper do
-    defstruct [:focus, genealogy: []]
-    @type t :: %Zipper{focus: Pov.tree(), genealogy: [Crumb.t()]}
-  end
-
   defmodule Crumb do
     defstruct [:parent, left_siblings: [], right_siblings: []]
     @type t :: %Crumb{parent: any, left_siblings: [Pov.tree()], right_siblings: [Pov.tree()]}
+  end
+
+  defmodule Zipper do
+    defstruct [:focus, genealogy: []]
+    @type t :: %Zipper{focus: Pov.tree(), genealogy: [Crumb.t()]}
   end
 
   # Core functions
