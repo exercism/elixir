@@ -88,7 +88,7 @@ defmodule PovTest do
 
     @tag :pending
     test "Errors if target does not exist in a large tree" do
-      t = {:parent, [{:x, [leaf(:kid0), leaf(:kid1)]}, leaf(:sib1), leaf(:sib2)]}
+      t = {:parent, [{:x, [leaf(:kid0), leaf(:kid1)]}, leaf(:sibling0), leaf(:sibling1)]}
       error = {:error, :nonexistent_target}
       assert Pov.from_pov(t, :nonexistent) == error
     end
@@ -112,8 +112,8 @@ defmodule PovTest do
       t =
         {:grandparent,
          [
-           {:parent, [{:x, [leaf(:kid0), leaf(:kid1)]}, leaf(:sib1), leaf(:sib2)]},
-           {:uncle, [leaf(:cousin1), leaf(:cousin2)]}
+           {:parent, [{:x, [leaf(:kid0), leaf(:kid1)]}, leaf(:sibling0), leaf(:sibling1)]},
+           {:uncle, [leaf(:cousin0), leaf(:cousin1)]}
          ]}
 
       assert Pov.path_between(t, :x, :cousin1) == [:x, :parent, :grandparent, :uncle, :cousin1]
@@ -121,8 +121,8 @@ defmodule PovTest do
 
     @tag :pending
     test "Can find path not involving root" do
-      t = {:grandparent, [{:parent, [leaf(:x), leaf(:sib1), leaf(:sib2)]}]}
-      assert Pov.path_between(t, :x, :sib1) == [:x, :parent, :sib1]
+      t = {:grandparent, [{:parent, [leaf(:x), leaf(:sibling0), leaf(:sibling1)]}]}
+      assert Pov.path_between(t, :x, :sibling1) == [:x, :parent, :sibling1]
     end
 
     @tag :pending
@@ -133,14 +133,14 @@ defmodule PovTest do
 
     @tag :pending
     test "Errors if destination does not exist" do
-      t = {:parent, [{:x, [leaf(:kid0), leaf(:kid1)]}, leaf(:sib1), leaf(:sib2)]}
+      t = {:parent, [{:x, [leaf(:kid0), leaf(:kid1)]}, leaf(:sibling0), leaf(:sibling1)]}
       error = {:error, :nonexistent_destination}
       assert Pov.path_between(t, :x, :nonexistent) == error
     end
 
     @tag :pending
     test "Errors if source does not exist" do
-      t = {:parent, [{:x, [leaf(:kid0), leaf(:kid1)]}, leaf(:sib1), leaf(:sib2)]}
+      t = {:parent, [{:x, [leaf(:kid0), leaf(:kid1)]}, leaf(:sibling0), leaf(:sibling1)]}
       error = {:error, :nonexistent_source}
       assert Pov.path_between(t, :nonexistent, :x) == error
     end
