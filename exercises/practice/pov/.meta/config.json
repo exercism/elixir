@@ -3,7 +3,10 @@
   "authors": [
     "jiegillet"
   ],
-  "contributors": [],
+  "contributors": [
+    "neenjaw",
+    "angelikatyborska"
+  ],
   "files": {
     "solution": [
       "lib/pov.ex"
