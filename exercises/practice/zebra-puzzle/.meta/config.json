@@ -1,0 +1,12 @@
+{
+  "blurb": "Solve the zebra puzzle.",
+  "authors": ["jiegillet"],
+  "contributors": [],
+  "files": {
+    "solution": ["lib/zebra_puzzle.ex"],
+    "test": ["test/zebra_puzzle_test.exs"],
+    "example": [".meta/example.ex"]
+  },
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Zebra_Puzzle"
+}
