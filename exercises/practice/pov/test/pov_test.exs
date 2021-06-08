@@ -1,19 +1,19 @@
 defmodule PovTest do
   use ExUnit.Case
 
-  def equal_trees({a, children_a}, {a, children_b}) do
+  def equal_trees?({a, children_a}, {a, children_b}) do
     if length(children_a) == length(children_b) do
       sorted_a = Enum.sort(children_a)
       sorted_b = Enum.sort(children_b)
 
-      Enum.zip_with(sorted_a, sorted_b, &equal_trees/2)
-      |> Enum.all?()
+      Enum.zip(sorted_a, sorted_b)
+      |> Enum.all?(fn {a, b} -> equal_trees?(a, b) end)
     else
       false
     end
   end
 
-  def equal_trees(_a, _b), do: false
+  def equal_trees?(_a, _b), do: false
 
   def leaf(a), do: {a, []}
 
@@ -21,37 +21,35 @@ defmodule PovTest do
     # @tag :pending
     test "Results in the same tree if the input tree is a singleton" do
       t = leaf(:x)
-      assert equal_trees(t, Pov.from_pov(t, :x))
+      assert equal_trees?(t, Pov.from_pov(t, :x))
     end
 
     @tag :pending
     test "Can reroot a tree with a parent and one sibling" do
       t = {:parent, [leaf(:x), leaf(:sibling)]}
       t_final = {:x, [{:parent, [leaf(:sibling)]}]}
-
-      assert equal_trees(t_final, Pov.from_pov(t, :x))
+      assert equal_trees?(t_final, Pov.from_pov(t, :x))
     end
 
     @tag :pending
     test "Can reroot a tree with a parent and many siblings" do
       t = {:parent, [leaf(:a), leaf(:x), leaf(:b), leaf(:c)]}
       t_final = {:x, [{:parent, [leaf(:a), leaf(:b), leaf(:c)]}]}
-
-      assert equal_trees(t_final, Pov.from_pov(t, :x))
+      assert equal_trees?(t_final, Pov.from_pov(t, :x))
     end
 
     @tag :pending
     test "Can reroot a tree with new root deeply nested in tree" do
       t = {:level0, [{:level1, [{:level2, [{:level3, [leaf(:x)]}]}]}]}
       t_final = {:x, [{:level3, [{:level2, [{:level1, [leaf(:level0)]}]}]}]}
-      assert equal_trees(t_final, Pov.from_pov(t, :x))
+      assert equal_trees?(t_final, Pov.from_pov(t, :x))
     end
 
     @tag :pending
     test "Moves children of the new root to same level as former parent" do
       t = {:parent, [{:x, [leaf(:kid0), leaf(:kid1)]}]}
       t_final = {:x, [leaf(:kid0), leaf(:kid1), leaf(:parent)]}
-      assert equal_trees(t_final, Pov.from_pov(t, :x))
+      assert equal_trees?(t_final, Pov.from_pov(t, :x))
     end
 
     @tag :pending
@@ -76,7 +74,7 @@ defmodule PovTest do
             ]}
          ]}
 
-      assert equal_trees(t_final, Pov.from_pov(t, :x))
+      assert equal_trees?(t_final, Pov.from_pov(t, :x))
     end
 
     @tag :pending
