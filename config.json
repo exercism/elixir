@@ -2357,6 +2357,28 @@
           "macros"
         ],
         "difficulty": 8
+      },
+      {
+        "slug": "pov",
+        "name": "POV",
+        "uuid": "abc93451-451d-4497-b590-68cbf82e0a20",
+        "prerequisites": [
+          "pattern-matching",
+          "case",
+          "if",
+          "errors",
+          "recursion",
+          "enum",
+          "protocols",
+          "nil",
+          "structs",
+          "multiple-clause-functions"
+        ],
+        "practices": [
+          "recursion",
+          "pattern-matching"
+        ],
+        "difficulty": 9
       }
     ],
     "foregone": [
