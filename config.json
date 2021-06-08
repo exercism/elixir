@@ -2361,7 +2361,7 @@
       {
         "slug": "pov",
         "name": "POV",
-        "uuid": "ABC93451-451D-4497-B590-68CBF82E0A20",
+        "uuid": "abc93451-451d-4497-b590-68cbf82e0a20",
         "prerequisites": [
           "pattern-matching",
           "case",
