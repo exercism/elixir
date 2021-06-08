@@ -59,8 +59,8 @@ defmodule PovTest do
       t =
         {:grandparent,
          [
-           {:parent, [{:x, [leaf(:kid0), leaf(:kid1)]}, leaf(:sib1), leaf(:sib2)]},
-           {:uncle, [leaf(:cousin1), leaf(:cousin2)]}
+           {:parent, [{:x, [leaf(:kid0), leaf(:kid1)]}, leaf(:sibling0), leaf(:sibling1)]},
+           {:uncle, [leaf(:cousin0), leaf(:cousin1)]}
          ]}
 
       t_final =
@@ -70,9 +70,9 @@ defmodule PovTest do
            leaf(:kid1),
            {:parent,
             [
-              leaf(:sib1),
-              leaf(:sib2),
-              {:grandparent, [{:uncle, [leaf(:cousin1), leaf(:cousin2)]}]}
+              leaf(:sibling0),
+              leaf(:sibling1),
+              {:grandparent, [{:uncle, [leaf(:cousin0), leaf(:cousin1)]}]}
             ]}
          ]}
 
