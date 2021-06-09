@@ -4,7 +4,7 @@ defmodule ZebraPuzzleTest do
 
   # @tag :pending
   test "resident who drinks water" do
-    assert drinks_water() == :norvegian  
+    assert drinks_water() == :norwegian  
   end
 
   @tag :pending

@@ -1,5 +1,5 @@
 defmodule ZebraPuzzle do
-  @nationalities ~w(englishman norvegian ukrainian japanese spaniard)a
+  @nationalities ~w(englishman norwegian ukrainian japanese spaniard)a
   @colors ~w(red green ivory yellow blue)a
   @drinks ~w(coffee tea milk orange_juice water)a
   @pets ~w(dog snails fox horse zebra)a
@@ -74,7 +74,7 @@ defmodule ZebraPuzzle do
     # Milk is drunk in the middle house.
     |> filter_direct(:drink, :milk, :order, 3)
     # The Norwegian lives in the first house.
-    |> filter_direct(:nationality, :norvegian, :order, 1)
+    |> filter_direct(:nationality, :norwegian, :order, 1)
     # The Lucky Strike smoker drinks orange juice.
     |> filter_direct(:cigarette, :lucky_strike, :drink, :orange_juice)
     # The Japanese smokes Parliaments.
@@ -113,7 +113,7 @@ defmodule ZebraPuzzle do
       # Kools are smoked in the house next to the house where the horse is kept.
       |> filter_indirect(:cigarette, :kool, next_to, :pet, :horse, next_to)
       # The Norwegian lives next to the blue house.
-      |> filter_indirect(:nationality, :norvegian, next_to, :color, :blue, next_to)
+      |> filter_indirect(:nationality, :norwegian, next_to, :color, :blue, next_to)
 
     # later filters may influence earlier ones, so we loop until there is no change
     if length(filtered_list) == length(list) do
@@ -156,7 +156,7 @@ defmodule ZebraPuzzle do
   end
 
   def filter_by_unique_relations(list) do
-    # Some values happen to exist only in one particulat house number
+    # Some values happen to exist only in one particular house number
     filter_parameters =
       list
       |> Enum.reduce(%{}, fn house, all ->
@@ -171,7 +171,7 @@ defmodule ZebraPuzzle do
       end)
       |> Enum.concat()
 
-    # Add those values as contraints and filter
+    # Add those values as constraints and filter
     filtered_list =
       filter_parameters
       |> Enum.reduce(list, fn {order, f, v}, lst -> filter_direct(lst, :order, order, f, v) end)
