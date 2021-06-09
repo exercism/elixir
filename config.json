@@ -2390,7 +2390,7 @@
           "cond",
           "if",
           "enum",
-          "keyword-lists",
+          "maps",
           "atoms"
         ],
         "practices": [
