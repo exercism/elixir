@@ -6,7 +6,7 @@ defmodule ZebraPuzzle do
   @cigarettes ~w{old_gold kool chesterfield lucky_strike parliament}a
 
   @doc """
-  Determine who drinks the water 
+  Determine who drinks the water
   """
   @spec drinks_water() :: atom
   def drinks_water() do
@@ -18,7 +18,7 @@ defmodule ZebraPuzzle do
   end
 
   @doc """
-  Determine who owns the zebra 
+  Determine who owns the zebra
   """
   @spec owns_zebra() :: atom
   def owns_zebra() do
@@ -30,7 +30,7 @@ defmodule ZebraPuzzle do
   end
 
   def solve_puzzle() do
-    # 
+    #
     # Step 0: Consider all possible combinations of values
     #
     possibilities =
@@ -55,7 +55,7 @@ defmodule ZebraPuzzle do
         end)
       end)
 
-    # 
+    #
     # Step 1: Add the direct constraints and filter possibilities
     #
     possibilities
@@ -79,7 +79,7 @@ defmodule ZebraPuzzle do
     |> filter_direct(:cigarette, :lucky_strike, :drink, :orange_juice)
     # The Japanese smokes Parliaments.
     |> filter_direct(:cigarette, :parliament, :nationality, :japanese)
-    # 
+    #
     # Step 2: Add indirect constraints (relations with neighbors)
     #
     |> filter_by_neighbors
@@ -124,10 +124,10 @@ defmodule ZebraPuzzle do
   end
 
   def filter_indirect(list, field_1, value_1, order_1_to_2, field_2, value_2, order_2_to_1) do
-    # Get all possible neighbor houses of possibilities with field_1: value_1 
+    # Get all possible neighbor houses of possibilities with field_1: value_1
     # Ex: find all possible house numbers that neighbor a green house
     orders_2 = get_orders(list, field_1, value_1, order_1_to_2)
-    # Only keep possibilities with field_2: value_2 in that neighborhood 
+    # Only keep possibilities with field_2: value_2 in that neighborhood
     list2 = filter_neighbors(list, field_2, value_2, orders_2)
 
     # Same from the other perspective

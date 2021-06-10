@@ -4,11 +4,11 @@ defmodule ZebraPuzzleTest do
 
   # @tag :pending
   test "resident who drinks water" do
-    assert drinks_water() == :norwegian  
+    assert ZebraPuzzle.drinks_water() == :norwegian
   end
 
   @tag :pending
   test "resident who owns zebra" do
-    assert owns_zebra == :japanese 
+    assert ZebraPuzzle.owns_zebra() == :japanese
   end
 end
