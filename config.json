@@ -2398,6 +2398,22 @@
           "cond"
         ],
         "difficulty": 9
+      },
+      {
+        "slug": "rational-numbers",
+        "name": "Rational Numbers",
+        "uuid": "e2777a03-d890-453e-af5b-d61f60adbbf5",
+        "prerequisites": [
+          "pattern-matching",
+          "basics",
+          "integers",
+          "floating-point-numbers",
+          "guards"
+        ],
+        "practices": [
+          "basics"
+        ],
+        "difficulty": 4
       }
     ],
     "foregone": [
