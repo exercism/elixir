@@ -11,7 +11,7 @@ defmodule ZebraPuzzle do
   @spec drinks_water() :: atom
   def drinks_water() do
     [%{nationality: nationality}] =
-      solve_puzzle
+      solve_puzzle()
       |> Enum.filter(fn %{drink: drink} -> drink == :water end)
 
     nationality
@@ -23,7 +23,7 @@ defmodule ZebraPuzzle do
   @spec owns_zebra() :: atom
   def owns_zebra() do
     [%{nationality: nationality}] =
-      solve_puzzle
+      solve_puzzle()
       |> Enum.filter(fn %{pet: pet} -> pet == :zebra end)
 
     nationality
