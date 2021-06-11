@@ -2379,6 +2379,25 @@
           "pattern-matching"
         ],
         "difficulty": 9
+      },
+      {
+        "slug": "zebra-puzzle",
+        "name": "Zebra Puzzle",
+        "uuid": "0a561b08-6e61-4415-a3f1-e7d411a4a0e2",
+        "prerequisites": [
+          "pattern-matching",
+          "case",
+          "cond",
+          "if",
+          "enum",
+          "maps",
+          "atoms"
+        ],
+        "practices": [
+          "enum",
+          "cond"
+        ],
+        "difficulty": 9
       }
     ],
     "foregone": [
