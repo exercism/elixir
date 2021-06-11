@@ -1,4 +1,4 @@
-name: sync-labels
+name: Tools
 
 on:
   push:
@@ -7,16 +7,15 @@ on:
       - .github/labels.yml
       - .github/workflows/sync-labels.yml
   schedule:
-    - cron: 0 0 * * *
+    - cron: 0 0 1 * *
+  workflow_dispatch:
 
 jobs:
   sync-labels:
     name: Sync labels
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.3.4
-      - uses: micnncim/action-label-syncer@v1.3.0
+      - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f
+      - uses: micnncim/action-label-syncer@3abd5ab72fda571e69fffd97bd4e0033dd5f495c
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          manifest: .github/labels.yml
