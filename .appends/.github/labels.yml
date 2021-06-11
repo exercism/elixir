@@ -1,3 +1,8 @@
+# ----------------------------------------------------------------------------------------- #
+# These are the repository-specific labels that augment the Exercise-wide labels defined in #
+# https://github.com/exercism/org-wide-files/blob/main/global-files/.github/labels.yml.     #
+# ----------------------------------------------------------------------------------------- #
+
 - name: "CI 🤖"
   description: "Changes related to continuous integration"
   color: "d2e1f2"
@@ -50,21 +55,9 @@
   description: ""
   color: "23296d"
 
-- name: "reputation/contributed_code/major"
-  description: "Increases the number of reputation points awarded by this PR"
-  color: "fcfa9f"
-
-- name: "reputation/contributed_code/minor"
-  description: "Decreases the number of reputation points awarded by this PR"
-  color: "fcfa9f"
-
 - name: "v3"
   description: "Related to Exercism v3"
   color: "dbf2a2"
-
-- name: "v3-migration 🤖"
-  description: "Preparing for Exercism v3"
-  color: "E99695"
 
 - name: "waiting ⏳"
   description: "Waiting for something else to happen first"
@@ -73,4 +66,3 @@
 - name: "won't fix ⛔️"
   description: ""
   color: "fce0e2"
-
