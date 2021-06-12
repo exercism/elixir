@@ -21,35 +21,40 @@ defmodule PovTest do
     # @tag :pending
     test "Results in the same tree if the input tree is a singleton" do
       t = leaf(:x)
-      assert equal_trees?(t, Pov.from_pov(t, :x))
+      {:ok, rerooted} = Pov.from_pov(t, :x)
+      assert equal_trees?(t, rerooted)
     end
 
     @tag :pending
     test "Can reroot a tree with a parent and one sibling" do
       t = {:parent, [leaf(:x), leaf(:sibling)]}
       t_final = {:x, [{:parent, [leaf(:sibling)]}]}
-      assert equal_trees?(t_final, Pov.from_pov(t, :x))
+      {:ok, rerooted} = Pov.from_pov(t, :x)
+      assert equal_trees?(t_final, rerooted)
     end
 
     @tag :pending
     test "Can reroot a tree with a parent and many siblings" do
       t = {:parent, [leaf(:a), leaf(:x), leaf(:b), leaf(:c)]}
       t_final = {:x, [{:parent, [leaf(:a), leaf(:b), leaf(:c)]}]}
-      assert equal_trees?(t_final, Pov.from_pov(t, :x))
+      {:ok, rerooted} = Pov.from_pov(t, :x)
+      assert equal_trees?(t_final, rerooted)
     end
 
     @tag :pending
     test "Can reroot a tree with new root deeply nested in tree" do
       t = {:level0, [{:level1, [{:level2, [{:level3, [leaf(:x)]}]}]}]}
       t_final = {:x, [{:level3, [{:level2, [{:level1, [leaf(:level0)]}]}]}]}
-      assert equal_trees?(t_final, Pov.from_pov(t, :x))
+      {:ok, rerooted} = Pov.from_pov(t, :x)
+      assert equal_trees?(t_final, rerooted)
     end
 
     @tag :pending
     test "Moves children of the new root to same level as former parent" do
       t = {:parent, [{:x, [leaf(:kid0), leaf(:kid1)]}]}
       t_final = {:x, [leaf(:kid0), leaf(:kid1), leaf(:parent)]}
-      assert equal_trees?(t_final, Pov.from_pov(t, :x))
+      {:ok, rerooted} = Pov.from_pov(t, :x)
+      assert equal_trees?(t_final, rerooted)
     end
 
     @tag :pending
@@ -74,7 +79,8 @@ defmodule PovTest do
             ]}
          ]}
 
-      assert equal_trees?(t_final, Pov.from_pov(t, :x))
+      {:ok, rerooted} = Pov.from_pov(t, :x)
+      assert equal_trees?(t_final, rerooted)
     end
 
     @tag :pending
@@ -96,13 +102,15 @@ defmodule PovTest do
     @tag :pending
     test "Can find path to parent" do
       t = {:parent, [leaf(:x), leaf(:sibling)]}
-      assert Pov.path_between(t, :x, :parent) == [:x, :parent]
+      {:ok, path} = Pov.path_between(t, :x, :parent)
+      assert path == [:x, :parent]
     end
 
     @tag :pending
     test "Can find path to sibling" do
       t = {:parent, [leaf(:a), leaf(:x), leaf(:b), leaf(:c)]}
-      assert Pov.path_between(t, :x, :b) == [:x, :parent, :b]
+      {:ok, path} = Pov.path_between(t, :x, :b)
+      assert path == [:x, :parent, :b]
     end
 
     @tag :pending
@@ -114,19 +122,22 @@ defmodule PovTest do
            {:uncle, [leaf(:cousin0), leaf(:cousin1)]}
          ]}
 
-      assert Pov.path_between(t, :x, :cousin1) == [:x, :parent, :grandparent, :uncle, :cousin1]
+      {:ok, path} = Pov.path_between(t, :x, :cousin1)
+      assert path == [:x, :parent, :grandparent, :uncle, :cousin1]
     end
 
     @tag :pending
     test "Can find path not involving root" do
       t = {:grandparent, [{:parent, [leaf(:x), leaf(:sibling0), leaf(:sibling1)]}]}
-      assert Pov.path_between(t, :x, :sibling1) == [:x, :parent, :sibling1]
+      {:ok, path} = Pov.path_between(t, :x, :sibling1)
+      assert path == [:x, :parent, :sibling1]
     end
 
     @tag :pending
     test "Can find path from nodes other than x" do
       t = {:parent, [leaf(:a), leaf(:x), leaf(:b), leaf(:c)]}
-      assert Pov.path_between(t, :a, :c) == [:a, :parent, :c]
+      {:ok, path} = Pov.path_between(t, :a, :c)
+      assert path == [:a, :parent, :c]
     end
 
     @tag :pending
