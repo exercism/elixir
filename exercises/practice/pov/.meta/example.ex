@@ -21,10 +21,10 @@ defmodule Pov do
   @doc """
   Reparent a tree on a selected node.
   """
-  @spec from_pov(tree :: tree, node :: any) :: tree | {:error, atom}
+  @spec from_pov(tree :: tree, node :: any) :: {:ok, tree} | {:error, atom}
   def from_pov(tree, node) do
     case tree |> zip |> search(node) do
-      {:ok, zipper} -> reparent(zipper)
+      {:ok, zipper} -> {:ok, reparent(zipper)}
       _ -> {:error, :nonexistent_target}
     end
   end
@@ -32,12 +32,12 @@ defmodule Pov do
   @doc """
   Finds a path between two nodes
   """
-  @spec path_between(tree :: tree, from :: any, to :: any) :: [any] | {:error, atom}
+  @spec path_between(tree :: tree, from :: any, to :: any) :: {:ok, [any]} | {:error, atom}
   def path_between(tree, from, to) do
     case tree |> zip |> search(from) do
       {:ok, zipper} ->
         case zipper |> reparent |> zip |> search(to) do
-          {:ok, zipper_path} -> get_path(zipper_path)
+          {:ok, zipper_path} -> {:ok, get_path(zipper_path)}
           _ -> {:error, :nonexistent_destination}
         end
 
