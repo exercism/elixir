@@ -7,7 +7,7 @@ defmodule Satellite do
   @doc """
   Build a tree from the elements given in a pre-order and in-order style
   """
-  @spec build_tree(preorder :: [any], inorder :: [any]) :: tree | {:error, String.t()}
+  @spec build_tree(preorder :: [any], inorder :: [any]) :: {:ok, tree} | {:error, String.t()}
 
   def build_tree(preorder, inorder) do
     p_length = length(preorder)
@@ -19,7 +19,7 @@ defmodule Satellite do
       p_length != i_length -> {:error, "traversals must have the same length"}
       p_set != i_set -> {:error, "traversals must have the same elements"}
       p_length != MapSet.size(p_set) -> {:error, "traversals must contain unique items"}
-      true -> build_tree(preorder, inorder, :safe)
+      true -> {:ok, build_tree(preorder, inorder, :safe)}
     end
   end
 

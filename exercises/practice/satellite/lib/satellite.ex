@@ -7,7 +7,7 @@ defmodule Satellite do
   @doc """
   Build a tree from the elements given in a pre-order and in-order style
   """
-  @spec build_tree(preorder :: [any], inorder :: [any]) :: tree | {:error, String.t()}
+  @spec build_tree(preorder :: [any], inorder :: [any]) :: {:ok, tree} | {:error, String.t()}
 
   def build_tree(preorder, inorder) do
   end

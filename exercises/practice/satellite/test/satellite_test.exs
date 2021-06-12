@@ -6,7 +6,7 @@ defmodule SatelliteTest do
     preorder = []
     inorder = []
     tree = {}
-    assert Satellite.build_tree(preorder, inorder) == tree
+    assert Satellite.build_tree(preorder, inorder) == {:ok, tree}
   end
 
   @tag :pending
@@ -14,7 +14,7 @@ defmodule SatelliteTest do
     preorder = [:a]
     inorder = [:a]
     tree = {{}, :a, {}}
-    assert Satellite.build_tree(preorder, inorder) == tree
+    assert Satellite.build_tree(preorder, inorder) == {:ok, tree}
   end
 
   @tag :pending
@@ -22,8 +22,7 @@ defmodule SatelliteTest do
     preorder = ~w(a i x f r)a
     inorder = ~w(i a f x r)a
     tree = {{{}, :i, {}}, :a, {{{}, :f, {}}, :x, {{}, :r, {}}}}
-
-    assert Satellite.build_tree(preorder, inorder) == tree
+    assert Satellite.build_tree(preorder, inorder) == {:ok, tree}
   end
 
   @tag :pending
