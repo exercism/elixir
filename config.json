@@ -2386,12 +2386,15 @@
         "uuid": "a07e01e6-7cea-4db9-a514-7c95788e90a9",
         "prerequisites": [
           "pattern-matching",
-          "tuple",
+          "tuples",
           "cond",
-          "recursion"
+          "recursion",
+          "atoms",
+          "lists",
+          "enum"
         ],
         "practices": [
-          "recusrion"
+          "recursion"
         ],
         "difficulty": 6
       },
