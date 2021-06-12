@@ -246,7 +246,7 @@ defmodule RationalNumbersTest do
       x = 8
       r = {4, 3}
       result = 16.0
-      assert_in_delta RationalNumbers.pow_real(x, r), result, 1.0e-15
+      assert_in_delta RationalNumbers.pow_real(x, r), result, 1.0e-10
     end
 
     @tag :pending
@@ -254,7 +254,7 @@ defmodule RationalNumbersTest do
       x = 9
       r = {-1, 2}
       result = 0.3333333333333333
-      assert_in_delta RationalNumbers.pow_real(x, r), result, 1.0e-15
+      assert_in_delta RationalNumbers.pow_real(x, r), result, 1.0e-10
     end
 
     @tag :pending
@@ -262,7 +262,7 @@ defmodule RationalNumbersTest do
       x = 2
       r = {0, 1}
       result = 1.0
-      assert_in_delta RationalNumbers.pow_real(x, r), result, 1.0e-15
+      assert_in_delta RationalNumbers.pow_real(x, r), result, 1.0e-10
     end
   end
 
