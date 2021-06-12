@@ -1,6 +1,4 @@
 defmodule Pov do
-  # Structs and types
-
   @typedoc """
   A tree, which is made of a node with several branches
   """
