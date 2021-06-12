@@ -3,7 +3,9 @@
   "authors": [
     "jiegillet"
   ],
-  "contributors": [],
+  "contributors": [
+    "angelikatyborska"
+  ],
   "files": {
     "solution": [
       "lib/rational_numbers.ex"
