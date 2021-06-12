@@ -2381,6 +2381,21 @@
         "difficulty": 9
       },
       {
+        "slug": "satellite",
+        "name": "Satellite",
+        "uuid": "a07e01e6-7cea-4db9-a514-7c95788e90a9",
+        "prerequisites": [
+          "pattern-matching",
+          "tuple",
+          "cond",
+          "recursion"
+        ],
+        "practices": [
+          "recusrion"
+        ],
+        "difficulty": 6
+      },
+      {
         "slug": "zebra-puzzle",
         "name": "Zebra Puzzle",
         "uuid": "0a561b08-6e61-4415-a3f1-e7d411a4a0e2",
