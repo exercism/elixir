@@ -19,9 +19,9 @@ installation instructions can be found at
 
 ---
 
-### Test Assignments
+### Test Exercises
 
-To test all of the assignments against their example solution, you can run `bin/test_exercises.sh`:
+To test all of the exercises against their example solution, you can run `bin/test_exercises.sh`:
 
 ```shell
 $ ./bin/test_exercises.sh
@@ -52,6 +52,27 @@ To run dialyzer on all exercises, run `./bin/dialyzer_check.sh`. It might take a
 ### Code and document formatting
 
 To check formatting of all exercises and all documents, run `./bin/check_formatting.sh`. It will also be run for you by Github Actions as part of the PR check.
+
+### Track linting
+
+[`configlet`](https://github.com/exercism/configlet) is an Exercism-wide tool for working with tracks. You can download it by running:
+
+```shell
+$ ./bin/fetch_configlet.sh
+```
+
+R run its `lint` command to verify if all exercises have all the necessary files and if config files are correct:
+
+```shell
+$ ./bin/configlet lint
+
+The `exercises.practice.slug` value is `transpose 🙂`, but it must be a lowercase and kebab-case string:
+/Users/angelika/Documents/exercism/elixir/config.json
+
+Configlet detected at least one problem.
+For more information on resolving the problems, please see the documentation:
+https://github.com/exercism/docs/blob/main/building/configlet/lint.md
+```
 
 ## Contributing Guide
 
