@@ -1841,7 +1841,6 @@
         ],
         "practices": [
           "multiple-clause-functions",
-          "recursion",
           "tail-call-recursion"
         ],
         "difficulty": 3
