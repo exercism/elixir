@@ -980,8 +980,7 @@
         ],
         "practices": [
           "anonymous-functions",
-          "lists",
-          "recursion"
+          "lists"
         ],
         "difficulty": 2
       },
@@ -1842,7 +1841,6 @@
         ],
         "practices": [
           "multiple-clause-functions",
-          "recursion",
           "tail-call-recursion"
         ],
         "difficulty": 3
@@ -2375,8 +2373,7 @@
           "multiple-clause-functions"
         ],
         "practices": [
-          "recursion",
-          "pattern-matching"
+          "recursion"
         ],
         "difficulty": 9
       },
