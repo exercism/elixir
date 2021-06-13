@@ -69,6 +69,17 @@ Please keep the following in mind:
 
 - No tests should be skipped for concept exercises.
 
+- `.meta/tests.toml` files are generated and updated by `configlet`.
+
+    ```shell
+    # check which exercises need updating
+    $ ./bin/configlet sync
+
+    # add all missing tests to tests.toml for a given exercise
+    $ ./bin/configlet sync --update --exercise zebra-puzzle
+
+    ```
+
 
 ## Language versions
 

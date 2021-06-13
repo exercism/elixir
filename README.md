@@ -61,7 +61,7 @@ To check formatting of all exercises and all documents, run `./bin/check_formatt
 $ ./bin/fetch_configlet.sh
 ```
 
-R run its `lint` command to verify if all exercises have all the necessary files and if config files are correct:
+Run its `lint` command to verify if all exercises have all the necessary files and if config files are correct:
 
 ```shell
 $ ./bin/configlet lint
