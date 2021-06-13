@@ -19,29 +19,30 @@ installation instructions can be found at
 
 ---
 
-### Test All Assignments
+### Test Assignments
 
 To test all of the assignments against their example solution, you can run `bin/test_exercises.sh`:
 
 ```shell
 $ ./bin/test_exercises.sh
-Testing: accumulate -- Pass
-Testing: acronym -- Pass
+Testing: accumulate Pass
+Testing: acronym Pass
 ...
-Testing: zipper -- Pass
+Testing: zipper Pass
 --------------------------------------------------------------------------------
 93/93 tests passed.
 ```
 
 This will take some time.
 
-### Test Specific Assignment
-
-Go in the the specific exercise directory, run `mix test` to test an individual assignment:
+To only test some exercises, run:
 
 ```shell
-cd exercises/$EXERCISE_NAME
-mix test
+$ ./bin/test_exercises.sh word-count zebra-puzzle
+Testing: word-count Pass
+Testing: zebra-puzzle Pass
+--------------------------------------------------------------------------------
+2/2 tests passed.
 ```
 
 ### Dialyzer
