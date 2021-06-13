@@ -6,14 +6,18 @@ We welcome pull requests that provide fixes and improvements to existing
 exercises. If you're unsure, then go ahead and open a GitHub issue, and we'll
 discuss the change.
 
+## General rules
+
 Please keep the following in mind:
 
-- Please start by reading the general Exercism [contributing guide](https://github.com/exercism/x-api/blob/master/CONTRIBUTING.md#the-exercise-data).
+- For Exercism-wide explanations of how a track is structured, [look in the `exercism/docs` repository](https://github.com/exercism/docs/tree/main/building/tracks).
 
 - Pull requests should be focused on a single exercise, issue, or change.
 
 - We welcome changes to code style, and wording. Please open a separate PR for
   these changes if possible.
+
+- Content (exercises, documentation etc.) should be written in American English.
 
 - Please open an issue before creating a PR that makes significant (breaking)
   changes to an existing exercise or makes changes across many exercises. It is
@@ -24,12 +28,17 @@ Please keep the following in mind:
 
 - Watch out for trailing spaces, extra blank lines, and spaces in blank lines.
 
+- The CI is going to run a lot of check on your PR. Pay attention to the failures, try to understand and fix them.
+
+
+## Exercises
+
 - Each exercise must stand on its own. Do not reference files outside the
   exercise directory. They will not be included when the user fetches the
   exercise.
 
 - Each problem should have a test suite, an example solution, and a template
-  file for the real implementation. Read about [the anatomy of practice exercises][https://github.com/exercism/docs/blob/main/anatomy/tracks/practice-exercises.md] or [the anatomy of concept exercises][https://github.com/exercism/docs/blob/main/anatomy/tracks/concept-exercises.md], depending on to which type of exercise you want to contribute.
+  file for the real implementation. Read about [the anatomy of practice exercises](https://github.com/exercism/docs/blob/main/building/tracks/practice-exercises.md) or [the anatomy of concept exercises](https://github.com/exercism/docs/blob/main/building/tracks/concept-exercises.md), depending on to which type of exercise you want to contribute.
 
 - For practice exercises, use typespecs in the example and template files as described [here](http://elixir-lang.org/getting-started/typespecs-and-behaviours.html).
 
@@ -60,6 +69,33 @@ Please keep the following in mind:
 
 - No tests should be skipped for concept exercises.
 
-All the tests for Exercism Elixir Track exercises can be run from the top level of the repo
-with `$ ./bin/test_exercises.sh`. Please run this command before submitting your PR. Watch out
-for and correct any compiler warnings you may have introduced.
+- `.meta/tests.toml` files are generated and updated by `configlet`.
+
+    ```shell
+    # check which exercises need updating
+    $ ./bin/configlet sync
+
+    # add all missing tests to tests.toml for a given exercise
+    $ ./bin/configlet sync --update --exercise zebra-puzzle
+
+    ```
+
+
+## Language versions
+
+- We try to keep all exercises compatible with older major Elixir and Erlang versions, at least 2 years into the past.
+
+- All test suites and example solutions must work in all Elixir and Erlang versions that we currently support. Please consult the GitHub workflows configuration (e.g. `.github/workflows/pr.ci.yml`) to check which versions those are.
+
+- As soon as a new major Elixir version is released, we want to start supporting it.
+
+- The test runner always runs on the newest major Elixir version.
+
+- The exercises' `mix.exs` files should have the Elixir version commented out.
+
+
+## External dependencies
+
+Exercises should not use any external dependencies. Each exercise should be solvable with the standard library only.
+
+This allows us more freedom with language version management and keeps the learning process easier for students.

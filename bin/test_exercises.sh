@@ -13,6 +13,9 @@ set -euo pipefail
 #
 # An exit code of 0 indicates all tests successful, 1 indicates an error with at
 # least one exercise.
+#
+# Optionally, you can pass a list of exercise names
+# to only run tests for those exercises.
 # ###
 
 # helper subroutine
@@ -39,8 +42,15 @@ relative_root=$(pwd)
 rm -rf tmp-exercises
 cp -a exercises tmp-exercises
 
+exercises=`echo tmp-exercises/*/*`
+
+if [[ ! -z "$@" ]]; then
+  pattern=$(echo "$@" | sed 's/ /|/g')
+  exercises=$(find $exercises -maxdepth 0 | grep -E "$pattern")
+fi
+
 # test each exercise
-for exercise in tmp-exercises/*/*
+for exercise in $exercises
 do
   if [ -d ${exercise} ]
   then
