@@ -1,14 +1,15 @@
 # Exercism Elixir Track
 
-![build status](https://travis-ci.org/exercism/elixir.svg?branch=master)
+![GitHub branch checks state](https://img.shields.io/github/checks-status/exercism/elixir/main)
+![GitHub contributors](https://img.shields.io/github/contributors-anon/exercism/elixir)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/exercism/elixir)
 
-Exercism Exercises in Elixir
+[Exercism Exercises in Elixir](https://exercism.io/my/tracks/elixir)
 
 ## Setup
 
-The exercises currently target Elixir >= 1.7 and Erlang/OTP >= 20. Detailed
-installation instructions can be found at
-[http://elixir-lang.org/install.html](http://elixir-lang.org/install.html).
+The exercises currently target Elixir versions from 1.7 to 1.12 and Erlang/OTP versions from 20 to 24. Detailed installation instructions can be found at
+[http://elixir-lang.org/install.html](http://elixir-lang.org/install.html). We recommend using the [asdf version manager](https://github.com/asdf-vm/asdf) to manage multiple Elixir versions.
 
 ## Testing
 

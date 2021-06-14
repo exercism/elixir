@@ -83,13 +83,13 @@ Please keep the following in mind:
 
 ## Language versions
 
-- We try to keep all exercises compatible with older major Elixir and Erlang versions, at least 2 years into the past.
+- We try to keep all exercises compatible with older Elixir and Erlang versions. We aim to support the 6 latest minor Elixir versions.
 
 - All test suites and example solutions must work in all Elixir and Erlang versions that we currently support. Please consult the GitHub workflows configuration (e.g. `.github/workflows/pr.ci.yml`) to check which versions those are.
 
-- As soon as a new major Elixir version is released, we want to start supporting it.
+- As soon as a new minor Elixir version is released, we want to start supporting it, and we drop support of the oldest currently supported version.
 
-- The test runner always runs on the newest major Elixir version.
+- The test runner always runs on the newest minor Elixir version.
 
 - The exercises' `mix.exs` files should have the Elixir version commented out.
 
