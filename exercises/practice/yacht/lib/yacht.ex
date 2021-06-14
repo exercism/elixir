@@ -1,6 +1,6 @@
 defmodule Yacht do
   @doc """
-  Calculate the score of the list of 5 dice rolls using the given category.
+  Calculate the score of 5 dice using the given category's scoring method.
   """
   @spec score(category :: String.t(), dice :: [integer]) :: integer
   def score(category, dice) do

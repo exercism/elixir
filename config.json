@@ -2429,6 +2429,25 @@
           "basics"
         ],
         "difficulty": 4
+      },
+      {
+        "slug": "yacht",
+        "name": "Yacht",
+        "uuid": "d2ee3ff4-2f01-404a-a4f0-d15823ac0482",
+        "prerequisites": [
+          "lists",
+          "cond",
+          "case",
+          "if",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "enum"
+        ],
+        "practices": [
+          "multiple-clause-matching"
+        ],
+        "difficulty": 5
       }
     ],
     "foregone": [

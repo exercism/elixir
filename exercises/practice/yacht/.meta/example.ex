@@ -1,4 +1,10 @@
 defmodule Yacht do
+  defp die_frequencies(dice) do
+    Enum.reduce(dice, %{}, fn die, frequencies ->
+      Map.update(frequencies, die, 1, &(&1 + 1))
+    end)
+  end
+
   @doc """
   Calculate the score of the list of 5 dice rolls using the given category.
   """
@@ -18,10 +24,9 @@ defmodule Yacht do
 
   def score("full house", dice) do
     full_house =
-      Enum.frequencies(dice)
+      die_frequencies(dice)
       |> Map.values()
-      |> MapSet.new() ==
-        MapSet.new([3, 2])
+      |> MapSet.new() == MapSet.new([3, 2])
 
     if full_house do
       Enum.sum(dice)
@@ -32,12 +37,12 @@ defmodule Yacht do
 
   def score("four of a kind", dice) do
     frequencies =
-      Enum.frequencies(dice)
+      die_frequencies(dice)
       |> Enum.to_list()
-      |> Enum.filter(fn {_, freq} -> freq >= 4 end)
+      |> Enum.filter(fn {_, frequency} -> frequency >= 4 end)
 
     case frequencies do
-      [{number, _freq}] ->
+      [{number, _frequencies}] ->
         number * 4
 
       _ ->
