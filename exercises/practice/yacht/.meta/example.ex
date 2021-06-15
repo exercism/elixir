@@ -1,4 +1,18 @@
 defmodule Yacht do
+  @type category ::
+          :ones
+          | :twos
+          | :threes
+          | :fours
+          | :fives
+          | :sixes
+          | :full_house
+          | :four_of_a_kind
+          | :little_straight
+          | :big_straight
+          | :choice
+          | :yacht
+
   defp die_frequencies(dice) do
     Enum.reduce(dice, %{}, fn die, frequencies ->
       Map.update(frequencies, die, 1, &(&1 + 1))
@@ -8,21 +22,21 @@ defmodule Yacht do
   @doc """
   Calculate the score of the list of 5 dice rolls using the given category.
   """
-  @spec score(category :: String.t(), dice :: [integer]) :: integer
+  @spec score(category :: category(), dice :: [integer]) :: integer
   def score(category, dice)
 
-  def score("ones", dice), do: score(1, dice)
-  def score("twos", dice), do: score(2, dice)
-  def score("threes", dice), do: score(3, dice)
-  def score("fours", dice), do: score(4, dice)
-  def score("fives", dice), do: score(5, dice)
-  def score("sixes", dice), do: score(6, dice)
+  def score(:ones, dice), do: score(1, dice)
+  def score(:twos, dice), do: score(2, dice)
+  def score(:threes, dice), do: score(3, dice)
+  def score(:fours, dice), do: score(4, dice)
+  def score(:fives, dice), do: score(5, dice)
+  def score(:sixes, dice), do: score(6, dice)
 
   def score(number, dice) when is_integer(number) do
     Enum.count(dice, &(&1 == number)) * number
   end
 
-  def score("full house", dice) do
+  def score(:full_house, dice) do
     full_house =
       die_frequencies(dice)
       |> Map.values()
@@ -35,7 +49,7 @@ defmodule Yacht do
     end
   end
 
-  def score("four of a kind", dice) do
+  def score(:four_of_a_kind, dice) do
     frequencies =
       die_frequencies(dice)
       |> Enum.to_list()
@@ -50,7 +64,7 @@ defmodule Yacht do
     end
   end
 
-  def score("little straight", dice) do
+  def score(:little_straight, dice) do
     if MapSet.new(dice) == MapSet.new([1, 2, 3, 4, 5]) do
       30
     else
@@ -58,7 +72,7 @@ defmodule Yacht do
     end
   end
 
-  def score("big straight", dice) do
+  def score(:big_straight, dice) do
     if MapSet.new(dice) == MapSet.new([2, 3, 4, 5, 6]) do
       30
     else
@@ -66,11 +80,11 @@ defmodule Yacht do
     end
   end
 
-  def score("choice", dice) do
+  def score(:choice, dice) do
     Enum.sum(dice)
   end
 
-  def score("yacht", dice) do
+  def score(:yacht, dice) do
     unique_dice = MapSet.size(MapSet.new(dice))
 
     case unique_dice do
