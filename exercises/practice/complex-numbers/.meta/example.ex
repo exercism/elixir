@@ -1,4 +1,4 @@
-:%s/\s\+$//edefmodule ComplexNumbers do
+defmodule ComplexNumbers do
   @typedoc """
   The type of a complex number
   """
