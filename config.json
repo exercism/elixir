@@ -2431,6 +2431,21 @@
         "difficulty": 4
       },
       {
+        "slug": "complex-numbers",
+        "name": "Complex Numbers",
+        "uuid": "0cc86a92-7118-4cb9-8417-db4557baf364",
+        "prerequisites": [
+          "pattern-matching",
+          "erlang-libraries",
+          "floating-point-numbers"
+        ],
+        "practices": [
+          "pattern-matching",
+          "floating-point-numbers"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "yacht",
         "name": "Yacht",
         "uuid": "d2ee3ff4-2f01-404a-a4f0-d15823ac0482",
