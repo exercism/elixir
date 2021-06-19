@@ -1,6 +1,6 @@
 # Introduction
 
-## docs
+## Docs
 
 Documentation in Elixir is a first-class citizen.
 
@@ -29,7 +29,7 @@ defmodule String do
 end
 ```
 
-## typespecs
+## Typespecs
 
 Elixir is a dynamically typed language, which means it doesn't provide compile-time type checks. Still, type specifications can be used as a form of documentation.
 

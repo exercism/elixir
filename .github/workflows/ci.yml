@@ -16,8 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        elixir: [1.11]
-        otp: [23.2]
+        elixir: [1.12]
+        otp: [24.0]
 
     steps:
       - name: Checkout code
@@ -29,12 +29,22 @@ jobs:
           otp-version: ${{matrix.otp}}
           elixir-version: ${{matrix.elixir}}
 
+      - name: Set cache key
+        id: set_cache_key
+        run: |
+          erl -eval '{ok, Version} = file:read_file(filename:join([code:root_dir(), "releases", erlang:system_info(otp_release), "OTP_VERSION"])), io:fwrite(Version), halt().' -noshell > ERLANG_VERSION
+          cat ERLANG_VERSION
+          elixir --version | tail -n 1 > ELIXIR_VERSION
+          cat ELIXIR_VERSION
+          cache_key="os-${{ runner.os }}-erlang-$( sha256sum ERLANG_VERSION | cut -d ' ' -f 1 )-elixir-$( sha256sum ELIXIR_VERSION | cut -d ' ' -f 1 )-mix-lock-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}"
+          echo "::set-output name=cache_key::$cache_key"
+
       - name: Retrieve Mix Dependencies Cache
-        uses: actions/cache@v2.1.5
+        uses: actions/cache@v2.1.6
         id: mix-cache # id to use in retrieve action
         with:
           path: deps
-          key: ${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-mix-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}-v2
+          key: mix-${{ steps.set_cache_key.outputs.cache_key }}-v1
 
       - name: Install Mix Dependencies
         if: steps.mix-cache.outputs.cache-hit != 'true'
@@ -44,11 +54,11 @@ jobs:
         run: mix
 
       - name: Retrieve PLT Cache
-        uses: actions/cache@v2.1.5
+        uses: actions/cache@v2.1.6
         id: plt-cache
         with:
           path: priv/plts
-          key: ${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-plts-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}-v3
+          key: plts-${{ steps.set_cache_key.outputs.cache_key }}-v1
 
       - name: Create PLTs
         if: steps.plt-cache.outputs.cache-hit != 'true'
@@ -77,6 +87,8 @@ jobs:
             otp: '22.2'
           - elixir: '1.11.0'
             otp: '23.2'
+          - elixir: '1.12.0'
+            otp: '24.0'
 
     steps:
       - uses: actions/checkout@v2.3.4
@@ -87,7 +99,7 @@ jobs:
           elixir-version: ${{matrix.elixir}}
 
       - name: Retrieve Mix Dependencies Cache
-        uses: actions/cache@v2.1.5
+        uses: actions/cache@v2.1.6
         id: mix-cache # id to use in retrieve action
         with:
           path: deps

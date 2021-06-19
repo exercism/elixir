@@ -8,12 +8,12 @@ defmodule GuessingGameTest do
 
   @task_id 2
   test "too high when guessed number is greater than the secret" do
-    assert GuessingGame.compare(9, 18) == "Too High"
+    assert GuessingGame.compare(9, 18) == "Too high"
   end
 
   @task_id 3
   test "too low when guessed number is less than the secret" do
-    assert GuessingGame.compare(42, 30) == "Too Low"
+    assert GuessingGame.compare(42, 30) == "Too low"
   end
 
   @task_id 4

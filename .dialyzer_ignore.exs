@@ -1,16 +1,15 @@
 [
-  {":0:unknown_function Function RPG.Edible.Atom.__impl__/1 does not exist."},
-  {":0:unknown_function Function RPG.Edible.BitString.__impl__/1 does not exist."},
-  {":0:unknown_function Function RPG.Edible.Float.__impl__/1 does not exist."},
-  {":0:unknown_function Function RPG.Edible.Function.__impl__/1 does not exist."},
-  {":0:unknown_function Function RPG.Edible.Integer.__impl__/1 does not exist."},
-  {":0:unknown_function Function RPG.Edible.List.__impl__/1 does not exist."},
-  {":0:unknown_function Function RPG.Edible.Map.__impl__/1 does not exist."},
-  {":0:unknown_function Function RPG.Edible.PID.__impl__/1 does not exist."},
-  {":0:unknown_function Function RPG.Edible.Port.__impl__/1 does not exist."},
-  {":0:unknown_function Function RPG.Edible.Reference.__impl__/1 does not exist."},
-  {":0:unknown_function Function RPG.Edible.Tuple.__impl__/1 does not exist."}
-
+  ~r|Function RPG\.Edible\.Atom\.__impl__/1 does not exist\.|,
+  ~r|Function RPG\.Edible\.BitString\.__impl__/1 does not exist\.|,
+  ~r|Function RPG\.Edible\.Float\.__impl__/1 does not exist\.|,
+  ~r|Function RPG\.Edible\.Function\.__impl__/1 does not exist\.|,
+  ~r|Function RPG\.Edible\.Integer\.__impl__/1 does not exist\.|,
+  ~r|Function RPG\.Edible\.List\.__impl__/1 does not exist\.|,
+  ~r|Function RPG\.Edible\.Map\.__impl__/1 does not exist\.|,
+  ~r|Function RPG\.Edible\.PID\.__impl__/1 does not exist\.|,
+  ~r|Function RPG\.Edible\.Port\.__impl__/1 does not exist\.|,
+  ~r|Function RPG\.Edible\.Reference\.__impl__/1 does not exist\.|,
+  ~r|Function RPG\.Edible\.Tuple\.__impl__/1 does not exist\.|
 #  # {short_description}
 #  {":0:unknown_function Function :erl_types.t_is_opaque/1/1 does not exist."},
 #  # {short_description, warning_type}

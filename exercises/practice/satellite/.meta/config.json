@@ -1,0 +1,20 @@
+{
+  "blurb": "Rebuild binary trees from pre-order and in-order traversals.",
+  "authors": [
+    "jiegillet"
+  ],
+  "contributors": [
+    "angelikatyborska"
+  ],
+  "files": {
+    "solution": [
+      "lib/satellite.ex"
+    ],
+    "test": [
+      "test/satellite_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
+  }
+}

@@ -14,7 +14,11 @@ echo "Running dialyzer_check.sh"
 ("bin/dialyzer_check.sh")
 DIALYZER_EXIT_CODE="$?"
 
-if [ "$CHECK_FORMAT_EXIT_CODE" -ne 0 -o "$DIALYZER_EXIT_CODE" -ne 0 ]
+echo "Running check_concepts.exs"
+(elixir bin/check_concepts.exs --no-warn)
+CONCEPTS_EXIT_CODE="$?"
+
+if [ "$CHECK_FORMAT_EXIT_CODE" -ne 0 -o "$DIALYZER_EXIT_CODE" -ne 0 -o "$CONCEPTS_EXIT_CODE" -ne 0 ]
 then
   echo "Precheck failed"
   exit 1;

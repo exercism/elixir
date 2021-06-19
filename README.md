@@ -1,14 +1,15 @@
 # Exercism Elixir Track
 
-![build status](https://travis-ci.org/exercism/elixir.svg?branch=master)
+![GitHub branch checks state](https://img.shields.io/github/checks-status/exercism/elixir/main)
+![GitHub contributors](https://img.shields.io/github/contributors-anon/exercism/elixir)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/exercism/elixir)
 
-Exercism Exercises in Elixir
+[Exercism Exercises in Elixir](https://exercism.io/my/tracks/elixir)
 
 ## Setup
 
-The exercises currently target Elixir >= 1.7 and Erlang/OTP >= 20. Detailed
-installation instructions can be found at
-[http://elixir-lang.org/install.html](http://elixir-lang.org/install.html).
+The exercises currently target Elixir versions from 1.7 to 1.12 and Erlang/OTP versions from 20 to 24. Detailed installation instructions can be found at
+[http://elixir-lang.org/install.html](http://elixir-lang.org/install.html). We recommend using the [asdf version manager](https://github.com/asdf-vm/asdf) to manage multiple Elixir versions.
 
 ## Testing
 
@@ -19,29 +20,30 @@ installation instructions can be found at
 
 ---
 
-### Test All Assignments
+### Test Exercises
 
-To test all of the assignments against their example solution, you can run `bin/test_exercises.sh`:
+To test all of the exercises against their example solution, you can run `bin/test_exercises.sh`:
 
 ```shell
 $ ./bin/test_exercises.sh
-Testing: accumulate -- Pass
-Testing: acronym -- Pass
+Testing: accumulate Pass
+Testing: acronym Pass
 ...
-Testing: zipper -- Pass
+Testing: zipper Pass
 --------------------------------------------------------------------------------
 93/93 tests passed.
 ```
 
 This will take some time.
 
-### Test Specific Assignment
-
-Go in the the specific exercise directory, run `mix test` to test an individual assignment:
+To only test some exercises, run:
 
 ```shell
-cd exercises/$EXERCISE_NAME
-mix test
+$ ./bin/test_exercises.sh word-count zebra-puzzle
+Testing: word-count Pass
+Testing: zebra-puzzle Pass
+--------------------------------------------------------------------------------
+2/2 tests passed.
 ```
 
 ### Dialyzer
@@ -51,6 +53,27 @@ To run dialyzer on all exercises, run `./bin/dialyzer_check.sh`. It might take a
 ### Code and document formatting
 
 To check formatting of all exercises and all documents, run `./bin/check_formatting.sh`. It will also be run for you by Github Actions as part of the PR check.
+
+### Track linting
+
+[`configlet`](https://github.com/exercism/configlet) is an Exercism-wide tool for working with tracks. You can download it by running:
+
+```shell
+$ ./bin/fetch_configlet.sh
+```
+
+Run its `lint` command to verify if all exercises have all the necessary files and if config files are correct:
+
+```shell
+$ ./bin/configlet lint
+
+The `exercises.practice.slug` value is `transpose 🙂`, but it must be a lowercase and kebab-case string:
+/Users/angelika/Documents/exercism/elixir/config.json
+
+Configlet detected at least one problem.
+For more information on resolving the problems, please see the documentation:
+https://github.com/exercism/docs/blob/main/building/configlet/lint.md
+```
 
 ## Contributing Guide
 

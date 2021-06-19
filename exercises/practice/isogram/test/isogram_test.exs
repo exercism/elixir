@@ -65,4 +65,9 @@ defmodule IsogramTest do
   test "same first and last characters" do
     refute Isogram.isogram?("angola")
   end
+
+  @tag :pending
+  test "word with duplicated character and with two hyphens" do
+    refute Isogram.isogram?("up-to-date")
+  end
 end

@@ -1,5 +1,6 @@
 {
   "blurb": "Learn about defining custom exceptions by continuing work on your experimental Reverse Polish Notation calculator.",
+  "icon": "error-handling",
   "authors": [
     "neenjaw"
   ],

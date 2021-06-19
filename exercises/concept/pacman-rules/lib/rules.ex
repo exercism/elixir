@@ -3,7 +3,7 @@ defmodule Rules do
     raise "Please implement the eat_ghost?/2 function"
   end
 
-  def score?(touching_power_pellet, touching_power_pellet) do
+  def score?(touching_power_pellet, touching_dot) do
     raise "Please implement the score?/2 function"
   end
 

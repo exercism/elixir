@@ -13,7 +13,6 @@
   "online_editor": {
     "indent_style": "space",
     "indent_size": 2,
-    "ace_editor_language": "elixir",
     "highlightjs_language": "elixir"
   },
   "test_runner": {
@@ -506,7 +505,7 @@
           "atoms",
           "if"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "rpn-calculator-inspection",
@@ -523,7 +522,7 @@
           "errors",
           "maps"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "lucas-numbers",
@@ -540,7 +539,7 @@
           "anonymous-functions",
           "errors"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "city-office",
@@ -558,7 +557,7 @@
           "maps",
           "multiple-clause-functions"
         ],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "need-for-speed",
@@ -999,8 +998,7 @@
         ],
         "practices": [
           "anonymous-functions",
-          "lists",
-          "recursion"
+          "lists"
         ],
         "difficulty": 2
       },
@@ -1861,7 +1859,6 @@
         ],
         "practices": [
           "multiple-clause-functions",
-          "recursion",
           "tail-call-recursion"
         ],
         "difficulty": 3
@@ -2376,6 +2373,115 @@
           "macros"
         ],
         "difficulty": 8
+      },
+      {
+        "slug": "pov",
+        "name": "POV",
+        "uuid": "abc93451-451d-4497-b590-68cbf82e0a20",
+        "prerequisites": [
+          "pattern-matching",
+          "case",
+          "if",
+          "errors",
+          "recursion",
+          "enum",
+          "protocols",
+          "nil",
+          "structs",
+          "multiple-clause-functions"
+        ],
+        "practices": [
+          "recursion"
+        ],
+        "difficulty": 9
+      },
+      {
+        "slug": "satellite",
+        "name": "Satellite",
+        "uuid": "a07e01e6-7cea-4db9-a514-7c95788e90a9",
+        "prerequisites": [
+          "pattern-matching",
+          "tuples",
+          "cond",
+          "recursion",
+          "atoms",
+          "lists",
+          "enum"
+        ],
+        "practices": [
+          "recursion"
+        ],
+        "difficulty": 6
+      },
+      {
+        "slug": "zebra-puzzle",
+        "name": "Zebra Puzzle",
+        "uuid": "0a561b08-6e61-4415-a3f1-e7d411a4a0e2",
+        "prerequisites": [
+          "pattern-matching",
+          "case",
+          "cond",
+          "if",
+          "enum",
+          "maps",
+          "atoms"
+        ],
+        "practices": [
+          "enum",
+          "cond"
+        ],
+        "difficulty": 9
+      },
+      {
+        "slug": "rational-numbers",
+        "name": "Rational Numbers",
+        "uuid": "e2777a03-d890-453e-af5b-d61f60adbbf5",
+        "prerequisites": [
+          "pattern-matching",
+          "basics",
+          "integers",
+          "floating-point-numbers",
+          "guards"
+        ],
+        "practices": [
+          "basics"
+        ],
+        "difficulty": 4
+      },
+      {
+        "slug": "complex-numbers",
+        "name": "Complex Numbers",
+        "uuid": "0cc86a92-7118-4cb9-8417-db4557baf364",
+        "prerequisites": [
+          "pattern-matching",
+          "erlang-libraries",
+          "floating-point-numbers",
+          "tuples"
+        ],
+        "practices": [
+          "erlang-libraries",
+          "floating-point-numbers"
+        ],
+        "difficulty": 4
+      },
+      {
+        "slug": "yacht",
+        "name": "Yacht",
+        "uuid": "d2ee3ff4-2f01-404a-a4f0-d15823ac0482",
+        "prerequisites": [
+          "lists",
+          "cond",
+          "case",
+          "if",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "enum"
+        ],
+        "practices": [
+          "multiple-clause-matching"
+        ],
+        "difficulty": 5
       }
     ],
     "foregone": [

@@ -1,0 +1,22 @@
+{
+  "blurb": "Implement rational numbers.",
+  "authors": [
+    "jiegillet"
+  ],
+  "contributors": [
+    "angelikatyborska"
+  ],
+  "files": {
+    "solution": [
+      "lib/rational_numbers.ex"
+    ],
+    "test": [
+      "test/rational_numbers_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
+  },
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Rational_number"
+}

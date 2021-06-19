@@ -1,0 +1,68 @@
+# ----------------------------------------------------------------------------------------- #
+# These are the repository-specific labels that augment the Exercise-wide labels defined in #
+# https://github.com/exercism/org-wide-files/blob/main/global-files/.github/labels.yml.     #
+# ----------------------------------------------------------------------------------------- #
+
+- name: "CI 🤖"
+  description: "Changes related to continuous integration"
+  color: "d2e1f2"
+
+- name: "bug 🐛"
+  description: ""
+  color: "8e2c2c"
+
+- name: "canonical sync 🔄"
+  description: "For issues/changes related to synchronization between test suites and the canonical data"
+  color: "99C8EA"
+
+- name: "concept-exercise"
+  description: "Adding or improving a concept exercise"
+  color: "dbf2a2"
+
+- name: "dependencies"
+  description: "Pull requests that update a dependency file"
+  color: "0366d6"
+
+- name: "discussion 💬"
+  description: ""
+  color: "23296d"
+
+- name: "documentation 📖"
+  description: "Changing the documentation only, no coding involved"
+  color: "23296d"
+
+- name: "duplicate"
+  description: ""
+  color: "cccccc"
+
+- name: "enhancement ⭐️"
+  description: "A nice-to-have"
+  color: "c3dcf7"
+
+- name: "good first issue 🐥"
+  description: ""
+  color: "C2E0C6"
+
+- name: "help wanted 🤝"
+  description: ""
+  color: "ccd4fc"
+
+- name: "in progress 🚧"
+  description: "Already being worked on"
+  color: "FEF6EE"
+
+- name: "question ❔"
+  description: ""
+  color: "23296d"
+
+- name: "v3"
+  description: "Related to Exercism v3"
+  color: "dbf2a2"
+
+- name: "waiting ⏳"
+  description: "Waiting for something else to happen first"
+  color: "FEF6EE"
+
+- name: "won't fix ⛔️"
+  description: ""
+  color: "fce0e2"

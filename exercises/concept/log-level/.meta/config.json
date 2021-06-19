@@ -1,5 +1,6 @@
 {
   "blurb": "Learn about atoms and the cond conditional expression by aggregating application logs.",
+  "icon": "log-levels",
   "authors": [
     "neenjaw"
   ],
