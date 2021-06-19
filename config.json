@@ -2437,10 +2437,11 @@
         "prerequisites": [
           "pattern-matching",
           "erlang-libraries",
-          "floating-point-numbers"
+          "floating-point-numbers",
+          "tuples"
         ],
         "practices": [
-          "pattern-matching",
+          "erlang-libraries",
           "floating-point-numbers"
         ],
         "difficulty": 4
