@@ -1,0 +1,21 @@
+{
+  "blurb": "Implement complex numbers.",
+  "authors": [
+    "jiegillet"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "lib/complex_numbers.ex"
+    ],
+    "test": [
+      "test/complex_numbers_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
+  },
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Complex_number"
+}
