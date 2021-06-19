@@ -403,6 +403,13 @@ defmodule ForthTest do
     end
 
     @tag :pending
+    test "cannot redefine negative numbers" do
+      assert_raise Forth.InvalidWord, fn ->
+        Forth.new() |> Forth.eval(": -1 2 ;")
+      end
+    end
+
+    @tag :pending
     test "raises if executing a non-existent word" do
       assert_raise Forth.UnknownWord, fn ->
         Forth.new() |> Forth.eval("foo")

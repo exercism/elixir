@@ -95,4 +95,9 @@ defmodule LuhnTest do
   test "using ascii value for doubled non-digit isn't allowed" do
     refute Luhn.valid?(":9")
   end
+
+  @tag :pending
+  test "non-numeric, non-space char in the middle with a sum that's divisible by 10 isn't allowed" do
+    refute Luhn.valid?("59%59")
+  end
 end

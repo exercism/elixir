@@ -1,7 +1,13 @@
-# This is an auto-generated file. Regular comments will be removed when this
-# file is regenerated. Regenerating will not touch any manually added keys,
-# so comments can be added in a "comment" key.
-
+# This is an auto-generated file.
+#
+# Regenerating this file via `configlet sync` will:
+# - Recreate every `description` key/value pair
+# - Recreate every `reimplements` key/value pair, where they exist in problem-specifications
+# - Remove any `include = true` key/value pair (an omitted `include` key implies inclusion)
+# - Preserve any other key/value pair
+#
+# As user-added comments (using the # character) will be removed when this file
+# is regenerated, comments can be added via a `comment` key.
 [792a7082-feb7-48c7-b88b-bbfec160865e]
 description = "single digit strings can not be valid"
 
@@ -55,3 +61,6 @@ description = "using ascii value for non-doubled non-digit isn't allowed"
 
 [f94cf191-a62f-4868-bc72-7253114aa157]
 description = "using ascii value for doubled non-digit isn't allowed"
+
+[8b72ad26-c8be-49a2-b99c-bcc3bf631b33]
+description = "non-numeric, non-space char in the middle with a sum that's divisible by 10 isn't allowed"
