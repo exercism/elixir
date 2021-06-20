@@ -230,4 +230,25 @@ defmodule TournamentTest do
 
     assert Tournament.tally(input) == expected
   end
+
+  @tag :pending
+  test "ensure points sorted numerically" do
+    input = [
+      "Devastating Donkeys;Blithering Badgers;win",
+      "Devastating Donkeys;Blithering Badgers;win",
+      "Devastating Donkeys;Blithering Badgers;win",
+      "Devastating Donkeys;Blithering Badgers;win",
+      "Blithering Badgers;Devastating Donkeys;win"
+    ]
+
+    expected =
+      """
+      Team                           | MP |  W |  D |  L |  P
+      Devastating Donkeys            |  5 |  4 |  0 |  1 | 12
+      Blithering Badgers             |  5 |  1 |  0 |  4 |  3
+      """
+      |> String.trim()
+
+    assert Tournament.tally(input) == expected
+  end
 end

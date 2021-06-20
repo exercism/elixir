@@ -109,7 +109,7 @@ defmodule ListOpsTest do
   describe "foldr" do
     @tag :pending
     test "empty list" do
-      assert L.foldr([], 2, &(&1 + &2)) == 2
+      assert L.foldr([], 2, &(&1 * &2)) == 2
     end
 
     @tag :pending

@@ -9,8 +9,8 @@ defmodule AnagramTest do
 
   @tag :pending
   test "detects two anagrams" do
-    matches = Anagram.match("master", ~w(stream pigeon maters))
-    assert matches == ~w(stream maters)
+    matches = Anagram.match("solemn", ~w(lemons cherry melons))
+    assert matches == ~w(lemons melons)
   end
 
   @tag :pending
