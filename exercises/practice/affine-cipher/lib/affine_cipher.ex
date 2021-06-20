@@ -1,5 +1,5 @@
 defmodule AffineCipher do
-  @typedoc"""
+  @typedoc """
   A type for the encryption key
   """
   @type key() :: %{a: integer, b: integer}
