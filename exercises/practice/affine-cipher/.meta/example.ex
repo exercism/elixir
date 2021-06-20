@@ -1,12 +1,16 @@
 defmodule AffineCipher do
+  @doctype """
+  A type for the encryption key
+  """
+  @type key() :: %{a: integer, b: integer}
+
   @alphabet_size 26
   @ignored ~r/[ ,.]/
 
   @doc """
   Encode an encrypted message using a key
   """
-  @spec encode(key :: %{a: integer, b: integer}, message :: String.t()) ::
-          {:ok, String.t()} | {:error, String.t()}
+  @spec encode(key :: key(), message :: String.t()) :: {:ok, String.t()} | {:error, String.t()}
   def(encode(%{a: a, b: b}, message)) do
     if Integer.gcd(a, @alphabet_size) != 1 do
       {:error, "a and m must be coprime."}
@@ -30,8 +34,7 @@ defmodule AffineCipher do
   @doc """
   Decode an encrypted message using a key
   """
-  @spec decode(key :: %{a: integer, b: integer}, message :: String.t()) ::
-          {:ok, String.t()} | {:error, String.t()}
+  @spec decode(key :: key(), message :: String.t()) :: {:ok, String.t()} | {:error, String.t()}
   def decode(%{a: a, b: b}, encrypted) do
     if Integer.gcd(a, @alphabet_size) != 1 do
       {:error, "a and m must be coprime."}
