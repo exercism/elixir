@@ -2456,6 +2456,7 @@
         "prerequisites": [
           "pattern-matching",
           "atoms",
+          "pipe-operator",
           "enum",
           "integers",
           "if",
@@ -2463,7 +2464,7 @@
           "tuples"
         ],
         "practices": [
-          "enum",
+          "pipe-operator",
           "strings"
         ],
         "difficulty": 5
