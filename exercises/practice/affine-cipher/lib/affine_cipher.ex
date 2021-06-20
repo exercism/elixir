@@ -10,7 +10,8 @@ defmodule AffineCipher do
   @doc """
   Decode an encrypted message using a key
   """
-  @spec decode(key :: %{a: integer, b: integer}, message :: String.t()) :: String.t()
+  @spec decode(key :: %{a: integer, b: integer}, message :: String.t()) ::
+          {:ok, String.t()} | {:error, String.t()}
   def decode(%{a: a, b: b}, encrypted) do
   end
 end
