@@ -2464,6 +2464,32 @@
           "multiple-clause-matching"
         ],
         "difficulty": 5
+      },
+      {
+        "slug": "circular-buffer",
+        "name": "Circular Buffer",
+        "uuid": "535d64c9-95f7-4f59-b7b6-d459337b82b0",
+        "prerequisites": [
+          "atoms",
+          "tuples",
+          "lists",
+          "structs",
+          "agent",
+          "processes",
+          "pids",
+          "case",
+          "cond",
+          "if",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "errors"
+        ],
+        "practices": [
+          "processes",
+          "errors"
+        ],
+        "difficulty": 8
       }
     ],
     "foregone": [
