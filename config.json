@@ -2464,6 +2464,33 @@
           "multiple-clause-matching"
         ],
         "difficulty": 5
+      },
+      {
+        "slug": "affine-cipher",
+        "name": "Affine Cipher",
+        "uuid": "18d12bac-ead0-456c-bcef-ccb2fd06fe72",
+        "prerequisites": [
+          "pattern-matching",
+          "guards",
+          "multiple-clause-functions",
+          "atoms",
+          "pipe-operator",
+          "enum",
+          "integers",
+          "if",
+          "cond",
+          "case",
+          "strings",
+          "tuples",
+          "maps",
+          "list-comprehensions",
+          "charlists"
+        ],
+        "practices": [
+          "pipe-operator",
+          "strings"
+        ],
+        "difficulty": 5
       }
     ],
     "foregone": [
