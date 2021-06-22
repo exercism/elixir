@@ -2447,6 +2447,31 @@
         "difficulty": 4
       },
       {
+        "slug": "go-counting",
+        "name": "Go Counting",
+        "uuid": "560347a2-9f20-4bad-b932-72a75ee08e14",
+        "prerequisites": [
+          "atoms",
+          "if",
+          "case",
+          "cond",
+          "strings",
+          "enum",
+          "default-arguments",
+          "guards",
+          "integers",
+          "list-comprehensions",
+          "maps",
+          "pattern-matching",
+          "pipe-operator",
+          "recursion"
+        ],
+        "practices": [
+          "list-comprehensions"
+        ],
+        "difficulty": 9
+      },
+      {
         "slug": "yacht",
         "name": "Yacht",
         "uuid": "d2ee3ff4-2f01-404a-a4f0-d15823ac0482",
