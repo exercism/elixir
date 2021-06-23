@@ -2474,7 +2474,7 @@
           "tuples",
           "lists",
           "structs",
-          "enum"
+          "enum",
           "agent",
           "processes",
           "pids",
