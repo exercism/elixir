@@ -1,38 +1,11 @@
 defmodule CircularBufferTest do
   use ExUnit.Case
 
-  def test_operation(buffer, %{"operation" => "read", "should_succeed" => ok} = op) do
-    read = CircularBuffer.read(buffer)
-
-    if ok do
-      assert {:ok, op["expected"]} == read
-    else
-      assert {:error, :empty} == read
-    end
-  end
-
-  def test_operation(buffer, %{"operation" => "write", "item" => item, "should_succeed" => ok}) do
-    write = CircularBuffer.write(buffer, item)
-
-    if ok do
-      assert :ok == write
-    else
-      assert {:error, :full} == write
-    end
-  end
-
-  def test_operation(buffer, %{"operation" => "overwrite", "item" => item}),
-    do: CircularBuffer.overwrite(buffer, item)
-
-  def test_operation(buffer, %{"operation" => "clear"}),
-    do: CircularBuffer.clear(buffer)
-
   # @tag :pending
   test "reading empty buffer should fail" do
     capacity = 1
     {:ok, buffer} = CircularBuffer.new(capacity)
-    operations = [%{"operation" => "read", "should_succeed" => false}]
-    Enum.each(operations, &test_operation(buffer, &1))
+    assert CircularBuffer.read(buffer) == {:error, :empty}
   end
 
   @tag :pending
@@ -40,12 +13,8 @@ defmodule CircularBufferTest do
     capacity = 1
     {:ok, buffer} = CircularBuffer.new(capacity)
 
-    operations = [
-      %{"item" => 1, "operation" => "write", "should_succeed" => true},
-      %{"expected" => 1, "operation" => "read", "should_succeed" => true}
-    ]
-
-    Enum.each(operations, &test_operation(buffer, &1))
+    assert CircularBuffer.write(buffer, 1) == :ok
+    assert CircularBuffer.read(buffer) == {:ok, 1}
   end
 
   @tag :pending
@@ -53,13 +22,9 @@ defmodule CircularBufferTest do
     capacity = 1
     {:ok, buffer} = CircularBuffer.new(capacity)
 
-    operations = [
-      %{"item" => 1, "operation" => "write", "should_succeed" => true},
-      %{"expected" => 1, "operation" => "read", "should_succeed" => true},
-      %{"operation" => "read", "should_succeed" => false}
-    ]
-
-    Enum.each(operations, &test_operation(buffer, &1))
+    assert CircularBuffer.write(buffer, 1) == :ok
+    assert CircularBuffer.read(buffer) == {:ok, 1}
+    assert CircularBuffer.read(buffer) == {:error, :empty}
   end
 
   @tag :pending
@@ -67,14 +32,10 @@ defmodule CircularBufferTest do
     capacity = 2
     {:ok, buffer} = CircularBuffer.new(capacity)
 
-    operations = [
-      %{"item" => 1, "operation" => "write", "should_succeed" => true},
-      %{"item" => 2, "operation" => "write", "should_succeed" => true},
-      %{"expected" => 1, "operation" => "read", "should_succeed" => true},
-      %{"expected" => 2, "operation" => "read", "should_succeed" => true}
-    ]
-
-    Enum.each(operations, &test_operation(buffer, &1))
+    assert CircularBuffer.write(buffer, 1) == :ok
+    assert CircularBuffer.write(buffer, 2) == :ok
+    assert CircularBuffer.read(buffer) == {:ok, 1}
+    assert CircularBuffer.read(buffer) == {:ok, 2}
   end
 
   @tag :pending
@@ -82,12 +43,8 @@ defmodule CircularBufferTest do
     capacity = 1
     {:ok, buffer} = CircularBuffer.new(capacity)
 
-    operations = [
-      %{"item" => 1, "operation" => "write", "should_succeed" => true},
-      %{"item" => 2, "operation" => "write", "should_succeed" => false}
-    ]
-
-    Enum.each(operations, &test_operation(buffer, &1))
+    assert CircularBuffer.write(buffer, 1) == :ok
+    assert CircularBuffer.write(buffer, 2) == {:error, :full}
   end
 
   @tag :pending
@@ -95,14 +52,10 @@ defmodule CircularBufferTest do
     capacity = 1
     {:ok, buffer} = CircularBuffer.new(capacity)
 
-    operations = [
-      %{"item" => 1, "operation" => "write", "should_succeed" => true},
-      %{"expected" => 1, "operation" => "read", "should_succeed" => true},
-      %{"item" => 2, "operation" => "write", "should_succeed" => true},
-      %{"expected" => 2, "operation" => "read", "should_succeed" => true}
-    ]
-
-    Enum.each(operations, &test_operation(buffer, &1))
+    assert CircularBuffer.write(buffer, 1) == :ok
+    assert CircularBuffer.read(buffer) == {:ok, 1}
+    assert CircularBuffer.write(buffer, 2) == :ok
+    assert CircularBuffer.read(buffer) == {:ok, 2}
   end
 
   @tag :pending
@@ -110,16 +63,12 @@ defmodule CircularBufferTest do
     capacity = 3
     {:ok, buffer} = CircularBuffer.new(capacity)
 
-    operations = [
-      %{"item" => 1, "operation" => "write", "should_succeed" => true},
-      %{"item" => 2, "operation" => "write", "should_succeed" => true},
-      %{"expected" => 1, "operation" => "read", "should_succeed" => true},
-      %{"item" => 3, "operation" => "write", "should_succeed" => true},
-      %{"expected" => 2, "operation" => "read", "should_succeed" => true},
-      %{"expected" => 3, "operation" => "read", "should_succeed" => true}
-    ]
-
-    Enum.each(operations, &test_operation(buffer, &1))
+    assert CircularBuffer.write(buffer, 1) == :ok
+    assert CircularBuffer.write(buffer, 2) == :ok
+    assert CircularBuffer.read(buffer) == {:ok, 1}
+    assert CircularBuffer.write(buffer, 3) == :ok
+    assert CircularBuffer.read(buffer) == {:ok, 2}
+    assert CircularBuffer.read(buffer) == {:ok, 3}
   end
 
   @tag :pending
@@ -127,13 +76,9 @@ defmodule CircularBufferTest do
     capacity = 1
     {:ok, buffer} = CircularBuffer.new(capacity)
 
-    operations = [
-      %{"item" => 1, "operation" => "write", "should_succeed" => true},
-      %{"operation" => "clear"},
-      %{"operation" => "read", "should_succeed" => false}
-    ]
-
-    Enum.each(operations, &test_operation(buffer, &1))
+    assert CircularBuffer.write(buffer, 1) == :ok
+    CircularBuffer.clear(buffer)
+    assert CircularBuffer.read(buffer) == {:error, :empty}
   end
 
   @tag :pending
@@ -141,14 +86,10 @@ defmodule CircularBufferTest do
     capacity = 1
     {:ok, buffer} = CircularBuffer.new(capacity)
 
-    operations = [
-      %{"item" => 1, "operation" => "write", "should_succeed" => true},
-      %{"operation" => "clear"},
-      %{"item" => 2, "operation" => "write", "should_succeed" => true},
-      %{"expected" => 2, "operation" => "read", "should_succeed" => true}
-    ]
-
-    Enum.each(operations, &test_operation(buffer, &1))
+    assert CircularBuffer.write(buffer, 1) == :ok
+    CircularBuffer.clear(buffer)
+    assert CircularBuffer.write(buffer, 2) == :ok
+    assert CircularBuffer.read(buffer) == {:ok, 2}
   end
 
   @tag :pending
@@ -156,13 +97,9 @@ defmodule CircularBufferTest do
     capacity = 1
     {:ok, buffer} = CircularBuffer.new(capacity)
 
-    operations = [
-      %{"operation" => "clear"},
-      %{"item" => 1, "operation" => "write", "should_succeed" => true},
-      %{"expected" => 1, "operation" => "read", "should_succeed" => true}
-    ]
-
-    Enum.each(operations, &test_operation(buffer, &1))
+    CircularBuffer.clear(buffer)
+    assert CircularBuffer.write(buffer, 1) == :ok
+    assert CircularBuffer.read(buffer) == {:ok, 1}
   end
 
   @tag :pending
@@ -170,14 +107,10 @@ defmodule CircularBufferTest do
     capacity = 2
     {:ok, buffer} = CircularBuffer.new(capacity)
 
-    operations = [
-      %{"item" => 1, "operation" => "write", "should_succeed" => true},
-      %{"item" => 2, "operation" => "overwrite"},
-      %{"expected" => 1, "operation" => "read", "should_succeed" => true},
-      %{"expected" => 2, "operation" => "read", "should_succeed" => true}
-    ]
-
-    Enum.each(operations, &test_operation(buffer, &1))
+    assert CircularBuffer.write(buffer, 1) == :ok
+    CircularBuffer.overwrite(buffer, 2)
+    assert CircularBuffer.read(buffer) == {:ok, 1}
+    assert CircularBuffer.read(buffer) == {:ok, 2}
   end
 
   @tag :pending
@@ -185,15 +118,11 @@ defmodule CircularBufferTest do
     capacity = 2
     {:ok, buffer} = CircularBuffer.new(capacity)
 
-    operations = [
-      %{"item" => 1, "operation" => "write", "should_succeed" => true},
-      %{"item" => 2, "operation" => "write", "should_succeed" => true},
-      %{"item" => 3, "operation" => "overwrite"},
-      %{"expected" => 2, "operation" => "read", "should_succeed" => true},
-      %{"expected" => 3, "operation" => "read", "should_succeed" => true}
-    ]
-
-    Enum.each(operations, &test_operation(buffer, &1))
+    assert CircularBuffer.write(buffer, 1) == :ok
+    assert CircularBuffer.write(buffer, 2) == :ok
+    CircularBuffer.overwrite(buffer, 3)
+    assert CircularBuffer.read(buffer) == {:ok, 2}
+    assert CircularBuffer.read(buffer) == {:ok, 3}
   end
 
   @tag :pending
@@ -201,19 +130,15 @@ defmodule CircularBufferTest do
     capacity = 3
     {:ok, buffer} = CircularBuffer.new(capacity)
 
-    operations = [
-      %{"item" => 1, "operation" => "write", "should_succeed" => true},
-      %{"item" => 2, "operation" => "write", "should_succeed" => true},
-      %{"item" => 3, "operation" => "write", "should_succeed" => true},
-      %{"expected" => 1, "operation" => "read", "should_succeed" => true},
-      %{"item" => 4, "operation" => "write", "should_succeed" => true},
-      %{"item" => 5, "operation" => "overwrite"},
-      %{"expected" => 3, "operation" => "read", "should_succeed" => true},
-      %{"expected" => 4, "operation" => "read", "should_succeed" => true},
-      %{"expected" => 5, "operation" => "read", "should_succeed" => true}
-    ]
-
-    Enum.each(operations, &test_operation(buffer, &1))
+    assert CircularBuffer.write(buffer, 1) == :ok
+    assert CircularBuffer.write(buffer, 2) == :ok
+    assert CircularBuffer.write(buffer, 3) == :ok
+    assert CircularBuffer.read(buffer) == {:ok, 1}
+    assert CircularBuffer.write(buffer, 4) == :ok
+    CircularBuffer.overwrite(buffer, 5)
+    assert CircularBuffer.read(buffer) == {:ok, 3}
+    assert CircularBuffer.read(buffer) == {:ok, 4}
+    assert CircularBuffer.read(buffer) == {:ok, 5}
   end
 
   @tag :pending
@@ -221,17 +146,13 @@ defmodule CircularBufferTest do
     capacity = 2
     {:ok, buffer} = CircularBuffer.new(capacity)
 
-    operations = [
-      %{"operation" => "clear"},
-      %{"item" => 1, "operation" => "write", "should_succeed" => true},
-      %{"item" => 2, "operation" => "write", "should_succeed" => true},
-      %{"item" => 3, "operation" => "overwrite"},
-      %{"item" => 4, "operation" => "overwrite"},
-      %{"expected" => 3, "operation" => "read", "should_succeed" => true},
-      %{"expected" => 4, "operation" => "read", "should_succeed" => true},
-      %{"operation" => "read", "should_succeed" => false}
-    ]
-
-    Enum.each(operations, &test_operation(buffer, &1))
+    CircularBuffer.clear(buffer)
+    assert CircularBuffer.write(buffer, 1) == :ok
+    assert CircularBuffer.write(buffer, 2) == :ok
+    CircularBuffer.overwrite(buffer, 3)
+    CircularBuffer.overwrite(buffer, 4)
+    assert CircularBuffer.read(buffer) == {:ok, 3}
+    assert CircularBuffer.read(buffer) == {:ok, 4}
+    assert CircularBuffer.read(buffer) == {:error, :empty}
   end
 end
