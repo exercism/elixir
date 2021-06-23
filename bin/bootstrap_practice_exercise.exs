@@ -261,7 +261,6 @@ end
 
 path = "exercises/practice/#{exercise}/lib/#{exercise_snake_case}.ex"
 Mix.Generator.create_file(path, lib_file)
-System.cmd("mix", ["format", path])
 
 Mix.Generator.copy_file(path, "exercises/practice/#{exercise}/.meta/example.ex")
 
@@ -279,4 +278,6 @@ test_file =
 
 path = "exercises/practice/#{exercise}/test/#{exercise_snake_case}_test.exs"
 Mix.Generator.create_file(path, test_file)
-System.cmd("mix", ["format", path])
+
+# mix format all files
+Mix.Tasks.Format.run(["exercises/practice/#{exercise}/**/*.{ex,exs}"])
