@@ -134,7 +134,7 @@ Mix.install([
 
 [exercise] = System.argv()
 
-exercise_path = String.replace(exercise, "-", "_")
+exercise_snake_case = String.replace(exercise, "-", "_")
 
 module =
   exercise
@@ -168,7 +168,7 @@ defmodule #{module}.MixProject do
 
   def project do
     [
-      app: :#{exercise_path},
+      app: :#{exercise_snake_case},
       version: "0.1.0",
       # elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
@@ -229,8 +229,8 @@ config = %{
   authors: [],
   contributors: [],
   files: %{
-    solution: ["lib/#{exercise_path}.ex"],
-    test: ["test/#{exercise_path}_test.exs"],
+    solution: ["lib/#{exercise_snake_case}.ex"],
+    test: ["test/#{exercise_snake_case}_test.exs"],
     example: [".meta/example.ex"]
   }
 }
@@ -259,7 +259,7 @@ defmodule #{module} do
 end
 """
 
-path = "exercises/practice/#{exercise}/lib/#{exercise_path}.ex"
+path = "exercises/practice/#{exercise}/lib/#{exercise_snake_case}.ex"
 Mix.Generator.create_file(path, lib_file)
 System.cmd("mix", ["format", path])
 
@@ -277,6 +277,6 @@ test_file =
   """
   |> String.replace("@tag", "# @tag", global: false)
 
-path = "exercises/practice/#{exercise}/test/#{exercise_path}_test.exs"
+path = "exercises/practice/#{exercise}/test/#{exercise_snake_case}_test.exs"
 Mix.Generator.create_file(path, test_file)
 System.cmd("mix", ["format", path])
