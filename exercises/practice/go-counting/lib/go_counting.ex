@@ -7,7 +7,7 @@ defmodule GoCounting do
   Return the owner and territory around a position
 
   """
-  @spec territory(board :: [String.t()], position :: position) ::
+  @spec territory(board :: String.t(), position :: position) ::
           {:ok, owner} | {:error, String.t()}
   def territory(board, {x, y} = pos) do
   end
@@ -15,7 +15,7 @@ defmodule GoCounting do
   @doc """
   Return all white, black and neutral territories
   """
-  @spec territories(board :: [String.t()]) :: territories
+  @spec territories(board :: String.t()) :: territories
   def territories(board) do
   end
 end

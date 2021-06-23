@@ -7,10 +7,13 @@ defmodule GoCounting do
   Return the owner and territory around a position
 
   """
-  @spec territory(board :: [String.t()], position :: position) ::
+  @spec territory(board :: String.t(), position :: position) ::
           {:ok, owner} | {:error, String.t()}
   def territory(board, {x, y} = pos) do
-    if x < 0 or x >= board |> hd |> String.length() or y < 0 or y >= length(board) do
+    size_x = String.split(board, "\n") |> hd |> String.length()
+    size_y = String.split(board, "\n", trim: true) |> length()
+
+    if x < 0 or x >= size_x or y < 0 or y >= size_y do
       {:error, "Invalid coordinate"}
     else
       owner =
@@ -26,7 +29,7 @@ defmodule GoCounting do
   @doc """
   Return all white, black and neutral territories
   """
-  @spec territories(board :: [String.t()]) :: territories
+  @spec territories(board :: String.t()) :: territories
   def territories(board) do
     graph = make_graph(board)
 
@@ -51,10 +54,13 @@ defmodule GoCounting do
 
   def to_color(?W), do: :white
   def to_color(?B), do: :black
-  def to_color(?\s), do: :none
+  def to_color(?_), do: :none
 
   def make_graph(board) do
-    board = Enum.map(board, fn row -> row |> to_charlist |> Enum.map(&to_color/1) end)
+    board =
+      board
+      |> String.split("\n", trim: true)
+      |> Enum.map(fn row -> row |> to_charlist |> Enum.map(&to_color/1) end)
 
     left_right_edges =
       for {[color], r} <- Enum.with_index(board) do
