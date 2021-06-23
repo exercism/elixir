@@ -5,7 +5,6 @@ defmodule GoCounting do
 
   @doc """
   Return the owner and territory around a position
-
   """
   @spec territory(board :: String.t(), position :: position) ::
           {:ok, owner} | {:error, String.t()}
