@@ -12,34 +12,53 @@ defmodule Generate do
     |> Enum.map_join("_", &String.downcase/1)
   end
 
-  def get_properties(%{"cases" => cases}) when is_list(cases) do
-    Enum.map(cases, &Generate.get_properties/1)
-    |> Enum.concat()
-    |> Enum.uniq()
+  def explore_properties(%{"cases" => cases}) when is_list(cases) do
+    Enum.map(cases, &Generate.explore_properties/1)
+    |> Enum.reduce(
+      %{},
+      &Map.merge(&1, &2, fn _prop, p1, p2 -> %{p1 | error: p1.error or p2.error} end)
+    )
   end
 
-  def get_properties(%{"property" => property, "input" => %{} = input}),
-    do: [
-      {property,
-       Enum.map(input, fn
-         {var, %{} = val} -> {var, Enum.map(val, fn {v, _} -> v end)}
-         {var, _} -> {var, nil}
-       end)}
-    ]
+  def explore_properties(%{"property" => property, "input" => input, "expected" => expected}),
+    do: %{
+      property => %{
+        name: Generate.to_snake_case(property),
+        variables:
+          if match?(%{}, input) do
+            Enum.map(input, fn
+              {var, %{} = val} -> {var, Enum.map(val, fn {v, _} -> v end)}
+              {var, _} -> {var, nil}
+            end)
+          else
+            [{"input", nil}]
+          end,
+        error: match?(%{"error" => _err}, expected)
+      }
+    }
 
-  def get_properties(%{"property" => property}), do: [{property, "input"}]
-  def get_properties(_data), do: []
+  def explore_properties(_data), do: %{}
 
-  def print_property({property, variables}) do
+  def print_property(%{name: name, variables: variables, error: error}) do
+    return_type = if error, do: "{:ok, TODO.t()} | {:error, String.t()}", else: "TODO.t()"
+
+    variable_types =
+      Enum.map_join(variables, ", ", fn
+        {var, nil} ->
+          "#{var} :: TODO.t()"
+
+        {var, sub_vars} ->
+          "#{var} :: %{#{Enum.map_join(sub_vars, ", ", &(&1 <> " : TODO.t()"))}}"
+      end)
+
+    variable_list = Enum.map_join(variables, ", ", fn {var, _} -> var end)
+
     """
      @doc \"\"\"
-     insert function description here
+     TODO: add function description and replace types in @spec
      \"\"\"
-     @spec #{property}(#{Enum.map_join(variables, ", ", fn
-      {var, nil} -> "#{var} :: String.t()"
-      {var, sub_vars} -> "#{var} :: %{#{Enum.map_join(sub_vars, " : String.t(), ", fn v -> v end)} : String.t()}"
-    end)}) :: {:ok, String.t()} | {:error, String.t()}
-     def #{property}(#{Enum.map_join(variables, ", ", fn {var, _} -> var end)}) do
+     @spec #{name}(#{variable_types}) :: #{return_type}
+     def #{name}(#{variable_list}) do
      end
     """
   end
@@ -59,25 +78,24 @@ defmodule Generate do
     end)
   end
 
-  def print_input(%{} = input) do
-    Enum.map_join(input, "\n", fn {variable, value} -> "#{variable} = #{inspect(value)}" end)
-  end
+  def print_input(%{} = input),
+    do: Enum.map_join(input, "\n", fn {variable, value} -> "#{variable} = #{inspect(value)}" end)
 
   def print_input(input), do: "input = #{inspect(input)}"
 
-  def print_variables(%{} = input),
-    do: Enum.map_join(input, ", ", fn {variable, _value} -> variable end)
+  def print_expected(%{"error" => err}, _error), do: "{:error, #{inspect(err)}}"
+  def print_expected(expected, true), do: "{:ok, #{inspect(expected)}}"
+  def print_expected(expected, false), do: inspect(expected)
 
-  def print_variables(input), do: input
-
-  def print_expected(%{"error" => err}), do: "{:error, #{inspect(err)}}"
-  def print_expected(expected), do: "{:ok, #{inspect(expected)}}"
-
-  def print_test_case(%{"description" => description, "cases" => sub_cases} = c, module) do
+  def print_test_case(
+        %{"description" => description, "cases" => sub_cases} = category,
+        properties,
+        module
+      ) do
     """
     describe \"#{description}\" do
-    #{Generate.print_comments(c, ["description", "cases"])}
-    #{Enum.map_join(sub_cases, "\n\n", &Generate.print_test_case(&1, module))}
+    #{Generate.print_comments(category, ["description", "cases"])}
+    #{Enum.map_join(sub_cases, "\n\n", &Generate.print_test_case(&1, properties, module))}
     end
     """
   end
@@ -88,16 +106,20 @@ defmodule Generate do
           "property" => property,
           "input" => input,
           "expected" => expected
-        } = c,
+        } = test,
+        properties,
         module
       ) do
+    %{name: name, variables: variables, error: error} = properties[property]
+    variable_list = Enum.map_join(variables, ", ", fn {var, _} -> var end)
+
     """
     @tag :pending
     test \"#{description}\" do
-      #{Generate.print_comments(c, ["description", "property", "input", "expected", "uuid"])}
+      #{Generate.print_comments(test, ["description", "property", "input", "expected", "uuid"])}
       #{print_input(input)}
-      output = #{module}.#{Generate.to_snake_case(property)}(#{print_variables(input)})
-      expected = #{print_expected(expected)}
+      output = #{module}.#{name}(#{variable_list})
+      expected = #{print_expected(expected, error)}
 
       assert output == expected
     end
@@ -226,11 +248,13 @@ IO.puts("Don't forget to add your name and the names of contributors")
 
 data = Jason.decode!(data)
 
+properties = Generate.explore_properties(data)
+
 # Generating lib file
 lib_file = """
 defmodule #{module} do
 
-#{data |> Generate.get_properties() |> Enum.map_join("\n\n", &Generate.print_property/1)}
+#{properties |> Map.values() |> Enum.map_join("\n\n", &Generate.print_property/1)}
 
 end
 """
@@ -248,7 +272,7 @@ test_file =
     use ExUnit.Case
 
     #{Generate.print_comments(data, ["cases", "exercise"])}
-    #{Enum.map_join(data["cases"], "\n\n", &Generate.print_test_case(&1, module))}
+    #{Enum.map_join(data["cases"], "\n\n", &Generate.print_test_case(&1, properties, module))}
   end
   """
   |> String.replace("@tag", "# @tag", global: false)
