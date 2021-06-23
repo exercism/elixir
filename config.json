@@ -2466,6 +2466,33 @@
         "difficulty": 5
       },
       {
+        "slug": "affine-cipher",
+        "name": "Affine Cipher",
+        "uuid": "18d12bac-ead0-456c-bcef-ccb2fd06fe72",
+        "prerequisites": [
+          "pattern-matching",
+          "guards",
+          "multiple-clause-functions",
+          "atoms",
+          "pipe-operator",
+          "enum",
+          "integers",
+          "if",
+          "cond",
+          "case",
+          "strings",
+          "tuples",
+          "maps",
+          "list-comprehensions",
+          "charlists"
+        ],
+        "practices": [
+          "pipe-operator",
+          "strings"
+        ],
+        "difficulty": 5
+       },
+       {
         "slug": "circular-buffer",
         "name": "Circular Buffer",
         "uuid": "535d64c9-95f7-4f59-b7b6-d459337b82b0",
