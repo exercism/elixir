@@ -44,7 +44,7 @@ defmodule GoCounting do
       |> get_owner
 
     positions = Enum.reject(positions, &(&1 in territory))
-    territories = %{territories | owner => territories[owner] ++ territory}
+    territories = %{territories | owner => Enum.sort(territories[owner] ++ territory)}
 
     territories(graph, positions, territories)
   end
@@ -110,7 +110,7 @@ defmodule GoCounting do
     colors = for {_pos, color} when color != :none <- territory, do: color
 
     %{
-      territory: empties,
+      territory: Enum.sort(empties),
       owner:
         case {Enum.empty?(empties), Enum.uniq(colors)} do
           {false, [:white]} -> :white
