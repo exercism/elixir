@@ -2491,6 +2491,26 @@
           "strings"
         ],
         "difficulty": 5
+      },
+      {
+        "slug": "book-store",
+        "name": "Book Store",
+        "uuid": "d6d9687c-8bf0-482e-8309-4f3d706ba753",
+        "prerequisites": [
+          "lists",
+          "pattern-matching",
+          "guards",
+          "enum",
+          "list-comprehensions",
+          "maps",
+          "pipe-operator",
+          "ranges",
+          "recursion"
+        ],
+        "practices": [
+          "list-comprehensions"
+        ],
+        "difficulty": 5
       }
     ],
     "foregone": [
