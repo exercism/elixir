@@ -50,7 +50,7 @@ defmodule Triplet do
   end
 
   @doc """
-  Given a primitve Pythagorean triple, generate three more.
+  Given a primitive Pythagorean triple, generate three more.
   [All primitive Pythagorean triples can be generated this way without duplication][https://en.wikipedia.org/wiki/Tree_of_primitive_Pythagorean_triples].
   """
   def next_triplets([a, b, c]),
