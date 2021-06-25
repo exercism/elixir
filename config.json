@@ -581,8 +581,7 @@
           "enum"
         ],
         "practices": [
-          "charlists",
-          "enum"
+          "charlists"
         ],
         "difficulty": 2
       },
@@ -2299,12 +2298,12 @@
         "prerequisites": [
           "integers",
           "ranges",
+          "enum",
           "list-comprehensions",
-          "tasks"
+          "recursion"
         ],
         "practices": [
-          "list-comprehensions",
-          "tasks"
+          "enum"
         ],
         "difficulty": 5
       },
