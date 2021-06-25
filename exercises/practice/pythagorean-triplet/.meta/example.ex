@@ -43,7 +43,7 @@ defmodule Triplet do
       |> Enum.reject(&(Triplet.sum(&1) > sum))
 
     multiples =
-      1..div(sum, 2 * c)//1
+      1..div(sum, 2 * c)
       |> Enum.map(fn n -> [n * a, n * b, n * c] end)
 
     multiples ++ generate(next ++ triplets, sum)
