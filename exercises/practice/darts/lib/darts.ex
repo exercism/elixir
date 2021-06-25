@@ -1,5 +1,5 @@
 defmodule Darts do
-  @type position :: {float, float}
+  @type position :: {number, number}
 
   @doc """
   Calculate the score of a single dart hitting a target
