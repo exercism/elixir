@@ -2472,8 +2472,7 @@
         "prerequisites": [
           "cond",
           "case",
-          "if",
-          "erlang-libraries"
+          "if"
         ],
         "practices": [
           "cond"
