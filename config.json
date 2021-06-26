@@ -2471,8 +2471,8 @@
         "uuid": "a68113f8-92be-40e0-a97f-eb4239303ef5",
         "prerequisites": [
           "cond",
-          "case",
-          "if"
+          "integers",
+          "floating-point-numbers",
         ],
         "practices": [
           "cond"
