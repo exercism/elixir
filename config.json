@@ -2460,9 +2460,22 @@
           "enum"
         ],
         "practices": [
-          "multiple-clause-matching"
+          "multiple-clause-functions"
         ],
         "difficulty": 5
+      },
+      {
+        "slug": "linked-list",
+        "name": "Linked List",
+        "uuid": "60ca3109-14a4-4592-af7d-3e34599704b6",
+        "prerequisites": [
+          "lists",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "enum"
+        ],
+        "practices": [],
+        "difficulty": 7
       },
       {
         "slug": "affine-cipher",
