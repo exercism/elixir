@@ -2466,6 +2466,21 @@
         "difficulty": 5
       },
       {
+        "slug": "food-chain",
+        "name": "Food Chain",
+        "uuid": "7541eeac-169f-4b28-b9d2-7125225b121b",
+        "prerequisites": [
+          "lists",
+          "strings",
+          "pattern-matching",
+          "enum"
+        ],
+        "practices": [
+          "strings"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "affine-cipher",
         "name": "Affine Cipher",
         "uuid": "18d12bac-ead0-456c-bcef-ccb2fd06fe72",
