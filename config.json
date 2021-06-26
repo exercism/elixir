@@ -2472,7 +2472,7 @@
         "prerequisites": [
           "cond",
           "integers",
-          "floating-point-numbers",
+          "floating-point-numbers"
         ],
         "practices": [
           "cond"
