@@ -581,8 +581,7 @@
           "enum"
         ],
         "practices": [
-          "charlists",
-          "enum"
+          "charlists"
         ],
         "difficulty": 2
       },
@@ -2299,12 +2298,12 @@
         "prerequisites": [
           "integers",
           "ranges",
+          "enum",
           "list-comprehensions",
-          "tasks"
+          "recursion"
         ],
         "practices": [
-          "list-comprehensions",
-          "tasks"
+          "enum"
         ],
         "difficulty": 5
       },
@@ -2447,6 +2446,31 @@
         "difficulty": 4
       },
       {
+        "slug": "go-counting",
+        "name": "Go Counting",
+        "uuid": "560347a2-9f20-4bad-b932-72a75ee08e14",
+        "prerequisites": [
+          "atoms",
+          "if",
+          "case",
+          "cond",
+          "strings",
+          "enum",
+          "default-arguments",
+          "guards",
+          "integers",
+          "list-comprehensions",
+          "maps",
+          "pattern-matching",
+          "pipe-operator",
+          "recursion"
+        ],
+        "practices": [
+          "list-comprehensions"
+        ],
+        "difficulty": 9
+      },
+      {
         "slug": "yacht",
         "name": "Yacht",
         "uuid": "d2ee3ff4-2f01-404a-a4f0-d15823ac0482",
@@ -2464,6 +2488,20 @@
           "multiple-clause-matching"
         ],
         "difficulty": 5
+      },
+      {
+        "slug": "darts",
+        "name": "Darts",
+        "uuid": "a68113f8-92be-40e0-a97f-eb4239303ef5",
+        "prerequisites": [
+          "cond",
+          "integers",
+          "floating-point-numbers"
+        ],
+        "practices": [
+          "cond"
+        ],
+        "difficulty": 2
       },
       {
         "slug": "affine-cipher",
@@ -2491,6 +2529,27 @@
           "strings"
         ],
         "difficulty": 5
+      },
+      {
+        "slug": "book-store",
+        "name": "Book Store",
+        "uuid": "d6d9687c-8bf0-482e-8309-4f3d706ba753",
+        "prerequisites": [
+          "lists",
+          "pattern-matching",
+          "guards",
+          "multiple-clause-functions",
+          "enum",
+          "list-comprehensions",
+          "maps",
+          "pipe-operator",
+          "ranges",
+          "recursion"
+        ],
+        "practices": [
+          "list-comprehensions"
+        ],
+        "difficulty": 8
        },
        {
         "slug": "circular-buffer",

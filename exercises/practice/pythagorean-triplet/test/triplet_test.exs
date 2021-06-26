@@ -26,7 +26,7 @@ defmodule TripletTest do
   end
 
   @tag :pending
-  test "triplets whose sum is 10" do
+  test "triplets whose sum is 12" do
     assert Triplet.generate(12) == [[3, 4, 5]]
   end
 
