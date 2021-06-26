@@ -2500,6 +2500,7 @@
           "lists",
           "pattern-matching",
           "guards",
+          "multiple-clause-functions",
           "enum",
           "list-comprehensions",
           "maps",
