@@ -28,22 +28,35 @@ defmodule Triplet do
   """
   @spec generate(non_neg_integer) :: [list(non_neg_integer)]
   def generate(sum) do
-    Enum.map(sum..1, fn x ->
-      Task.async(fn ->
-        for y <- if(sum - 2 * x > x, do: x..(sum - 2 * x), else: []),
-            z <- if(sum - x - y != 0, do: [sum - x - y], else: []),
-            pythagorean?([x, y, z]),
-            do: [x, y, z]
-      end)
-    end)
-    |> await()
-    |> Enum.reduce([], fn list, acc -> list ++ acc end)
+    generate([[3, 4, 5]], sum)
+    |> Enum.filter(&(Triplet.sum(&1) == sum))
+    |> Enum.map(fn [a, b, c] -> [min(a, b), max(a, b), c] end)
+    |> Enum.sort()
   end
 
-  # available in Elixir 1.11
-  if {:await_many, 1} in Task.__info__(:functions) do
-    defp await(tasks), do: Task.await_many(tasks)
-  else
-    defp await(tasks), do: Enum.map(tasks, &Task.await(&1))
+  def generate([], _sum), do: []
+
+  def generate([[a, b, c] = triple | triplets], sum) do
+    next =
+      triple
+      |> next_triplets
+      |> Enum.reject(&(Triplet.sum(&1) > sum))
+
+    multiples =
+      1..div(sum, 2 * c)
+      |> Enum.map(fn n -> [n * a, n * b, n * c] end)
+
+    multiples ++ generate(next ++ triplets, sum)
   end
+
+  @doc """
+  Given a primitive Pythagorean triple, generate three more.
+  [All primitive Pythagorean triples can be generated this way without duplication][https://en.wikipedia.org/wiki/Tree_of_primitive_Pythagorean_triples].
+  """
+  def next_triplets([a, b, c]),
+    do: [
+      [a - 2 * b + 2 * c, 2 * a - b + 2 * c, 2 * a - 2 * b + 3 * c],
+      [a + 2 * b + 2 * c, 2 * a + b + 2 * c, 2 * a + 2 * b + 3 * c],
+      [-a + 2 * b + 2 * c, -2 * a + b + 2 * c, -2 * a + 2 * b + 3 * c]
+    ]
 end
