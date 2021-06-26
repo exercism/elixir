@@ -2465,6 +2465,20 @@
         "difficulty": 5
       },
       {
+        "slug": "darts",
+        "name": "Darts",
+        "uuid": "a68113f8-92be-40e0-a97f-eb4239303ef5",
+        "prerequisites": [
+          "cond",
+          "integers",
+          "floating-point-numbers"
+        ],
+        "practices": [
+          "cond"
+        ],
+        "difficulty": 2
+      },
+      {
         "slug": "affine-cipher",
         "name": "Affine Cipher",
         "uuid": "18d12bac-ead0-456c-bcef-ccb2fd06fe72",
