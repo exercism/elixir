@@ -6,12 +6,6 @@
 # Pass the name of the exercise (e. g., "complex-numbers") as an argument
 
 defmodule Generate do
-  def to_snake_case(lower_camel_case) do
-    lower_camel_case
-    |> String.split(~r/(?=[A-Z\d])/)
-    |> Enum.map_join("_", &String.downcase/1)
-  end
-
   def explore_properties(%{"cases" => cases}) when is_list(cases) do
     Enum.map(cases, &Generate.explore_properties/1)
     |> Enum.reduce(
@@ -23,7 +17,7 @@ defmodule Generate do
   def explore_properties(%{"property" => property, "input" => input, "expected" => expected}),
     do: %{
       property => %{
-        name: Generate.to_snake_case(property),
+        name: Macro.underscore(property),
         variables:
           if match?(%{}, input) do
             Enum.map(input, fn
@@ -164,31 +158,31 @@ Mix.Generator.create_file("exercises/practice/#{exercise}/.formatter.exs", forma
 # mix.exs
 mix = """
 defmodule #{module}.MixProject do
-  use Mix.Project
+use Mix.Project
 
-  def project do
-    [
-      app: :#{exercise_snake_case},
-      version: "0.1.0",
-      # elixir: "~> 1.8",
-      start_permanent: Mix.env() == :prod,
-      deps: deps()
-    ]
-  end
+def project do
+  [
+    app: :#{exercise_snake_case},
+    version: "0.1.0",
+    # elixir: "~> 1.8",
+    start_permanent: Mix.env() == :prod,
+    deps: deps()
+  ]
+end
 
-  # Run "mix help compile.app" to learn about applications.
-  def application do
-    [
-      extra_applications: [:logger]
-    ]
-  end
+# Run "mix help compile.app" to learn about applications.
+def application do
+  [
+    extra_applications: [:logger]
+  ]
+end
 
-  # Run "mix help deps" to learn about dependencies.
-  defp deps do
-    [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
-    ]
+# Run "mix help deps" to learn about dependencies.
+defp deps do
+  [
+    # {:dep_from_hexpm, "~> 0.3.0"},
+    # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+  ]
   end
 end
 """
