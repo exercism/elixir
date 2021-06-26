@@ -5,6 +5,11 @@
 # $ elixir bin/boostrap_practice_exercise.exs complex-numbers
 # Pass the name of the exercise (e. g., "complex-numbers") as an argument
 
+Mix.install([
+  {:jason, "~> 1.2"},
+  {:toml, "~> 0.6"}
+])
+
 defmodule Generate do
   def explore_properties(%{"cases" => cases}) when is_list(cases) do
     Enum.map(cases, &Generate.explore_properties/1)
@@ -120,11 +125,6 @@ defmodule Generate do
     """
   end
 end
-
-Mix.install([
-  {:jason, "~> 1.2"},
-  {:toml, "~> 0.6"}
-])
 
 [exercise] = System.argv()
 
