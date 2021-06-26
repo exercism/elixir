@@ -1,6 +1,6 @@
 # Introduction
 
-To share code between different Elixir modules within the same project, you need to reference the outside module by its full name. But what if that name is too long or confusing? 
+To share code between different Elixir modules within the same project, you need to reference the outside module by its full name. But what if that name is too long or confusing?
 
 ## Alias
 
@@ -27,7 +27,7 @@ Usually imports are added at the beginning of the module definition.
 ```elixir
 defmodule Square do
   import Integer, only: [pow: 2]
-  
+
   def area(a), do: pow(a, 2)
 end
 ```

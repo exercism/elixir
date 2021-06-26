@@ -5,7 +5,7 @@ The [special form `alias`][alias] allows you to shorten or change the name by wh
 ```elixir
 defmodule Square do
   alias Integer, as: I
-  
+
   def area(a), do: I.pow(a, 2)
 end
 ```

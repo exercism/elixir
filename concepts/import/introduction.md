@@ -9,7 +9,7 @@ Usually imports are added at the beginning of the module definition.
 ```elixir
 defmodule Square do
   import Integer, only: [pow: 2]
-  
+
   def area(a), do: pow(a, 2)
 end
 ```

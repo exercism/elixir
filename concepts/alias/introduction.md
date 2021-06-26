@@ -7,7 +7,7 @@ Usually aliases are added at the beginning of the module definition.
 ```elixir
 defmodule Square do
   alias Integer, as: I
-  
+
   def area(a), do: I.pow(a, 2)
 end
 ```

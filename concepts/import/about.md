@@ -7,7 +7,7 @@ Importing a whole outside module might create conflicts with existing local func
 ```elixir
 defmodule Square do
   import Integer, only: [pow: 2]
-  
+
   def area(a), do: pow(a, 2)
 end
 ```
