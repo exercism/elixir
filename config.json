@@ -2550,8 +2550,8 @@
           "list-comprehensions"
         ],
         "difficulty": 8
-       },
-       {
+      },
+      {
         "slug": "circular-buffer",
         "name": "Circular Buffer",
         "uuid": "535d64c9-95f7-4f59-b7b6-d459337b82b0",
@@ -2574,6 +2574,33 @@
         ],
         "practices": [
           "processes",
+          "errors"
+        ],
+        "difficulty": 8
+      },
+      {
+        "slug": "sgf-parsing",
+        "name": "SGF Parsing",
+        "uuid": "f87d00fa-99c4-4fda-9d90-d9c4d569a82e",
+        "prerequisites": [
+          "atoms",
+          "tuples",
+          "lists",
+          "strings",
+          "structs",
+          "enum",
+          "maps",
+          "case",
+          "cond",
+          "if",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "regular-expressions",
+          "errors"
+        ],
+        "practices": [
+          "regular-expressions",
           "errors"
         ],
         "difficulty": 8
