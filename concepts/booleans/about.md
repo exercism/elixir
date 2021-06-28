@@ -15,7 +15,7 @@ false_variable = not true
 
 The operators [`and/2`][strict-and], [`or/2`][strict-or], and [`not/1`][strict-not] are strictly boolean which means they require their _first_ argument to be a boolean. There are also equivalent boolean operators that work any type of arguments - [`&&/2`][and], [`||/2`][or], and [`!/1`][not].
 
-Boolean operators use _short-circuit evaluation_, which means that expression on the right-hand side of the operator is only evaluated if needed.
+Boolean operators use _short-circuit evaluation_, which means that the expression on the right-hand side of the operator is only evaluated if needed.
 
 Each of the operators has a different precedence, where `not/1` is evaluated before `and/2` and `or/2`. Brackets can be used to evaluate one part of the expression before the others:
 
