@@ -1,6 +1,6 @@
 # Import
 
-The [special form `import`][import] allows you to use functions from an outside module without using the module's name.
+The [special form `import`][import] allows you to use functions and macros from an outside module without using the module's name.
 
 Importing a whole outside module might create conflicts with existing local functions. To avoid this, two options are available: `:except` and `:only`. Both expect a keyword list, where the key is the function name, and the value is the function's arity.
 
