@@ -2596,12 +2596,11 @@
           "multiple-clause-functions",
           "pattern-matching",
           "guards",
-          "regular-expressions",
-          "errors"
+          "regular-expressions"
         ],
         "practices": [
-          "regular-expressions",
-          "errors"
+          "strings",
+          "regular-expressions"
         ],
         "difficulty": 8
       }
