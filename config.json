@@ -2485,7 +2485,7 @@
           "enum"
         ],
         "practices": [
-          "multiple-clause-matching"
+          "multiple-clause-functions"
         ],
         "difficulty": 5
       },
@@ -2596,6 +2596,7 @@
       }
     ],
     "foregone": [
+      "linked-list",
       "robot-name"
     ]
   },
