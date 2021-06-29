@@ -2593,6 +2593,23 @@
           "errors"
         ],
         "difficulty": 8
+      },
+       {
+        "slug": "square-root",
+        "name": "Square Root",
+        "uuid": "bf9e6251-105b-4fd7-b388-c6f5a652d174",
+        "prerequisites": [
+          "if",
+          "cond",
+          "integer",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "recursion"
+        ],
+        "practices": [
+          "integer"
+        ],
+        "difficulty": 5
       }
     ],
     "foregone": [
