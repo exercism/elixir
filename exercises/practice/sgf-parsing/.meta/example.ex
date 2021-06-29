@@ -28,19 +28,20 @@ defmodule SgfParsing do
   # TREE PARSER
 
   def parse_tree() do
-    lift2(
-      &%Sgf{properties: &1, children: &2},
+    parse_properties =
       char(?;)
       |> error("tree with no nodes")
       |> drop_and(many(parse_property()))
-      |> map(&Map.new/1),
-      lazy(
-        one_of([
-          map(parse_tree(), &List.wrap/1),
-          many(parse_tree_paren())
-        ])
-      )
-    )
+      |> map(&Map.new/1)
+
+    parse_children =
+      one_of([
+        map(parse_tree(), &List.wrap/1),
+        many(parse_tree_paren())
+      ])
+      |> lazy()
+
+    lift2(&%Sgf{properties: &1, children: &2}, parse_properties, parse_children)
   end
 
   def parse_tree_paren() do
@@ -51,11 +52,12 @@ defmodule SgfParsing do
   end
 
   def parse_property() do
-    lift2(
-      &{&1, &2},
+    parse_name =
       some(satisfy(&(&1 not in '[();')))
       |> map(&Enum.join(&1, ""))
-      |> validate(&(&1 == String.upcase(&1)), "property must be in uppercase"),
+      |> validate(&(&1 == String.upcase(&1)), "property must be in uppercase")
+
+    parse_attributes =
       some(
         char(?[)
         |> error("properties without delimiter")
@@ -63,7 +65,8 @@ defmodule SgfParsing do
         |> drop(char(?]))
         |> map(&Enum.join(&1, ""))
       )
-    )
+
+    lift2(&{&1, &2}, parse_name, parse_attributes)
   end
 
   def escaped(p) do
