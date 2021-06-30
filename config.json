@@ -2661,7 +2661,22 @@
           "bitstrings"
         ],
         "difficulty": 6
-      }
+       },
+       {
+        "slug": "resistor-color-trio",
+        "name": "Resistor Color Trio",
+        "uuid": "f1bad952-302b-4754-a439-a8c60c1d22a4",
+        "prerequisites": [
+          "atoms",
+          "lists",
+          "pattern-matching",
+          "maps"
+        ],
+        "practices": [
+          "atoms"
+        ],
+        "difficulty": 3
+       }
     ],
     "foregone": [
       "linked-list",
