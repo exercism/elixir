@@ -2610,10 +2610,12 @@
           "pattern-matching",
           "guards",
           "integers",
-          "bit-manipulation"
+          "bit-manipulation",
+          "bitstrings"
         ],
         "practices": [
-          "bit-manipulation"
+          "bit-manipulation",
+          "bitstrings"
         ],
         "difficulty": 6
       }
