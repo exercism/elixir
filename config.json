@@ -2636,6 +2636,31 @@
           "regular-expressions"
         ],
         "difficulty": 8
+       },
+       {
+        "slug": "variable-length-quantity",
+        "name": "Variable Length Quantity",
+        "uuid": "2e8b9b75-609d-4c99-947c-28274a9dbf27",
+        "prerequisites": [
+          "atoms",
+          "tuples",
+          "lists",
+          "enum",
+          "case",
+          "cond",
+          "if",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "integers",
+          "bit-manipulation",
+          "bitstrings"
+        ],
+        "practices": [
+          "bit-manipulation",
+          "bitstrings"
+        ],
+        "difficulty": 6
       }
     ],
     "foregone": [
