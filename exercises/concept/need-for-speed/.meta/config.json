@@ -1,0 +1,28 @@
+{
+  "blurb": "Learn about reusing code with alias and import by racing remote controlled cars.",
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [
+    "neenjaw"
+  ],
+  "files": {
+    "solution": [
+      "lib/need_for_speed.ex"
+    ],
+    "editor": [
+      "lib/need_for_speed/race.ex",
+      "lib/need_for_speed/remote_control_car.ex"
+    ],
+    "test": [
+      "test/need_for_speed_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
+  },
+  "forked_from": [
+    "csharp/need-for-speed"
+  ],
+  "language_versions": ">=1.10"
+}
