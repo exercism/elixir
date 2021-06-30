@@ -1,4 +1,6 @@
 defmodule VariableLengthQuantity do
+  use Bitwise
+
   @doc """
   Encode integers into a bitstring of VLQ encoded bytes
   """
@@ -16,7 +18,7 @@ defmodule VariableLengthQuantity do
   def encode(0, _), do: <<>>
 
   def encode(int, leading) do
-    rest = Bitwise.>>>(int, 7)
+    rest = int >>> 7
     <<leading::1, int::7, encode(rest, 1)::binary>>
   end
 
@@ -29,7 +31,7 @@ defmodule VariableLengthQuantity do
   def decode(<<>>, :incomplete, _), do: {:error, "incomplete sequence"}
 
   def decode(<<lead::1, byte::7, bytes::binary>>, _status, acc) do
-    acc = Bitwise.<<<(acc, 7) + byte
+    acc = (acc <<< 7) + byte
 
     if lead == 1 do
       decode(bytes, :incomplete, acc)
