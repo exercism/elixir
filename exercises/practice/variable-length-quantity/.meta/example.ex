@@ -6,7 +6,8 @@ defmodule VariableLengthQuantity do
   def encode(integers) when is_list(integers) do
     integers
     |> Enum.map(&encode/1)
-    |> Enum.map_join(<<>>, &String.reverse/1)
+    |> Enum.map(&String.reverse/1)
+    |> Enum.join(<<>>)
   end
 
   def encode(0), do: <<0>>
