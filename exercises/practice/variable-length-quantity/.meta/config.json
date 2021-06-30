@@ -1,6 +1,8 @@
 {
   "authors": ["jiegillet"],
-  "contributors": [],
+  "contributors": [
+    "neenjaw"
+  ],
   "files": {
     "example": [
       ".meta/example.ex"
