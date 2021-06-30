@@ -2661,7 +2661,22 @@
           "bitstrings"
         ],
         "difficulty": 6
-      }
+       },
+       {
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "uuid": "92387ac7-4c6d-4568-819e-e037b1d86a72",
+        "prerequisites": [
+          "atoms",
+          "lists",
+          "pattern-matching",
+          "maps"
+        ],
+        "practices": [
+          "maps"
+        ],
+        "difficulty": 2
+       }
     ],
     "foregone": [
       "linked-list",
