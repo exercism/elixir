@@ -2668,12 +2668,16 @@
         "uuid": "f1bad952-302b-4754-a439-a8c60c1d22a4",
         "prerequisites": [
           "atoms",
+          "tuples",
+          "integers",
           "lists",
           "pattern-matching",
+          "if",
           "maps"
         ],
         "practices": [
-          "atoms"
+          "atoms",
+          "integers"
         ],
         "difficulty": 3
        }
