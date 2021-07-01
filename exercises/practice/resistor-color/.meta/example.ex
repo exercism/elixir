@@ -1,22 +1,26 @@
 defmodule ResistorColor do
-  @moduledoc false
-
   @colors [
-    "black",
-    "brown",
-    "red",
-    "orange",
-    "yellow",
-    "green",
-    "blue",
-    "violet",
-    "grey",
-    "white"
+    :black,
+    :brown,
+    :red,
+    :orange,
+    :yellow,
+    :green,
+    :blue,
+    :violet,
+    :grey,
+    :white
   ]
 
-  @spec colors() :: list(String.t())
+  @doc """
+  Return a list of all colors
+  """
+  @spec colors() :: list(atom)
   def colors, do: @colors
 
-  @spec code(String.t()) :: integer()
+  @doc """
+  Return the value of a color band
+  """
+  @spec code(atom) :: integer()
   def code(color), do: Enum.find_index(@colors, &(&1 == color))
 end
