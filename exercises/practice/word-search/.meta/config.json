@@ -1,0 +1,16 @@
+{
+  "authors": ["jiegillet"],
+  "contributors": [],
+  "files": {
+    "example": [
+      ".meta/example.ex"
+    ],
+    "solution": [
+      "lib/word_search.ex"
+    ],
+    "test": [
+      "test/word_search_test.exs"
+    ]
+  },
+  "blurb": "Create a program to solve a word search puzzle."
+}
