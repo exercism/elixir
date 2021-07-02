@@ -2695,6 +2695,29 @@
           "integers"
         ],
         "difficulty": 3
+       },
+       {
+        "slug": "two-bucket",
+        "name": "Two Bucket",
+        "uuid": "07b4679a-3d9f-42bc-ad1e-b9ba272a1c15",
+        "prerequisites": [
+          "atoms",
+          "tuples",
+          "integers",
+          "lists",
+          "pattern-matching",
+          "if",
+          "cond",
+          "match",
+          "structs",
+          "enum",
+          "recursion"
+        ],
+        "practices": [
+          "atoms",
+          "integers"
+        ],
+        "difficulty": 7
        }
     ],
     "foregone": [
