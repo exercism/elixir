@@ -861,8 +861,7 @@
           "enum"
         ],
         "practices": [
-          "charlists",
-          "maps"
+          "charlists"
         ],
         "difficulty": 2
       },
@@ -1321,8 +1320,7 @@
         ],
         "practices": [
           "structs",
-          "tuples",
-          "maps"
+          "tuples"
         ],
         "difficulty": 3
       },
