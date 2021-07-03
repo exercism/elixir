@@ -1,7 +1,11 @@
 defmodule WordSearch do
   defmodule Location do
     defstruct [:from, :to]
-    @type t :: %Location{from: {integer, integer}, to: {integer, integer}}
+
+    @type t :: %Location{
+            from: %{row: integer, column: integer},
+            to: %{row: integer, column: integer}
+          }
   end
 
   @doc """

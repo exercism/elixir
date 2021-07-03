@@ -1,7 +1,11 @@
 defmodule WordSearch do
   defmodule Location do
     defstruct [:from, :to]
-    @type t :: %Location{from: {integer, integer}, to: {integer, integer}}
+
+    @type t :: %Location{
+            from: %{row: integer, column: integer},
+            to: %{row: integer, column: integer}
+          }
   end
 
   @doc """
@@ -16,12 +20,12 @@ defmodule WordSearch do
 
     {coord, starting_points} =
       for {row, r} <- Enum.with_index(grid, 1),
-          {char, c} <- Enum.with_index(row, 1),
-          reduce: {%{}, %{}} do
-        {coord, starting_points} ->
-          {Map.put(coord, {r, c}, char),
-           Map.update(starting_points, char, [{r, c}], &[{r, c} | &1])}
+          {char, c} <- Enum.with_index(row, 1) do
+        {char, %{row: r, column: c}}
       end
+      |> Enum.reduce({%{}, %{}}, fn {char, pos}, {coord, starting_points} ->
+        {Map.put(coord, pos, char), Map.update(starting_points, char, [pos], &[pos | &1])}
+      end)
 
     Map.new(words, fn <<start, _::binary>> = word ->
       {word, search(word, starting_points[start], coord)}
@@ -36,24 +40,22 @@ defmodule WordSearch do
 
     for point <- starting_points,
         path <- make_paths(point, word_length - 1),
-        reduce: nil do
-      location ->
-        location ||
-          if word == Enum.map(path, &coord[&1]),
-            do: %Location{from: List.first(path), to: List.last(path)}
+        word == Enum.map(path, &coord[&1]) do
+      %Location{from: List.first(path), to: List.last(path)}
     end
+    |> Enum.reduce(nil, &||/2)
   end
 
-  def make_paths({r, c}, delta) do
+  def make_paths(%{row: r, column: c}, delta) do
     [
-      for(i <- 0..delta, do: {r + i, c}),
-      for(i <- 0..delta, do: {r - i, c}),
-      for(i <- 0..delta, do: {r, c + i}),
-      for(i <- 0..delta, do: {r, c - i}),
-      for(i <- 0..delta, do: {r + i, c + i}),
-      for(i <- 0..delta, do: {r + i, c - i}),
-      for(i <- 0..delta, do: {r - i, c + i}),
-      for(i <- 0..delta, do: {r - i, c - i})
+      for(i <- 0..delta, do: %{row: r + i, column: c}),
+      for(i <- 0..delta, do: %{row: r - i, column: c}),
+      for(i <- 0..delta, do: %{row: r, column: c + i}),
+      for(i <- 0..delta, do: %{row: r, column: c - i}),
+      for(i <- 0..delta, do: %{row: r + i, column: c + i}),
+      for(i <- 0..delta, do: %{row: r + i, column: c - i}),
+      for(i <- 0..delta, do: %{row: r - i, column: c + i}),
+      for(i <- 0..delta, do: %{row: r - i, column: c - i})
     ]
   end
 end

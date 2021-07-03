@@ -20,7 +20,7 @@ defmodule WordSearchTest do
     output = WordSearch.search(grid, words)
 
     expected = %{
-      "clojure" => %Location{from: {1, 1}, to: {1, 7}}
+      "clojure" => %Location{from: %{row: 1, column: 1}, to: %{row: 1, column: 7}}
     }
 
     assert output == expected
@@ -33,7 +33,7 @@ defmodule WordSearchTest do
     output = WordSearch.search(grid, words)
 
     expected = %{
-      "clojure" => %Location{from: {1, 3}, to: {1, 9}}
+      "clojure" => %Location{from: %{row: 1, column: 3}, to: %{row: 1, column: 9}}
     }
 
     assert output == expected
@@ -46,7 +46,7 @@ defmodule WordSearchTest do
     output = WordSearch.search(grid, words)
 
     expected = %{
-      "coffee" => %Location{from: {1, 1}, to: {1, 6}}
+      "coffee" => %Location{from: %{row: 1, column: 1}, to: %{row: 1, column: 6}}
     }
 
     assert output == expected
@@ -59,7 +59,7 @@ defmodule WordSearchTest do
     output = WordSearch.search(grid, words)
 
     expected = %{
-      "coffee" => %Location{from: {1, 2}, to: {1, 7}}
+      "coffee" => %Location{from: %{row: 1, column: 2}, to: %{row: 1, column: 7}}
     }
 
     assert output == expected
@@ -76,7 +76,7 @@ defmodule WordSearchTest do
     output = WordSearch.search(grid, words)
 
     expected = %{
-      "clojure" => %Location{from: {2, 2}, to: {2, 8}}
+      "clojure" => %Location{from: %{row: 2, column: 2}, to: %{row: 2, column: 8}}
     }
 
     assert output == expected
@@ -94,7 +94,7 @@ defmodule WordSearchTest do
     output = WordSearch.search(grid, words)
 
     expected = %{
-      "clojure" => %Location{from: {3, 1}, to: {3, 7}}
+      "clojure" => %Location{from: %{row: 3, column: 1}, to: %{row: 3, column: 7}}
     }
 
     assert output == expected
@@ -119,7 +119,7 @@ defmodule WordSearchTest do
     output = WordSearch.search(grid, words)
 
     expected = %{
-      "clojure" => %Location{from: {10, 1}, to: {10, 7}}
+      "clojure" => %Location{from: %{row: 10, column: 1}, to: %{row: 10, column: 7}}
     }
 
     assert output == expected
@@ -144,7 +144,7 @@ defmodule WordSearchTest do
     output = WordSearch.search(grid, words)
 
     expected = %{
-      "clojure" => %Location{from: {9, 1}, to: {9, 7}}
+      "clojure" => %Location{from: %{row: 9, column: 1}, to: %{row: 9, column: 7}}
     }
 
     assert output == expected
@@ -169,7 +169,7 @@ defmodule WordSearchTest do
     output = WordSearch.search(grid, words)
 
     expected = %{
-      "fortran" => %Location{from: {7, 1}, to: {7, 7}}
+      "fortran" => %Location{from: %{row: 7, column: 1}, to: %{row: 7, column: 7}}
     }
 
     assert output == expected
@@ -194,8 +194,8 @@ defmodule WordSearchTest do
     output = WordSearch.search(grid, words)
 
     expected = %{
-      "clojure" => %Location{from: {10, 1}, to: {10, 7}},
-      "fortran" => %Location{from: {7, 1}, to: {7, 7}}
+      "clojure" => %Location{from: %{row: 10, column: 1}, to: %{row: 10, column: 7}},
+      "fortran" => %Location{from: %{row: 7, column: 1}, to: %{row: 7, column: 7}}
     }
 
     assert output == expected
@@ -208,7 +208,7 @@ defmodule WordSearchTest do
     output = WordSearch.search(grid, words)
 
     expected = %{
-      "elixir" => %Location{from: {1, 6}, to: {1, 1}}
+      "elixir" => %Location{from: %{row: 1, column: 6}, to: %{row: 1, column: 1}}
     }
 
     assert output == expected
@@ -233,8 +233,8 @@ defmodule WordSearchTest do
     output = WordSearch.search(grid, words)
 
     expected = %{
-      "clojure" => %Location{from: {10, 1}, to: {10, 7}},
-      "elixir" => %Location{from: {5, 6}, to: {5, 1}}
+      "clojure" => %Location{from: %{row: 10, column: 1}, to: %{row: 10, column: 7}},
+      "elixir" => %Location{from: %{row: 5, column: 6}, to: %{row: 5, column: 1}}
     }
 
     assert output == expected
@@ -259,9 +259,9 @@ defmodule WordSearchTest do
     output = WordSearch.search(grid, words)
 
     expected = %{
-      "clojure" => %Location{from: {10, 1}, to: {10, 7}},
-      "ecmascript" => %Location{from: {1, 10}, to: {10, 10}},
-      "elixir" => %Location{from: {5, 6}, to: {5, 1}}
+      "clojure" => %Location{from: %{row: 10, column: 1}, to: %{row: 10, column: 7}},
+      "ecmascript" => %Location{from: %{row: 1, column: 10}, to: %{row: 10, column: 10}},
+      "elixir" => %Location{from: %{row: 5, column: 6}, to: %{row: 5, column: 1}}
     }
 
     assert output == expected
@@ -286,10 +286,10 @@ defmodule WordSearchTest do
     output = WordSearch.search(grid, words)
 
     expected = %{
-      "clojure" => %Location{from: {10, 1}, to: {10, 7}},
-      "ecmascript" => %Location{from: {1, 10}, to: {10, 10}},
-      "elixir" => %Location{from: {5, 6}, to: {5, 1}},
-      "rust" => %Location{from: {5, 9}, to: {2, 9}}
+      "clojure" => %Location{from: %{row: 10, column: 1}, to: %{row: 10, column: 7}},
+      "ecmascript" => %Location{from: %{row: 1, column: 10}, to: %{row: 10, column: 10}},
+      "elixir" => %Location{from: %{row: 5, column: 6}, to: %{row: 5, column: 1}},
+      "rust" => %Location{from: %{row: 5, column: 9}, to: %{row: 2, column: 9}}
     }
 
     assert output == expected
@@ -314,11 +314,11 @@ defmodule WordSearchTest do
     output = WordSearch.search(grid, words)
 
     expected = %{
-      "clojure" => %Location{from: {10, 1}, to: {10, 7}},
-      "ecmascript" => %Location{from: {1, 10}, to: {10, 10}},
-      "elixir" => %Location{from: {5, 6}, to: {5, 1}},
-      "java" => %Location{from: {1, 1}, to: {4, 4}},
-      "rust" => %Location{from: {5, 9}, to: {2, 9}}
+      "clojure" => %Location{from: %{row: 10, column: 1}, to: %{row: 10, column: 7}},
+      "ecmascript" => %Location{from: %{row: 1, column: 10}, to: %{row: 10, column: 10}},
+      "elixir" => %Location{from: %{row: 5, column: 6}, to: %{row: 5, column: 1}},
+      "java" => %Location{from: %{row: 1, column: 1}, to: %{row: 4, column: 4}},
+      "rust" => %Location{from: %{row: 5, column: 9}, to: %{row: 2, column: 9}}
     }
 
     assert output == expected
@@ -343,12 +343,12 @@ defmodule WordSearchTest do
     output = WordSearch.search(grid, words)
 
     expected = %{
-      "clojure" => %Location{from: {10, 1}, to: {10, 7}},
-      "ecmascript" => %Location{from: {1, 10}, to: {10, 10}},
-      "elixir" => %Location{from: {5, 6}, to: {5, 1}},
-      "java" => %Location{from: {1, 1}, to: {4, 4}},
-      "lua" => %Location{from: {9, 8}, to: {7, 6}},
-      "rust" => %Location{from: {5, 9}, to: {2, 9}}
+      "clojure" => %Location{from: %{row: 10, column: 1}, to: %{row: 10, column: 7}},
+      "ecmascript" => %Location{from: %{row: 1, column: 10}, to: %{row: 10, column: 10}},
+      "elixir" => %Location{from: %{row: 5, column: 6}, to: %{row: 5, column: 1}},
+      "java" => %Location{from: %{row: 1, column: 1}, to: %{row: 4, column: 4}},
+      "lua" => %Location{from: %{row: 9, column: 8}, to: %{row: 7, column: 6}},
+      "rust" => %Location{from: %{row: 5, column: 9}, to: %{row: 2, column: 9}}
     }
 
     assert output == expected
@@ -373,13 +373,13 @@ defmodule WordSearchTest do
     output = WordSearch.search(grid, words)
 
     expected = %{
-      "clojure" => %Location{from: {10, 1}, to: {10, 7}},
-      "ecmascript" => %Location{from: {1, 10}, to: {10, 10}},
-      "elixir" => %Location{from: {5, 6}, to: {5, 1}},
-      "java" => %Location{from: {1, 1}, to: {4, 4}},
-      "lisp" => %Location{from: {6, 3}, to: {3, 6}},
-      "lua" => %Location{from: {9, 8}, to: {7, 6}},
-      "rust" => %Location{from: {5, 9}, to: {2, 9}}
+      "clojure" => %Location{from: %{row: 10, column: 1}, to: %{row: 10, column: 7}},
+      "ecmascript" => %Location{from: %{row: 1, column: 10}, to: %{row: 10, column: 10}},
+      "elixir" => %Location{from: %{row: 5, column: 6}, to: %{row: 5, column: 1}},
+      "java" => %Location{from: %{row: 1, column: 1}, to: %{row: 4, column: 4}},
+      "lisp" => %Location{from: %{row: 6, column: 3}, to: %{row: 3, column: 6}},
+      "lua" => %Location{from: %{row: 9, column: 8}, to: %{row: 7, column: 6}},
+      "rust" => %Location{from: %{row: 5, column: 9}, to: %{row: 2, column: 9}}
     }
 
     assert output == expected
@@ -404,14 +404,14 @@ defmodule WordSearchTest do
     output = WordSearch.search(grid, words)
 
     expected = %{
-      "clojure" => %Location{from: {10, 1}, to: {10, 7}},
-      "ecmascript" => %Location{from: {1, 10}, to: {10, 10}},
-      "elixir" => %Location{from: {5, 6}, to: {5, 1}},
-      "java" => %Location{from: {1, 1}, to: {4, 4}},
-      "lisp" => %Location{from: {6, 3}, to: {3, 6}},
-      "lua" => %Location{from: {9, 8}, to: {7, 6}},
-      "ruby" => %Location{from: {6, 8}, to: {9, 5}},
-      "rust" => %Location{from: {5, 9}, to: {2, 9}}
+      "clojure" => %Location{from: %{row: 10, column: 1}, to: %{row: 10, column: 7}},
+      "ecmascript" => %Location{from: %{row: 1, column: 10}, to: %{row: 10, column: 10}},
+      "elixir" => %Location{from: %{row: 5, column: 6}, to: %{row: 5, column: 1}},
+      "java" => %Location{from: %{row: 1, column: 1}, to: %{row: 4, column: 4}},
+      "lisp" => %Location{from: %{row: 6, column: 3}, to: %{row: 3, column: 6}},
+      "lua" => %Location{from: %{row: 9, column: 8}, to: %{row: 7, column: 6}},
+      "ruby" => %Location{from: %{row: 6, column: 8}, to: %{row: 9, column: 5}},
+      "rust" => %Location{from: %{row: 5, column: 9}, to: %{row: 2, column: 9}}
     }
 
     assert output == expected
@@ -447,15 +447,15 @@ defmodule WordSearchTest do
     output = WordSearch.search(grid, words)
 
     expected = %{
-      "clojure" => %Location{from: {10, 1}, to: {10, 7}},
-      "ecmascript" => %Location{from: {1, 10}, to: {10, 10}},
-      "elixir" => %Location{from: {5, 6}, to: {5, 1}},
+      "clojure" => %Location{from: %{row: 10, column: 1}, to: %{row: 10, column: 7}},
+      "ecmascript" => %Location{from: %{row: 1, column: 10}, to: %{row: 10, column: 10}},
+      "elixir" => %Location{from: %{row: 5, column: 6}, to: %{row: 5, column: 1}},
       "haskell" => nil,
-      "java" => %Location{from: {1, 1}, to: {4, 4}},
-      "lisp" => %Location{from: {6, 3}, to: {3, 6}},
-      "lua" => %Location{from: {9, 8}, to: {7, 6}},
-      "ruby" => %Location{from: {6, 8}, to: {9, 5}},
-      "rust" => %Location{from: {5, 9}, to: {2, 9}}
+      "java" => %Location{from: %{row: 1, column: 1}, to: %{row: 4, column: 4}},
+      "lisp" => %Location{from: %{row: 6, column: 3}, to: %{row: 3, column: 6}},
+      "lua" => %Location{from: %{row: 9, column: 8}, to: %{row: 7, column: 6}},
+      "ruby" => %Location{from: %{row: 6, column: 8}, to: %{row: 9, column: 5}},
+      "rust" => %Location{from: %{row: 5, column: 9}, to: %{row: 2, column: 9}}
     }
 
     assert output == expected
