@@ -2713,6 +2713,26 @@
           "maps"
         ],
         "difficulty": 3
+       },
+       {
+        "slug": "two-bucket",
+        "name": "Two Bucket",
+        "uuid": "07b4679a-3d9f-42bc-ad1e-b9ba272a1c15",
+        "prerequisites": [
+          "atoms",
+          "tuples",
+          "integers",
+          "lists",
+          "pattern-matching",
+          "if",
+          "cond",
+          "case",
+          "structs",
+          "enum",
+          "recursion"
+        ],
+        "practices": [],
+        "difficulty": 7
        }
     ],
     "foregone": [
