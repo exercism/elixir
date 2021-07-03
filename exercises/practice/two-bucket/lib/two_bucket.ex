@@ -1,6 +1,6 @@
 defmodule TwoBucket do
-  defstruct [:goal, :moves, :other_bucket]
-  @type t :: %TwoBucket{goal: :one | :two, moves: integer, other_bucket: integer}
+  defstruct [:bucket_one, :bucket_two, :moves]
+  @type t :: %TwoBucket{bucket_one: integer, bucket_two: integer, moves: integer}
 
   @doc """
   Find the quickest way to fill a bucket with some amount of water from two buckets of specific sizes.

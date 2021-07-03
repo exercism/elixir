@@ -1,6 +1,6 @@
 defmodule TwoBucket do
-  defstruct [:goal, :moves, :other_bucket]
-  @type t :: %TwoBucket{goal: :one | :two, moves: integer, other_bucket: integer}
+  defstruct [:bucket_one, :bucket_two, :moves]
+  @type t :: %TwoBucket{bucket_one: integer, bucket_two: integer, moves: integer}
 
   @doc """
   Find the quickest way to fill a bucket with some amount of water from two buckets of specific sizes.
@@ -23,11 +23,8 @@ defmodule TwoBucket do
 
   def pour([], _, _, _), do: {:error, :impossible}
 
-  def pour([{{goal, other}, moves} | _], _, _, goal),
-    do: {:ok, %TwoBucket{goal: :one, moves: moves, other_bucket: other}}
-
-  def pour([{{other, goal}, moves} | _], _, _, goal),
-    do: {:ok, %TwoBucket{goal: :two, moves: moves, other_bucket: other}}
+  def pour([{{a, b}, moves} | _], _, _, goal) when a == goal or b == goal,
+    do: {:ok, %TwoBucket{bucket_one: a, bucket_two: b, moves: moves}}
 
   def pour([{state, moves} | states], forbidden_states, next_moves, goal) do
     next =
@@ -47,8 +44,16 @@ defmodule TwoBucket do
       {fill_one, size_two},
       {size_one, fill_two},
       # Pour one into the other
-      {min(size_one, fill_one + fill_two), max(0, fill_two - size_one + fill_one)},
-      {max(0, fill_one - size_two + fill_two), min(size_two, fill_one + fill_two)}
+      if fill_one < size_two - fill_two do
+        {0, fill_one + fill_two}
+      else
+        {fill_one - (size_two - fill_two), size_two}
+      end,
+      if fill_two < size_one - fill_one do
+        {fill_one + fill_two, 0}
+      else
+        {size_one, fill_two - (size_one - fill_one)}
+      end
     ]
     |> Enum.uniq()
   end

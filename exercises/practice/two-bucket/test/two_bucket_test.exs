@@ -8,7 +8,7 @@ defmodule TwoBucketTest do
     goal = 1
     start_bucket = :one
     output = TwoBucket.measure(bucket_one, bucket_two, goal, start_bucket)
-    expected = {:ok, %TwoBucket{goal: :one, moves: 4, other_bucket: 5}}
+    expected = {:ok, %TwoBucket{bucket_one: goal, bucket_two: 5, moves: 4}}
 
     assert output == expected
   end
@@ -20,7 +20,7 @@ defmodule TwoBucketTest do
     goal = 1
     start_bucket = :two
     output = TwoBucket.measure(bucket_one, bucket_two, goal, start_bucket)
-    expected = {:ok, %TwoBucket{goal: :two, moves: 8, other_bucket: 3}}
+    expected = {:ok, %TwoBucket{bucket_one: 3, bucket_two: goal, moves: 8}}
 
     assert output == expected
   end
@@ -32,7 +32,7 @@ defmodule TwoBucketTest do
     goal = 2
     start_bucket = :one
     output = TwoBucket.measure(bucket_one, bucket_two, goal, start_bucket)
-    expected = {:ok, %TwoBucket{goal: :one, moves: 14, other_bucket: 11}}
+    expected = {:ok, %TwoBucket{bucket_one: goal, bucket_two: 11, moves: 14}}
 
     assert output == expected
   end
@@ -44,7 +44,7 @@ defmodule TwoBucketTest do
     goal = 2
     start_bucket = :two
     output = TwoBucket.measure(bucket_one, bucket_two, goal, start_bucket)
-    expected = {:ok, %TwoBucket{goal: :two, moves: 18, other_bucket: 7}}
+    expected = {:ok, %TwoBucket{bucket_one: 7, bucket_two: goal, moves: 18}}
 
     assert output == expected
   end
@@ -56,7 +56,7 @@ defmodule TwoBucketTest do
     goal = 3
     start_bucket = :two
     output = TwoBucket.measure(bucket_one, bucket_two, goal, start_bucket)
-    expected = {:ok, %TwoBucket{goal: :two, moves: 1, other_bucket: 0}}
+    expected = {:ok, %TwoBucket{bucket_one: 0, bucket_two: goal, moves: 1}}
 
     assert output == expected
   end
@@ -68,7 +68,7 @@ defmodule TwoBucketTest do
     goal = 3
     start_bucket = :one
     output = TwoBucket.measure(bucket_one, bucket_two, goal, start_bucket)
-    expected = {:ok, %TwoBucket{goal: :two, moves: 2, other_bucket: 2}}
+    expected = {:ok, %TwoBucket{bucket_one: 2, bucket_two: goal, moves: 2}}
 
     assert output == expected
   end
@@ -92,7 +92,7 @@ defmodule TwoBucketTest do
     goal = 9
     start_bucket = :one
     output = TwoBucket.measure(bucket_one, bucket_two, goal, start_bucket)
-    expected = {:ok, %TwoBucket{goal: :two, moves: 10, other_bucket: 0}}
+    expected = {:ok, %TwoBucket{bucket_one: 0, bucket_two: goal, moves: 10}}
 
     assert output == expected
   end
