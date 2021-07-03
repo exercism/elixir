@@ -1,0 +1,18 @@
+{
+  "authors": ["jiegillet"],
+  "contributors": [],
+  "files": {
+    "example": [
+      ".meta/example.ex"
+    ],
+    "solution": [
+      "lib/square_root.ex"
+    ],
+    "test": [
+      "test/square_root_test.exs"
+    ]
+  },
+  "blurb": "Given a natural radicand, return its square root.",
+  "source": "wolf99",
+  "source_url": "https://github.com/exercism/problem-specifications/pull/1582"
+}

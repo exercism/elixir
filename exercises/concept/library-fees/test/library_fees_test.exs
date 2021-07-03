@@ -32,48 +32,48 @@ defmodule LibraryFeesTest do
     end
   end
 
-  describe "return_datetime/1" do
+  describe "return_date/1" do
     @task_id 3
     test "adds 28 days if the given NaiveDateTime is before 12:00" do
-      result = LibraryFees.return_datetime(~N[2020-02-14 11:59:59Z])
-      assert result == ~N[2020-03-13 11:59:59Z]
+      result = LibraryFees.return_date(~N[2020-02-14 11:59:59Z])
+      assert result == ~D[2020-03-13]
     end
 
     @task_id 3
     test "adds 29 days if the given NaiveDateTime is after 12:00" do
-      result = LibraryFees.return_datetime(~N[2021-01-03 12:01:01Z])
-      assert result == ~N[2021-02-01 12:01:01Z]
+      result = LibraryFees.return_date(~N[2021-01-03 12:01:01Z])
+      assert result == ~D[2021-02-01]
     end
 
     @task_id 3
     test "adds 29 days if the given NaiveDateTime is exactly at 12:00" do
-      result = LibraryFees.return_datetime(~N[2018-12-01 12:00:00Z])
-      assert result == ~N[2018-12-30 12:00:00Z]
+      result = LibraryFees.return_date(~N[2018-12-01 12:00:00Z])
+      assert result == ~D[2018-12-30]
     end
   end
 
   describe "days_late/2" do
     @task_id 4
     test "returns 0 when identical datetimes" do
-      result = LibraryFees.days_late(~N[2021-02-01 12:00:00Z], ~N[2021-02-01 12:00:00Z])
+      result = LibraryFees.days_late(~D[2021-02-01], ~N[2021-02-01 12:00:00Z])
       assert result == 0
     end
 
     @task_id 4
     test "returns 0 when identical dates, but different times" do
-      result = LibraryFees.days_late(~N[2019-03-11 13:50:00Z], ~N[2019-03-11 12:00:00Z])
+      result = LibraryFees.days_late(~D[2019-03-11], ~N[2019-03-11 12:00:00Z])
       assert result == 0
     end
 
     @task_id 4
     test "returns 0 when planned return date is later than actual return date" do
-      result = LibraryFees.days_late(~N[2020-12-03 09:50:00Z], ~N[2020-11-29 16:00:00Z])
+      result = LibraryFees.days_late(~D[2020-12-03], ~N[2020-11-29 16:00:00Z])
       assert result == 0
     end
 
     @task_id 4
     test "returns date difference in numbers of days when planned return date is earlier than actual return date" do
-      result = LibraryFees.days_late(~N[2020-06-12 09:50:00Z], ~N[2020-06-21 16:00:00Z])
+      result = LibraryFees.days_late(~D[2020-06-12], ~N[2020-06-21 16:00:00Z])
       assert result == 9
     end
   end

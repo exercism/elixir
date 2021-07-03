@@ -1,11 +1,8 @@
 defmodule ResistorColor do
-  @moduledoc false
-
-  @spec colors() :: list(String.t())
-  def colors do
-  end
-
-  @spec code(String.t()) :: integer()
+  @doc """
+  Return the value of a color band
+  """
+  @spec code(atom) :: integer()
   def code(color) do
   end
 end
