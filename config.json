@@ -2612,6 +2612,23 @@
         "difficulty": 8
       },
       {
+        "slug": "square-root",
+        "name": "Square Root",
+        "uuid": "bf9e6251-105b-4fd7-b388-c6f5a652d174",
+        "prerequisites": [
+          "if",
+          "cond",
+          "integer",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "recursion"
+        ],
+        "practices": [
+          "integer"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "sgf-parsing",
         "name": "SGF Parsing",
         "uuid": "f87d00fa-99c4-4fda-9d90-d9c4d569a82e",
