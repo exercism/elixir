@@ -2708,15 +2708,12 @@
           "pattern-matching",
           "if",
           "cond",
-          "match",
+          "case",
           "structs",
           "enum",
           "recursion"
         ],
-        "practices": [
-          "atoms",
-          "integers"
-        ],
+        "practices": [],
         "difficulty": 7
        }
     ],
