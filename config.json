@@ -558,6 +558,24 @@
           "multiple-clause-functions"
         ],
         "status": "beta"
+      },
+      {
+        "slug": "need-for-speed",
+        "name": "Need For Speed",
+        "uuid": "ed189325-7c73-49c7-8572-3dfc0b18b983",
+        "concepts": [
+          "alias",
+          "import"
+        ],
+        "prerequisites": [
+          "strings",
+          "tuples",
+          "keyword-lists",
+          "enum",
+          "structs",
+          "io"
+        ],
+        "status": "beta"
       }
     ],
     "practice": [
@@ -809,11 +827,12 @@
         "name": "Resistor Color",
         "uuid": "c1532449-bf9e-446a-8e8f-97a6c19608e5",
         "prerequisites": [
-          "lists",
-          "enum"
+          "atoms",
+          "maps"
         ],
         "practices": [
-          "enum"
+          "atoms",
+          "maps"
         ],
         "difficulty": 1
       },
@@ -842,8 +861,7 @@
           "enum"
         ],
         "practices": [
-          "charlists",
-          "maps"
+          "charlists"
         ],
         "difficulty": 2
       },
@@ -1302,8 +1320,7 @@
         ],
         "practices": [
           "structs",
-          "tuples",
-          "maps"
+          "tuples"
         ],
         "difficulty": 3
       },
@@ -2485,7 +2502,7 @@
           "enum"
         ],
         "practices": [
-          "multiple-clause-matching"
+          "multiple-clause-functions"
         ],
         "difficulty": 5
       },
@@ -2566,8 +2583,8 @@
           "list-comprehensions"
         ],
         "difficulty": 8
-       },
-       {
+      },
+      {
         "slug": "circular-buffer",
         "name": "Circular Buffer",
         "uuid": "535d64c9-95f7-4f59-b7b6-d459337b82b0",
@@ -2594,7 +2611,7 @@
         ],
         "difficulty": 8
       },
-       {
+      {
         "slug": "square-root",
         "name": "Square Root",
         "uuid": "bf9e6251-105b-4fd7-b388-c6f5a652d174",
@@ -2610,9 +2627,96 @@
           "integer"
         ],
         "difficulty": 5
-      }
+      },
+      {
+        "slug": "sgf-parsing",
+        "name": "SGF Parsing",
+        "uuid": "f87d00fa-99c4-4fda-9d90-d9c4d569a82e",
+        "prerequisites": [
+          "atoms",
+          "tuples",
+          "lists",
+          "strings",
+          "structs",
+          "enum",
+          "maps",
+          "case",
+          "cond",
+          "if",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "regular-expressions"
+        ],
+        "practices": [
+          "regular-expressions"
+        ],
+        "difficulty": 8
+       },
+       {
+        "slug": "variable-length-quantity",
+        "name": "Variable Length Quantity",
+        "uuid": "2e8b9b75-609d-4c99-947c-28274a9dbf27",
+        "prerequisites": [
+          "atoms",
+          "tuples",
+          "lists",
+          "enum",
+          "case",
+          "cond",
+          "if",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "integers",
+          "bit-manipulation",
+          "bitstrings"
+        ],
+        "practices": [
+          "bit-manipulation",
+          "bitstrings"
+        ],
+        "difficulty": 6
+       },
+       {
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "uuid": "92387ac7-4c6d-4568-819e-e037b1d86a72",
+        "prerequisites": [
+          "atoms",
+          "lists",
+          "pattern-matching",
+          "maps"
+        ],
+        "practices": [
+          "atoms",
+          "maps"
+        ],
+        "difficulty": 2
+       },
+       {
+        "slug": "resistor-color-trio",
+        "name": "Resistor Color Trio",
+        "uuid": "f1bad952-302b-4754-a439-a8c60c1d22a4",
+        "prerequisites": [
+          "atoms",
+          "tuples",
+          "integers",
+          "lists",
+          "pattern-matching",
+          "if",
+          "maps"
+        ],
+        "practices": [
+          "atoms",
+          "integers",
+          "maps"
+        ],
+        "difficulty": 3
+       }
     ],
     "foregone": [
+      "linked-list",
       "robot-name"
     ]
   },
@@ -2626,6 +2730,11 @@
       "uuid": "a5a3b2bb-fe4d-4a0b-97a3-c56ddfa9b650",
       "slug": "agent",
       "name": "Agent"
+    },
+    {
+      "uuid": "65a123c8-0d24-4cc9-949c-b0f8efa6ccc8",
+      "slug": "alias",
+      "name": "Alias"
     },
     {
       "uuid": "a5b7f41f-9f07-4996-8032-05225f0ef639",
@@ -2736,6 +2845,11 @@
       "uuid": "6bafcc9f-7e2b-4240-a487-be15030cf4a3",
       "slug": "if",
       "name": "If"
+    },
+    {
+      "uuid": "99c8ec25-976e-479e-ae08-55d5da3cf098",
+      "slug": "import",
+      "name": "Import"
     },
     {
       "uuid": "bab00476-4570-41c3-b74a-ba6c1a567c49",

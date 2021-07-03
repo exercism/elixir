@@ -1,0 +1,20 @@
+{
+  "authors": ["jiegillet"],
+  "contributors": [
+    "neenjaw"
+  ],
+  "files": {
+    "example": [
+      ".meta/example.ex"
+    ],
+    "solution": [
+      "lib/variable_length_quantity.ex"
+    ],
+    "test": [
+      "test/variable_length_quantity_test.exs"
+    ]
+  },
+  "blurb": "Implement variable length quantity encoding and decoding.",
+  "source": "A poor Splice developer having to implement MIDI encoding/decoding.",
+  "source_url": "https://splice.com"
+}
