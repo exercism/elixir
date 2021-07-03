@@ -18,6 +18,7 @@
 
 - A day has `24 * 60 * 60` seconds.
 - There is a [built-in function][naive-date-time-add] that adds a given number of seconds to a `NaiveDateTime` struct.
+- There is a [built-in function][naive-date-time-to-date] that changes a `NaiveDateTime` struct to a `Date` struct.
 
 ## 4. Determine how late the return of the book was
 

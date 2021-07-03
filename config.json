@@ -827,11 +827,12 @@
         "name": "Resistor Color",
         "uuid": "c1532449-bf9e-446a-8e8f-97a6c19608e5",
         "prerequisites": [
-          "lists",
-          "enum"
+          "atoms",
+          "maps"
         ],
         "practices": [
-          "enum"
+          "atoms",
+          "maps"
         ],
         "difficulty": 1
       },
@@ -860,8 +861,7 @@
           "enum"
         ],
         "practices": [
-          "charlists",
-          "maps"
+          "charlists"
         ],
         "difficulty": 2
       },
@@ -1320,8 +1320,7 @@
         ],
         "practices": [
           "structs",
-          "tuples",
-          "maps"
+          "tuples"
         ],
         "difficulty": 3
       },
@@ -2673,9 +2672,30 @@
           "maps"
         ],
         "practices": [
+          "atoms",
           "maps"
         ],
         "difficulty": 2
+       },
+       {
+        "slug": "resistor-color-trio",
+        "name": "Resistor Color Trio",
+        "uuid": "f1bad952-302b-4754-a439-a8c60c1d22a4",
+        "prerequisites": [
+          "atoms",
+          "tuples",
+          "integers",
+          "lists",
+          "pattern-matching",
+          "if",
+          "maps"
+        ],
+        "practices": [
+          "atoms",
+          "integers",
+          "maps"
+        ],
+        "difficulty": 3
        }
     ],
     "foregone": [
