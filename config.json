@@ -2733,6 +2733,32 @@
         ],
         "practices": [],
         "difficulty": 7
+       },
+       {
+        "slug": "word-search",
+        "name": "Word Search",
+        "uuid": "41ab29d0-e094-4910-bb51-b99bdedc7f17",
+        "prerequisites": [
+          "atoms",
+          "tuples",
+          "lists",
+          "enum",
+          "case",
+          "cond",
+          "if",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "strings",
+          "charlists",
+          "list-comprehensions",
+          "maps",
+          "structs"
+        ],
+        "practices": [
+          "list-comprehensions"
+        ],
+        "difficulty": 7
        }
     ],
     "foregone": [
