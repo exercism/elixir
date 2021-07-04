@@ -2612,6 +2612,23 @@
         "difficulty": 8
       },
       {
+        "slug": "square-root",
+        "name": "Square Root",
+        "uuid": "bf9e6251-105b-4fd7-b388-c6f5a652d174",
+        "prerequisites": [
+          "if",
+          "cond",
+          "integer",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "recursion"
+        ],
+        "practices": [
+          "integer"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "sgf-parsing",
         "name": "SGF Parsing",
         "uuid": "f87d00fa-99c4-4fda-9d90-d9c4d569a82e",
@@ -2698,16 +2715,57 @@
         "difficulty": 3
        },
        {
-        "slug": "rectangles",
-        "name": "Rectangles",
-        "uuid": "bc7f9ea3-4e67-406a-91fe-807859fb9c7f",
+        "slug": "two-bucket",
+        "name": "Two Bucket",
+        "uuid": "07b4679a-3d9f-42bc-ad1e-b9ba272a1c15",
         "prerequisites": [
+          "atoms",
           "tuples",
+          "integers",
           "lists",
           "pattern-matching",
           "if",
           "cond",
           "case",
+          "structs",
+          "enum",
+          "recursion"
+        ],
+        "practices": [],
+        "difficulty": 7
+       },
+       {
+        "slug": "word-search",
+        "name": "Word Search",
+        "uuid": "41ab29d0-e094-4910-bb51-b99bdedc7f17",
+        "prerequisites": [
+          "atoms",
+          "tuples",
+          "lists",
+          "enum",
+          "case",
+          "cond",
+          "if",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "strings",
+          "charlists",
+          "list-comprehensions",
+          "maps",
+          "structs"
+        ],
+        "practices": [
+          "list-comprehensions"
+        ],
+        "difficulty": 7
+       },
+       {
+        "slug": "rectangles",
+        "name": "Rectangles",
+        "uuid": "bc7f9ea3-4e67-406a-91fe-807859fb9c7f",
+        "prerequisites": [
+          "tuples",
           "maps",
           "strings",
           "charlists",
