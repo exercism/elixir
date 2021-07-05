@@ -24,25 +24,29 @@ LibraryFees.before_noon?(~N[2021-01-12 08:23:03])
 # => true
 ```
 
-## 3. Calculate the return datetime
+## 3. Calculate the return date
 
-Based on the checkout datetime, calculate the return datetime.
+Based on the checkout datetime, calculate the return date.
 
-Implement the `LibraryFees.return_datetime/1` function. It should take a `NaiveDateTime` struct and return a `NaiveDateTime` struct, either 28 or 29 days later.
+Implement the `LibraryFees.return_date/1` function. It should take a `NaiveDateTime` struct and return a `Date` struct, either 28 or 29 days later.
 
 ```elixir
-LibraryFees.return_datetime(~N[2020-11-28 15:55:33])
-# => ~N[2020-12-27 15:55:33]
+LibraryFees.return_date(~N[2020-11-28 15:55:33])
+# => ~D[2020-12-27]
 ```
 
 ## 4. Determine how late the return of the book was
 
 The library has a flat rate for late returns. To be able to calculate the fee, we need to know how many days after the return date the book was actually returned.
 
-Implement the `LibraryFees.days_late/2` function. It should take two `NaiveDateTime` structs, the planned return datetime and the actual return datetime. If the planned return datetime is on an earlier or the same day as the actual return datetime, the function should return 0. Otherwise, the function should return the difference between those two datetimes in days.
+Implement the `LibraryFees.days_late/2` function. It should take a `Date` struct - the planned return datetime, and a `NaiveDateTime` struct - the actual return datetime.
+
+If the planned return date is on an earlier or the same day as the actual return datetime, the function should return 0. Otherwise, the function should return the difference between those two dates in days.
+
+The library tracks both the date and time of the actual return of the book for statistical purposes, but doesn't use the time when calculating late fees.
 
 ```elixir
-LibraryFees.days_late(~N[2020-12-27 15:55:33], ~N[2021-01-03 09:23:36])
+LibraryFees.days_late(~D[2020-12-27], ~N[2021-01-03 09:23:36])
 # => 7
 ```
 

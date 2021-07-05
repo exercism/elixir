@@ -50,22 +50,4 @@ defmodule ResistorColorTest do
   test "returns white color code" do
     assert ResistorColor.code(:white) == 9
   end
-
-  @tag :pending
-  test "returns all colors" do
-    colors = [
-      :black,
-      :brown,
-      :red,
-      :orange,
-      :yellow,
-      :green,
-      :blue,
-      :violet,
-      :grey,
-      :white
-    ]
-
-    assert ResistorColor.colors() == colors
-  end
 end

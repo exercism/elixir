@@ -7,11 +7,11 @@ defmodule LibraryFees do
     raise "Please implement the before_noon?/1 function"
   end
 
-  def return_datetime(checkout_datetime) do
-    raise "Please implement the return_datetime/1 function"
+  def return_date(checkout_datetime) do
+    raise "Please implement the return_date/1 function"
   end
 
-  def days_late(planned_return_datetime, actual_return_datetime) do
+  def days_late(planned_return_date, actual_return_datetime) do
     raise "Please implement the days_late/2 function"
   end
 
