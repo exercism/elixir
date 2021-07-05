@@ -1,5 +1,4 @@
 defmodule ZebraPuzzleTest do
-  import ZebraPuzzle
   use ExUnit.Case
 
   # @tag :pending

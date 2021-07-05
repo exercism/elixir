@@ -31,7 +31,7 @@ defmodule RPGTest do
     @task_id 2
     test "eating it increases health" do
       character = %Character{health: 50}
-      {byproduct, %Character{} = character} = Edible.eat(%LoafOfBread{}, character)
+      {_byproduct, %Character{} = character} = Edible.eat(%LoafOfBread{}, character)
       assert character.health == 55
     end
 
@@ -53,7 +53,7 @@ defmodule RPGTest do
     @task_id 3
     test "eating it increases mana" do
       character = %Character{mana: 10}
-      {byproduct, %Character{} = character} = Edible.eat(%ManaPotion{strength: 6}, character)
+      {_byproduct, %Character{} = character} = Edible.eat(%ManaPotion{strength: 6}, character)
       assert character.mana == 16
     end
 
@@ -75,7 +75,7 @@ defmodule RPGTest do
     @task_id 4
     test "eating it brings health down to 0" do
       character = %Character{health: 120}
-      {byproduct, %Character{} = character} = Edible.eat(%Poison{}, character)
+      {_byproduct, %Character{} = character} = Edible.eat(%Poison{}, character)
       assert character.health == 0
     end
 
