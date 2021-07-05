@@ -2759,6 +2759,20 @@
           "list-comprehensions"
         ],
         "difficulty": 7
+       },
+       {
+         "slug": "proverb",
+         "name": "Proverb",
+         "uuid": "e230f49d-e92a-4440-8e7d-733755451cf5",
+         "prerequisites": [
+           "lists",
+           "strings",
+           "pattern-matching",
+           "multiple-clause-functions",
+           "enum"
+         ],
+         "practices": [],
+         "difficulty": 4
        }
     ],
     "foregone": [
