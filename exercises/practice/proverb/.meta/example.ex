@@ -12,7 +12,8 @@ defmodule Proverb do
 
   def recite([thing | rest] = strings) do
     lines =
-      Enum.zip_with(strings, rest, fn a, b -> "For want of a #{a} the #{b} was lost." end)
+      Enum.zip(strings, rest)
+      |> Enum.map(fn {a, b} -> "For want of a #{a} the #{b} was lost." end)
       |> Enum.join("\n")
 
     """
