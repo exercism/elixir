@@ -2759,6 +2759,18 @@
           "list-comprehensions"
         ],
         "difficulty": 7
+       },
+       {
+        "slug": "house",
+        "name": "House",
+        "uuid": "5ff34497-3a3f-4aaf-b50c-872e7a7b8f51",
+        "prerequisites": [
+          "lists",
+          "enum",
+          "strings"
+        ],
+        "practices": [],
+        "difficulty": 4
        }
     ],
     "foregone": [
