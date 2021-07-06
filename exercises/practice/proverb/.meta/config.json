@@ -1,6 +1,6 @@
 {
   "authors": ["jiegilet"],
-  "contributors": [],
+  "contributors": [ "angelikatyborska" ],
   "files": {
     "example": [
       ".meta/example.ex"
