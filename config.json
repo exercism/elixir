@@ -2791,6 +2791,19 @@
          "difficulty": 3
        },
        {
+        "slug": "house",
+        "name": "House",
+        "uuid": "5ff34497-3a3f-4aaf-b50c-872e7a7b8f51",
+        "prerequisites": [
+          "lists",
+          "enum",
+          "strings",
+          "ranges"
+        ],
+        "practices": [],
+        "difficulty": 3
+       },
+       {
         "slug": "rectangles",
         "name": "Rectangles",
         "uuid": "bc7f9ea3-4e67-406a-91fe-807859fb9c7f",
