@@ -2735,6 +2735,22 @@
         "difficulty": 7
        },
        {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "1770aab6-2289-4134-b6ac-7d346e421e06",
+        "prerequisites": [
+          "atoms",
+          "integers",
+          "lists",
+          "maps",
+          "pattern-matching",
+          "recursion",
+          "guards"
+        ],
+        "practices": [],
+        "difficulty": 6
+       },
+       {
         "slug": "word-search",
         "name": "Word Search",
         "uuid": "41ab29d0-e094-4910-bb51-b99bdedc7f17",
@@ -2773,6 +2789,24 @@
          ],
          "practices": [],
          "difficulty": 3
+       },
+       {
+        "slug": "rectangles",
+        "name": "Rectangles",
+        "uuid": "bc7f9ea3-4e67-406a-91fe-807859fb9c7f",
+        "prerequisites": [
+          "tuples",
+          "maps",
+          "strings",
+          "charlists",
+          "list-comprehensions",
+          "enum",
+          "ranges"
+        ],
+        "practices": [
+          "list-comprehensions"
+        ],
+        "difficulty": 7
        }
     ],
     "foregone": [

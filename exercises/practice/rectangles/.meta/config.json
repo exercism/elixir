@@ -1,0 +1,16 @@
+{
+  "authors": ["jiegillet"],
+  "contributors": [],
+  "files": {
+    "example": [
+      ".meta/example.ex"
+    ],
+    "solution": [
+      "lib/rectangles.ex"
+    ],
+    "test": [
+      "test/rectangles_test.exs"
+    ]
+  },
+  "blurb": "Count the rectangles in an ASCII diagram."
+}
