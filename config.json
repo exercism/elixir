@@ -2775,6 +2775,24 @@
           "list-comprehensions"
         ],
         "difficulty": 7
+       },
+       {
+        "slug": "rectangles",
+        "name": "Rectangles",
+        "uuid": "bc7f9ea3-4e67-406a-91fe-807859fb9c7f",
+        "prerequisites": [
+          "tuples",
+          "maps",
+          "strings",
+          "charlists",
+          "list-comprehensions",
+          "enum",
+          "ranges"
+        ],
+        "practices": [
+          "list-comprehensions"
+        ],
+        "difficulty": 7
        }
     ],
     "foregone": [
