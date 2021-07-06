@@ -2767,10 +2767,11 @@
         "prerequisites": [
           "lists",
           "enum",
-          "strings"
+          "strings",
+          "ranges"
         ],
         "practices": [],
-        "difficulty": 4
+        "difficulty": 3
        }
     ],
     "foregone": [
