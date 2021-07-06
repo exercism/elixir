@@ -26,8 +26,11 @@ defmodule Generate do
         variables:
           if match?(%{}, input) do
             Enum.map(input, fn
-              {var, %{} = val} -> {var, Enum.map(val, fn {v, _} -> v end)}
-              {var, _} -> {var, nil}
+              {var, %{} = val} ->
+                {Macro.underscore(var), Enum.map(val, fn {v, _} -> Macro.underscore(v) end)}
+
+              {var, _} ->
+                {Macro.underscore(var), nil}
             end)
           else
             [{"input", nil}]
@@ -78,7 +81,10 @@ defmodule Generate do
   end
 
   def print_input(%{} = input),
-    do: Enum.map_join(input, "\n", fn {variable, value} -> "#{variable} = #{inspect(value)}" end)
+    do:
+      Enum.map_join(input, "\n", fn {variable, value} ->
+        "#{Macro.underscore(variable)} = #{inspect(value)}"
+      end)
 
   def print_input(input), do: "input = #{inspect(input)}"
 

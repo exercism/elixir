@@ -1,0 +1,18 @@
+{
+  "authors": ["jiegillet"],
+  "contributors": [],
+  "files": {
+    "example": [
+      ".meta/example.ex"
+    ],
+    "solution": [
+      "lib/knapsack.ex"
+    ],
+    "test": [
+      "test/knapsack_test.exs"
+    ]
+  },
+  "blurb": "Given a knapsack that can only carry a certain weight, determine which items to put in the knapsack in order to maximize their combined value.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Knapsack_problem"
+}
