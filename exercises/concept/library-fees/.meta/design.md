@@ -28,5 +28,3 @@
 ## Concepts
 
 - `dates-and-time`
-
-## Analyzer

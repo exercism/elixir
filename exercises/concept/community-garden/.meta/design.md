@@ -22,5 +22,3 @@
 - `processes`
 - `maps`
 - `structs`
-
-## Analyzer

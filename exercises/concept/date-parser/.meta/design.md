@@ -27,6 +27,3 @@
 
 - `regular-expressions`
 
-## Analyzer
-
-TBD
