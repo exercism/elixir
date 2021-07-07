@@ -397,21 +397,6 @@
         "status": "beta"
       },
       {
-        "slug": "rpn-calculator",
-        "name": "RPN Calculator",
-        "uuid": "f660a2e1-bb50-4626-8d3f-6cd7c44fa8db",
-        "concepts": [
-          "errors",
-          "try-rescue"
-        ],
-        "prerequisites": [
-          "anonymous-functions",
-          "pattern-matching",
-          "structs"
-        ],
-        "status": "beta"
-      },
-      {
         "slug": "remote-control-car",
         "name": "Remote Control Car",
         "uuid": "d8d25b93-d918-421e-bb57-cbdaf428d9e2",
@@ -426,6 +411,21 @@
           "nil",
           "default-arguments",
           "keyword-lists"
+        ],
+        "status": "beta"
+      },
+      {
+        "slug": "rpn-calculator",
+        "name": "RPN Calculator",
+        "uuid": "f660a2e1-bb50-4626-8d3f-6cd7c44fa8db",
+        "concepts": [
+          "errors",
+          "try-rescue"
+        ],
+        "prerequisites": [
+          "anonymous-functions",
+          "pattern-matching",
+          "structs"
         ],
         "status": "beta"
       },
