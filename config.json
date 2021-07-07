@@ -151,16 +151,17 @@
         "status": "beta"
       },
       {
-        "slug": "name-badge",
-        "name": "Name Badge",
-        "uuid": "b6ae6cb4-f908-436f-916c-fa847e4a82fb",
+        "slug": "bird-count",
+        "name": "Bird Count",
+        "uuid": "e17088c8-c40f-4d4c-b5dd-d32f62b8087b",
         "concepts": [
-          "nil",
-          "if"
+          "recursion"
         ],
         "prerequisites": [
-          "strings",
-          "booleans"
+          "lists",
+          "pattern-matching",
+          "multiple-clause-functions",
+          "guards"
         ],
         "status": "beta"
       },
@@ -181,17 +182,16 @@
         "status": "beta"
       },
       {
-        "slug": "bird-count",
-        "name": "Bird Count",
-        "uuid": "e17088c8-c40f-4d4c-b5dd-d32f62b8087b",
+        "slug": "name-badge",
+        "name": "Name Badge",
+        "uuid": "b6ae6cb4-f908-436f-916c-fa847e4a82fb",
         "concepts": [
-          "recursion"
+          "nil",
+          "if"
         ],
         "prerequisites": [
-          "lists",
-          "pattern-matching",
-          "multiple-clause-functions",
-          "guards"
+          "strings",
+          "booleans"
         ],
         "status": "beta"
       },
