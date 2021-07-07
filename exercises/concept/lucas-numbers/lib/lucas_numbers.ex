@@ -6,6 +6,6 @@ defmodule LucasNumbers do
   E.g.: 2, 1, 3, 4, 7, 11, 18, 29, ...
   """
   def generate(count) do
-    raise "Please implement the generate/1 function"
+    # Please implement the generate/1 function
   end
 end
