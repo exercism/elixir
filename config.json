@@ -415,14 +415,6 @@
         "status": "beta"
       },
       {
-        "slug": "mensch-aergere-dich-nicht",
-        "name": "Mensch Ärgere Dich Nicht",
-        "uuid": "3e2f8bc6-20b4-4e8f-a658-9c270342208e",
-        "concepts": [],
-        "prerequisites": [],
-        "status": "deprecated"
-      },
-      {
         "slug": "boutique-suggestions",
         "name": "Boutique Suggestions",
         "uuid": "f8208858-901e-4e5a-9f34-689bf8ad156c",
@@ -576,6 +568,14 @@
           "errors"
         ],
         "status": "beta"
+      },
+      {
+        "slug": "mensch-aergere-dich-nicht",
+        "name": "Mensch Ärgere Dich Nicht",
+        "uuid": "3e2f8bc6-20b4-4e8f-a658-9c270342208e",
+        "concepts": [],
+        "prerequisites": [],
+        "status": "deprecated"
       }
     ],
     "practice": [
