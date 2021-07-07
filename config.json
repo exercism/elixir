@@ -2777,6 +2777,20 @@
         "difficulty": 7
        },
        {
+         "slug": "proverb",
+         "name": "Proverb",
+         "uuid": "e230f49d-e92a-4440-8e7d-733755451cf5",
+         "prerequisites": [
+           "lists",
+           "strings",
+           "pattern-matching",
+           "multiple-clause-functions",
+           "enum"
+         ],
+         "practices": [],
+         "difficulty": 3
+       },
+       {
         "slug": "house",
         "name": "House",
         "uuid": "5ff34497-3a3f-4aaf-b50c-872e7a7b8f51",
