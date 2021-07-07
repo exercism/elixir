@@ -28,6 +28,18 @@ defmodule ReactTest do
   end
 
   @tag :pending
+  test "compute cells calculate values with booleans and strings" do
+    {:ok, cells} =
+      React.new([
+        %InputCell{name: "true", value: true},
+        %InputCell{name: "value", value: "value"},
+        %OutputCell{name: "output", inputs: ["true", "value"], compute: fn a, b -> if(a, do: b, else: "failure") end}
+      ])
+
+    assert React.get_value(cells, "output") == "value"
+  end
+
+  @tag :pending
   test "compute cells take inputs in the right order" do
     {:ok, cells} =
       React.new([
