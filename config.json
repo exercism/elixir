@@ -415,48 +415,6 @@
         "status": "beta"
       },
       {
-        "slug": "rpn-calculator",
-        "name": "RPN Calculator",
-        "uuid": "f660a2e1-bb50-4626-8d3f-6cd7c44fa8db",
-        "concepts": [
-          "errors",
-          "try-rescue"
-        ],
-        "prerequisites": [
-          "anonymous-functions",
-          "pattern-matching",
-          "structs"
-        ],
-        "status": "beta"
-      },
-      {
-        "slug": "stack-underflow",
-        "name": "Stack Underflow",
-        "uuid": "9f698b46-fe8d-4641-a928-bcebfd9678df",
-        "concepts": [
-          "exceptions"
-        ],
-        "prerequisites": [
-          "access-behaviour",
-          "errors"
-        ],
-        "status": "beta"
-      },
-      {
-        "slug": "rpn-calculator-output",
-        "name": "RPN Calculator Output",
-        "uuid": "68a8f721-5db4-4b31-95c8-fa6c38f64327",
-        "concepts": [
-          "try-rescue-else-after",
-          "dynamic-dispatch"
-        ],
-        "prerequisites": [
-          "file",
-          "try-rescue"
-        ],
-        "status": "wip"
-      },
-      {
         "slug": "mensch-aergere-dich-nicht",
         "name": "Mensch Ärgere Dich Nicht",
         "uuid": "3e2f8bc6-20b4-4e8f-a658-9c270342208e",
@@ -526,6 +484,66 @@
         "status": "beta"
       },
       {
+        "slug": "need-for-speed",
+        "name": "Need For Speed",
+        "uuid": "ed189325-7c73-49c7-8572-3dfc0b18b983",
+        "concepts": [
+          "alias",
+          "import"
+        ],
+        "prerequisites": [
+          "strings",
+          "tuples",
+          "keyword-lists",
+          "enum",
+          "structs",
+          "io"
+        ],
+        "status": "beta"
+      },
+      {
+        "slug": "rpn-calculator",
+        "name": "RPN Calculator",
+        "uuid": "f660a2e1-bb50-4626-8d3f-6cd7c44fa8db",
+        "concepts": [
+          "errors",
+          "try-rescue"
+        ],
+        "prerequisites": [
+          "anonymous-functions",
+          "pattern-matching",
+          "structs"
+        ],
+        "status": "beta"
+      },
+      {
+        "slug": "stack-underflow",
+        "name": "Stack Underflow",
+        "uuid": "9f698b46-fe8d-4641-a928-bcebfd9678df",
+        "concepts": [
+          "exceptions"
+        ],
+        "prerequisites": [
+          "access-behaviour",
+          "errors"
+        ],
+        "status": "beta"
+      },
+      {
+        "slug": "rpn-calculator-output",
+        "name": "RPN Calculator Output",
+        "uuid": "68a8f721-5db4-4b31-95c8-fa6c38f64327",
+        "concepts": [
+          "try-rescue-else-after",
+          "dynamic-dispatch"
+        ],
+        "prerequisites": [
+          "file",
+          "try-rescue"
+        ],
+        "status": "wip"
+      },
+      {
         "slug": "rpn-calculator-inspection",
         "name": "RPN Calculator Inspection",
         "uuid": "d99155cd-e03e-48a9-b1f0-ea8d2070a2fb",
@@ -556,24 +574,6 @@
           "lists",
           "anonymous-functions",
           "errors"
-        ],
-        "status": "beta"
-      },
-      {
-        "slug": "need-for-speed",
-        "name": "Need For Speed",
-        "uuid": "ed189325-7c73-49c7-8572-3dfc0b18b983",
-        "concepts": [
-          "alias",
-          "import"
-        ],
-        "prerequisites": [
-          "strings",
-          "tuples",
-          "keyword-lists",
-          "enum",
-          "structs",
-          "io"
         ],
         "status": "beta"
       }
