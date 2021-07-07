@@ -465,20 +465,6 @@
         "status": "deprecated"
       },
       {
-        "slug": "community-garden",
-        "name": "Community Garden",
-        "uuid": "1d6be9ec-5b5c-4c81-9bfa-2e3fc78c978f",
-        "concepts": [
-          "agent"
-        ],
-        "prerequisites": [
-          "processes",
-          "maps",
-          "structs"
-        ],
-        "status": "beta"
-      },
-      {
         "slug": "boutique-suggestions",
         "name": "Boutique Suggestions",
         "uuid": "f8208858-901e-4e5a-9f34-689bf8ad156c",
@@ -491,6 +477,20 @@
           "maps",
           "keyword-lists",
           "tuples"
+        ],
+        "status": "beta"
+      },
+      {
+        "slug": "community-garden",
+        "name": "Community Garden",
+        "uuid": "1d6be9ec-5b5c-4c81-9bfa-2e3fc78c978f",
+        "concepts": [
+          "agent"
+        ],
+        "prerequisites": [
+          "processes",
+          "maps",
+          "structs"
         ],
         "status": "beta"
       },
