@@ -366,6 +366,37 @@
         "status": "beta"
       },
       {
+        "slug": "newsletter",
+        "name": "Newsletter",
+        "uuid": "5564c89c-4706-4a48-99a4-2ad26457f66f",
+        "concepts": [
+          "file"
+        ],
+        "prerequisites": [
+          "strings",
+          "enum",
+          "io",
+          "processes",
+          "pids"
+        ],
+        "status": "beta"
+      },
+      {
+        "slug": "chessboard",
+        "name": "Chessboard",
+        "uuid": "6ea28f3e-a59a-45b0-83a7-38a2e96bdff7",
+        "concepts": [
+          "ranges"
+        ],
+        "prerequisites": [
+          "enum",
+          "integers",
+          "bitstrings",
+          "charlists"
+        ],
+        "status": "beta"
+      },
+      {
         "slug": "rpn-calculator",
         "name": "RPN Calculator",
         "uuid": "f660a2e1-bb50-4626-8d3f-6cd7c44fa8db",
@@ -491,37 +522,6 @@
           "strings",
           "charlists",
           "atoms"
-        ],
-        "status": "beta"
-      },
-      {
-        "slug": "chessboard",
-        "name": "Chessboard",
-        "uuid": "6ea28f3e-a59a-45b0-83a7-38a2e96bdff7",
-        "concepts": [
-          "ranges"
-        ],
-        "prerequisites": [
-          "enum",
-          "integers",
-          "bitstrings",
-          "charlists"
-        ],
-        "status": "beta"
-      },
-      {
-        "slug": "newsletter",
-        "name": "Newsletter",
-        "uuid": "5564c89c-4706-4a48-99a4-2ad26457f66f",
-        "concepts": [
-          "file"
-        ],
-        "prerequisites": [
-          "strings",
-          "enum",
-          "io",
-          "processes",
-          "pids"
         ],
         "status": "beta"
       },
