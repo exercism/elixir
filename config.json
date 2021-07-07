@@ -272,6 +272,37 @@
         "status": "beta"
       },
       {
+        "slug": "wine-cellar",
+        "name": "Wine Cellar",
+        "uuid": "921a03be-662a-4aea-b8fc-a87d199b1528",
+        "concepts": [
+          "keyword-lists"
+        ],
+        "prerequisites": [
+          "lists",
+          "tuples",
+          "atoms",
+          "if",
+          "default-arguments"
+        ],
+        "status": "beta"
+      },
+      {
+        "slug": "dna-encoding",
+        "name": "DNA Encoding",
+        "uuid": "994c8760-8a58-4ef3-8a28-a0f9182f4d9f",
+        "concepts": [
+          "bitstrings",
+          "tail-call-recursion"
+        ],
+        "prerequisites": [
+          "charlists",
+          "recursion",
+          "pattern-matching"
+        ],
+        "status": "beta"
+      },
+      {
         "slug": "basketball-website",
         "name": "Basketball Website",
         "uuid": "ba03df1d-20e4-4527-a8a7-afc97a834975",
@@ -298,21 +329,6 @@
           "pattern-matching",
           "if",
           "bitstrings"
-        ],
-        "status": "beta"
-      },
-      {
-        "slug": "dna-encoding",
-        "name": "DNA Encoding",
-        "uuid": "994c8760-8a58-4ef3-8a28-a0f9182f4d9f",
-        "concepts": [
-          "bitstrings",
-          "tail-call-recursion"
-        ],
-        "prerequisites": [
-          "charlists",
-          "recursion",
-          "pattern-matching"
         ],
         "status": "beta"
       },
@@ -376,22 +392,6 @@
         "prerequisites": [
           "access-behaviour",
           "errors"
-        ],
-        "status": "beta"
-      },
-      {
-        "slug": "wine-cellar",
-        "name": "Wine Cellar",
-        "uuid": "921a03be-662a-4aea-b8fc-a87d199b1528",
-        "concepts": [
-          "keyword-lists"
-        ],
-        "prerequisites": [
-          "lists",
-          "tuples",
-          "atoms",
-          "if",
-          "default-arguments"
         ],
         "status": "beta"
       },
