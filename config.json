@@ -303,6 +303,22 @@
         "status": "beta"
       },
       {
+        "slug": "library-fees",
+        "name": "Library Fees",
+        "uuid": "b5629003-638c-47c0-ad76-a0769f285053",
+        "concepts": [
+          "dates-and-time"
+        ],
+        "prerequisites": [
+          "integers",
+          "floating-point-numbers",
+          "tuples",
+          "atoms",
+          "if"
+        ],
+        "status": "beta"
+      },
+      {
         "slug": "basketball-website",
         "name": "Basketball Website",
         "uuid": "ba03df1d-20e4-4527-a8a7-afc97a834975",
@@ -314,21 +330,6 @@
           "strings",
           "recursion",
           "nil"
-        ],
-        "status": "beta"
-      },
-      {
-        "slug": "file-sniffer",
-        "name": "File Sniffer",
-        "uuid": "1653d476-5354-4d99-a990-1db418a7281c",
-        "concepts": [
-          "binaries"
-        ],
-        "prerequisites": [
-          "strings",
-          "pattern-matching",
-          "if",
-          "bitstrings"
         ],
         "status": "beta"
       },
@@ -346,6 +347,21 @@
           "tuples",
           "nil",
           "anonymous-functions"
+        ],
+        "status": "beta"
+      },
+      {
+        "slug": "file-sniffer",
+        "name": "File Sniffer",
+        "uuid": "1653d476-5354-4d99-a990-1db418a7281c",
+        "concepts": [
+          "binaries"
+        ],
+        "prerequisites": [
+          "strings",
+          "pattern-matching",
+          "if",
+          "bitstrings"
         ],
         "status": "beta"
       },
@@ -506,22 +522,6 @@
           "io",
           "processes",
           "pids"
-        ],
-        "status": "beta"
-      },
-      {
-        "slug": "library-fees",
-        "name": "Library Fees",
-        "uuid": "b5629003-638c-47c0-ad76-a0769f285053",
-        "concepts": [
-          "dates-and-time"
-        ],
-        "prerequisites": [
-          "integers",
-          "floating-point-numbers",
-          "tuples",
-          "atoms",
-          "if"
         ],
         "status": "beta"
       },
