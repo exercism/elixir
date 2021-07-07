@@ -7,14 +7,14 @@ defmodule React do
   end
 
   defmodule OutputCell do
-    defstruct [:name, :inputs, :compute, :value, callbacks: []]
+    defstruct [:name, :inputs, :compute, :value, callbacks: %{}]
 
     @type t :: %OutputCell{
             name: String.t(),
             inputs: [String.t()],
             compute: (... -> any),
             value: any,
-            callbacks: [String.t()]
+            callbacks: %{String.t() => (String.t(), any -> :ok)}
           }
   end
 
@@ -39,17 +39,22 @@ defmodule React do
   @doc """
   Set the value of an input cell
   """
-  @spec set_value(cells :: pid, cell :: String.t(), value :: any) :: %{String.t() => any}
+  @spec set_value(cells :: pid, cell :: String.t(), value :: any) :: :ok
   def set_value(cells, cell, value) do
-    GenServer.call(cells, {:set_value, cell, value})
+    GenServer.cast(cells, {:set_value, cell, value})
   end
 
   @doc """
   Add a callback to an output cell
   """
-  @spec add_callback(cells :: pid, cell :: String.t(), callback :: String.t()) :: :ok
-  def add_callback(cells, cell, callback) do
-    GenServer.cast(cells, {:add_callback, cell, callback})
+  @spec add_callback(
+          cells :: pid,
+          cell :: String.t(),
+          callback :: String.t(),
+          send :: (String.t(), any -> :ok)
+        ) :: :ok
+  def add_callback(cells, cell, callback, send) do
+    GenServer.cast(cells, {:add_callback, cell, callback, send})
   end
 
   @doc """
@@ -95,30 +100,28 @@ defmodule React do
   end
 
   @impl true
-  def handle_call({:set_value, name, value}, _, %State{cells: cells, dependencies: deps} = state) do
+  def handle_cast({:set_value, name, value}, %State{cells: cells, dependencies: deps} = state) do
     %InputCell{} = input = cells[name]
 
-    {cells, callbacks} =
+    cells =
       Map.put(cells, name, %{input | value: value})
       |> update_dependencies(deps[name], deps)
 
-    {:reply, callbacks, %{state | cells: cells}}
+    {:noreply, %{state | cells: cells}}
   end
 
   @impl true
-  def handle_cast({:add_callback, name, callback}, %State{cells: cells} = state) do
+  def handle_cast({:add_callback, name, callback, send}, %State{cells: cells} = state) do
     %OutputCell{callbacks: callbacks} = cell = cells[name]
-
-    {:noreply,
-     %{state | cells: Map.put(cells, name, %{cell | callbacks: [callback | callbacks]})}}
+    callbacks = Map.put(callbacks, callback, send)
+    {:noreply, %{state | cells: Map.put(cells, name, %{cell | callbacks: callbacks})}}
   end
 
   @impl true
   def handle_cast({:remove_callback, name, callback}, %State{cells: cells} = state) do
     %OutputCell{callbacks: callbacks} = cell = cells[name]
-
-    {:noreply,
-     %{state | cells: Map.put(cells, name, %{cell | callbacks: List.delete(callbacks, callback)})}}
+    callbacks = Map.delete(callbacks, name)
+    {:noreply, %{state | cells: Map.put(cells, name, %{cell | callbacks: callbacks})}}
   end
 
   defp initialize_value(%OutputCell{value: nil, inputs: [a], compute: f} = cell, cells) do
@@ -134,9 +137,7 @@ defmodule React do
 
   defp initialize_value(cell, _cells), do: cell
 
-  defp update_dependencies(cells, to_update, dependencies, callbacks \\ %{})
-
-  defp update_dependencies(cells, [name | to_update], dependencies, callbacks) do
+  defp update_dependencies(cells, [name | to_update], dependencies) do
     cell = cells[name]
 
     value =
@@ -148,17 +149,16 @@ defmodule React do
     cells = Map.put(cells, name, %{cell | value: value})
 
     if(value == cell.value) do
-      update_dependencies(cells, to_update, dependencies, callbacks)
+      update_dependencies(cells, to_update, dependencies)
     else
       cells = Map.put(cells, cell, %{cell | value: value})
 
-      callbacks =
-        Enum.reduce(cell.callbacks, callbacks, fn name, calls -> Map.put(calls, name, value) end)
+      Enum.each(cell.callbacks, fn {name, send} -> send.(name, value) end)
 
       next = Map.get(dependencies, name, [])
-      update_dependencies(cells, to_update ++ next, dependencies, callbacks)
+      update_dependencies(cells, to_update ++ next, dependencies)
     end
   end
 
-  defp update_dependencies(cells, _empty, _dependencies, callbacks), do: {cells, callbacks}
+  defp update_dependencies(cells, _empty, _dependencies), do: cells
 end

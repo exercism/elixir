@@ -2,6 +2,9 @@ defmodule ReactTest do
   use ExUnit.Case
   alias React.{InputCell, OutputCell}
 
+  def send_callback(pid),
+    do: fn name, value -> send(pid, {:callback, name, value}) end
+
   # @tag :pending
   test "input cells have a value" do
     {:ok, cells} = React.new([%InputCell{name: "input", value: 10}])
@@ -33,7 +36,11 @@ defmodule ReactTest do
       React.new([
         %InputCell{name: "true", value: true},
         %InputCell{name: "value", value: "value"},
-        %OutputCell{name: "output", inputs: ["true", "value"], compute: fn a, b -> if(a, do: b, else: "failure") end}
+        %OutputCell{
+          name: "output",
+          inputs: ["true", "value"],
+          compute: fn a, b -> if(a, do: b, else: "failure") end
+        }
       ])
 
     assert React.get_value(cells, "output") == "value"
@@ -90,9 +97,10 @@ defmodule ReactTest do
         %OutputCell{name: "output", inputs: ["input"], compute: fn a -> a + 1 end}
       ])
 
-    React.add_callback(cells, "output", "callback1")
-    callbacks = React.set_value(cells, "input", 3)
-    assert callbacks["callback1"] == 4
+    myself = self()
+    React.add_callback(cells, "output", "callback1", send_callback(myself))
+    React.set_value(cells, "input", 3)
+    assert_receive {:callback, "callback1", 4}
   end
 
   @tag :pending
@@ -107,11 +115,12 @@ defmodule ReactTest do
         }
       ])
 
-    React.add_callback(cells, "output", "callback1")
-    callbacks = React.set_value(cells, "input", 2)
-    assert not Map.has_key?(callbacks, "callback1")
-    callbacks = React.set_value(cells, "input", 4)
-    assert callbacks["callback1"] == 222
+    myself = self()
+    React.add_callback(cells, "output", "callback1", send_callback(myself))
+    React.set_value(cells, "input", 2)
+    refute_receive {:callback, _}, 50, "Expected no callback"
+    React.set_value(cells, "input", 4)
+    assert_receive {:callback, "callback1", 222}
   end
 
   @tag :pending
@@ -122,11 +131,12 @@ defmodule ReactTest do
         %OutputCell{name: "output", inputs: ["input"], compute: fn a -> a + 1 end}
       ])
 
-    React.add_callback(cells, "output", "callback1")
-    callbacks = React.set_value(cells, "input", 2)
-    assert callbacks["callback1"] == 3
-    callbacks = React.set_value(cells, "input", 3)
-    assert callbacks["callback1"] == 4
+    myself = self()
+    React.add_callback(cells, "output", "callback1", send_callback(myself))
+    React.set_value(cells, "input", 2)
+    assert_receive {:callback, "callback1", 3}
+    React.set_value(cells, "input", 3)
+    assert_receive {:callback, "callback1", 4}
   end
 
   @tag :pending
@@ -138,11 +148,12 @@ defmodule ReactTest do
         %OutputCell{name: "minus_one", inputs: ["input"], compute: fn a -> a - 1 end}
       ])
 
-    React.add_callback(cells, "plus_one", "callback1")
-    React.add_callback(cells, "minus_one", "callback2")
-    callbacks = React.set_value(cells, "input", 10)
-    assert callbacks["callback1"] == 11
-    assert callbacks["callback2"] == 9
+    myself = self()
+    React.add_callback(cells, "plus_one", "callback1", send_callback(myself))
+    React.add_callback(cells, "minus_one", "callback2", send_callback(myself))
+    React.set_value(cells, "input", 10)
+    assert_receive {:callback, "callback1", 11}
+    assert_receive {:callback, "callback2", 9}
   end
 
   @tag :pending
@@ -153,17 +164,19 @@ defmodule ReactTest do
         %OutputCell{name: "output", inputs: ["input"], compute: fn a -> a + 1 end}
       ])
 
-    React.add_callback(cells, "output", "callback1")
-    React.add_callback(cells, "output", "callback2")
-    callbacks = React.set_value(cells, "input", 31)
-    assert callbacks["callback1"] == 32
-    assert callbacks["callback2"] == 32
+    myself = self()
+    React.add_callback(cells, "output", "callback1", send_callback(myself))
+    React.add_callback(cells, "output", "callback2", send_callback(myself))
+    React.set_value(cells, "input", 31)
+    assert_receive {:callback, "callback1", 32}
+    assert_receive {:callback, "callback2", 32}
     React.remove_callback(cells, "output", "callback1")
-    React.add_callback(cells, "output", "callback3")
-    callbacks = React.set_value(cells, "input", 41)
-    assert not Map.has_key?(callbacks, "callback1")
-    assert callbacks["callback2"] == 42
-    assert callbacks["callback3"] == 42
+
+    React.add_callback(cells, "output", "callback3", send_callback(myself))
+    React.set_value(cells, "input", 41)
+    refute_receive {:callback, _}, 50, "Expected no callback"
+    assert_receive {:callback, "callback2", 42}
+    assert_receive {:callback, "callback3", 42}
   end
 
   @tag :pending
@@ -177,14 +190,15 @@ defmodule ReactTest do
         %OutputCell{name: "output", inputs: ["input"], compute: fn a -> a + 1 end}
       ])
 
-    React.add_callback(cells, "output", "callback1")
-    React.add_callback(cells, "output", "callback2")
+    myself = self()
+    React.add_callback(cells, "output", "callback1", send_callback(myself))
+    React.add_callback(cells, "output", "callback2", send_callback(myself))
     React.remove_callback(cells, "output", "callback1")
     React.remove_callback(cells, "output", "callback1")
     React.remove_callback(cells, "output", "callback1")
-    callbacks = React.set_value(cells, "input", 2)
-    assert not Map.has_key?(callbacks, "callback1")
-    assert callbacks["callback2"] == 3
+    React.set_value(cells, "input", 2)
+    refute_receive {:callback, _}, 50, "Expected no callback"
+    assert_receive {:callback, "callback2", 3}
   end
 
   @tag :pending
@@ -204,9 +218,10 @@ defmodule ReactTest do
         }
       ])
 
-    React.add_callback(cells, "output", "callback1")
-    callbacks = React.set_value(cells, "input", 4)
-    assert callbacks["callback1"] == 10
+    myself = self()
+    React.add_callback(cells, "output", "callback1", send_callback(myself))
+    React.set_value(cells, "input", 4)
+    assert_receive {:callback, "callback1", 10}
   end
 
   @tag :pending
@@ -226,14 +241,15 @@ defmodule ReactTest do
         }
       ])
 
-    React.add_callback(cells, "always_two", "callback1")
-    callbacks = React.set_value(cells, "input", 2)
-    assert not Map.has_key?(callbacks, "callback1")
-    callbacks = React.set_value(cells, "input", 3)
-    assert not Map.has_key?(callbacks, "callback1")
-    callbacks = React.set_value(cells, "input", 4)
-    assert not Map.has_key?(callbacks, "callback1")
-    callbacks = React.set_value(cells, "input", 5)
-    assert not Map.has_key?(callbacks, "callback1")
+    myself = self()
+    React.add_callback(cells, "always_two", "callback1", send_callback(myself))
+    React.set_value(cells, "input", 2)
+    refute_receive {:callback, _}, 50, "Expected no callback"
+    React.set_value(cells, "input", 3)
+    refute_receive {:callback, _}, 50, "Expected no callback"
+    React.set_value(cells, "input", 4)
+    refute_receive {:callback, _}, 50, "Expected no callback"
+    React.set_value(cells, "input", 5)
+    refute_receive {:callback, _}, 50, "Expected no callback"
   end
 end

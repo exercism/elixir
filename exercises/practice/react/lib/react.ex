@@ -5,14 +5,14 @@ defmodule React do
   end
 
   defmodule OutputCell do
-    defstruct [:name, :inputs, :compute, :value, :callbacks]
+    defstruct [:name, :inputs, :compute, :value, callbacks: %{}]
 
     @type t :: %OutputCell{
             name: String.t(),
             inputs: [String.t()],
             compute: (... -> any),
             value: any,
-            callbacks: [String.t()]
+            callbacks: %{String.t() => (String.t(), any -> :ok)}
           }
   end
 
@@ -33,15 +33,20 @@ defmodule React do
   @doc """
   Set the value of an input cell
   """
-  @spec set_value(cells :: pid, cell :: String.t(), value :: any) :: %{String.t() => any}
+  @spec set_value(cells :: pid, cell :: String.t(), value :: any) :: :ok
   def set_value(cells, cell, value) do
   end
 
   @doc """
   Add a callback to an output cell
   """
-  @spec add_callback(cells :: pid, cell :: String.t(), callback :: String.t()) :: :ok
-  def add_callback(cells, cell, callback) do
+  @spec add_callback(
+          cells :: pid,
+          cell :: String.t(),
+          callback :: String.t(),
+          send :: (String.t(), any -> :ok)
+        ) :: :ok
+  def add_callback(cells, cell, callback, send) do
   end
 
   @doc """
