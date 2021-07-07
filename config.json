@@ -182,16 +182,20 @@
         "status": "beta"
       },
       {
-        "slug": "name-badge",
-        "name": "Name Badge",
-        "uuid": "b6ae6cb4-f908-436f-916c-fa847e4a82fb",
+        "slug": "city-office",
+        "name": "City Office",
+        "uuid": "07125322-4dce-4275-936e-4452a6aad32a",
         "concepts": [
-          "nil",
-          "if"
+          "docs",
+          "typespecs"
         ],
         "prerequisites": [
+          "integers",
+          "tuples",
+          "lists",
           "strings",
-          "booleans"
+          "maps",
+          "multiple-clause-functions"
         ],
         "status": "beta"
       },
@@ -208,6 +212,32 @@
           "recursion",
           "pattern-matching",
           "guards"
+        ],
+        "status": "beta"
+      },
+      {
+        "slug": "date-parser",
+        "name": "Date Parser",
+        "uuid": "57198686-71c9-4f38-973a-a111435560e7",
+        "concepts": [
+          "regular-expressions"
+        ],
+        "prerequisites": [
+          "strings"
+        ],
+        "status": "beta"
+      },
+      {
+        "slug": "name-badge",
+        "name": "Name Badge",
+        "uuid": "b6ae6cb4-f908-436f-916c-fa847e4a82fb",
+        "concepts": [
+          "nil",
+          "if"
+        ],
+        "prerequisites": [
+          "strings",
+          "booleans"
         ],
         "status": "beta"
       },
@@ -388,18 +418,6 @@
         "status": "beta"
       },
       {
-        "slug": "date-parser",
-        "name": "Date Parser",
-        "uuid": "57198686-71c9-4f38-973a-a111435560e7",
-        "concepts": [
-          "regular-expressions"
-        ],
-        "prerequisites": [
-          "strings"
-        ],
-        "status": "beta"
-      },
-      {
         "slug": "boutique-suggestions",
         "name": "Boutique Suggestions",
         "uuid": "f8208858-901e-4e5a-9f34-689bf8ad156c",
@@ -538,24 +556,6 @@
           "lists",
           "anonymous-functions",
           "errors"
-        ],
-        "status": "beta"
-      },
-      {
-        "slug": "city-office",
-        "name": "City Office",
-        "uuid": "07125322-4dce-4275-936e-4452a6aad32a",
-        "concepts": [
-          "docs",
-          "typespecs"
-        ],
-        "prerequisites": [
-          "integers",
-          "tuples",
-          "lists",
-          "strings",
-          "maps",
-          "multiple-clause-functions"
         ],
         "status": "beta"
       },
