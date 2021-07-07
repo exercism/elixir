@@ -228,6 +228,20 @@
         "status": "beta"
       },
       {
+        "slug": "rpg-character-sheet",
+        "name": "RPG Character Sheet",
+        "uuid": "83c31f5f-fc94-4315-9053-df5a5f5d5fb7",
+        "concepts": [
+          "io"
+        ],
+        "prerequisites": [
+          "strings",
+          "maps",
+          "atoms"
+        ],
+        "status": "beta"
+      },
+      {
         "slug": "name-badge",
         "name": "Name Badge",
         "uuid": "b6ae6cb4-f908-436f-916c-fa847e4a82fb",
@@ -238,6 +252,22 @@
         "prerequisites": [
           "strings",
           "booleans"
+        ],
+        "status": "beta"
+      },
+      {
+        "slug": "take-a-number",
+        "name": "Take-A-Number",
+        "uuid": "bec0b00f-816e-443a-af94-14ab4125e505",
+        "concepts": [
+          "processes",
+          "pids"
+        ],
+        "prerequisites": [
+          "atoms",
+          "recursion",
+          "pattern-matching",
+          "tuples"
         ],
         "status": "beta"
       },
@@ -380,22 +410,6 @@
         "status": "wip"
       },
       {
-        "slug": "take-a-number",
-        "name": "Take-A-Number",
-        "uuid": "bec0b00f-816e-443a-af94-14ab4125e505",
-        "concepts": [
-          "processes",
-          "pids"
-        ],
-        "prerequisites": [
-          "atoms",
-          "recursion",
-          "pattern-matching",
-          "tuples"
-        ],
-        "status": "beta"
-      },
-      {
         "slug": "mensch-aergere-dich-nicht",
         "name": "Mensch Ärgere Dich Nicht",
         "uuid": "3e2f8bc6-20b4-4e8f-a658-9c270342208e",
@@ -443,20 +457,6 @@
         "prerequisites": [
           "structs",
           "nil"
-        ],
-        "status": "beta"
-      },
-      {
-        "slug": "rpg-character-sheet",
-        "name": "RPG Character Sheet",
-        "uuid": "83c31f5f-fc94-4315-9053-df5a5f5d5fb7",
-        "concepts": [
-          "io"
-        ],
-        "prerequisites": [
-          "strings",
-          "maps",
-          "atoms"
         ],
         "status": "beta"
       },
