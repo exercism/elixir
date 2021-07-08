@@ -41,7 +41,8 @@ if opts[:write] do
 
   File.write!("config.json", reordered_file)
 else
-  if desired_exercise_order === actual_exercise_order do
+  if desired_exercise_order === actual_exercise_order &&
+       Enum.at(desired_exercise_order, 0) == "hello-world" do
     IO.write("Practice exercises are ordered #{IO.ANSI.green()}✔#{IO.ANSI.reset()}\n")
   else
     IO.write("Practice exercises are not ordered #{IO.ANSI.red()}⨯#{IO.ANSI.reset()}\n")
