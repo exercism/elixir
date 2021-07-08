@@ -1,19 +1,18 @@
 defmodule ReactTest do
   use ExUnit.Case
-  alias React.{InputCell, OutputCell}
 
   def send_callback(pid),
     do: fn name, value -> send(pid, {:callback, name, value}) end
 
   # @tag :pending
   test "input cells have a value" do
-    {:ok, cells} = React.new([%InputCell{name: "input", value: 10}])
+    {:ok, cells} = React.new([%{type: :input, name: "input", value: 10}])
     assert React.get_value(cells, "input") == 10
   end
 
   @tag :pending
   test "an input cell's value can be set" do
-    {:ok, cells} = React.new([%InputCell{name: "input", value: 4}])
+    {:ok, cells} = React.new([%{type: :input, name: "input", value: 4}])
 
     React.set_value(cells, "input", 20)
     assert React.get_value(cells, "input") == 20
@@ -23,8 +22,8 @@ defmodule ReactTest do
   test "compute cells calculate initial value" do
     {:ok, cells} =
       React.new([
-        %InputCell{name: "input", value: 1},
-        %OutputCell{name: "output", inputs: ["input"], compute: fn a -> a + 1 end}
+        %{type: :input, name: "input", value: 1},
+        %{type: :output, name: "output", inputs: ["input"], compute: fn a -> a + 1 end}
       ])
 
     assert React.get_value(cells, "output") == 2
@@ -34,9 +33,10 @@ defmodule ReactTest do
   test "compute cells calculate values with booleans and strings" do
     {:ok, cells} =
       React.new([
-        %InputCell{name: "true", value: true},
-        %InputCell{name: "value", value: "value"},
-        %OutputCell{
+        %{type: :input, name: "true", value: true},
+        %{type: :input, name: "value", value: "value"},
+        %{
+          type: :output,
           name: "output",
           inputs: ["true", "value"],
           compute: fn a, b -> if(a, do: b, else: "failure") end
@@ -50,9 +50,14 @@ defmodule ReactTest do
   test "compute cells take inputs in the right order" do
     {:ok, cells} =
       React.new([
-        %InputCell{name: "one", value: 1},
-        %InputCell{name: "two", value: 2},
-        %OutputCell{name: "output", inputs: ["one", "two"], compute: fn a, b -> a + b * 10 end}
+        %{type: :input, name: "one", value: 1},
+        %{type: :input, name: "two", value: 2},
+        %{
+          type: :output,
+          name: "output",
+          inputs: ["one", "two"],
+          compute: fn a, b -> a + b * 10 end
+        }
       ])
 
     assert React.get_value(cells, "output") == 21
@@ -62,8 +67,8 @@ defmodule ReactTest do
   test "compute cells update value when dependencies are changed" do
     {:ok, cells} =
       React.new([
-        %InputCell{name: "input", value: 1},
-        %OutputCell{name: "output", inputs: ["input"], compute: fn a -> a + 1 end}
+        %{type: :input, name: "input", value: 1},
+        %{type: :output, name: "output", inputs: ["input"], compute: fn a -> a + 1 end}
       ])
 
     React.set_value(cells, "input", 3)
@@ -74,10 +79,11 @@ defmodule ReactTest do
   test "compute cells can depend on other compute cells" do
     {:ok, cells} =
       React.new([
-        %InputCell{name: "input", value: 1},
-        %OutputCell{name: "times_two", inputs: ["input"], compute: fn a -> a * 2 end},
-        %OutputCell{name: "times_thirty", inputs: ["input"], compute: fn a -> a * 30 end},
-        %OutputCell{
+        %{type: :input, name: "input", value: 1},
+        %{type: :output, name: "times_two", inputs: ["input"], compute: fn a -> a * 2 end},
+        %{type: :output, name: "times_thirty", inputs: ["input"], compute: fn a -> a * 30 end},
+        %{
+          type: :output,
           name: "output",
           inputs: ["times_two", "times_thirty"],
           compute: fn a, b -> a + b end
@@ -93,8 +99,8 @@ defmodule ReactTest do
   test "compute cells fire callbacks" do
     {:ok, cells} =
       React.new([
-        %InputCell{name: "input", value: 1},
-        %OutputCell{name: "output", inputs: ["input"], compute: fn a -> a + 1 end}
+        %{type: :input, name: "input", value: 1},
+        %{type: :output, name: "output", inputs: ["input"], compute: fn a -> a + 1 end}
       ])
 
     myself = self()
@@ -107,8 +113,9 @@ defmodule ReactTest do
   test "callback cells only fire on change" do
     {:ok, cells} =
       React.new([
-        %InputCell{name: "input", value: 1},
-        %OutputCell{
+        %{type: :input, name: "input", value: 1},
+        %{
+          type: :output,
           name: "output",
           inputs: ["input"],
           compute: fn a -> if(a < 3, do: 111, else: 222) end
@@ -127,8 +134,8 @@ defmodule ReactTest do
   test "callbacks do not report already reported values" do
     {:ok, cells} =
       React.new([
-        %InputCell{name: "input", value: 1},
-        %OutputCell{name: "output", inputs: ["input"], compute: fn a -> a + 1 end}
+        %{type: :input, name: "input", value: 1},
+        %{type: :output, name: "output", inputs: ["input"], compute: fn a -> a + 1 end}
       ])
 
     myself = self()
@@ -143,9 +150,9 @@ defmodule ReactTest do
   test "callbacks can fire from multiple cells" do
     {:ok, cells} =
       React.new([
-        %InputCell{name: "input", value: 1},
-        %OutputCell{name: "plus_one", inputs: ["input"], compute: fn a -> a + 1 end},
-        %OutputCell{name: "minus_one", inputs: ["input"], compute: fn a -> a - 1 end}
+        %{type: :input, name: "input", value: 1},
+        %{type: :output, name: "plus_one", inputs: ["input"], compute: fn a -> a + 1 end},
+        %{type: :output, name: "minus_one", inputs: ["input"], compute: fn a -> a - 1 end}
       ])
 
     myself = self()
@@ -160,8 +167,8 @@ defmodule ReactTest do
   test "callbacks can be added and removed" do
     {:ok, cells} =
       React.new([
-        %InputCell{name: "input", value: 11},
-        %OutputCell{name: "output", inputs: ["input"], compute: fn a -> a + 1 end}
+        %{type: :input, name: "input", value: 11},
+        %{type: :output, name: "output", inputs: ["input"], compute: fn a -> a + 1 end}
       ])
 
     myself = self()
@@ -186,8 +193,8 @@ defmodule ReactTest do
     # or causes an out of bounds access.
     {:ok, cells} =
       React.new([
-        %InputCell{name: "input", value: 1},
-        %OutputCell{name: "output", inputs: ["input"], compute: fn a -> a + 1 end}
+        %{type: :input, name: "input", value: 1},
+        %{type: :output, name: "output", inputs: ["input"], compute: fn a -> a + 1 end}
       ])
 
     myself = self()
@@ -207,11 +214,12 @@ defmodule ReactTest do
     # when not all of the inputs of a compute cell have propagated new values.
     {:ok, cells} =
       React.new([
-        %InputCell{name: "input", value: 1},
-        %OutputCell{name: "plus_one", inputs: ["input"], compute: fn a -> a + 1 end},
-        %OutputCell{name: "minus_one1", inputs: ["input"], compute: fn a -> a - 1 end},
-        %OutputCell{name: "minus_one2", inputs: ["minus_one1"], compute: fn a -> a - 1 end},
-        %OutputCell{
+        %{type: :input, name: "input", value: 1},
+        %{type: :output, name: "plus_one", inputs: ["input"], compute: fn a -> a + 1 end},
+        %{type: :output, name: "minus_one1", inputs: ["input"], compute: fn a -> a - 1 end},
+        %{type: :output, name: "minus_one2", inputs: ["minus_one1"], compute: fn a -> a - 1 end},
+        %{
+          type: :output,
           name: "output",
           inputs: ["plus_one", "minus_one2"],
           compute: fn a, b -> a * b end
@@ -231,10 +239,11 @@ defmodule ReactTest do
     # This is incorrect since the specification indicates only to call callbacks on change.
     {:ok, cells} =
       React.new([
-        %InputCell{name: "input", value: 1},
-        %OutputCell{name: "plus_one", inputs: ["input"], compute: fn a -> a + 1 end},
-        %OutputCell{name: "minus_one", inputs: ["input"], compute: fn a -> a - 1 end},
-        %OutputCell{
+        %{type: :input, name: "input", value: 1},
+        %{type: :output, name: "plus_one", inputs: ["input"], compute: fn a -> a + 1 end},
+        %{type: :output, name: "minus_one", inputs: ["input"], compute: fn a -> a - 1 end},
+        %{
+          type: :output,
           name: "always_two",
           inputs: ["plus_one", "minus_one"],
           compute: fn a, b -> a - b end

@@ -1,25 +1,8 @@
 defmodule React do
-  defmodule InputCell do
-    defstruct [:name, :value]
-    @type t :: %InputCell{name: String.t(), value: any}
-  end
-
-  defmodule OutputCell do
-    defstruct [:name, :inputs, :compute, :value, callbacks: %{}]
-
-    @type t :: %OutputCell{
-            name: String.t(),
-            inputs: [String.t()],
-            compute: (... -> any),
-            value: any,
-            callbacks: %{String.t() => (String.t(), any -> :ok)}
-          }
-  end
-
   @doc """
   Start a reactive system
   """
-  @spec new(cells :: [InputCell.t() | OutputCell.t()]) :: {:ok, pid}
+  @spec new(cells :: [%{atom => any}]) :: {:ok, pid}
   def new(cells) do
   end
 

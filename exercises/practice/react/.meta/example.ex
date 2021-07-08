@@ -12,7 +12,7 @@ defmodule React do
     @type t :: %OutputCell{
             name: String.t(),
             inputs: [String.t()],
-            compute: (... -> any),
+            compute: fun(),
             value: any,
             callbacks: %{String.t() => (String.t(), any -> :ok)}
           }
@@ -23,7 +23,7 @@ defmodule React do
   @doc """
   Start a reactive system
   """
-  @spec new(cells :: [InputCell.t() | OutputCell.t()]) :: {:ok, pid}
+  @spec new(cells :: [%{atom => any}]) :: {:ok, pid}
   def new(cells) do
     GenServer.start_link(React, cells)
   end
@@ -73,7 +73,14 @@ defmodule React do
 
   @impl true
   def init(cells) do
-    cells = Map.new(cells, fn cell -> {cell.name, cell} end)
+    cells =
+      Map.new(cells, fn
+        %{type: :input} = cell ->
+          {cell.name, %InputCell{name: cell.name, value: cell.value}}
+
+        %{type: :output} = cell ->
+          {cell.name, %OutputCell{name: cell.name, inputs: cell.inputs, compute: cell.compute}}
+      end)
 
     initialized_cells =
       Map.new(cells, fn {name, cell} -> {name, initialize_value(cell, cells)} end)
