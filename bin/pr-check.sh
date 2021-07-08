@@ -19,7 +19,7 @@ echo "Running check_concepts.exs"
 CONCEPTS_EXIT_CODE="$?"
 
 echo "Running check_practice_exercise_order.exs"
-(elixir bin/check_practice_exercise_order.exs --no-warn)
+(elixir bin/check_practice_exercise_order.exs)
 PRACTICE_ORDER_EXIT_CODE="$?"
 
 if [ "$CHECK_FORMAT_EXIT_CODE" -ne 0 -o "$DIALYZER_EXIT_CODE" -ne 0 -o "$CONCEPTS_EXIT_CODE" -ne 0 -o "$PRACTICE_ORDER_EXIT_CODE" -ne 0 ]
