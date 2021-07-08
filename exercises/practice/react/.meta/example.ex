@@ -120,7 +120,7 @@ defmodule React do
   @impl true
   def handle_cast({:remove_callback, name, callback}, %State{cells: cells} = state) do
     %OutputCell{callbacks: callbacks} = cell = cells[name]
-    callbacks = Map.delete(callbacks, name)
+    callbacks = Map.delete(callbacks, callback)
     {:noreply, %{state | cells: Map.put(cells, name, %{cell | callbacks: callbacks})}}
   end
 
