@@ -43,5 +43,6 @@ else
   else
     IO.write("Practice exercises are not ordered #{IO.ANSI.red()}⨯#{IO.ANSI.reset()}\n")
     IO.write("Rerun this script with --write to fix that.\n")
+    exit(1)
   end
 end
