@@ -36,7 +36,10 @@ actual_exercise_order =
   |> Enum.map(& &1["slug"])
 
 if opts[:write] do
-  # TODO
+  {reordered_file, 0} =
+    System.cmd("jq", [".exercises.practice|=sort_by(.difficulty, .name)", "config.json"])
+
+  File.write!("config.json", reordered_file)
 else
   if desired_exercise_order === actual_exercise_order do
     IO.write("Practice exercises are ordered #{IO.ANSI.green()}✔#{IO.ANSI.reset()}\n")
