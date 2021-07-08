@@ -2,7 +2,7 @@ defmodule BasketballWebsiteTest do
   use ExUnit.Case
 
   describe "extract_from_path retrieves from" do
-    @task_id 1
+    @tag task_id: 1
     test "first layer" do
       team_data = %{
         "coach" => %{},
@@ -13,7 +13,7 @@ defmodule BasketballWebsiteTest do
       assert BasketballWebsite.extract_from_path(team_data, "team_name") == "Hoop Masters"
     end
 
-    @task_id 1
+    @tag task_id: 1
     test "second layer" do
       team_data = %{
         "coach" => %{
@@ -27,7 +27,7 @@ defmodule BasketballWebsiteTest do
       assert BasketballWebsite.extract_from_path(team_data, "coach.first_name") == "Jane"
     end
 
-    @task_id 1
+    @tag task_id: 1
     test "third layer" do
       team_data = %{
         "coach" => %{},
@@ -51,7 +51,7 @@ defmodule BasketballWebsiteTest do
       assert BasketballWebsite.extract_from_path(team_data, "players.99.first_name") == "Amalee"
     end
 
-    @task_id 1
+    @tag task_id: 1
     test "fourth layer" do
       team_data = %{
         "coach" => %{},
@@ -88,7 +88,7 @@ defmodule BasketballWebsiteTest do
   end
 
   describe "extract_from_path returns nil from nonexistent last key in" do
-    @task_id 1
+    @tag task_id: 1
     test "first layer" do
       team_data = %{
         "coach" => %{},
@@ -99,7 +99,7 @@ defmodule BasketballWebsiteTest do
       assert BasketballWebsite.extract_from_path(team_data, "team_song") == nil
     end
 
-    @task_id 1
+    @tag task_id: 1
     test "second layer" do
       team_data = %{
         "coach" => %{
@@ -113,7 +113,7 @@ defmodule BasketballWebsiteTest do
       assert BasketballWebsite.extract_from_path(team_data, "coach.age") == nil
     end
 
-    @task_id 1
+    @tag task_id: 1
     test "third layer" do
       team_data = %{
         "coach" => %{},
@@ -131,7 +131,7 @@ defmodule BasketballWebsiteTest do
       assert BasketballWebsite.extract_from_path(team_data, "players.32.height") == nil
     end
 
-    @task_id 1
+    @tag task_id: 1
     test "fourth layer" do
       team_data = %{
         "coach" => %{},
@@ -155,7 +155,7 @@ defmodule BasketballWebsiteTest do
     end
   end
 
-  @task_id 1
+  @tag task_id: 1
   test "extract_from_path returns nil from nonexistent path" do
     team_data = %{
       "coach" => %{},
@@ -170,7 +170,7 @@ defmodule BasketballWebsiteTest do
   end
 
   describe "get_in_path retrieves from" do
-    @task_id 2
+    @tag task_id: 2
     test "first layer" do
       team_data = %{
         "coach" => %{},
@@ -181,7 +181,7 @@ defmodule BasketballWebsiteTest do
       assert BasketballWebsite.get_in_path(team_data, "team_name") == "Hoop Masters"
     end
 
-    @task_id 2
+    @tag task_id: 2
     test "second layer" do
       team_data = %{
         "coach" => %{
@@ -195,7 +195,7 @@ defmodule BasketballWebsiteTest do
       assert BasketballWebsite.get_in_path(team_data, "coach.first_name") == "Jane"
     end
 
-    @task_id 2
+    @tag task_id: 2
     test "third layer" do
       team_data = %{
         "coach" => %{},
@@ -219,7 +219,7 @@ defmodule BasketballWebsiteTest do
       assert BasketballWebsite.get_in_path(team_data, "players.99.first_name") == "Amalee"
     end
 
-    @task_id 2
+    @tag task_id: 2
     test "fourth layer" do
       team_data = %{
         "coach" => %{},
@@ -256,7 +256,7 @@ defmodule BasketballWebsiteTest do
   end
 
   describe "get_in_path returns nil from nonexistent last key in" do
-    @task_id 2
+    @tag task_id: 2
     test "first layer" do
       team_data = %{
         "coach" => %{},
@@ -267,7 +267,7 @@ defmodule BasketballWebsiteTest do
       assert BasketballWebsite.get_in_path(team_data, "team_song") == nil
     end
 
-    @task_id 2
+    @tag task_id: 2
     test "second layer" do
       team_data = %{
         "coach" => %{
@@ -281,7 +281,7 @@ defmodule BasketballWebsiteTest do
       assert BasketballWebsite.get_in_path(team_data, "coach.age") == nil
     end
 
-    @task_id 2
+    @tag task_id: 2
     test "third layer" do
       team_data = %{
         "coach" => %{},
@@ -299,7 +299,7 @@ defmodule BasketballWebsiteTest do
       assert BasketballWebsite.get_in_path(team_data, "players.32.height") == nil
     end
 
-    @task_id 2
+    @tag task_id: 2
     test "fourth layer" do
       team_data = %{
         "coach" => %{},
@@ -321,7 +321,7 @@ defmodule BasketballWebsiteTest do
     end
   end
 
-  @task_id 2
+  @tag task_id: 2
   test "get_in_path returns nil from nonexistent path" do
     team_data = %{
       "coach" => %{},

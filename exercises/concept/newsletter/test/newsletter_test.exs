@@ -10,7 +10,7 @@ defmodule NewsletterTest do
   end
 
   describe "read_emails" do
-    @task_id 1
+    @tag task_id: 1
     test "returns a list of all lines in a file" do
       emails_file_path = Path.join(["assets", "emails.txt"])
 
@@ -22,7 +22,7 @@ defmodule NewsletterTest do
              ]
     end
 
-    @task_id 1
+    @tag task_id: 1
     test "returns an empty list if the file if empty" do
       empty_file_path = Path.join(["assets", "empty.txt"])
       assert Newsletter.read_emails(empty_file_path) == []
@@ -30,14 +30,14 @@ defmodule NewsletterTest do
   end
 
   describe "open_log" do
-    @task_id 2
+    @tag task_id: 2
     test "returns a pid" do
       file = Newsletter.open_log(@temp_file_path)
       assert is_pid(file)
       File.close(file)
     end
 
-    @task_id 2
+    @tag task_id: 2
     test "opens the file for writing" do
       file = Newsletter.open_log(@temp_file_path)
       assert IO.write(file, "hello") == :ok
@@ -47,14 +47,14 @@ defmodule NewsletterTest do
   end
 
   describe "log_sent_email" do
-    @task_id 3
+    @tag task_id: 3
     test "returns ok" do
       file = File.open!(@temp_file_path, [:write])
       assert Newsletter.log_sent_email(file, "janice@example.com") == :ok
       File.close(file)
     end
 
-    @task_id 3
+    @tag task_id: 3
     test "writes the email address to the given file" do
       file = File.open!(@temp_file_path, [:write])
       Newsletter.log_sent_email(file, "joe@example.com")
@@ -62,7 +62,7 @@ defmodule NewsletterTest do
       File.close(file)
     end
 
-    @task_id 3
+    @tag task_id: 3
     test "writes many email addresses to the given file" do
       file = File.open!(@temp_file_path, [:write])
       Newsletter.log_sent_email(file, "joe@example.com")
@@ -77,13 +77,13 @@ defmodule NewsletterTest do
   end
 
   describe "close_log" do
-    @task_id 4
+    @tag task_id: 4
     test "returns ok" do
       file = File.open!(@temp_file_path, [:write])
       assert Newsletter.close_log(file) == :ok
     end
 
-    @task_id 4
+    @tag task_id: 4
     test "closes the file" do
       file = File.open!(@temp_file_path, [:read])
       assert Newsletter.close_log(file) == :ok
@@ -92,7 +92,7 @@ defmodule NewsletterTest do
   end
 
   describe "send_newsletter" do
-    @task_id 5
+    @tag task_id: 5
     test "returns ok" do
       send_fun = fn _ -> :ok end
 
@@ -103,7 +103,7 @@ defmodule NewsletterTest do
              ) == :ok
     end
 
-    @task_id 5
+    @tag task_id: 5
     test "calls send function for every email from the emails file" do
       send_fun = fn email -> send(self(), {:send, email}) && :ok end
 
@@ -115,7 +115,7 @@ defmodule NewsletterTest do
       assert_received {:send, "dave@example.com"}
     end
 
-    @task_id 5
+    @tag task_id: 5
     test "logs emails that were sent" do
       send_fun = fn _ -> :ok end
 
@@ -130,7 +130,7 @@ defmodule NewsletterTest do
                """
     end
 
-    @task_id 5
+    @tag task_id: 5
     test "does not log emails that could not be sent" do
       send_fun = fn
         "bob@example.com" -> :error
@@ -146,7 +146,7 @@ defmodule NewsletterTest do
              """
     end
 
-    @task_id 5
+    @tag task_id: 5
     test "logs the email immediately after it was sent" do
       send_fun = fn email ->
         case email do

@@ -4,7 +4,7 @@ defmodule NeedForSpeedTest do
   import ExUnit.CaptureIO
 
   describe "print_race" do
-    @task_id nil
+    @tag task_id: nil
     test "prints a race with no cars" do
       race = %NeedForSpeed.Race{
         title: "Need For Speed 2021",
@@ -24,7 +24,7 @@ defmodule NeedForSpeedTest do
              """
     end
 
-    @task_id nil
+    @tag task_id: nil
     test "prints a race with a red car" do
       car = NeedForSpeed.RemoteControlCar.new(:red, "The Fox")
 
@@ -50,7 +50,7 @@ defmodule NeedForSpeedTest do
              """
     end
 
-    @task_id nil
+    @tag task_id: nil
     test "prints a race with a blue car" do
       car = NeedForSpeed.RemoteControlCar.new(:blue, "The Hurricane")
 
@@ -76,7 +76,7 @@ defmodule NeedForSpeedTest do
              """
     end
 
-    @task_id nil
+    @tag task_id: nil
     test "prints a race with a green car" do
       car = NeedForSpeed.RemoteControlCar.new(:green, "The Grasshopper")
 
@@ -102,7 +102,7 @@ defmodule NeedForSpeedTest do
              """
     end
 
-    @task_id nil
+    @tag task_id: nil
     test "prints a race in progress with many cars" do
       red_car = NeedForSpeed.RemoteControlCar.new(:red, "The Fox")
       blue_car = NeedForSpeed.RemoteControlCar.new(:blue, "The Hurricane")

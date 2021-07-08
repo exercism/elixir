@@ -18,7 +18,7 @@ defmodule RPNCalculator.OutputTest do
   end
 
   describe "write/3" do
-    @task_id 1
+    @tag task_id: 1
     test "returns ok tuple if function succeeds" do
       resource = __MODULE__
       filename = "filename"
@@ -32,7 +32,7 @@ defmodule RPNCalculator.OutputTest do
 
     E.g.) resource.open(filename)
     """
-    @task_id 1
+    @tag task_id: 1
     test "opens resource" do
       resource = __MODULE__
       filename = "filename"
@@ -45,7 +45,7 @@ defmodule RPNCalculator.OutputTest do
     @use_write_error_message """
     Use IO.write/2 to write to the opened `filename`.
     """
-    @task_id 2
+    @tag task_id: 2
     test "writes to resource" do
       resource = __MODULE__
       filename = "filename"
@@ -56,7 +56,7 @@ defmodule RPNCalculator.OutputTest do
              @use_write_error_message
     end
 
-    @task_id 2
+    @tag task_id: 2
     test "rescues and returns error tuple from raised error" do
       resource = __MODULE__
       bad_filename = "bad_filename"
@@ -71,7 +71,7 @@ defmodule RPNCalculator.OutputTest do
 
     E.g.) resource.close(filename)
     """
-    @task_id 3
+    @tag task_id: 3
     test "closes resource" do
       resource = __MODULE__
       filename = "filename"
@@ -81,7 +81,7 @@ defmodule RPNCalculator.OutputTest do
       assert_received :close, @use_close_error_message
     end
 
-    @task_id 3
+    @tag task_id: 3
     test "closes resource even when rescuing from raised error" do
       resource = __MODULE__
       bad_filename = "bad_filename"
