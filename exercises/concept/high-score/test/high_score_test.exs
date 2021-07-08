@@ -4,20 +4,20 @@ defmodule HighScoreTest do
   # Trivia: Scores used in this test suite are based on lines of code
   # added to the elixir-lang/elixir github repository as of Apr 27, 2020.
 
-  @task_id 1
+  @tag task_id: 1
   test "new/1 result in empty score map" do
     assert HighScore.new() == %{}
   end
 
   describe "add_player/2" do
-    @task_id 2
+    @tag task_id: 2
     test "add player without score to empty score map" do
       scores = HighScore.new()
 
       assert HighScore.add_player(scores, "José Valim") == %{"José Valim" => 0}
     end
 
-    @task_id 2
+    @tag task_id: 2
     test "add two players without score to empty map" do
       scores =
         HighScore.new()
@@ -27,7 +27,7 @@ defmodule HighScoreTest do
       assert scores == %{"Chris McCord" => 0, "José Valim" => 0}
     end
 
-    @task_id 2
+    @tag task_id: 2
     test "add player with score to empty score map" do
       scores =
         HighScore.new()
@@ -36,7 +36,7 @@ defmodule HighScoreTest do
       assert scores == %{"José Valim" => 486_373}
     end
 
-    @task_id 2
+    @tag task_id: 2
     test "add players with scores to empty score map" do
       scores =
         HighScore.new()
@@ -48,7 +48,7 @@ defmodule HighScoreTest do
   end
 
   describe "remove_player/2" do
-    @task_id 3
+    @tag task_id: 3
     test "remove from empty score map results in empty score map" do
       scores =
         HighScore.new()
@@ -57,7 +57,7 @@ defmodule HighScoreTest do
       assert scores == %{}
     end
 
-    @task_id 3
+    @tag task_id: 3
     test "remove player after adding results in empty score map" do
       map =
         HighScore.new()
@@ -67,7 +67,7 @@ defmodule HighScoreTest do
       assert map == %{}
     end
 
-    @task_id 3
+    @tag task_id: 3
     test "remove first player after adding two results in map with remaining player" do
       scores =
         HighScore.new()
@@ -78,7 +78,7 @@ defmodule HighScoreTest do
       assert scores == %{"Chris McCord" => 0}
     end
 
-    @task_id 3
+    @tag task_id: 3
     test "remove second player after adding two results in map with remaining player" do
       scores =
         HighScore.new()
@@ -91,7 +91,7 @@ defmodule HighScoreTest do
   end
 
   describe "reset_score/2" do
-    @task_id 4
+    @tag task_id: 4
     test "resetting score for non-existent player sets player score to 0" do
       scores =
         HighScore.new()
@@ -100,7 +100,7 @@ defmodule HighScoreTest do
       assert scores == %{"José Valim" => 0}
     end
 
-    @task_id 4
+    @tag task_id: 4
     test "resetting score for existing player sets previous player score to 0" do
       scores =
         HighScore.new()
@@ -113,7 +113,7 @@ defmodule HighScoreTest do
   end
 
   describe "update_score/3" do
-    @task_id 5
+    @tag task_id: 5
     test "update score for non existent player initializes value" do
       scores =
         HighScore.new()
@@ -122,7 +122,7 @@ defmodule HighScoreTest do
       assert scores == %{"José Valim" => 486_373}
     end
 
-    @task_id 5
+    @tag task_id: 5
     test "update score for existing player adds score to previous" do
       scores =
         HighScore.new()
@@ -132,7 +132,7 @@ defmodule HighScoreTest do
       assert scores == %{"José Valim" => 486_373}
     end
 
-    @task_id 5
+    @tag task_id: 5
     test "update score for existing player with non-zero score adds score to previous" do
       scores =
         HighScore.new()
@@ -145,7 +145,7 @@ defmodule HighScoreTest do
   end
 
   describe "get_players/1" do
-    @task_id 6
+    @tag task_id: 6
     test "empty score map gives empty list" do
       scores_by_player =
         HighScore.new()
@@ -154,7 +154,7 @@ defmodule HighScoreTest do
       assert scores_by_player == []
     end
 
-    @task_id 6
+    @tag task_id: 6
     test "score map with one entry gives one result" do
       players =
         HighScore.new()
@@ -165,7 +165,7 @@ defmodule HighScoreTest do
       assert players == ["José Valim"]
     end
 
-    @task_id 6
+    @tag task_id: 6
     test "score map with multiple entries gives results in unknown order" do
       players =
         HighScore.new()

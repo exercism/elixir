@@ -1,7 +1,7 @@
 defmodule BoutiqueSuggestionsTest do
   use ExUnit.Case
 
-  @task_id 1
+  @tag task_id: 1
   test "generates one pair from one top and one bottom" do
     top = %{
       item_name: "Long Sleeve T-shirt",
@@ -22,7 +22,7 @@ defmodule BoutiqueSuggestionsTest do
     assert BoutiqueSuggestions.get_combinations([top], [bottom]) == [{top, bottom}]
   end
 
-  @task_id 1
+  @tag task_id: 1
   test "generates all pairs from two top and two bottom" do
     top1 = %{
       item_name: "Long Sleeve T-shirt",
@@ -62,7 +62,7 @@ defmodule BoutiqueSuggestionsTest do
     assert BoutiqueSuggestions.get_combinations(tops, bottoms) == expected
   end
 
-  @task_id 2
+  @tag task_id: 2
   test "does not create suggestions that 'clash'" do
     top = %{
       item_name: "Long Sleeve T-shirt",
@@ -83,12 +83,12 @@ defmodule BoutiqueSuggestionsTest do
     assert BoutiqueSuggestions.get_combinations([top], [bottom]) == []
   end
 
-  @task_id 3
+  @tag task_id: 3
   test "accepts keyword list for third argument for options" do
     assert BoutiqueSuggestions.get_combinations([], [], maximum_price: 200.00)
   end
 
-  @task_id 3
+  @tag task_id: 3
   test "filter rejects combinations based on combined maximum price" do
     top = %{
       item_name: "Sano Long Sleeve Shirt",
@@ -109,7 +109,7 @@ defmodule BoutiqueSuggestionsTest do
     assert BoutiqueSuggestions.get_combinations([top], [bottom], maximum_price: 100.00) == []
   end
 
-  @task_id 3
+  @tag task_id: 3
   test "filter accepts combinations based on combined maximum price" do
     top = %{
       item_name: "Sano Long Sleeve Shirt",
@@ -132,7 +132,7 @@ defmodule BoutiqueSuggestionsTest do
            ]
   end
 
-  @task_id 3
+  @tag task_id: 3
   test "provides default when maximum_price option not specified" do
     top = %{
       item_name: "Sano Long Sleeve Shirt",
@@ -153,7 +153,7 @@ defmodule BoutiqueSuggestionsTest do
     assert BoutiqueSuggestions.get_combinations([top], [bottom], other_option: "test") == []
   end
 
-  @task_id 3
+  @tag task_id: 3
   test "putting it all together" do
     top1 = %{
       item_name: "Long Sleeve T-shirt",

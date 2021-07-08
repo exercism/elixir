@@ -2,12 +2,12 @@ defmodule BoutiqueInventoryTest do
   use ExUnit.Case
 
   describe "sort_by_price/1" do
-    @task_id 1
+    @tag task_id: 1
     test "works for an empty inventory" do
       assert BoutiqueInventory.sort_by_price([]) == []
     end
 
-    @task_id 1
+    @tag task_id: 1
     test "sorts items by price" do
       assert BoutiqueInventory.sort_by_price([
                %{price: 65, name: "Maxi Yellow Summer Dress", quantity_by_size: %{}},
@@ -24,12 +24,12 @@ defmodule BoutiqueInventoryTest do
   end
 
   describe "with_missing_price/1" do
-    @task_id 2
+    @tag task_id: 2
     test "works for an empty inventory" do
       assert BoutiqueInventory.with_missing_price([]) == []
     end
 
-    @task_id 2
+    @tag task_id: 2
     test "filters out items that do have a price" do
       assert BoutiqueInventory.with_missing_price([
                %{name: "Red Flowery Top", price: 50, quantity_per_size: %{}},
@@ -45,7 +45,7 @@ defmodule BoutiqueInventoryTest do
   end
 
   describe "increase_quantity/2" do
-    @task_id 3
+    @tag task_id: 3
     test "works for an empty quantity map" do
       assert BoutiqueInventory.increase_quantity(
                %{
@@ -61,7 +61,7 @@ defmodule BoutiqueInventoryTest do
              }
     end
 
-    @task_id 3
+    @tag task_id: 3
     test "sorts items by price" do
       assert BoutiqueInventory.increase_quantity(
                %{
@@ -79,7 +79,7 @@ defmodule BoutiqueInventoryTest do
   end
 
   describe "total_quantity/1" do
-    @task_id 4
+    @tag task_id: 4
     test "works for an empty quantity map" do
       assert BoutiqueInventory.total_quantity(%{
                name: "Red Denim Pants",
@@ -88,7 +88,7 @@ defmodule BoutiqueInventoryTest do
              }) == 0
     end
 
-    @task_id 4
+    @tag task_id: 4
     test "sums up total quantity" do
       assert BoutiqueInventory.total_quantity(%{
                name: "Black Denim Skirt",
