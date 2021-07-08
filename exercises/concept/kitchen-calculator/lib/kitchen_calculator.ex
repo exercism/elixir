@@ -1,17 +1,17 @@
 defmodule KitchenCalculator do
   def get_volume(volume_pair) do
-    raise "Please implement the get_volume/1 function"
+    # Please implement the get_volume/1 function
   end
 
   def to_milliliter(volume_pair) do
-    raise "Please implement the to_milliliter/1 functions"
+    # Please implement the to_milliliter/1 functions
   end
 
   def from_milliliter(volume_pair, unit) do
-    raise "Please implement the from_milliliter/2 functions"
+    # Please implement the from_milliliter/2 functions
   end
 
   def convert(volume_pair, unit) do
-    raise "Please implement the convert/2 function"
+    # Please implement the convert/2 function
   end
 end

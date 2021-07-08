@@ -5,6 +5,6 @@ defmodule Username do
     # ü becomes ue
     # ß becomes ss
 
-    raise "Please implement the sanitize/1 function"
+    # Please implement the sanitize/1 function
   end
 end
