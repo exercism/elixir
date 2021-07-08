@@ -134,7 +134,7 @@ defmodule RPNCalculator.ExceptionTest do
 
     @task_id 3
     test "divisor is not 0, don't raise" do
-      RPNCalculator.Exception.divide([2, 4]) == 2
+      assert RPNCalculator.Exception.divide([2, 4]) == 2
     end
   end
 end
