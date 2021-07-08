@@ -45,19 +45,6 @@
         "status": "beta"
       },
       {
-        "slug": "secrets",
-        "name": "Secrets",
-        "uuid": "1e3ceb20-715c-4157-9192-13284217affc",
-        "concepts": [
-          "anonymous-functions",
-          "bit-manipulation"
-        ],
-        "prerequisites": [
-          "basics"
-        ],
-        "status": "beta"
-      },
-      {
         "slug": "pacman-rules",
         "name": "Pacman Rules",
         "uuid": "5e743355-1ef3-4b5d-b59d-03bbc9697e6c",
@@ -76,6 +63,19 @@
         "concepts": [
           "integers",
           "floating-point-numbers"
+        ],
+        "prerequisites": [
+          "basics"
+        ],
+        "status": "beta"
+      },
+      {
+        "slug": "secrets",
+        "name": "Secrets",
+        "uuid": "1e3ceb20-715c-4157-9192-13284217affc",
+        "concepts": [
+          "anonymous-functions",
+          "bit-manipulation"
         ],
         "prerequisites": [
           "basics"
