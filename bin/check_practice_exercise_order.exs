@@ -2,23 +2,26 @@ Mix.install([
   {:jason, "~> 1.2"}
 ])
 
-{opts, _} = OptionParser.parse!(
-  System.argv(),
-  [strict: [write: :boolean], aliases: [w: :write]]
-)
+{opts, _} =
+  OptionParser.parse!(
+    System.argv(),
+    strict: [write: :boolean],
+    aliases: [w: :write]
+  )
 
 config =
   "./config.json"
   |> File.read!()
   |> Jason.decode!()
 
-sort_by =
-  fn exercise ->
-    {exercise["difficulty"], exercise["name"]}
-  end
+sort_by = fn exercise ->
+  {exercise["difficulty"], exercise["name"]}
+end
 
 reordered_config =
-  put_in(config, ["exercises", "practice"],
+  put_in(
+    config,
+    ["exercises", "practice"],
     Enum.sort_by(config["exercises"]["practice"], sort_by)
   )
 
