@@ -585,7 +585,8 @@
         "uuid": "cc96d65d-1c79-40d0-8fd2-9a6665a43b01",
         "prerequisites": [],
         "practices": [],
-        "difficulty": 1
+        "difficulty": 1,
+        "order": 999
       },
       {
         "slug": "resistor-color",
@@ -880,22 +881,6 @@
         "difficulty": 2
       },
       {
-        "slug": "rna-transcription",
-        "name": "RNA Transcription",
-        "uuid": "a4629a60-752f-4234-99f1-6b3ac0b4ba18",
-        "prerequisites": [
-          "charlists",
-          "pattern-matching",
-          "multiple-clause-functions",
-          "case",
-          "enum"
-        ],
-        "practices": [
-          "charlists"
-        ],
-        "difficulty": 2
-      },
-      {
         "slug": "raindrops",
         "name": "Raindrops",
         "uuid": "4522b139-6f0c-4172-a4fa-6a6adef33a9e",
@@ -926,6 +911,22 @@
         "practices": [
           "atoms",
           "maps"
+        ],
+        "difficulty": 2
+      },
+      {
+        "slug": "rna-transcription",
+        "name": "RNA Transcription",
+        "uuid": "a4629a60-752f-4234-99f1-6b3ac0b4ba18",
+        "prerequisites": [
+          "charlists",
+          "pattern-matching",
+          "multiple-clause-functions",
+          "case",
+          "enum"
+        ],
+        "practices": [
+          "charlists"
         ],
         "difficulty": 2
       },
