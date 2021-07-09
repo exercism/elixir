@@ -618,7 +618,7 @@
           "tuples",
           "tail-call-recursion"
         ],
-        "difficulty": 1
+        "difficulty": 4
       },
       {
         "slug": "two-fer",
