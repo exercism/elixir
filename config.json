@@ -603,24 +603,6 @@
         "difficulty": 1
       },
       {
-        "slug": "simple-linked-list",
-        "name": "Simple Linked List",
-        "uuid": "e5d2386a-3021-4329-a4b7-6164e49df776",
-        "prerequisites": [
-          "atoms",
-          "tuples",
-          "pattern-matching",
-          "recursion",
-          "tail-call-recursion"
-        ],
-        "practices": [
-          "atoms",
-          "tuples",
-          "tail-call-recursion"
-        ],
-        "difficulty": 4
-      },
-      {
         "slug": "two-fer",
         "name": "Two Fer",
         "uuid": "6a130540-1b84-4147-8e6f-776dbf750489",
@@ -1880,6 +1862,24 @@
         "difficulty": 4
       },
       {
+        "slug": "simple-linked-list",
+        "name": "Simple Linked List",
+        "uuid": "e5d2386a-3021-4329-a4b7-6164e49df776",
+        "prerequisites": [
+          "atoms",
+          "tuples",
+          "pattern-matching",
+          "recursion",
+          "tail-call-recursion"
+        ],
+        "practices": [
+          "atoms",
+          "tuples",
+          "tail-call-recursion"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "spiral-matrix",
         "name": "Spiral Matrix",
         "uuid": "cf28d2b2-763e-404b-90b0-637263d3bba6",
@@ -1940,6 +1940,24 @@
         "practices": [
           "pipe-operator",
           "strings"
+        ],
+        "difficulty": 5
+      },
+      {
+        "slug": "bank-account",
+        "name": "Bank Account",
+        "uuid": "5d5e0f6c-f4b7-418e-88f8-4b1d0f99bfb0",
+        "prerequisites": [
+          "if",
+          "processes",
+          "pids",
+          "agent"
+        ],
+        "practices": [
+          "if",
+          "processes",
+          "pids",
+          "agent"
         ],
         "difficulty": 5
       },
@@ -2040,26 +2058,6 @@
           "integers"
         ],
         "difficulty": 5
-      },
-      {
-        "slug": "markdown",
-        "name": "Markdown",
-        "uuid": "5dfa24bf-e77c-47c6-88e1-e50cbeecd159",
-        "prerequisites": [
-          "strings",
-          "enum",
-          "recursion",
-          "regular-expressions",
-          "multiple-clause-functions",
-          "pattern-matching",
-          "cond",
-          "case",
-          "if"
-        ],
-        "practices": [
-          "regular-expressions"
-        ],
-        "difficulty": 6
       },
       {
         "slug": "palindrome-products",
@@ -2239,6 +2237,26 @@
         "difficulty": 6
       },
       {
+        "slug": "markdown",
+        "name": "Markdown",
+        "uuid": "5dfa24bf-e77c-47c6-88e1-e50cbeecd159",
+        "prerequisites": [
+          "strings",
+          "enum",
+          "recursion",
+          "regular-expressions",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "cond",
+          "case",
+          "if"
+        ],
+        "practices": [
+          "regular-expressions"
+        ],
+        "difficulty": 6
+      },
+      {
         "slug": "ocr-numbers",
         "name": "OCR Numbers",
         "uuid": "3f321191-afb1-4aa1-995b-204aa460269e",
@@ -2368,24 +2386,6 @@
           "pattern-matching"
         ],
         "difficulty": 7
-      },
-      {
-        "slug": "bank-account",
-        "name": "Bank Account",
-        "uuid": "5d5e0f6c-f4b7-418e-88f8-4b1d0f99bfb0",
-        "prerequisites": [
-          "if",
-          "processes",
-          "pids",
-          "agent"
-        ],
-        "practices": [
-          "if",
-          "processes",
-          "pids",
-          "agent"
-        ],
-        "difficulty": 5
       },
       {
         "slug": "change",
