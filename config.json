@@ -586,7 +586,7 @@
         "prerequisites": [],
         "practices": [],
         "difficulty": 1,
-        "order": 999
+        "order": 1
       },
       {
         "slug": "resistor-color",
