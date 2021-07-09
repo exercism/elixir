@@ -14,7 +14,7 @@ defmodule React do
             inputs: [String.t()],
             compute: fun(),
             value: any,
-            callbacks: %{String.t() => (String.t(), any -> :ok)}
+            callbacks: %{String.t() => fun()}
           }
   end
 
@@ -23,7 +23,8 @@ defmodule React do
   @doc """
   Start a reactive system
   """
-  @spec new(cells :: [%{atom => any}]) :: {:ok, pid}
+  @spec new(cells :: [{:input, String.t(), any} | {:output, String.t(), [String.t()], fun()}]) ::
+          {:ok, pid}
   def new(cells) do
     GenServer.start_link(React, cells)
   end
@@ -31,17 +32,17 @@ defmodule React do
   @doc """
   Return the value of an input or output cell
   """
-  @spec get_value(cells :: pid, cell :: String.t()) :: any()
-  def get_value(cells, cell) do
-    GenServer.call(cells, {:get_value, cell})
+  @spec get_value(cells :: pid, cell_name :: String.t()) :: any()
+  def get_value(cells, cell_name) do
+    GenServer.call(cells, {:get_value, cell_name})
   end
 
   @doc """
   Set the value of an input cell
   """
-  @spec set_value(cells :: pid, cell :: String.t(), value :: any) :: :ok
-  def set_value(cells, cell, value) do
-    GenServer.cast(cells, {:set_value, cell, value})
+  @spec set_value(cells :: pid, cell_name :: String.t(), value :: any) :: :ok
+  def set_value(cells, cell_name, value) do
+    GenServer.cast(cells, {:set_value, cell_name, value})
   end
 
   @doc """
@@ -49,20 +50,20 @@ defmodule React do
   """
   @spec add_callback(
           cells :: pid,
-          cell :: String.t(),
-          callback :: String.t(),
-          send :: (String.t(), any -> :ok)
+          cell_name :: String.t(),
+          callback_name :: String.t(),
+          callback :: fun()
         ) :: :ok
-  def add_callback(cells, cell, callback, send) do
-    GenServer.cast(cells, {:add_callback, cell, callback, send})
+  def add_callback(cells, cell_name, callback_name, callback) do
+    GenServer.cast(cells, {:add_callback, cell_name, callback_name, callback})
   end
 
   @doc """
   Remove a callback from an output cell
   """
-  @spec remove_callback(cells :: pid, cell :: String.t(), callback :: String.t()) :: :ok
-  def remove_callback(cells, cell, callback) do
-    GenServer.cast(cells, {:remove_callback, cell, callback})
+  @spec remove_callback(cells :: pid, cell_name :: String.t(), callback_name :: String.t()) :: :ok
+  def remove_callback(cells, cell_name, callback_name) do
+    GenServer.cast(cells, {:remove_callback, cell_name, callback_name})
   end
 
   # SERVER SIDE
@@ -75,11 +76,11 @@ defmodule React do
   def init(cells) do
     cells =
       Map.new(cells, fn
-        %{type: :input} = cell ->
-          {cell.name, %InputCell{name: cell.name, value: cell.value}}
+        {:input, name, value} ->
+          {name, %InputCell{name: name, value: value}}
 
-        %{type: :output} = cell ->
-          {cell.name, %OutputCell{name: cell.name, inputs: cell.inputs, compute: cell.compute}}
+        {:output, name, inputs, compute} ->
+          {name, %OutputCell{name: name, inputs: inputs, compute: compute}}
       end)
 
     initialized_cells =
@@ -118,16 +119,16 @@ defmodule React do
   end
 
   @impl true
-  def handle_cast({:add_callback, name, callback, send}, %State{cells: cells} = state) do
+  def handle_cast({:add_callback, name, callback_name, callback}, %State{cells: cells} = state) do
     %OutputCell{callbacks: callbacks} = cell = cells[name]
-    callbacks = Map.put(callbacks, callback, send)
+    callbacks = Map.put(callbacks, callback_name, callback)
     {:noreply, %{state | cells: Map.put(cells, name, %{cell | callbacks: callbacks})}}
   end
 
   @impl true
-  def handle_cast({:remove_callback, name, callback}, %State{cells: cells} = state) do
+  def handle_cast({:remove_callback, name, callback_name}, %State{cells: cells} = state) do
     %OutputCell{callbacks: callbacks} = cell = cells[name]
-    callbacks = Map.delete(callbacks, callback)
+    callbacks = Map.delete(callbacks, callback_name)
     {:noreply, %{state | cells: Map.put(cells, name, %{cell | callbacks: callbacks})}}
   end
 
