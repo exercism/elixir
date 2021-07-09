@@ -2059,7 +2059,7 @@
         "practices": [
           "regular-expressions"
         ],
-        "difficulty": 5
+        "difficulty": 6
       },
       {
         "slug": "palindrome-products",
