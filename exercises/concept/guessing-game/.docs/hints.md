@@ -6,7 +6,7 @@
 
 ## 1. Make the response when the guess matches the secret number
 
-- You can use a [guard][guard] to check if the numbers are the same `===/2`.
+- You can use a [guard][guard] to check if the numbers are the same with `===/2`.
 
 ## 2. Make the response when the guess is greater than the secret number
 
