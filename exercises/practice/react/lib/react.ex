@@ -1,9 +1,12 @@
 defmodule React do
+  @opaque cells :: pid
+
+  @type cell :: {:input, String.t(), any} | {:output, String.t(), [String.t()], fun()}
+
   @doc """
   Start a reactive system
   """
-  @spec new(cells :: [{:input, String.t(), any} | {:output, String.t(), [String.t()], fun()}]) ::
-          {:ok, pid}
+  @spec new(cells :: [cell]) :: {:ok, pid}
   def new(cells) do
   end
 
