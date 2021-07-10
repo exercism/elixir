@@ -49,12 +49,14 @@ We can achieve the same result by prepending an element to the reversed list, an
 [6 | [5 | [4 | [3, 2, 1]]]] # then reverse!
 ```
 
-There are several common functions for lists:
+There are several common `Kernel` functions for lists:
 
 - [`hd/1`][hd] returns the _head_ of a list -- the _first_ item in a list.
 - [`tl/1`][tl] returns the _tail_ of the list -- the list _minus_ the _first_ item.
 - [`length/1`][length] returns the number items in the list.
 - [`in/2`][in] returns a boolean value indicating whether the item is an element in the list.
+
+There is also the [`List` module][list].
 
 Lists may contain any data type and a mix of different data types.
 
