@@ -31,6 +31,3 @@
 - `default-arguments`
 - `keyword-lists`
 
-## Analyzer
-
-- TODO

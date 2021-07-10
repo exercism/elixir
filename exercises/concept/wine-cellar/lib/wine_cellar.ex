@@ -1,10 +1,10 @@
 defmodule WineCellar do
   def explain_colors do
-    raise "Please implement the explain_colors/0 function"
+    # Please implement the explain_colors/0 function
   end
 
   def filter(cellar, color, opts \\ []) do
-    raise "Please implement the filter/3 function"
+    # Please implement the filter/3 function
   end
 
   # The functions below do not need to be modified.

@@ -26,6 +26,3 @@
 - `pattern-matching`
 - `structs`
 
-## Analyzer
-
-- TODO

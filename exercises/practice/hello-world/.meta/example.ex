@@ -1,8 +1,8 @@
 defmodule HelloWorld do
   @doc """
-  Greets the user by name, or by saying "Hello, World!"
-  if no name is given
+  Simply returns "Hello, World!"
   """
+  @spec hello :: String.t()
   def hello do
     "Hello, World!"
   end

@@ -34,6 +34,6 @@ This exercise could benefit from the following rules added to the the [analyzer]
 
 - Verify that the `initial/1` function calls the `first_letter/1` function.
 - Verify that the `initials/1` function calls the `initial/1` function.
-- Verify that the `pair/1` function calls the `initials/1` function and uses `"""` to create the string.
+- Verify that the `pair/1` function calls the `initials/1` function.
 
 [analyzer]: https://github.com/exercism/elixir-analyzer
