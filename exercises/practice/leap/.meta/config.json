@@ -1,8 +1,8 @@
 {
-  "blurb": "Given a year, report if it is a leap year.",
   "authors": [
     "rubysolo"
   ],
+  "blurb": "Given a year, report if it is a leap year.",
   "contributors": [
     "angelikatyborska",
     "Cohen-Carlisle",
@@ -20,14 +20,14 @@
     "waiting-for-dev"
   ],
   "files": {
-    "solution": [
-      "lib/year.ex"
-    ],
-    "test": [
-      "test/year_test.exs"
-    ],
     "example": [
       ".meta/example.ex"
+    ],
+    "solution": [
+      "lib/leap.ex"
+    ],
+    "test": [
+      "test/leap_test.exs"
     ]
   },
   "source": "JavaRanch Cattle Drive, exercise 3",

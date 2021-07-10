@@ -1,22 +1,22 @@
 {
-  "blurb": "Learn about defining custom exceptions by continuing work on your experimental Reverse Polish Notation calculator.",
-  "icon": "error-handling",
   "authors": [
     "neenjaw"
   ],
+  "blurb": "Learn about defining custom exceptions by continuing work on your experimental Reverse Polish Notation calculator.",
   "contributors": [
     "angelikatyborska"
   ],
   "files": {
-    "solution": [
-      "lib/rpn_calculator/exception.ex"
-    ],
-    "test": [
-      "test/rpn_calculator/exception_test.exs"
-    ],
     "exemplar": [
       ".meta/exemplar.ex"
+    ],
+    "solution": [
+      "lib/stack_underflow.ex"
+    ],
+    "test": [
+      "test/stack_underflow_test.exs"
     ]
   },
+  "icon": "error-handling",
   "language_versions": ">=1.10"
 }

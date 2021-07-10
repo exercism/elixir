@@ -1,20 +1,20 @@
 {
-  "blurb": "Learn about charlists and the case conditional expression by sanitizing usernames of employees in a German company.",
   "authors": [
     "angelikatyborska"
   ],
+  "blurb": "Learn about charlists and the case conditional expression by sanitizing usernames of employees in a German company.",
   "contributors": [
     "neenjaw"
   ],
   "files": {
-    "solution": [
-      "lib/username.ex"
-    ],
-    "test": [
-      "test/username_test.exs"
-    ],
     "exemplar": [
       ".meta/exemplar.ex"
+    ],
+    "solution": [
+      "lib/german_sysadmin.ex"
+    ],
+    "test": [
+      "test/german_sysadmin_test.exs"
     ]
   },
   "language_versions": ">=1.10"

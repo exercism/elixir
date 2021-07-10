@@ -1,8 +1,8 @@
 {
-  "blurb": "Given a diagram, determine which plants each child in the kindergarten class is responsible for.",
   "authors": [
     "devonestes"
   ],
+  "blurb": "Given a diagram, determine which plants each child in the kindergarten class is responsible for.",
   "contributors": [
     "angelikatyborska",
     "Cohen-Carlisle",
@@ -14,14 +14,14 @@
     "sotojuan"
   ],
   "files": {
-    "solution": [
-      "lib/garden.ex"
-    ],
-    "test": [
-      "test/garden_test.exs"
-    ],
     "example": [
       ".meta/example.ex"
+    ],
+    "solution": [
+      "lib/kindergarten_garden.ex"
+    ],
+    "test": [
+      "test/kindergarten_garden_test.exs"
     ]
   },
   "source": "Random musings during airplane trip.",

@@ -1,22 +1,22 @@
 {
-  "blurb": "Learn about IO (input/output) by guiding your friends through the character creation process for your pen-and-paper role-playing game.",
-  "icon": "wizards-and-warriors",
   "authors": [
     "angelikatyborska"
   ],
+  "blurb": "Learn about IO (input/output) by guiding your friends through the character creation process for your pen-and-paper role-playing game.",
   "contributors": [
     "neenjaw"
   ],
   "files": {
-    "solution": [
-      "lib/rpg/character_sheet.ex"
-    ],
-    "test": [
-      "test/rpg/character_sheet_test.exs"
-    ],
     "exemplar": [
       ".meta/exemplar.ex"
+    ],
+    "solution": [
+      "lib/rpg_character_sheet.ex"
+    ],
+    "test": [
+      "test/rpg_character_sheet_test.exs"
     ]
   },
+  "icon": "wizards-and-warriors",
   "language_versions": ">=1.10"
 }

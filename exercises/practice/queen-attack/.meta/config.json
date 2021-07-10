@@ -1,8 +1,8 @@
 {
-  "blurb": "Given the position of two queens on a chess board, indicate whether or not they are positioned so that they can attack each other.",
   "authors": [
     "dalexj"
   ],
+  "blurb": "Given the position of two queens on a chess board, indicate whether or not they are positioned so that they can attack each other.",
   "contributors": [
     "andrewtimberlake",
     "angelikatyborska",
@@ -18,14 +18,14 @@
     "waiting-for-dev"
   ],
   "files": {
-    "solution": [
-      "lib/queens.ex"
-    ],
-    "test": [
-      "test/queens_test.exs"
-    ],
     "example": [
       ".meta/example.ex"
+    ],
+    "solution": [
+      "lib/queen_attack.ex"
+    ],
+    "test": [
+      "test/queen_attack_test.exs"
     ]
   },
   "source": "J Dalbey's Programming Practice problems",

@@ -1,8 +1,8 @@
 {
-  "blurb": "Given students' names along with the grade that they are in, create a roster for the school",
   "authors": [
     "rubysolo"
   ],
+  "blurb": "Given students' names along with the grade that they are in, create a roster for the school",
   "contributors": [
     "andrewsardone",
     "angelikatyborska",
@@ -26,14 +26,14 @@
     "waiting-for-dev"
   ],
   "files": {
-    "solution": [
-      "lib/school.ex"
-    ],
-    "test": [
-      "test/school_test.exs"
-    ],
     "example": [
       ".meta/example.ex"
+    ],
+    "solution": [
+      "lib/grade_school.ex"
+    ],
+    "test": [
+      "test/grade_school_test.exs"
     ]
   },
   "source": "A pairing session with Phil Battos at gSchool",

@@ -1,8 +1,8 @@
 {
-  "blurb": "Given a word, compute the Scrabble score for that word.",
   "authors": [
     "rubysolo"
   ],
+  "blurb": "Given a word, compute the Scrabble score for that word.",
   "contributors": [
     "andrewsardone",
     "angelikatyborska",
@@ -20,14 +20,14 @@
     "waiting-for-dev"
   ],
   "files": {
-    "solution": [
-      "lib/scrabble.ex"
-    ],
-    "test": [
-      "test/scrabble_test.exs"
-    ],
     "example": [
       ".meta/example.ex"
+    ],
+    "solution": [
+      "lib/scrabble_score.ex"
+    ],
+    "test": [
+      "test/scrabble_score_test.exs"
     ]
   },
   "source": "Inspired by the Extreme Startup game",

@@ -1,6 +1,6 @@
 {
-  "blurb": "Count the frequency of letters in texts using parallel computation.",
   "authors": [],
+  "blurb": "Count the frequency of letters in texts using parallel computation.",
   "contributors": [
     "andrewsardone",
     "angelikatyborska",
@@ -21,14 +21,14 @@
     "waiting-for-dev"
   ],
   "files": {
-    "solution": [
-      "lib/frequency.ex"
-    ],
-    "test": [
-      "test/frequency_test.exs"
-    ],
     "example": [
       ".meta/example.ex"
+    ],
+    "solution": [
+      "lib/parallel_letter_frequency.ex"
+    ],
+    "test": [
+      "test/parallel_letter_frequency_test.exs"
     ]
   }
 }

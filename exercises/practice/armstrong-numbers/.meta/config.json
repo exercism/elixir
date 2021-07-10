@@ -1,8 +1,8 @@
 {
-  "blurb": "Determine if a number is an Armstrong number",
   "authors": [
     "Bscruz19"
   ],
+  "blurb": "Determine if a number is an Armstrong number",
   "contributors": [
     "angelikatyborska",
     "Br1ght0ne",
@@ -12,14 +12,14 @@
     "tsuka"
   ],
   "files": {
-    "solution": [
-      "lib/armstrong_number.ex"
-    ],
-    "test": [
-      "test/armstrong_number_test.exs"
-    ],
     "example": [
       ".meta/example.ex"
+    ],
+    "solution": [
+      "lib/armstrong_numbers.ex"
+    ],
+    "test": [
+      "test/armstrong_numbers_test.exs"
     ]
   },
   "source": "Wikipedia",

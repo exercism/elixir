@@ -1,8 +1,8 @@
 {
-  "blurb": " Given the size, return a square matrix of numbers in spiral order.",
   "authors": [
     "flyrry"
   ],
+  "blurb": " Given the size, return a square matrix of numbers in spiral order.",
   "contributors": [
     "angelikatyborska",
     "Cohen-Carlisle",
@@ -11,14 +11,14 @@
     "sotojuan"
   ],
   "files": {
-    "solution": [
-      "lib/spiral.ex"
-    ],
-    "test": [
-      "test/spiral_test.exs"
-    ],
     "example": [
       ".meta/example.ex"
+    ],
+    "solution": [
+      "lib/spiral_matrix.ex"
+    ],
+    "test": [
+      "test/spiral_matrix_test.exs"
     ]
   },
   "source": "Reddit r/dailyprogrammer challenge #320 [Easy] Spiral Ascension.",

@@ -1,8 +1,8 @@
 {
-  "blurb": "Given a string of digits, output all the contiguous substrings of length `n` in that string.",
   "authors": [
     "DoggettCK"
   ],
+  "blurb": "Given a string of digits, output all the contiguous substrings of length `n` in that string.",
   "contributors": [
     "amencarini",
     "angelikatyborska",
@@ -12,14 +12,14 @@
     "sotojuan"
   ],
   "files": {
-    "solution": [
-      "lib/string_series.ex"
-    ],
-    "test": [
-      "test/string_series_test.exs"
-    ],
     "example": [
       ".meta/example.ex"
+    ],
+    "solution": [
+      "lib/series.ex"
+    ],
+    "test": [
+      "test/series_test.exs"
     ]
   },
   "source": "A subset of the Problem 8 at Project Euler",

@@ -1,22 +1,22 @@
 {
-  "blurb": "Learn about dynamic dispatch and advanced options for rescuing errors by implementing an output in your experimental Reverse Polish Notation calculator.",
-  "icon": "calculator-conundrum",
   "authors": [
     "neenjaw"
   ],
+  "blurb": "Learn about dynamic dispatch and advanced options for rescuing errors by implementing an output in your experimental Reverse Polish Notation calculator.",
   "contributors": [
     "angelikatyborska"
   ],
   "files": {
-    "solution": [
-      "lib/rpn_calculator/output.ex"
-    ],
-    "test": [
-      "test/rpn_calculator/output_test.exs"
-    ],
     "exemplar": [
       ".meta/exemplar.ex"
+    ],
+    "solution": [
+      "lib/rpn_calculator_output.ex"
+    ],
+    "test": [
+      "test/rpn_calculator_output_test.exs"
     ]
   },
+  "icon": "calculator-conundrum",
   "language_versions": ">=1.10"
 }

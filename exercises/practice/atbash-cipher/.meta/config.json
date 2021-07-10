@@ -1,8 +1,8 @@
 {
-  "blurb": "Create an implementation of the atbash cipher, an ancient encryption system created in the Middle East.",
   "authors": [
     "rubysolo"
   ],
+  "blurb": "Create an implementation of the atbash cipher, an ancient encryption system created in the Middle East.",
   "contributors": [
     "andrewsardone",
     "angelikatyborska",
@@ -21,14 +21,14 @@
     "waiting-for-dev"
   ],
   "files": {
-    "solution": [
-      "lib/atbash.ex"
-    ],
-    "test": [
-      "test/atbash_test.exs"
-    ],
     "example": [
       ".meta/example.ex"
+    ],
+    "solution": [
+      "lib/atbash_cipher.ex"
+    ],
+    "test": [
+      "test/atbash_cipher_test.exs"
     ]
   },
   "source": "Wikipedia",

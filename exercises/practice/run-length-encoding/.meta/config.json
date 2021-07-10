@@ -1,8 +1,8 @@
 {
-  "blurb": "Implement run-length encoding and decoding.",
   "authors": [
     "Teapane"
   ],
+  "blurb": "Implement run-length encoding and decoding.",
   "contributors": [
     "angelikatyborska",
     "CoderDennis",
@@ -18,14 +18,14 @@
     "waiting-for-dev"
   ],
   "files": {
-    "solution": [
-      "lib/run_length_encoder.ex"
-    ],
-    "test": [
-      "test/run_length_encoder_test.exs"
-    ],
     "example": [
       ".meta/example.ex"
+    ],
+    "solution": [
+      "lib/run_length_encoding.ex"
+    ],
+    "test": [
+      "test/run_length_encoding_test.exs"
     ]
   },
   "source": "Wikipedia",
