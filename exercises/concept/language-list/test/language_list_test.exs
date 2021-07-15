@@ -33,11 +33,6 @@ defmodule LanguageListTest do
 
   describe "remove/0" do
     @tag task_id: 3
-    test "remove on an empty list results in error" do
-      assert_raise ArgumentError, fn -> LanguageList.new() |> LanguageList.remove() end
-    end
-
-    @tag task_id: 3
     test "add then remove results in empty list" do
       list =
         LanguageList.new()
@@ -60,11 +55,6 @@ defmodule LanguageListTest do
   end
 
   describe "first/0" do
-    @tag task_id: 4
-    test "first on an empty list raises an error" do
-      assert_raise ArgumentError, fn -> LanguageList.new() |> LanguageList.first() end
-    end
-
     @tag task_id: 4
     test "add one language, then get the first" do
       assert LanguageList.new() |> LanguageList.add("Elixir") |> LanguageList.first() == "Elixir"
