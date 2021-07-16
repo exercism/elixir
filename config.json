@@ -2852,7 +2852,11 @@
       }
     ],
     "foregone": [
+      "high-scores",
       "linked-list",
+      "micro-blog",
+      "rest-api",
+      "reverse-string",
       "robot-name"
     ]
   },
