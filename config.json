@@ -2685,6 +2685,34 @@
         "difficulty": 8
       },
       {
+        "slug": "react",
+        "name": "React",
+        "uuid": "e4462e0c-b396-459c-815a-993a0f04c46a",
+        "prerequisites": [
+          "atoms",
+          "tuples",
+          "lists",
+          "enum",
+          "case",
+          "cond",
+          "if",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "anonymous-functions",
+          "default-arguments",
+          "guards",
+          "maps",
+          "structs",
+          "pids",
+          "processes",
+          "recursion"
+        ],
+        "practices": [
+          "processes"
+        ],
+        "difficulty": 8
+      },
+      {
         "slug": "sgf-parsing",
         "name": "SGF Parsing",
         "uuid": "f87d00fa-99c4-4fda-9d90-d9c4d569a82e",

@@ -31,7 +31,7 @@ list = [2, 1]
 # => true
 ```
 
-There are several Elixir Kernel functions for working with lists, e.g.
+There are several functions in the `Kernel` module for working with lists, as well as the whole `List` module.
 
 ```elixir
 # Check if 1 is a member of the list
