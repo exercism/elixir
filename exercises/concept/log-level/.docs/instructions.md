@@ -17,10 +17,10 @@ You are running a system that consist of a few applications producing many logs.
 Implement the `LogLevel.to_label/2` function. It should take an integer code and a boolean flag telling you if the log comes from a legacy app, and return the label of a log line as an atom. Unknown log codes and codes unsupported in a legacy app should return an _unknown_ label.
 
 ```elixir
-LogLevel.to_label(1, false)
-# => :debug
+LogLevel.to_label(0, false)
+# => :trace
 
-LogLevel.to_label(1, true)
+LogLevel.to_label(0, true)
 # => :unknown
 ```
 
