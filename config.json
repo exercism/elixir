@@ -3151,7 +3151,7 @@
     {
       "title": "Immutable",
       "content": "All data in Elixir is immutable, allowing for safer and easier-to-reason-about concurrency.",
-      "icon": "easy"
+      "icon": "immutable"
     },
     {
       "title": "Concurrent",
