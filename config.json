@@ -3136,32 +3136,32 @@
     {
       "title": "General-purpose",
       "content": "Elixir is used for web development, embedded software, data ingestion, and multimedia processing.",
-      "icon": "TODO"
+      "icon": "general-purpose"
     },
     {
       "title": "Functional",
       "content": "Multi-clause functions with pattern matching and guards are the building blocks of Elixir code.",
-      "icon": "TODO"
+      "icon": "functional"
     },
     {
       "title": "Dynamically typed",
       "content": "Elixir has no compile-time type checks, favoring run-time pattern matching.",
-      "icon": "TODO"
+      "icon": "dynamically-typed"
     },
     {
       "title": "Immutable",
       "content": "All data in Elixir is immutable, allowing for safer and easier-to-reason-about concurrency.",
-      "icon": "TODO"
+      "icon": "easy"
     },
     {
       "title": "Concurrent",
       "content": "Elixir uses the actor model - shared-nothing concurrency via message passing.",
-      "icon": "TODO"
+      "icon": "concurrency"
     },
     {
       "title": "Fault tolerant",
       "content": "Elixir runs on the Erlang VM, known for running low-latency, distributed and fault-tolerant systems.",
-      "icon": "TODO"
+      "icon": "safe"
     }
   ],
   "tags": [
