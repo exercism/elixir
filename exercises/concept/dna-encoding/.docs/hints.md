@@ -31,7 +31,7 @@
 - Create a recursive function which [matches the first 4 bits][bitstring-matching] from the [bitstring][bitstring] and recursively builds the [charlist][charlist] result.
 - Remember the [bitstring special form][bitstring-form] can be used for matching on bitstrings.
 - Do not forget to specify the types of bitstring segments using the `::` operator.
-- You will need to reverse the accumulator at the end. Write a private rail-recursive `reverse` function to do that and use it in the base-case of the `decode` function.
+- You will need to reverse the accumulator at the end. Write a private tail-recursive `reverse` function to do that and use it in the base-case of the `decode` function.
 
 [integer-literal]: https://hexdocs.pm/elixir/master/syntax-reference.html#integers-in-other-bases-and-unicode-code-points
 [codepoint]: https://elixir-lang.org/getting-started/binaries-strings-and-char-lists.html#unicode-and-code-points
