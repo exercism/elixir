@@ -1,7 +1,7 @@
 defmodule PascalsTriangleTest do
   use ExUnit.Case
 
-  # @tag pending
+  # @tag :pending
   test "one row" do
     assert PascalsTriangle.rows(1) == [[1]]
   end

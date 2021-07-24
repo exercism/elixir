@@ -50,7 +50,7 @@ defmodule Generate do
           "#{var} :: TODO.t()"
 
         {var, sub_vars} ->
-          "#{var} :: %{#{Enum.map_join(sub_vars, ", ", &(&1 <> " : TODO.t()"))}}"
+          "#{var} :: %{#{Enum.map_join(sub_vars, ", ", &(&1 <> ": TODO.t()"))}}"
       end)
 
     variable_list = Enum.map_join(variables, ", ", fn {var, _} -> var end)
