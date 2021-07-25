@@ -1,18 +1,34 @@
-# This is an auto-generated file. Regular comments will be removed when this
-# file is regenerated. Regenerating will not touch any manually added keys,
-# so comments can be added in a "comment" key.
+# This is an auto-generated file.
+#
+# Regenerating this file via `configlet sync` will:
+# - Recreate every `description` key/value pair
+# - Recreate every `reimplements` key/value pair, where they exist in problem-specifications
+# - Remove any `include = true` key/value pair (an omitted `include` key implies inclusion)
+# - Preserve any other key/value pair
+#
+# As user-added comments (using the # character) will be removed when this file
+# is regenerated, comments can be added via a `comment` key.
 
 [6d0a30e4-1b4e-472e-8e20-c41702125667]
 description = "Adding a student adds them to the sorted roster"
 
 [c125dab7-2a53-492f-a99a-56ad511940d8]
 description = "A student can't be in two different grades"
+include = false
+
+[a0c7b9b8-0e89-47f8-8b4a-c50f885e79d1]
+description = "A student can only be added to the same grade in the roster once"
+reimplements = "c125dab7-2a53-492f-a99a-56ad511940d8"
 
 [233be705-dd58-4968-889d-fb3c7954c9cc]
-description = "Adding more student adds them to the sorted roster"
+description = "Adding more students adds them to the sorted roster"
 
 [75a51579-d1d7-407c-a2f8-2166e984e8ab]
 description = "Adding students to different grades adds them to the same sorted roster"
+
+[6a03b61e-1211-4783-a3cc-fc7f773fba3f]
+description = "A student cannot be added to more than one grade in the sorted roster"
+reimplements = "c125dab7-2a53-492f-a99a-56ad511940d8"
 
 [a3f0fb58-f240-4723-8ddc-e644666b85cc]
 description = "Roster returns an empty list if there are no students enrolled"
