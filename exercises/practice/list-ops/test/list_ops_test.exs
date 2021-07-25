@@ -17,6 +17,7 @@ defmodule ListOpsTest do
     end
 
     @tag :pending
+    @tag :slow
     test "huge list" do
       assert L.length(Enum.to_list(1..1_000_000)) == 1_000_000
     end
@@ -39,6 +40,7 @@ defmodule ListOpsTest do
     end
 
     @tag :pending
+    @tag :slow
     test "huge list" do
       assert L.reverse(Enum.to_list(1..1_000_000)) == Enum.to_list(1_000_000..1)
     end
@@ -56,6 +58,7 @@ defmodule ListOpsTest do
     end
 
     @tag :pending
+    @tag :slow
     test "huge list" do
       assert L.map(Enum.to_list(1..1_000_000), &(&1 + 1)) == Enum.to_list(2..1_000_001)
     end
@@ -73,6 +76,7 @@ defmodule ListOpsTest do
     end
 
     @tag :pending
+    @tag :slow
     test "huge list" do
       assert L.filter(Enum.to_list(1..1_000_000), &odd?/1) == Enum.map(1..500_000, &(&1 * 2 - 1))
     end
@@ -100,6 +104,7 @@ defmodule ListOpsTest do
     end
 
     @tag :pending
+    @tag :slow
     test "huge list" do
       assert L.foldl(Enum.to_list(1..1_000_000), 0, &(&1 + &2)) ==
                List.foldl(Enum.to_list(1..1_000_000), 0, &(&1 + &2))
@@ -123,6 +128,7 @@ defmodule ListOpsTest do
     end
 
     @tag :pending
+    @tag :slow
     test "huge list" do
       assert L.foldr(Enum.to_list(1..1_000_000), 0, &(&1 + &2)) ==
                List.foldr(Enum.to_list(1..1_000_000), 0, &(&1 + &2))
@@ -151,6 +157,7 @@ defmodule ListOpsTest do
     end
 
     @tag :pending
+    @tag :slow
     test "huge lists" do
       assert L.append(Enum.to_list(1..1_000_000), Enum.to_list(1_000_001..2_000_000)) ==
                Enum.to_list(1..2_000_000)
@@ -174,11 +181,13 @@ defmodule ListOpsTest do
     end
 
     @tag :pending
+    @tag :slow
     test "huge list of small lists" do
       assert L.concat(Enum.map(1..1_000_000, &[&1])) == Enum.to_list(1..1_000_000)
     end
 
     @tag :pending
+    @tag :slow
     test "small list of huge lists" do
       assert L.concat(Enum.map(0..9, &Enum.to_list((&1 * 100_000 + 1)..((&1 + 1) * 100_000)))) ==
                Enum.to_list(1..1_000_000)
