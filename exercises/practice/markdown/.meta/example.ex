@@ -20,7 +20,12 @@ defmodule Markdown do
 
   defp process(t = "#" <> _) do
     [h, tail] = String.split(t, " ", parts: 2)
-    wrap_in_html_tag(tail, "h#{byte_size(h)}")
+
+    if byte_size(h) < 7 do
+      wrap_in_html_tag(tail, "h#{byte_size(h)}")
+    else
+      wrap_in_html_tag(t, "p")
+    end
   end
 
   defp process("*" <> t) do
