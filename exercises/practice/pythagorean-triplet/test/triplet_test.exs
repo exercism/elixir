@@ -65,6 +65,7 @@ defmodule TripletTest do
   end
 
   @tag :pending
+  @tag :slow
   test "triplets for large number" do
     assert Triplet.generate(30000) == [
              [1200, 14375, 14425],

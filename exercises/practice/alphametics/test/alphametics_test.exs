@@ -105,6 +105,7 @@ defmodule AlphameticsTest do
   end
 
   @tag :pending
+  @tag :slow
   test "puzzle with ten letters" do
     puzzle = "AND + A + STRONG + OFFENSE + AS + A + GOOD == DEFENSE"
 
@@ -125,6 +126,7 @@ defmodule AlphameticsTest do
   end
 
   @tag :pending
+  @tag :slow
   test "puzzle with ten letters and 199 addends" do
     puzzle =
       "THIS + A + FIRE + THEREFORE + FOR + ALL + HISTORIES + I + TELL + A + " <>

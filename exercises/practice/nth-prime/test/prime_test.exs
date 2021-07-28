@@ -22,6 +22,7 @@ defmodule PrimeTest do
   end
 
   @tag :pending
+  @tag :slow
   test "big prime" do
     assert Prime.nth(10001) == 104_743
   end
