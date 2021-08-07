@@ -1,8 +1,11 @@
 # Learning
 
-Exercism provides exercises and feedback but can be difficult to jump into for
-those learning Elixir for the first time. These resources can help you get
-started:
+We recommend learning Elixir by working through the syllabus and learning exercises on Exercism.
+They were designed to teach you Elixir from scratch.
+
+The official [Elixir Getting Started Guide](http://elixir-lang.org/getting-started/introduction.html) is also an excellent place to start.
+
+## Additional learning resources
 
 * [Elixir Getting Started Guide](http://elixir-lang.org/getting-started/introduction.html)
 * [Elixir Documentation](https://hexdocs.pm/elixir/)
