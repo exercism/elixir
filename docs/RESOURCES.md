@@ -14,7 +14,7 @@
 
 ## Elixir IRC
 
-* [Elixir IRC](http://irc.lc/freenode/elixir)
+* [Official #elixir on irc.libera.chat](irc://irc.libera.chat/elixir)
 
 ## Slack
 
