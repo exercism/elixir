@@ -20,6 +20,10 @@
 
 * [Request an Invite](https://elixir-slackin.herokuapp.com/)
 
+## Discord
+
+* [Request an Invite](https://discord.gg/elixir)
+
 ## Exercism's BEAM Gitter Channel
 
 * [Gitter channel](https://gitter.im/exercism/xerlang)
