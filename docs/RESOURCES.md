@@ -2,32 +2,27 @@
 
 ## Elixir Documentation
 
-* [Elixir Docs](https://hexdocs.pm/elixir/)
+* [Elixir](https://hexdocs.pm/elixir/)
+* [ExUnit](https://hexdocs.pm/ex_unit/ExUnit.html) - unit testing framework for Elixir
+* [Hex](https://hex.pm/) - a package manager for the Erlang ecosystem
 
-## Hex - A package manager for the Erlang ecosystem.
+## Communication channels
 
-* [Hex Docs](https://hex.pm/)
-
-## Testing with ExUnit
-
-* [ExUnit](https://hexdocs.pm/ex_unit/ExUnit.html)
-
-## Elixir IRC
-
+* [Exercism's BEAM Gitter Channel](https://gitter.im/exercism/xerlang)
+* [Elixir Forum](https://elixirforum.com/)
+* [Slack](https://elixir-slackin.herokuapp.com/)
+* [Discord](https://discord.gg/elixir)
 * [Official #elixir on irc.libera.chat](irc://irc.libera.chat/elixir)
 
-## Slack
+## Elixir Podcasts
 
-* [Request an Invite](https://elixir-slackin.herokuapp.com/)
+- [Thinking Elixir](https://thinkingelixir.com/the-podcast/)
+- [Elixir Wizards](https://smartlogic.io/podcast/elixir-wizards/)
+- [Elixir Mix](https://devchat.tv/elixir-mix/)
+- [Elixir Outlaws](https://elixiroutlaws.com/)
+- [BEAM Radio](https://www.beamrad.io/)
 
-## Discord
+## Elixir Newsletters
 
-* [Request an Invite](https://discord.gg/elixir)
-
-## Exercism's BEAM Gitter Channel
-
-* [Gitter channel](https://gitter.im/exercism/xerlang)
-
-## Elixir Forum
-
-* [Elixir Forum](https://elixirforum.com/)
+- [ElixirWeekly](https://elixirweekly.net/)
+- [Elixir Radar](https://elixir-radar.com/)
