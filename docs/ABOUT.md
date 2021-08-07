@@ -2,7 +2,7 @@
 
 [Elixir](http://elixir-lang.org/), initially released in 2012, extends upon the already robust features of Erlang while also being easier for beginners to access, read, test, and write.
 
-José Valim, the creator of Elixir, explains [here](https://vimeo.com/53221562) how he built the language for applications to be:
+José Valim, the creator of Elixir, explains [in his 2012 conference talk](https://vimeo.com/53221562) how he built the language for applications to be:
 
   1. Distributed
   2. Fault-Tolerant
