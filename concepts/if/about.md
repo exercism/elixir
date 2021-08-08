@@ -48,7 +48,7 @@ unless age < 16, do: "no beer", else: "beer"
 
 ## _Truthy_ and _falsy_
 
-In Elixir, all datatypes evaluate to a _truthy_ or _falsy_ value when they are encountered in a boolean context (like an `if` expression). All data is considered _truthy_ **except** for _false_ and _nil_.
+In Elixir, all datatypes evaluate to a _truthy_ or _falsy_ value when they are encountered in a boolean context (like an `if` expression). All data is considered _truthy_ **except** for `false` and `nil`.
 
 ```elixir
 truthy? = fn x -> if x, do: "truthy", else: "falsy" end
