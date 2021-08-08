@@ -10,16 +10,20 @@ You decide to write some documentation so that it's easier for your new colleagu
 
 Add documentation to the `Form` module that describes its purpose. It should read:
 
-> A collection of loosely related functions helpful for filling out various forms at the city office.
+```
+A collection of loosely related functions helpful for filling out various forms at the city office.
+```
 
 ## 2. Document filling out fields with blank values
 
 Add documentation and a typespec to the `Form.blanks/1` function. The documentation should read:
 
-> Generates a string of a given length.
->
-> This string can be used to fill out a form field that is supposed to have no value.
-> Such fields cannot be left empty because a malicious third party could fill them out with false data.
+```
+Generates a string of a given length.
+
+This string can be used to fill out a form field that is supposed to have no value.
+Such fields cannot be left empty because a malicious third party could fill them out with false data.
+```
 
 The typespec should explain that the function accepts a single argument, a non-negative integer, and returns a string.
 
@@ -27,10 +31,12 @@ The typespec should explain that the function accepts a single argument, a non-n
 
 Add documentation and a typespec to the `Form.letters/1` function. The documentation should read:
 
-> Splits the string into a list of uppercase letters.
->
-> This is needed for form fields that don't offer a single input for the whole string,
-> but instead require splitting the string into a predefined number of single-letter inputs.
+```
+Splits the string into a list of uppercase letters.
+
+This is needed for form fields that don't offer a single input for the whole string,
+but instead require splitting the string into a predefined number of single-letter inputs.
+```
 
 The typespec should explain that the function accepts a single argument, a string, and returns a list of string.
 
@@ -38,10 +44,12 @@ The typespec should explain that the function accepts a single argument, a strin
 
 Add documentation and a typespec to the `Form.check_length/1` function. The documentation should read:
 
-> Checks if the value has no more than the maximum allowed number of letters.
->
-> This is needed for form fields that don't offer a single input for the whole string,
-> but instead require splitting the string into a predefined number of single-letter inputs.
+```
+Checks if the value has no more than the maximum allowed number of letters.
+
+This is needed for form fields that don't offer a single input for the whole string,
+but instead require splitting the string into a predefined number of single-letter inputs.
+```
 
 The typespec should explain that the function accepts two arguments, a string and a non-negative integer, and returns one of two possible values. It returns either the `:ok` atom or a 2-tuple with the first element being the `:error` atom, and the second a positive integer.
 
@@ -58,6 +66,8 @@ Document this fact by defining three custom public types:
 
 Add documentation and a typespec to the `Form.format_address/1` function. The documentation should read:
 
-> Formats the address as an uppercase multiline string.
+```
+Formats the address as an uppercase multiline string.
+```
 
 The typespec should explain that the function accepts one argument, an address, and returns a string.
