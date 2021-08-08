@@ -30,13 +30,13 @@ regex = ~r/[a-z][ADKZ][0-9][!?]/
 # => false
 ```
 
-_Shorthand character classes_ which make the pattern more concise. A small selection:
+_Shorthand character classes_ make the pattern more concise. For example:
 
 - `\d` short for `[0-9]` (any digit)
 - `\w` short for `[A-Za-z0-9_]` (any 'word' character)
 - `\s` short for `[ \t\r\n\f]` (any whitespace character)
 
-When a _shorthand character class_ outside of a sigil, it must be escaped: `"\\d"`
+When a _shorthand character class_ is used outside of a sigil, it must be escaped: `"\\d"`
 
 _Alternations_ use `|` as a special character to denote matching one _or_ another
 
@@ -48,7 +48,7 @@ regex = ~r/cat|bat/
 # => true
 ```
 
-_Quantifiers_ allow a for a repeating pattern in the regex. They affect the group preceding the quantifier.
+_Quantifiers_ allow for a repeating pattern in the regex. They affect the group preceding the quantifier.
 
 - `{N, M}` where `N` is the minimum number of repetitions, and `M` is the maximum
 - `{N,}` match `N` or more repetitions
