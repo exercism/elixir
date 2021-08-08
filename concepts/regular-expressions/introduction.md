@@ -20,6 +20,8 @@ Two notes about using sigils:
 - many different delimiters may be used depending on your requirements rather than `/`
 - string patterns are already _escaped_, when writing the pattern as a string not using a regex, you will have to _escape_ backslashes (`\`)
 
+## Character classes
+
 Matching a range of characters using square brackets `[]` to denote a _character class_. This will match any one character to the characters in the class. You can also specify a range of characters like `a-z`, as long as the start and end represent a contiguous range of code points.
 
 ```elixir
@@ -38,6 +40,8 @@ _Shorthand character classes_ make the pattern more concise. For example:
 
 When a _shorthand character class_ is used outside of a sigil, it must be escaped: `"\\d"`
 
+## Alternations
+
 _Alternations_ use `|` as a special character to denote matching one _or_ another
 
 ```elixir
@@ -48,6 +52,8 @@ regex = ~r/cat|bat/
 # => true
 ```
 
+## Quantifiers
+
 _Quantifiers_ allow for a repeating pattern in the regex. They affect the group preceding the quantifier.
 
 - `{N, M}` where `N` is the minimum number of repetitions, and `M` is the maximum
@@ -55,6 +61,8 @@ _Quantifiers_ allow for a repeating pattern in the regex. They affect the group 
   - `{0,}` may also be written as `*`: match zero-or-more repetitions
   - `{1,}` may also be written as `+`: match one-or-more repetitions
 - `{,N}` match up to `N` repetitions
+
+## Groups
 
 Round brackets `()` are used to denote _groups_ and _captures_. The group may also be _captured_ in some instances to be returned for use. In Elixir, these may be named or un-named. Captures are named by appending `?<name>` after the opening parenthesis. Groups function as a single unit, like when followed by _quantifiers_.
 
@@ -67,6 +75,8 @@ regex = ~r/(?<letter_b>b)/
 Regex.scan(regex, "blueberry", capture: :all_names)
 # => [["b"], ["b"]]
 ```
+
+## Anchors
 
 _Anchors_ are used to tie the regular expression to the beginning or end of the string to be matched:
 
