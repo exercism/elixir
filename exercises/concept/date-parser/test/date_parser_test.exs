@@ -76,7 +76,7 @@ defmodule DateParserTest do
       assert("9" =~ Regex.compile!(DateParser.month()))
       assert("10" =~ Regex.compile!(DateParser.month()))
       assert("11" =~ Regex.compile!(DateParser.month()))
-      assert("11" =~ Regex.compile!(DateParser.month()))
+      assert("12" =~ Regex.compile!(DateParser.month()))
     end
 
     @tag task_id: 1
