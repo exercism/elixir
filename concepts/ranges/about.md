@@ -3,6 +3,7 @@
 [Ranges][range] represent a sequence of one or many consecutive integers. They:
 
 - Are created using the [`..` operator][range-operator] and can be both ascending or descending.
+- Their default step is `1`, but can be modified using the [`..//` operator][range-operator-with-step] (since Elixir 1.12).
 - Are inclusive of the first and last values.
 - Implement the [_Enumerable protocol_][enumerable].
 - Are represented internally as a struct, but can be pattern matched using `..`.
@@ -18,6 +19,7 @@ Enum.map(?A..?F, & <<&1>>)
 ```
 
 [range-operator]: https://hexdocs.pm/elixir/Kernel.html#../2
+[range-operator-with-step]: https://hexdocs.pm/elixir/Kernel.html#..///3
 [range]: https://hexdocs.pm/elixir/Range.html
 [enumerable]: https://hexdocs.pm/elixir/Enumerable.html
 [enum-to-list]: https://hexdocs.pm/elixir/Enum.html#to_list/1
