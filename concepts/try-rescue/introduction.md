@@ -17,7 +17,8 @@ Let's examine this construct:
 - **Line 3**, in the `rescue` section, we pattern match on the _Module_ name of the error raised
   - on the left side of `->`:
     - `e` is matched to the error struct.
-    - `in` is a keyword in this occurrence.
-    - `RuntimeError` is the error that we want to rescue. If we wanted to rescue from all errors, we could use `_`.
+    - `in` is a keyword.
+    - `RuntimeError` is the error that we want to rescue.
+      - If we wanted to rescue from all errors, we could use `_` instead of the module name or or omit the `in` keyword entirely.
   - on the right side:
     - the instructions to be executed if the error matches.
