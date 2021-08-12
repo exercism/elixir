@@ -49,6 +49,8 @@ RemoteControlCar.display_distance(car)
 # => "0 meters"
 ```
 
+Make sure the function only accepts a `RemoteControlCar` struct as the argument.
+
 ## 4. Display the battery percentage
 
 Implement the `RemoteControlCar.display_battery/1` function to return the distance as displayed on the LED display:
@@ -58,6 +60,8 @@ car = RemoteControlCar.new()
 RemoteControlCar.display_battery(car)
 # => "Battery at 100%"
 ```
+
+Make sure the function only accepts a `RemoteControlCar` struct as the argument.
 
 ## 5. Driving changes the battery and distance driven
 
@@ -76,6 +80,8 @@ RemoteControlCar.new("Red")
 #    }
 
 ```
+
+Make sure the function only accepts a `RemoteControlCar` struct as the argument.
 
 ## 6. Account for driving with a dead battery
 
