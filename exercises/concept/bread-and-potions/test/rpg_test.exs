@@ -41,6 +41,13 @@ defmodule RPGTest do
       {byproduct, %Character{}} = Edible.eat(%LoafOfBread{}, character)
       assert byproduct == nil
     end
+
+    @tag task_id: 2
+    test "eating it does not affect mana" do
+      character = %Character{mana: 77}
+      {_byproduct, %Character{} = character} = Edible.eat(%LoafOfBread{}, character)
+      assert character.mana == 77
+    end
   end
 
   describe "ManaPotion" do
@@ -63,6 +70,13 @@ defmodule RPGTest do
       {byproduct, %Character{}} = Edible.eat(%ManaPotion{}, character)
       assert byproduct == %EmptyBottle{}
     end
+
+    @tag task_id: 3
+    test "eating it does not affect health" do
+      character = %Character{health: 4}
+      {_byproduct, %Character{} = character} = Edible.eat(%ManaPotion{strength: 6}, character)
+      assert character.health == 4
+    end
   end
 
   describe "Poison" do
@@ -84,6 +98,13 @@ defmodule RPGTest do
       character = %Character{}
       {byproduct, %Character{}} = Edible.eat(%Poison{}, character)
       assert byproduct == %EmptyBottle{}
+    end
+
+    @tag task_id: 4
+    test "eating it does not affect mana" do
+      character = %Character{mana: 99}
+      {_byproduct, %Character{} = character} = Edible.eat(%Poison{}, character)
+      assert character.mana == 99
     end
   end
 
