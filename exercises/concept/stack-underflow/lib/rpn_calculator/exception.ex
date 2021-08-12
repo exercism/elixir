@@ -1,5 +1,5 @@
 defmodule RPNCalculator.Exception do
-  # Please implement DivisonByZeroError here.
+  # Please implement DivisionByZeroError here.
 
-  # Please implement StackUnderflowErrror here.
+  # Please implement StackUnderflowError here.
 end
