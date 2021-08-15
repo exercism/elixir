@@ -62,6 +62,7 @@ defmodule PrimeFactorsTest do
   end
 
   @tag :pending
+  @tag :slow
   # @tag timeout: 2000
   #
   # The timeout tag above will set the below test to fail unless it completes

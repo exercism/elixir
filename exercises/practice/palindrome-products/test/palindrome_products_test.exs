@@ -44,6 +44,7 @@ defmodule PalindromeProductsTest do
   end
 
   @tag :pending
+  @tag :slow
   test "smallest palindrome from four digit factors" do
     palindromes = PalindromeProducts.generate(9999, 1000)
     assert palindromes |> Map.keys() |> Enum.sort() |> hd == 1_002_001
@@ -51,6 +52,7 @@ defmodule PalindromeProductsTest do
   end
 
   @tag :pending
+  @tag :slow
   test "largest palindrome from four digit factors" do
     palindromes = PalindromeProducts.generate(9999, 1000)
     assert palindromes |> Map.keys() |> Enum.sort() |> List.last() == 99_000_099
