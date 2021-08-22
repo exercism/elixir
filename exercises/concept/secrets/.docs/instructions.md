@@ -58,7 +58,7 @@ ander.(2)
 # => 0
 ```
 
-## 5. Create an "and"-er
+## 6. Create an "xor"-er
 
 Implement `Secrets.secret_xor/1`. It should return a function which takes one argument and performs a bitwise _xor_ operation on it and the secret passed in to `secret_xor`.
 
