@@ -16,7 +16,7 @@ def count([]), do: 0
 def count([_head | tail]), do: 1 + count(tail)
 ```
 
-A recursive function can have many base cases and/or many recursive cases. For example [the fibonacci sequence][fibonacci] is a recursive sequence with two base cases:
+A recursive function can have many base cases and/or many recursive cases. For example [the Fibonacci sequence][fibonacci] is a recursive sequence with two base cases:
 
 ```elixir
 def fibonacci(0), do: 0

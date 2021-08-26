@@ -4,7 +4,7 @@ Functions for working with files are provided by the [`File`][file] module.
 
 To read a whole file, use [`File.read/1`][file-read]. To write to a file, use [`File.write/2`][file-write].
 
-The module also provides file functions for copying, removing, renaming etc. Their names are similar to their unix equivalents, for example:
+The module also provides file functions for copying, removing, renaming etc. Their names are similar to their UNIX equivalents, for example:
 
 - [`File.cp/3`][file-cp] - copy a file.
 - [`File.rm/1`][file-rm] - delete a file.
