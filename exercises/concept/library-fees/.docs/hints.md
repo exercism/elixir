@@ -25,7 +25,7 @@
 - There is a [built-in function][naive-date-time-to-date] that changes a `NaiveDateTime` struct to a `Date` struct.
 - There is a [built-in function][date-diff] that calculates the difference in days between two `Date` structs.
 
-## 5. Determine if the book was returned on a monday
+## 5. Determine if the book was returned on a Monday
 
 - There is a [built-in function][naive-date-time-to-date] that changes a `NaiveDateTime` struct to a `Date` struct.
 - There is a [built-in function][date-day-of-week] that returns the day of week for a given `Date` struct.
