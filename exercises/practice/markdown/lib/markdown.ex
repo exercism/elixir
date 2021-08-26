@@ -16,7 +16,8 @@ defmodule Markdown do
   end
 
   defp process(t) do
-    if String.starts_with?(t, "#") || String.starts_with?(t, "*") do
+    if (String.starts_with?(t, "#") && !String.starts_with?(t, "#######")) ||
+         String.starts_with?(t, "*") do
       if String.starts_with?(t, "#") do
         enclose_with_header_tag(parse_header_md_level(t))
       else

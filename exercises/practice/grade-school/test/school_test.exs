@@ -8,7 +8,16 @@ defmodule SchoolTest do
     assert actual == %{2 => ["Aimee"]}
   end
 
-  test "a student can't be in two different grades" do
+  test "a student can only be added to the same grade once" do
+    actual =
+      @db
+      |> School.add("Aimee", 2)
+      |> School.add("Aimee", 2)
+
+    assert actual == %{2 => ["Aimee"]}
+  end
+
+  test "a student cannot be added to more than one grade" do
     actual =
       @db
       |> School.add("Aimee", 2)

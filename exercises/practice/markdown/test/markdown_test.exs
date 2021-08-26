@@ -44,9 +44,37 @@ defmodule MarkdownTest do
   end
 
   # @tag :pending
+  test "with h3 header level" do
+    input = "### This will be an h3"
+    expected = "<h3>This will be an h3</h3>"
+    assert Markdown.parse(input) == expected
+  end
+
+  # @tag :pending
+  test "with h4 header level" do
+    input = "#### This will be an h4"
+    expected = "<h4>This will be an h4</h4>"
+    assert Markdown.parse(input) == expected
+  end
+
+  # @tag :pending
+  test "with h5 header level" do
+    input = "##### This will be an h5"
+    expected = "<h5>This will be an h5</h5>"
+    assert Markdown.parse(input) == expected
+  end
+
+  # @tag :pending
   test "with h6 header level" do
     input = "###### This will be an h6"
     expected = "<h6>This will be an h6</h6>"
+    assert Markdown.parse(input) == expected
+  end
+
+  # @tag :pending
+  test "h7 header level is a paragraph" do
+    input = "####### This will not be an h7"
+    expected = "<p>####### This will not be an h7</p>"
     assert Markdown.parse(input) == expected
   end
 
