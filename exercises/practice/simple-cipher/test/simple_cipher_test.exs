@@ -79,6 +79,12 @@ defmodule SimpleCipherTest do
   end
 
   @tag :pending
+  test "passed through letters consume key letters" do
+    assert SimpleCipher.encode("this is a test!", "abc") == "tiks ks c ugsu!"
+    assert SimpleCipher.decode("tiks ks c ugsu!", "abc") == "this is a test!"
+  end
+
+  @tag :pending
   test "can encode messages longer than the key" do
     assert SimpleCipher.encode("abc", "a") == "abc"
     assert SimpleCipher.encode("abcdefghi", "abc") == "acedfhgik"
