@@ -50,7 +50,7 @@ LibraryFees.days_late(~D[2020-12-27], ~N[2021-01-03 09:23:36])
 # => 7
 ```
 
-## 5. Determine if the book was returned on a monday
+## 5. Determine if the book was returned on a Monday
 
 The library has a special offer for returning books on Mondays.
 

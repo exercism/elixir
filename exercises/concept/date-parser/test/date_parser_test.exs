@@ -3,86 +3,52 @@ defmodule DateParserTest do
 
   describe "numeric pattern for day matches" do
     @tag task_id: 1
-    test "un-padded 1", do: assert("1" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 2", do: assert("2" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 3", do: assert("3" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 4", do: assert("4" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 5", do: assert("5" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 6", do: assert("6" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 7", do: assert("7" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 8", do: assert("8" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 9", do: assert("9" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 10", do: assert("10" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 11", do: assert("11" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 12", do: assert("12" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 13", do: assert("13" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 14", do: assert("14" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 15", do: assert("15" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 16", do: assert("16" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 17", do: assert("17" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 18", do: assert("18" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 19", do: assert("19" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 20", do: assert("20" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 21", do: assert("21" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 22", do: assert("22" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 23", do: assert("23" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 24", do: assert("24" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 25", do: assert("25" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 26", do: assert("26" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 27", do: assert("27" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 28", do: assert("28" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 29", do: assert("29" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 30", do: assert("30" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "un-padded 31", do: assert("31" =~ Regex.compile!(DateParser.day()))
+    test "un-padded days" do
+      assert("1" =~ Regex.compile!(DateParser.day()))
+      assert("2" =~ Regex.compile!(DateParser.day()))
+      assert("3" =~ Regex.compile!(DateParser.day()))
+      assert("4" =~ Regex.compile!(DateParser.day()))
+      assert("5" =~ Regex.compile!(DateParser.day()))
+      assert("6" =~ Regex.compile!(DateParser.day()))
+      assert("7" =~ Regex.compile!(DateParser.day()))
+      assert("8" =~ Regex.compile!(DateParser.day()))
+      assert("9" =~ Regex.compile!(DateParser.day()))
+      assert("10" =~ Regex.compile!(DateParser.day()))
+      assert("11" =~ Regex.compile!(DateParser.day()))
+      assert("12" =~ Regex.compile!(DateParser.day()))
+      assert("13" =~ Regex.compile!(DateParser.day()))
+      assert("14" =~ Regex.compile!(DateParser.day()))
+      assert("15" =~ Regex.compile!(DateParser.day()))
+      assert("16" =~ Regex.compile!(DateParser.day()))
+      assert("17" =~ Regex.compile!(DateParser.day()))
+      assert("18" =~ Regex.compile!(DateParser.day()))
+      assert("19" =~ Regex.compile!(DateParser.day()))
+      assert("20" =~ Regex.compile!(DateParser.day()))
+      assert("21" =~ Regex.compile!(DateParser.day()))
+      assert("22" =~ Regex.compile!(DateParser.day()))
+      assert("23" =~ Regex.compile!(DateParser.day()))
+      assert("24" =~ Regex.compile!(DateParser.day()))
+      assert("25" =~ Regex.compile!(DateParser.day()))
+      assert("26" =~ Regex.compile!(DateParser.day()))
+      assert("27" =~ Regex.compile!(DateParser.day()))
+      assert("28" =~ Regex.compile!(DateParser.day()))
+      assert("29" =~ Regex.compile!(DateParser.day()))
+      assert("30" =~ Regex.compile!(DateParser.day()))
+      assert("31" =~ Regex.compile!(DateParser.day()))
+    end
 
     @tag task_id: 1
-    test "padded 01", do: assert("01" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "padded 02", do: assert("02" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "padded 03", do: assert("03" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "padded 04", do: assert("04" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "padded 05", do: assert("05" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "padded 06", do: assert("06" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "padded 07", do: assert("07" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "padded 08", do: assert("08" =~ Regex.compile!(DateParser.day()))
-    @tag task_id: 1
-    test "padded 09", do: assert("09" =~ Regex.compile!(DateParser.day()))
+    test "padded days" do
+      assert("01" =~ Regex.compile!(DateParser.day()))
+      assert("02" =~ Regex.compile!(DateParser.day()))
+      assert("03" =~ Regex.compile!(DateParser.day()))
+      assert("04" =~ Regex.compile!(DateParser.day()))
+      assert("05" =~ Regex.compile!(DateParser.day()))
+      assert("06" =~ Regex.compile!(DateParser.day()))
+      assert("07" =~ Regex.compile!(DateParser.day()))
+      assert("08" =~ Regex.compile!(DateParser.day()))
+      assert("09" =~ Regex.compile!(DateParser.day()))
+    end
   end
 
   describe "numeric pattern for day doesn't match" do
@@ -98,48 +64,33 @@ defmodule DateParserTest do
 
   describe "numeric pattern for month matches" do
     @tag task_id: 1
-    test "un-padded 1", do: assert("1" =~ Regex.compile!(DateParser.month()))
-    @tag task_id: 1
-    test "un-padded 2", do: assert("2" =~ Regex.compile!(DateParser.month()))
-    @tag task_id: 1
-    test "un-padded 3", do: assert("3" =~ Regex.compile!(DateParser.month()))
-    @tag task_id: 1
-    test "un-padded 4", do: assert("4" =~ Regex.compile!(DateParser.month()))
-    @tag task_id: 1
-    test "un-padded 5", do: assert("5" =~ Regex.compile!(DateParser.month()))
-    @tag task_id: 1
-    test "un-padded 6", do: assert("6" =~ Regex.compile!(DateParser.month()))
-    @tag task_id: 1
-    test "un-padded 7", do: assert("7" =~ Regex.compile!(DateParser.month()))
-    @tag task_id: 1
-    test "un-padded 8", do: assert("8" =~ Regex.compile!(DateParser.month()))
-    @tag task_id: 1
-    test "un-padded 9", do: assert("9" =~ Regex.compile!(DateParser.month()))
-    @tag task_id: 1
-    test "un-padded 10", do: assert("10" =~ Regex.compile!(DateParser.month()))
-    @tag task_id: 1
-    test "un-padded 11", do: assert("11" =~ Regex.compile!(DateParser.month()))
-    @tag task_id: 1
-    test "un-padded 12", do: assert("11" =~ Regex.compile!(DateParser.month()))
+    test "un-padded months" do
+      assert("1" =~ Regex.compile!(DateParser.month()))
+      assert("2" =~ Regex.compile!(DateParser.month()))
+      assert("3" =~ Regex.compile!(DateParser.month()))
+      assert("4" =~ Regex.compile!(DateParser.month()))
+      assert("5" =~ Regex.compile!(DateParser.month()))
+      assert("6" =~ Regex.compile!(DateParser.month()))
+      assert("7" =~ Regex.compile!(DateParser.month()))
+      assert("8" =~ Regex.compile!(DateParser.month()))
+      assert("9" =~ Regex.compile!(DateParser.month()))
+      assert("10" =~ Regex.compile!(DateParser.month()))
+      assert("11" =~ Regex.compile!(DateParser.month()))
+      assert("12" =~ Regex.compile!(DateParser.month()))
+    end
 
     @tag task_id: 1
-    test "padded 01", do: assert("01" =~ Regex.compile!(DateParser.month()))
-    @tag task_id: 1
-    test "padded 02", do: assert("02" =~ Regex.compile!(DateParser.month()))
-    @tag task_id: 1
-    test "padded 03", do: assert("03" =~ Regex.compile!(DateParser.month()))
-    @tag task_id: 1
-    test "padded 04", do: assert("04" =~ Regex.compile!(DateParser.month()))
-    @tag task_id: 1
-    test "padded 05", do: assert("05" =~ Regex.compile!(DateParser.month()))
-    @tag task_id: 1
-    test "padded 06", do: assert("06" =~ Regex.compile!(DateParser.month()))
-    @tag task_id: 1
-    test "padded 07", do: assert("07" =~ Regex.compile!(DateParser.month()))
-    @tag task_id: 1
-    test "padded 08", do: assert("08" =~ Regex.compile!(DateParser.month()))
-    @tag task_id: 1
-    test "padded 09", do: assert("09" =~ Regex.compile!(DateParser.month()))
+    test "padded months" do
+      assert("01" =~ Regex.compile!(DateParser.month()))
+      assert("02" =~ Regex.compile!(DateParser.month()))
+      assert("03" =~ Regex.compile!(DateParser.month()))
+      assert("04" =~ Regex.compile!(DateParser.month()))
+      assert("05" =~ Regex.compile!(DateParser.month()))
+      assert("06" =~ Regex.compile!(DateParser.month()))
+      assert("07" =~ Regex.compile!(DateParser.month()))
+      assert("08" =~ Regex.compile!(DateParser.month()))
+      assert("09" =~ Regex.compile!(DateParser.month()))
+    end
   end
 
   describe "numeric pattern for month doesn't match" do
@@ -170,38 +121,26 @@ defmodule DateParserTest do
     test "doesn't match too many", do: refute("19701" =~ Regex.compile!("^#{DateParser.year()}$"))
   end
 
-  describe "day names match" do
-    @tag task_id: 2
-    test "Sunday", do: assert("Sunday" =~ Regex.compile!(DateParser.day_names()))
-    @tag task_id: 2
-    test "Monday", do: assert("Monday" =~ Regex.compile!(DateParser.day_names()))
-    @tag task_id: 2
-    test "Tuesday", do: assert("Tuesday" =~ Regex.compile!(DateParser.day_names()))
-    @tag task_id: 2
-    test "Wednesday", do: assert("Wednesday" =~ Regex.compile!(DateParser.day_names()))
-    @tag task_id: 2
-    test "Thursday", do: assert("Thursday" =~ Regex.compile!(DateParser.day_names()))
-    @tag task_id: 2
-    test "Friday", do: assert("Friday" =~ Regex.compile!(DateParser.day_names()))
-    @tag task_id: 2
-    test "Saturday", do: assert("Saturday" =~ Regex.compile!(DateParser.day_names()))
+  @tag task_id: 2
+  test "day names match" do
+    assert("Sunday" =~ Regex.compile!(DateParser.day_names()))
+    assert("Monday" =~ Regex.compile!(DateParser.day_names()))
+    assert("Tuesday" =~ Regex.compile!(DateParser.day_names()))
+    assert("Wednesday" =~ Regex.compile!(DateParser.day_names()))
+    assert("Thursday" =~ Regex.compile!(DateParser.day_names()))
+    assert("Friday" =~ Regex.compile!(DateParser.day_names()))
+    assert("Saturday" =~ Regex.compile!(DateParser.day_names()))
   end
 
-  describe "day names don't match with trailing or leading whitespace" do
-    @tag task_id: 2
-    test "Sunday", do: refute(" Sunday " =~ Regex.compile!("^#{DateParser.day_names()}$"))
-    @tag task_id: 2
-    test "Monday", do: refute(" Monday " =~ Regex.compile!("^#{DateParser.day_names()}$"))
-    @tag task_id: 2
-    test "Tuesday", do: refute(" Tuesday " =~ Regex.compile!("^#{DateParser.day_names()}$"))
-    @tag task_id: 2
-    test "Wednesday", do: refute(" Wednesday " =~ Regex.compile!("^#{DateParser.day_names()}$"))
-    @tag task_id: 2
-    test "Thursday", do: refute(" Thursday " =~ Regex.compile!("^#{DateParser.day_names()}$"))
-    @tag task_id: 2
-    test "Friday", do: refute(" Friday " =~ Regex.compile!("^#{DateParser.day_names()}$"))
-    @tag task_id: 2
-    test "Saturday", do: refute(" Saturday " =~ Regex.compile!("^#{DateParser.day_names()}$"))
+  @tag task_id: 2
+  test "day names don't match with trailing or leading whitespace" do
+    refute(" Sunday " =~ Regex.compile!("^#{DateParser.day_names()}$"))
+    refute(" Monday " =~ Regex.compile!("^#{DateParser.day_names()}$"))
+    refute(" Tuesday " =~ Regex.compile!("^#{DateParser.day_names()}$"))
+    refute(" Wednesday " =~ Regex.compile!("^#{DateParser.day_names()}$"))
+    refute(" Thursday " =~ Regex.compile!("^#{DateParser.day_names()}$"))
+    refute(" Friday " =~ Regex.compile!("^#{DateParser.day_names()}$"))
+    refute(" Saturday " =~ Regex.compile!("^#{DateParser.day_names()}$"))
   end
 
   describe "day names don't match" do
@@ -226,58 +165,36 @@ defmodule DateParserTest do
     end
   end
 
-  describe "month names match" do
-    @tag task_id: 2
-    test "January", do: assert("January" =~ Regex.compile!(DateParser.month_names()))
-    @tag task_id: 2
-    test "February", do: assert("February" =~ Regex.compile!(DateParser.month_names()))
-    @tag task_id: 2
-    test "March", do: assert("March" =~ Regex.compile!(DateParser.month_names()))
-    @tag task_id: 2
-    test "April", do: assert("April" =~ Regex.compile!(DateParser.month_names()))
-    @tag task_id: 2
-    test "May", do: assert("May" =~ Regex.compile!(DateParser.month_names()))
-    @tag task_id: 2
-    test "June", do: assert("June" =~ Regex.compile!(DateParser.month_names()))
-    @tag task_id: 2
-    test "July", do: assert("July" =~ Regex.compile!(DateParser.month_names()))
-    @tag task_id: 2
-    test "August", do: assert("August" =~ Regex.compile!(DateParser.month_names()))
-    @tag task_id: 2
-    test "September", do: assert("September" =~ Regex.compile!(DateParser.month_names()))
-    @tag task_id: 2
-    test "October", do: assert("October" =~ Regex.compile!(DateParser.month_names()))
-    @tag task_id: 2
-    test "November", do: assert("November" =~ Regex.compile!(DateParser.month_names()))
-    @tag task_id: 2
-    test "December", do: assert("December" =~ Regex.compile!(DateParser.month_names()))
+  @tag task_id: 2
+  test "month names match" do
+    assert("January" =~ Regex.compile!(DateParser.month_names()))
+    assert("February" =~ Regex.compile!(DateParser.month_names()))
+    assert("March" =~ Regex.compile!(DateParser.month_names()))
+    assert("April" =~ Regex.compile!(DateParser.month_names()))
+    assert("May" =~ Regex.compile!(DateParser.month_names()))
+    assert("June" =~ Regex.compile!(DateParser.month_names()))
+    assert("July" =~ Regex.compile!(DateParser.month_names()))
+    assert("August" =~ Regex.compile!(DateParser.month_names()))
+    assert("September" =~ Regex.compile!(DateParser.month_names()))
+    assert("October" =~ Regex.compile!(DateParser.month_names()))
+    assert("November" =~ Regex.compile!(DateParser.month_names()))
+    assert("December" =~ Regex.compile!(DateParser.month_names()))
   end
 
-  describe "month names don't match with trailing or leading whitespace" do
-    @tag task_id: 2
-    test "January", do: refute(" January " =~ Regex.compile!("^#{DateParser.month_names()}$"))
-    @tag task_id: 2
-    test "February", do: refute(" February " =~ Regex.compile!("^#{DateParser.month_names()}$"))
-    @tag task_id: 2
-    test "March", do: refute(" March " =~ Regex.compile!("^#{DateParser.month_names()}$"))
-    @tag task_id: 2
-    test "April", do: refute(" April " =~ Regex.compile!("^#{DateParser.month_names()}$"))
-    @tag task_id: 2
-    test "May", do: refute(" May " =~ Regex.compile!("^#{DateParser.month_names()}$"))
-    @tag task_id: 2
-    test "June", do: refute(" June " =~ Regex.compile!("^#{DateParser.month_names()}$"))
-    @tag task_id: 2
-    test "July", do: refute(" July " =~ Regex.compile!("^#{DateParser.month_names()}$"))
-    @tag task_id: 2
-    test "August", do: refute(" August " =~ Regex.compile!("^#{DateParser.month_names()}$"))
-    @tag task_id: 2
-    test "September", do: refute(" September " =~ Regex.compile!("^#{DateParser.month_names()}$"))
-    @tag task_id: 2
-    test "October", do: refute(" October " =~ Regex.compile!("^#{DateParser.month_names()}$"))
-    @tag task_id: 2
-    test "November", do: refute(" November " =~ Regex.compile!("^#{DateParser.month_names()}$"))
-    @tag task_id: 2
-    test "December", do: refute(" December " =~ Regex.compile!("^#{DateParser.month_names()}$"))
+  @tag task_id: 2
+  test "month names don't match with trailing or leading whitespace" do
+    refute(" January " =~ Regex.compile!("^#{DateParser.month_names()}$"))
+    refute(" February " =~ Regex.compile!("^#{DateParser.month_names()}$"))
+    refute(" March " =~ Regex.compile!("^#{DateParser.month_names()}$"))
+    refute(" April " =~ Regex.compile!("^#{DateParser.month_names()}$"))
+    refute(" May " =~ Regex.compile!("^#{DateParser.month_names()}$"))
+    refute(" June " =~ Regex.compile!("^#{DateParser.month_names()}$"))
+    refute(" July " =~ Regex.compile!("^#{DateParser.month_names()}$"))
+    refute(" August " =~ Regex.compile!("^#{DateParser.month_names()}$"))
+    refute(" September " =~ Regex.compile!("^#{DateParser.month_names()}$"))
+    refute(" October " =~ Regex.compile!("^#{DateParser.month_names()}$"))
+    refute(" November " =~ Regex.compile!("^#{DateParser.month_names()}$"))
+    refute(" December " =~ Regex.compile!("^#{DateParser.month_names()}$"))
   end
 
   describe "month names don't match" do

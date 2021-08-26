@@ -42,7 +42,7 @@ format. These are used in Elixir and Erlang as documentation and
 in conjunction with a tool called Dialyzer to find type inconsistencies
 and possible bugs. For more information see the
 [Elixir typespecs guide](http://elixir-lang.org/getting-started/typespecs-and-behaviours.html)
-or the [typespecs documentation](http://elixir-lang.org/docs/stable/elixir/typespecs.html). For
+or the [typespecs documentation](https://hexdocs.pm/elixir/typespecs.html). For
 documentation about Dialyzer see [Erlang -- dialyzer](http://erlang.org/doc/man/dialyzer.html).
 
 Optionally, you may want to check

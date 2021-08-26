@@ -11,7 +11,7 @@
 - There is a [built-in function][kernel-case] that allows us to compare a given value against many patterns.
 - There is a [special syntax][syntax-reference-code-points] for getting a character's code point. It can be used in guards.
 - Charlists are lists of code points, and code points, being numbers, can be [compared][kernel-greater-than] to one another.
-- Lowercase latin letters all have [consecutive code points][unicode-character-reference], in alphabetical order.
+- Lowercase Latin letters all have [consecutive code points][unicode-character-reference], in alphabetical order.
 - There is [a built-in function][kernel-concat-list] that allows you to concatenate two lists.
 
 ## 2. Allow underscores
