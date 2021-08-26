@@ -1,3 +1,4 @@
+
 # Hints
 
 ## General
@@ -37,6 +38,7 @@
 ## 7. Create a function combiner
 
 - Return an anonymous function which [composes the functions][fn-composition] passed in to `Secret.secret_combine/2`.
+- Use a `.` before `()` when calling an anonymous function.
 
 [anon-fns]: https://elixir-lang.org/getting-started/basic-types.html#anonymous-functions
 [bitwise-hexdocs]: https://hexdocs.pm/elixir/Bitwise.html

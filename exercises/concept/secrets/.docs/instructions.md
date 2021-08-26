@@ -48,7 +48,7 @@ divider.(32)
 
 Make use of integer division.
 
-## 5. Create a "and"-er
+## 5. Create an "and"-er
 
 Implement `Secrets.secret_and/1`. It should return a function which takes one argument and performs a bitwise _and_ operation on it and the secret passed in to `secret_and`.
 
@@ -58,7 +58,7 @@ ander.(2)
 # => 0
 ```
 
-## 6. Create a "xor"-er
+## 6. Create an "xor"-er
 
 Implement `Secrets.secret_xor/1`. It should return a function which takes one argument and performs a bitwise _xor_ operation on it and the secret passed in to `secret_xor`.
 
