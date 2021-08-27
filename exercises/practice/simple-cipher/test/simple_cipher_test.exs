@@ -73,12 +73,6 @@ defmodule SimpleCipherTest do
   end
 
   @tag :pending
-  test "only lowercase a-z are translated, rest are passed through" do
-    assert SimpleCipher.encode("this is a test!", "d") == "wklv lv d whvw!"
-    assert SimpleCipher.decode("wklv lv d whvw!", "d") == "this is a test!"
-  end
-
-  @tag :pending
   test "can encode messages longer than the key" do
     assert SimpleCipher.encode("abc", "a") == "abc"
     assert SimpleCipher.encode("abcdefghi", "abc") == "acedfhgik"
