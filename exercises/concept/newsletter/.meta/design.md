@@ -25,4 +25,6 @@
 ## Analyzer
 
 - ensure that `log_sent_email/2`, `close_log/0`, and `send_newsletter/3` don't return `:ok` explicitly, but implicitly (from `File.close` etc.)
-- ensure that `send_newsletter/3` calls `open_log/1` and `close_log/1` exactly once each, and doesn't use `File.write`.
+- ensure that `open_log/1` uses `File.open!` with the option `[:write]`
+- ensure that `send_newsletter/3` calls `open_log/1` and `close_log/1` 
+- ensure that `send_newsletter/3` doesn't use `File.write`.
