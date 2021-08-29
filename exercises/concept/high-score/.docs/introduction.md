@@ -25,9 +25,7 @@ While there is no canonical format, choose a consistent way to represent the key
 
 ### Map module functions
 
-Elixir provides many functions for working with maps in the _Map module_. Some _Map module_ functions require an _anonymous_ or _captured function_ to be passed into the function to assist with the map transformation.
-
-Maps also implement the _Enumerable protocol_, which allow them to be used in _Enum module_ functions. Often maps are transformed into a list, processed or transformed in some way, then returned. When a map is returned as a list, each key-value pair is returned as a tuple in the list.
+Elixir provides many functions for working with maps in the _Map module_. Some _Map module_ functions require an _anonymous_ function_ to be passed into the function to assist with the map transformation.
 
 ## Module Attributes As Constants
 

@@ -13,12 +13,12 @@
 ## 2. Add players to the high score map
 
 - The resulting map should be returned.
-- [Map module][map-module] contains functions useful for manipulating maps. [One of them][map-put] deletes a key from a map.
+- [Map module][map-module] contains functions useful for manipulating maps. [One of them][map-put] puts a value in a map under a given key.
 
 ## 3. Remove players from the score map
 
 - The resulting map should be returned.
-- [Map module][map-module] contains functions useful for manipulating maps. [One of them][map-delete] puts a value in a map under a given key.
+- [Map module][map-module] contains functions useful for manipulating maps. [One of them][map-delete] deletes a key from a map.
 
 ## 4. Reset a player's score
 

@@ -24,5 +24,5 @@
 [if]: https://elixir-lang.org/getting-started/case-cond-and-if.html#if-and-unless
 [mfc]: https://elixir-lang.org/getting-started/modules-and-functions.html#named-functions
 [mimetype]: https://en.wikipedia.org/wiki/Media_type
-[pattern-matching]: https://elixir-lang.org/getting-started/pattern-matching.html#pattern-matching-1
+[pattern-matching]: https://elixir-lang.org/getting-started/pattern-matching.html#pattern-matching
 [special-forms]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#%3C%3C%3E%3E/1

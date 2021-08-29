@@ -17,7 +17,7 @@ end
 - **Line 3**, in the `rescue` section, we pattern match on the _Module_ name of the error raised
   - on the left side of `->`:
     - `e` is matched to the error struct.
-    - `in` is a keyword in this occurrence.
+    - `in` is a keyword.
     - `RuntimeError` is the module to matched, but can match on any error module, or `_` all errors.
   - on the right side:
     - the instructions to be executed if the error matches.

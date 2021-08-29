@@ -24,6 +24,7 @@
 
 - Review how to write a pattern to match _string literals_.
 - Review _alternations_.
+- Wrap the whole expression in a _group_.
 
 ## 3. Capture the day, month, and year
 

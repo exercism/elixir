@@ -5,7 +5,7 @@
 - Read about links and tasks in the official [Getting Started guide][getting-started-links].
 - Take a look at the [documentation of the `Task` module][task].
 - Read ["Demystifying processes in Elixir" on blog.appsignal.com][appsignal-processes].
-- Read ["Understanding Exit Signals in Erlang/Elixir" on crypt.codemancers.com/][codemancers-exit-signals].
+- Read ["Understanding Exit Signals in Erlang/Elixir" on crypt.codemancers.com][codemancers-exit-signals].
 
 ## 1. Start a reliability check for a single input
 

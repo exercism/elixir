@@ -14,7 +14,7 @@
 - There is a [built-in function][naive-date-time-to-time] that changes a `NaiveDateTime` struct to a `Time` struct.
 - There is a [built-in function][time-compare] that checks which one of two `Time` structs is bigger.
 
-## 3. Calculate the return datetime
+## 3. Calculate the return date
 
 - A day has `24 * 60 * 60` seconds.
 - There is a [built-in function][naive-date-time-add] that adds a given number of seconds to a `NaiveDateTime` struct.
@@ -44,4 +44,4 @@
 [time-sigil]: https://hexdocs.pm/elixir/Kernel.html#sigil_T/2
 [time-compare]: https://hexdocs.pm/elixir/Time.html#compare/2
 [date-diff]: https://hexdocs.pm/elixir/Date.html#diff/2
-[date-day-of-weeo]: https://hexdocs.pm/elixir/Date.html#day_of_week/2
+[date-day-of-week]: https://hexdocs.pm/elixir/Date.html#day_of_week/2
