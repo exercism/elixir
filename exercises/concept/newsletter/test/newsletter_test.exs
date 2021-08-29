@@ -147,6 +147,21 @@ defmodule NewsletterTest do
     end
 
     @tag task_id: 5
+    test "sending the same newsletter twice resets the log" do
+      send_fun = fn _ -> :ok end
+      Newsletter.send_newsletter(Path.join(["assets", "emails.txt"]), @temp_file_path, send_fun)
+      Newsletter.send_newsletter(Path.join(["assets", "emails.txt"]), @temp_file_path, send_fun)
+
+      assert File.read!(@temp_file_path) ==
+               """
+               alice@example.com
+               bob@example.com
+               charlie@example.com
+               dave@example.com
+               """
+    end
+
+    @tag task_id: 5
     test "logs the email immediately after it was sent" do
       send_fun = fn email ->
         case email do
