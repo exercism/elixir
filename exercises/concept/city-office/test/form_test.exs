@@ -44,7 +44,7 @@ defmodule FormTest do
     end
   end
 
-  defmacrop assert_spec({function_name, function_arity}, arguments_spec, return_spec) do
+  defmacrop assert_spec({function_name, function_arity}, arguments_specs, return_spec) do
     quote do
       {:ok, specs} = Code.Typespec.fetch_specs(Form)
 
@@ -62,9 +62,13 @@ defmodule FormTest do
       {:"::", _, [arguments, return]} =
         Code.Typespec.spec_to_quoted(unquote(function_name), function_spec)
 
-      expected_arguments_spec = "#{unquote(function_name)}(#{unquote(arguments_spec)})"
+      accepted_arguments_specs =
+        Enum.map(unquote(arguments_specs), fn arguments_spec ->
+          "#{unquote(function_name)}(#{arguments_spec})"
+        end)
+
       actual_arguments_spec = Macro.to_string(arguments)
-      assert actual_arguments_spec == expected_arguments_spec
+      assert actual_arguments_spec in accepted_arguments_specs
 
       expected_return_spec = unquote(return_spec)
       actual_return_spec = Macro.to_string(return)
@@ -129,7 +133,7 @@ defmodule FormTest do
 
     @tag task_id: 2
     test "has a correct spec" do
-      assert_spec({:blanks, 1}, "non_neg_integer()", "String.t()")
+      assert_spec({:blanks, 1}, ["n :: non_neg_integer()", "non_neg_integer()"], "String.t()")
     end
   end
 
@@ -158,7 +162,7 @@ defmodule FormTest do
 
     @tag task_id: 3
     test "has a typespec" do
-      assert_spec({:letters, 1}, "String.t()", "[String.t()]")
+      assert_spec({:letters, 1}, ["word :: String.t()", "String.t()"], "[String.t()]")
     end
   end
 
@@ -194,7 +198,7 @@ defmodule FormTest do
     test "has a typespec" do
       assert_spec(
         {:check_length, 2},
-        "String.t(), non_neg_integer()",
+        ["word :: String.t(), length :: non_neg_integer()", "String.t(), non_neg_integer()"],
         ":ok | {:error, pos_integer()}"
       )
     end
@@ -263,7 +267,7 @@ defmodule FormTest do
 
     @tag task_id: 6
     test "has a typespec" do
-      assert_spec({:format_address, 1}, "address()", "String.t()")
+      assert_spec({:format_address, 1}, ["address :: address()", "address()"], "String.t()")
     end
   end
 end
