@@ -4,7 +4,7 @@
 
 ### Agent
 
-[by @adamzaninovich](https://exercism.io/tracks/elixir/exercises/bank-account/solutions/02dea8fa44014c40b1b3963498097fcb)
+[by @adamzaninovich](https://exercism.org/tracks/elixir/exercises/bank-account/solutions/adamzaninovich)
 
 ```elixir
 defmodule BankAccount do
@@ -54,7 +54,7 @@ end
 
 ### GenServer
 
-[by @aaroncm (adapted)](https://exercism.io/tracks/elixir/exercises/bank-account/solutions/961596ab0cce445aa918452137feae1b)
+by @aaroncm (adapted)
 
 ```elixir
 defmodule BankAccount do
@@ -114,7 +114,7 @@ end
 
 ### `send/2` and `receive/1`
 
-[by @opsb (adapted)](https://exercism.io/tracks/elixir/exercises/bank-account/solutions/d8d4ab8d4b2b47509cf1976fb93da0a1)
+[by @opsb (adapted)](https://exercism.org/tracks/elixir/exercises/bank-account/solutions/opsb)
 
 ```elixir
 defmodule BankAccount do

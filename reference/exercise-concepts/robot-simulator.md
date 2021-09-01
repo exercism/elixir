@@ -2,7 +2,7 @@
 
 ## Example solutions
 
-By numberMumbler ([solution link](https://exercism.io/tracks/elixir/exercises/robot-simulator/solutions/b5d52f2870e74094ab3a74fc7108a82b))
+By numberMumbler ([solution link](https://exercism.org/tracks/elixir/exercises/robot-simulator/solutions/numberMumbler))
 
 ```elixir
 defmodule RobotSimulator do

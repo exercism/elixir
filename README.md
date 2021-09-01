@@ -4,7 +4,7 @@
 ![GitHub contributors](https://img.shields.io/github/contributors-anon/exercism/elixir)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/exercism/elixir)
 
-[Exercism Exercises in Elixir](https://exercism.io/tracks/elixir)
+[Exercism Exercises in Elixir](https://exercism.org/tracks/elixir)
 
 ## Setup
 
