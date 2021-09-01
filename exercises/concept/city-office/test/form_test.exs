@@ -62,7 +62,11 @@ defmodule FormTest do
       {:"::", _, [arguments, return]} =
         Code.Typespec.spec_to_quoted(unquote(function_name), function_spec)
 
-      accepted_arguments_specs = Enum.map(unquote(arguments_specs), fn arguments_spec -> "#{unquote(function_name)}(#{arguments_spec})" end)
+      accepted_arguments_specs =
+        Enum.map(unquote(arguments_specs), fn arguments_spec ->
+          "#{unquote(function_name)}(#{arguments_spec})"
+        end)
+
       actual_arguments_spec = Macro.to_string(arguments)
       assert actual_arguments_spec in accepted_arguments_specs
 
