@@ -10,7 +10,7 @@ You can see there are some similarities between each of them, and decide to writ
 
 ## 1. Match the day, month, and year from a date
 
-Implement `day/0`, `month/0`, and `year/0` to return a string pattern which, when compiled, would match the numeric components in `"01/01/1970"` (`dd/mm/yyyy`). The date and month may appear as `1` or `01` (left padded with zeroes).
+Implement `day/0`, `month/0`, and `year/0` to return a string pattern which, when compiled, would match the numeric components in `"01/01/1970"` (`dd/mm/yyyy`). The day and month may appear as `1` or `01` (left padded with zeroes).
 
 Do not worry about error checking. You can assume you will always be passed a valid numeric component.
 
