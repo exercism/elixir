@@ -46,7 +46,7 @@ defmodule RationalNumbers do
   @doc """
   Exponentiation of a real number by a rational number
   """
-  @spec pow_real(x :: float, n :: rational) :: float
+  @spec pow_real(x :: integer, n :: rational) :: float
   def pow_real(x, n) do
   end
 
