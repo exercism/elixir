@@ -31,9 +31,7 @@ defmodule FreelancerRatesTest do
 
     @tag task_id: 2
     test "it doesn't round" do
-      # We round result to 5th decimal place to accept results that vary marginally
-      # because of slightly different order of operations and float imprecision
-      assert Float.round(FreelancerRates.apply_discount(111.11, 13.5), 5) == 96.11015
+      assert_in_delta FreelancerRates.apply_discount(111.11, 13.5), 96.11015, 0.000001
     end
   end
 
