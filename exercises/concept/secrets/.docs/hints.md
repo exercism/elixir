@@ -45,4 +45,4 @@
 [bitwise-wiki]: https://en.wikipedia.org/wiki/Bitwise_operation
 [closure]: https://en.wikipedia.org/wiki/Closure_(computer_programming)
 [div]: https://hexdocs.pm/elixir/Kernel.html#div/2
-[fn-composition]: https://en.wikipedia.org/wiki/Function_composition
+[fn-composition]: https://en.wikipedia.org/wiki/Function_composition_(computer_science)
