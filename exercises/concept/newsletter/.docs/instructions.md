@@ -44,7 +44,7 @@ Newsletter.close_log(pid)
 
 Now that you have all of the building blocks of the email sending procedure, you need to combine them together in a single function.
 
-Implement the `Newsletter.send_newsletter/3` function. It should take a path of the file with email addresses, a path of a log file, and an anonymous function that sends an email to a given email address. It should read all the email addresses from the given file and attempt to send an email to every one of them. If the anonymous function that sends the email returns `:ok`, write the email address to the log file, followed by a new line. Make sure to do it as soon as the email is sent.
+Implement the `Newsletter.send_newsletter/3` function. It should take a path of the file with email addresses, a path of a log file, and an anonymous function that sends an email to a given email address. It should read all the email addresses from the given file and attempt to send an email to every one of them. If the anonymous function that sends the email returns `:ok`, write the email address to the log file, followed by a new line. Make sure to do it as soon as the email is sent. Afterwards, close the log file.
 
 ```elixir
 Newsletter.send_newsletter(
