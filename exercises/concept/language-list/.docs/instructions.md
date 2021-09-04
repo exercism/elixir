@@ -4,7 +4,7 @@ In this exercise you need to implement some functions to manipulate a list of pr
 
 ## 1. Define a function to return an empty language list
 
-Define the `new/1` function that takes no arguments and returns an empty list.
+Define the `new/0` function that takes no arguments and returns an empty list.
 
 ```elixir
 LanguageList.new()
@@ -24,7 +24,7 @@ LanguageList.new()
 
 ## 3. Define a function to remove a language from the list
 
-Define the `remove/2` function that takes 1 argument (a _language list_). It should return the list without the first item. Assume the list will always have at least one item.
+Define the `remove/1` function that takes 1 argument (a _language list_). It should return the list without the first item. Assume the list will always have at least one item.
 
 ```elixir
 LanguageList.new()
