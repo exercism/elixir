@@ -29,10 +29,10 @@ A bottle of wine is represented as a 3-tuple of grape variety, year, and country
 ]
 ```
 
-Implement the `WineCellar.filter/3` function. It should take a keyword list of wines sorted by color and a keyword list of options, with a default value of `[]`. The function should return a list of wines of a given color.
+Implement the `WineCellar.filter/3` function. It should take a keyword list of wines, a color atom and a keyword list of options, with a default value of `[]`. The function should return a list of wines of a given color.
 
 ```elixir
-WineCellar.filter([
+WineCellar.filter(
   [
     white: {"Chardonnay", 2015, "Italy"},
     white: {"Pinot grigio", 2017, "Germany"},
@@ -40,7 +40,7 @@ WineCellar.filter([
     rose: {"Dornfelder", 2018, "Germany"}
   ],
   :white
-])
+)
 # => [
 #      {"Chardonnay", 2015, "Italy"},
 #      {"Pinot grigio", 2017, "Germany"}
@@ -54,7 +54,7 @@ Extend the `WineCellar.filter/3` function. When given a `:year` option, the func
 Use the already-implemented `WineCellar.filter_by_year/2` function. It takes a list of wines and a year as arguments and returns a list of wines from a given year.
 
 ```elixir
-WineCellar.filter([
+WineCellar.filter(
   [
     white: {"Chardonnay", 2015, "Italy"},
     white: {"Pinot grigio", 2017, "Germany"},
@@ -63,7 +63,7 @@ WineCellar.filter([
   ],
   :white,
   year: 2017
-])
+)
 # => [
 #      {"Chardonnay", 2015, "Italy"},
 #    ]
@@ -78,7 +78,7 @@ Use the already-implemented `WineCellar.filter_by_country/2` function. It takes 
 Make sure that the function works when given both the `:year` and the `:country` option, in any order.
 
 ```elixir
-WineCellar.filter([
+WineCellar.filter(
   [
     white: {"Chardonnay", 2015, "Italy"},
     white: {"Pinot grigio", 2017, "Germany"},
@@ -88,6 +88,6 @@ WineCellar.filter([
   :white,
   year: 2017,
   country: "Germany"
-])
+)
 # => []
 ```
