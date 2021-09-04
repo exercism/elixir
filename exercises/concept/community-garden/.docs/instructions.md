@@ -24,7 +24,7 @@ CommunityGarden.list_registrations(pid)
 
 ## 3. Register plots to a person
 
-Implement the `CommunityGarden.register/2` function. It should receive the `pid` for the community garden and a name to register the plot. It should return the `Plot` struct with the plot's id and person registered to when it is successful.
+Implement the `CommunityGarden.register/2` function. It should receive the `pid` for the community garden and a name to register the plot. It should return the `Plot` struct with the plot's `id` and person registered to when it is successful. The `id`s are consecutive, increasing integers, starting from 1.
 
 ```elixir
 CommunityGarden.register(pid, "Emma Balan")
@@ -35,7 +35,7 @@ CommunityGarden.list_registrations(pid)
 
 ## 4. Release plots
 
-Implement the `CommunityGarden.release/2` function. It should receive the `pid` and `id` of the plot to be released. It should return `:ok` on success. When a plot is released, the id is not re-used, it is used as a unique identifier only.
+Implement the `CommunityGarden.release/2` function. It should receive the `pid` and `id` of the plot to be released. It should return `:ok` on success. When a plot is released, the `id` is not re-used, it is used as a unique identifier only.
 
 ```elixir
 CommunityGarden.release(pid, 1)
