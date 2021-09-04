@@ -9,7 +9,7 @@ defmodule Example do
   @constant_number 1
 
   def example_value() do
-    # Returns the value 2
+    # Returns the value 1
     @constant_number
   end
 end

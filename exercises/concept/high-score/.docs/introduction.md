@@ -25,7 +25,7 @@ While there is no canonical format, choose a consistent way to represent the key
 
 ### Map module functions
 
-Elixir provides many functions for working with maps in the _Map module_. Some _Map module_ functions require an _anonymous_ function_ to be passed into the function to assist with the map transformation.
+Elixir provides many functions for working with maps in the _Map module_. Some _Map module_ functions require an _anonymous_ function to be passed into the function to assist with the map transformation.
 
 ## Module Attributes As Constants
 
@@ -38,7 +38,7 @@ defmodule Example do
   @constant_number 1
 
   def example_value() do
-    # Returns the value 2
+    # Returns the value 1
     @constant_number
   end
 end
