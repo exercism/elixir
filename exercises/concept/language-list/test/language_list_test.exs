@@ -8,7 +8,7 @@ defmodule LanguageListTest do
     end
   end
 
-  describe "add/1" do
+  describe "add/2" do
     @tag task_id: 2
     test "add a language to a list" do
       language = "Elixir"
@@ -31,7 +31,7 @@ defmodule LanguageListTest do
     end
   end
 
-  describe "remove/0" do
+  describe "remove/1" do
     @tag task_id: 3
     test "add then remove results in empty list" do
       list =
@@ -54,7 +54,7 @@ defmodule LanguageListTest do
     end
   end
 
-  describe "first/0" do
+  describe "first/1" do
     @tag task_id: 4
     test "add one language, then get the first" do
       assert LanguageList.new() |> LanguageList.add("Elixir") |> LanguageList.first() == "Elixir"
@@ -73,7 +73,7 @@ defmodule LanguageListTest do
     end
   end
 
-  describe "count/0" do
+  describe "count/1" do
     @tag task_id: 5
     test "the count of a new list is 0" do
       assert LanguageList.new() |> LanguageList.count() == 0
