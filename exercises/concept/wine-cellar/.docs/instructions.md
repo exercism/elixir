@@ -62,10 +62,10 @@ WineCellar.filter(
     rose: {"Dornfelder", 2018, "Germany"}
   ],
   :white,
-  year: 2017
+  year: 2015
 )
 # => [
-#      {"Chardonnay", 2015, "Italy"},
+#      {"Chardonnay", 2015, "Italy"}
 #    ]
 ```
 
@@ -86,7 +86,7 @@ WineCellar.filter(
     rose: {"Dornfelder", 2018, "Germany"}
   ],
   :white,
-  year: 2017,
+  year: 2015,
   country: "Germany"
 )
 # => []
