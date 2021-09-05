@@ -26,7 +26,6 @@ defmodule ListOps do
   def foldl(l, acc, f) do
   end
 
-  @type acc :: any
   @spec foldr(list, acc, (any, acc -> acc)) :: acc
   def foldr(l, acc, f) do
   end
