@@ -14,12 +14,12 @@ defmodule KitchenCalculatorTest do
 
     @tag task_id: 1
     test "get teaspoons" do
-      assert KitchenCalculator.get_volume({:teaspoons, 3}) == 3
+      assert KitchenCalculator.get_volume({:teaspoon, 3}) == 3
     end
 
     @tag task_id: 1
     test "get tablespoons" do
-      assert KitchenCalculator.get_volume({:tablespoons, 4}) == 4
+      assert KitchenCalculator.get_volume({:tablespoon, 4}) == 4
     end
 
     @tag task_id: 1
