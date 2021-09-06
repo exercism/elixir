@@ -64,7 +64,7 @@ score_map = HighScore.reset_score(score_map, "José Valim")
 
 ## 5. Update a player's score
 
-To update a players score by adding to the previous score, define `HighScore.update_player/2`, which takes 3 arguments:
+To update a players score by adding to the previous score, define `HighScore.update_score/3`, which takes 3 arguments:
 
 - The first argument is the map of scores.
 - The second argument is the name of the player as a string, whose score you wish to update.
