@@ -46,10 +46,4 @@ defmodule AcronymTest do
   test "it produces acronyms from phrases with underscore emphasis" do
     assert Acronym.abbreviate("The Road _Not_ Taken") === "TRNT"
   end
-
-  # Track specific test case: additional case
-  @tag :pending
-  test "it produces acronyms from inconsistent case" do
-    assert Acronym.abbreviate("HyperText Markup Language") === "HTML"
-  end
 end
