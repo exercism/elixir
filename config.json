@@ -1154,18 +1154,7 @@
         "slug": "binary",
         "name": "Binary",
         "uuid": "29c3c9ff-c7f3-4646-9612-7cd768d237ab",
-        "prerequisites": [
-          "cond",
-          "case",
-          "if",
-          "multiple-clause-functions",
-          "pattern-matching",
-          "binaries",
-          "recursion",
-          "tail-call-recursion",
-          "enum",
-          "strings"
-        ],
+        "prerequisites": [],
         "practices": [
           "tail-call-recursion"
         ],
@@ -1319,17 +1308,7 @@
         "slug": "hexadecimal",
         "name": "Hexadecimal",
         "uuid": "8154a099-5d6f-4e71-83fe-45ab23475778",
-        "prerequisites": [
-          "strings",
-          "charlists",
-          "ranges",
-          "multiple-clause-functions",
-          "guards",
-          "pattern-matching",
-          "case",
-          "recursion",
-          "enum"
-        ],
+        "prerequisites": [],
         "practices": [
           "charlists"
         ],
