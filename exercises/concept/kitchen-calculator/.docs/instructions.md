@@ -50,6 +50,6 @@ KitchenCalculator.from_milliliter({:milliliter, 1320.0}, :cup)
 Implement the `KitchenCalculator.convert/2` function. Given a volume-pair tuple and the desired unit, it should convert the given volume to the desired unit.
 
 ```elixir
-KitchenCalculator.convert({:teaspoons, 9.0}, :tablespoon)
+KitchenCalculator.convert({:teaspoon, 9.0}, :tablespoon)
 # => {:tablespoon, 3.0}
 ```
