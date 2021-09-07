@@ -308,5 +308,12 @@ defmodule RationalNumbersTest do
       result = {1, 1}
       assert RationalNumbers.reduce(r) == result
     end
+
+    @tag :pending
+    test "Reduce shift the minus sign on the numerator" do
+      r = {3, -4}
+      result = {-3, 4}
+      assert RationalNumbers.reduce(r) == result
+   end
   end
 end
