@@ -314,6 +314,6 @@ defmodule RationalNumbersTest do
       r = {3, -4}
       result = {-3, 4}
       assert RationalNumbers.reduce(r) == result
-   end
+    end
   end
 end
