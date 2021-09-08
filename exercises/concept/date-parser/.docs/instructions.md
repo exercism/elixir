@@ -25,7 +25,7 @@ Do not worry about error checking. You can assume you will always be passed a va
 
 ## 2. Match the day of the week and the month of the year
 
-Implement `day_names/0` and `month_names/0` to return a string pattern which, when compiled, would match the any named day of the week and the named month of the year respectively.
+Implement `day_names/0` and `month_names/0` to return a string pattern which, when compiled, would match the named day of the week and the named month of the year respectively.
 
 ```elixir
 "Tuesday" =~ DateParser.day_names() |> Regex.compile!()
