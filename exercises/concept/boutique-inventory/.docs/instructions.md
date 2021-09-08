@@ -46,7 +46,7 @@ BoutiqueInventory.with_missing_price([
 ])
 # => [
 #      %{price: nil, name: "Denim Pants", quantity_by_size: %{}},
-#      %{price: nil, name: "Denim Skirt", quantity_by_size: %{}},
+#      %{price: nil, name: "Denim Skirt", quantity_by_size: %{}}
 #    ]
 ```
 
