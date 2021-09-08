@@ -4,7 +4,7 @@ You are working with a web development team to maintain a website for a local ba
 
 ## 1. Extract data from a nested map structure
 
-Implement the `extract_from/2` function to take two arguments:
+Implement the `extract_from_path/2` function to take two arguments:
 
 - `data`: a nested map structure with data about the basketball team.
 - `path`: a string consisting of period-delimited keys to obtain the value associated with the last key.
@@ -20,9 +20,9 @@ data = %{
     }
   }
 }
-BasketballWebsite.extract_from(data, "team_mascot.animal")
+BasketballWebsite.extract_from_path(data, "team_mascot.animal")
 # => "bear"
-BasketballWebsite.extract_from(data, "team_mascot.colors")
+BasketballWebsite.extract_from_path(data, "team_mascot.colors")
 # => nil
 ```
 
