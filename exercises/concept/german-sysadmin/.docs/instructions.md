@@ -39,5 +39,5 @@ Extend the `sanitize/1` function. It should substitute German characters accordi
 
 ```elixir
 Username.sanitize('cäcilie_weiß')
-'caecilie_weiss'
+# => 'caecilie_weiss'
 ```
