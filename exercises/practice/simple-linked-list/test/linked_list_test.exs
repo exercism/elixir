@@ -100,8 +100,8 @@ defmodule LinkedListTest do
   test "from_list/1 of 2 element list" do
     list = LinkedList.from_list([:a, :b])
     assert LinkedList.length(list) == 2
-    assert {:ok, :a, list} = LinkedList.pop(list)
     assert {:ok, :b, list} = LinkedList.pop(list)
+    assert {:ok, :a, list} = LinkedList.pop(list)
     assert {:error, :empty_list} = LinkedList.pop(list)
   end
 
