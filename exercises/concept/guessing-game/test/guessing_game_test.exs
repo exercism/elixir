@@ -17,12 +17,12 @@ defmodule GuessingGameTest do
   end
 
   @tag task_id: 4
-  test "so close when guess differs from 7 secret by -1" do
+  test "so close when guess differs from secret by -1" do
     assert GuessingGame.compare(64, 63) == "So close"
   end
 
   @tag task_id: 4
-  test "so close when guess differs from 7 secret by +1" do
+  test "so close when guess differs from secret by +1" do
     assert GuessingGame.compare(52, 53) == "So close"
   end
 
