@@ -97,7 +97,7 @@ defmodule LinkedListTest do
   end
 
   @tag :pending
-  test "from_list/1 of 2 element list" do
+  test "from_list/1 of 2 element list, keeping order" do
     list = LinkedList.from_list([:a, :b])
     assert LinkedList.length(list) == 2
     assert {:ok, :a, list} = LinkedList.pop(list)
@@ -118,7 +118,7 @@ defmodule LinkedListTest do
   end
 
   @tag :pending
-  test "to_list/1 of list of 2 datum" do
+  test "to_list/1 of list of 2 datum, keeping order" do
     list = LinkedList.from_list([:mon, :tues])
     assert LinkedList.to_list(list) == [:mon, :tues]
   end
