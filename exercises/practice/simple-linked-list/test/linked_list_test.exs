@@ -130,7 +130,8 @@ defmodule LinkedListTest do
     ll_via_from_list = LinkedList.from_list(list)
     ll_via_pushed = Enum.reduce(list, LinkedList.new(), &LinkedList.push(&2, &1))
 
-    assert LinkedList.to_list(ll_via_from_list) == LinkedList.to_list(ll_via_pushed) |> Enum.reverse
+    assert LinkedList.to_list(ll_via_from_list) ==
+             LinkedList.to_list(ll_via_pushed) |> Enum.reverse()
   end
 
   @tag :pending
