@@ -124,6 +124,16 @@ defmodule LinkedListTest do
   end
 
   @tag :pending
+  test "from_list/1 and successive push/2 of a list result in reversed order" do
+    list = [:mon, :tues]
+
+    ll_via_from_list = LinkedList.from_list(list)
+    ll_via_pushed = Enum.reduce(list, LinkedList.new(), &LinkedList.push(&2, &1))
+
+    assert LinkedList.to_list(ll_via_from_list) == LinkedList.to_list(ll_via_pushed) |> Enum.reverse
+  end
+
+  @tag :pending
   test "reverse/1 of list of 2 datum" do
     list = LinkedList.from_list([1, 2, 3]) |> LinkedList.reverse()
     assert LinkedList.to_list(list) == [3, 2, 1]
