@@ -1,3 +1,9 @@
+defmodule FakeRemoteControlCar do
+  defstruct battery_percentage: 100,
+            distance_driven_in_meters: 0,
+            nickname: nil
+end
+
 defmodule RemoteControlCarTest do
   use ExUnit.Case
 
@@ -34,7 +40,7 @@ defmodule RemoteControlCarTest do
 
   @tag task_id: 3
   test "display distance raises error when not given struct" do
-    fake_car = %{
+    fake_car = %FakeRemoteControlCar{
       battery_percentage: 100,
       distance_driven_in_meters: 0,
       nickname: "Fake"
@@ -62,7 +68,7 @@ defmodule RemoteControlCarTest do
 
   @tag task_id: 4
   test "display battery raises error when not given struct" do
-    fake_car = %{
+    fake_car = %FakeRemoteControlCar{
       battery_percentage: 100,
       distance_driven_in_meters: 0,
       nickname: "Fake"
@@ -90,7 +96,7 @@ defmodule RemoteControlCarTest do
 
   @tag task_id: 5
   test "drive raises error when not given struct" do
-    fake_car = %{
+    fake_car = %FakeRemoteControlCar{
       battery_percentage: 100,
       distance_driven_in_meters: 0,
       nickname: "Fake"
