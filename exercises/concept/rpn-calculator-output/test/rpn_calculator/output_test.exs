@@ -1,20 +1,22 @@
 defmodule RPNCalculator.OutputTest do
   use ExUnit.Case
 
-  import ExUnit.CaptureIO
+  setup do
+    on_exit(fn -> File.rm("filename") end)
+  end
 
   def open(filename \\ "<nil>") do
     send(self(), {:open, filename})
 
     case filename do
-      "filename" -> {:ok, :stdio}
+      "filename" -> File.open(filename, [:write])
       "bad_filename" -> {:ok, spawn(fn -> nil end)}
     end
   end
 
-  def close(_) do
+  def close(file) do
     send(self(), :close)
-    :ok
+    File.close(file)
   end
 
   describe "write/3" do
@@ -50,10 +52,9 @@ defmodule RPNCalculator.OutputTest do
       resource = __MODULE__
       filename = "filename"
       equation = "1 1 +"
+      {:ok, ^equation} = RPNCalculator.Output.write(resource, filename, equation)
 
-      assert capture_io(fn -> RPNCalculator.Output.write(resource, filename, equation) end) ==
-               "1 1 +",
-             @use_write_error_message
+      assert File.read!(filename) == "1 1 +", @use_write_error_message
     end
 
     @tag task_id: 2
