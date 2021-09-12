@@ -1,6 +1,10 @@
 defmodule RPNCalculator.OutputTest do
   use ExUnit.Case
 
+  setup do
+    on_exit(fn -> File.rm("filename") end)
+  end
+
   def open(filename \\ "<nil>") do
     send(self(), {:open, filename})
 
