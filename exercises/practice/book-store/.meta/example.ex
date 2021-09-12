@@ -1,5 +1,4 @@
 defmodule BookStore do
-  use Agent
   @type book :: integer
 
   @base_price 800
@@ -16,9 +15,6 @@ defmodule BookStore do
   """
   @spec total(basket :: [book]) :: integer
   def total(basket) do
-    # We use an Agent to memoize the discounts
-    {:ok, _pid} = Agent.start_link(fn -> %{} end, name: :discount)
-
     basket
     |> frequencies
     |> Enum.sort()
@@ -28,8 +24,7 @@ defmodule BookStore do
 
   def frequencies(list) do
     list
-    |> Enum.map(&%{&1 => 1})
-    |> Enum.reduce(%{}, &Map.merge(&1, &2, fn _item, a, b -> a + b end))
+    |> Enum.reduce(%{}, &Map.update(&2, &1, 1, fn count -> count + 1 end))
     |> Map.values()
   end
 
@@ -37,21 +32,11 @@ defmodule BookStore do
   def discounts([n]), do: [n * @base_price]
 
   def discounts(frequencies) do
-    cached = Agent.get(:discount, &Map.get(&1, frequencies))
-
-    if cached do
-      cached
-    else
-      discount =
-        for num_books <- 2..5,
-            {picked, left} <- pick_n_distinct_from(num_books, frequencies),
-            remove_picked = picked |> Enum.map(&(&1 - 1)) |> Enum.reject(&(&1 == 0)),
-            costs <- discounts(Enum.sort(remove_picked ++ left)),
-            do: costs + num_books * @discount[num_books]
-
-      Agent.update(:discount, &Map.put(&1, frequencies, discount))
-      discount
-    end
+    for num_books <- 2..5,
+        {picked, left} <- pick_n_distinct_from(num_books, frequencies),
+        remove_picked = picked |> Enum.map(&(&1 - 1)) |> Enum.reject(&(&1 == 0)),
+        costs <- discounts(Enum.sort(remove_picked ++ left)),
+        do: costs + num_books * @discount[num_books]
   end
 
   def pick_n_distinct_from(n, list) when length(list) < n, do: %{}
