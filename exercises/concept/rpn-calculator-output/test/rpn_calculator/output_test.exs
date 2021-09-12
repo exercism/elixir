@@ -1,8 +1,6 @@
 defmodule RPNCalculator.OutputTest do
   use ExUnit.Case
 
-  import ExUnit.CaptureIO
-
   def open(filename \\ "<nil>") do
     send(self(), {:open, filename})
 
