@@ -1,3 +1,9 @@
+defmodule FakeRemoteControlCar do
+  defstruct battery_percentage: 100,
+            distance_driven_in_meters: 0,
+            nickname: nil
+end
+
 defmodule RemoteControlCarTest do
   use ExUnit.Case
 
@@ -46,6 +52,19 @@ defmodule RemoteControlCarTest do
   end
 
   @tag task_id: 3
+  test "display distance raises error when given unexpected struct" do
+    fake_car = %FakeRemoteControlCar{
+      battery_percentage: 100,
+      distance_driven_in_meters: 0,
+      nickname: "Fake"
+    }
+
+    assert_raise(FunctionClauseError, fn ->
+      RemoteControlCar.display_distance(fake_car)
+    end)
+  end
+
+  @tag task_id: 3
   test "display distance of new" do
     car = RemoteControlCar.new()
 
@@ -74,6 +93,19 @@ defmodule RemoteControlCarTest do
   end
 
   @tag task_id: 4
+  test "display battery raises error when given unexpected struct" do
+    fake_car = %FakeRemoteControlCar{
+      battery_percentage: 100,
+      distance_driven_in_meters: 0,
+      nickname: "Fake"
+    }
+
+    assert_raise(FunctionClauseError, fn ->
+      RemoteControlCar.display_battery(fake_car)
+    end)
+  end
+
+  @tag task_id: 4
   test "display battery of new" do
     car = RemoteControlCar.new()
 
@@ -91,6 +123,19 @@ defmodule RemoteControlCarTest do
   @tag task_id: 5
   test "drive raises error when not given struct" do
     fake_car = %{
+      battery_percentage: 100,
+      distance_driven_in_meters: 0,
+      nickname: "Fake"
+    }
+
+    assert_raise(FunctionClauseError, fn ->
+      RemoteControlCar.drive(fake_car)
+    end)
+  end
+
+  @tag task_id: 5
+  test "drive raises error when given unexpected struct" do
+    fake_car = %FakeRemoteControlCar{
       battery_percentage: 100,
       distance_driven_in_meters: 0,
       nickname: "Fake"
