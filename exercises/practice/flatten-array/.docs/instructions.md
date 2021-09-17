@@ -4,8 +4,8 @@ Take a nested list and return a single flattened list with all values except nil
 
 The challenge is to write a function that accepts an arbitrarily-deep nested list-like structure and returns a flattened structure without any nil/null values.
 
-For Example
+For example:
 
-input: [1,[2,3,null,4],[null],5]
+input: [1,[2,3,nil,4],[nil],5]
 
 output: [1,2,3,4,5]
