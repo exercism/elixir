@@ -71,6 +71,8 @@ Please keep the following in mind:
 
 - No tests should be skipped for concept exercises.
 
+- For concept exercises, each test block should be understandable without having to reference anything outside the test block, e.g. no module attributes, no setup functions. This is because the platform doesn't show the test files for concept exercises in the web editor. Only the single test's block is shown by the Test Runner if the test failed.
+
 - `.meta/tests.toml` files are generated and updated by `configlet`.
 
     ```shell
