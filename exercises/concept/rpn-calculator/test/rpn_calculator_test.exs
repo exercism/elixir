@@ -1,9 +1,6 @@
 defmodule RPNCalculatorTest do
   use ExUnit.Case
 
-  @success {:ok, "operation completed"}
-  @test_error {:error, "test error"}
-
   @tag task_id: 1
   test "calculate! returns an :ok atom" do
     assert RPNCalculator.calculate!([], fn _ -> :ok end) == :ok
@@ -18,7 +15,8 @@ defmodule RPNCalculatorTest do
 
   @tag task_id: 2
   test "calculate returns a tuple" do
-    assert RPNCalculator.calculate([], fn _ -> "operation completed" end) == @success
+    assert RPNCalculator.calculate([], fn _ -> "operation completed" end) ==
+             {:ok, "operation completed"}
   end
 
   @tag task_id: 2
@@ -28,12 +26,13 @@ defmodule RPNCalculatorTest do
 
   @tag task_id: 3
   test "calculate_verbose returns a tuple" do
-    assert RPNCalculator.calculate_verbose([], fn _ -> "operation completed" end) == @success
+    assert RPNCalculator.calculate_verbose([], fn _ -> "operation completed" end) ==
+             {:ok, "operation completed"}
   end
 
   @tag task_id: 3
   test "rescue the crash, get error tuple with message" do
     assert RPNCalculator.calculate_verbose([], fn _ -> raise ArgumentError, "test error" end) ==
-             @test_error
+             {:error, "test error"}
   end
 end
