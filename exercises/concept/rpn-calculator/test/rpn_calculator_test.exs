@@ -33,7 +33,9 @@ defmodule RPNCalculatorTest do
 
   @tag task_id: 3
   test "rescue the crash, get error tuple with message" do
-    assert RPNCalculator.calculate_verbose([], fn _ -> raise "test error" end) ==
-             {:error, "test error"}
+    assert RPNCalculator.calculate_verbose(
+             [],
+             operation = fn _ -> raise ArgumentError, "test error" end
+           ) == @test_error
   end
 end
