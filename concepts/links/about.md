@@ -61,7 +61,7 @@ Linking processes can be useful when doing parallelized work when each chunk of 
 
 Linking can also be used for _supervising_ processes. If a process _traps exits_, it will not crash when a process to which it's linked crashes. It will instead receive a message about the crash. This allows it to deal with the crash gracefully, for example by restarting the crashed process.
 
-A process can be configured to trap exists by calling `Process.flag(:trap_exit, true)`. Note that [`Process.flag/2`][process-flag] returns the _old_ value of the flag, not the new one.
+A process can be configured to trap exits by calling `Process.flag(:trap_exit, true)`. Note that [`Process.flag/2`][process-flag] returns the _old_ value of the flag, not the new one.
 
 The current value of the flag can be checked using [`Process.info/1`][process-info].
 
