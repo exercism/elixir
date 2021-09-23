@@ -31,11 +31,11 @@ FileSniffer.type_from_binary(file)
 # => "application/octet-stream"
 ```
 
-Don't worry about reading the file as a binary, assume that has been done for you and will provided for the tests as an argument.
+Don't worry about reading the file as a binary. Assume that has been done for you and is provided by the tests as an argument.
 
 ## 3. Given an extension and a binary file, verify that the file matches the expected type
 
-Implement the `verify/2` function. It should take a file (binary) and extension (string) then an `:ok` or `:error` tuple.
+Implement the `verify/2` function. It should take a file (binary) and extension (string) and return an `:ok` or `:error` tuple.
 
 ```elixir
 file = File.read!("application.exe")
