@@ -70,7 +70,7 @@ defmodule BirdCountTest do
     test "counts days with bird count of 5 or more" do
       assert BirdCount.busy_days([1]) == 0
       assert BirdCount.busy_days([0, 5]) == 1
-      assert BirdCount.busy_days([0, 6, 10, 4, 4, 5, 0]) == 3
+      assert BirdCount.busy_days([0, 6, 10, 4, 4, 5, 0]) == 2
     end
   end
 end
