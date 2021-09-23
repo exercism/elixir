@@ -60,6 +60,7 @@ comment:
         - **Concept exercise tests changed**
             - ⚪️ Are all tests _un-skipped_?
             - 🔢 Are all tests annotated with `@tag task_id`?
+            - 🐈 Can all tests be understood by reading the test's block only (e.g. no module attributes, no setup functions)?
 
     - id: concept-changed
       files:
