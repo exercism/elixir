@@ -54,7 +54,7 @@ Some types can also be parameterized, for example `list(integer)` is a list of i
 
 Literal values can also be used as types.
 
-A union of types can be written using the pipe `|`. For example, `integer() | :error` means either an integer of the atom literal `:error`.
+A union of types can be written using the pipe `|`. For example, `integer() | :error` means either an integer or the atom literal `:error`.
 
 A full list of all types can be found in the ["Typespecs" section in the official documentation][types].
 
