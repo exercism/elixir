@@ -26,7 +26,7 @@ end
 
 Errors (sometimes also called "exceptions") that you rescue this way are structs.
 Different error structs have different keys.
-Under the ["exceptions" section][argument-error] in the standard library you can find a list of all possible errors.
+Under the ["exceptions" section][argument-error] in the standard library you can find a list of all predefined errors.
 
 ```elixir
 # ArithmeticError caused by division by zero
