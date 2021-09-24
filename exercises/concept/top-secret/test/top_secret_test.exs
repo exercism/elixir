@@ -82,13 +82,40 @@ defmodule TopSecretTest do
         defmodule TotallyNotTopSecret do
           def force(mass, acceleration), do: mass * acceleration
           def uniform(from, to), do: rand.uniform(to - from) + from
-          def data(%{metadata: metadata}), do: model(metadata)
-          defp model(metadata), do: metadata |> less_data |> Enum.reverse() |> Enum.take(3)
-          defp less_data(data), do: Enum.reject(data, &is_nil/1)
+          def data(%{metadata: metadata}, _opts), do: model(metadata)
+          defp model(metadata, _opts), do: metadata |> less_data |> Enum.reverse() |> Enum.take(3)
+          defp less_data(data, _opts), do: Enum.reject(data, &is_nil/1)
         end
       """
 
       secret_message = "foundamole"
+
+      assert TopSecret.decode_secret_message(code) == secret_message
+    end
+
+    @tag task_id: 3
+    test "decodes another secret message" do
+      code = """
+      defmodule IOHelpers do
+        def inspect(x, opts), do: IO.inspect(x, opts)
+        def vi_or_vim(_env, _preference), do: :vim
+        def signal(pid, string), do: send(pid, {:signal, string})
+        def black(text, label), do: IO.ANSI.black <> label <> text <> IO.ANSI.reset()
+      end
+
+      defmodule TimeHelpers do
+        defp est_to_cet(time), do: Time.add(time, 6 * 60 * 60)
+      end
+
+      defmodule ASTHelpers do
+        def submodule?(m, _f, _args), do: String.contains?(m, ".")
+        def module({m, _f, _args}), do: m
+        def arity(_m, _f, args), do: length(args)
+        defp nested?(x, y), do: x in y
+      end
+      """
+
+      secret_message = "invisiblesubmarine"
 
       assert TopSecret.decode_secret_message(code) == secret_message
     end

@@ -5,12 +5,12 @@ defmodule TopSecret do
 
   def decode_secret_message_part({keyword, _, children} = ast, acc)
       when keyword in [:def, :defp] do
-    [{function_name, _, _} | _] = children
+    [{function_name, _, arguments} | _] = children
 
     message_part =
       function_name
       |> to_string()
-      |> String.slice(0, 2)
+      |> String.slice(0, length(arguments))
 
     {ast, [message_part | acc]}
   end
