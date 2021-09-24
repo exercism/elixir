@@ -1,6 +1,6 @@
 defmodule TopSecret do
   def to_ast(string) do
-    Code.string_to_quoted(string)
+    Code.string_to_quoted!(string)
   end
 
   def decode_secret_message_part({keyword, _, children} = ast, acc)
