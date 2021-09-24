@@ -1,0 +1,20 @@
+{
+  "blurb": "TODO",
+  "icon": "TODO",
+  "authors": [
+    "jiegillet",
+    "angelikatyborska"
+  ],
+  "files": {
+    "solution": [
+      "lib/top_secret.ex"
+    ],
+    "test": [
+      "test/top_secret_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
+  },
+  "language_versions": ">=1.10"
+}
