@@ -22,6 +22,26 @@ end
   - on the right side:
     - the instructions to be executed if the error matches.
 
+## Error structs
+
+Errors (sometimes also called "exceptions") that you rescue this way are structs.
+Different error structs have different keys.
+Under the ["exceptions" section][argument-error] in the standard library you can find a list of all predefined errors.
+
+```elixir
+# ArithmeticError caused by division by zero
+%ArithmeticError{message: "bad argument in arithmetic expression"}
+
+# Protocol.UndefinedError caused by passing `nil` to `Enum.count/1`
+%Protocol.UndefinedError{description: "", protocol: Enumerable, value: nil}
+```
+
+Rescuing errors in Elixir is done very rarely.
+Usually the rescued error is logged or sent to an external monitoring service, and then reraised.
+This means we usually don't care about the internal structure of the specific error struct.
+
+The [Exceptions concept]( /tracks/elixir/concepts/exceptions) describes how to define custom error structs.
+
 ## Avoid anti-patterns
 
 - Avoid programming patterns that use errors to control logical flow. This is an anti-pattern in Elixir.
@@ -53,3 +73,4 @@ As it's written in [Elixir's getting started guide][getting-started]:
 [getting-started]: https://elixir-lang.org/getting-started/try-catch-and-rescue.html
 [errors]: https://elixir-lang.org/getting-started/try-catch-and-rescue.html#errors
 [docs-try]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#try/1
+[argument-error]: https://hexdocs.pm/elixir/ArgumentError.html#content

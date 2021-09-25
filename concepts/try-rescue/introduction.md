@@ -22,3 +22,12 @@ Let's examine this construct:
       - If we wanted to rescue from all errors, we could use `_` instead of the module name or omit the `in` keyword entirely.
   - on the right side:
     - the instructions to be executed if the error matches.
+
+## Error structs
+
+Errors (sometimes also called "exceptions") that you rescue this way are structs.
+Rescuing errors in Elixir is done very rarely.
+Usually the rescued error is logged or sent to an external monitoring service, and then reraised.
+This means we usually don't care about the internal structure of the specific error struct.
+
+In the [Exceptions concept](/tracks/elixir/concepts/exceptions) you will learn more about error structs, including how to define your own custom error.
