@@ -34,8 +34,8 @@ defmodule Form do
   @doc """
   Checks if the value has no more than the maximum allowed number of letters.
 
-  This is needed for form fields that don't offer a single input for the whole string,
-  but instead require splitting the string into a predefined number of single-letter inputs.
+  This is needed to check that the values of fields do not exceed the maximum allowed length.
+  It also tells you by how much the value exceeds the maximum.
   """
   @spec check_length(String.t(), non_neg_integer()) :: :ok | {:error, pos_integer()}
   def check_length(word, length) do

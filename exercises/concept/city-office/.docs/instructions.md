@@ -38,7 +38,7 @@ This is needed for form fields that don't offer a single input for the whole str
 but instead require splitting the string into a predefined number of single-letter inputs.
 ```
 
-The typespec should explain that the function accepts a single argument, a string, and returns a list of string.
+The typespec should explain that the function accepts a single argument, a string, and returns a list of strings.
 
 ## 4. Document checking if a value fits a field with a max length
 
@@ -47,8 +47,8 @@ Add documentation and a typespec to the `Form.check_length/1` function. The docu
 ```
 Checks if the value has no more than the maximum allowed number of letters.
 
-This is needed for form fields that don't offer a single input for the whole string,
-but instead require splitting the string into a predefined number of single-letter inputs.
+This is needed to check that the values of fields do not exceed the maximum allowed length.
+It also tells you by how much the value exceeds the maximum.
 ```
 
 The typespec should explain that the function accepts two arguments, a string and a non-negative integer, and returns one of two possible values. It returns either the `:ok` atom or a 2-tuple with the first element being the `:error` atom, and the second a positive integer.
