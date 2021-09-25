@@ -38,7 +38,7 @@ This is needed for form fields that don't offer a single input for the whole str
 but instead require splitting the string into a predefined number of single-letter inputs.
 ```
 
-The typespec should explain that the function accepts a single argument, a string, and returns a list of string.
+The typespec should explain that the function accepts a single argument, a string, and returns a list of strings.
 
 ## 4. Document checking if a value fits a field with a max length
 
