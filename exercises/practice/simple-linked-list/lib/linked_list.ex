@@ -18,10 +18,10 @@ defmodule LinkedList do
   end
 
   @doc """
-  Calculate the length of a LinkedList
+  Counts the number of elements in a LinkedList
   """
-  @spec length(t) :: non_neg_integer()
-  def length(list) do
+  @spec count(t) :: non_neg_integer()
+  def count(list) do
     # Your implementation here...
   end
 

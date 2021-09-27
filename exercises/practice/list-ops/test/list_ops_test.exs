@@ -5,21 +5,21 @@ defmodule ListOpsTest do
 
   defp odd?(n), do: rem(n, 2) == 1
 
-  describe "length" do
+  describe "count" do
     # @tag :pending
     test "empty list" do
-      assert L.length([]) == 0
+      assert L.count([]) == 0
     end
 
     @tag :pending
     test "normal list" do
-      assert L.length([1, 2, 3, 4]) == 4
+      assert L.count([1, 2, 3, 4]) == 4
     end
 
     @tag :pending
     @tag :slow
     test "huge list" do
-      assert L.length(Enum.to_list(1..1_000_000)) == 1_000_000
+      assert L.count(Enum.to_list(1..1_000_000)) == 1_000_000
     end
   end
 

@@ -1,9 +1,9 @@
 defmodule LinkedListTest do
   use ExUnit.Case
 
-  test "length/1 of new list" do
+  test "count/1 of new list" do
     list = LinkedList.new()
-    assert LinkedList.length(list) == 0
+    assert LinkedList.count(list) == 0
   end
 
   @tag :pending
@@ -13,9 +13,9 @@ defmodule LinkedListTest do
   end
 
   @tag :pending
-  test "length/1 of list of 1 datum" do
+  test "count/1 of list of 1 datum" do
     list = LinkedList.new() |> LinkedList.push(10)
-    assert LinkedList.length(list) == 1
+    assert LinkedList.count(list) == 1
   end
 
   @tag :pending
@@ -67,39 +67,39 @@ defmodule LinkedListTest do
   test "push 10 times" do
     list = Enum.reduce(1..10, LinkedList.new(), &LinkedList.push(&2, &1))
     assert LinkedList.peek(list) == {:ok, 10}
-    assert LinkedList.length(list) == 10
+    assert LinkedList.count(list) == 10
   end
 
   @tag :pending
   test "pop/1 of list of 1 datum" do
     list = LinkedList.new() |> LinkedList.push(:a)
     assert {:ok, :a, tail} = LinkedList.pop(list)
-    assert LinkedList.length(tail) == 0
+    assert LinkedList.count(tail) == 0
   end
 
   @tag :pending
   test "popping frenzy" do
     list = Enum.reduce(11..20, LinkedList.new(), &LinkedList.push(&2, &1))
-    assert LinkedList.length(list) == 10
+    assert LinkedList.count(list) == 10
     assert {:ok, 20, list} = LinkedList.pop(list)
     assert {:ok, 19, list} = LinkedList.pop(list)
     assert {:ok, 18, list} = LinkedList.pop(list)
     assert {:ok, 17, list} = LinkedList.pop(list)
     assert {:ok, 16, list} = LinkedList.pop(list)
     assert {:ok, 15} = LinkedList.peek(list)
-    assert LinkedList.length(list) == 5
+    assert LinkedList.count(list) == 5
   end
 
   @tag :pending
   test "from_list/1 of empty list" do
     list = LinkedList.from_list([])
-    assert LinkedList.length(list) == 0
+    assert LinkedList.count(list) == 0
   end
 
   @tag :pending
   test "from_list/1 of 2 element list, keeping order" do
     list = LinkedList.from_list([:a, :b])
-    assert LinkedList.length(list) == 2
+    assert LinkedList.count(list) == 2
     assert {:ok, :a, list} = LinkedList.pop(list)
     assert {:ok, :b, list} = LinkedList.pop(list)
     assert {:error, :empty_list} = LinkedList.pop(list)
