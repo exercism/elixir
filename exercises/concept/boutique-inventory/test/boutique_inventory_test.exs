@@ -62,7 +62,7 @@ defmodule BoutiqueInventoryTest do
     end
 
     @tag task_id: 3
-    test "sorts items by price" do
+    test "increases quantity of an item" do
       assert BoutiqueInventory.increase_quantity(
                %{
                  name: "Green Swimming Shorts",
