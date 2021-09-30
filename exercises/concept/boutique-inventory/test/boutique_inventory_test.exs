@@ -12,6 +12,19 @@ defmodule BoutiqueInventoryTest do
       assert BoutiqueInventory.sort_by_price([
                %{price: 65, name: "Maxi Yellow Summer Dress", quantity_by_size: %{}},
                %{price: 60, name: "Cream Linen Pants", quantity_by_size: %{}},
+               %{price: 33, name: "Straw Hat", quantity_by_size: %{}}
+             ]) == [
+               %{price: 33, name: "Straw Hat", quantity_by_size: %{}},
+               %{price: 60, name: "Cream Linen Pants", quantity_by_size: %{}},
+               %{price: 65, name: "Maxi Yellow Summer Dress", quantity_by_size: %{}}
+             ]
+    end
+
+    @tag task_id: 1
+    test "the order of items of equal price is preserved" do
+      assert BoutiqueInventory.sort_by_price([
+               %{price: 65, name: "Maxi Yellow Summer Dress", quantity_by_size: %{}},
+               %{price: 60, name: "Cream Linen Pants", quantity_by_size: %{}},
                %{price: 33, name: "Straw Hat", quantity_by_size: %{}},
                %{price: 60, name: "Brown Linen Pants", quantity_by_size: %{}}
              ]) == [
