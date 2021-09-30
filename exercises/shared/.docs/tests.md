@@ -1,7 +1,7 @@
 # Running tests
 
-Tests are written in test files and placed in the `test` directory and defined
-by:
+Tests are written in test files and placed in the `test` directory and implemented
+as:
 
 ```elixir
 test "short test description" do
@@ -15,17 +15,25 @@ All tests may be executed with:
 $ mix test
 ```
 
-Useful references include:
+Useful top-level references include:
 
 * Elixir's unit test library: https://hexdocs.pm/ex_unit/ExUnit.html
-* Mix's test task support: https://hexdocs.pm/mix/Mix.Tasks.Test.html
+* Elixir's test execution tool: https://hexdocs.pm/mix/Mix.Tasks.Test.html
 
-ExUnit and mix provides quite a few methods of grouping, tagging and executing
-different groups and tags of tests which are detailed below.
+`ExUnit` and `mix` provides quite a few methods of grouping, tagging & executing
+tests and various methods of controlling test execution, all of which is detailed
+below.
 
-## Running tests in a specific file
+### Methods of running specific tests
 
-All tests in a single file may be executed via `mix test` by specifying the file:
+`mix` has a variety of methods of running specific and specific groups of tests.
+
+Below is just a summary of some very useful methods; full documentation is here:
+https://hexdocs.pm/mix/Mix.Tasks.Test.html
+
+##### Running tests in a specific file
+
+All tests in a single file may be executed via `mix` by specifying the file:
 
 ```bash
 $ mix test test/<FILE>.ex
@@ -33,7 +41,7 @@ $ mix test test/<FILE>.ex
 
 > NOTE: `tagging` may impact which tests are actually executed using this method.
 
-### Running individual tests
+##### Running individual tests
 
 Individual tests may be executed by referencing a test's line number in the file:
 
@@ -67,7 +75,7 @@ $ mix test test/FILE.ex:1:24
 
 > NOTE: When specifying tests via line numbers, `tagging` is ignored.
 
-## Grouping tests
+##### Running groups of tests
 
 Tests may be grouped using `describe`:
 
@@ -86,7 +94,14 @@ end
 All tests in a group may be executed by referencing its line number in the file,
 just like referencing and executing individual tests.
 
-## Pending tests
+Documentation: https://hexdocs.pm/ex_unit/ExUnit.Case.html#describe/2
+
+### Controlling test execution
+
+Independent of specifying tests to be executed, `ExUnit` and `mix` have a number
+of methods to control what tests are executed.
+
+##### Controlling execution via `tags`
 
 In many test suites, all but the first test have been tagged to be skipped.
 
@@ -112,3 +127,24 @@ Or, you can enable all the tests by commenting out the `ExUnit.configure` line i
 ```elixir
 # ExUnit.configure(exclude: :pending, trace: true)
 ```
+
+Documentation:
+
+* `ExUnit`: https://hexdocs.pm/ex_unit/ExUnit.Case.html#module-tags
+* `mix`: https://hexdocs.pm/mix/Mix.Tasks.Test.html#module-filters
+
+##### Controlling execution via `mix test` command-line options
+
+A number of useful command-line options exist that control which tests are executed
+based on past or current execution, such as:
+
+* `--failed`: runs only tests that failed the last time they ran
+* `--max-failures`: the suite stops evaluating tests when this number of test failures
+is reached.
+* `--seed`: seeds the random number generator used to randomize the order of tests;
+`--seed 0` disables randomization so the tests in a single file will always be ran
+in the same order they were defined in
+* `--stale`: runs only tests which reference modules that changed since the last
+time tests were ran with `--stale`
+
+Documentation: https://hexdocs.pm/mix/Mix.Tasks.Test.html#module-command-line-options
