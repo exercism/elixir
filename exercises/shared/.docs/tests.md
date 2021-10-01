@@ -5,9 +5,8 @@ as:
 
 ```elixir
 test "short test description" do
-  ... test implementation ...
+  # ... test implementation ...
 end
-```
 
 All tests may be executed with:
 
