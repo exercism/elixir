@@ -21,10 +21,10 @@ Useful top-level references include:
 * Elixir's test execution tool: https://hexdocs.pm/mix/Mix.Tasks.Test.html
 
 `ExUnit` and `mix` provides quite a few methods of grouping, tagging & executing
-tests and various methods of controlling test execution, all of which is detailed
+tests and various methods of controlling test execution, much of which is summarized
 below.
 
-### Methods of running specific tests
+### Methods for running specific tests
 
 `mix` has a variety of methods of running specific and specific groups of tests.
 
