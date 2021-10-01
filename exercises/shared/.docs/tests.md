@@ -18,7 +18,7 @@ $ mix test
 Useful top-level references include:
 
 * [`ExUnit`: Elixir's unit test library](https://hexdocs.pm/ex_unit/ExUnit.html)
-* [`mix`: Elixir's test execution tool](https://hexdocs.pm/mix/Mix.Tasks.Test.html)
+* [`mix test`: Elixir's test execution tool](https://hexdocs.pm/mix/Mix.Tasks.Test.html)
 
 ### Pending tagged tests
 
@@ -54,23 +54,23 @@ Documentation:
 
 # Additional Elixir testing features
 
-`ExUnit` and `mix` provide quite a few methods of grouping, tagging & executing
+`ExUnit` and `mix test` provide quite a few methods of grouping, tagging & executing
 tests and various methods of controlling test execution, much of which is summarized
 below.
 
 ### Methods for running specific tests
 
-`mix` has a variety of methods of running specific and specific groups of tests.
+`mix test` has a variety of methods of running specific and specific groups of tests.
 
 Below is just a summary of some very useful methods.
 
 Documentation:
 
-* [`mix` documentation](https://hexdocs.pm/mix/Mix.Tasks.Test.html)
+* [`mix test` documentation](https://hexdocs.pm/mix/Mix.Tasks.Test.html)
 
 ##### Running tests in a specific file
 
-All tests in a single file may be executed via `mix` by specifying the file:
+All tests in a single file may be executed via `mix test` by specifying the file:
 
 ```bash
 $ mix test test/<FILE>.exs
@@ -137,7 +137,7 @@ Dcumentation:
 
 ### Controlling test execution
 
-Independent of specifying tests to be executed, `ExUnit` and `mix` have a number
+Independent of specifying tests to be executed, `ExUnit` and `mix test` have a number
 of methods to control what tests are executed.
 
 ##### Controlling execution via `tags`
@@ -158,4 +158,4 @@ time tests were ran with `--stale`
 
 Documentation:
 
-* [`mix` command-line options](https://hexdocs.pm/mix/Mix.Tasks.Test.html#module-command-line-options)
+* [`mix test` command-line options](https://hexdocs.pm/mix/Mix.Tasks.Test.html#module-command-line-options)
