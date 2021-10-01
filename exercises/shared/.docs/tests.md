@@ -1,6 +1,6 @@
-# Running tests in exercism
+# Running Elixir tests in exercism
 
-Tests are written in test files and placed in the `test` directory and implemented
+Elixir tests are written in `.exs` test files and placed in the `test` directory and implemented
 as:
 
 ```elixir
@@ -17,8 +17,8 @@ $ mix test
 
 Useful top-level references include:
 
-* [`ExUnit`: Elixir's unit test library](https://hexdocs.pm/ex_unit/ExUnit.html)
-* [`mix test`: Elixir's test execution tool](https://hexdocs.pm/mix/Mix.Tasks.Test.html)
+* [`ExUnit` - Elixir's unit test library](https://hexdocs.pm/ex_unit/ExUnit.html)
+* [`mix test` - Elixir's test execution tool](https://hexdocs.pm/mix/Mix.Tasks.Test.html)
 
 ### Pending tagged tests
 
@@ -147,13 +147,13 @@ of methods to control what tests are executed.
 A number of useful command-line options exist that control which tests are executed
 based on past or current execution, such as:
 
-* `--failed`: runs only tests that failed the last time they ran
-* `--max-failures`: the suite stops evaluating tests when this number of test failures
-is reached.
-* `--seed`: seeds the random number generator used to randomize the order of tests;
+* `--failed` - runs only tests that failed the last time they ran
+* `--max-failures` - the suite stops evaluating tests when this number of test failures
+is reached
+* `--seed` - seeds the random number generator used to randomize the order of tests;
 `--seed 0` disables randomization so the tests in a single file will always be ran
 in the same order they were defined in
-* `--stale`: runs only tests which reference modules that changed since the last
+* `--stale` - runs only tests which reference modules that changed since the last
 time tests were ran with `--stale`
 
 Documentation:
