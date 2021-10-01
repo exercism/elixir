@@ -35,7 +35,7 @@ https://hexdocs.pm/mix/Mix.Tasks.Test.html
 All tests in a single file may be executed via `mix` by specifying the file:
 
 ```bash
-$ mix test test/<FILE>.ex
+$ mix test test/<FILE>.exs
 ```
 
 > NOTE: `tagging` may impact which tests are actually executed using this method.
@@ -45,7 +45,7 @@ $ mix test test/<FILE>.ex
 Individual tests may be executed by referencing a test's line number in the file:
 
 ```bash
-$ mix test test/<FILE>.ex:LINENUM
+$ mix test test/<FILE>.exs:LINENUM
 ```
 
 Multiple tests may be executed by giving multiple line numbers separated by `:`.
@@ -69,7 +69,7 @@ For example, given a file with the following content with line numbers:
 The 1st and 3rd tests can be executed by:
 
 ```bash
-$ mix test test/FILE.ex:1:24
+$ mix test test/FILE.exs:1:24
 ```
 
 > NOTE: When specifying tests via line numbers, `tagging` is ignored.
