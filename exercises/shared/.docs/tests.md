@@ -1,12 +1,13 @@
-# Running tests
+# Running tests in exercism
 
 Tests are written in test files and placed in the `test` directory and implemented
 as:
 
 ```elixir
 test "short test description" do
-  # ... test implementation ...
+  # test implementation
 end
+```
 
 All tests may be executed with:
 
@@ -16,91 +17,10 @@ $ mix test
 
 Useful top-level references include:
 
-* Elixir's unit test library: https://hexdocs.pm/ex_unit/ExUnit.html
-* Elixir's test execution tool: https://hexdocs.pm/mix/Mix.Tasks.Test.html
+* [`ExUnit`: Elixir's unit test library](https://hexdocs.pm/ex_unit/ExUnit.html)
+* [`mix`: Elixir's test execution tool](https://hexdocs.pm/mix/Mix.Tasks.Test.html)
 
-`ExUnit` and `mix` provides quite a few methods of grouping, tagging & executing
-tests and various methods of controlling test execution, much of which is summarized
-below.
-
-### Methods for running specific tests
-
-`mix` has a variety of methods of running specific and specific groups of tests.
-
-Below is just a summary of some very useful methods; full documentation is here:
-https://hexdocs.pm/mix/Mix.Tasks.Test.html
-
-##### Running tests in a specific file
-
-All tests in a single file may be executed via `mix` by specifying the file:
-
-```bash
-$ mix test test/<FILE>.exs
-```
-
-> NOTE: `tagging` may impact which tests are actually executed using this method.
-
-##### Running individual tests
-
-Individual tests may be executed by referencing a test's line number in the file:
-
-```bash
-$ mix test test/<FILE>.exs:LINENUM
-```
-
-Multiple tests may be executed by giving multiple line numbers separated by `:`.
-
-For example, given a file with the following content with line numbers:
-
-```elixir
-1:      test "Test 1" do
-2-6:      . . .
-7:      end
-8:
-9:      test "Test 2" do
-10-21:    . . .
-22:     end
-23:
-24:     test "Test 3" do
-25-35:    . . .
-36:     end
-```
-
-The 1st and 3rd tests can be executed by:
-
-```bash
-$ mix test test/FILE.exs:1:24
-```
-
-> NOTE: When specifying tests via line numbers, `tagging` is ignored.
-
-##### Running groups of tests
-
-Tests may be grouped using `describe`:
-
-```elixir
-describe "short test group description" do
-  test ... do
-    ...
-  end
-
-  test ... do
-    ...
-  end
-end
-```
-
-All tests in a group may be executed by referencing its line number in the file,
-just like referencing and executing individual tests.
-
-Documentation: https://hexdocs.pm/ex_unit/ExUnit.Case.html#describe/2
-
-### Controlling test execution
-
-Independent of specifying tests to be executed, `ExUnit` and `mix` have a number
-of methods to control what tests are executed.
-
-##### Controlling execution via `tags`
+### Pending tagged tests
 
 In many test suites, all but the first test have been tagged to be skipped.
 
@@ -129,8 +49,98 @@ Or, you can enable all the tests by commenting out the `ExUnit.configure` line i
 
 Documentation:
 
-* `ExUnit`: https://hexdocs.pm/ex_unit/ExUnit.Case.html#module-tags
-* `mix`: https://hexdocs.pm/mix/Mix.Tasks.Test.html#module-filters
+* [Tagging tests](https://hexdocs.pm/ex_unit/ExUnit.Case.html#module-tags)
+* [Executing tagged tests](https://hexdocs.pm/mix/Mix.Tasks.Test.html#module-filters)
+
+# Additional Elixir testing features
+
+`ExUnit` and `mix` provide quite a few methods of grouping, tagging & executing
+tests and various methods of controlling test execution, much of which is summarized
+below.
+
+### Methods for running specific tests
+
+`mix` has a variety of methods of running specific and specific groups of tests.
+
+Below is just a summary of some very useful methods.
+
+Documentation:
+
+* [`mix` documentation](https://hexdocs.pm/mix/Mix.Tasks.Test.html)
+
+##### Running tests in a specific file
+
+All tests in a single file may be executed via `mix` by specifying the file:
+
+```bash
+$ mix test test/<FILE>.exs
+```
+
+> NOTE: `tagging` may impact which tests are actually executed using this method.
+
+##### Running individual tests
+
+Individual tests may be executed by referencing a test's line number in the file:
+
+```bash
+$ mix test test/<FILE>.exs:LINENUM
+```
+
+Multiple tests may be executed by giving multiple line numbers separated by `:`.
+
+For example, given a file with the following content with line numbers:
+
+```elixir
+test "Test 1" do           # 1
+  # test implementation    # 2-6
+end                        # 7
+                           # 8
+test "Test 2" do           # 9
+  # test implementation    # 10-21
+end                        # 22
+                           # 23
+test "Test 3" do           # 24
+  # test implementation    # 25-35
+end                        # 36
+```
+
+The 1st and 3rd tests can be executed by:
+
+```bash
+$ mix test test/FILE.exs:1:24
+```
+
+> NOTE: When specifying tests via line numbers, `tagging` is ignored.
+
+##### Running groups of tests
+
+Tests may be grouped using `describe`:
+
+```elixir
+describe "short test group description" do
+  test "test description" do
+    # test implementation
+  end
+
+  test "another test description" do
+    # test implementation
+  end
+end
+```
+
+All tests in a group may be executed by referencing its line number in the file,
+just like referencing and executing individual tests.
+
+Dcumentation:
+
+* [`describe`](https://hexdocs.pm/ex_unit/ExUnit.Case.html#describe/2)
+
+### Controlling test execution
+
+Independent of specifying tests to be executed, `ExUnit` and `mix` have a number
+of methods to control what tests are executed.
+
+##### Controlling execution via `tags`
 
 ##### Controlling execution via `mix test` command-line options
 
@@ -146,4 +156,6 @@ in the same order they were defined in
 * `--stale`: runs only tests which reference modules that changed since the last
 time tests were ran with `--stale`
 
-Documentation: https://hexdocs.pm/mix/Mix.Tasks.Test.html#module-command-line-options
+Documentation:
+
+* [`mix` command-line options](https://hexdocs.pm/mix/Mix.Tasks.Test.html#module-command-line-options)
