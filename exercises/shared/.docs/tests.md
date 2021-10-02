@@ -1,10 +1,12 @@
 # Running tests
 
-Execute the tests with:
+From the terminal, change to the base directory of the exercise then execute the tests with:
 
 ```bash
 $ mix test
 ```
+
+This will execute the test file found in the `test` subfolder -- a file ending in `_test.exs`
 
 Documentation:
 

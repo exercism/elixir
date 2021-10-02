@@ -1,6 +1,6 @@
 # Running tests
 
-From the terminal, change to the base directory of the problem then execute the tests with:
+From the terminal, change to the base directory of the exercise then execute the tests with:
 
 ```bash
 $ mix test
@@ -44,10 +44,6 @@ tests and various methods of controlling test execution, much of which is summar
 below.
 
 ### Methods for running specific tests
-
-`mix test` has a variety of methods of running specific tests and specific groups of tests.
-
-Below is just a summary of some very useful methods.
 
 Documentation:
 
