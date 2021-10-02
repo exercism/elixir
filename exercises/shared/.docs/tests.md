@@ -1,4 +1,4 @@
-# Running Elixir tests in exercism
+# Running tests
 
 Elixir tests are written in `.exs` test files and placed in the `test` directory and implemented
 as:
@@ -20,7 +20,7 @@ Useful top-level references include:
 * [`ExUnit` - Elixir's unit test library](https://hexdocs.pm/ex_unit/ExUnit.html)
 * [`mix test` - Elixir's test execution tool](https://hexdocs.pm/mix/Mix.Tasks.Test.html)
 
-### Pending tagged tests
+## Pending tests
 
 In many test suites, all but the first test have been tagged to be skipped.
 
@@ -52,7 +52,7 @@ Documentation:
 * [Tagging tests](https://hexdocs.pm/ex_unit/ExUnit.Case.html#module-tags)
 * [Executing tagged tests](https://hexdocs.pm/mix/Mix.Tasks.Test.html#module-filters)
 
-# Additional Elixir testing features
+## Additional Elixir testing features
 
 `ExUnit` and `mix test` provide quite a few methods of grouping, tagging & executing
 tests and various methods of controlling test execution, much of which is summarized
@@ -68,7 +68,7 @@ Documentation:
 
 * [`mix test` documentation](https://hexdocs.pm/mix/Mix.Tasks.Test.html)
 
-##### Running tests in a specific file
+#### Running tests in a specific file
 
 All tests in a single file may be executed via `mix test` by specifying the file:
 
@@ -78,7 +78,7 @@ $ mix test test/<FILE>.exs
 
 > NOTE: `tagging` may impact which tests are actually executed using this method.
 
-##### Running individual tests
+#### Running individual tests
 
 Individual tests may be executed by referencing a test's line number in the file:
 
@@ -112,7 +112,7 @@ $ mix test test/FILE.exs:1:24
 
 > NOTE: When specifying tests via line numbers, `tagging` is ignored.
 
-##### Running groups of tests
+#### Running groups of tests
 
 Tests may be grouped using `describe`:
 
@@ -140,9 +140,9 @@ Dcumentation:
 Independent of specifying tests to be executed, `ExUnit` and `mix test` have a number
 of methods to control what tests are executed.
 
-##### Controlling execution via `tags`
+#### Controlling execution via `tags`
 
-##### Controlling execution via `mix test` command-line options
+#### Controlling execution via `mix test` command-line options
 
 A number of useful command-line options exist that control which tests are executed
 based on past or current execution, such as:
