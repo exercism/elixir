@@ -116,22 +116,13 @@ Documentation:
 
 * [`describe`](https://hexdocs.pm/ex_unit/ExUnit.Case.html#describe/2)
 
-### Controlling test execution
+#### Other useful `mix test` options
 
-Independent of specifying tests to be executed, `ExUnit` and `mix test` have a number
-of methods to control what tests are executed.
-
-#### Controlling execution via `tags`
-
-#### Controlling execution via `mix test` command-line options
-
-A number of useful command-line options exist that control which tests are executed
-based on past or current execution, such as:
-
+* `--include` and `--exclude` - runs or doesn't run specific tests based on their `@tag`s
 * `--failed` - runs only tests that failed the last time they ran
 * `--max-failures` - the suite stops evaluating tests when this number of test failures
   is reached
-* `--seed` - seeds the random number generator used to randomize the order of tests;
+* `--seed` - seeds the random number generator used to randomize the order of tests
   `--seed 0` disables randomization so the tests in a single file will always be ran
   in the same order they were defined in
 * `--stale` - runs only tests which reference modules that changed since the last
