@@ -1,6 +1,11 @@
 defmodule DateParserTest do
   use ExUnit.Case
 
+  @tag task_id: 1
+  test "numeric pattern for day is a string" do
+    assert DateParser.day() |> is_binary()
+  end
+
   describe "numeric pattern for day matches" do
     @tag task_id: 1
     test "un-padded days" do
@@ -62,6 +67,11 @@ defmodule DateParserTest do
     test "two letters", do: refute("bb" =~ Regex.compile!(DateParser.day()))
   end
 
+  @tag task_id: 1
+  test "numeric pattern for month is a string" do
+    assert DateParser.month() |> is_binary()
+  end
+
   describe "numeric pattern for month matches" do
     @tag task_id: 1
     test "un-padded months" do
@@ -108,6 +118,11 @@ defmodule DateParserTest do
     test "long month name", do: refute("January" =~ Regex.compile!(DateParser.month()))
   end
 
+  @tag task_id: 1
+  test "numeric pattern for year is a string" do
+    assert DateParser.year() |> is_binary()
+  end
+
   describe "numeric pattern for year" do
     @tag task_id: 1
     test "matches 4 digits", do: assert("1970" =~ Regex.compile!("^#{DateParser.year()}$"))
@@ -119,6 +134,11 @@ defmodule DateParserTest do
     test "doesn't match too few", do: refute("198" =~ Regex.compile!("^#{DateParser.year()}$"))
     @tag task_id: 1
     test "doesn't match too many", do: refute("19701" =~ Regex.compile!("^#{DateParser.year()}$"))
+  end
+
+  @tag task_id: 2
+  test "pattern for day names is a string" do
+    assert DateParser.day_names() |> is_binary()
   end
 
   @tag task_id: 2
@@ -163,6 +183,11 @@ defmodule DateParserTest do
     test "numeric day of the week (1-indexed)" do
       refute "1" =~ Regex.compile!("^#{DateParser.day_names()}$")
     end
+  end
+
+  @tag task_id: 2
+  test "pattern for month names is a string" do
+    assert DateParser.month_names() |> is_binary()
   end
 
   @tag task_id: 2
@@ -222,6 +247,8 @@ defmodule DateParserTest do
   describe "capture" do
     @tag task_id: 3
     test "numeric month" do
+      assert DateParser.capture_month() |> is_binary()
+
       assert %{"month" => "01"} =
                DateParser.capture_month()
                |> Regex.compile!()
@@ -230,6 +257,8 @@ defmodule DateParserTest do
 
     @tag task_id: 3
     test "numeric day" do
+      assert DateParser.capture_day() |> is_binary()
+
       assert %{"day" => "01"} =
                DateParser.capture_day()
                |> Regex.compile!()
@@ -238,6 +267,8 @@ defmodule DateParserTest do
 
     @tag task_id: 3
     test "numeric year" do
+      assert DateParser.capture_year() |> is_binary()
+
       assert %{"year" => "1970"} =
                DateParser.capture_year()
                |> Regex.compile!()
@@ -246,6 +277,8 @@ defmodule DateParserTest do
 
     @tag task_id: 3
     test "capture day name" do
+      assert DateParser.capture_day_name() |> is_binary()
+
       assert %{"day_name" => "Monday"} =
                DateParser.capture_day_name()
                |> Regex.compile!()
@@ -254,6 +287,8 @@ defmodule DateParserTest do
 
     @tag task_id: 3
     test "capture month name" do
+      assert DateParser.capture_month_name() |> is_binary()
+
       assert %{"month_name" => "February"} =
                DateParser.capture_month_name()
                |> Regex.compile!()
@@ -262,6 +297,8 @@ defmodule DateParserTest do
 
     @tag task_id: 4
     test "numeric date" do
+      assert DateParser.capture_numeric_date() |> is_binary()
+
       assert %{"year" => "1970", "month" => "02", "day" => "01"} =
                DateParser.capture_numeric_date()
                |> Regex.compile!()
@@ -270,6 +307,8 @@ defmodule DateParserTest do
 
     @tag task_id: 4
     test "month named date" do
+      assert DateParser.capture_month_name_date() |> is_binary()
+
       assert %{"year" => "1970", "month_name" => "January", "day" => "1"} =
                DateParser.capture_month_name_date()
                |> Regex.compile!()
@@ -278,6 +317,8 @@ defmodule DateParserTest do
 
     @tag task_id: 4
     test "day and month named date" do
+      assert DateParser.capture_day_month_name_date() |> is_binary()
+
       assert %{
                "year" => "1970",
                "month_name" => "January",
@@ -291,6 +332,11 @@ defmodule DateParserTest do
   end
 
   describe "regex match" do
+    @tag task_id: 5
+    test "pattern to match numeric date is a regex" do
+      assert match?(%Regex{}, DateParser.match_numeric_date())
+    end
+
     @tag task_id: 5
     test "numeric date matches" do
       assert DateParser.match_numeric_date() |> Regex.match?("01/02/1970")
@@ -314,6 +360,11 @@ defmodule DateParserTest do
     end
 
     @tag task_id: 5
+    test "pattern to match month name date is a regex" do
+      assert match?(%Regex{}, DateParser.match_month_name_date())
+    end
+
+    @tag task_id: 5
     test "month named date matches" do
       assert DateParser.match_month_name_date() |> Regex.match?("January 1, 1970")
     end
@@ -333,6 +384,11 @@ defmodule DateParserTest do
     @tag task_id: 5
     test "month named date with a suffix doesn't match" do
       refute DateParser.match_month_name_date() |> Regex.match?("January 1, 1970 was the day")
+    end
+
+    @tag task_id: 5
+    test "pattern to match day month name date is a regex" do
+      assert match?(%Regex{}, DateParser.match_day_month_name_date())
     end
 
     @tag task_id: 5
