@@ -60,7 +60,7 @@ below.
 
 ### Methods for running specific tests
 
-`mix test` has a variety of methods of running specific and specific groups of tests.
+`mix test` has a variety of methods of running specific tests and specific groups of tests.
 
 Below is just a summary of some very useful methods.
 
@@ -131,7 +131,7 @@ end
 All tests in a group may be executed by referencing its line number in the file,
 just like referencing and executing individual tests.
 
-Dcumentation:
+Documentation:
 
 * [`describe`](https://hexdocs.pm/ex_unit/ExUnit.Case.html#describe/2)
 
