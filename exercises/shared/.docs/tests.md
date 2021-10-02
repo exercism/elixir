@@ -22,7 +22,7 @@ Useful top-level references include:
 
 ## Pending tests
 
-In many test suites, all but the first test have been tagged to be skipped.
+In test suites of practice exercises, all but the first test have been tagged to be skipped.
 
 Once you get a test passing, you can unskip the next one by commenting out the relevant `@tag :pending` with a `#` symbol.
 
