@@ -46,5 +46,5 @@ Or, you can enable all the tests by commenting out the `ExUnit.configure` line i
 * `--failed` - runs only tests that failed the last time they ran
 * `--max-failures` - the suite stops evaluating tests when this number of test failures
 is reached
-`--seed 0` - disables randomization so the tests in a single file will always be ran
+* `--seed 0` - disables randomization so the tests in a single file will always be ran
 in the same order they were defined in
