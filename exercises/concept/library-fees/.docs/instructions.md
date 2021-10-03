@@ -41,7 +41,7 @@ The library has a flat rate for late returns. To be able to calculate the fee, w
 
 Implement the `LibraryFees.days_late/2` function. It should take a `Date` struct - the planned return datetime, and a `NaiveDateTime` struct - the actual return datetime.
 
-If the planned return date is on an earlier or the same day as the actual return datetime, the function should return 0. Otherwise, the function should return the difference between those two dates in days.
+If the actual return date is on an earlier or the same day as the planned return datetime, the function should return 0. Otherwise, the function should return the difference between those two dates in days.
 
 The library tracks both the date and time of the actual return of the book for statistical purposes, but doesn't use the time when calculating late fees.
 
