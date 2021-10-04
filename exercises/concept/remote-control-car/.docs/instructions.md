@@ -53,7 +53,7 @@ Make sure the function only accepts a `RemoteControlCar` struct as the argument.
 
 ## 4. Display the battery percentage
 
-Implement the `RemoteControlCar.display_battery/1` function to return the distance as displayed on the LED display:
+Implement the `RemoteControlCar.display_battery/1` function to return the battery percentage as displayed on the LED display:
 
 ```elixir
 car = RemoteControlCar.new()
