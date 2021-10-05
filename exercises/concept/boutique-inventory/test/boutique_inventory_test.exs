@@ -45,14 +45,14 @@ defmodule BoutiqueInventoryTest do
     @tag task_id: 2
     test "filters out items that do have a price" do
       assert BoutiqueInventory.with_missing_price([
-               %{name: "Red Flowery Top", price: 50, quantity_per_size: %{}},
-               %{name: "Purple Flowery Top", price: nil, quantity_per_size: %{}},
-               %{name: "Bamboo Socks Avocado", price: 10, quantity_per_size: %{}},
-               %{name: "Bamboo Socks Palm Trees", price: 10, quantity_per_size: %{}},
-               %{name: "Bamboo Socks Kittens", price: nil, quantity_per_size: %{}}
+               %{name: "Red Flowery Top", price: 50, quantity_by_size: %{}},
+               %{name: "Purple Flowery Top", price: nil, quantity_by_size: %{}},
+               %{name: "Bamboo Socks Avocado", price: 10, quantity_by_size: %{}},
+               %{name: "Bamboo Socks Palm Trees", price: 10, quantity_by_size: %{}},
+               %{name: "Bamboo Socks Kittens", price: nil, quantity_by_size: %{}}
              ]) == [
-               %{name: "Purple Flowery Top", price: nil, quantity_per_size: %{}},
-               %{name: "Bamboo Socks Kittens", price: nil, quantity_per_size: %{}}
+               %{name: "Purple Flowery Top", price: nil, quantity_by_size: %{}},
+               %{name: "Bamboo Socks Kittens", price: nil, quantity_by_size: %{}}
              ]
     end
   end
