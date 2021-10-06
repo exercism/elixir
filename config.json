@@ -2815,8 +2815,7 @@
           "case",
           "structs",
           "errors",
-          "exceptions",
-          "dynamic-dispatch"
+          "exceptions"
         ],
         "practices": [
           "regular-expressions",
