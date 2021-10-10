@@ -1,0 +1,17 @@
+{
+  "blurb": "",
+  "authors": ["jiegillet"],
+  "contributors": [],
+  "files": {
+    "solution": [
+      "lib/new_passport.ex"
+    ],
+    "test": [
+      "test/new_passport_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
+  },
+  "language_versions": ">=1.10"
+}
