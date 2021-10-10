@@ -18,7 +18,7 @@
 
 ## 3. Catch bad arguments
 
-- Use a [guard][guard] to catch the cases when an integer isn't passed as an argument to `generate/1`.
+- Use a [guard][guards] to catch the cases when an integer isn't passed as an argument to `generate/1`.
 
 [enum]: https://hexdocs.pm/elixir/Enum.html#content
 [guards]: https://hexdocs.pm/elixir/master/patterns-and-guards.html#guards
