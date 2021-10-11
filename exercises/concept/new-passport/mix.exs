@@ -1,9 +1,9 @@
-defmodule Form.MixProject do
+defmodule NewPassport.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :city_office,
+      app: :new_passport,
       version: "0.1.0",
       # elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
