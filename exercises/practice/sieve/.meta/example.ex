@@ -10,9 +10,15 @@ defmodule Sieve do
   end
 
   defp do_primes([], primes), do: primes
+  defp do_primes([nil | sieve], primes), do: do_primes(sieve, primes)
 
-  defp do_primes([candidate | rest], primes) do
-    candidates = Enum.reject(rest, &(rem(&1, candidate) == 0))
-    do_primes(candidates, [candidate | primes])
+  defp do_primes([prime | _] = sieve, primes) do
+    sieve =
+      sieve
+      |> Enum.chunk_every(prime)
+      |> Enum.map(fn [_ | tail] -> [nil | tail] end)
+      |> Enum.concat()
+
+    do_primes(sieve, [prime | primes])
   end
 end
