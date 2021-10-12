@@ -38,7 +38,7 @@ RPNCalculator.Exception.divide([])
 # => ** (StackUnderflowError) stack underflow occurred, context: when dividing
 
 RPNCalculator.Exception.divide([0, 100])
-# => ** (DivisionByZero) division by zero occurred
+# => ** (DivisionByZeroError) division by zero occurred
 
 RPNCalculator.Exception.divide([4, 16])
 # => 4
