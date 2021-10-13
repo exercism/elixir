@@ -2,6 +2,11 @@ defmodule BoutiqueSuggestionsTest do
   use ExUnit.Case
 
   @tag task_id: 1
+  test "the third argument, options, is optional" do
+    assert BoutiqueSuggestions.get_combinations([], [])
+  end
+
+  @tag task_id: 1
   test "generates one pair from one top and one bottom" do
     top = %{
       item_name: "Long Sleeve T-shirt",
