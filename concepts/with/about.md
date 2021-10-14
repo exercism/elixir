@@ -6,7 +6,7 @@ Let's say that you want to validate a username with several checks. You might re
 
 ```elixir
 case check_ascii(username) do
-  {:ok, username} -> 
+  {:ok, username} ->
     case check_starts_with_letter(username) do
       {:ok, username} -> {:ok, username}
       {:error, "usernames may only start with a letter"} = err -> err
@@ -40,7 +40,7 @@ with {:ok, id} <- get_id(username),
 end
 ```
 
-Finally, you have the option of using an `else` block to catch failed matches and modify the return value. 
+Finally, you have the option of using an `else` block to catch failed matches and modify the return value.
 
 ```elixir
 with {:ok, id} <- get_id(username),

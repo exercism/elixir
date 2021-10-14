@@ -11,7 +11,7 @@ with {:ok, id} <- get_id(username),
 end
 ```
 
-At each step, if a clause matches, the chain will continue until the `do` block is executed. If one match fails, the chain stops and the non-matching clause is returned. You have the option of using an `else` block to catch failed matches and modify the return value. 
+At each step, if a clause matches, the chain will continue until the `do` block is executed. If one match fails, the chain stops and the non-matching clause is returned. You have the option of using an `else` block to catch failed matches and modify the return value.
 
 ```elixir
 with {:ok, id} <- get_id(username),
