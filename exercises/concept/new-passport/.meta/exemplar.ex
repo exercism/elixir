@@ -32,14 +32,14 @@ defmodule NewPassport do
     end
   end
 
-  @eighteen_years 18 * 365 * 24 * 60 * 60
-  defp find_counter_information(datetime) do
+  @eighteen_years 18 * 365
+  defp find_counter_information(%NaiveDateTime{} = datetime) do
     time = NaiveDateTime.to_time(datetime)
 
     if time_between(time, ~T[14:00:00], ~T[14:20:00]) do
       {:coffee_break, "information counter staff on coffee break, come back in 15 minutes"}
     else
-      {:ok, fn birthday -> 1 + div(NaiveDateTime.diff(datetime, birthday), @eighteen_years) end}
+      {:ok, fn %Date{} = birthday -> 1 + div(Date.diff(datetime, birthday), @eighteen_years) end}
     end
   end
 
