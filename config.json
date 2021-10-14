@@ -1953,7 +1953,6 @@
           "protocols"
         ],
         "practices": [
-          "integers",
           "structs",
           "protocols"
         ],
@@ -2136,13 +2135,13 @@
         "prerequisites": [
           "if",
           "cond",
-          "integer",
+          "integers",
           "multiple-clause-functions",
           "pattern-matching",
           "recursion"
         ],
         "practices": [
-          "integer"
+          "integers"
         ],
         "difficulty": 5
       },
@@ -2627,12 +2626,10 @@
           "errors",
           "exceptions",
           "keyword-lists",
-          "nil",
-          "macros"
+          "nil"
         ],
         "practices": [
-          "keyword-lists",
-          "macros"
+          "keyword-lists"
         ],
         "difficulty": 8
       },
