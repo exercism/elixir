@@ -576,6 +576,22 @@
         "concepts": [],
         "prerequisites": [],
         "status": "deprecated"
+      },
+      {
+        "slug": "new-passport",
+        "name": "New Passport",
+        "uuid": "13178298-1e3a-4ef5-a30d-438ea25a9fb6",
+        "concepts": [
+          "with"
+        ],
+        "prerequisites": [
+          "atoms",
+          "tuples",
+          "pattern-matching",
+          "errors",
+          "dates-and-time"
+        ],
+        "status": "beta"
       }
     ],
     "practice": [
@@ -3101,6 +3117,11 @@
       "uuid": "cf4b56eb-d8c5-4180-820a-d839eaa0962a",
       "slug": "typespecs",
       "name": "Typespecs"
+    },
+    {
+      "uuid": "870a9af1-9354-451c-a0ab-6deada59254a",
+      "slug": "with",
+      "name": "With"
     }
   ],
   "key_features": [
