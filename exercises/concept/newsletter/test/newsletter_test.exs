@@ -23,7 +23,7 @@ defmodule NewsletterTest do
     end
 
     @tag task_id: 1
-    test "returns an empty list if the file if empty" do
+    test "returns an empty list if the file is empty" do
       empty_file_path = Path.join(["assets", "empty.txt"])
       assert Newsletter.read_emails(empty_file_path) == []
     end
