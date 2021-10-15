@@ -7,7 +7,7 @@
 
 ## 1. Get into the building
 
-- Don't overthink this one. The function `enter_building` already fulfills the requirements. 
+- Don't overthink this one. The function `enter_building` already fulfills the requirements.
 
 ## 2. Go to the information desk and find which counter you should go to
 
