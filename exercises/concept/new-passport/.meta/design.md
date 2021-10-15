@@ -29,5 +29,5 @@ This exercise should provide a boilerplate with already implemented functions re
 
 - make sure that `with` is used
 - make sure that `case` is not used
-- make sure that `=` is used within the `with` chain
+- make sure that `=` is used within the `with` chain (using `_block_includes`)
 - make sure the functions below were not touched
