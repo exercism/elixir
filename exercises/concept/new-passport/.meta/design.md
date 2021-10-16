@@ -16,10 +16,14 @@ This exercise should provide a boilerplate with already implemented functions re
 ## Prerequisites
 
 - `atoms`
+- `cond`
 - `tuples`
+- `strings`
 - `pattern-matching`
+- `multiple-clause-functions`
+- `guards`
 - `errors`
-- `datetime`
+- `dates-and-time`
 
 ## Concepts
 
