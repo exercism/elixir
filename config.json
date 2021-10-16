@@ -586,8 +586,12 @@
         ],
         "prerequisites": [
           "atoms",
+          "cond",
           "tuples",
+          "strings",
           "pattern-matching",
+          "multiple-clause-functions",
+          "guards",
           "errors",
           "dates-and-time"
         ],
