@@ -7,29 +7,28 @@
 
 ## 1. Get into the building
 
-- Don't overthink this one. The function `enter_building` already fulfills the requirements.
+- Match the `:ok` tuple returned by `enter_building/1` in `with` with `<-`.
+- In the `do` part of `with`, return an `:ok` tuple with the value you just matched.
+- Since you don't need to modify the error, you don't need an `else` block.
 
 ## 2. Go to the information desk and find which counter you should go to
 
-- In the matching part of `with`, there should be three lines:
-    - `enter_building` matched with `<-`,
-    - `find_counter_information` matched with `<-`,
-    - the result function you just matched applied to your birthday match with `=`.
-- In the `do` part of `with`, return an `:ok` tuple with the counter value you obtained.
-- In the `else` part of with:
-    - expect for a `:coffee_break` tuple and return a `:return` tuple with a `NaiveDateTime`,
-    - return other messages as they are.
+- Match the `:ok` tuple returned by `find_counter_information/1` in `with` with `<-`.
+- Apply the anonymous function your just matched and match the result with `<-`.
+- In the `do` part of `with`, return an `:ok` tuple with the counter you obtained.
+- Add an `else` block that will expect a `:coffee_break` tuple and return a `:return` tuple with a `NaiveDateTime`.
 - A minute has `60` seconds.
 - There is a [built-in function][naive-date-time-add] that adds a given number of seconds to a `NaiveDateTime` struct.
+- Other errors should be returned as they are.
 
 ## 3. Go to the counter and get your form stamped
 
-- In the matching part of `with`, match `stamp_form` with `<-`.
+- Match the `:ok` tuple returned by `stamp_form/3` in `with` with `<-`.
 - In the `do` part of `with`, return an `:ok` tuple with the checksum.
 
 ## 4. Receive your new passport
 
-- In the `do` part of `with`, use `get_new_passport_number` and return the result in an `:ok` tuple.
+- In the `do` part of `with`, use `get_new_passport_number/3` and return the result in an `:ok` tuple.
 
 [with]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#with/1
 [getting-started-with]: https://elixir-lang.org/getting-started/mix-otp/docs-tests-and-with.html#with
