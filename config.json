@@ -1832,6 +1832,7 @@
           "regular-expressions",
           "multiple-clause-functions",
           "pattern-matching",
+          "with",
           "binaries"
         ],
         "practices": [
@@ -2722,6 +2723,7 @@
           "multiple-clause-functions",
           "pattern-matching",
           "guards",
+          "with",
           "regular-expressions"
         ],
         "practices": [
