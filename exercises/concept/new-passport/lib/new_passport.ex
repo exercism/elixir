@@ -1,5 +1,6 @@
 defmodule NewPassport do
   def get_new_passport(now, birthday, form) do
+    # Please define the 'get_new_passport/3' function
   end
 
   # Do not modify the functions below
@@ -31,16 +32,19 @@ defmodule NewPassport do
     end
   end
 
-  defp stamp_form(timestamp, counter, :blue) when rem(counter, 2) == 1,
-    do: {:ok, 3 * (timestamp + counter) + 1}
+  defp stamp_form(timestamp, counter, :blue) when rem(counter, 2) == 1 do
+    {:ok, 3 * (timestamp + counter) + 1}
+  end
 
-  defp stamp_form(timestamp, counter, :red) when rem(counter, 2) == 0,
-    do: {:ok, div(timestamp + counter, 2)}
+  defp stamp_form(timestamp, counter, :red) when rem(counter, 2) == 0 do
+    {:ok, div(timestamp + counter, 2)}
+  end
 
   defp stamp_form(_timestamp, _counter, _form), do: {:error, "wrong form color"}
 
-  defp get_new_passport_number(timestamp, counter, checksum),
-    do: "#{timestamp}-#{counter}-#{checksum}"
+  defp get_new_passport_number(timestamp, counter, checksum) do
+    "#{timestamp}-#{counter}-#{checksum}"
+  end
 
   defp time_between(time, from, to) do
     Time.compare(from, time) != :gt and Time.compare(to, time) == :gt
