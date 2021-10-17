@@ -5,7 +5,6 @@ This exercise should provide a boilerplate with already implemented functions re
 ## Learning objectives
 
 - use `with` syntax
-- do a computation that doesn't fail in the chain with `=`
 - catch a specific error with `else`
 
 ## Out of scope
