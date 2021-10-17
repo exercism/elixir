@@ -86,7 +86,7 @@ Please keep the following in mind:
 
 - For practice exercises, solution stubs should usually contain all tested public functions with empty bodies, with typespecs and docs.
 
-- For concept exercises, solution stubs should usually contain all tested public functions with empty bodies, without typespecs or docs, with comments saying what to do. The comments should all follow the same pattern (e.g. "Please implement the function_name/arity function") so that they can be found by [the analyzer check for forgetting to remove the boilerplate comments](https://github.com/exercism/elixir-analyzer/blob/main/lib/elixir_analyzer/exercise_test/common_checks/comments.ex). 
+- For concept exercises, solution stubs should usually contain all tested public functions with empty bodies, without typespecs or docs, with comments saying what to do. The comments should all follow the same pattern (e.g. "Please implement the function_name/arity function") so that they can be found by [the analyzer check for forgetting to remove the boilerplate comments](https://github.com/exercism/elixir-analyzer/blob/main/lib/elixir_analyzer/exercise_test/common_checks/comments.ex).
 
 ## Language versions
 
