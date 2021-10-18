@@ -104,8 +104,7 @@ defmodule HighScoreTest do
     test "resetting score for existing player sets previous player score to 0" do
       scores =
         HighScore.new()
-        |> HighScore.add_player("José Valim")
-        |> HighScore.update_score("José Valim", 486_373)
+        |> HighScore.add_player("José Valim", 486_373)
         |> HighScore.reset_score("José Valim")
 
       assert scores == %{"José Valim" => 0}
