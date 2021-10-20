@@ -17,8 +17,7 @@
 
 - Maps implement the enumerable protocol.
 - `Enum` functions convert maps to a list of `{key, value}` tuples.
-- There is a [built-in function][enum-map] for replacing every element in an enumerable with another element.
-- There is a [built-in function][enum-into] that can transform a list of `{key, value}` tuples back into a map.
+- There is a [built-in function][enum-into] that can transform a list of `{key, value}` tuples back into a map using a transformation function.
 
 ## 4. Calculate the item's total quantity
 
@@ -31,6 +30,5 @@
 [enum-functions]: https://hexdocs.pm/elixir/Enum.html#functions
 [enum-sort-by]: https://hexdocs.pm/elixir/Enum.html#sort_by/3
 [enum-filter]: https://hexdocs.pm/elixir/Enum.html#filter/2
-[enum-map]: https://hexdocs.pm/elixir/Enum.html#map/2
-[enum-into]: https://hexdocs.pm/elixir/Enum.html#into/2
+[enum-into]: https://hexdocs.pm/elixir/Enum.html#into/3
 [enum-reduce]: https://hexdocs.pm/elixir/Enum.html#reduce/3

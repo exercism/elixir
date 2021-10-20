@@ -9,9 +9,7 @@ defmodule BoutiqueInventory do
 
   def increase_quantity(item, count) do
     Map.update(item, :quantity_by_size, %{}, fn quantity_by_size ->
-      quantity_by_size
-      |> Enum.map(fn {size, quantity} -> {size, quantity + count} end)
-      |> Enum.into(%{})
+      Enum.into(quantity_by_size, %{}, fn {size, quantity} -> {size, quantity + count} end)
     end)
   end
 
