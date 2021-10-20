@@ -1,0 +1,17 @@
+{
+  "blurb": "Learn about `with` to concentrate on the happy path and manage a stressful day of facing bureaucracy.",
+  "authors": ["jiegillet"],
+  "contributors": ["angelikatyborska"],
+  "files": {
+    "solution": [
+      "lib/new_passport.ex"
+    ],
+    "test": [
+      "test/new_passport_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
+  },
+  "language_versions": ">=1.10"
+}
