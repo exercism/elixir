@@ -16,7 +16,7 @@
 - Match the `:ok` tuple returned by `find_counter_information/1` in `with` with `<-`.
 - Apply the anonymous function your just matched and match the result with `<-`.
 - In the `do` part of `with`, return an `:ok` tuple with the counter you obtained.
-- Add an `else` block that will expect a `:coffee_break` tuple and return a `:return` tuple with a `NaiveDateTime`.
+- Add an `else` block that will expect a `:coffee_break` tuple and return a `:retry` tuple with a `NaiveDateTime`.
 - A minute has `60` seconds.
 - There is a [built-in function][naive-date-time-add] that adds a given number of seconds to a `NaiveDateTime` struct.
 - Other errors should be returned as they are.

@@ -1,6 +1,6 @@
 defmodule NewPassport do
   def get_new_passport(now, birthday, form) do
-    # Please define the 'get_new_passport/3' function
+    # Please implement the 'get_new_passport/3' function
   end
 
   # Do not modify the functions below
