@@ -30,9 +30,7 @@ defmodule CommunityGardenTest do
   test "registered plots have unique id" do
     assert {:ok, pid} = CommunityGarden.start()
     CommunityGarden.register(pid, "Johnny Appleseed")
-    CommunityGarden.register(pid, "Janey Greenthumb")
     CommunityGarden.register(pid, "Frederick Law Olmsted")
-    CommunityGarden.release(pid, "Janey Greenthumb")
     CommunityGarden.register(pid, "Lancelot (Capability) Brown")
 
     plots = pid |> CommunityGarden.list_registrations()
