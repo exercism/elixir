@@ -61,7 +61,7 @@ RemoteControlCar.display_battery(car)
 # => "Battery at 100%"
 ```
 
-Make sure the function only accepts a `RemoteControlCar` struct as the argument.
+Make sure the function only accepts a `RemoteControlCar` struct as the argument. If the battery is at 0%, you can't drive the car anymore and the battery display will show "Battery empty".
 
 ## 5. Driving changes the battery and distance driven
 
