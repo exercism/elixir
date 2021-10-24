@@ -26,6 +26,20 @@ defmodule CommunityGardenTest do
     assert [plot] == CommunityGarden.list_registrations(pid)
   end
 
+  @tag task_id: 3
+  test "registered plots have unique id" do
+    assert {:ok, pid} = CommunityGarden.start()
+    CommunityGarden.register(pid, "Johnny Appleseed")
+    CommunityGarden.register(pid, "Janey Greenthumb")
+    CommunityGarden.register(pid, "Frederick Law Olmsted")
+    CommunityGarden.release(pid, "Janey Greenthumb")
+    CommunityGarden.register(pid, "Lancelot (Capability) Brown")
+
+    plots = pid |> CommunityGarden.list_registrations()
+    unique_ids = plots |> Enum.map(&(&1.plot_id)) |> Enum.uniq()
+    assert length(plots) == length(unique_ids)
+  end
+
   @tag task_id: 4
   test "can release a plot" do
     assert {:ok, pid} = CommunityGarden.start()
@@ -48,4 +62,6 @@ defmodule CommunityGardenTest do
     assert {:ok, pid} = CommunityGarden.start()
     assert {:not_found, "plot is unregistered"} = CommunityGarden.get_registration(pid, 1)
   end
+
+
 end
