@@ -60,6 +60,4 @@ defmodule CommunityGardenTest do
     assert {:ok, pid} = CommunityGarden.start()
     assert {:not_found, "plot is unregistered"} = CommunityGarden.get_registration(pid, 1)
   end
-
-
 end
