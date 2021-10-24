@@ -6,6 +6,8 @@ You print out the form you need to get your new passport, fill it out, jump into
 
 All the following tasks will require implementing and extending `get_new_passport/3`.
 
+`get_new_passport/3` uses some already defined functions (you shouldn't change these). For the most part, these functions can return a tuple with `:ok` or `:error` as the first item. If the retuned value is the `:error` tuple, `get_new_passport/3` should return it.
+
 ## 1. Get into the building
 
 It turns out that the building is only open in the afternoon, and not at the same time everyday.
