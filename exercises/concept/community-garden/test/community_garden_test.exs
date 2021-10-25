@@ -26,6 +26,18 @@ defmodule CommunityGardenTest do
     assert [plot] == CommunityGarden.list_registrations(pid)
   end
 
+  @tag task_id: 3
+  test "registered plots have unique id" do
+    assert {:ok, pid} = CommunityGarden.start()
+    CommunityGarden.register(pid, "Johnny Appleseed")
+    CommunityGarden.register(pid, "Frederick Law Olmsted")
+    CommunityGarden.register(pid, "Lancelot (Capability) Brown")
+
+    plots = pid |> CommunityGarden.list_registrations()
+    unique_ids = plots |> Enum.map(& &1.plot_id) |> Enum.uniq()
+    assert length(plots) == length(unique_ids)
+  end
+
   @tag task_id: 4
   test "can release a plot" do
     assert {:ok, pid} = CommunityGarden.start()
