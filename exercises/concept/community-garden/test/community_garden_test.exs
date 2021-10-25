@@ -34,7 +34,7 @@ defmodule CommunityGardenTest do
     CommunityGarden.register(pid, "Lancelot (Capability) Brown")
 
     plots = pid |> CommunityGarden.list_registrations()
-    unique_ids = plots |> Enum.map(&(&1.plot_id)) |> Enum.uniq()
+    unique_ids = plots |> Enum.map(& &1.plot_id) |> Enum.uniq()
     assert length(plots) == length(unique_ids)
   end
 
