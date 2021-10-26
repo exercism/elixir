@@ -46,6 +46,26 @@ defmodule CommunityGardenTest do
     assert [] == CommunityGarden.list_registrations(pid)
   end
 
+  @tag task_id: 4
+  test "do not re-use id of released plots" do
+    assert {:ok, pid} = CommunityGarden.start()
+
+    plot_1 = CommunityGarden.register(pid, "Keanu Reeves")
+    plot_2 = CommunityGarden.register(pid, "Thomas A. Anderson")
+
+    ids = CommunityGarden.list_registrations(pid) |> Enum.map(& &1.plot_id)
+
+    CommunityGarden.release(pid, plot_1.plot_id)
+    CommunityGarden.release(pid, plot_2.plot_id)
+
+    CommunityGarden.register(pid, "John Doe")
+    CommunityGarden.register(pid, "Jane Doe")
+
+    new_ids = CommunityGarden.list_registrations(pid) |> Enum.map(& &1.plot_id)
+
+    refute Enum.sort(ids) == Enum.sort(new_ids)
+  end
+
   @tag task_id: 5
   test "can get registration of a registered plot" do
     assert {:ok, pid} = CommunityGarden.start()
