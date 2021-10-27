@@ -12,7 +12,7 @@ The module also provides file functions for copying, removing, renaming etc. The
 - [`File.mkdir/1`][file-mkdir] - create a directory.
 - [`File.cwd/0`][file-cwd] - get the current working directory.
 
-All the mentioned functions from the `File` module also have a `!` variant that raises an error instead of returning an error tuple (e.g. [`File.read!/1`][file-read-bang]). Use that variant if you don't intend to handle errors such missing files or lack of permissions.
+All the mentioned functions from the `File` module also have a `!` variant that raises an error instead of returning an error tuple (e.g. [`File.read!/1`][file-read-bang]). Use that variant if you don't intend to handle errors such as missing files or lack of permissions.
 
 ```elixir
 File.read("does_not_exist")
