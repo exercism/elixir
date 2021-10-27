@@ -14,4 +14,4 @@ Instead, a file can be opened using `File.open/2`. The second argument to `File.
 
 When you're finished working with the file, close it with `File.close/1`.
 
-All the mentioned functions from the `File` module also have a `!` variant that raises an error instead of returning an error tuple (e.g. `File.read!/1`). Use that variant if you don't intend to handle errors such missing files or lack of permissions.
+All the mentioned functions from the `File` module also have a `!` variant that raises an error instead of returning an error tuple (e.g. `File.read!/1`). Use that variant if you don't intend to handle errors such as missing files or lack of permissions.
