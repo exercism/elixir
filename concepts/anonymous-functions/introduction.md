@@ -13,7 +13,7 @@ We might use anonymous functions to:
 - Hide data using lexical scope (also known as a closure).
 - Dynamically create functions at run-time.
 
-Anonymous function start with the reserved word `fn`, the arguments are separated from the body of the function with the `->` token, and they are finished with an `end`. As with named functions, the last expression in the function is _implicitly returned_ to the calling function.
+Anonymous functions start with the reserved word `fn`, the arguments are separated from the body of the function with the `->` token, and they are finished with an `end`. As with named functions, the last expression in the function is _implicitly returned_ to the calling function.
 
 To invoke a function reference, you must use a `.` between the reference variable and the list of arguments:
 
