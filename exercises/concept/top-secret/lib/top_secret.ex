@@ -1,32 +1,13 @@
 defmodule TopSecret do
   def to_ast(string) do
-    Code.string_to_quoted!(string)
-  end
-
-  def decode_secret_message_part({keyword, _, children} = ast, acc)
-      when keyword in [:def, :defp] do
-    [{function_name, _, arguments} | _] = children
-
-    arity = length(arguments)
-
-    message_part =
-      function_name
-      |> to_string()
-      |> String.slice(0, arity)
-
-    {ast, [message_part | acc]}
+    # Please implement the to_ast/1 function
   end
 
   def decode_secret_message_part(ast, acc) do
-    {ast, acc}
+    # Please implement the decode_secret_message_part/2 function
   end
 
   def decode_secret_message(string) do
-    ast = to_ast(string)
-    {_, acc} = Macro.prewalk(ast, [], &decode_secret_message_part/2)
-
-    acc
-    |> Enum.reverse()
-    |> Enum.join("")
+    # Please implement the decode_secret_message/1 function
   end
 end
