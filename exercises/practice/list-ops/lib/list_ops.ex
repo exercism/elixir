@@ -5,8 +5,8 @@ defmodule ListOps do
   # for adding numbers), but please do not use Kernel functions for Lists like
   # `++`, `--`, `hd`, `tl`, `in`, and `length`.
 
-  @spec length(list) :: non_neg_integer
-  def length(l) do
+  @spec count(list) :: non_neg_integer
+  def count(l) do
   end
 
   @spec reverse(list) :: list

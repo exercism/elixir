@@ -21,7 +21,7 @@ A _null-byte_ is another name for `<<0>>`.
 Pattern matching is even extended to binaries, and we can pattern match on a portion of binary data much like we could for a list.
 
 ```elixir
-# Ignore the first 8 bytes, match and bind the remaining to `body
+# Ignore the first 8 bytes, match and bind the remaining to `body`
 <<_::binary-size(8), body::binary>>
 ```
 

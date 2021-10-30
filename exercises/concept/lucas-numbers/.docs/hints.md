@@ -13,12 +13,12 @@
 
 - Use the [`Stream.iterate/2`][stream-iterate] function to generate a sequence of numbers, with the next being created from the previous.
 - The starting numbers are `2` then `1`, which you can pass in together using a tuple to make a pair `{2, 1}`
-- Make sure sure the next number is the sum of the two numbers previous to it.
+- Make sure the next number is the sum of the two numbers previous to it.
 - To evaluate the stream to a list, use an [`Enum`][enum] function.
 
 ## 3. Catch bad arguments
 
-- Use a [guard][guard] to catch the cases when an integer isn't passed as an argument to `generate/1`.
+- Use a [guard][guards] to catch the cases when an integer isn't passed as an argument to `generate/1`.
 
 [enum]: https://hexdocs.pm/elixir/Enum.html#content
 [guards]: https://hexdocs.pm/elixir/master/patterns-and-guards.html#guards

@@ -22,6 +22,13 @@ my_map[:wrong_key][:other_wrong_key]
 # => nil
 ```
 
+Note that `nil` itself implements the Access Behaviour and always returns `nil` for any key.
+
+```elixir
+nil[:key]
+# => nil
+```
+
 Structs do not implement the Access behaviour.
 
 ## Access shortcuts

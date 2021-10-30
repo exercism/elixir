@@ -26,7 +26,7 @@ This syntax is helpful for very short expressions, but should be avoided if the 
 
 ## _Truthy_ and _falsy_
 
-In Elixir, all datatypes evaluate to a _truthy_ or _falsy_ value when they are encountered in a boolean context (like an `if` expression). All data is considered _truthy_ **except** for `false` and `nil`.
+In Elixir, all datatypes evaluate to a _truthy_ or _falsy_ value when they are encountered in a boolean context (like an `if` expression). All data is considered _truthy_ **except** for `false` and `nil`. In particular, empty strings, the integer `0`, and empty lists are all considered _truthy_ in Elixir.
 
 [nil-dictionary]: https://www.merriam-webster.com/dictionary/nil
 [kernel-if]: https://hexdocs.pm/elixir/Kernel.html#if/2

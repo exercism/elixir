@@ -18,15 +18,15 @@ defmodule LinkedList do
   end
 
   @doc """
-  Calculate the length of a LinkedList
+  Counts the number of elements in a LinkedList
   """
-  @spec length(t) :: non_neg_integer()
-  def length(list) do
-    count_length(list, 0)
+  @spec count(t) :: non_neg_integer()
+  def count(list) do
+    do_count(list, 0)
   end
 
-  defp count_length({}, n), do: n
-  defp count_length({_, t}, n), do: count_length(t, n + 1)
+  defp do_count({}, n), do: n
+  defp do_count({_, t}, n), do: do_count(t, n + 1)
 
   @doc """
   Determine if a LinkedList is empty

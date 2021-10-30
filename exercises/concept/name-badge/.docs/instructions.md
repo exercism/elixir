@@ -1,6 +1,6 @@
 # Instructions
 
-In this exercise you'll be writing code to print name badges for factory employees. Employees have an ID, name, and department name. Employee badge labels are formatted as follows: `"[id] - [name] - [DEPARTMENT]"`.
+In this exercise you'll be writing code to print name badges for factory employees. Employees have an ID, name, and department name. Employee badge labels are formatted as follows: `"[id] - name - DEPARTMENT"`.
 
 ## 1. Print a badge for an employee
 

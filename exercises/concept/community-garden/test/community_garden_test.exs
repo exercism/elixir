@@ -26,12 +26,44 @@ defmodule CommunityGardenTest do
     assert [plot] == CommunityGarden.list_registrations(pid)
   end
 
+  @tag task_id: 3
+  test "registered plots have unique id" do
+    assert {:ok, pid} = CommunityGarden.start()
+    CommunityGarden.register(pid, "Johnny Appleseed")
+    CommunityGarden.register(pid, "Frederick Law Olmsted")
+    CommunityGarden.register(pid, "Lancelot (Capability) Brown")
+
+    plots = pid |> CommunityGarden.list_registrations()
+    unique_ids = plots |> Enum.map(& &1.plot_id) |> Enum.uniq()
+    assert length(plots) == length(unique_ids)
+  end
+
   @tag task_id: 4
   test "can release a plot" do
     assert {:ok, pid} = CommunityGarden.start()
     assert %Plot{} = plot = CommunityGarden.register(pid, "Johnny Appleseed")
     assert :ok = CommunityGarden.release(pid, plot.plot_id)
     assert [] == CommunityGarden.list_registrations(pid)
+  end
+
+  @tag task_id: 4
+  test "do not re-use id of released plots" do
+    assert {:ok, pid} = CommunityGarden.start()
+
+    plot_1 = CommunityGarden.register(pid, "Keanu Reeves")
+    plot_2 = CommunityGarden.register(pid, "Thomas A. Anderson")
+
+    ids = CommunityGarden.list_registrations(pid) |> Enum.map(& &1.plot_id)
+
+    CommunityGarden.release(pid, plot_1.plot_id)
+    CommunityGarden.release(pid, plot_2.plot_id)
+
+    CommunityGarden.register(pid, "John Doe")
+    CommunityGarden.register(pid, "Jane Doe")
+
+    new_ids = CommunityGarden.list_registrations(pid) |> Enum.map(& &1.plot_id)
+
+    refute Enum.sort(ids) == Enum.sort(new_ids)
   end
 
   @tag task_id: 5

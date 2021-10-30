@@ -12,6 +12,19 @@ defmodule BoutiqueInventoryTest do
       assert BoutiqueInventory.sort_by_price([
                %{price: 65, name: "Maxi Yellow Summer Dress", quantity_by_size: %{}},
                %{price: 60, name: "Cream Linen Pants", quantity_by_size: %{}},
+               %{price: 33, name: "Straw Hat", quantity_by_size: %{}}
+             ]) == [
+               %{price: 33, name: "Straw Hat", quantity_by_size: %{}},
+               %{price: 60, name: "Cream Linen Pants", quantity_by_size: %{}},
+               %{price: 65, name: "Maxi Yellow Summer Dress", quantity_by_size: %{}}
+             ]
+    end
+
+    @tag task_id: 1
+    test "the order of items of equal price is preserved" do
+      assert BoutiqueInventory.sort_by_price([
+               %{price: 65, name: "Maxi Yellow Summer Dress", quantity_by_size: %{}},
+               %{price: 60, name: "Cream Linen Pants", quantity_by_size: %{}},
                %{price: 33, name: "Straw Hat", quantity_by_size: %{}},
                %{price: 60, name: "Brown Linen Pants", quantity_by_size: %{}}
              ]) == [
@@ -32,14 +45,14 @@ defmodule BoutiqueInventoryTest do
     @tag task_id: 2
     test "filters out items that do have a price" do
       assert BoutiqueInventory.with_missing_price([
-               %{name: "Red Flowery Top", price: 50, quantity_per_size: %{}},
-               %{name: "Purple Flowery Top", price: nil, quantity_per_size: %{}},
-               %{name: "Bamboo Socks Avocado", price: 10, quantity_per_size: %{}},
-               %{name: "Bamboo Socks Palm Trees", price: 10, quantity_per_size: %{}},
-               %{name: "Bamboo Socks Kittens", price: nil, quantity_per_size: %{}}
+               %{name: "Red Flowery Top", price: 50, quantity_by_size: %{}},
+               %{name: "Purple Flowery Top", price: nil, quantity_by_size: %{}},
+               %{name: "Bamboo Socks Avocado", price: 10, quantity_by_size: %{}},
+               %{name: "Bamboo Socks Palm Trees", price: 10, quantity_by_size: %{}},
+               %{name: "Bamboo Socks Kittens", price: nil, quantity_by_size: %{}}
              ]) == [
-               %{name: "Purple Flowery Top", price: nil, quantity_per_size: %{}},
-               %{name: "Bamboo Socks Kittens", price: nil, quantity_per_size: %{}}
+               %{name: "Purple Flowery Top", price: nil, quantity_by_size: %{}},
+               %{name: "Bamboo Socks Kittens", price: nil, quantity_by_size: %{}}
              ]
     end
   end
@@ -62,7 +75,7 @@ defmodule BoutiqueInventoryTest do
     end
 
     @tag task_id: 3
-    test "sorts items by price" do
+    test "increases quantity of an item" do
       assert BoutiqueInventory.increase_quantity(
                %{
                  name: "Green Swimming Shorts",

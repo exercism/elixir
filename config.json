@@ -576,6 +576,26 @@
         "concepts": [],
         "prerequisites": [],
         "status": "deprecated"
+      },
+      {
+        "slug": "new-passport",
+        "name": "New Passport",
+        "uuid": "13178298-1e3a-4ef5-a30d-438ea25a9fb6",
+        "concepts": [
+          "with"
+        ],
+        "prerequisites": [
+          "atoms",
+          "cond",
+          "tuples",
+          "strings",
+          "pattern-matching",
+          "multiple-clause-functions",
+          "guards",
+          "errors",
+          "dates-and-time"
+        ],
+        "status": "beta"
       }
     ],
     "practice": [
@@ -1812,6 +1832,7 @@
           "regular-expressions",
           "multiple-clause-functions",
           "pattern-matching",
+          "with",
           "binaries"
         ],
         "practices": [
@@ -1953,7 +1974,6 @@
           "protocols"
         ],
         "practices": [
-          "integers",
           "structs",
           "protocols"
         ],
@@ -2136,13 +2156,13 @@
         "prerequisites": [
           "if",
           "cond",
-          "integer",
+          "integers",
           "multiple-clause-functions",
           "pattern-matching",
           "recursion"
         ],
         "practices": [
-          "integer"
+          "integers"
         ],
         "difficulty": 5
       },
@@ -2627,12 +2647,10 @@
           "errors",
           "exceptions",
           "keyword-lists",
-          "nil",
-          "macros"
+          "nil"
         ],
         "practices": [
-          "keyword-lists",
-          "macros"
+          "keyword-lists"
         ],
         "difficulty": 8
       },
@@ -2705,6 +2723,7 @@
           "multiple-clause-functions",
           "pattern-matching",
           "guards",
+          "with",
           "regular-expressions"
         ],
         "practices": [
@@ -2815,8 +2834,7 @@
           "case",
           "structs",
           "errors",
-          "exceptions",
-          "dynamic-dispatch"
+          "exceptions"
         ],
         "practices": [
           "regular-expressions",
@@ -3105,6 +3123,11 @@
       "uuid": "cf4b56eb-d8c5-4180-820a-d839eaa0962a",
       "slug": "typespecs",
       "name": "Typespecs"
+    },
+    {
+      "uuid": "870a9af1-9354-451c-a0ab-6deada59254a",
+      "slug": "with",
+      "name": "With"
     }
   ],
   "key_features": [

@@ -18,7 +18,7 @@ comment:
         - '**/*'
       body: |
         - **General steps**
-            - 🏆 Does this PR need to receive a label with a reputation modifier (`x:size/{tiny,small,medium,large,massive}`)? (A medium reputation amount is awarded by default, see [docs](https://github.com/exercism/docs/blob/main/product/reputation.md#4-creating-pull-requests))
+            - 🏆 Does this PR need to receive a label with a reputation modifier (`x:size/{tiny,small,medium,large,massive}`)? (A medium reputation amount is awarded by default, see [docs](https://github.com/exercism/docs/blob/main/using/product/reputation.md#creating-a-pull-request))
 
     - id: any-exercise-changed
       files:

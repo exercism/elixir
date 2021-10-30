@@ -48,7 +48,7 @@ unless age < 16, do: "no beer", else: "beer"
 
 ## _Truthy_ and _falsy_
 
-In Elixir, all datatypes evaluate to a _truthy_ or _falsy_ value when they are encountered in a boolean context (like an `if` expression). All data is considered _truthy_ **except** for `false` and `nil`.
+In Elixir, all datatypes evaluate to a _truthy_ or _falsy_ value when they are encountered in a boolean context (like an `if` expression). All data is considered _truthy_ **except** for `false` and `nil`. In particular, empty strings, the integer `0`, and empty lists are all considered _truthy_ in Elixir. In this way, [Elixir is similar to Ruby but different than JavaScript, Python, or PHP][falsy-various-langs].
 
 ```elixir
 truthy? = fn x -> if x, do: "truthy", else: "falsy" end
@@ -85,3 +85,4 @@ truthy?.(nil)
 [kernel-and]: https://hexdocs.pm/elixir/Kernel.html#&&/2
 [kernel-or]: https://hexdocs.pm/elixir/Kernel.html#%7C%7C/2
 [kernel-not]: https://hexdocs.pm/elixir/Kernel.html#!/1
+[falsy-various-langs]: https://www.peachesnstink.com/p/vvCzwCNRfqyPSgTdigNPvC
