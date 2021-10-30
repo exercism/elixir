@@ -23,3 +23,5 @@
 - `pattern-matching`
 
 ## Analyzer
+
+- function reuse: `decode_secret_message` should use `decode_secret_message_part` and `to_ast`.

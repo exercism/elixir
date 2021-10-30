@@ -7,10 +7,12 @@ defmodule TopSecret do
       when keyword in [:def, :defp] do
     [{function_name, _, arguments} | _] = children
 
+    arity = length(arguments)
+
     message_part =
       function_name
       |> to_string()
-      |> String.slice(0, length(arguments))
+      |> String.slice(0, arity)
 
     {ast, [message_part | acc]}
   end

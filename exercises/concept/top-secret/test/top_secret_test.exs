@@ -75,9 +75,106 @@ defmodule TopSecretTest do
     end
   end
 
-  describe "decode_secret_message/1" do
+  describe "decode_secret_message_part/2" do
+    @tag task_id: 2
+    test "returns the AST and accumulator unchanged" do
+      string = "2 + 3"
+      ast = TopSecret.to_ast(string)
+      acc = ["le", "mo"]
+
+      assert TopSecret.decode_secret_message_part(ast, acc) == {ast, acc}
+    end
+
+    @tag task_id: 2
+    test "appends a public function name to the accumulator" do
+      string = "def fit(a, b, c), do: :scale"
+      ast = TopSecret.to_ast(string)
+      acc = ["at"]
+
+      assert TopSecret.decode_secret_message_part(ast, acc) == {ast, ["fit", "at"]}
+    end
+
+    @tag task_id: 2
+    test "appends a private function name to the accumulator" do
+      string = "defp op(a, b), do: 2"
+      ast = TopSecret.to_ast(string)
+      acc = ["e", "ced"]
+
+      assert TopSecret.decode_secret_message_part(ast, acc) == {ast, ["op", "e", "ced"]}
+    end
+
+    @tag task_id: 2
+    test "ignores not top-level function definition" do
+      string = """
+      defmodule Math do
+        def sin(x), do: do_sin(x)
+        defp do_sin(x), do: nil
+      end
+      """
+
+      ast = TopSecret.to_ast(string)
+      acc = []
+
+      assert TopSecret.decode_secret_message_part(ast, acc) == {ast, acc}
+    end
+
     @tag task_id: 3
-    test "decodes a secret message" do
+    test "function arity affects message part length" do
+      string = "def adjust(a, b), do: :scale"
+      ast = TopSecret.to_ast(string)
+      acc = ["re"]
+
+      assert TopSecret.decode_secret_message_part(ast, acc) == {ast, ["ad", "re"]}
+    end
+
+    @tag task_id: 3
+    test "function arity 0 results in empty string" do
+      string = "def adjust(), do: :scale"
+      ast = TopSecret.to_ast(string)
+      acc = ["re"]
+
+      assert TopSecret.decode_secret_message_part(ast, acc) == {ast, ["", "re"]}
+    end
+  end
+
+  describe "decode_secret_message/1" do
+    @tag task_id: 4
+    test "decodes a secret message from a single function definition" do
+      code = """
+      defmodule Notebook do
+        def note(notebook, text) do
+          add_to_notebook(notebook, text, append: true)
+        end
+      end
+      """
+
+      secret_message = "no"
+
+      assert TopSecret.decode_secret_message(code) == secret_message
+    end
+
+    @tag task_id: 4
+    test "decodes a secret message from a two function definitions" do
+      code = """
+      defmodule MyCalendar do
+        def busy?(date, time) do
+          Date.day_of_week(date) != 7 and
+            time.hour in 10..16
+        end
+
+        def yesterday?(date) do
+          Date.diff(Date.utc_today, date)
+        end
+      end
+      """
+
+      secret_message = "buy"
+
+      assert TopSecret.decode_secret_message(code) == secret_message
+    end
+
+    @tag task_id: 4
+    test "decodes a secret message from many function definitions" do
       code = """
         defmodule TotallyNotTopSecret do
           def force(mass, acceleration), do: mass * acceleration
@@ -93,8 +190,23 @@ defmodule TopSecretTest do
       assert TopSecret.decode_secret_message(code) == secret_message
     end
 
-    @tag task_id: 3
-    test "decodes another secret message" do
+    @tag task_id: 4
+    test "decodes a secret message without a module definition" do
+      code = """
+      def force(mass, acceleration), do: mass * acceleration
+      def uniform(from, to), do: rand.uniform(to - from) + from
+      def data(%{metadata: metadata}, _opts), do: model(metadata)
+      defp model(metadata, _opts), do: metadata |> less_data |> Enum.reverse() |> Enum.take(3)
+      defp less_data(data, _opts), do: Enum.reject(data, &is_nil/1)
+      """
+
+      secret_message = "foundamole"
+
+      assert TopSecret.decode_secret_message(code) == secret_message
+    end
+
+    @tag task_id: 4
+    test "decodes another secret message from multiple modules" do
       code = """
       defmodule IOHelpers do
         def inspect(x, opts), do: IO.inspect(x, opts)
