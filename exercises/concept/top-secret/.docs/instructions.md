@@ -4,7 +4,7 @@ You're part of a task force fighting against corporate espionage. You have a sec
 
 Your informer, Agent Ex, is an Elixir developer. She is encoding secret messages in her code.
 
-To decode the secret message:
+To decode her secret messages:
 
 - Take all functions (public and private) in the order they're defined in.
 - For each function, take the first `n` characters from its name, where `n` is the function's arity.
@@ -52,7 +52,7 @@ TopSecret.decode_secret_message_part(ast, ["day"])
 
 ## 4. Decode the full secret message
 
-Implement the `TopSecret.decode_secret_message/1` function. It should take a string with Elixir code and return the secret message as a string decoded from all function definitions found in the code. Make sure to reuse functions defined in previous steps. 
+Implement the `TopSecret.decode_secret_message/1` function. It should take a string with Elixir code and return the secret message as a string decoded from all function definitions found in the code. Make sure to reuse functions defined in previous steps.
 
 ```elixir
 code = """
