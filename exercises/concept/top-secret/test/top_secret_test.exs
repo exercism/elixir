@@ -135,6 +135,15 @@ defmodule TopSecretTest do
 
       assert TopSecret.decode_secret_message_part(ast, acc) == {ast, ["", "re"]}
     end
+
+    @tag task_id: 3
+    test "function arity 0 and no parentheses results in empty string" do
+      string = "def adjust, do: :scale"
+      ast = TopSecret.to_ast(string)
+      acc = ["re"]
+
+      assert TopSecret.decode_secret_message_part(ast, acc) == {ast, ["", "re"]}
+    end
   end
 
   describe "decode_secret_message/1" do

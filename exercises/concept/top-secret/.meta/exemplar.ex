@@ -7,7 +7,7 @@ defmodule TopSecret do
       when keyword in [:def, :defp] do
     [{function_name, _, arguments} | _] = children
 
-    arity = length(arguments)
+    arity = if arguments, do: length(arguments), else: 0
 
     message_part =
       function_name
