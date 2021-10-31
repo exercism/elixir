@@ -120,4 +120,28 @@ defmodule BookStoreTest do
 
     assert BookStore.total(basket) == 10240
   end
+
+  @tag :pending
+  test "Check that groups of four are created properly even when there are more groups of three than groups of five" do
+    # Suggested grouping, [[1,2,3,4],[1,2,3,5],[1,2,3,4],[1,2,3,5],[1,2,3],[1,2,3]].
+    basket = [1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 5, 5]
+
+    assert BookStore.total(basket) == 14560
+  end
+
+  @tag :pending
+  test "One group of one and four is cheaper than one group of two and three" do
+    # Suggested grouping, [[1],[1,2,3,4]].
+    basket = [1, 1, 2, 3, 4]
+
+    assert BookStore.total(basket) == 3360
+  end
+
+  @tag :pending
+  test "One group of one and two plus three groups of four is cheaper than one group of each size" do
+    # Suggested grouping, [[5],[5,4],[5,4,3,2],[5,4,3,2],[5,4,3,1]].
+    basket = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+
+    assert BookStore.total(basket) == 10000
+  end
 end
