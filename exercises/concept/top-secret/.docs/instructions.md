@@ -20,34 +20,34 @@ TopSecret.to_ast("div(4, 3)")
 
 ## 2. Parse a single AST node
 
-Implement the `TopSecret.decode_secret_message_part/2` function. It should take an AST and an accumulator for the secret message (a list). It should return a tuple with the AST unchanged as the first element, and the accumulator as the second element.
+Implement the `TopSecret.decode_secret_message_part/2` function. It should take an AST node and an accumulator for the secret message (a list). It should return a tuple with the AST node unchanged as the first element, and the accumulator as the second element.
 
-If the top-most operation in the AST is defining a function (`def` or `defp`), prepend the function name (changed to a string) to the accumulator. If the top-most operation is something else, return the accumulator unchanged.
+If the operation of the AST node is defining a function (`def` or `defp`), prepend the function name (changed to a string) to the accumulator. If the operation is something else, return the accumulator unchanged.
 
 ```elixir
-ast = TopSecret.to_ast("defp cat(a, b, c), do: nil")
-TopSecret.decode_secret_message_part(ast, ["day"])
-# => {ast, ["cat", "day"]}
+ast_node = TopSecret.to_ast("defp cat(a, b, c), do: nil")
+TopSecret.decode_secret_message_part(ast_node, ["day"])
+# => {ast_node, ["cat", "day"]}
 
-ast = TopSecret.to_ast("10 + 3")
-TopSecret.decode_secret_message_part(ast, ["day"])
-# => {ast, ["day"]}
+ast_node = TopSecret.to_ast("10 + 3")
+TopSecret.decode_secret_message_part(ast_node, ["day"])
+# => {ast_node, ["day"]}
 ```
 
-This function doesn't need to do any recursive calls to check the whole AST, only the top-most operation. We will traverse the whole AST with built-in tools in the last step.
+This function doesn't need to do any recursive calls to check the whole AST, only the given node. We will traverse the whole AST with built-in tools in the last step.
 
 ## 3. Decode the secret message part from function definition
 
-Extend the `TopSecret.decode_secret_message_part/2` function. If the top-most operation in the AST is defining a function, don't return the whole function name. Instead, check the function's arity. Then, return only first `n` character from the name, where `n` is the arity.
+Extend the `TopSecret.decode_secret_message_part/2` function. If the operation in the AST node is defining a function, don't return the whole function name. Instead, check the function's arity. Then, return only first `n` character from the name, where `n` is the arity.
 
 ```elixir
-ast = TopSecret.to_ast("defp cat(a, b), do: nil")
-TopSecret.decode_secret_message_part(ast, ["day"])
-# => {ast, ["ca", "day"]}
+ast_node = TopSecret.to_ast("defp cat(a, b), do: nil")
+TopSecret.decode_secret_message_part(ast_node, ["day"])
+# => {ast_node, ["ca", "day"]}
 
-ast = TopSecret.to_ast("defp cat(), do: nil")
-TopSecret.decode_secret_message_part(ast, ["day"])
-# => {ast, ["", "day"]}
+ast_node = TopSecret.to_ast("defp cat(), do: nil")
+TopSecret.decode_secret_message_part(ast_node, ["day"])
+# => {ast_node, ["", "day"]}
 ```
 
 ## 4. Decode the full secret message
