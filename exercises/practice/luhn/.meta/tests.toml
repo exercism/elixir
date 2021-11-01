@@ -8,6 +8,7 @@
 #
 # As user-added comments (using the # character) will be removed when this file
 # is regenerated, comments can be added via a `comment` key.
+
 [792a7082-feb7-48c7-b88b-bbfec160865e]
 description = "single digit strings can not be valid"
 
@@ -55,6 +56,12 @@ description = "more than a single zero is valid"
 
 [ab56fa80-5de8-4735-8a4a-14dae588663e]
 description = "input digit 9 is correctly converted to output digit 9"
+
+[b9887ee8-8337-46c5-bc45-3bcab51bc36f]
+description = "very long input is valid"
+
+[8a7c0e24-85ea-4154-9cf1-c2db90eabc08]
+description = "valid luhn with an odd number of digits and non zero first digit"
 
 [39a06a5a-5bad-4e0f-b215-b042d46209b1]
 description = "using ascii value for non-doubled non-digit isn't allowed"
