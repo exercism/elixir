@@ -38,9 +38,9 @@ defmodule GoCounting do
     territories(graph, empties, %{white: [], black: [], none: []})
   end
 
-  def territories(_graph, [], territories), do: territories
+  defp territories(_graph, [], territories), do: territories
 
-  def territories(graph, [pos | positions], territories) do
+  defp territories(graph, [pos | positions], territories) do
     %{owner: owner, territory: territory} =
       graph
       |> expand_territory([pos])
@@ -52,11 +52,11 @@ defmodule GoCounting do
     territories(graph, positions, territories)
   end
 
-  def to_color(?W), do: :white
-  def to_color(?B), do: :black
-  def to_color(?_), do: :none
+  defp to_color(?W), do: :white
+  defp to_color(?B), do: :black
+  defp to_color(?_), do: :none
 
-  def make_graph(board) do
+  defp make_graph(board) do
     board =
       board
       |> String.split("\n", trim: true)
@@ -92,10 +92,10 @@ defmodule GoCounting do
     )
   end
 
-  def expand_territory(graph, positions, visited \\ MapSet.new())
-  def expand_territory(_graph, [], _visited), do: []
+  defp expand_territory(graph, positions, visited \\ MapSet.new())
+  defp expand_territory(_graph, [], _visited), do: []
 
-  def expand_territory(graph, [pos | positions], visited) do
+  defp expand_territory(graph, [pos | positions], visited) do
     {color, neighbors} =
       case graph[pos] do
         {:white, _neighbors} ->
@@ -111,7 +111,7 @@ defmodule GoCounting do
     [{pos, color} | expand_territory(graph, neighbors ++ positions, MapSet.put(visited, pos))]
   end
 
-  def get_owner(territory) do
+  defp get_owner(territory) do
     empties = for {pos, :none} <- territory, do: pos
     colors = for {_pos, color} when color != :none <- territory, do: color
 

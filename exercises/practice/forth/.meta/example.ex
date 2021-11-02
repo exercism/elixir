@@ -1,26 +1,23 @@
 defmodule Forth do
-  defmodule Builtin do
-    def exec(word, st) when is_integer(word), do: [word | st]
-
-    def exec("+", [a, b | st]), do: [a + b | st]
-    def exec("+", _), do: raise(Forth.StackUnderflow)
-    def exec("-", [a, b | st]), do: [b - a | st]
-    def exec("-", _), do: raise(Forth.StackUnderflow)
-    def exec("*", [a, b | st]), do: [a * b | st]
-    def exec("*", _), do: raise(Forth.StackUnderflow)
-    def exec("/", [0, _ | _]), do: raise(Forth.DivisionByZero)
-    def exec("/", [a, b | st]), do: [div(b, a) | st]
-    def exec("/", _), do: raise(Forth.StackUnderflow)
-    def exec("DUP", [a | st]), do: [a, a | st]
-    def exec("DUP", _), do: raise(Forth.StackUnderflow)
-    def exec("DROP", [_ | st]), do: st
-    def exec("DROP", _), do: raise(Forth.StackUnderflow)
-    def exec("SWAP", [a, b | st]), do: [b, a | st]
-    def exec("SWAP", _), do: raise(Forth.StackUnderflow)
-    def exec("OVER", [a, b | st]), do: [b, a, b | st]
-    def exec("OVER", _), do: raise(Forth.StackUnderflow)
-    def exec(word, _), do: raise(Forth.UnknownWord, word: word)
-  end
+  defp exec(word, st) when is_integer(word), do: [word | st]
+  defp exec("+", [a, b | st]), do: [a + b | st]
+  defp exec("+", _), do: raise(Forth.StackUnderflow)
+  defp exec("-", [a, b | st]), do: [b - a | st]
+  defp exec("-", _), do: raise(Forth.StackUnderflow)
+  defp exec("*", [a, b | st]), do: [a * b | st]
+  defp exec("*", _), do: raise(Forth.StackUnderflow)
+  defp exec("/", [0, _ | _]), do: raise(Forth.DivisionByZero)
+  defp exec("/", [a, b | st]), do: [div(b, a) | st]
+  defp exec("/", _), do: raise(Forth.StackUnderflow)
+  defp exec("DUP", [a | st]), do: [a, a | st]
+  defp exec("DUP", _), do: raise(Forth.StackUnderflow)
+  defp exec("DROP", [_ | st]), do: st
+  defp exec("DROP", _), do: raise(Forth.StackUnderflow)
+  defp exec("SWAP", [a, b | st]), do: [b, a | st]
+  defp exec("SWAP", _), do: raise(Forth.StackUnderflow)
+  defp exec("OVER", [a, b | st]), do: [b, a, b | st]
+  defp exec("OVER", _), do: raise(Forth.StackUnderflow)
+  defp exec(word, _), do: raise(Forth.UnknownWord, word: word)
 
   defmodule Evaluator do
     defstruct state: :start, cmddef: [], stack: [], words: %{}
@@ -56,7 +53,7 @@ defmodule Forth do
 
   defp eval_word(word, %Evaluator{state: :start, stack: stack, words: words} = ev) do
     case Map.get(words, word) do
-      nil -> %{ev | stack: Builtin.exec(word, stack)}
+      nil -> %{ev | stack: exec(word, stack)}
       ts -> ts |> eval_words(ev)
     end
   end

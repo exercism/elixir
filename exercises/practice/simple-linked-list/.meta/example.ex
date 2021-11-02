@@ -83,6 +83,6 @@ defmodule LinkedList do
     do_reverse(list, new())
   end
 
-  def do_reverse({}, acc), do: acc
-  def do_reverse({h, t}, acc), do: do_reverse(t, push(acc, h))
+  defp do_reverse({}, acc), do: acc
+  defp do_reverse({h, t}, acc), do: do_reverse(t, push(acc, h))
 end

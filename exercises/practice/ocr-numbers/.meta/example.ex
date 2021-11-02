@@ -6,42 +6,43 @@ defmodule OcrNumbers do
   @spec convert([String.t()]) :: {:ok, String.t()} | {:error, charlist()}
   def convert(input) do
     Enum.chunk_every(input, 4)
-    |> Enum.map(fn row_set -> _convert(row_set, "") end)
+    |> Enum.map(fn row_set -> convert(row_set, "") end)
     |> format_output()
   end
 
-  def format_output([]), do: {:error, 'invalid line count'}
-  def format_output(rows), do: _format_output(Enum.any?(rows, &_error?/1), rows)
-  def _format_output(true, rows), do: Enum.find(rows, &_error?/1)
-  def _format_output(false, output), do: {:ok, Enum.join(output, ",")}
-  def _error?({:error, _}), do: true
-  def _error?(_), do: false
+  defp format_output([]), do: {:error, 'invalid line count'}
+  defp format_output(rows), do: format_output(Enum.any?(rows, &error?/1), rows)
+  defp format_output(true, rows), do: Enum.find(rows, &error?/1)
+  defp format_output(false, output), do: {:ok, Enum.join(output, ",")}
 
-  def _convert(_, {:error, _} = error), do: error
-  def _convert(input, _) when length(input) != 4, do: {:error, 'invalid line count'}
-  def _convert(["", "", "", ""], output), do: output
+  defp error?({:error, _}), do: true
+  defp error?(_), do: false
 
-  def _convert(input, output) do
+  defp convert(_, {:error, _} = error), do: error
+  defp convert(input, _) when length(input) != 4, do: {:error, 'invalid line count'}
+  defp convert(["", "", "", ""], output), do: output
+
+  defp convert(input, output) do
     split_strings = Enum.map(input, fn a -> String.split_at(a, 3) end)
     this_character = Enum.map(split_strings, fn {a, _} -> a end)
     other_characters = Enum.map(split_strings, fn {_, a} -> a end)
     lengths = Enum.map(this_character, fn a -> String.length(a) end)
 
-    _convert(other_characters, update_output(lengths, this_character, output))
+    convert(other_characters, update_output(lengths, this_character, output))
   end
 
-  def update_output([3, 3, 3, 3], chars, output), do: output <> recognize_character(chars)
-  def update_output(_, _, _), do: {:error, 'invalid column count'}
+  defp update_output([3, 3, 3, 3], chars, output), do: output <> recognize_character(chars)
+  defp update_output(_, _, _), do: {:error, 'invalid column count'}
 
-  def recognize_character([" _ ", "| |", "|_|", "   "]), do: "0"
-  def recognize_character(["   ", "  |", "  |", "   "]), do: "1"
-  def recognize_character([" _ ", " _|", "|_ ", "   "]), do: "2"
-  def recognize_character([" _ ", " _|", " _|", "   "]), do: "3"
-  def recognize_character(["   ", "|_|", "  |", "   "]), do: "4"
-  def recognize_character([" _ ", "|_ ", " _|", "   "]), do: "5"
-  def recognize_character([" _ ", "|_ ", "|_|", "   "]), do: "6"
-  def recognize_character([" _ ", "  |", "  |", "   "]), do: "7"
-  def recognize_character([" _ ", "|_|", "|_|", "   "]), do: "8"
-  def recognize_character([" _ ", "|_|", " _|", "   "]), do: "9"
-  def recognize_character(_), do: "?"
+  defp recognize_character([" _ ", "| |", "|_|", "   "]), do: "0"
+  defp recognize_character(["   ", "  |", "  |", "   "]), do: "1"
+  defp recognize_character([" _ ", " _|", "|_ ", "   "]), do: "2"
+  defp recognize_character([" _ ", " _|", " _|", "   "]), do: "3"
+  defp recognize_character(["   ", "|_|", "  |", "   "]), do: "4"
+  defp recognize_character([" _ ", "|_ ", " _|", "   "]), do: "5"
+  defp recognize_character([" _ ", "|_ ", "|_|", "   "]), do: "6"
+  defp recognize_character([" _ ", "  |", "  |", "   "]), do: "7"
+  defp recognize_character([" _ ", "|_|", "|_|", "   "]), do: "8"
+  defp recognize_character([" _ ", "|_|", " _|", "   "]), do: "9"
+  defp recognize_character(_), do: "?"
 end

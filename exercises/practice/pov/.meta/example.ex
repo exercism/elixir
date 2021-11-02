@@ -46,81 +46,53 @@ defmodule Pov do
     end
   end
 
-  def search(%Zipper{focus: {node, _children}} = zipper, node), do: {:ok, zipper}
+  defp search(%Zipper{focus: {node, _children}} = zipper, node), do: {:ok, zipper}
 
-  def search(%Zipper{} = zipper, node) do
+  defp search(%Zipper{} = zipper, node) do
     case zipper |> down |> search(node) do
       {:ok, z} -> {:ok, z}
       _ -> zipper |> right |> search(node)
     end
   end
 
-  def search(nil, _node), do: nil
+  defp search(nil, _node), do: nil
 
-  def reparent(%Zipper{focus: tree, genealogy: []}), do: tree
+  defp reparent(%Zipper{focus: tree, genealogy: []}), do: tree
 
-  def reparent(%Zipper{
-        focus: {node, children},
-        genealogy: [
-          %Crumb{parent: parent, left_siblings: left, right_siblings: right} | grandparent
-        ]
-      }) do
+  defp reparent(%Zipper{
+         focus: {node, children},
+         genealogy: [
+           %Crumb{parent: parent, left_siblings: left, right_siblings: right} | grandparent
+         ]
+       }) do
     {node, [reparent(%Zipper{focus: {parent, left ++ right}, genealogy: grandparent}) | children]}
   end
 
-  def get_path(%Zipper{focus: {node, _children}, genealogy: genealogy}) do
+  defp get_path(%Zipper{focus: {node, _children}, genealogy: genealogy}) do
     parents = Enum.map(genealogy, fn %Crumb{parent: parent} -> parent end)
 
     Enum.reverse([node | parents])
   end
 
   # Zipper navigation
-  # up and left are not actually required for this problem
 
-  def zip(tree), do: %Zipper{focus: tree}
+  defp zip(tree), do: %Zipper{focus: tree}
 
-  def down(%Zipper{focus: {value, [child | children]}, genealogy: genealogy}) do
+  defp down(%Zipper{focus: {value, [child | children]}, genealogy: genealogy}) do
     %Zipper{
       focus: child,
       genealogy: [%Crumb{parent: value, right_siblings: children} | genealogy]
     }
   end
 
-  def down(_zipper), do: nil
+  defp down(_zipper), do: nil
 
-  def up(%Zipper{
-        focus: tree,
-        genealogy: [
-          %Crumb{parent: parent, left_siblings: left, right_siblings: right} | grandparents
-        ]
-      }) do
-    %Zipper{focus: {parent, left ++ [tree | right]}, genealogy: grandparents}
-  end
-
-  def up(_zipper), do: nil
-
-  def left(%Zipper{
-        focus: tree,
-        genealogy: [
-          %Crumb{left_siblings: [left | lefties], right_siblings: right} = crumb | grandparents
-        ]
-      }) do
-    %Zipper{
-      focus: left,
-      genealogy: [
-        %Crumb{crumb | left_siblings: lefties, right_siblings: [tree | right]} | grandparents
-      ]
-    }
-  end
-
-  def left(_zipper), do: nil
-
-  def right(%Zipper{
-        focus: tree,
-        genealogy: [
-          %Crumb{left_siblings: left, right_siblings: [right | righties]} = crumb | grandparents
-        ]
-      }) do
+  defp right(%Zipper{
+         focus: tree,
+         genealogy: [
+           %Crumb{left_siblings: left, right_siblings: [right | righties]} = crumb | grandparents
+         ]
+       }) do
     %Zipper{
       focus: right,
       genealogy: [
@@ -129,5 +101,5 @@ defmodule Pov do
     }
   end
 
-  def right(_zipper), do: nil
+  defp right(_zipper), do: nil
 end

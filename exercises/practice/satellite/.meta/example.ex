@@ -19,16 +19,16 @@ defmodule Satellite do
       p_length != i_length -> {:error, "traversals must have the same length"}
       p_set != i_set -> {:error, "traversals must have the same elements"}
       p_length != MapSet.size(p_set) -> {:error, "traversals must contain unique items"}
-      true -> {:ok, build_tree(preorder, inorder, :safe)}
+      true -> {:ok, do_build_tree(preorder, inorder)}
     end
   end
 
-  def build_tree([], [], :safe), do: {}
+  defp do_build_tree([], []), do: {}
 
-  def build_tree([root | preorder], inorder, :safe) do
+  defp do_build_tree([root | preorder], inorder) do
     {in_left, in_right, pre_left, pre_right} = split(root, inorder, preorder)
 
-    {build_tree(pre_left, in_left, :safe), root, build_tree(pre_right, in_right, :safe)}
+    {do_build_tree(pre_left, in_left), root, do_build_tree(pre_right, in_right)}
   end
 
   defp split(root, [root | inorder], preorder), do: {[], inorder, [], preorder}
