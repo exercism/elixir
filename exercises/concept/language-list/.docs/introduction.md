@@ -18,7 +18,7 @@ Elixir implements lists as a linked list, where each node stores the reference t
 [1 | []]
 
 # [1, 2, 3] represented in [head | tail] notation
-[1 | [2 | 3 | []]]
+[1 | [2 | [3 | []]]]
 ```
 
 We can use _`[head | tail]`_ notation to prepend elements to a list:
