@@ -32,9 +32,9 @@ defmodule WordSearch do
     end)
   end
 
-  def search(_word, nil, _coord), do: nil
+  defp search(_word, nil, _coord), do: nil
 
-  def search(word, starting_points, coord) do
+  defp search(word, starting_points, coord) do
     word_length = String.length(word)
     word = to_charlist(word)
 
@@ -46,7 +46,7 @@ defmodule WordSearch do
     |> Enum.reduce(nil, &||/2)
   end
 
-  def make_paths(%{row: r, column: c}, delta) do
+  defp make_paths(%{row: r, column: c}, delta) do
     [
       for(i <- 0..delta, do: %{row: r + i, column: c}),
       for(i <- 0..delta, do: %{row: r - i, column: c}),

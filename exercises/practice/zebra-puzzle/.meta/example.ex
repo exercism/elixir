@@ -29,7 +29,7 @@ defmodule ZebraPuzzle do
     nationality
   end
 
-  def solve_puzzle() do
+  defp solve_puzzle() do
     #
     # Step 0: Consider all possible combinations of values
     #
@@ -90,7 +90,7 @@ defmodule ZebraPuzzle do
     |> filter_by_unique_relations
   end
 
-  def filter_direct(list, field_1, value_1, field_2, value_2) do
+  defp filter_direct(list, field_1, value_1, field_2, value_2) do
     Enum.filter(list, fn element ->
       cond do
         element[field_1] == value_1 and element[field_2] == value_2 -> true
@@ -101,7 +101,7 @@ defmodule ZebraPuzzle do
     end)
   end
 
-  def filter_by_neighbors(list) do
+  defp filter_by_neighbors(list) do
     next_to = fn n -> [n - 1, n + 1] end
 
     filtered_list =
@@ -123,7 +123,7 @@ defmodule ZebraPuzzle do
     end
   end
 
-  def filter_indirect(list, field_1, value_1, order_1_to_2, field_2, value_2, order_2_to_1) do
+  defp filter_indirect(list, field_1, value_1, order_1_to_2, field_2, value_2, order_2_to_1) do
     # Get all possible neighbor houses of possibilities with field_1: value_1
     # Ex: find all possible house numbers that neighbor a green house
     orders_2 = get_orders(list, field_1, value_1, order_1_to_2)
@@ -135,7 +135,7 @@ defmodule ZebraPuzzle do
     filter_neighbors(list2, field_1, value_1, orders_1)
   end
 
-  def get_orders(list, field, value, to_other_order) do
+  defp get_orders(list, field, value, to_other_order) do
     list
     |> Enum.filter(&(&1[field] == value))
     |> Enum.map(fn %{order: order} -> to_other_order.(order) end)
@@ -144,7 +144,7 @@ defmodule ZebraPuzzle do
     |> Enum.filter(fn order -> 1 <= order and order <= 5 end)
   end
 
-  def filter_neighbors(list, field, value, orders) do
+  defp filter_neighbors(list, field, value, orders) do
     Enum.filter(list, fn element ->
       cond do
         element[field] == value and element.order in orders -> true
@@ -155,7 +155,7 @@ defmodule ZebraPuzzle do
     end)
   end
 
-  def filter_by_unique_relations(list) do
+  defp filter_by_unique_relations(list) do
     # Some values happen to exist only in one particular house number
     filter_parameters =
       list
@@ -186,7 +186,7 @@ defmodule ZebraPuzzle do
     end
   end
 
-  def values_to_set(map) do
+  defp values_to_set(map) do
     Map.new(map, fn {field, value} -> {field, MapSet.new([value])} end)
   end
 end

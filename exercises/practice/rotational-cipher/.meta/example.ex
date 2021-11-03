@@ -13,15 +13,15 @@ defmodule RotationalCipher do
       |> Enum.take(@alphabet_size)
 
     for {p, c} <- Enum.zip(plain, cipher) do
-      def translate(unquote(p), unquote(shift)), do: unquote(c)
+      defp translate(unquote(p), unquote(shift)), do: unquote(c)
 
-      def translate(unquote(p |> String.upcase()), unquote(shift)),
+      defp translate(unquote(p |> String.upcase()), unquote(shift)),
         do: unquote(c |> String.upcase())
     end
   end
 
   # Non a-zA-Z just returns the original character
-  def translate(plaintext, _), do: plaintext
+  defp translate(plaintext, _), do: plaintext
 
   @doc """
   Given a plaintext and amount to shift by, return a rotated string.

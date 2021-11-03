@@ -22,16 +22,16 @@ defmodule BookStore do
     |> Enum.min()
   end
 
-  def frequencies(list) do
+  defp frequencies(list) do
     list
     |> Enum.reduce(%{}, &Map.update(&2, &1, 1, fn count -> count + 1 end))
     |> Map.values()
   end
 
-  def discounts([]), do: [0]
-  def discounts([n]), do: [n * @base_price]
+  defp discounts([]), do: [0]
+  defp discounts([n]), do: [n * @base_price]
 
-  def discounts(frequencies) do
+  defp discounts(frequencies) do
     for num_books <- 2..5,
         {picked, left} <- pick_n_distinct_from(num_books, frequencies),
         remove_picked = picked |> Enum.map(&(&1 - 1)) |> Enum.reject(&(&1 == 0)),
@@ -39,11 +39,11 @@ defmodule BookStore do
         do: costs + num_books * @discount[num_books]
   end
 
-  def pick_n_distinct_from(n, list) when length(list) < n, do: %{}
-  def pick_n_distinct_from(0, list), do: %{[] => list}
-  def pick_n_distinct_from(n, list) when length(list) == n, do: %{list => []}
+  defp pick_n_distinct_from(n, list) when length(list) < n, do: %{}
+  defp pick_n_distinct_from(0, list), do: %{[] => list}
+  defp pick_n_distinct_from(n, list) when length(list) == n, do: %{list => []}
 
-  def pick_n_distinct_from(n, list) do
+  defp pick_n_distinct_from(n, list) do
     for pick <- Enum.uniq(list),
         {picked, left} <- pick_n_distinct_from(n - 1, list -- [pick]),
         into: %{},

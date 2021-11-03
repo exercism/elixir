@@ -1,6 +1,6 @@
 defmodule SgfParsing do
   # Used to make recursive parsers lazy
-  defmacro lazy(parser) do
+  defmacrop lazy(parser) do
     quote do
       fn string -> unquote(parser).(string) end
     end
@@ -27,7 +27,7 @@ defmodule SgfParsing do
 
   # TREE PARSER
 
-  def parse_tree() do
+  defp parse_tree() do
     parse_properties =
       char(?;)
       |> error("tree with no nodes")
@@ -44,14 +44,14 @@ defmodule SgfParsing do
     lift2(&%Sgf{properties: &1, children: &2}, parse_properties, parse_children)
   end
 
-  def parse_tree_paren() do
+  defp parse_tree_paren() do
     char(?()
     |> error("tree missing")
     |> drop_and(parse_tree())
     |> drop(char(?)))
   end
 
-  def parse_property() do
+  defp parse_property() do
     parse_name =
       some(satisfy(&(&1 not in '[();')))
       |> map(&Enum.join(&1, ""))
@@ -69,25 +69,25 @@ defmodule SgfParsing do
     lift2(&{&1, &2}, parse_name, parse_attributes)
   end
 
-  def escaped(p) do
+  defp escaped(p) do
     one_of([
       lift2(&escape/2, char(?\\), satisfy(&(&1 in 'nt]['))),
       satisfy(p)
     ])
   end
 
-  def escape("\\", "n"), do: "\n"
-  def escape("\\", "t"), do: "\t"
-  def escape("\\", "]"), do: "]"
-  def escape("\\", "["), do: "["
+  defp escape("\\", "n"), do: "\n"
+  defp escape("\\", "t"), do: "\t"
+  defp escape("\\", "]"), do: "]"
+  defp escape("\\", "["), do: "["
 
   # PARSER COMBINATORS LIBRARY
   # Inspired from Haskell libraries like Parsec
   # and https://serokell.io/blog/parser-combinators-in-elixir
 
-  def run_parser(parser, string), do: parser.(string)
+  defp run_parser(parser, string), do: parser.(string)
 
-  def eof(parser) do
+  defp eof(parser) do
     fn string ->
       with {:ok, _, ""} = ok <- parser.(string) do
         ok
@@ -98,7 +98,7 @@ defmodule SgfParsing do
     end
   end
 
-  def satisfy(p) do
+  defp satisfy(p) do
     fn
       <<char, rest::bitstring>> = string ->
         if p.(char) do
@@ -112,16 +112,9 @@ defmodule SgfParsing do
     end
   end
 
-  def char(c), do: satisfy(&(&1 == c)) |> error("expected character #{<<c>>}")
+  defp char(c), do: satisfy(&(&1 == c)) |> error("expected character #{<<c>>}")
 
-  def string(str) do
-    str
-    |> to_charlist
-    |> Enum.map(&char/1)
-    |> Enum.reduce(inject(""), &lift2(fn a, b -> a <> b end, &1, &2))
-  end
-
-  def some(parser) do
+  defp some(parser) do
     fn input ->
       with {:ok, result, rest} <- parser.(input),
            {:ok, results, rest} <- many(parser).(rest) do
@@ -130,7 +123,7 @@ defmodule SgfParsing do
     end
   end
 
-  def many(parser) do
+  defp many(parser) do
     fn input ->
       with {:ok, result, rest} <- some(parser).(input) do
         {:ok, result, rest}
@@ -141,7 +134,7 @@ defmodule SgfParsing do
     end
   end
 
-  def one_of(parsers) when is_list(parsers) do
+  defp one_of(parsers) when is_list(parsers) do
     fn string ->
       Enum.reduce_while(parsers, {:error, "no parsers", string}, fn
         _parser, {:ok, _, _} = result -> {:halt, result}
@@ -150,7 +143,7 @@ defmodule SgfParsing do
     end
   end
 
-  def map(parser, f) do
+  defp map(parser, f) do
     fn string ->
       with {:ok, a, rest} <- parser.(string) do
         {:ok, f.(a), rest}
@@ -158,7 +151,7 @@ defmodule SgfParsing do
     end
   end
 
-  def error(parser, err) do
+  defp error(parser, err) do
     fn string ->
       with {:error, _err, rest} <- parser.(string) do
         {:error, err, rest}
@@ -166,7 +159,7 @@ defmodule SgfParsing do
     end
   end
 
-  def drop(p1, p2) do
+  defp drop(p1, p2) do
     fn string ->
       with {:ok, a, rest} <- p1.(string),
            {:ok, _, rest} <- p2.(rest) do
@@ -175,7 +168,7 @@ defmodule SgfParsing do
     end
   end
 
-  def drop_and(p1, p2) do
+  defp drop_and(p1, p2) do
     fn string ->
       with {:ok, _, rest} <- p1.(string) do
         p2.(rest)
@@ -183,11 +176,7 @@ defmodule SgfParsing do
     end
   end
 
-  def inject(a) do
-    fn string -> {:ok, a, string} end
-  end
-
-  def lift2(pair, p1, p2) do
+  defp lift2(pair, p1, p2) do
     fn string ->
       with {:ok, a, rest} <- p1.(string),
            {:ok, b, rest} <- p2.(rest) do
@@ -196,7 +185,7 @@ defmodule SgfParsing do
     end
   end
 
-  def validate(parser, p, err) do
+  defp validate(parser, p, err) do
     fn string ->
       with {:ok, result, rest} <- parser.(string) do
         if p.(result) do
