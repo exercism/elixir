@@ -24,7 +24,7 @@ defmodule House do
     "the horse and the hound and the horn that belonged to"
   ]
 
-  def verse(n) do
+  defp verse(n) do
     stuff =
       @protagonists
       |> Enum.take(n)

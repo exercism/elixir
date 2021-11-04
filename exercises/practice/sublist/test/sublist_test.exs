@@ -108,6 +108,11 @@ defmodule SublistTest do
   end
 
   @tag :pending
+  test "first list missing additional digits from second list" do
+    assert Sublist.compare([1, 2], [1, 22]) == :unequal
+  end
+
+  @tag :pending
   test "order matters to a list" do
     assert Sublist.compare([1, 2, 3], [3, 2, 1]) == :unequal
   end

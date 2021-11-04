@@ -87,6 +87,16 @@ defmodule LuhnTest do
   end
 
   @tag :pending
+  test "very long input is valid" do
+    assert Luhn.valid?("9999999999 9999999999 9999999999 9999999999")
+  end
+
+  @tag :pending
+  test "valid luhn with an odd number of digits and non zero first digit" do
+    assert Luhn.valid?("109")
+  end
+
+  @tag :pending
   test "using ascii value for non-doubled non-digit isn't allowed" do
     refute Luhn.valid?("055b 444 285")
   end

@@ -16,19 +16,19 @@ defmodule FoodChain do
   @spec recite(start :: integer, stop :: integer) :: String.t()
   def recite(start, stop), do: Enum.map_join(start..stop, "\n", &verse/1)
 
-  def verse(1),
+  defp verse(1),
     do: """
     I know an old lady who swallowed a fly.
     I don't know why she swallowed the fly. Perhaps she'll die.
     """
 
-  def verse(8),
+  defp verse(8),
     do: """
     I know an old lady who swallowed a horse.
     She's dead, of course!
     """
 
-  def verse(number) do
+  defp verse(number) do
     [{animal, line} | _] =
       animals =
       Enum.take(@animals, number)

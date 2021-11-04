@@ -17,11 +17,11 @@ defmodule BinarySearchTree do
     in_order(tree, []) |> Enum.reverse()
   end
 
-  def in_order(nil, accum) do
+  defp in_order(nil, accum) do
     accum
   end
 
-  def in_order(tree, accum) do
+  defp in_order(tree, accum) do
     left_side = in_order(tree.left, accum)
     middle = [tree.data | left_side]
     in_order(tree.right, middle)

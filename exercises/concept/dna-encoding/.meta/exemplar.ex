@@ -39,8 +39,10 @@ defmodule DNA do
     do_decode(dna, [])
   end
 
-  def do_decode(<<>>, acc), do: acc |> reverse()
-  def do_decode(<<n::4, rest::bitstring>>, acc), do: do_decode(rest, [decode_nucleotide(n) | acc])
+  defp do_decode(<<>>, acc), do: acc |> reverse()
+
+  defp do_decode(<<n::4, rest::bitstring>>, acc),
+    do: do_decode(rest, [decode_nucleotide(n) | acc])
 
   defp reverse(l), do: do_reverse(l, [])
   defp do_reverse([], acc), do: acc

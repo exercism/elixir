@@ -55,15 +55,15 @@ defmodule AffineCipher do
     end
   end
 
-  def modular_multiplicative_inverse(a, m) do
+  defp modular_multiplicative_inverse(a, m) do
     modular_multiplicative_inverse(a, m, 1, 0)
     |> Integer.mod(m)
   end
 
-  def modular_multiplicative_inverse(0, r0, _t1, _t0) when r0 > 1, do: raise("Not invertible")
-  def modular_multiplicative_inverse(0, _r0, _t1, t0), do: t0
+  defp modular_multiplicative_inverse(0, r0, _t1, _t0) when r0 > 1, do: raise("Not invertible")
+  defp modular_multiplicative_inverse(0, _r0, _t1, t0), do: t0
 
-  def modular_multiplicative_inverse(r1, r0, t1, t0) do
+  defp modular_multiplicative_inverse(r1, r0, t1, t0) do
     q = div(r0, r1)
     modular_multiplicative_inverse(r0 - q * r1, r1, t0 - q * t1, t1)
   end

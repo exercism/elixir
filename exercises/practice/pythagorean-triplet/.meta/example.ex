@@ -34,9 +34,9 @@ defmodule Triplet do
     |> Enum.sort()
   end
 
-  def generate([], _sum), do: []
+  defp generate([], _sum), do: []
 
-  def generate([[a, b, c] = triple | triplets], sum) do
+  defp generate([[a, b, c] = triple | triplets], sum) do
     next =
       triple
       |> next_triplets
@@ -49,11 +49,9 @@ defmodule Triplet do
     multiples ++ generate(next ++ triplets, sum)
   end
 
-  @doc """
-  Given a primitive Pythagorean triple, generate three more.
-  [All primitive Pythagorean triples can be generated this way without duplication][https://en.wikipedia.org/wiki/Tree_of_primitive_Pythagorean_triples].
-  """
-  def next_triplets([a, b, c]),
+  # Given a primitive Pythagorean triple, generate three more.
+  # [All primitive Pythagorean triples can be generated this way without duplication][https://en.wikipedia.org/wiki/Tree_of_primitive_Pythagorean_triples].
+  defp next_triplets([a, b, c]),
     do: [
       [a - 2 * b + 2 * c, 2 * a - b + 2 * c, 2 * a - 2 * b + 3 * c],
       [a + 2 * b + 2 * c, 2 * a + b + 2 * c, 2 * a + 2 * b + 3 * c],

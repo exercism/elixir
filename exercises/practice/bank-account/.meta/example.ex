@@ -7,18 +7,22 @@ defmodule BankAccount do
 
   ## Callbacks
 
+  @impl true
   def init(_args) do
     {:ok, 0}
   end
 
+  @impl true
   def handle_call(:balance, _from, balance) do
     {:reply, balance, balance}
   end
 
+  @impl true
   def handle_call({:update, amount}, _from, balance) do
     {:reply, :ok, balance + amount}
   end
 
+  @impl true
   def handle_call(:close, _from, balance) do
     # We stop normally and return :stopped to the caller.
     {:stop, :normal, :stopped, balance}

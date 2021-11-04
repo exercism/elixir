@@ -20,29 +20,35 @@ defmodule ComplexNumbers do
   def imaginary({_real, im}), do: im
 
   @doc """
-  Multiply two complex numbers
+  Multiply two complex numbers, or a real and a complex number
   """
-  @spec mul(a :: complex, b :: complex) :: complex
+  @spec mul(a :: complex | float, b :: complex | float) :: complex
   def mul({a, b}, {c, d}), do: {a * c - b * d, b * c + a * d}
+  def mul(a, b), do: mul(to_complex(a), to_complex(b))
 
   @doc """
-  Add two complex numbers
+  Add two complex numbers, or a real and a complex number
   """
-  @spec add(a :: complex, b :: complex) :: complex
+  @spec add(a :: complex | float, b :: complex | float) :: complex
   def add({a, b}, {c, d}), do: {a + c, b + d}
+  def add(a, b), do: add(to_complex(a), to_complex(b))
 
   @doc """
-  Subtract two complex numbers
+  Subtract two complex numbers, or a real and a complex number
   """
-  @spec sub(a :: complex, b :: complex) :: complex
+  @spec sub(a :: complex | float, b :: complex | float) :: complex
   def sub({a, b}, {c, d}), do: {a - c, b - d}
+  def sub(a, b), do: sub(to_complex(a), to_complex(b))
 
   @doc """
-  Divide two complex numbers
+  Divide two complex numbers, or a real and a complex number
   """
-  @spec div(a :: complex, b :: complex) :: complex
-  def div({a, b}, {c, d}),
-    do: {(a * c + b * d) / (c * c + d * d), (b * c - a * d) / (c * c + d * d)}
+  @spec div(a :: complex | float, b :: complex | float) :: complex
+  def div({a, b}, {c, d}) do
+    {(a * c + b * d) / (c * c + d * d), (b * c - a * d) / (c * c + d * d)}
+  end
+
+  def div(a, b), do: __MODULE__.div(to_complex(a), to_complex(b))
 
   @doc """
   Absolute value of a complex number
@@ -61,4 +67,7 @@ defmodule ComplexNumbers do
   """
   @spec exp(a :: complex) :: complex
   def exp({a, b}), do: {:math.exp(a) * :math.cos(b), -:math.exp(a) * :math.sin(b)}
+
+  defp to_complex({a, b}), do: {a, b}
+  defp to_complex(a), do: {a, 0}
 end

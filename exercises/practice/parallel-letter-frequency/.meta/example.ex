@@ -7,7 +7,7 @@ defmodule Frequency do
   def frequency(texts, workers) do
     groups = Enum.map(0..(workers - 1), &stripe(&1, texts, workers))
     # :rpc.pmap({Frequency, :count_texts}, [], groups)
-    Enum.map(groups, &Frequency.count_texts/1)
+    Enum.map(groups, &count_texts/1)
     |> merge_freqs()
   end
 
@@ -16,8 +16,8 @@ defmodule Frequency do
   end
 
   # Needs to be public because of how it's invoked by `:rpc.pmap/4`.
-  @doc false
-  def count_texts(texts) do
+  # @doc false
+  defp count_texts(texts) do
     Enum.map(texts, &count_text/1)
     |> merge_freqs()
   end

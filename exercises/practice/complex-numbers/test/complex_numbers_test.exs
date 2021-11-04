@@ -319,4 +319,86 @@ defmodule ComplexNumbersTest do
       equal(output, expected)
     end
   end
+
+  describe "Operations between real numbers and complex numbers" do
+    @tag :pending
+    test "Add real number to complex number" do
+      z = {1, 2}
+      r = 5
+      output = ComplexNumbers.add(z, r)
+      expected = {6, 2}
+
+      equal(output, expected)
+    end
+
+    @tag :pending
+    test "Add complex number to real number" do
+      r = 5
+      z = {1, 2}
+      output = ComplexNumbers.add(r, z)
+      expected = {6, 2}
+
+      equal(output, expected)
+    end
+
+    @tag :pending
+    test "Subtract real number from complex number" do
+      z = {5, 7}
+      r = 4
+      output = ComplexNumbers.sub(z, r)
+      expected = {1, 7}
+
+      equal(output, expected)
+    end
+
+    @tag :pending
+    test "Subtract complex number from real number" do
+      r = 4
+      z = {5, 7}
+      output = ComplexNumbers.sub(r, z)
+      expected = {-1, -7}
+
+      equal(output, expected)
+    end
+
+    @tag :pending
+    test "Multiply complex number by real number" do
+      z = {2, 5}
+      r = 5
+      output = ComplexNumbers.mul(z, r)
+      expected = {10, 25}
+
+      equal(output, expected)
+    end
+
+    @tag :pending
+    test "Multiply real number by complex number" do
+      r = 5
+      z = {2, 5}
+      output = ComplexNumbers.mul(r, z)
+      expected = {10, 25}
+
+      equal(output, expected)
+    end
+
+    @tag :pending
+    test "Divide complex number by real number" do
+      z = {10, 100}
+      r = 10
+      output = ComplexNumbers.div(z, r)
+      expected = {1, 10}
+
+      equal(output, expected)
+    end
+
+    @tag :pending
+    test "Divide real number by complex number" do
+      r = 5
+      z = {1, 1}
+      output = ComplexNumbers.div(r, z)
+      expected = {2.5, -2.5}
+
+      equal(output, expected)
+    end
+  end
 end

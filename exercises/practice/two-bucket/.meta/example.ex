@@ -21,12 +21,12 @@ defmodule TwoBucket do
     pour([{{0, 0}, 0}], forbidden_states, next_moves, goal)
   end
 
-  def pour([], _, _, _), do: {:error, :impossible}
+  defp pour([], _, _, _), do: {:error, :impossible}
 
-  def pour([{{a, b}, moves} | _], _, _, goal) when a == goal or b == goal,
+  defp pour([{{a, b}, moves} | _], _, _, goal) when a == goal or b == goal,
     do: {:ok, %TwoBucket{bucket_one: a, bucket_two: b, moves: moves}}
 
-  def pour([{state, moves} | states], forbidden_states, next_moves, goal) do
+  defp pour([{state, moves} | states], forbidden_states, next_moves, goal) do
     next =
       next_moves.(state)
       |> Enum.reject(&MapSet.member?(forbidden_states, &1))
@@ -35,7 +35,7 @@ defmodule TwoBucket do
     pour(states ++ next, MapSet.put(forbidden_states, state), next_moves, goal)
   end
 
-  def next_moves({fill_one, fill_two}, size_one, size_two) do
+  defp next_moves({fill_one, fill_two}, size_one, size_two) do
     [
       # Empty a bucket
       {0, fill_two},

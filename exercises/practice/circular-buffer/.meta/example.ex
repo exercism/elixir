@@ -53,37 +53,37 @@ defmodule CircularBuffer do
 
   defstruct [:capacity, size: 0, input: [], output: []]
 
-  def new_buffer(capacity), do: {:ok, %CircularBuffer{capacity: capacity}}
+  defp new_buffer(capacity), do: {:ok, %CircularBuffer{capacity: capacity}}
 
-  def read_buffer(%CircularBuffer{size: 0} = buffer), do: {{:error, :empty}, buffer}
+  defp read_buffer(%CircularBuffer{size: 0} = buffer), do: {{:error, :empty}, buffer}
 
-  def read_buffer(%CircularBuffer{size: size, output: [out | output]} = buffer),
+  defp read_buffer(%CircularBuffer{size: size, output: [out | output]} = buffer),
     do: {{:ok, out}, %{buffer | size: size - 1, output: output}}
 
-  def read_buffer(%CircularBuffer{input: input} = buffer),
+  defp read_buffer(%CircularBuffer{input: input} = buffer),
     do: read_buffer(%{buffer | input: [], output: Enum.reverse(input)})
 
-  def write_buffer(%CircularBuffer{size: capacity, capacity: capacity} = buffer, _item),
+  defp write_buffer(%CircularBuffer{size: capacity, capacity: capacity} = buffer, _item),
     do: {{:error, :full}, buffer}
 
-  def write_buffer(%CircularBuffer{size: size, input: input} = buffer, item),
+  defp write_buffer(%CircularBuffer{size: size, input: input} = buffer, item),
     do: {:ok, %{buffer | size: size + 1, input: [item | input]}}
 
-  def overwrite_buffer(%CircularBuffer{size: capacity, capacity: capacity} = buffer, item) do
+  defp overwrite_buffer(%CircularBuffer{size: capacity, capacity: capacity} = buffer, item) do
     {_, smaller_buffer} = read_buffer(buffer)
     write_buffer(smaller_buffer, item)
   end
 
-  def overwrite_buffer(buffer, item), do: write_buffer(buffer, item)
+  defp overwrite_buffer(buffer, item), do: write_buffer(buffer, item)
 
-  def clear_buffer(%CircularBuffer{capacity: capacity}), do: %CircularBuffer{capacity: capacity}
+  defp clear_buffer(%CircularBuffer{capacity: capacity}), do: %CircularBuffer{capacity: capacity}
+
+  # SERVER API
 
   @impl true
   def init(capacity) do
     new_buffer(capacity)
   end
-
-  # SERVER API
 
   @impl true
   def handle_call(:read, _from, buffer) do
