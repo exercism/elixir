@@ -144,10 +144,28 @@ defmodule TopSecretTest do
 
       assert TopSecret.decode_secret_message_part(ast, acc) == {ast, ["", "re"]}
     end
+
+    @tag task_id: 4
+    test "works for public functions with a guard" do
+      string = "def sign(a) when a >= 0, do: :+"
+      ast = TopSecret.to_ast(string)
+      acc = ["e"]
+
+      assert TopSecret.decode_secret_message_part(ast, acc) == {ast, ["s", "e"]}
+    end
+
+    @tag task_id: 4
+    test "works for private functions with a guard" do
+      string = "defp do_sign(a) when a < 0, do: :-"
+      ast = TopSecret.to_ast(string)
+      acc = ["e"]
+
+      assert TopSecret.decode_secret_message_part(ast, acc) == {ast, ["d", "e"]}
+    end
   end
 
   describe "decode_secret_message/1" do
-    @tag task_id: 4
+    @tag task_id: 5
     test "decodes a secret message from a single function definition" do
       code = """
       defmodule Notebook do
@@ -162,7 +180,7 @@ defmodule TopSecretTest do
       assert TopSecret.decode_secret_message(code) == secret_message
     end
 
-    @tag task_id: 4
+    @tag task_id: 5
     test "decodes a secret message from a two function definitions" do
       code = """
       defmodule MyCalendar do
@@ -182,7 +200,7 @@ defmodule TopSecretTest do
       assert TopSecret.decode_secret_message(code) == secret_message
     end
 
-    @tag task_id: 4
+    @tag task_id: 5
     test "decodes a secret message from many function definitions" do
       code = """
         defmodule TotallyNotTopSecret do
@@ -199,7 +217,7 @@ defmodule TopSecretTest do
       assert TopSecret.decode_secret_message(code) == secret_message
     end
 
-    @tag task_id: 4
+    @tag task_id: 5
     test "decodes a secret message without a module definition" do
       code = """
       def force(mass, acceleration), do: mass * acceleration
@@ -214,7 +232,7 @@ defmodule TopSecretTest do
       assert TopSecret.decode_secret_message(code) == secret_message
     end
 
-    @tag task_id: 4
+    @tag task_id: 5
     test "decodes another secret message from multiple modules" do
       code = """
       defmodule IOHelpers do

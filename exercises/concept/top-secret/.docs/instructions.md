@@ -50,7 +50,17 @@ TopSecret.decode_secret_message_part(ast_node, ["day"])
 # => {ast_node, ["", "day"]}
 ```
 
-## 4. Decode the full secret message
+## 4. Fix the decoding for functions with guards
+
+Extend the `TopSecret.decode_secret_message_part/2` function. Make sure the function's name and arity is correctly detected for function definitions that use guards.
+
+```elixir
+ast_node = TopSecret.to_ast("defp cat(a, b) when is_nil(a), do: nil")
+TopSecret.decode_secret_message_part(ast_node, ["day"])
+# => {ast_node, ["ca", "day"]}
+```
+
+## 5. Decode the full secret message
 
 Implement the `TopSecret.decode_secret_message/1` function. It should take a string with Elixir code and return the secret message as a string decoded from all function definitions found in the code. Make sure to reuse functions defined in previous steps.
 

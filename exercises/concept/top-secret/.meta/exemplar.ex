@@ -5,7 +5,7 @@ defmodule TopSecret do
 
   def decode_secret_message_part({keyword, _, children} = ast, acc)
       when keyword in [:def, :defp] do
-    [{function_name, _, arguments} | _] = children
+    {function_name, arguments} = get_function_name_and_arguments(children)
 
     arity = if arguments, do: length(arguments), else: 0
 
@@ -19,6 +19,14 @@ defmodule TopSecret do
 
   def decode_secret_message_part(ast, acc) do
     {ast, acc}
+  end
+
+  defp get_function_name_and_arguments([{:when, _, [{function_name, _, arguments} | _]} | _]) do
+    {function_name, arguments}
+  end
+
+  defp get_function_name_and_arguments([{function_name, _, arguments} | _]) do
+    {function_name, arguments}
   end
 
   def decode_secret_message(string) do
