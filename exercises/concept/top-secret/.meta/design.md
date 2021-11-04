@@ -17,10 +17,12 @@
 
 ## Prerequisites
 
-- `enum`
-- `strings`
+- `atom`
 - `tuples`
+- `strings`
 - `pattern-matching`
+- `guards`
+- `enum`
 
 ## Analyzer
 
