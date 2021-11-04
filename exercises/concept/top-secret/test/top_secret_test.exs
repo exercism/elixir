@@ -82,7 +82,9 @@ defmodule TopSecretTest do
       ast = TopSecret.to_ast(string)
       acc = ["le", "mo"]
 
-      assert TopSecret.decode_secret_message_part(ast, acc) == {ast, acc}
+      {actual_ast, actual_acc} = TopSecret.decode_secret_message_part(ast, acc)
+      assert actual_ast == ast
+      assert actual_acc == acc
     end
 
     @tag task_id: 2
@@ -91,7 +93,9 @@ defmodule TopSecretTest do
       ast = TopSecret.to_ast(string)
       acc = ["at"]
 
-      assert TopSecret.decode_secret_message_part(ast, acc) == {ast, ["fit", "at"]}
+      {actual_ast, actual_acc} = TopSecret.decode_secret_message_part(ast, acc)
+      assert actual_ast == ast
+      assert actual_acc == ["fit", "at"]
     end
 
     @tag task_id: 2
@@ -100,7 +104,9 @@ defmodule TopSecretTest do
       ast = TopSecret.to_ast(string)
       acc = ["e", "ced"]
 
-      assert TopSecret.decode_secret_message_part(ast, acc) == {ast, ["op", "e", "ced"]}
+      {actual_ast, actual_acc} = TopSecret.decode_secret_message_part(ast, acc)
+      assert actual_ast == ast
+      assert actual_acc == ["op", "e", "ced"]
     end
 
     @tag task_id: 2
@@ -115,7 +121,9 @@ defmodule TopSecretTest do
       ast = TopSecret.to_ast(string)
       acc = []
 
-      assert TopSecret.decode_secret_message_part(ast, acc) == {ast, acc}
+      {actual_ast, actual_acc} = TopSecret.decode_secret_message_part(ast, acc)
+      assert actual_ast == ast
+      assert actual_acc == acc
     end
 
     @tag task_id: 3
@@ -124,7 +132,9 @@ defmodule TopSecretTest do
       ast = TopSecret.to_ast(string)
       acc = ["re"]
 
-      assert TopSecret.decode_secret_message_part(ast, acc) == {ast, ["ad", "re"]}
+      {actual_ast, actual_acc} = TopSecret.decode_secret_message_part(ast, acc)
+      assert actual_ast == ast
+      assert actual_acc == ["ad", "re"]
     end
 
     @tag task_id: 3
@@ -133,7 +143,9 @@ defmodule TopSecretTest do
       ast = TopSecret.to_ast(string)
       acc = ["re"]
 
-      assert TopSecret.decode_secret_message_part(ast, acc) == {ast, ["", "re"]}
+      {actual_ast, actual_acc} = TopSecret.decode_secret_message_part(ast, acc)
+      assert actual_ast == ast
+      assert actual_acc == ["", "re"]
     end
 
     @tag task_id: 3
@@ -142,7 +154,9 @@ defmodule TopSecretTest do
       ast = TopSecret.to_ast(string)
       acc = ["re"]
 
-      assert TopSecret.decode_secret_message_part(ast, acc) == {ast, ["", "re"]}
+      {actual_ast, actual_acc} = TopSecret.decode_secret_message_part(ast, acc)
+      assert actual_ast == ast
+      assert actual_acc == ["", "re"]
     end
 
     @tag task_id: 4
@@ -151,7 +165,9 @@ defmodule TopSecretTest do
       ast = TopSecret.to_ast(string)
       acc = ["e"]
 
-      assert TopSecret.decode_secret_message_part(ast, acc) == {ast, ["s", "e"]}
+      {actual_ast, actual_acc} = TopSecret.decode_secret_message_part(ast, acc)
+      assert actual_ast == ast
+      assert actual_acc == ["s", "e"]
     end
 
     @tag task_id: 4
@@ -160,7 +176,9 @@ defmodule TopSecretTest do
       ast = TopSecret.to_ast(string)
       acc = ["e"]
 
-      assert TopSecret.decode_secret_message_part(ast, acc) == {ast, ["d", "e"]}
+      {actual_ast, actual_acc} = TopSecret.decode_secret_message_part(ast, acc)
+      assert actual_ast == ast
+      assert actual_acc == ["d", "e"]
     end
   end
 
@@ -250,7 +268,7 @@ defmodule TopSecretTest do
         def submodule?(m, _f, _args), do: String.contains?(m, ".")
         def module({m, _f, _args}), do: m
         def arity(_m, _f, args), do: length(args)
-        defp nested?(x, y), do: x in y
+        defp nested?(x, y) when is_list(y), do: x in y
       end
       """
 
