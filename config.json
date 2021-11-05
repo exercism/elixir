@@ -2664,7 +2664,8 @@
           "errors",
           "exceptions",
           "keyword-lists",
-          "nil"
+          "nil",
+          "ast"
         ],
         "practices": [
           "keyword-lists"
