@@ -37,4 +37,4 @@ end
 
 The ability to represent code as an AST is at the heart of metaprogramming in Elixir. _Macros_, which is a way to write Elixir code that produces Elixir code, work by returning ASTs as output.
 
-Another use case for ASTs is static code analysis, like Exercism's own tool, the Analyzer, which you might already known as the little bot that leaves comments on your solutions.
+Another use case for ASTs is static code analysis, like Exercism's own tool, the Analyzer, which you might already know as the little bot that leaves comments on your solutions.
