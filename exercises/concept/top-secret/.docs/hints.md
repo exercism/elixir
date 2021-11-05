@@ -19,13 +19,11 @@
 - You can ignore the second element in the tuple in this exercise completely.
 - The third element in the tuple is the argument list of the operation that defines the function.
 - The first element on that list is the function's name, and the second element is the function's body.
-- The exact pattern to match an AST node that defines a function and get its name is: `{op, _, [{name, _, _} | _]} when op in [:def, :defp]`.
 
 ## 3. Decode the secret message part from function definition
 
 - Inspect the output of [`quote`][doc-quote] to familiarize yourself with how ASTs look like for specific code snippets.
 - The AST node that contains the function's name also contains the function's argument list as the third element.
-- The exact pattern to match an AST node that defines a function and get its name and arguments is: `{op, _, [{name, _, arguments} | _]} when op in [:def, :defp]`.
 - The arity of a function is the length of its argument list.
 - There is a [built-in function in the `String` module][string-slice] that can get the first `n` characters from a string.
 - A function without arguments written without parentheses will not have a list as argument but an atom.
@@ -36,7 +34,6 @@
 - When a function has a guard, the third element in the tuple for the `:def/:defp` operation is a bit different.
 - That third element is a list with two elements, the first one is the tuple for the `:when` operation, and the second one is the function's body.
 - The `:when` operation's arguments are a two-element list, where the first argument is the function's name, and the second is the guard expression.
-- The exact pattern to match an AST node that defines a function with a guard and get its name and arguments is: `{op, _, [{:when, _, [{name, _, arguments} | _]} | _]} when op in [:def, :defp]`.
 
 ## 5. Decode the full secret message
 
