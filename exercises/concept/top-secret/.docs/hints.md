@@ -28,6 +28,7 @@
 - The exact pattern to match an AST node that defines a function and get its name and arguments is: `{op, _, [{name, _, arguments} | _]} when op in [:def, :defp]`.
 - The arity of a function is the length of its argument list.
 - There is a [built-in function in the `String` module][string-slice] that can get the first `n` characters from a string.
+- A function without arguments written without parentheses will not have a list as argument but an atom.
 
 ## 4. Fix the decoding for functions with guards
 
@@ -39,6 +40,7 @@
 
 ## 5. Decode the full secret message
 
+- Use the function `to_ast/1` that you implemented in the first task to create the AST.
 - There is a [built-in function][macro-prewalk] that can visit each node in an AST with an accumulator.
 - Use the function `decode_secret_message_part/2` that you implemented in previous tasks to prewalk the AST.
 - To reverse the accumulator at the end and turn it into a string, refresh your knowledge of the [`Enum` module][enum].
