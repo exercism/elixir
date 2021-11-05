@@ -1,7 +1,5 @@
 # Introduction
 
-## AST
-
 The Abstract Syntax Tree (AST), also called a _quoted expression_, is a way to represent code as data.
 
 Each node in the AST is a three-element tuple.
@@ -14,7 +12,7 @@ Each node in the AST is a three-element tuple.
 
 The first element, an atom, is the operation. The second element, a keyword list, is the metadata. The third element is a list of arguments, which contains other nodes. Literal values such as integers, atoms, and strings are represented in the AST as themselves instead of three-element tuples.
 
-### Turning code into ASTs
+## Turning code into ASTs
 
 Changing Elixir code to ASTs and ASTs back to code is part of the standard library. You can find functions for working with ASTs in the modules `Code` (e.g. to change a string with code to an AST) and `Macro` (e.g. to traverse the AST or change it to a string).
 
@@ -33,7 +31,7 @@ end
 #    ]}
 ```
 
-### Use cases
+## Use cases
 
 The ability to represent code as an AST is at the heart of metaprogramming in Elixir. _Macros_, which is a way to write Elixir code that produces Elixir code, work by returning ASTs as output.
 
