@@ -596,6 +596,23 @@
           "dates-and-time"
         ],
         "status": "beta"
+      },
+      {
+        "slug": "top-secret",
+        "name": "Top Secret",
+        "uuid": "4caa7349-836b-4d6e-b3cb-b3133c305013",
+        "concepts": [
+          "ast"
+        ],
+        "prerequisites": [
+          "atoms",
+          "tuples",
+          "strings",
+          "pattern-matching",
+          "guards",
+          "enum"
+        ],
+        "status": "beta"
       }
     ],
     "practice": [
@@ -2647,7 +2664,8 @@
           "errors",
           "exceptions",
           "keyword-lists",
-          "nil"
+          "nil",
+          "ast"
         ],
         "practices": [
           "keyword-lists"
@@ -2873,6 +2891,11 @@
       "uuid": "a5b7f41f-9f07-4996-8032-05225f0ef639",
       "slug": "anonymous-functions",
       "name": "Anonymous Functions"
+    },
+    {
+      "uuid": "550fac1f-c1dc-4eb5-92f2-5ac0e893be2a",
+      "slug": "ast",
+      "name": "AST"
     },
     {
       "uuid": "0bc1ad03-5ec7-4269-ad33-df6decbb5ee2",

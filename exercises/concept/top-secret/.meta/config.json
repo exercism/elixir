@@ -1,0 +1,19 @@
+{
+  "blurb": "Learn about the Abstract Syntax Tree (AST) by helping decode secret messages from Agent Ex.",
+  "authors": [
+    "jiegillet",
+    "angelikatyborska"
+  ],
+  "files": {
+    "solution": [
+      "lib/top_secret.ex"
+    ],
+    "test": [
+      "test/top_secret_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
+  },
+  "language_versions": ">=1.10"
+}
