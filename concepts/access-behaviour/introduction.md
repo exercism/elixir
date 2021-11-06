@@ -12,6 +12,7 @@ your_map = %{"key" => "your value"}
 # Obtain the value using the Access Behaviour
 my_map[:key] == "my value"
 your_map[:key] == nil
+your_map["key"] == "your value"
 ```
 
 If the key does not exist in the data structure, then `nil` is returned. This can be a source of unintended behavior, because it does not raise an error. Note that `nil` itself implements the Access Behaviour and always returns `nil` for any key.
