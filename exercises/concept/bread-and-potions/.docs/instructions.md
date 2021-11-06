@@ -21,7 +21,7 @@ RPG.Edible.eat(%RPG.LoafOfBread{}, %RPG.Character{health: 31})
 
 ## 3. Make mana potions edible
 
-Implement the `RPG.Edible` protocol for the `RPG.ManaPotion` item. When eaten, a mana potion gives the character as many mana points as its strength, and produces an empty bottle.
+Implement the `RPG.Edible` protocol for the `RPG.ManaPotion` item. When eaten, a mana potion gives the character as many mana points as the potion's strength, and produces an empty bottle.
 
 ```elixir
 RPG.Edible.eat(%RPG.ManaPotion{strength: 13}, %RPG.Character{mana: 50})
