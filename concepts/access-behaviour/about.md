@@ -9,8 +9,14 @@ The [`Access`][access] module defines the callbacks required for the interface. 
 To use the behaviour, you may follow a bound variable with _square brackets_ and then use the key to retrieve the value associated with that key. Maps support atom and string keys, while keyword lists only atom keys.
 
 ```elixir
+# Atom as key
 my_map = %{key: "my value"}
 my_map[:key]
+# => "my value"
+
+# String as key
+another_map = %{"key" => "my value"}
+another_map["key"]
 # => "my value"
 ```
 
