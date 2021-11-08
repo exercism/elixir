@@ -105,7 +105,7 @@ defmodule SecretsTest do
     end
 
     @tag task_id: 7
-    test "100 divide by 10 then add 20" do
+    test "100 divide by 10 then add 10" do
       f = Secrets.secret_divide(10)
       g = Secrets.secret_add(10)
       h = Secrets.secret_combine(f, g)
@@ -114,7 +114,7 @@ defmodule SecretsTest do
     end
 
     @tag task_id: 7
-    test "32 divide by 3 then multiply 5" do
+    test "32 divide by 3 then add 5" do
       f = Secrets.secret_divide(3)
       g = Secrets.secret_add(5)
       h = Secrets.secret_combine(f, g)
