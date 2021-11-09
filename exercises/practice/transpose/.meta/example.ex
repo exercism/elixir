@@ -25,18 +25,17 @@ defmodule Transpose do
 
     rows
     |> Enum.map(fn x -> get_padded_row(x, max_length) end)
-    |> Enum.map(fn x -> String.to_charlist(x) end)
+    |> Enum.map(&String.to_charlist/1)
     |> List.zip()
-    |> Enum.map(fn x -> Tuple.to_list(x) end)
-    |> Enum.map(fn x -> List.to_string(x) end)
-    |> Enum.map(fn x -> x |> String.trim_trailing("*") |> String.replace("*", " ") end)
-    |> Enum.join("\n")
+    |> Enum.map(&Tuple.to_list/1)
+    |> Enum.map(&List.to_string/1)
+    |> Enum.map_join("\n", fn x -> x |> String.trim_trailing("*") |> String.replace("*", " ") end)
     |> String.trim_trailing()
   end
 
   defp get_longest_row_length(rows) do
     rows
-    |> Enum.map(fn row -> String.length(row) end)
+    |> Enum.map(&String.length/1)
     |> Enum.max()
   end
 

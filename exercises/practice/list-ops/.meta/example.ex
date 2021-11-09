@@ -52,5 +52,5 @@ defmodule ListOps do
   defp do_append([h | t], b), do: do_append(t, [h | b])
 
   @spec concat([[any]]) :: [any]
-  def concat(ll), do: reverse(ll) |> foldl([], &append(&1, &2))
+  def concat(ll), do: reverse(ll) |> foldl([], &append/2)
 end

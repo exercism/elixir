@@ -19,7 +19,7 @@ defmodule RPNCalculatorInspection do
     result =
       inputs
       |> Enum.map(fn input -> start_reliability_check(calculator, input) end)
-      |> Enum.reduce(%{}, fn data, acc -> await_reliability_check_result(data, acc) end)
+      |> Enum.reduce(%{}, &await_reliability_check_result/2)
 
     Process.flag(:trap_exit, old_value)
 

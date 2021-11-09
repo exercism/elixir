@@ -29,9 +29,9 @@ defmodule Series do
       raise ArgumentError
     end
 
-    slices = slices(number_string, size)
-
-    Enum.map(slices, &Enum.reduce(&1, fn x, acc -> x * acc end))
+    number_string
+    |> slices(size)
+    |> Enum.map(fn integers -> Enum.reduce(integers, &*/2) end)
     |> Enum.max()
   end
 end

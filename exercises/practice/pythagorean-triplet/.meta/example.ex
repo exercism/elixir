@@ -4,7 +4,7 @@ defmodule Triplet do
   """
   @spec sum([non_neg_integer]) :: non_neg_integer
   def sum(triplet) do
-    Enum.reduce(triplet, 0, &(&1 + &2))
+    Enum.reduce(triplet, 0, &+/2)
   end
 
   @doc """
@@ -12,7 +12,7 @@ defmodule Triplet do
   """
   @spec product([non_neg_integer]) :: non_neg_integer
   def product(triplet) do
-    Enum.reduce(triplet, 1, &(&1 * &2))
+    Enum.reduce(triplet, 1, &*/2)
   end
 
   @doc """
