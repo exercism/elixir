@@ -29,7 +29,8 @@ defmodule Transpose do
     |> List.zip()
     |> Enum.map(&Tuple.to_list/1)
     |> Enum.map(&List.to_string/1)
-    |> Enum.map_join("\n", fn x -> x |> String.trim_trailing("*") |> String.replace("*", " ") end)
+    |> Enum.map(fn x -> x |> String.trim_trailing("*") |> String.replace("*", " ") end)
+    |> Enum.join("\n")
     |> String.trim_trailing()
   end
 
