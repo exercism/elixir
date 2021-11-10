@@ -18,7 +18,7 @@ IO.puts("Hi!")
 
 ### Input
 
-To read a line from the standard input, use `IO.gets`. `IO.gets` accepts one argument - a string that it will print as a prompt for the input. `IO.gets` doesn't add a new line after the prompt, you need it include it yourself if you need it.
+To read a line from the standard input, use `IO.gets`. `IO.gets` accepts one argument - a string that it will print as a prompt for the input. `IO.gets` doesn't add a new line after the prompt, include it yourself if you need it.
 
 ```elixir
 IO.gets("What's your name?\n")
