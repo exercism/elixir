@@ -47,7 +47,7 @@ BirdCount.total([4, 0, 9, 0, 5])
 
 ## 5. Calculate the number of busy days
 
-Some days are busier that others. A busy day is one where five or more birds have visited your garden.
+Some days are busier than others. A busy day is one where five or more birds have visited your garden.
 
 Implement the `BirdCount.busy_days/1` function. It should take a list of daily bird counts and return the number of busy days.
 
