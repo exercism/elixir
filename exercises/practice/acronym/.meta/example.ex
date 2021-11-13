@@ -3,8 +3,8 @@ defmodule Acronym do
   def abbreviate(string) do
     Regex.scan(~r/[A-Z]+[a-z']*|[a-z][a-z']*/, string)
     |> List.flatten()
-    |> Enum.map(fn x -> String.first(x) end)
-    |> Enum.join("")
+    |> Enum.map(&String.first/1)
+    |> Enum.join()
     |> String.upcase()
   end
 end

@@ -16,7 +16,7 @@ defmodule Squares do
   """
   @spec square_of_sum(pos_integer) :: pos_integer
   def square_of_sum(number) do
-    sum_to_number = Enum.reduce(1..number, fn x, acc -> x + acc end)
+    sum_to_number = Enum.reduce(1..number, &+/2)
     sum_to_number * sum_to_number
   end
 

@@ -17,7 +17,7 @@ defmodule Grep do
   defp parse_flags(flags) do
     flags
     |> Enum.map(&parse_flag/1)
-    |> Enum.reduce(0, fn a, b -> a ||| b end)
+    |> Enum.reduce(0, &|||/2)
   end
 
   defp has_flag(flags, flag), do: (flags &&& flag) > 0

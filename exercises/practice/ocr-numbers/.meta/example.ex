@@ -26,7 +26,7 @@ defmodule OcrNumbers do
     split_strings = Enum.map(input, fn a -> String.split_at(a, 3) end)
     this_character = Enum.map(split_strings, fn {a, _} -> a end)
     other_characters = Enum.map(split_strings, fn {_, a} -> a end)
-    lengths = Enum.map(this_character, fn a -> String.length(a) end)
+    lengths = Enum.map(this_character, &String.length/1)
 
     convert(other_characters, update_output(lengths, this_character, output))
   end
