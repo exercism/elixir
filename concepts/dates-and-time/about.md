@@ -79,4 +79,4 @@ NaiveDateTime.new!(~D[2021-01-01], ~T[12:00:00])
 [naivedatetime-to-date]: https://hexdocs.pm/elixir/NaiveDateTime.html#to_date/1
 [naivedatetime-to-time]: https://hexdocs.pm/elixir/NaiveDateTime.html#to_time/1
 [naivedatetime-new]: https://hexdocs.pm/elixir/NaiveDateTime.html#new/2
-[erl-calendar]: https://erlang.org/doc/man/calendar.html
+[erl-calendar]: https://www.erlang.org/doc/man/calendar.html
