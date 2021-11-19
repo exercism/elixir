@@ -30,4 +30,4 @@ The most commonly used Erlang functions that do not have an Elixir equivalent ar
 
 To discover Erlang's standard library, explore the [STDLIB Reference Manual][erl-stdlib-ref].
 
-[erl-stdlib-ref]: http://erlang.org/doc/apps/stdlib/index.html
+[erl-stdlib-ref]: http://www.erlang.org/doc/apps/stdlib/index.html

@@ -104,7 +104,7 @@ inputs
 #        (elixir 1.11.3) lib/task.ex:709: Task.await_many/2
 ```
 
-[erlang-timer-tc]: https://erlang.org/doc/man/timer.html#tc-1
+[erlang-timer-tc]: https://www.erlang.org/doc/man/timer.html#tc-1
 [task-await-many]: https://hexdocs.pm/elixir/Task.html#await_many/2
 [task-async-stream]: https://hexdocs.pm/elixir/Task.html#async_stream/3
 [task-async]: https://hexdocs.pm/elixir/Task.html#async/1

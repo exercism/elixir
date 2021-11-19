@@ -10,4 +10,4 @@ Each Elixir process has its own unique identifier - a _PID_ (process identifier)
   - PIDs should not be created directly by the programmer. If it were required, Erlang has a [`list_to_pid/1`][erlang-list-to-pid] function.
 
 [kernel-is-pid]: https://hexdocs.pm/elixir/Kernel.html#is_pid/1
-[erlang-list-to-pid]: https://erlang.org/doc/man/erlang.html#list_to_pid-1
+[erlang-list-to-pid]: https://www.erlang.org/doc/man/erlang.html#list_to_pid-1
