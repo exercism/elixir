@@ -1,43 +1,39 @@
 defmodule Frequency do
   @doc """
-  Count word frequency in parallel.
+  Count letter frequency in parallel.
 
   Returns a map of characters to frequencies.
+
+  The number of worker processes to use can be set with 'workers'.
   """
+
+  @reject_characters ~r/[0-9\s,]/
+
+  @spec frequency([String.t()], pos_integer) :: map
+  def frequency([], _workers), do: []
+
   def frequency(texts, workers) do
-    groups = Enum.map(0..(workers - 1), &stripe(&1, texts, workers))
-    # :rpc.pmap({Frequency, :count_texts}, [], groups)
-    Enum.map(groups, &count_texts/1)
-    |> merge_freqs()
+    chunk_size = ceil(length(texts) / workers)
+
+    texts
+    |> Enum.chunk_every(chunk_size)
+    |> Enum.map(&async_frequency/1)
+    |> Enum.map(&Task.await/1)
+    |> Enum.reduce(%{}, &Map.merge(&1, &2, fn _char, n1, n2 -> n1 + n2 end))
   end
 
-  defp stripe(n, texts, workers) do
-    Enum.drop(texts, n) |> Enum.take_every(workers)
-  end
-
-  # Needs to be public because of how it's invoked by `:rpc.pmap/4`.
-  # @doc false
-  defp count_texts(texts) do
-    Enum.map(texts, &count_text/1)
-    |> merge_freqs()
-  end
-
-  defp count_text(string) do
-    String.downcase(string)
-    |> String.graphemes()
-
-    # At the time of writing Elixir doesn't yet have a way to determine if a
-    # character is a letter. So use a workaround with Regex.
-    # \P{L} = anything but a letter
-    String.replace(string, ~r/\P{L}+/u, "")
-    |> String.downcase()
-    |> String.graphemes()
-    |> Enum.reduce(%{}, fn c, acc -> Map.update(acc, c, 1, &(&1 + 1)) end)
-  end
-
-  defp merge_freqs(map) do
-    Enum.reduce(map, %{}, fn d, acc ->
-      Map.merge(acc, d, fn _, a, b -> a + b end)
+  defp async_frequency(chunk) do
+    Task.async(fn ->
+      chunk
+      |> Enum.join()
+      |> String.replace(@reject_characters, "")
+      |> String.downcase()
+      |> String.graphemes()
+      |> frequencies()
     end)
+  end
+
+  defp frequencies(items) do
+    Enum.reduce(items, %{}, fn item, freq -> Map.update(freq, item, 1, &(&1 + 1)) end)
   end
 end
