@@ -13,7 +13,7 @@ defmodule Frequency do
   def frequency([], _workers), do: []
 
   def frequency(texts, workers) do
-    chunk_size = :math.ceil(length(texts) / workers)
+    chunk_size = (length(texts) / workers) |> :math.ceil() |> round
 
     texts
     |> Enum.chunk_every(chunk_size)
