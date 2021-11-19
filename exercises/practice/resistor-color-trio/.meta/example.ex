@@ -15,7 +15,7 @@ defmodule ResistorColorTrio do
   @doc """
   Calculate the resistance value in ohm or kiloohm from resistor colors
   """
-  @spec label(colors :: [atom]) :: {integer, atom}
+  @spec label(colors :: [atom]) :: {number, :ohms | :kiloohms}
   def label([a, b, c]) do
     value = (10 * @colors[a] + @colors[b]) * round(:math.pow(10, @colors[c]))
 
