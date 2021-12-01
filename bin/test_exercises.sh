@@ -81,8 +81,10 @@ do
     fi
 
     # test compilation with --warnings-as-errors flag as the example and test should not raise any
+    set +e
     compiler_results=$(MIX_ENV=test mix compile --force --warnings-as-errors 2>&1)
     compile_exit_code="$?"
+    set -e
 
     if [ "${compile_exit_code}" -eq 0 ]
     then
@@ -95,8 +97,10 @@ do
       sed -i 's/use ExUnit.Case\(.*\)/use ExUnit.Case\1\n'" ${doctest_code}"'\n/g' "${test_file}"
 
       # perform unit tests
+      set +e
       test_results=$(mix test --color --no-elixir-version-check --include pending 2> /dev/null)
       test_exit_code="$?"
+      set -e
     else
       # use code 5 to indicate tests skipped
       test_exit_code=5
