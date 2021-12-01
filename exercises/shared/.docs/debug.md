@@ -10,3 +10,5 @@ To help with debugging, you can use the fact that all console output will be cap
 |> IO.inspect()
 |> String.split("", trim: true)
 ```
+
+Note that for security reasons, the output for each test will get truncated after 500 characters.
