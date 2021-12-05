@@ -8,7 +8,7 @@ defmodule VariableLengthQuantity do
   def encode(integers) when is_list(integers) do
     integers
     |> Enum.map(&do_encode/1)
-    |> Enum.map(&String.reverse/1)
+    |> Enum.map(&reverse/1)
     |> Enum.join(<<>>)
   end
 
@@ -41,5 +41,10 @@ defmodule VariableLengthQuantity do
         {:ok, [acc | result]}
       end
     end
+  end
+
+  defp reverse(bitstring) do
+    list = for <<x <- bitstring>>, into: [], do: x
+    for bit <- Enum.reverse(list), into: <<>>, do: <<bit>>
   end
 end
