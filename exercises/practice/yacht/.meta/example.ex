@@ -25,16 +25,12 @@ defmodule Yacht do
   @spec score(category :: category(), dice :: [integer]) :: integer
   def score(category, dice)
 
-  def score(:ones, dice), do: score(1, dice)
-  def score(:twos, dice), do: score(2, dice)
-  def score(:threes, dice), do: score(3, dice)
-  def score(:fours, dice), do: score(4, dice)
-  def score(:fives, dice), do: score(5, dice)
-  def score(:sixes, dice), do: score(6, dice)
-
-  def score(number, dice) when is_integer(number) do
-    Enum.count(dice, &(&1 == number)) * number
-  end
+  def score(:ones, dice), do: score_number(1, dice)
+  def score(:twos, dice), do: score_number(2, dice)
+  def score(:threes, dice), do: score_number(3, dice)
+  def score(:fours, dice), do: score_number(4, dice)
+  def score(:fives, dice), do: score_number(5, dice)
+  def score(:sixes, dice), do: score_number(6, dice)
 
   def score(:full_house, dice) do
     full_house =
@@ -91,5 +87,9 @@ defmodule Yacht do
       1 -> 50
       _ -> 0
     end
+  end
+
+  defp score_number(number, dice) when is_integer(number) do
+    Enum.count(dice, &(&1 == number)) * number
   end
 end
