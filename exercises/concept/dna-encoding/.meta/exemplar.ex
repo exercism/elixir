@@ -1,18 +1,4 @@
 defmodule DNA do
-  @moduledoc """
-  Example solution for the `bitstrings` exercise.
-
-  Written by Tim Austin, tim@neenjaw.com, June 2020.
-
-   | NucleicAcid | Bits |
-   | ----------- | ---- |
-   |    ' '      | 0000 |
-   |     A       | 0001 |
-   |     C       | 0010 |
-   |     G       | 0100 |
-   |     T       | 1000 |
-  """
-
   def encode_nucleotide(?\s), do: 0b0000
   def encode_nucleotide(?A), do: 0b0001
   def encode_nucleotide(?C), do: 0b0010
