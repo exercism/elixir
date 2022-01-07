@@ -58,7 +58,7 @@ defmodule LinkedListTest do
 
     assert LinkedList.peek(list) == {:ok, :b}
     assert {:ok, list} = LinkedList.tail(list)
-    assert LinkedList.peek(list) == {:ok, :a}
+    assert LinkedList.peek(list) == {:ok, :b}
     assert {:ok, list} = LinkedList.tail(list)
     assert LinkedList.peek(list) == {:error, :empty_list}
   end
