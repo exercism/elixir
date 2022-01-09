@@ -36,7 +36,7 @@ LanguageList.new()
 
 ## 4. Define a function to return the first item in the list
 
-Define the `first/1` function that takes 1 argument (a _language list_). It should return the the first language in the list. Assume the list will always have at least one item.
+Define the `first/1` function that takes 1 argument (a _language list_). It should return the first language in the list. Assume the list will always have at least one item.
 
 ```elixir
 LanguageList.new()
