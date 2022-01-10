@@ -1,4 +1,4 @@
-# Description
+# Instructions
 
 Parsing a Smart Game Format string.
 

@@ -1,4 +1,4 @@
-# Description
+# Instructions
 
 If you want to build something using a Raspberry Pi, you'll probably use _resistors_. For this exercise, you need to know only three things about them:
 
@@ -9,16 +9,16 @@ If you want to build something using a Raspberry Pi, you'll probably use _resist
   In this exercise, you are going to create a helpful program so that you don't have to remember the values of the bands. The program will take 3 colors as input, and outputs the correct value, in ohms.
   The color bands are encoded as follows:
 
-* Black: 0
-* Brown: 1
-* Red: 2
-* Orange: 3
-* Yellow: 4
-* Green: 5
-* Blue: 6
-* Violet: 7
-* Grey: 8
-* White: 9
+- Black: 0
+- Brown: 1
+- Red: 2
+- Orange: 3
+- Yellow: 4
+- Green: 5
+- Blue: 6
+- Violet: 7
+- Grey: 8
+- White: 9
 
 In `resistor-color duo` you decoded the first two colors. For instance: orange-orange got the main value `33`.
 The third color stands for how many zeros need to be added to the main value. The main value plus the zeros gives us a value in ohms.

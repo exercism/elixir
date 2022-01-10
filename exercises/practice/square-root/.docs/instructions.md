@@ -1,4 +1,4 @@
-# Description
+# Instructions
 
 Given a natural radicand, return its square root.
 

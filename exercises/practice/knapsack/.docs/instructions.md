@@ -1,4 +1,4 @@
-# Description
+# Instructions
 
 In this exercise, let's try to solve a classic problem.
 
