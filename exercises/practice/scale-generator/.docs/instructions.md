@@ -26,8 +26,8 @@ a given tonic:
 | Sharp         | G, D, A, E, B, F#     | e, b, f#, c#, g#, d# |
 | Flat          | F, Bb, Eb, Ab, Db, Gb | d, g, c, f, bb, eb   |
 
-Note that by common music theory convention the natural notes "C" and "a" 
-follow the sharps scale when ascending and the flats scale when descending. 
+Note that by common music theory convention the natural notes "C" and "a"
+follow the sharps scale when ascending and the flats scale when descending.
 For the scope of this exercise the scale is only ascending.
 
 ### Task
