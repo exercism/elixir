@@ -1,4 +1,4 @@
-# Description
+# Instructions
 
 Solve the zebra puzzle.
 
@@ -24,4 +24,3 @@ drink different beverages and smoke different brands of cigarettes.
 
 Which of the residents drinks water?
 Who owns the zebra?
-
