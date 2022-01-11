@@ -93,8 +93,8 @@ do
       module_name=$(cat "${test_file}" | sed -rn 's/^defmodule (.*)Test do$/\1 /p')
       doctest_code="doctest ${module_name}"
 
-      # Warning: GNU sed necessary, BSD (macOS) sed has incompatible options
-      sed -i 's/use ExUnit.Case\(.*\)/use ExUnit.Case\1\n'" ${doctest_code}"'\n/g' "${test_file}"
+      # .bak and rm part left here to simplify GNU/BSD sed options compatibility
+      sed -i.bak 's/use ExUnit.Case\(.*\)/use ExUnit.Case\1\n'" ${doctest_code}"'\n/g' "${test_file}" && rm -f "${test_file}.bak"
 
       # perform unit tests
       set +e
