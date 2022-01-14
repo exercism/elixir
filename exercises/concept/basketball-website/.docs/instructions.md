@@ -32,7 +32,7 @@ Do not use any `Map` or `Kernel` module functions for working with the nested ma
 
 ## 2. Refactor using included functions
 
-Your coworker reviewing your code tells you about a `Kernel` module functions which does something very similar to your implementation.
+Your coworker reviewing your code tells you about a `Kernel` module function which does something very similar to your implementation.
 
 Implement `get_in_path/2` to use this `Kernel` module function.
 
