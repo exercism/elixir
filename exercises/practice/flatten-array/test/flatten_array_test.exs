@@ -2,14 +2,20 @@ defmodule FlattenArrayTest do
   use ExUnit.Case
 
   # @tag :pending
+  test "empty" do
+    assert FlattenArray.flatten([]) ==
+             []
+  end
+
+  @tag :pending
   test "no nesting" do
     assert FlattenArray.flatten([0, 1, 2]) ==
              [0, 1, 2]
   end
 
   @tag :pending
-  test "flattens an empty nested list" do
-    assert FlattenArray.flatten([[]]) ==
+  test "flattens a nested array" do
+    assert FlattenArray.flatten([[[]]]) ==
              []
   end
 
@@ -32,8 +38,8 @@ defmodule FlattenArrayTest do
   end
 
   @tag :pending
-  test "removes nil from list" do
-    assert FlattenArray.flatten([1, nil, 2]) ==
+  test "nil values values are omitted from the final result" do
+    assert FlattenArray.flatten([1, 2, nil]) ==
              [1, 2]
   end
 
