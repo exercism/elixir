@@ -84,6 +84,15 @@ description = "Exponentiation of a rational number -> Raise a positive rational 
 [8168edd2-0af3-45b1-b03f-72c01332e10a]
 description = "Exponentiation of a rational number -> Raise a negative rational number to a positive integer power"
 
+[c291cfae-cfd8-44f5-aa6c-b175c148a492]
+description = "Exponentiation of a rational number -> Raise a positive rational number to a negative integer power"
+
+[45cb3288-4ae4-4465-9ae5-c129de4fac8e]
+description = "Exponentiation of a rational number -> Raise a negative rational number to an even negative integer power"
+
+[2d47f945-ffe1-4916-a399-c2e8c27d7f72]
+description = "Exponentiation of a rational number -> Raise a negative rational number to an odd negative integer power"
+
 [e2f25b1d-e4de-4102-abc3-c2bb7c4591e4]
 description = "Exponentiation of a rational number -> Raise zero to an integer power"
 
