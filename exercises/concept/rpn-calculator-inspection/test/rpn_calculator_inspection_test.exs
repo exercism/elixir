@@ -346,7 +346,8 @@ defmodule RPNCalculatorInspectionTest do
 
       assert_receive {:EXIT, ^pid, {:timeout, {Task, task_fn, [_task, 100]}}}
                      when task_fn in [:await, :await_many],
-                     150
+                     150,
+                     "expected to receive a timemout message from Task.await/2 or Task.await_many/2"
 
       Process.flag(:trap_exit, false)
     end
