@@ -343,7 +343,11 @@ defmodule RPNCalculatorInspectionTest do
 
       Process.flag(:trap_exit, true)
       pid = spawn_link(fn -> RPNCalculatorInspection.correctness_check(calculator, inputs) end)
-      assert_receive {:EXIT, ^pid, {:timeout, {Task, task_fn, [_task, 100]}}} when task_fn in [:await, :await_many], 150
+
+      assert_receive {:EXIT, ^pid, {:timeout, {Task, task_fn, [_task, 100]}}}
+                     when task_fn in [:await, :await_many],
+                     150
+
       Process.flag(:trap_exit, false)
     end
   end
