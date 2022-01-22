@@ -108,6 +108,12 @@ defmodule QueensTest do
     end
 
     @tag :pending
+    test "cannot attack if falling diagonals are only the same when reflected across the longest falling diagonal" do
+      queens = Queens.new(white: {4, 1}, black: {2, 5})
+      refute Queens.can_attack?(queens)
+    end
+
+    @tag :pending
     test "cannot attack when only one queen set" do
       queens = Queens.new(white: {0, 5})
       refute Queens.can_attack?(queens)
