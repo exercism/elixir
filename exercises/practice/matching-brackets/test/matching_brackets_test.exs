@@ -77,6 +77,16 @@ defmodule MatchingBracketsTest do
   end
 
   @tag :pending
+  test "early unexpected brackets" do
+    refute MatchingBrackets.check_brackets(")()")
+  end
+
+  @tag :pending
+  test "early mismatched brackets" do
+    refute MatchingBrackets.check_brackets("{)()")
+  end
+
+  @tag :pending
   test "math expression" do
     assert MatchingBrackets.check_brackets("(((185 + 223.85) * 15) - 543)/2")
   end
