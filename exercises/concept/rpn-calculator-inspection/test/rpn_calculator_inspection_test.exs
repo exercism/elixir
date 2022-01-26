@@ -344,7 +344,7 @@ defmodule RPNCalculatorInspectionTest do
       assert_receive(
         {:outputs, ^expected},
         5000,
-        "This test shouldn't take this long to complete. Make sure to start all tasks first before awaiting them"
+        "This test shouldn't take this long to complete. Make sure to start all tasks first before awaiting them."
       )
     end
 
