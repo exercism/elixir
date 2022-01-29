@@ -142,7 +142,7 @@ defmodule ProteinTranslationTest do
     @tag :pending
     test "unknown amino acids, not part of a codon, invalid RNA" do
       strand = "XYZ"
-      assert ProteinTranslation.of_rna("XYZ") == {:error, "invalid RNA"}
+      assert ProteinTranslation.of_rna(strand) == {:error, "invalid RNA"}
     end
 
     @tag :pending
