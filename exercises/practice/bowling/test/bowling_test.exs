@@ -104,6 +104,14 @@ defmodule BowlingTest do
   end
 
   @tag :pending
+  test "efb426ec-7e15-42e6-9b96-b4fca3ec2359" do
+    game = Bowling.start()
+    rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 0, 1] 
+    game = roll_reduce(game, rolls)
+    assert Bowling.score(game) == {:ok, 31}
+  end
+
+  @tag :pending
   test "a strike with the one roll bonus after a spare in the last frame does not get a bonus" do
     game = Bowling.start()
     rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 10]
