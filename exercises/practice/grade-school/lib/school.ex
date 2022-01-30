@@ -5,7 +5,7 @@ defmodule School do
   Each student is in a grade.
   """
 
-  @type school :: :dummy_type
+  @type school :: any()
 
   @doc """
   Create a new, empty school.
