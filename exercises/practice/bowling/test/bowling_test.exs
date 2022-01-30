@@ -104,7 +104,7 @@ defmodule BowlingTest do
   end
 
   @tag :pending
-  test "efb426ec-7e15-42e6-9b96-b4fca3ec2359" do
+  test "last two strikes followed by only last bonus with non strike points" do
     game = Bowling.start()
     rolls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 0, 1]
     game = roll_reduce(game, rolls)
