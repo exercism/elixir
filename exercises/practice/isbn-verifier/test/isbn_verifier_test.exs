@@ -82,6 +82,11 @@ defmodule IsbnVerifierTest do
   end
 
   @tag :pending
+  test "invalid characters are not ignored before checking length" do
+    refute IsbnVerifier.isbn?("3598P215088")
+  end
+
+  @tag :pending
   test "input is too long but contains a valid isbn" do
     refute IsbnVerifier.isbn?("98245726788")
   end
