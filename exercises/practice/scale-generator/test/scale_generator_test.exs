@@ -207,6 +207,11 @@ defmodule ScaleGeneratorTest do
     end
 
     @tag :pending
+    test "F Major scale" do
+      assert ScaleGenerator.scale("F", @major_scale_pattern) == ~w(F G A Bb C D E F)
+    end
+
+    @tag :pending
     test "f# minor scale" do
       assert ScaleGenerator.scale("f#", @minor_scale_pattern) == ~w(F# G# A B C# D E F#)
     end
