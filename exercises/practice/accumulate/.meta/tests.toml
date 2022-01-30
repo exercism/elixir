@@ -8,6 +8,7 @@
 #
 # As user-added comments (using the # character) will be removed when this file
 # is regenerated, comments can be added via a `comment` key.
+
 [64d97c14-36dd-44a8-9621-2cecebd6ed23]
 description = "accumulate empty"
 
@@ -22,3 +23,8 @@ description = "accumulate reversed strings"
 
 [bee8e9b6-b16f-4cd2-be3b-ccf7457e50bb]
 description = "accumulate recursively"
+include = false
+
+[0b357334-4cad-49e1-a741-425202edfc7c]
+description = "accumulate recursively"
+reimplements = "bee8e9b6-b16f-4cd2-be3b-ccf7457e50bb"

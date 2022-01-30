@@ -54,7 +54,11 @@ defmodule PangramTest do
   @tag :pending
   test "case insensitive" do
     assert Pangram.pangram?("the quick brown fox jumps over the lazy DOG")
-    refute Pangram.pangram?("the quick brown fox jumps over with lazy FX")
+  end
+
+  @tag :pending
+  test "a-m and A-M are 26 different characters but not a pangram" do
+    refute Pangram.pangram?("abcdefghijklm ABCDEFGHIJKLM")
   end
 
   @tag :pending

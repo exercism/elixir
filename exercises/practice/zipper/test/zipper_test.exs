@@ -45,6 +45,12 @@ defmodule ZipperTest do
   end
 
   @tag :pending
+  test "test ability to descend multiple levels and return" do
+    zipper = t1() |> from_tree() |> left() |> right() |> up() |> up()
+    assert value(zipper) == 1
+  end
+
+  @tag :pending
   test "set_value" do
     assert t1() |> from_tree() |> left() |> set_value(5) |> to_tree() == t2()
   end

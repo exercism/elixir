@@ -9,6 +9,16 @@ defmodule ForthTest do
     end
 
     @tag :pending
+    test "pushes negative numbers onto the stack" do
+      s =
+        Forth.new()
+        |> Forth.eval("-1 -2 -3 -4 -5")
+        |> Forth.format_stack()
+
+      assert s == "-1 -2 -3 -4 -5"
+    end
+
+    @tag :pending
     test "numbers just get pushed onto the stack" do
       s =
         Forth.new()
@@ -414,6 +424,24 @@ defmodule ForthTest do
       assert_raise Forth.UnknownWord, fn ->
         Forth.new() |> Forth.eval("foo")
       end
+    end
+
+    @tag :pending
+    test "only defines locally" do
+      s =
+        Forth.new()
+        |> Forth.eval(": + - ;")
+        |> Forth.eval("1 1 +")
+        |> Forth.format_stack()
+
+      assert s == "0"
+
+      s =
+        Forth.new()
+        |> Forth.eval("1 1 +")
+        |> Forth.format_stack()
+
+      assert s == "2"
     end
   end
 
