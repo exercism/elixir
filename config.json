@@ -1059,6 +1059,7 @@
         "prerequisites": [
           "floating-point-numbers",
           "atoms",
+          "tuples",
           "multiple-clause-functions",
           "pattern-matching",
           "maps",
