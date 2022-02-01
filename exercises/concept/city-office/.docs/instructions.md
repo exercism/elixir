@@ -42,7 +42,7 @@ The typespec should explain that the function accepts a single argument, a strin
 
 ## 4. Document checking if a value fits a field with a max length
 
-Add documentation and a typespec to the `Form.check_length/1` function. The documentation should read:
+Add documentation and a typespec to the `Form.check_length/2` function. The documentation should read:
 
 ```
 Checks if the value has no more than the maximum allowed number of letters.
