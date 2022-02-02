@@ -30,7 +30,7 @@ Somebody has to be notified when unexpected things happen.
 
 Implement the `LogLevel.alert_recipient/2` function to determine to whom the alert needs to be sent. The function should take an integer code and a boolean flag telling you if the log comes from a legacy app, and return the name of the recipient as an atom.
 
-If the log label is _error_ or _fatal_, send the alert to the _ops_ team. If the log label is unknown and it comes from a legacy system, send the alert to the _dev1_ team, otherwise send it to the _dev2_ team. All other log labels can be safely ignored.
+If the log label is _error_ or _fatal_, send the alert to the _ops_ team. If you receive a log with an _unknown_ label from a legacy system, send the alert to the _dev1_ team, other unknown labels should be sent to the _dev2_ team. All other log labels can be safely ignored.
 
 ```elixir
 LogLevel.alert_recipient(-1, true)
