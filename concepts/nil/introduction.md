@@ -8,3 +8,5 @@ favorite_color = nil
 ```
 
 In other programming languages, `null` or `none` values might play a similar role.
+
+[nil-dictionary]: https://www.merriam-webster.com/dictionary/nil
