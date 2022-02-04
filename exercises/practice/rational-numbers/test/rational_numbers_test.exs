@@ -124,6 +124,11 @@ defmodule RationalNumbersTest do
     test "Absolute value of zero" do
       assert RationalNumbers.abs({0, 1}) == {0, 1}
     end
+
+    @tag :pending
+    test "Absolute value of a rational number is reduced to lowest terms" do
+      assert RationalNumbers.abs({2, 4}) == {1, 2}
+    end
   end
 
   describe "Exponentiation of a rational number" do
