@@ -68,7 +68,9 @@ To update a player's score by adding to the previous score, define `HighScore.up
 
 - The first argument is the map of scores.
 - The second argument is the name of the player as a string, whose score you wish to update.
-- The third argument is the score that you wish to **add** to the stored high score. In case the name of the player does not exist the name will be added to the map of scores with the score argument as the default score.
+- The third argument is the score that you wish to **add** to the stored high score.
+
+The function should also work if the player doesn't have a previous score - assume the previous score is 0.
 
 ```elixir
 score_map = HighScore.new()
