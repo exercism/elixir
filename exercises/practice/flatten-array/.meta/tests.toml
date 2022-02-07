@@ -30,6 +30,12 @@ description = "6 level nesting"
 [0705a8e5-dc86-4cec-8909-150c5e54fa9c]
 description = "null values are omitted from the final result"
 
+[c6cf26de-8ccd-4410-84bd-b9efd88fd2bc]
+description = "consecutive null values at the front of the list are omitted from the final result"
+
+[382c5242-587e-4577-b8ce-a5fb51e385a1]
+description = "consecutive null values in the middle of the list are omitted from the final result"
+
 [ef1d4790-1b1e-4939-a179-51ace0829dbd]
 description = "6 level nest list with null values"
 
