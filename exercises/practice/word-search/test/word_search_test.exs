@@ -460,4 +460,82 @@ defmodule WordSearchTest do
 
     assert output == expected
   end
+
+  @tag :pending
+  test "Should fail to locate words that are not on horizontal, vertical, or diagonal lines" do
+    grid = """
+    abc
+    def
+    """
+
+    words = [
+      "aef",
+      "ced",
+      "abf",
+      "cbd"
+    ]
+
+    output = WordSearch.search(grid, words)
+
+    expected = %{
+      "aef" => nil,
+      "ced" => nil,
+      "abf" => nil,
+      "cbd" => nil
+    }
+
+    assert output == expected
+  end
+
+  @tag :pending
+  test "Should not concatenate different lines to find a horizontal word" do
+    grid = """
+    abceli
+    xirdfg
+    """
+
+    words = ["elixir"]
+
+    output = WordSearch.search(grid, words)
+
+    expected = %{"elixir" => nil}
+
+    assert output == expected
+  end
+
+  @tag :pending
+  test "Should not wrap around horizontally to find a word" do
+    grid = """
+    silabcdefp
+    """
+
+    words = ["lisp"]
+
+    output = WordSearch.search(grid, words)
+
+    expected = %{"lisp" => nil}
+
+    assert output == expected
+  end
+
+  @tag :pending
+  test "Should not wrap around vertically to find a word" do
+    grid = """
+    s
+    u
+    r
+    a
+    b
+    c
+    t
+    """
+
+    words = ["rust"]
+
+    output = WordSearch.search(grid, words)
+
+    expected = %{"rust" => nil}
+
+    assert output == expected
+  end
 end
