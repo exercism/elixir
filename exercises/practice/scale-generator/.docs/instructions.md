@@ -5,13 +5,13 @@
 Scales in Western music are based on the chromatic (12-note) scale. This
 scale can be expressed as the following group of pitches:
 
-> A, A#, B, C, C#, D, D#, E, F, F#, G, G#
+> A, A♯, B, C, C♯, D, D♯, E, F, F♯, G, G♯
 
-A given sharp note (indicated by a #) can also be expressed as the flat
-of the note above it (indicated by a b) so the chromatic scale can also be
+A given sharp note (indicated by a ♯) can also be expressed as the flat
+of the note above it (indicated by a ♭) so the chromatic scale can also be
 written like this:
 
-> A, Bb, B, C, Db, D, Eb, E, F, Gb, G, Ab
+> A, B♭, B, C, D♭, D, E♭, E, F, G♭, G, A♭
 
 The major and minor scale and modes are subsets of this twelve-pitch
 collection. They have seven pitches, and are called diatonic scales.
@@ -23,8 +23,8 @@ a given tonic:
 | Key Signature | Major                 | Minor                |
 | ------------- | --------------------- | -------------------- |
 | Natural       | C                     | a                    |
-| Sharp         | G, D, A, E, B, F#     | e, b, f#, c#, g#, d# |
-| Flat          | F, Bb, Eb, Ab, Db, Gb | d, g, c, f, bb, eb   |
+| Sharp         | G, D, A, E, B, F♯     | e, b, f♯, c♯, g♯, d♯ |
+| Flat          | F, B♭, E♭, A♭, D♭, G♭ | d, g, c, f, b♭, e♭   |
 
 Note that by common music theory convention the natural notes "C" and "a"
 follow the sharps scale when ascending and the flats scale when descending.
@@ -55,7 +55,7 @@ diatonic scales are built using only these two intervals between
 adjacent notes.
 
 Non-diatonic scales can contain other intervals.  An "augmented second"
-interval, written "A", has two interceding notes (e.g., from A to C or Db to E)
+interval, written "A", has two interceding notes (e.g., from A to C or D♭ to E)
 or a "whole step" plus a "half step". There are also smaller and larger
 intervals, but they will not figure into this exercise.
 
@@ -74,10 +74,10 @@ For example, starting with G and using the seven intervals MMmMMMm, there would 
 Note | Reason
 --|--
 G | Tonic
-A | M indicates a whole step from G, skipping G#
-B | M indicates a whole step from A, skipping A#
+A | M indicates a whole step from G, skipping G♯
+B | M indicates a whole step from A, skipping A♯
 C | m indicates a half step from B, skipping nothing
-D | M indicates a whole step from C, skipping C#
-E | M indicates a whole step from D, skipping D#
-F# | M indicates a whole step from E, skipping F
-G | m indicates a half step from F#, skipping nothing
+D | M indicates a whole step from C, skipping C♯
+E | M indicates a whole step from D, skipping D♯
+F♯ | M indicates a whole step from E, skipping F
+G | m indicates a half step from F♯, skipping nothing
