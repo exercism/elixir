@@ -75,7 +75,7 @@ defmodule BoutiqueInventoryTest do
     end
 
     @tag task_id: 3
-    test "increases quantity of an item" do
+    test "works for an item with an existing quantity map" do
       assert BoutiqueInventory.increase_quantity(
                %{
                  name: "Green Swimming Shorts",
