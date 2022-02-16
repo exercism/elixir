@@ -70,7 +70,7 @@ defmodule BoutiqueInventoryTest do
              ) == %{
                name: "Long Black Evening Dress",
                price: 105,
-               quantity_by_size: %{}
+               quantity_by_size: %{s: 1, m: 1, l: 1, xl: 1}
              }
     end
 
