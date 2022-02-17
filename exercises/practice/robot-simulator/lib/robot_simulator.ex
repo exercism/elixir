@@ -1,10 +1,15 @@
 defmodule RobotSimulator do
+  @type robot() :: any()
+  @type direction() :: :north | :east | :south | :west
+  @type position :: {integer(), integer()}
+
   @doc """
   Create a Robot Simulator given an initial direction and position.
 
   Valid directions are: `:north`, `:east`, `:south`, `:west`
   """
-  @spec create(direction :: atom, position :: {integer, integer}) :: any
+  @spec create(direction, position) ::
+    robot() | {:error, "invalid direction" | "invalid position"}
   def create(direction \\ nil, position \\ nil) do
   end
 
@@ -13,7 +18,8 @@ defmodule RobotSimulator do
 
   Valid instructions are: "R" (turn right), "L", (turn left), and "A" (advance)
   """
-  @spec simulate(robot :: any, instructions :: String.t()) :: any
+  @spec simulate(robot, instructions :: String.t()) ::
+    robot() | {:error, "invalid instruction"}
   def simulate(robot, instructions) do
   end
 
@@ -22,14 +28,14 @@ defmodule RobotSimulator do
 
   Valid directions are: `:north`, `:east`, `:south`, `:west`
   """
-  @spec direction(robot :: any) :: atom
+  @spec direction(robot) :: direction
   def direction(robot) do
   end
 
   @doc """
   Return the robot's position.
   """
-  @spec position(robot :: any) :: {integer, integer}
+  @spec position(robot) :: position
   def position(robot) do
   end
 end
