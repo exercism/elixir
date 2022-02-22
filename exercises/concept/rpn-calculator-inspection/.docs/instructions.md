@@ -21,7 +21,7 @@ RPNCalculatorInspection.start_reliability_check(fn _ -> 0 end, "2 3 +")
 
 ## 2. Interpret the results of a reliability check
 
-Implement the `RPNCalculatorInspection.await_reliability_check_result/2` function. It should take two arguments. The first argument is a map with the input of the reliability check and the PID of the process running the reliability check for this input, as returned by `RPNCalculatorInspection.start_reliability_check/2`. The second argument is a map that serves an accumulator for the results of reliability checks with different inputs.
+Implement the `RPNCalculatorInspection.await_reliability_check_result/2` function. It should take two arguments. The first argument is a map with the input of the reliability check and the PID of the process running the reliability check for this input, as returned by `RPNCalculatorInspection.start_reliability_check/2`. The second argument is a map that serves as an accumulator for the results of reliability checks with different inputs.
 
 The function should wait for an exit message.
 
