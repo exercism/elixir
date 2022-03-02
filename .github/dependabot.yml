@@ -8,4 +8,4 @@ updates:
     schedule:
       interval: 'daily'
     labels:
-      - 'x:size/small'
+      - 'x:size/tiny'
