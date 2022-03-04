@@ -1,18 +1,15 @@
-# This workflow will do a fetch the latest configlet binary and lint this repository.
+name: Configlet
 
-name: configlet
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
-on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Fetch configlet
-        uses: exercism/github-actions/configlet-ci@main
-
-      - name: Configlet Linter
-        run: configlet lint
+  configlet:
+    uses: exercism/github-actions/.github/workflows/configlet.yml@main
