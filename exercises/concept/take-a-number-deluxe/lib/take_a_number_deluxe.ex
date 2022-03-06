@@ -4,7 +4,6 @@ defmodule TakeANumberDeluxe do
   #  end
 
   use GenServer
-  alias TakeANumberDeluxe.State
 
   # API
 
@@ -35,7 +34,7 @@ defmodule TakeANumberDeluxe do
     min_number = Keyword.get(init_arg, :min_number)
     max_number = Keyword.get(init_arg, :max_number)
 
-    case State.new(min_number, max_number) do
+    case TakeANumberDeluxe.State.new(min_number, max_number) do
       {:ok, state} -> {:ok, state}
       {:error, error} -> {:stop, error}
     end
@@ -48,7 +47,7 @@ defmodule TakeANumberDeluxe do
 
   @impl true
   def handle_call(:queue_new_number, _from, state) do
-    case State.queue_new_number(state) do
+    case TakeANumberDeluxe.State.queue_new_number(state) do
       {:ok, new_number, new_state} ->
         {:reply, {:ok, new_number}, new_state}
 
@@ -59,7 +58,7 @@ defmodule TakeANumberDeluxe do
 
   @impl true
   def handle_call(:serve_next_queued_number, _from, state) do
-    case State.serve_next_queued_number(state) do
+    case TakeANumberDeluxe.State.serve_next_queued_number(state) do
       {:ok, next_number, new_state} ->
         {:reply, {:ok, next_number}, new_state}
 
@@ -70,7 +69,7 @@ defmodule TakeANumberDeluxe do
 
   @impl true
   def handle_cast(:reset_state, state) do
-    {:ok, state} = State.new(state.min_number, state.max_number)
+    {:ok, state} = TakeANumberDeluxe.State.new(state.min_number, state.max_number)
     {:noreply, state}
   end
 
