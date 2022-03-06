@@ -24,10 +24,6 @@ defmodule TakeANumberDeluxe do
     GenServer.call(machine, :serve_next_queued_number)
   end
 
-  def mark_number_as_served(machine, number) do
-    GenServer.call(machine, {:mark_number_as_served, number})
-  end
-
   def reset_state(machine) do
     GenServer.cast(machine, :reset_state)
   end
@@ -66,17 +62,6 @@ defmodule TakeANumberDeluxe do
     case State.serve_next_queued_number(state) do
       {:ok, next_number, new_state} ->
         {:reply, {:ok, next_number}, new_state}
-
-      {:error, error} ->
-        {:reply, {:error, error}, state}
-    end
-  end
-
-  @impl true
-  def handle_call({:mark_number_as_served, number}, _from, state) do
-    case State.mark_number_as_served(state, number) do
-      {:ok, new_state} ->
-        {:reply, :ok, new_state}
 
       {:error, error} ->
         {:reply, {:error, error}, state}

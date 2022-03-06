@@ -1,5 +1,5 @@
 defmodule TakeANumberDeluxe.State do
-  defstruct min_number: 1, max_number: 999, queue: [], serving: []
+  defstruct min_number: 1, max_number: 999, queue: []
 
   def new(min_number, max_number) do
     if is_integer(min_number) and is_integer(max_number) and min_number < max_number do
@@ -26,25 +26,12 @@ defmodule TakeANumberDeluxe.State do
 
       _ ->
         {next_queued_number, new_queue} = List.pop_at(state.queue, length(state.queue) - 1)
-
-        {:ok, next_queued_number,
-         %{state | queue: new_queue, serving: [next_queued_number | state.serving]}}
-    end
-  end
-
-  def mark_number_as_served(%__MODULE__{} = state, number) do
-    index = Enum.find_index(state.serving, &(&1 == number))
-
-    if index == nil do
-      {:error, :number_not_found}
-    else
-      {_, new_serving} = List.pop_at(state.serving, index)
-      {:ok, %{state | serving: new_serving}}
+        {:ok, next_queued_number, %{state | queue: new_queue}}
     end
   end
 
   defp find_next_available_number(state) do
-    all_numbers_in_use = state.queue ++ state.serving
+    all_numbers_in_use = state.queue
     all_numbers = Enum.to_list(state.min_number..state.max_number)
 
     case all_numbers_in_use do

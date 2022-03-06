@@ -98,8 +98,7 @@ defmodule TakeANumberDeluxeTest do
                %TakeANumberDeluxe.State{
                  min_number: 1,
                  max_number: 99,
-                 queue: [3, 2, 1],
-                 serving: []
+                 queue: [3, 2, 1]
                }
     end
   end
@@ -144,79 +143,20 @@ defmodule TakeANumberDeluxeTest do
                %TakeANumberDeluxe.State{
                  min_number: 1,
                  max_number: 99,
-                 queue: [3],
-                 serving: [2, 1]
-               }
-    end
-  end
-
-  describe "mark_number_as_served/2" do
-    @tag task_id: 5
-    test "returns :ok" do
-      {:ok, pid} = TakeANumberDeluxe.start_link(min_number: 100, max_number: 999)
-      assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 100}
-      assert TakeANumberDeluxe.serve_next_queued_number(pid) == {:ok, 100}
-      assert TakeANumberDeluxe.mark_number_as_served(pid, 100) == :ok
-    end
-
-    @tag task_id: 5
-    test "can mark multiple numbers as served" do
-      {:ok, pid} = TakeANumberDeluxe.start_link(min_number: 1, max_number: 99)
-      assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 1}
-      assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 2}
-      assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 3}
-      assert TakeANumberDeluxe.serve_next_queued_number(pid) == {:ok, 1}
-      assert TakeANumberDeluxe.serve_next_queued_number(pid) == {:ok, 2}
-      assert TakeANumberDeluxe.serve_next_queued_number(pid) == {:ok, 3}
-      assert TakeANumberDeluxe.mark_number_as_served(pid, 1) == :ok
-      assert TakeANumberDeluxe.mark_number_as_served(pid, 2) == :ok
-      assert TakeANumberDeluxe.mark_number_as_served(pid, 3) == :ok
-    end
-
-    @tag task_id: 5
-    test "returns an error when the given number is not being served and not in the queue" do
-      {:ok, pid} = TakeANumberDeluxe.start_link(min_number: 1, max_number: 3)
-
-      assert TakeANumberDeluxe.mark_number_as_served(pid, 1) == {:error, :number_not_found}
-    end
-
-    @tag task_id: 5
-    test "returns an error when the given number is not being served" do
-      {:ok, pid} = TakeANumberDeluxe.start_link(min_number: 1, max_number: 3)
-
-      assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 1}
-      assert TakeANumberDeluxe.mark_number_as_served(pid, 1) == {:error, :number_not_found}
-    end
-
-    @tag task_id: 5
-    test "updates the state accordingly" do
-      {:ok, pid} = TakeANumberDeluxe.start_link(min_number: 1, max_number: 99)
-      assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 1}
-      assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 2}
-      assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 3}
-      assert TakeANumberDeluxe.serve_next_queued_number(pid) == {:ok, 1}
-      assert TakeANumberDeluxe.serve_next_queued_number(pid) == {:ok, 2}
-      assert TakeANumberDeluxe.mark_number_as_served(pid, 2) == :ok
-
-      assert TakeANumberDeluxe.report_state(pid) ==
-               %TakeANumberDeluxe.State{
-                 min_number: 1,
-                 max_number: 99,
-                 queue: [3],
-                 serving: [1]
+                 queue: [3]
                }
     end
   end
 
   describe "reset_state/1" do
-    @tag task_id: 6
+    @tag task_id: 5
     test "returns :ok" do
       {:ok, pid} = TakeANumberDeluxe.start_link(min_number: 1, max_number: 99)
       assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 1}
       assert TakeANumberDeluxe.reset_state(pid) == :ok
     end
 
-    @tag task_id: 6
+    @tag task_id: 5
     test "updates the state accordingly" do
       {:ok, pid} = TakeANumberDeluxe.start_link(min_number: 7, max_number: 77)
       assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 7}
@@ -224,7 +164,6 @@ defmodule TakeANumberDeluxeTest do
       assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 9}
       assert TakeANumberDeluxe.serve_next_queued_number(pid) == {:ok, 7}
       assert TakeANumberDeluxe.serve_next_queued_number(pid) == {:ok, 8}
-      assert TakeANumberDeluxe.mark_number_as_served(pid, 8) == :ok
 
       assert TakeANumberDeluxe.reset_state(pid) == :ok
 
@@ -232,25 +171,25 @@ defmodule TakeANumberDeluxeTest do
                %TakeANumberDeluxe.State{
                  min_number: 7,
                  max_number: 77,
-                 queue: [],
-                 serving: []
+                 queue: []
                }
     end
 
-    @tag task_id: 6
+    @tag task_id: 5
     test "the handle_cast/2 GenServer callback is defined" do
       assert function_exported?(TakeANumberDeluxe, :handle_cast, 2)
     end
   end
 
   describe "handling unexpected messages" do
-    @tag task_id: 7
+    @tag task_id: 6
     test "sends a response to a basic model :take_a_number message" do
       {:ok, pid} = TakeANumberDeluxe.start_link(min_number: 1, max_number: 99)
       send(pid, {:take_a_number, self()})
       assert_receive {:error, :basic_model_message_received_by_deluxe_model_server}
     end
 
+    @tag task_id: 6
     test "basic model :take_a_number message does not affect the state" do
       {:ok, pid} = TakeANumberDeluxe.start_link(min_number: 1, max_number: 99)
       assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 1}
@@ -265,7 +204,7 @@ defmodule TakeANumberDeluxeTest do
       assert TakeANumberDeluxe.report_state(pid) == old_state
     end
 
-    @tag task_id: 7
+    @tag task_id: 6
     test "unexpected messages do not affect the state" do
       {:ok, pid} = TakeANumberDeluxe.start_link(min_number: 1, max_number: 99)
       assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 1}
@@ -280,7 +219,7 @@ defmodule TakeANumberDeluxeTest do
       assert TakeANumberDeluxe.report_state(pid) == old_state
     end
 
-    @tag task_id: 7
+    @tag task_id: 6
     test "the handle_info/2 GenServer callback is defined" do
       assert function_exported?(TakeANumberDeluxe, :handle_info, 2)
     end
