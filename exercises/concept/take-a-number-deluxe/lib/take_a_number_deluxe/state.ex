@@ -19,13 +19,19 @@ defmodule TakeANumberDeluxe.State do
     end
   end
 
-  def serve_next_queued_number(%__MODULE__{} = state) do
-    case state.queue do
-      [] ->
+  def serve_next_queued_number(%__MODULE__{} = state, priority_number) do
+    priority_number_index = Enum.find_index(state.queue, &(&1 == priority_number))
+
+    cond do
+      state.queue == [] ->
         {:error, :empty_queue}
 
-      _ ->
-        {next_queued_number, new_queue} = List.pop_at(state.queue, length(state.queue) - 1)
+      priority_number != nil && priority_number_index == nil ->
+        {:error, :priority_number_not_found}
+
+      true ->
+        next_queued_number_index = priority_number_index || (length(state.queue) - 1)
+        {next_queued_number, new_queue} = List.pop_at(state.queue, next_queued_number_index)
         {:ok, next_queued_number, %{state | queue: new_queue}}
     end
   end

@@ -131,6 +131,25 @@ defmodule TakeANumberDeluxeTest do
     end
 
     @tag task_id: 4
+    test "accepts a priority number to skip the queue" do
+      {:ok, pid} = TakeANumberDeluxe.start_link(min_number: 1, max_number: 99)
+      assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 1}
+      assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 2}
+      assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 3}
+      assert TakeANumberDeluxe.serve_next_queued_number(pid, 3) == {:ok, 3}
+    end
+
+    @tag task_id: 4
+    test "returns an error when the priority number is not in the queue" do
+      {:ok, pid} = TakeANumberDeluxe.start_link(min_number: 1, max_number: 3)
+      assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 1}
+      assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 2}
+
+      assert TakeANumberDeluxe.serve_next_queued_number(pid, 7) ==
+               {:error, :priority_number_not_found}
+    end
+
+    @tag task_id: 4
     test "updates the state accordingly" do
       {:ok, pid} = TakeANumberDeluxe.start_link(min_number: 1, max_number: 99)
       assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 1}
