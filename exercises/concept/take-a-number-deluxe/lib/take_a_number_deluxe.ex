@@ -1,5 +1,4 @@
 defmodule TakeANumberDeluxe do
-  use GenServer
 
   # Client API
 
