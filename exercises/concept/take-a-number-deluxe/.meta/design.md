@@ -16,6 +16,9 @@
 - `processes`
 - `pids`
 - `agent`
+- `behaviours`
+- `struct`
+- `tuples`
 
 ## Analyzer
 

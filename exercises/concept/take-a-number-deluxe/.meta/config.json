@@ -8,6 +8,9 @@
     "solution": [
       "lib/take_a_number_deluxe.ex"
     ],
+    "editor": [
+      "lib/take_a_number_deluxe/state.ex"
+    ],
     "test": [
       "test/take_a_number_deluxe_test.exs"
     ],
