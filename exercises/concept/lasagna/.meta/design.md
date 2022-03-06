@@ -39,7 +39,7 @@ There are no prerequisites.
 
 ## Analyzer
 
-This exercise could benefit from the following rules added to the the [analyzer][analyzer]:
+This exercise could benefit from the following rules added to the [analyzer][analyzer]:
 
 - Verify that the `remaining_minutes_in_oven/1` function calls the `expected_minutes_in_oven/0` function.
 - Verify that the `total_time_in_minutes/2` function calls the `preparation_time_in_minutes/1` function.
