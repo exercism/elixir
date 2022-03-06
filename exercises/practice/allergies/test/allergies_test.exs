@@ -65,6 +65,12 @@ defmodule AllergiesTest do
         ~w[eggs shellfish strawberries tomatoes chocolate pollen cats]
       )
     end
+
+    @tag :pending
+    test "ignore non allergen score parts without highest valid score" do
+      Allergies.list(257)
+      |> assert_is_a_set_containing(~w[eggs])
+    end
   end
 
   describe "score for egg allergies -" do
