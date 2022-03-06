@@ -1,0 +1,19 @@
+{
+  "blurb": "Learn about GenServers by writing an embedded system for a Take-A-Number machine.",
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [],
+  "files": {
+    "solution": [
+      "lib/take_a_number_deluxe.ex"
+    ],
+    "test": [
+      "test/take_a_number_deluxe_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
+  },
+  "language_versions": ">=1.10"
+}
