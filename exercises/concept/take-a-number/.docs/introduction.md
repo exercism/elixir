@@ -25,7 +25,7 @@ A message can be of any type. Often it consists of atoms and tuples. If you want
 
 `send/2` does not check if the message was received by the recipient, nor if the recipient is still alive. The message ends up in the recipient's _mailbox_ and it will only be read if and when the recipient explicitly asks to _receive messages_.
 
-A message can be read from a mailbox using the `receive/1` macro. It accepts a `do` block that can pattern match on the messages.
+A message can be read from a mailbox using the `receive/1` macro. It accepts a `do` block that can [pattern match][exercism-pattern-matching] on the messages.
 
 ```elixir
 receive do
@@ -43,3 +43,5 @@ If you want to receive more than one message, you need to call `receive/1` recur
 ## PIDs
 
 Process identifiers are their own data type. They function as _mailbox addresses_ - if you have a process's PID, you can send a message to that process. PIDs are usually created indirectly, as a return value of functions that create new processes, like `spawn`.
+
+[exercism-pattern-matching]: https://exercism.org/tracks/elixir/concepts/pattern-matching

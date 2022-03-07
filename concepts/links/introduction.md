@@ -1,6 +1,6 @@
 # Introduction
 
-Elixir processes are isolated and don't share anything by default. When an unlinked child process crashes, its parent process is not affected.
+Elixir [processes][exercism-processes] are isolated and don't share anything by default. When an unlinked child process crashes, its parent process is not affected.
 
 This behavior can be changed by _linking_ processes to one another. If two processes are linked, a failure in one process will be propagated to the other process. Links are **bidirectional**.
 
@@ -15,3 +15,5 @@ Linking can also be used for _supervising_ processes. If a process _traps exits_
 A process can be configured to trap exits by calling `Process.flag(:trap_exit, true)`. Note that `Process.flag/2` returns the _old_ value of the flag, not the new one.
 
 The message that will be sent to the process in case a linked process crashes will match the pattern `{:EXIT, from, reason}`, where `from` is a PID. If `reason` is anything other than the atom `:normal`, that means that the process crashed or was forcefully killed.
+
+[exercism-processes]: https://exercism.org/tracks/elixir/concepts/processes

@@ -2,7 +2,7 @@
 
 [`case`][case] is a control flow structure that allows us to compare a given value against many patterns. Clauses in a `case` expression are evaluated from top to bottom, until a match is found.
 
-In many cases, using `case` is interchangeable with defining multiple function clauses. Pattern matching and guards can be used in `case` clauses.
+In many cases, using `case` is interchangeable with defining [multiple function clauses][exercism-multiple-clause-functions]. [Pattern matching][exercism-pattern-matching] and [guards][exercism-guards] can be used in `case` clauses.
 
 ```elixir
 # one function clause, multiple case clauses
@@ -27,3 +27,6 @@ def age_group(_), do: 'adult'
 There are no strict rules for choosing one over the other. It's a matter of personal preference that usually depends on context.
 
 [case]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#case/2
+[exercism-multiple-clause-functions]: https://exercism.org/tracks/elixir/concepts/multiple-clause-functions
+[exercism-pattern-matching]: https://exercism.org/tracks/elixir/concepts/pattern-matching
+[exercism-guards]: https://exercism.org/tracks/elixir/concepts/guards

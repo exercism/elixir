@@ -1,6 +1,6 @@
 # Introduction
 
-Structs are an extension built on top of maps which provide compile-time checks and default values. A struct is named after the module it is defined in. To define a struct use the `defstruct` construct. The construct usually immediately follows after the module definition. `defstruct` accepts either a list of atoms (for `nil` default values) or a keyword list (for specified default values). The fields without defaults must precede the fields with default values.
+Structs are an extension built on top of [maps][exercism-maps] which provide compile-time checks and default values. A struct is named after the module it is defined in. To define a struct use the `defstruct` construct. The construct usually immediately follows after the module definition. `defstruct` accepts either a list of atoms (for `nil` default values) or a keyword list (for specified default values). The fields without defaults must precede the fields with default values.
 
 ```elixir
 defmodule Plane do
@@ -46,3 +46,5 @@ end
 %User{}
 # => (ArgumentError) the following keys must also be given when building struct User: [:username]
 ```
+
+[exercism-maps]: https://exercism.org/tracks/elixir/concepts/maps

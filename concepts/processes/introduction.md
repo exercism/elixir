@@ -23,7 +23,7 @@ A message can be of any type. Often it consists of atoms and tuples. If you want
 
 `send/2` does not check if the message was received by the recipient, nor if the recipient is still alive. The message ends up in the recipient's _mailbox_ and it will only be read if and when the recipient explicitly asks to _receive messages_.
 
-A message can be read from a mailbox using the `receive/1` macro. It accepts a `do` block that can pattern match on the messages.
+A message can be read from a mailbox using the `receive/1` macro. It accepts a `do` block that can [pattern match][exercism-pattern-matching] on the messages.
 
 ```elixir
 receive do
@@ -37,3 +37,5 @@ end
 ## Receive loop
 
 If you want to receive more than one message, you need to call `receive/1` recursively. It is a common pattern to implement a recursive function, for example named `loop`, that calls `receive/1`, does something with the message, and then calls itself to wait for more messages. If you need to carry some state from one `receive/1` call to another, you can do it by passing an argument to that `loop` function.
+
+[exercism-pattern-matching]: https://exercism.org/tracks/elixir/concepts/pattern-matching

@@ -1,6 +1,6 @@
 # About
 
-A keyword list is a list of `{key, value}` tuples. There are two way to write a keyword list:
+A keyword list is a list of `{key, value}` [tuples][exercism-tuples]. There are two way to write a keyword list:
 
 ```elixir
 # concise
@@ -105,3 +105,4 @@ Use keyword lists when you don't have a lot of data, but need duplicate keys or 
 [keyword]: https://hexdocs.pm/elixir/Keyword.html
 [access-behaviour]: https://hexdocs.pm/elixir/Access.html
 [keyword-call-syntax]: https://hexdocs.pm/elixir/Keyword.html#module-call-syntax
+[exercism-tuples]: https://exercism.org/tracks/elixir/concepts/tuples
