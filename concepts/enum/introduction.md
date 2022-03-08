@@ -30,3 +30,5 @@ When using maps with `Enum` functions, the map gets automatically converted to a
 To transform it back to a map, use `Enum.into/2`. `Enum.into/2` is a function that transforms an enumerable into a collectable - any data structure implementing the `Collectable` protocol. It can be thought of as the opposite of `Enum.reduce/3`.
 
 [exercism-protocols]: https://exercism.org/tracks/elixir/concepts/protocols
+[exercism-lists]: https://exercism.org/tracks/elixir/concepts/lists
+[exercism-maps]: https://exercism.org/tracks/elixir/concepts/maps

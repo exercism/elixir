@@ -40,7 +40,7 @@ Rescuing errors in Elixir is done very rarely.
 Usually the rescued error is logged or sent to an external monitoring service, and then reraised.
 This means we usually don't care about the internal structure of the specific error struct.
 
-The [Exceptions concept]( /tracks/elixir/concepts/exceptions) describes how to define custom error structs.
+The [Exceptions concept][exercism-exceptions] describes how to define custom error structs.
 
 ## Avoid anti-patterns
 
@@ -74,3 +74,4 @@ As it's written in [Elixir's getting started guide][getting-started]:
 [errors]: https://elixir-lang.org/getting-started/try-catch-and-rescue.html#errors
 [docs-try]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#try/1
 [argument-error]: https://hexdocs.pm/elixir/ArgumentError.html#content
+[exercism-exceptions]: https://exercism.org/tracks/elixir/concepts/exceptions

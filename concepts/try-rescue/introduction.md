@@ -30,4 +30,6 @@ Rescuing errors in Elixir is done very rarely.
 Usually the rescued error is logged or sent to an external monitoring service, and then reraised.
 This means we usually don't care about the internal structure of the specific error struct.
 
-In the [Exceptions concept](/tracks/elixir/concepts/exceptions) you will learn more about error structs, including how to define your own custom error.
+In the [Exceptions concept][exercism-exceptions] you will learn more about error structs, including how to define your own custom error.
+
+[exercism-exceptions]: https://exercism.org/tracks/elixir/concepts/exceptions

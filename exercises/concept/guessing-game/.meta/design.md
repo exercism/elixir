@@ -31,7 +31,7 @@ A student upon completion will:
 
 ## Narrative
 
-This exercise is a fork from [F#'s Number Guessing Game](https://github.com/exercism/v3/blob/master/languages/fsharp/exercises/concept/pattern-matching/.docs/instructions.md)
+This exercise is a fork from [F#'s Number Guessing Game](https://github.com/exercism/fsharp/tree/main/exercises/concept/guessing-game)
 
 ## Resources to refer to
 
