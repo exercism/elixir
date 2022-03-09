@@ -2,7 +2,7 @@
 
 `Enum` is a very useful module that provides a set of algorithms for working with enumerables. It offers sorting, filtering, grouping, counting, searching, finding min/max values, and much more.
 
-In general, an _enumerable_ is any data that can be iterated over, a collection. In Elixir, an enumerable is any data type that implements the `Enumerable` protocol. The most common of those are lists and maps.
+In general, an _enumerable_ is any data that can be iterated over, a collection. In Elixir, an enumerable is any data type that implements the `Enumerable` [protocol][exercism-protocols]. The most common of those are [lists][exercism-lists] and [maps][exercism-maps].
 
 Many `Enum` functions accept a function as an argument.
 
@@ -28,3 +28,7 @@ The second argument to `Enum.reduce/3` is the initial value of the accumulator. 
 When using maps with `Enum` functions, the map gets automatically converted to a list of 2 `{key, value}` tuples.
 
 To transform it back to a map, use `Enum.into/2`. `Enum.into/2` is a function that transforms an enumerable into a collectable - any data structure implementing the `Collectable` protocol. It can be thought of as the opposite of `Enum.reduce/3`.
+
+[exercism-protocols]: https://exercism.org/tracks/elixir/concepts/protocols
+[exercism-lists]: https://exercism.org/tracks/elixir/concepts/lists
+[exercism-maps]: https://exercism.org/tracks/elixir/concepts/maps

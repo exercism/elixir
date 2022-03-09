@@ -94,7 +94,7 @@ defmodule RobotSimulator do
 end
 ```
 
-[Canonical](https://github.com/exercism/elixir/blob/master/exercises/robot-simulator/example.exs)
+[Canonical](https://github.com/exercism/elixir/blob/main/exercises/practice/robot-simulator/.meta/example.ex)
 
 ```elixir
 defmodule RobotSimulator do

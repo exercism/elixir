@@ -25,7 +25,7 @@ File.read!("does_not_exist")
 
 ## Files and processes
 
-Every time a file is written to with [`File.write/2`][file-write], a file descriptor is opened and a new Elixir process is spawned. For this reason, writing to a file in a loop using [`File.write/2`][file-write] should be avoided.
+Every time a file is written to with [`File.write/2`][file-write], a file descriptor is opened and a new Elixir [process][exercism-processes] is spawned. For this reason, writing to a file in a loop using [`File.write/2`][file-write] should be avoided.
 
 Instead, a file can be opened using [`File.open/2`][file-open]. The second argument to [`File.open/2`][file-open] is a list of modes, which allows you to specify if you want to open the file for reading or for writing.
 
@@ -92,3 +92,4 @@ Path.expand(Path.join(["~", "documents", "important.txt"]))
 [collectable]: https://hexdocs.pm/elixir/Collectable.html
 [path]: https://hexdocs.pm/elixir/Path.html
 [path-join]: https://hexdocs.pm/elixir/Path.html#join/1
+[exercism-processes]: https://exercism.org/tracks/elixir/concepts/processes

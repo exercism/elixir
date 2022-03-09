@@ -14,7 +14,7 @@ And much more! Refer to the [`Enum` module documentation][enum-functions] for a 
 
 ## Enumerable
 
-In general, an _enumerable_ is any data that can be iterated over, a collection. In Elixir, an enumerable is any data type that implements the `Enumerable` protocol. Those are:
+In general, an _enumerable_ is any data that can be iterated over, a collection. In Elixir, an enumerable is any data type that implements the `Enumerable` [protocol][exercism-protocols]. Those are:
 
 - [`List`][list]
 - [`Map`][map]
@@ -80,3 +80,4 @@ Enum.reduce([1, 2, 3, 4, 5], [], fn x, acc -> [x + 10 | acc] end)
 [date-range]: https://hexdocs.pm/elixir/Date.Range.html
 [io-stream]: https://hexdocs.pm/elixir/IO.Stream.html
 [file-stream]: https://hexdocs.pm/elixir/File.Stream.html
+[exercism-protocols]: https://exercism.org/tracks/elixir/concepts/protocols
