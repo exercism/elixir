@@ -18,7 +18,7 @@
 - The operation is the first element in a three-element AST node tuple.
 - You can ignore the second element in the tuple in this exercise completely.
 - The third element in the tuple is the argument list of the operation that defines the function.
-- The first element on that list is the function's name, and the second element is the function's body.
+- The first element on that list is the function's name with any function parameters present in an embedded seperate list, and the second element is the function's body.
 
 ## 3. Decode the secret message part from function definition
 
