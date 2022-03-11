@@ -1,0 +1,5 @@
+# Introduction
+
+## Behaviour vs protocol
+
+??

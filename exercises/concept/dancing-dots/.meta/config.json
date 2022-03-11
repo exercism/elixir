@@ -1,0 +1,19 @@
+{
+  "blurb": "TODO",
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [],
+  "files": {
+    "solution": [
+      "lib/dancing_dots.ex"
+    ],
+    "test": [
+      "test/dancing_dots_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
+  },
+  "language_versions": ">=1.10"
+}
