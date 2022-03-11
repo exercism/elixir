@@ -27,7 +27,7 @@ Is converted to "0"
 
 Is converted to "1"
 
-If the input is the correct size, but not recognizable, your program should return '?'
+If the input is the correct size, but not recognizable, your program should return "?"
 
 If the input is the incorrect size, your program should return an error.
 

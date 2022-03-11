@@ -3,7 +3,7 @@ defmodule OcrNumbers do
   Given a 3 x 4 grid of pipes, underscores, and spaces, determine which number is represented, or
   whether it is garbled.
   """
-  @spec convert([String.t()]) :: {:ok, String.t()} | {:error, charlist()}
+  @spec convert([String.t()]) :: {:ok, String.t()} | {:error, String.t()}
   def convert(input) do
   end
 end

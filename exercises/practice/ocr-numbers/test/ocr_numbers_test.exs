@@ -49,7 +49,7 @@ defmodule OcrNumbersTest do
         "   "
       ])
 
-    assert number == {:error, 'invalid line count'}
+    assert number == {:error, "invalid line count"}
   end
 
   @tag :pending
@@ -62,7 +62,7 @@ defmodule OcrNumbersTest do
         "    "
       ])
 
-    assert number == {:error, 'invalid column count'}
+    assert number == {:error, "invalid column count"}
   end
 
   @tag :pending
