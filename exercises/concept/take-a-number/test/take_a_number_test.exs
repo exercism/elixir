@@ -84,30 +84,13 @@ defmodule TakeANumberTest do
     send(pid, {:report_state, self()})
     assert_receive 1
 
-    # wait_until/3 is a custom helper function that tries to
-    # evaluate the given expression a few times until it returns true.
     # This is necessary because `Process.info/1` is not guaranteed to return up-to-date info immediately.
+    dirty_hacky_delay_to_ensure_up_to_date_process_info = 200
+    :timer.sleep(dirty_hacky_delay_to_ensure_up_to_date_process_info)
 
     # Do not use `Process.info/1` in your own code.
     # It's meant for debugging purposes only.
     # We use it here for didactic purposes because there is no alternative that would achieve the same result.
-    assert wait_until(fn ->
-             Keyword.get(Process.info(pid), :message_queue_len) == 0
-           end)
-  end
-
-  defp wait_until(condition_fn, max_retries \\ 5, current_try \\ 1) do
-    condition_fn_return = condition_fn.()
-
-    cond do
-      condition_fn_return == true ->
-        true
-
-      max_retries > current_try ->
-        :timer.sleep(100) && wait_until(condition_fn, max_retries, current_try + 1)
-
-      max_retries <= current_try ->
-        condition_fn_return
-    end
+    assert Keyword.get(Process.info(pid), :message_queue_len) == 0
   end
 end
