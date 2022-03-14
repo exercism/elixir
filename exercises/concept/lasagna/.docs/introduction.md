@@ -27,25 +27,46 @@ end
 
 ### Named functions
 
-_Named Functions_ must be defined in a module. Each function can have zero or more arguments. All arguments are dynamically-typed, and the return type is not explicitly declared, it is the type of the value returned. An _access modifier_ can be specified for functions, making only desired functions available for use external to the module. In a function, the value of the last line is _implicitly returned_ to the calling function.
+_Named Functions_ must be defined in a module. The `def` keyword is used to define a _public_ named function.
 
-Invoking a function is done by specifying its module and function name and passing arguments for each of the function's arguments. The module name may be omitted if the function is invoked inside of the module.
-
-You may also write short functions using a one-line syntax (note the comma `,` and the colon `:` around the keyword `do`).
+Each function can have zero or more arguments. The value of the last expression in a function is always _implicitly returned_.
 
 ```elixir
 defmodule Calculator do
   def add(x, y) do
     x + y
   end
-
-  def short_add(x, y), do: x + y
 end
+ ```
 
+Invoking a function is done by specifying its module and function name and passing arguments for each of the function's arguments.
+
+```elixir
 sum = Calculator.add(1, 2)
 # => 3
-sum = Calculator.short_add(2, 2)
-# => 4
+```
+
+The `defp` keyword can be used instead of `def` to define a _private_ function. Private functions can only be used from within the same module that defined them.
+
+When invoking a function inside the same module where it's defined, the module name can be omitted.
+
+You may also write short functions using a one-line syntax (note the comma `,` and the colon `:` around the keyword `do`).
+
+```elixir
+defmodule Calculator do
+  def subtract(x, y) do
+    private_subtract(x, y)
+  end
+
+  defp private_subtract(x, y), do: x - y
+end
+
+difference = Calculator.subtract(7, 2)
+# => 5
+
+difference = Calculator.private_subtract(7, 2)
+# => ** (UndefinedFunctionError) function Calculator.private_subtract/2 is undefined or private
+#       Calculator.private_subtract(7, 2)
 ```
 
 ### Arity of functions
