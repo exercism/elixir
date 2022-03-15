@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - The distance of a point `(x, y)` from the center of the target `(0, 0)` can be calculated with `sqrt(x*x + y *y)`

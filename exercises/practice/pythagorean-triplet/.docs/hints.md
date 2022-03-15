@@ -1,3 +1,5 @@
+# Hints
+
 ## General
 
 - If checking through all sorts of triangles is too slow, consider that [right triangles grow on trees][triples].
