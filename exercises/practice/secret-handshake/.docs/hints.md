@@ -1,4 +1,6 @@
-# General
+# Hints
+
+## General
 
 - Use `Bitwise` (or div/rem).
 - If you use `Bitwise`, an easy way to see if a particular bit is set is to compare

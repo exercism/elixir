@@ -1,4 +1,6 @@
-# General
+# Hints
+
+## General
 
 - For generating random numbers, Erlang's `:rand.uniform` or `Enum.random` are
 good places to start.
