@@ -68,6 +68,7 @@ defmodule SublistTest do
   end
 
   @tag :pending
+  @tag :slow
   test "huge sublist not in huge list" do
     assert Sublist.compare(Enum.to_list(10..1_000_001), Enum.to_list(1..1_000_000)) == :unequal
   end
