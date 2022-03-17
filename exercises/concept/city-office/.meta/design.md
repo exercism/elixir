@@ -12,6 +12,7 @@ This exercise should provide a boilerplate with already implemented functions th
 - naming arguments in a typespec
 - the difference between `String.t()` and `string()`
 - using atom literals in the typespec is a typical pattern (e.g. `{:ok, any()} | {:error, any()}`)
+- define doc tests
 
 ## Out of scope
 

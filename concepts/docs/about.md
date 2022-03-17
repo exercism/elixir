@@ -6,6 +6,7 @@ Elixir documentation:
 - Written in [**Markdown**][markdown].
 - Added by using special module attributes.
 - Typically uses the heredoc syntax for multiline strings.
+- Can include unit tests.
 
 Module attributes used for documentation:
 
@@ -91,6 +92,10 @@ Many modern IDEs that support Elixir can parse and display documentation and typ
 ## Internal modules and function
 
 If a module or a function is intended for internal usage only, you can mark it with `@moduledoc false` or `@doc false`. Those modules and functions will not be included in the generated documentation. Note that that doesn't make them private. They can still be invoked and/or imported. Check the [official documentation about hiding internal modules and functions][hiding-internal-modules-and-functions] to learn about potential solutions to this problem.
+
+## Doc tests
+
+You can attach unit tests directly to functions by including them in the `@doc` attribute. These are offset by indenting them 4 spaces. They start with a `iex>` prompt, just like in an `iex` shell. The output from the test is on a new line, indented the same 4 spaces. A blank space goes between each test. See the example at the top of the page.
 
 [markdown]: https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax
 [official-documentation]: https://hexdocs.pm/elixir/

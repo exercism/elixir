@@ -1,5 +1,6 @@
 defmodule FormTest do
   use ExUnit.Case
+  import ExUnit.CaptureIO
 
   # Dear Elixir learner,
   # If you're reading this test suite to gain some insights,
@@ -39,7 +40,7 @@ defmodule FormTest do
         )
       else
         actual_doc = doc_content["en"]
-        assert actual_doc == unquote(expected_doc)
+        assert actual_doc =~ unquote(expected_doc)
       end
     end
   end
@@ -201,6 +202,19 @@ defmodule FormTest do
         ["word :: String.t(), length :: non_neg_integer()", "String.t(), non_neg_integer()"],
         ":ok | {:error, pos_integer()}"
       )
+    end
+
+    test "has 2 passing doctests" do
+      defmodule CheckLengthOnly do
+        use ExUnit.Case
+        doctest Form, only: [{:check_length, 2}], import: true
+      end
+
+      output = capture_io(fn -> ExUnit.run() end)
+      IO.inspect(output, label: "output")
+      assert output =~ "2 doctests, 0 failures"
+      assert_doc({:check_length, 2}, "\n    :ok")
+      assert_doc({:check_length, 2}, ~r/\n    {:error, \d+}/)
     end
   end
 

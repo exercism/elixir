@@ -51,6 +51,8 @@ This is needed to check that the values of fields do not exceed the maximum allo
 It also tells you by how much the value exceeds the maximum.
 ```
 
+Add 2 doc tests at the end of the documentation. One should check for the `:ok` case, and one should check for the `{:error, _}` case.
+
 The typespec should explain that the function accepts two arguments, a string and a non-negative integer, and returns one of two possible values. It returns either the `:ok` atom or a 2-tuple with the first element being the `:error` atom, and the second a positive integer.
 
 ## 5. Document different address formats
