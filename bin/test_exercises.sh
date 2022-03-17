@@ -93,8 +93,14 @@ do
       module_name=$(cat "${test_file}" | sed -rn 's/^defmodule (.*)Test do$/\1 /p')
       doctest_code="doctest ${module_name}"
 
-      # .bak and rm part left here to simplify GNU/BSD sed options compatibility
-      sed -i.bak 's/use ExUnit.Case\(.*\)/use ExUnit.Case\1\n'" ${doctest_code}"'\n/g' "${test_file}" && rm -f "${test_file}.bak"
+      if [ ${module_name} != "Form" ]
+      then
+        # This module is skipped because it contains tests *for* doc tests.
+        # It already *has* a `doctest ...` line, and mix really doesn't like seeing that in a module twice.
+
+        # .bak and rm part left here to simplify GNU/BSD sed options compatibility
+        sed -i.bak 's/use ExUnit.Case\(.*\)/use ExUnit.Case\1\n'" ${doctest_code}"'\n/g' "${test_file}" && rm -f "${test_file}.bak"
+      fi
 
       # perform unit tests
       set +e
