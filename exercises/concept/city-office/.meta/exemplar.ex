@@ -36,6 +36,14 @@ defmodule Form do
 
   This is needed to check that the values of fields do not exceed the maximum allowed length.
   It also tells you by how much the value exceeds the maximum.
+
+  ## Examples
+
+      iex> Form.check_length("hello", 5)
+      :ok
+
+      iex> Form.check_length("hello", 3)
+      {:error, 2}
   """
   @spec check_length(String.t(), non_neg_integer()) :: :ok | {:error, pos_integer()}
   def check_length(word, length) do
