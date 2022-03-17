@@ -46,7 +46,7 @@ divider.(32)
 # => 10
 ```
 
-Make use of integer division.
+Make use of integer division so the output is compatible with the other functions' expected input.
 
 ## 5. Create an "and"-er
 
