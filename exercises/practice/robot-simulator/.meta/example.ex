@@ -1,4 +1,8 @@
 defmodule RobotSimulator do
+  @type robot() :: any()
+  @type direction() :: :north | :east | :south | :west
+  @type position() :: {integer(), integer()}
+
   defstruct direction: nil, position: nil
 
   @valid_directions [:north, :east, :south, :west]
@@ -8,7 +12,7 @@ defmodule RobotSimulator do
 
   Valid directions are: `:north`, `:east`, `:south`, `:west`
   """
-  @spec create(direction :: atom, position :: {integer, integer}) :: any
+  @spec create(direction, position) :: robot() | {:error, String.t()}
   def create(direction \\ :north, position \\ {0, 0}) do
     %RobotSimulator{} |> place(position) |> orient(direction)
   end
@@ -18,12 +22,15 @@ defmodule RobotSimulator do
 
   Valid instructions are: "R" (turn right), "L", (turn left), and "A" (advance)
   """
-  @spec simulate(robot :: %RobotSimulator{}, instructions :: String.t()) :: any
+  @spec simulate(robot, instructions :: String.t()) :: robot() | {:error, String.t()}
   def simulate(%RobotSimulator{} = robot, instructions) do
     instructions |> String.graphemes() |> Enum.reduce(robot, &move/2)
   end
 
+  @spec position(robot) :: position()
   def position(%RobotSimulator{position: pos}), do: pos
+
+  @spec direction(robot) :: direction()
   def direction(%RobotSimulator{direction: dir}), do: dir
 
   defp orient(%RobotSimulator{} = robot, direction) when direction in @valid_directions do
