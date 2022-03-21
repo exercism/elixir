@@ -1,6 +1,5 @@
 defmodule FormTest do
   use ExUnit.Case
-  import ExUnit.CaptureIO
 
   # Dear Elixir learner,
   # If you're reading this test suite to gain some insights,
@@ -136,6 +135,18 @@ defmodule FormTest do
     test "has a correct spec" do
       assert_spec({:blanks, 1}, ["n :: non_neg_integer()", "non_neg_integer()"], "String.t()")
     end
+
+    @tag task_id: 2
+    test "has a passing doctest using 3 as input" do
+      defmodule BlanksOnly do
+        use ExUnit.Case
+        doctest Form, only: [{:blanks, 1}], import: true
+      end
+
+      doctest_results = ExUnit.run()
+      assert doctest_results == %{excluded: 0, failures: 0, skipped: 0, total: 1}
+      assert_doc({:blanks, 1}, ~s/\n    "XXX"/)
+    end
   end
 
   describe "letters/1" do
@@ -164,6 +175,18 @@ defmodule FormTest do
     @tag task_id: 3
     test "has a typespec" do
       assert_spec({:letters, 1}, ["word :: String.t()", "String.t()"], "[String.t()]")
+    end
+
+    @tag task_id: 3
+    test "has a passing doctest for hello" do
+      defmodule LettersOnly do
+        use ExUnit.Case
+        doctest Form, only: [{:letters, 1}], import: true
+      end
+
+      doctest_results = ExUnit.run()
+      assert doctest_results == %{excluded: 0, failures: 0, skipped: 0, total: 1}
+      assert_doc({:letters, 1}, ~s/\n    ["H", "E", "L", "L", "O"]/)
     end
   end
 
@@ -204,6 +227,7 @@ defmodule FormTest do
       )
     end
 
+    @tag task_id: 4
     test "has 2 passing doctests" do
       defmodule CheckLengthOnly do
         use ExUnit.Case
@@ -281,6 +305,20 @@ defmodule FormTest do
     @tag task_id: 6
     test "has a typespec" do
       assert_spec({:format_address, 1}, ["address :: address()", "address()"], "String.t()")
+    end
+
+    @tag task_id: 6
+    test "has 2 passing doctests, for map and tuple mode" do
+      defmodule FormatAddressOnly do
+        use ExUnit.Case
+        doctest Form, only: [{:format_address, 1}], import: true
+      end
+
+      doctest_results = ExUnit.run()
+      IO.inspect(doctest_results, label: "results")
+      assert doctest_results == %{excluded: 0, failures: 0, skipped: 0, total: 2}
+      assert_doc({:format_address, 1}, ~s/\n    iex> Form.format_address(%{/)
+      assert_doc({:format_address, 1}, ~s/\n    iex> Form.format_address({/)
     end
   end
 end

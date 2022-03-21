@@ -16,7 +16,7 @@ A collection of loosely related functions helpful for filling out various forms 
 
 ## 2. Document filling out fields with blank values
 
-Add documentation and a typespec to the `Form.blanks/1` function. The documentation should read:
+Add documentation, a doc test, and a typespec to the `Form.blanks/1` function. The documentation should read:
 
 ```
 Generates a string of a given length.
@@ -25,11 +25,13 @@ This string can be used to fill out a form field that is supposed to have no val
 Such fields cannot be left empty because a malicious third party could fill them out with false data.
 ```
 
+Add a doc test at the end of the documentation. Test with 3 as your input.
+
 The typespec should explain that the function accepts a single argument, a non-negative integer, and returns a string.
 
 ## 3. Document splitting values into lists of uppercase letters
 
-Add documentation and a typespec to the `Form.letters/1` function. The documentation should read:
+Add documentation, a doc test, and a typespec to the `Form.letters/1` function. The documentation should read:
 
 ```
 Splits the string into a list of uppercase letters.
@@ -38,11 +40,13 @@ This is needed for form fields that don't offer a single input for the whole str
 but instead require splitting the string into a predefined number of single-letter inputs.
 ```
 
+Add a doc test at the end of the documentation. Test with the word "hello".
+
 The typespec should explain that the function accepts a single argument, a string, and returns a list of strings.
 
 ## 4. Document checking if a value fits a field with a max length
 
-Add documentation and a typespec to the `Form.check_length/2` function. The documentation should read:
+Add documentation, 2 doc tests, and a typespec to the `Form.check_length/2` function. The documentation should read:
 
 ```
 Checks if the value has no more than the maximum allowed number of letters.
@@ -66,10 +70,12 @@ Document this fact by defining three custom public types:
 
 ## 6. Document formatting the address
 
-Add documentation and a typespec to the `Form.format_address/1` function. The documentation should read:
+Add documentation, 2 doc tests, and a typespec to the `Form.format_address/1` function. The documentation should read:
 
 ```
 Formats the address as an uppercase multiline string.
 ```
+
+Add 2 doc tests at the end of the documentation. Test once with a map and once with a tuple.
 
 The typespec should explain that the function accepts one argument, an address, and returns a string.

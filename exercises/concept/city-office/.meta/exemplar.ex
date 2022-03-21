@@ -12,6 +12,10 @@ defmodule Form do
 
   This string can be used to fill out a form field that is supposed to have no value.
   Such fields cannot be left empty because a malicious third party could fill them out with false data.
+
+  ## Example
+      iex> Form.blanks(3)
+      "XXX"
   """
   @spec blanks(non_neg_integer()) :: String.t()
   def blanks(n) do
@@ -23,6 +27,10 @@ defmodule Form do
 
   This is needed for form fields that don't offer a single input for the whole string,
   but instead require splitting the string into a predefined number of single-letter inputs.
+
+  ## Example
+      iex> Form.letters("hello")
+      ["H", "E", "L", "L", "O"]
   """
   @spec letters(String.t()) :: list(String.t())
   def letters(word) do
@@ -58,6 +66,19 @@ defmodule Form do
 
   @doc """
   Formats the address as an uppercase multiline string.
+
+  ## Examples
+
+      iex> Form.format_address(%{street: "101 Main Street", postal_code: "12345", city: "Smalltown"})
+      "101 MAIN STREET
+      12345 SMALLTOWN
+      "
+
+      iex> Form.format_address({"1 Elixir Way", "78910", "BEAMville"})
+      "1 ELIXIR WAY
+      78910 BEAMVILLE
+      "
+
   """
   @spec format_address(address()) :: String.t()
   def format_address(%{street: street, postal_code: postal_code, city: city}) do
