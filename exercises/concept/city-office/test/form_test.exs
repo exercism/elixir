@@ -210,9 +210,8 @@ defmodule FormTest do
         doctest Form, only: [{:check_length, 2}], import: true
       end
 
-      output = capture_io(fn -> ExUnit.run() end)
-      IO.inspect(output, label: "output")
-      assert output =~ "2 doctests, 0 failures"
+      doctest_results = ExUnit.run()
+      assert doctest_results == %{excluded: 0, failures: 0, skipped: 0, total: 2}
       assert_doc({:check_length, 2}, "\n    :ok")
       assert_doc({:check_length, 2}, ~r/\n    {:error, \d+}/)
     end
