@@ -1,6 +1,4 @@
 {
-  "blurb": "Learn about recursion by keeping track of how many birds visit your garden each day.",
-  "icon": "bird-watcher",
   "authors": [
     "angelikatyborska"
   ],
@@ -18,8 +16,10 @@
       ".meta/exemplar.ex"
     ]
   },
+  "language_versions": ">=1.10",
   "forked_from": [
     "csharp/bird-watcher"
   ],
-  "language_versions": ">=1.10"
+  "icon": "bird-watcher",
+  "blurb": "Learn about recursion by keeping track of how many birds visit your garden each day."
 }

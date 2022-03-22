@@ -1,15 +1,19 @@
 {
-  "authors": ["jiegillet"],
-  "contributors": [ "angelikatyborska" ],
+  "authors": [
+    "jiegillet"
+  ],
+  "contributors": [
+    "angelikatyborska"
+  ],
   "files": {
-    "example": [
-      ".meta/example.ex"
-    ],
     "solution": [
       "lib/house.ex"
     ],
     "test": [
       "test/house_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
     ]
   },
   "blurb": "Output the nursery rhyme 'This is the House that Jack Built'.",

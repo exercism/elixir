@@ -1,15 +1,16 @@
 {
-  "authors": ["jiegillet"],
-  "contributors": [],
+  "authors": [
+    "jiegillet"
+  ],
   "files": {
-    "example": [
-      ".meta/example.ex"
-    ],
     "solution": [
       "lib/affine_cipher.ex"
     ],
     "test": [
       "test/affine_cipher_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
     ]
   },
   "blurb": "Create an implementation of the Affine cipher, an ancient encryption algorithm from the Middle East.",

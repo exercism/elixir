@@ -1,5 +1,4 @@
 {
-  "blurb": "Learn about streams by generating the Lucas number sequence.",
   "authors": [
     "neenjaw"
   ],
@@ -17,6 +16,6 @@
       ".meta/exemplar.ex"
     ]
   },
-  "forked_from": [],
-  "language_versions": ">=1.10"
+  "language_versions": ">=1.10",
+  "blurb": "Learn about streams by generating the Lucas number sequence."
 }

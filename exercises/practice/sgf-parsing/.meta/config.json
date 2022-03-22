@@ -1,20 +1,21 @@
 {
-  "authors": ["jiegillet"],
+  "authors": [
+    "jiegillet"
+  ],
   "contributors": [
     "neenjaw",
     "angelikatyborska"
   ],
   "files": {
-    "example": [
-      ".meta/example.ex"
-    ],
     "solution": [
       "lib/sgf_parsing.ex"
     ],
     "test": [
       "test/sgf_parsing_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
     ]
   },
-  "blurb": "Parsing a Smart Game Format string.",
-  "title": "SGF Parsing"
+  "blurb": "Parsing a Smart Game Format string."
 }

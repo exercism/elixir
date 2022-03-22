@@ -1,5 +1,4 @@
 {
-  "blurb": "Refactor a Markdown parser.",
   "authors": [],
   "contributors": [
     "angelikatyborska",
@@ -23,5 +22,6 @@
     "example": [
       ".meta/example.ex"
     ]
-  }
+  },
+  "blurb": "Refactor a Markdown parser."
 }

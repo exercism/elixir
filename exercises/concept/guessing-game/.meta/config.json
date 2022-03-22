@@ -1,5 +1,4 @@
 {
-  "blurb": "Learn about multiple clause functions, guards, and default arguments by implementing a simple game in which the player needs to guess a secret number.",
   "authors": [
     "neenjaw"
   ],
@@ -17,8 +16,9 @@
       ".meta/exemplar.ex"
     ]
   },
+  "language_versions": ">=1.10",
   "forked_from": [
     "fsharp/guessing-game"
   ],
-  "language_versions": ">=1.10"
+  "blurb": "Learn about multiple clause functions, guards, and default arguments by implementing a simple game in which the player needs to guess a secret number."
 }
