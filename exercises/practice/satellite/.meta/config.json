@@ -1,5 +1,4 @@
 {
-  "blurb": "Rebuild binary trees from pre-order and in-order traversals.",
   "authors": [
     "jiegillet"
   ],
@@ -16,5 +15,6 @@
     "example": [
       ".meta/example.ex"
     ]
-  }
+  },
+  "blurb": "Rebuild binary trees from pre-order and in-order traversals."
 }

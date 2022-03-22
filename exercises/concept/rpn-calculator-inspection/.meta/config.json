@@ -1,6 +1,4 @@
 {
-  "blurb": "Learn about tasks and links by inspecting a working prototype of your experimental Reverse Polish Notation calculator.",
-  "icon": "instruments-of-texas",
   "authors": [
     "angelikatyborska"
   ],
@@ -18,5 +16,7 @@
       ".meta/exemplar.ex"
     ]
   },
-  "language_versions": ">=1.10"
+  "language_versions": ">=1.10",
+  "icon": "instruments-of-texas",
+  "blurb": "Learn about tasks and links by inspecting a working prototype of your experimental Reverse Polish Notation calculator."
 }

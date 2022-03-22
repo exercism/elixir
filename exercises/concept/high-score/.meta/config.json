@@ -1,6 +1,4 @@
 {
-  "blurb": "Learn about maps by keeping track of the high scores in your local arcade hall.",
-  "icon": "high-scores",
   "authors": [
     "neenjaw"
   ],
@@ -15,5 +13,7 @@
       ".meta/exemplar.ex"
     ]
   },
-  "language_versions": ">=1.10"
+  "language_versions": ">=1.10",
+  "icon": "high-scores",
+  "blurb": "Learn about maps by keeping track of the high scores in your local arcade hall."
 }

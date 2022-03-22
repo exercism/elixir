@@ -1,15 +1,19 @@
 {
-  "authors": ["jiegillet"],
-  "contributors": ["angelikatyborska"],
+  "authors": [
+    "jiegillet"
+  ],
+  "contributors": [
+    "angelikatyborska"
+  ],
   "files": {
-    "example": [
-      ".meta/example.ex"
-    ],
     "solution": [
       "lib/resistor_color_trio.ex"
     ],
     "test": [
       "test/resistor_color_trio_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
     ]
   },
   "blurb": "Convert color codes, as used on resistors, to a human-readable label.",

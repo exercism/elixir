@@ -1,5 +1,4 @@
 {
-  "blurb": "no-op",
   "authors": [
     "angelikatyborska"
   ],
@@ -17,5 +16,6 @@
       ".meta/exemplar.ex"
     ]
   },
-  "language_versions": ">=1.10"
+  "language_versions": ">=1.10",
+  "blurb": "no-op"
 }

@@ -1,6 +1,4 @@
 {
-  "blurb": "Learn about structs by playing around with a remote controlled car.",
-  "icon": "elons-toys",
   "authors": [
     "neenjaw"
   ],
@@ -18,8 +16,10 @@
       ".meta/exemplar.ex"
     ]
   },
+  "language_versions": ">=1.10",
   "forked_from": [
     "csharp/elons-toys"
   ],
-  "language_versions": ">=1.10"
+  "icon": "elons-toys",
+  "blurb": "Learn about structs by playing around with a remote controlled car."
 }

@@ -1,5 +1,4 @@
 {
-  "blurb": "Detect palindrome products in a given range.",
   "authors": [
     "petehuang"
   ],
@@ -34,6 +33,7 @@
       ".meta/example.ex"
     ]
   },
+  "blurb": "Detect palindrome products in a given range.",
   "source": "Problem 4 at Project Euler",
   "source_url": "http://projecteuler.net/problem=4"
 }

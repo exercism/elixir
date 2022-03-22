@@ -1,5 +1,4 @@
 {
-  "blurb": "Add the numbers to a minesweeper board.",
   "authors": [],
   "contributors": [
     "andrewsardone",
@@ -30,5 +29,6 @@
     "example": [
       ".meta/example.ex"
     ]
-  }
+  },
+  "blurb": "Add the numbers to a minesweeper board."
 }

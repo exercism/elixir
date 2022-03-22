@@ -1,5 +1,4 @@
 {
-  "blurb": "Implement a simple shift cipher like Caesar and a more secure substitution cipher.",
   "authors": [
     "DoggettCK"
   ],
@@ -21,6 +20,7 @@
       ".meta/example.ex"
     ]
   },
+  "blurb": "Implement a simple shift cipher like Caesar and a more secure substitution cipher.",
   "source": "Substitution Cipher at Wikipedia",
   "source_url": "http://en.wikipedia.org/wiki/Substitution_cipher"
 }

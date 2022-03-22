@@ -1,5 +1,4 @@
 {
-  "blurb": "Given a string representing a matrix of numbers, return the rows and columns of that matrix.",
   "authors": [
     "DoggettCK"
   ],
@@ -21,6 +20,7 @@
       ".meta/example.ex"
     ]
   },
+  "blurb": "Given a string representing a matrix of numbers, return the rows and columns of that matrix.",
   "source": "Warmup to the `saddle-points` warmup.",
   "source_url": "http://jumpstartlab.com"
 }

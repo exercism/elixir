@@ -1,15 +1,16 @@
 {
-  "authors": ["jiegillet"],
-  "contributors": [],
+  "authors": [
+    "jiegillet"
+  ],
   "files": {
-    "example": [
-      ".meta/example.ex"
-    ],
     "solution": [
       "lib/square_root.ex"
     ],
     "test": [
       "test/square_root_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
     ]
   },
   "blurb": "Given a natural radicand, return its square root.",
