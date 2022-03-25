@@ -346,6 +346,7 @@
           "atoms",
           "tuples",
           "nil",
+          "strings",
           "anonymous-functions"
         ],
         "status": "active"

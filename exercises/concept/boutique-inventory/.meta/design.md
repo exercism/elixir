@@ -32,5 +32,6 @@
 
 - The function `sort_by_price/1` should use `Enum.sort_by`.
 - The function `with_missing_price/1` should use `Enum.filter` or `Enum.reject`.
-- The function `increase_quantity/2` should use `Enum.map`.
+- The function `update_names/3` should use `Enum.map`.
+- The function `increase_quantity/2` should use `Map.new`.
 - The function `total_quantity/1` should use `Enum.reduce`.
