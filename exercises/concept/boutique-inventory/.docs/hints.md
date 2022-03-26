@@ -15,7 +15,7 @@
 
 ## 3. Update item names
 
-- There is a [built-in function][enum-map] for replacing every element in an enumerable with another element.
+- There is a [built-in function][enum-map] for transforming every element in an enumerable.
 - There is a [built-in function][string-replace] that can replace all instances of one string with a different one.
 
 ## 4. Increment the item's quantity
