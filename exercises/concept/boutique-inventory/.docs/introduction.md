@@ -31,7 +31,7 @@ When using maps with `Enum` functions, the map gets automatically converted to a
 
 To transform it back to a map, use `Enum.into/2`. `Enum.into/2` is a function that transforms an enumerable into a collectable - any data structure implementing the `Collectable` protocol. It can be thought of as the opposite of `Enum.reduce/3`.
 
-`Enum` also have `Enum.into/3`. `Enum.into/3` is a variation of `Enum.into/2` that accepts a transformation function to be applied while transforming the enumerable into a collectable.
+`Enum` also has `Enum.into/3`. `Enum.into/3` is a variation of `Enum.into/2` that accepts a transformation function to be applied while transforming the enumerable into a collectable.
 
 #### Mapping maps
 
