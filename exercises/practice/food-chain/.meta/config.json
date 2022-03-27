@@ -1,15 +1,16 @@
 {
-  "authors": ["jiegillet"],
-  "contributors": [],
+  "authors": [
+    "jiegillet"
+  ],
   "files": {
-    "example": [
-      ".meta/example.ex"
-    ],
     "solution": [
       "lib/food_chain.ex"
     ],
     "test": [
       "test/food_chain_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
     ]
   },
   "blurb": "Generate the lyrics of the song 'I Know an Old Lady Who Swallowed a Fly'.",

@@ -1,17 +1,19 @@
 {
-  "authors": ["jiegillet"],
+  "authors": [
+    "jiegillet"
+  ],
   "contributors": [
     "neenjaw"
   ],
   "files": {
-    "example": [
-      ".meta/example.ex"
-    ],
     "solution": [
       "lib/variable_length_quantity.ex"
     ],
     "test": [
       "test/variable_length_quantity_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
     ]
   },
   "blurb": "Implement variable length quantity encoding and decoding.",

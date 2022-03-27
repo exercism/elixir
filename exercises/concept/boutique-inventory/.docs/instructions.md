@@ -50,7 +50,33 @@ BoutiqueInventory.with_missing_price([
 #    ]
 ```
 
-## 3. Increment the item's quantity
+## 3. Update item names
+
+You noticed that some item names have a word that you don't like to use anymore. Now you need to update all the item names with that word.
+
+Implement the `update_names/3` function. It should take the inventory, the old word that you want to remove, and a new word that you want to use instead. It should return a list of items with updated names.
+
+```elixir
+BoutiqueInventory.update_names(
+  [
+    %{price: 40, name: "Black T-shirt", quantity_by_size: %{}},
+    %{price: 70, name: "Denim Pants", quantity_by_size: %{}},
+    %{price: 65, name: "Denim Skirt", quantity_by_size: %{}},
+    %{price: 40, name: "Orange T-shirt", quantity_by_size: %{}}
+  ],
+  "T-shirt",
+  "Tee"
+)
+# => [
+#      %{price: 40, name: "Black Tee", quantity_by_size: %{}},
+#      %{price: 70, name: "Denim Pants", quantity_by_size: %{}},
+#      %{price: 65, name: "Denim Skirt", quantity_by_size: %{}},
+#      %{price: 40, name: "Orange Tee", quantity_by_size: %{}}
+#    ]
+```
+
+
+## 4. Increment the item's quantity
 
 Some items were selling especially well, so you ordered more, in all sizes.
 
@@ -73,7 +99,7 @@ BoutiqueInventory.increase_quantity(
 
 ```
 
-## 4. Calculate the item's total quantity
+## 5. Calculate the item's total quantity
 
 To know how much space you need in your storage, you need to know how many of each item you have in total.
 

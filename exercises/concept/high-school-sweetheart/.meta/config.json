@@ -1,6 +1,4 @@
 {
-  "blurb": "Learn about strings and the pipe operator by helping high school sweethearts profess their love on social media via ASCII art.",
-  "icon": "high-school-sweethearts",
   "authors": [
     "angelikatyborska"
   ],
@@ -18,5 +16,7 @@
       ".meta/exemplar.ex"
     ]
   },
-  "language_versions": ">=1.10"
+  "language_versions": ">=1.10",
+  "icon": "high-school-sweethearts",
+  "blurb": "Learn about strings and the pipe operator by helping high school sweethearts profess their love on social media via ASCII art."
 }

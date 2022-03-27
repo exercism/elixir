@@ -61,8 +61,18 @@ defmodule WordCountTest do
 
   @tag :pending
   test "with apostrophes" do
-    expected = %{"first" => 1, "don't" => 2, "laugh" => 1, "then" => 1, "cry" => 1}
-    assert WordCount.count("First: don't laugh. Then: don't cry.") == expected
+    expected = %{
+      "first" => 1,
+      "don't" => 2,
+      "laugh" => 1,
+      "then" => 1,
+      "cry" => 1,
+      "you're" => 1,
+      "getting" => 1,
+      "it" => 1
+    }
+
+    assert WordCount.count("First: don't laugh. Then: don't cry. You're getting it.") == expected
   end
 
   @tag :pending

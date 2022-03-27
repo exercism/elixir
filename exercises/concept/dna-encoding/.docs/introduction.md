@@ -54,7 +54,7 @@ value == 0b0110
 
 ## Tail Call Recursion
 
-When recursing through enumerables (lists, bitstrings, strings), there are often two concerns:
+When [recursing][exercism-recursion] through enumerables (lists, bitstrings, strings), there are often two concerns:
 
 - how much memory is required to store the trail of recursive function calls
 - how to build the solution efficiently
@@ -78,3 +78,5 @@ defp do_count([_head | tail], count), do: do_count(tail, count + 1)
 ```
 
 The usage of an accumulator allows us to turn recursive functions into _tail-recursive_ functions. A function is tail-recursive if the _last_ thing executed by the function is a call to itself.
+
+[exercism-recursion]: https://exercism.org/tracks/elixir/concepts/recursion

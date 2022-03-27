@@ -7,6 +7,10 @@ defmodule BoutiqueInventory do
     # Please implement the with_missing_price/1 function
   end
 
+  def update_names(inventory, old_word, new_word) do
+    # Please implement the update_names/3 function
+  end
+
   def increase_quantity(item, count) do
     # Please implement the increase_quantity/2 function
   end

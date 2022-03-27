@@ -1,5 +1,4 @@
 {
-  "blurb": "Learn about the basics of Elixir by following a lasagna recipe.",
   "authors": [
     "neenjaw"
   ],
@@ -17,8 +16,9 @@
       ".meta/exemplar.ex"
     ]
   },
+  "language_versions": ">=1.10",
   "forked_from": [
     "csharp/lucians-luscious-lasagna"
   ],
-  "language_versions": ">=1.10"
+  "blurb": "Learn about the basics of Elixir by following a lasagna recipe."
 }

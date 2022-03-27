@@ -25,13 +25,11 @@
 - Anonymous functions.
 - Default arguments.
 - Organizing functions in namespaces.
-- Visibility (`defp`).
-- Single-line functions
 - `@moduledoc` and `@doc` multi-line comments
 
 ## Concepts
 
-- `basics`: know what a variable is; know how to define a variable; know how to update a variable; know how to use type inference for variables; know how to define a function; know how to return a value from a function; know how to call a function; know that functions must be defined in classes; know about the `public` access modifier; know how to define an integer; know how to define a string; know how to use mathematical operators on integers; know how to define single-line comments.
+- `basics`: know what a variable is; know how to define a variable; know how to update a variable; know how to use type inference for variables; know how to define a function; know how to return a value from a function; know how to call a function; know that functions must be defined in modules; know how to define an integer; know how to define a string; know how to use mathematical operators on integers; know how to define single-line comments.
 
 ## Prerequisites
 
@@ -39,7 +37,7 @@ There are no prerequisites.
 
 ## Analyzer
 
-This exercise could benefit from the following rules added to the the [analyzer][analyzer]:
+This exercise could benefit from the following rules added to the [analyzer][analyzer]:
 
 - Verify that the `remaining_minutes_in_oven/1` function calls the `expected_minutes_in_oven/0` function.
 - Verify that the `total_time_in_minutes/2` function calls the `preparation_time_in_minutes/1` function.

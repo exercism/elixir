@@ -1,5 +1,4 @@
 {
-  "blurb": "Create a custom set type.",
   "authors": [],
   "contributors": [
     "angelikatyborska",
@@ -26,5 +25,6 @@
     "example": [
       ".meta/example.ex"
     ]
-  }
+  },
+  "blurb": "Create a custom set type."
 }

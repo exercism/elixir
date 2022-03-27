@@ -1,17 +1,19 @@
 {
-  "authors": ["jiegillet"],
+  "authors": [
+    "jiegillet"
+  ],
   "contributors": [
     "angelikatyborska"
   ],
   "files": {
-    "example": [
-      ".meta/example.ex"
-    ],
     "solution": [
       "lib/go_counting.ex"
     ],
     "test": [
       "test/go_counting_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
     ]
   },
   "blurb": "Count the scored points on a Go board."

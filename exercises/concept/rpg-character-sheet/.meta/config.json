@@ -1,6 +1,4 @@
 {
-  "blurb": "Learn about IO (input/output) by guiding your friends through the character creation process for your pen-and-paper role-playing game.",
-  "icon": "wizards-and-warriors",
   "authors": [
     "angelikatyborska"
   ],
@@ -18,5 +16,7 @@
       ".meta/exemplar.ex"
     ]
   },
-  "language_versions": ">=1.10"
+  "language_versions": ">=1.10",
+  "icon": "wizards-and-warriors",
+  "blurb": "Learn about IO (input/output) by guiding your friends through the character creation process for your pen-and-paper role-playing game."
 }

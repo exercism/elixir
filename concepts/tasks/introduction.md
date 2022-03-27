@@ -1,6 +1,6 @@
 # Introduction
 
-Tasks are processes meant to execute one specific operation.
+Tasks are [processes][exercism-processes] meant to execute one specific operation.
 They usually don't communicate with other processes, but they can return a result to the process that started the task.
 
 Tasks are commonly used to parallelize work.
@@ -18,3 +18,5 @@ Any task started with `Task.async/1` should be awaited because it will send a me
 ## `start`/`start_link`
 
 If you want to start a task for side-effects only, use `Task.start/1` or `Task.start_link/1`. `Task.start/1` will start a task that is not linked to the calling process, and `Task.start_link/1` will start a task that is linked to the calling process. Both functions return a `{:ok, pid}` tuple.
+
+[exercism-processes]: https://exercism.org/tracks/elixir/concepts/processes

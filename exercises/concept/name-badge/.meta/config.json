@@ -1,6 +1,4 @@
 {
-  "blurb": "Learn about nil and the if conditional expression by printing name badges for factory employees.",
-  "icon": "tim-from-marketing",
   "authors": [
     "angelikatyborska"
   ],
@@ -18,8 +16,10 @@
       ".meta/exemplar.ex"
     ]
   },
+  "language_versions": ">=1.10",
   "forked_from": [
     "csharp/tim-from-marketing"
   ],
-  "language_versions": ">=1.10"
+  "icon": "tim-from-marketing",
+  "blurb": "Learn about nil and the if conditional expression by printing name badges for factory employees."
 }

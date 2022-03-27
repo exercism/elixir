@@ -1,5 +1,4 @@
 {
-  "blurb": "Learn about charlists and the case conditional expression by sanitizing usernames of employees in a German company.",
   "authors": [
     "angelikatyborska"
   ],
@@ -17,5 +16,6 @@
       ".meta/exemplar.ex"
     ]
   },
-  "language_versions": ">=1.10"
+  "language_versions": ">=1.10",
+  "blurb": "Learn about charlists and the case conditional expression by sanitizing usernames of employees in a German company."
 }

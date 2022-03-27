@@ -1,6 +1,6 @@
 # About
 
-[Guards][guards] are used as a complement to pattern matching. They allow for more complex checks. They can be used in [some, but not all situations][where-guards-can-be-used] where pattern matching can be used, for example in function clauses or case clauses.
+[Guards][guards] are used as a complement to [pattern matching][exercism-pattern-matching]. They allow for more complex checks. They can be used in [some, but not all situations][where-guards-can-be-used] where pattern matching can be used, for example in function clauses or case clauses.
 
 ```elixir
 def empty?(list) when is_list(list) and length(list) == 0 do
@@ -50,3 +50,4 @@ end
 [defguard]: https://hexdocs.pm/elixir/Kernel.html#defguard/1
 [naming]: https://hexdocs.pm/elixir/naming-conventions.html#is_-prefix-is_foo
 [where-guards-can-be-used]: https://hexdocs.pm/elixir/master/patterns-and-guards.html#where-patterns-and-guards-can-be-used
+[exercism-pattern-matching]: https://exercism.org/tracks/elixir/concepts/pattern-matching

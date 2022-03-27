@@ -1,5 +1,4 @@
 {
-  "blurb": "Implement rational numbers.",
   "authors": [
     "jiegillet"
   ],
@@ -18,6 +17,7 @@
       ".meta/example.ex"
     ]
   },
+  "blurb": "Implement rational numbers.",
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Rational_number"
 }

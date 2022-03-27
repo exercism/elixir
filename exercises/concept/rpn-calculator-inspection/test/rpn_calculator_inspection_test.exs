@@ -253,10 +253,21 @@ defmodule RPNCalculatorInspectionTest do
     @tag task_id: 3
     test "returns a map when input list has 1000 elements and the calculator takes 50ms for each calculation" do
       inputs = Enum.map(1..1000, &"#{2 * &1} #{&1} /")
+      parent_pid = self()
       calculator = fn input -> :timer.sleep(50) && RPNCalculator.unsafe_division(input) end
-      outputs = 1..1000 |> Enum.map(&{"#{2 * &1} #{&1} /", :ok}) |> Enum.into(%{})
 
-      assert RPNCalculatorInspection.reliability_check(calculator, inputs) == outputs
+      Task.start_link(fn ->
+        outputs = RPNCalculatorInspection.reliability_check(calculator, inputs)
+        send(parent_pid, {:outputs, outputs})
+      end)
+
+      expected = 1..1000 |> Enum.map(&{"#{2 * &1} #{&1} /", :ok}) |> Enum.into(%{})
+
+      assert_receive(
+        {:outputs, ^expected},
+        5000,
+        "This test shouldn't take this long to complete. Make sure to start all tasks first before awaiting them."
+      )
     end
 
     @tag task_id: 3

@@ -3,14 +3,14 @@ defmodule OcrNumbers do
   Given a 3 x 4 grid of pipes, underscores, and spaces, determine which number is represented, or
   whether it is garbled.
   """
-  @spec convert([String.t()]) :: {:ok, String.t()} | {:error, charlist()}
+  @spec convert([String.t()]) :: {:ok, String.t()} | {:error, String.t()}
   def convert(input) do
     Enum.chunk_every(input, 4)
     |> Enum.map(fn row_set -> convert(row_set, "") end)
     |> format_output()
   end
 
-  defp format_output([]), do: {:error, 'invalid line count'}
+  defp format_output([]), do: {:error, "invalid line count"}
   defp format_output(rows), do: format_output(Enum.any?(rows, &error?/1), rows)
   defp format_output(true, rows), do: Enum.find(rows, &error?/1)
   defp format_output(false, output), do: {:ok, Enum.join(output, ",")}
@@ -19,7 +19,7 @@ defmodule OcrNumbers do
   defp error?(_), do: false
 
   defp convert(_, {:error, _} = error), do: error
-  defp convert(input, _) when length(input) != 4, do: {:error, 'invalid line count'}
+  defp convert(input, _) when length(input) != 4, do: {:error, "invalid line count"}
   defp convert(["", "", "", ""], output), do: output
 
   defp convert(input, output) do
@@ -32,7 +32,7 @@ defmodule OcrNumbers do
   end
 
   defp update_output([3, 3, 3, 3], chars, output), do: output <> recognize_character(chars)
-  defp update_output(_, _, _), do: {:error, 'invalid column count'}
+  defp update_output(_, _, _), do: {:error, "invalid column count"}
 
   defp recognize_character([" _ ", "| |", "|_|", "   "]), do: "0"
   defp recognize_character(["   ", "  |", "  |", "   "]), do: "1"

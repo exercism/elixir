@@ -1,9 +1,6 @@
 {
-  "blurb": "Implement complex numbers.",
   "authors": [
     "jiegillet"
-  ],
-  "contributors": [
   ],
   "files": {
     "solution": [
@@ -16,6 +13,7 @@
       ".meta/example.ex"
     ]
   },
+  "blurb": "Implement complex numbers.",
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Complex_number"
 }

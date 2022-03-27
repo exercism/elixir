@@ -37,7 +37,7 @@ jobs:
           echo "::set-output name=cache_key::$cache_key"
 
       - name: Retrieve Mix Dependencies Cache
-        uses: actions/cache@v2.1.7
+        uses: actions/cache@v3
         id: mix-cache # id to use in retrieve action
         with:
           path: deps
@@ -51,7 +51,7 @@ jobs:
         run: mix
 
       - name: Retrieve PLT Cache
-        uses: actions/cache@v2.1.7
+        uses: actions/cache@v3
         id: plt-cache
         with:
           path: priv/plts
@@ -106,7 +106,7 @@ jobs:
           echo "::set-output name=cache_key::$cache_key"
 
       - name: Retrieve Mix Dependencies Cache
-        uses: actions/cache@v2.1.7
+        uses: actions/cache@v3
         id: mix-cache # id to use in retrieve action
         with:
           path: deps

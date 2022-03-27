@@ -1,5 +1,4 @@
 {
-  "blurb": "Learn about the Abstract Syntax Tree (AST) by helping decode secret messages from Agent Ex.",
   "authors": [
     "jiegillet",
     "angelikatyborska"
@@ -15,5 +14,6 @@
       ".meta/exemplar.ex"
     ]
   },
-  "language_versions": ">=1.10"
+  "language_versions": ">=1.10",
+  "blurb": "Learn about the Abstract Syntax Tree (AST) by helping decode secret messages from Agent Ex."
 }

@@ -1,5 +1,4 @@
 {
-  "blurb": "Learn about lists by keeping track of the programing languages you're currently learning on Exercism.",
   "authors": [
     "neenjaw"
   ],
@@ -17,8 +16,9 @@
       ".meta/exemplar.ex"
     ]
   },
+  "language_versions": ">=1.10",
   "forked_from": [
     "clojure/tracks-on-tracks-on-tracks"
   ],
-  "language_versions": ">=1.10"
+  "blurb": "Learn about lists by keeping track of the programing languages you're currently learning on Exercism."
 }

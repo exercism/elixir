@@ -84,6 +84,13 @@ defmodule TakeANumberTest do
     send(pid, {:report_state, self()})
     assert_receive 1
 
+    # This is necessary because `Process.info/1` is not guaranteed to return up-to-date info immediately.
+    dirty_hacky_delay_to_ensure_up_to_date_process_info = 200
+    :timer.sleep(dirty_hacky_delay_to_ensure_up_to_date_process_info)
+
+    # Do not use `Process.info/1` in your own code.
+    # It's meant for debugging purposes only.
+    # We use it here for didactic purposes because there is no alternative that would achieve the same result.
     assert Keyword.get(Process.info(pid), :message_queue_len) == 0
   end
 end

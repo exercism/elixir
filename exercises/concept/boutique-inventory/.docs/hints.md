@@ -13,14 +13,18 @@
 
 - There is a [built-in function][enum-filter] for filtering enumerables.
 
-## 3. Increment the item's quantity
+## 3. Update item names
+
+- There is a [built-in function][enum-map] for transforming every element in an enumerable.
+- There is a [built-in function][string-replace] that can replace all instances of one string with a different one.
+
+## 4. Increment the item's quantity
 
 - Maps implement the enumerable protocol.
 - `Enum` functions convert maps to a list of `{key, value}` tuples.
-- There is a [built-in function][enum-map] for replacing every element in an enumerable with another element.
-- There is a [built-in function][enum-into] that can transform a list of `{key, value}` tuples back into a map.
+- There are two different functions that can transform a list of `{key, value}` tuples back into a map using a transformation function. [One of them always returns a new map][map-new], while [the other lets you choose a collectible][enum-into].
 
-## 4. Calculate the item's total quantity
+## 5. Calculate the item's total quantity
 
 - Maps implement the enumerable protocol.
 - `Enum` functions convert maps to a list of `{key, value}` tuples.
@@ -32,5 +36,7 @@
 [enum-sort-by]: https://hexdocs.pm/elixir/Enum.html#sort_by/3
 [enum-filter]: https://hexdocs.pm/elixir/Enum.html#filter/2
 [enum-map]: https://hexdocs.pm/elixir/Enum.html#map/2
-[enum-into]: https://hexdocs.pm/elixir/Enum.html#into/2
+[enum-into]: https://hexdocs.pm/elixir/Enum.html#into/3
 [enum-reduce]: https://hexdocs.pm/elixir/Enum.html#reduce/3
+[map-new]: https://hexdocs.pm/elixir/Map.html#new/2
+[string-replace]: https://hexdocs.pm/elixir/String.html#replace/4

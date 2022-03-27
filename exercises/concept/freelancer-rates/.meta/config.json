@@ -1,5 +1,4 @@
 {
-  "blurb": "Learn about integers and floating point numbers by helping a freelancer communicate with a project manager about billing.",
   "authors": [
     "angelikatyborska"
   ],
@@ -17,8 +16,9 @@
       ".meta/exemplar.ex"
     ]
   },
+  "language_versions": ">=1.10",
   "forked_from": [
     "javascript/freelancer-rates"
   ],
-  "language_versions": ">=1.10"
+  "blurb": "Learn about integers and floating point numbers by helping a freelancer communicate with a project manager about billing."
 }

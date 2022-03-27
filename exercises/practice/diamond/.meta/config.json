@@ -1,5 +1,4 @@
 {
-  "blurb": "Given a letter, print a diamond starting with 'A' with the supplied letter at the widest point.",
   "authors": [
     "jimmbraddock"
   ],
@@ -25,6 +24,7 @@
       ".meta/example.ex"
     ]
   },
+  "blurb": "Given a letter, print a diamond starting with 'A' with the supplied letter at the widest point.",
   "source": "Seb Rose",
   "source_url": "http://claysnow.co.uk/recycling-tests-in-tdd/"
 }

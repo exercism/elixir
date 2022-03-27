@@ -1,5 +1,4 @@
 {
-  "blurb": "Implement basic list operations.",
   "authors": [],
   "contributors": [
     "andrewsardone",
@@ -28,5 +27,6 @@
     "example": [
       ".meta/example.ex"
     ]
-  }
+  },
+  "blurb": "Implement basic list operations."
 }
