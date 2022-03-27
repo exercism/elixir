@@ -20,7 +20,7 @@
 - `pids`
 - `agent`
 - `behaviours`
-- `struct`
+- `structs`
 - `tuples`
 - `keyword-lists`
 - `typespecs`

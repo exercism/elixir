@@ -1,0 +1,10 @@
+[
+  {
+    "url": "https://elixir-lang.org/getting-started/mix-otp/genserver.html",
+    "description": "Getting Started - GenServer"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/GenServer.html",
+    "description": "Documentation - Genserver"
+  }
+]

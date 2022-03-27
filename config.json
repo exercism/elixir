@@ -614,6 +614,26 @@
           "enum"
         ],
         "status": "active"
+      },
+      {
+        "slug": "take-a-number-deluxe",
+        "name": "Take-A-Number Deluxe",
+        "uuid": "93e8ef96-0c76-4466-bd02-f16c4fb29c12",
+        "concepts": [
+          "genserver"
+        ],
+        "prerequisites": [
+          "processes",
+          "pids",
+          "agent",
+          "behaviours",
+          "structs",
+          "tuples",
+          "keyword-lists",
+          "typespecs",
+          "erlang-libraries"
+        ],
+        "status": "beta"
       }
     ],
     "practice": [
@@ -2989,6 +3009,11 @@
       "uuid": "a0a894e1-c54d-4c7a-89bf-653e6efb0039",
       "slug": "floating-point-numbers",
       "name": "Floating Point Numbers"
+    },
+    {
+      "uuid": "23ac8ee4-382d-4297-a7a0-bf72dca94150",
+      "slug": "genserver",
+      "name": "GenServer"
     },
     {
       "uuid": "5dd6841b-3875-499c-9de7-4cf4d033e68f",
