@@ -98,7 +98,7 @@ defmodule TakeANumberDeluxeTest do
                %TakeANumberDeluxe.State{
                  min_number: 1,
                  max_number: 99,
-                 queue: [3, 2, 1]
+                 queue: :queue.in(3, :queue.in(2, :queue.in(1, :queue.new())))
                }
     end
   end
@@ -158,11 +158,14 @@ defmodule TakeANumberDeluxeTest do
       assert TakeANumberDeluxe.serve_next_queued_number(pid) == {:ok, 1}
       assert TakeANumberDeluxe.serve_next_queued_number(pid) == {:ok, 2}
 
+      queue =
+        :queue.delete(2, :queue.delete(1, :queue.in(3, :queue.in(2, :queue.in(1, :queue.new())))))
+
       assert TakeANumberDeluxe.report_state(pid) ==
                %TakeANumberDeluxe.State{
                  min_number: 1,
                  max_number: 99,
-                 queue: [3]
+                 queue: queue
                }
     end
   end
@@ -190,7 +193,7 @@ defmodule TakeANumberDeluxeTest do
                %TakeANumberDeluxe.State{
                  min_number: 7,
                  max_number: 77,
-                 queue: []
+                 queue: :queue.from_list([])
                }
     end
 

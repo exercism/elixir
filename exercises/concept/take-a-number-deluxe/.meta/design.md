@@ -24,6 +24,7 @@
 - `tuples`
 - `keyword-lists`
 - `typespecs`
+- `erlang-libraries`
 
 ## Analyzer
 

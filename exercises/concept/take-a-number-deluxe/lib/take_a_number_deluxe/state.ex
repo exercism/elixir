@@ -1,11 +1,11 @@
 defmodule TakeANumberDeluxe.State do
-  defstruct min_number: 1, max_number: 999, queue: []
+  defstruct min_number: 1, max_number: 999, queue: nil
   @type t :: %__MODULE__{}
 
   @spec new(integer, integer) :: {:ok, TakeANumberDeluxe.State.t()} | {:error, :atom}
   def new(min_number, max_number) do
     if is_integer(min_number) and is_integer(max_number) and min_number < max_number do
-      {:ok, %__MODULE__{min_number: min_number, max_number: max_number}}
+      {:ok, %__MODULE__{min_number: min_number, max_number: max_number, queue: :queue.new()}}
     else
       {:error, :invalid_configuration}
     end
@@ -16,7 +16,8 @@ defmodule TakeANumberDeluxe.State do
   def queue_new_number(%__MODULE__{} = state) do
     case find_next_available_number(state) do
       {:ok, next_available_number} ->
-        {:ok, next_available_number, %{state | queue: [next_available_number | state.queue]}}
+        {:ok, next_available_number,
+         %{state | queue: :queue.in(next_available_number, state.queue)}}
 
       {:error, error} ->
         {:error, error}
@@ -26,24 +27,24 @@ defmodule TakeANumberDeluxe.State do
   @spec serve_next_queued_number(TakeANumberDeluxe.State.t(), integer) ::
           {:ok, TakeANumberDeluxe.State.t()} | {:error, :atom}
   def serve_next_queued_number(%__MODULE__{} = state, priority_number) do
-    priority_number_index = Enum.find_index(state.queue, &(&1 == priority_number))
-
     cond do
-      state.queue == [] ->
+      :queue.is_empty(state.queue) ->
         {:error, :empty_queue}
 
-      priority_number != nil && priority_number_index == nil ->
-        {:error, :priority_number_not_found}
+      is_nil(priority_number) ->
+        {{:value, next_number}, new_queue} = :queue.out(state.queue)
+        {:ok, next_number, %{state | queue: new_queue}}
+
+      :queue.member(priority_number, state.queue) ->
+        {:ok, priority_number, %{state | queue: :queue.delete(priority_number, state.queue)}}
 
       true ->
-        next_queued_number_index = priority_number_index || length(state.queue) - 1
-        {next_queued_number, new_queue} = List.pop_at(state.queue, next_queued_number_index)
-        {:ok, next_queued_number, %{state | queue: new_queue}}
+        {:error, :priority_number_not_found}
     end
   end
 
   defp find_next_available_number(state) do
-    all_numbers_in_use = state.queue
+    all_numbers_in_use = :queue.to_list(state.queue)
     all_numbers = Enum.to_list(state.min_number..state.max_number)
 
     case all_numbers_in_use do
