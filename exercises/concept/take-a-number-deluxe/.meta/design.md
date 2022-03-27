@@ -23,6 +23,7 @@
 - `struct`
 - `tuples`
 - `keyword-lists`
+- `typespecs`
 
 ## Analyzer
 

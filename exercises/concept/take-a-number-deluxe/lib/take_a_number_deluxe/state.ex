@@ -1,6 +1,8 @@
 defmodule TakeANumberDeluxe.State do
   defstruct min_number: 1, max_number: 999, queue: []
+  @type t :: %__MODULE__{}
 
+  @spec new(integer, integer) :: {:ok, TakeANumberDeluxe.State.t()} | {:error, :atom}
   def new(min_number, max_number) do
     if is_integer(min_number) and is_integer(max_number) and min_number < max_number do
       {:ok, %__MODULE__{min_number: min_number, max_number: max_number}}
@@ -9,6 +11,8 @@ defmodule TakeANumberDeluxe.State do
     end
   end
 
+  @spec queue_new_number(TakeANumberDeluxe.State.t()) ::
+          {:ok, TakeANumberDeluxe.State.t()} | {:error, :atom}
   def queue_new_number(%__MODULE__{} = state) do
     case find_next_available_number(state) do
       {:ok, next_available_number} ->
@@ -19,6 +23,8 @@ defmodule TakeANumberDeluxe.State do
     end
   end
 
+  @spec serve_next_queued_number(TakeANumberDeluxe.State.t(), integer) ::
+          {:ok, TakeANumberDeluxe.State.t()} | {:error, :atom}
   def serve_next_queued_number(%__MODULE__{} = state, priority_number) do
     priority_number_index = Enum.find_index(state.queue, &(&1 == priority_number))
 
@@ -30,7 +36,7 @@ defmodule TakeANumberDeluxe.State do
         {:error, :priority_number_not_found}
 
       true ->
-        next_queued_number_index = priority_number_index || (length(state.queue) - 1)
+        next_queued_number_index = priority_number_index || length(state.queue) - 1
         {next_queued_number, new_queue} = List.pop_at(state.queue, next_queued_number_index)
         {:ok, next_queued_number, %{state | queue: new_queue}}
     end

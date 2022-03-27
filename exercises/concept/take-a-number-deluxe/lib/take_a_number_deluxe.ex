@@ -1,5 +1,4 @@
 defmodule TakeANumberDeluxe do
-
   # Client API
 
   def start_link(init_arg) do
