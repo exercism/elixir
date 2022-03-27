@@ -12,7 +12,7 @@
 ## Concepts
 
 - `behaviours`
-- `use`, `__using__`
+- `use`
 
 ## Prerequisites
 
