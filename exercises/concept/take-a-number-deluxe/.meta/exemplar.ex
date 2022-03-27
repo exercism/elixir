@@ -25,7 +25,7 @@ defmodule TakeANumberDeluxe do
 
   # Server callbacks
 
-  @impl true
+  @impl GenServer
   def init(init_arg) do
     min_number = Keyword.get(init_arg, :min_number)
     max_number = Keyword.get(init_arg, :max_number)
@@ -36,12 +36,12 @@ defmodule TakeANumberDeluxe do
     end
   end
 
-  @impl true
+  @impl GenServer
   def handle_call(:report_state, _from, state) do
     {:reply, state, state}
   end
 
-  @impl true
+  @impl GenServer
   def handle_call(:queue_new_number, _from, state) do
     case TakeANumberDeluxe.State.queue_new_number(state) do
       {:ok, new_number, new_state} ->
@@ -52,7 +52,7 @@ defmodule TakeANumberDeluxe do
     end
   end
 
-  @impl true
+  @impl GenServer
   def handle_call({:serve_next_queued_number, priority_number}, _from, state) do
     case TakeANumberDeluxe.State.serve_next_queued_number(state, priority_number) do
       {:ok, next_number, new_state} ->
@@ -63,19 +63,19 @@ defmodule TakeANumberDeluxe do
     end
   end
 
-  @impl true
+  @impl GenServer
   def handle_cast(:reset_state, state) do
     {:ok, state} = TakeANumberDeluxe.State.new(state.min_number, state.max_number)
     {:noreply, state}
   end
 
-  @impl true
+  @impl GenServer
   def handle_info({:take_a_number, sender_pid}, state) do
     send(sender_pid, {:error, :basic_model_message_received_by_deluxe_model_server})
     {:noreply, state}
   end
 
-  @impl true
+  @impl GenServer
   def handle_info(_, state) do
     {:noreply, state}
   end
