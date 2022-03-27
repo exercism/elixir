@@ -60,6 +60,27 @@ Enum.reduce([1, 2, 3, 4, 5], [], fn x, acc -> [x + 10 | acc] end)
 # => [15, 14, 13, 12, 11]
 ```
 
+## Mapping maps
+
+- With [`Map.new/2`][map-new]:
+  ```elixir
+  %{a: 1, b: 2}
+  |> Map.new(fn {key, value} -> {key, value * 10} end)
+  ```
+
+- With [`Enum.into/3`][map-into]:
+  ```elixir
+  %{a: 1, b: 2}
+  |> Enum.into(%{}, fn {key, value} -> {key, value * 10} end)
+  ```
+
+- With [`Enum.map/3`][map-into-3]:
+  ```elixir
+  %{a: 1, b: 2}
+  |> Enum.map(fn {key, value} -> {key, value * 10} end)
+  |> Enum.into(%{})
+  ```
+
 [enum-functions]: https://hexdocs.pm/elixir/Enum.html#functions
 [enum-sort/2]: https://hexdocs.pm/elixir/Enum.html#sort/2
 [enum-sort_by/2]: https://hexdocs.pm/elixir/Enum.html#sort_by/2
@@ -71,6 +92,9 @@ Enum.reduce([1, 2, 3, 4, 5], [], fn x, acc -> [x + 10 | acc] end)
 [enum-max/3]: https://hexdocs.pm/elixir/Enum.html#max/3
 [enum-reduce/3]: https://hexdocs.pm/elixir/Enum.html#reduce/3
 [enum-reduce_while/3]: https://hexdocs.pm/elixir/Enum.html#reduce_while/3
+[enum-into]: https://hexdocs.pm/elixir/Enum.html#into/3
+[enum-map]: https://hexdocs.pm/elixir/Enum.html#map/2
+[map-new]: https://hexdocs.pm/elixir/Map.html#new/2
 [list]: https://hexdocs.pm/elixir/List.html
 [map]: https://hexdocs.pm/elixir/Map.html
 [range]: https://hexdocs.pm/elixir/Range.html

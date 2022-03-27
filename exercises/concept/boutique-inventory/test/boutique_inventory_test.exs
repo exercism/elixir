@@ -57,8 +57,45 @@ defmodule BoutiqueInventoryTest do
     end
   end
 
-  describe "increase_quantity/2" do
+  describe "update_names/3" do
     @tag task_id: 3
+    test "works for an empty inventory" do
+      assert BoutiqueInventory.update_names([], "T-Shirt", "Tee") == []
+    end
+
+    @tag task_id: 3
+    test "replaces the word in all the names" do
+      assert BoutiqueInventory.update_names(
+               [
+                 %{name: "Bambo Socks Avocado", price: 10, quantity_by_size: %{}},
+                 %{name: "3x Bambo Socks Palm Trees", price: 26, quantity_by_size: %{}},
+                 %{name: "Red Sequin Top", price: 87, quantity_by_size: %{}}
+               ],
+               "Bambo",
+               "Bamboo"
+             ) == [
+               %{name: "Bamboo Socks Avocado", price: 10, quantity_by_size: %{}},
+               %{name: "3x Bamboo Socks Palm Trees", price: 26, quantity_by_size: %{}},
+               %{name: "Red Sequin Top", price: 87, quantity_by_size: %{}}
+             ]
+    end
+
+    @tag task_id: 3
+    test "replaces all the instances of the word within one name" do
+      assert BoutiqueInventory.update_names(
+               [
+                 %{name: "GO! GO! GO! Tee", price: 8, quantity_by_size: %{}}
+               ],
+               "GO!",
+               "Go!"
+             ) == [
+               %{name: "Go! Go! Go! Tee", price: 8, quantity_by_size: %{}}
+             ]
+    end
+  end
+
+  describe "increase_quantity/2" do
+    @tag task_id: 4
     test "works for an empty quantity map" do
       assert BoutiqueInventory.increase_quantity(
                %{
@@ -74,7 +111,7 @@ defmodule BoutiqueInventoryTest do
              }
     end
 
-    @tag task_id: 3
+    @tag task_id: 4
     test "increases quantity of an item" do
       assert BoutiqueInventory.increase_quantity(
                %{
@@ -92,7 +129,7 @@ defmodule BoutiqueInventoryTest do
   end
 
   describe "total_quantity/1" do
-    @tag task_id: 4
+    @tag task_id: 5
     test "works for an empty quantity map" do
       assert BoutiqueInventory.total_quantity(%{
                name: "Red Denim Pants",
@@ -101,7 +138,7 @@ defmodule BoutiqueInventoryTest do
              }) == 0
     end
 
-    @tag task_id: 4
+    @tag task_id: 5
     test "sums up total quantity" do
       assert BoutiqueInventory.total_quantity(%{
                name: "Black Denim Skirt",
