@@ -9,8 +9,7 @@
       "lib/animation.ex"
     ],
     "editor": [
-      "lib/dot.ex",
-      "lib/dot_group.ex"
+      "lib/dot.ex"
     ],
     "test": [
       "test/dancing_dots/animation_test.exs"
