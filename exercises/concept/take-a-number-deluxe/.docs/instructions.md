@@ -2,7 +2,7 @@
 
 The basic Take-A-Number machine was selling really well, but some users were complaining about its lack of advanced features compared to other models available on the market.
 
-The manufacturer listened to user feedback and decided to release a deluxe model with more features, and you once again have were tasked with writing the software for this machine.
+The manufacturer listened to user feedback and decided to release a deluxe model with more features, and you once again were tasked with writing the software for this machine.
 
 The new features added to the deluxe model include:
 - Keeping track of currently queued numbers.
