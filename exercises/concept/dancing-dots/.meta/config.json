@@ -13,7 +13,7 @@
       "lib/dot_group.ex"
     ],
     "test": [
-      "test/dancing_dots_test.exs"
+      "test/dancing_dots/animation_test.exs"
     ],
     "exemplar": [
       ".meta/exemplar.ex"
