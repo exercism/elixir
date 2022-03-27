@@ -3,7 +3,9 @@
   "authors": [
     "angelikatyborska"
   ],
-  "contributors": [],
+  "contributors": [
+    "jiegillet"
+  ],
   "files": {
     "solution": [
       "lib/take_a_number_deluxe.ex"
