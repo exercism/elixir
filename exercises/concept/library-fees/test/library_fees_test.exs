@@ -79,6 +79,9 @@ defmodule LibraryFeesTest do
 
     @tag task_id: 4
     test "a new day starts at midnight" do
+      result = LibraryFees.days_late(~D[2020-06-12], ~N[2020-06-12 23:59:59Z])
+      assert result == 0
+
       result = LibraryFees.days_late(~D[2020-06-12], ~N[2020-06-13 00:00:00Z])
       assert result == 1
     end
