@@ -4,8 +4,8 @@ defmodule DancingDots.Animation do
   @type error :: any
   @type frame_number :: pos_integer
 
-  @callback init(opts) :: {:ok, opts} | {:error, error}
-  @callback handle_frame(dot, frame_number, opts) :: dot
+  @callback init(opts :: opts) :: {:ok, opts} | {:error, error}
+  @callback handle_frame(dot :: dot, n :: frame_number, opts :: opts) :: dot
 
   defmacro __using__(_) do
     quote do
