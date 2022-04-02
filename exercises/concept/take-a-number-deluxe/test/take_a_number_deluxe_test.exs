@@ -28,6 +28,7 @@ defmodule TakeANumberDeluxeTest do
                {:error, :invalid_configuration}
     end
 
+    @tag task_id: 1
     test "mix and max numbers can be passed in any order" do
       {:ok, pid} = TakeANumberDeluxe.start_link(min_number: 1, max_number: 99)
       assert is_pid(pid)
