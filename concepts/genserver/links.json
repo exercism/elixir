@@ -6,5 +6,9 @@
   {
     "url": "https://hexdocs.pm/elixir/GenServer.html",
     "description": "Documentation - Genserver"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Actor_model",
+    "description": "Actor model"
   }
 ]

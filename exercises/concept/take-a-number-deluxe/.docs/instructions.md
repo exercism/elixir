@@ -14,6 +14,8 @@ The business logic of the machine was already implemented by your colleague and 
 
 ## 1. Start the machine
 
+Use the `GenServer` behaviour in the `TakeANumberDeluxe` module.
+
 Implement the `start_link/1` function and the necessary `GenServer` callback.
 
 The argument passed to `start_link/1` is a keyword list. It contains the keys `:min_number` and `:max_number`. The values under those keys need to be passed to the function `TakeANumberDeluxe.State.new/2`.

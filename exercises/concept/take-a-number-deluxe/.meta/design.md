@@ -7,8 +7,12 @@
 - Use the `init` callback to modify initial state.
 - Know the difference between `handle_call`, `handle_cast`, and `handle_info`, and use each.
 - Know how to send user input to callbacks.
+- Know how to define timeouts.
 
 ## Out of scope
+
+- Supervision trees.
+- Named processes.
 
 ## Concepts
 
