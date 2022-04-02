@@ -18,6 +18,7 @@ defmodule DancingDots.DotGroup do
   def new(dots, animations_with_opts) do
     animations_with_opts_or_error =
       Enum.reduce_while(animations_with_opts, [], fn {animation_module, opts}, acc ->
+        # using Animation's init/1 callback
         init_result = animation_module.init(opts)
 
         case init_result do
@@ -51,6 +52,7 @@ defmodule DancingDots.DotGroup do
 
     Enum.map(dots, fn dot ->
       Enum.reduce(animations_with_opts, dot, fn {animation_module, opts}, acc ->
+        # using Animation's handle_frame/3 callback
         animation_module.handle_frame(acc, frame_number, opts)
       end)
     end)

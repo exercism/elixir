@@ -6,10 +6,11 @@
   "contributors": [],
   "files": {
     "solution": [
-      "lib/animation.ex"
+      "lib/dancing_dots/animation.ex"
     ],
     "editor": [
-      "lib/dot.ex"
+      "lib/dancing_dots/dot.ex",
+      "lib/dancing_dots/dot_group.ex"
     ],
     "test": [
       "test/dancing_dots/animation_test.exs"
