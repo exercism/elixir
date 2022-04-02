@@ -4,7 +4,7 @@ Your friend, an aspiring artist, reached out to you with a project idea. Let's c
 
 Constraints help creativity and shorten project deadlines, so you've both agreed to limit your masterpiece to a single shape - the circle. But there's going to be many many circles. And they can move around! You'll call it... dancing dots.
 
-Your friend will definitely want to come up with new elaborate movements for the dots, so you'll start coding by creating an architecture that will allow you to easily define completely new animation types.
+Your friend will definitely want to come up with new elaborate movements for the dots, so you'll start coding by creating an architecture that will allow you to later define new animations easily.
 
 ## 1. Define the animation behaviour
 
@@ -16,11 +16,9 @@ Define the `handle_frame/3` callbacks. It should take three arguments - the dot,
 
 ## 2. Provide a default implementation of the `init/1` callback
 
-TODO: better phrasing based on what the introduction sounds like
-
 The `Animation` behaviour should be easy to incorporate into other modules by calling `use DancingDots.Animation`.
 
-To make that happen, implement the `__using__` macro in the `Animation` module so that it sets `Animation` as the behaviour and provides a default implementation of the `init/1` callback. It should return the given options unchanged.
+To make that happen, implement the `__using__` macro in the `Animation` module so that it sets the `Animation` module as the other module's behaviour. It should also provide a default implementation of the `init/1` callback. The default implementation of `init/1` should return the given options unchanged.
 
 ```elixir
 defmodule MyCustomAnimation do
@@ -55,11 +53,11 @@ DancingDots.Flicker.handle_frame(dot, 4, [])
 
 Use the `Animation` behaviour to implement a zooming animation.
 
-The animation takes one option - velocity. Velocity can be any number. If it's negative, the dot gets zoomed out instead of zoomed in.
+This animation takes one option - velocity. Velocity can be any number. If it's negative, the dot gets zoomed out instead of zoomed in.
 
 Implement the `init/1` callback. It should validate that the passed options is a keyword list with a `:velocity` key. The value of velocity must be a number.
 
-Implement the `handle_frame/3` callback. It should return the dot with its radius increased by the velocity for each next frame.
+Implement the `handle_frame/3` callback. It should return the dot with its radius increased by the `n` times velocity, where `n` is the current frame number minus one.
 
 Frames are counted from `1`. The dot passed to `handle_frame/3` is always the dot in its original state, not in the state from the previous frame.
 
