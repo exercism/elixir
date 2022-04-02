@@ -204,7 +204,7 @@ defmodule TakeANumberDeluxeTest do
     end
   end
 
-  describe "handling timeouts and unexpected messages" do
+  describe "auto shutdown handling unexpected messages" do
     @tag task_id: 6
     test "auto shutdown works after initializing" do
       timeout = 50
