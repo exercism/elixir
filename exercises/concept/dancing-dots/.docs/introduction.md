@@ -1,5 +1,11 @@
 # Introduction
 
-## Behaviour vs protocol
+## `use`
+
+### `__using__` macro
+
+## Behaviours
+
+### Behaviours vs protocols
 
 ??
