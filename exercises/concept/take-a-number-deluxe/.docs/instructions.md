@@ -108,7 +108,9 @@ Modify resetting the machine state to also pass `auto_shutdown_timeout` to `Take
 
 Modify the return values of all implemented callbacks (`init/1` and all `handle_*` callbacks) to set a timeout. Use the the value under the key `:auto_shutdown_timeout` in the current machine state.
 
-Implement a `GenServer` callback to handle the `:timeout` message that will be sent to the machine if it doesn't receive any other messages within the given timeout. Make sure to also handle any other unexpected messages.
+Implement a `GenServer` callback to handle the `:timeout` message that will be sent to the machine if it doesn't receive any other messages within the given timeout. It should exit the process with reason `:normal`.
+
+Make sure to also handle any unexpected messages by ignoring them.
 
 ```elixir
 {:ok, machine} = TakeANumberDeluxe.start_link(
