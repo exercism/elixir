@@ -111,6 +111,25 @@ defmodule DancingDots.AnimationTest do
       assert DancingDots.Flicker.handle_frame(dot2, 19, []) == %{dot2 | opacity: 0.6}
       assert DancingDots.Flicker.handle_frame(dot2, 20, []) == %{dot2 | opacity: 0.3}
     end
+
+    @tag task_id: 3
+    test "can be used in a dot group" do
+      dot1 = %DancingDots.Dot{x: 44, y: 44, radius: 2, opacity: 0.8}
+      dot2 = %DancingDots.Dot{x: 0, y: 0, radius: 3, opacity: 0.5}
+
+      {:ok, dot_group} = DancingDots.DotGroup.new([dot1, dot2], [{DancingDots.Flicker, []}])
+
+      assert dot_group ==
+               %DancingDots.DotGroup{
+                 animations_with_opts: [{DancingDots.Flicker, []}],
+                 dots: [dot1, dot2]
+               }
+
+      assert DancingDots.DotGroup.render_dots(dot_group, 4) == [
+               %{dot1 | opacity: 0.4},
+               %{dot2 | opacity: 0.25}
+             ]
+    end
   end
 
   describe "Zoom module" do
@@ -155,6 +174,26 @@ defmodule DancingDots.AnimationTest do
       assert DancingDots.Zoom.handle_frame(dot2, 2, velocity: -1) == %{dot2 | radius: 399}
       assert DancingDots.Zoom.handle_frame(dot2, 3, velocity: -1) == %{dot2 | radius: 398}
       assert DancingDots.Zoom.handle_frame(dot2, 101, velocity: -1) == %{dot2 | radius: 300}
+    end
+
+    @tag task_id: 4
+    test "can be used in a dot group" do
+      dot1 = %DancingDots.Dot{x: 0, y: 0, radius: 100, opacity: 0.3}
+      dot2 = %DancingDots.Dot{x: 0, y: 0, radius: 150, opacity: 0.3}
+
+      {:ok, dot_group} =
+        DancingDots.DotGroup.new([dot1, dot2], [{DancingDots.Zoom, [velocity: 10]}])
+
+      assert dot_group ==
+               %DancingDots.DotGroup{
+                 animations_with_opts: [{DancingDots.Zoom, [velocity: 10]}],
+                 dots: [dot1, dot2]
+               }
+
+      assert DancingDots.DotGroup.render_dots(dot_group, 50) == [
+               %{dot1 | radius: 590},
+               %{dot2 | radius: 640}
+             ]
     end
   end
 end

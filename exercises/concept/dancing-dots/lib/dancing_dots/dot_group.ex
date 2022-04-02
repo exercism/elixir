@@ -11,11 +11,10 @@ defmodule DancingDots.DotGroup do
   @type t :: %__MODULE__{}
 
   @doc """
-  Calls init/1 on the given animation modules with their given options to validate the options.
+  Validates the given animation modules with their given options.
   """
   @spec new([DancingDots.Dot.t()], [{module, DancingDots.Animation.opts()}]) ::
-          {:ok, DancingDots.DotGroup.t()}
-          | {:error, atom, {module, DancingDots.Animation.error()}}
+          {:ok, t()} | {:error, atom, {module, DancingDots.Animation.error()}}
   def new(dots, animations_with_opts) do
     animations_with_opts_or_error =
       Enum.reduce_while(animations_with_opts, [], fn {animation_module, opts}, acc ->
@@ -43,9 +42,7 @@ defmodule DancingDots.DotGroup do
   @doc """
   Applies the list of animations to all the dots.
   """
-  @spec render_dots(DancingDots.DotGroup.t(), DancingDots.Animation.frame_number()) :: [
-          DancingDots.Dot.t()
-        ]
+  @spec render_dots(t(), DancingDots.Animation.frame_number()) :: [DancingDots.Dot.t()]
   def render_dots(dot_group, frame_number) do
     %{
       dots: dots,
@@ -53,8 +50,8 @@ defmodule DancingDots.DotGroup do
     } = dot_group
 
     Enum.map(dots, fn dot ->
-      Enum.reduce(animations_with_opts, dot, fn {animation_module, opts} ->
-        animation_module.handle_frame(dot, frame_number, opts)
+      Enum.reduce(animations_with_opts, dot, fn {animation_module, opts}, acc ->
+        animation_module.handle_frame(acc, frame_number, opts)
       end)
     end)
   end

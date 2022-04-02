@@ -27,8 +27,8 @@ defmodule MyCustomAnimation do
   use DancingDots.Animation
 end
 
-MyCustomAnimation.init(:some_option)
-# => {:ok, :some_option}
+MyCustomAnimation.init([some_option: true])
+# => {:ok, [some_option: true]}
 ```
 
 ## 3. Implement the `Flicker` animation
