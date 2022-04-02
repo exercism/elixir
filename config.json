@@ -1982,7 +1982,8 @@
           "if",
           "processes",
           "pids",
-          "agent"
+          "agent",
+          "genserver"
         ],
         "practices": [
           "if",
@@ -2734,10 +2735,12 @@
           "structs",
           "pids",
           "processes",
+          "genserver",
           "recursion"
         ],
         "practices": [
-          "processes"
+          "processes",
+          "genserver"
         ],
         "difficulty": 8
       },
