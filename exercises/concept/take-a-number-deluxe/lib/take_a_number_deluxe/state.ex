@@ -2,7 +2,7 @@ defmodule TakeANumberDeluxe.State do
   defstruct min_number: 1, max_number: 999, queue: nil, auto_shutdown_timeout: :infinity
   @type t :: %__MODULE__{}
 
-  @spec new(integer, integer, timeout) :: {:ok, TakeANumberDeluxe.State.t()} | {:error, :atom}
+  @spec new(integer, integer, timeout) :: {:ok, TakeANumberDeluxe.State.t()} | {:error, atom()}
   def new(min_number, max_number, auto_shutdown_timeout \\ :infinity) do
     if min_and_max_numbers_valid?(min_number, max_number) and
          timeout_valid?(auto_shutdown_timeout) do
@@ -19,7 +19,7 @@ defmodule TakeANumberDeluxe.State do
   end
 
   @spec queue_new_number(TakeANumberDeluxe.State.t()) ::
-          {:ok, TakeANumberDeluxe.State.t()} | {:error, :atom}
+          {:ok, integer(), TakeANumberDeluxe.State.t()} | {:error, atom()}
   def queue_new_number(%__MODULE__{} = state) do
     case find_next_available_number(state) do
       {:ok, next_available_number} ->
@@ -31,8 +31,8 @@ defmodule TakeANumberDeluxe.State do
     end
   end
 
-  @spec serve_next_queued_number(TakeANumberDeluxe.State.t(), integer) ::
-          {:ok, TakeANumberDeluxe.State.t()} | {:error, :atom}
+  @spec serve_next_queued_number(TakeANumberDeluxe.State.t(), integer() | nil) ::
+          {:ok, integer(), TakeANumberDeluxe.State.t()} | {:error, atom()}
   def serve_next_queued_number(%__MODULE__{} = state, priority_number) do
     cond do
       :queue.is_empty(state.queue) ->
