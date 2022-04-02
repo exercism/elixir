@@ -204,27 +204,152 @@ defmodule TakeANumberDeluxeTest do
     end
   end
 
-  describe "handling unexpected messages" do
+  describe "handling timeouts and unexpected messages" do
     @tag task_id: 6
-    test "sends a response to a basic model :take_a_number message" do
-      {:ok, pid} = TakeANumberDeluxe.start_link(min_number: 1, max_number: 99)
-      send(pid, {:take_a_number, self()})
-      assert_receive {:error, :basic_model_message_received_by_deluxe_model_server}
+    test "auto shutdown works after initializing" do
+      timeout = 50
+
+      {:ok, pid} =
+        TakeANumberDeluxe.start_link(
+          min_number: 1,
+          max_number: 99,
+          auto_shutdown_timeout: timeout
+        )
+
+      assert Process.alive?(pid)
+      :timer.sleep(timeout * 2)
+      refute Process.alive?(pid)
     end
 
     @tag task_id: 6
-    test "basic model :take_a_number message does not affect the state" do
-      {:ok, pid} = TakeANumberDeluxe.start_link(min_number: 1, max_number: 99)
+    test "auto shutdown works after reporting state" do
+      timeout = 50
+
+      {:ok, pid} =
+        TakeANumberDeluxe.start_link(
+          min_number: 1,
+          max_number: 99,
+          auto_shutdown_timeout: timeout
+        )
+
+      assert Process.alive?(pid)
+      assert TakeANumberDeluxe.report_state(pid)
+      assert Process.alive?(pid)
+      :timer.sleep(timeout * 2)
+      refute Process.alive?(pid)
+    end
+
+    @tag task_id: 6
+    test "auto shutdown works after taking a new number" do
+      timeout = 50
+
+      {:ok, pid} =
+        TakeANumberDeluxe.start_link(
+          min_number: 1,
+          max_number: 99,
+          auto_shutdown_timeout: timeout
+        )
+
+      assert Process.alive?(pid)
+      assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 1}
+      assert Process.alive?(pid)
+      :timer.sleep(timeout * 2)
+      refute Process.alive?(pid)
+    end
+
+    @tag task_id: 6
+    test "auto shutdown works after an error when taking a new number" do
+      timeout = 50
+
+      {:ok, pid} =
+        TakeANumberDeluxe.start_link(
+          min_number: 1,
+          max_number: 2,
+          auto_shutdown_timeout: timeout
+        )
+
+      assert Process.alive?(pid)
       assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 1}
       assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 2}
-      assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 3}
+      assert TakeANumberDeluxe.queue_new_number(pid) == {:error, :all_possible_numbers_are_in_use}
+      assert Process.alive?(pid)
+      :timer.sleep(timeout * 2)
+      refute Process.alive?(pid)
+    end
+
+    @tag task_id: 6
+    test "auto shutdown works after serving the next queued number" do
+      timeout = 50
+
+      {:ok, pid} =
+        TakeANumberDeluxe.start_link(
+          min_number: 1,
+          max_number: 99,
+          auto_shutdown_timeout: timeout
+        )
+
+      assert Process.alive?(pid)
+      assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 1}
       assert TakeANumberDeluxe.serve_next_queued_number(pid) == {:ok, 1}
+      assert Process.alive?(pid)
+      :timer.sleep(timeout * 2)
+      refute Process.alive?(pid)
+    end
 
-      old_state = TakeANumberDeluxe.report_state(pid)
+    @tag task_id: 6
+    test "auto shutdown works after an error when serving the next queued number" do
+      timeout = 50
 
-      send(pid, {:take_a_number, self()})
+      {:ok, pid} =
+        TakeANumberDeluxe.start_link(
+          min_number: 1,
+          max_number: 99,
+          auto_shutdown_timeout: timeout
+        )
 
-      assert TakeANumberDeluxe.report_state(pid) == old_state
+      assert Process.alive?(pid)
+      assert TakeANumberDeluxe.queue_new_number(pid) == {:ok, 1}
+      assert TakeANumberDeluxe.serve_next_queued_number(pid) == {:ok, 1}
+      assert TakeANumberDeluxe.serve_next_queued_number(pid) == {:error, :empty_queue}
+      assert Process.alive?(pid)
+      :timer.sleep(timeout * 2)
+      refute Process.alive?(pid)
+    end
+
+    @tag task_id: 6
+    test "resetting state preserves the auto shutdown timeout" do
+      timeout = 50
+
+      {:ok, pid} =
+        TakeANumberDeluxe.start_link(
+          min_number: 1,
+          max_number: 99,
+          auto_shutdown_timeout: timeout
+        )
+
+      {:ok, expected_state} = TakeANumberDeluxe.State.new(1, 99, timeout)
+
+      assert TakeANumberDeluxe.report_state(pid) == expected_state
+      assert TakeANumberDeluxe.reset_state(pid)
+      assert TakeANumberDeluxe.report_state(pid) == expected_state
+    end
+
+    @tag task_id: 6
+    test "auto shutdown works after resetting state" do
+      timeout = 50
+
+      {:ok, pid} =
+        TakeANumberDeluxe.start_link(
+          min_number: 1,
+          max_number: 99,
+          auto_shutdown_timeout: timeout
+        )
+
+      assert Process.alive?(pid)
+      assert TakeANumberDeluxe.reset_state(pid) == :ok
+      assert Process.alive?(pid)
+      :timer.sleep(timeout * 2)
+      refute Process.alive?(pid)
     end
 
     @tag task_id: 6
@@ -240,6 +365,24 @@ defmodule TakeANumberDeluxeTest do
       send(pid, {:hello, "there"})
 
       assert TakeANumberDeluxe.report_state(pid) == old_state
+    end
+
+    @tag task_id: 6
+    test "auto shutdown works after handling unexpected messages" do
+      timeout = 50
+
+      {:ok, pid} =
+        TakeANumberDeluxe.start_link(
+          min_number: 1,
+          max_number: 99,
+          auto_shutdown_timeout: timeout
+        )
+
+      assert Process.alive?(pid)
+      send(pid, {:hello, "there"})
+      assert Process.alive?(pid)
+      :timer.sleep(timeout * 2)
+      refute Process.alive?(pid)
     end
 
     @tag task_id: 6

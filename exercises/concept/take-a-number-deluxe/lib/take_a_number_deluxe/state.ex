@@ -1,11 +1,18 @@
 defmodule TakeANumberDeluxe.State do
-  defstruct min_number: 1, max_number: 999, queue: nil
+  defstruct min_number: 1, max_number: 999, queue: nil, auto_shutdown_timeout: :infinity
   @type t :: %__MODULE__{}
 
-  @spec new(integer, integer) :: {:ok, TakeANumberDeluxe.State.t()} | {:error, :atom}
-  def new(min_number, max_number) do
-    if is_integer(min_number) and is_integer(max_number) and min_number < max_number do
-      {:ok, %__MODULE__{min_number: min_number, max_number: max_number, queue: :queue.new()}}
+  @spec new(integer, integer, timeout) :: {:ok, TakeANumberDeluxe.State.t()} | {:error, :atom}
+  def new(min_number, max_number, auto_shutdown_timeout \\ :infinity) do
+    if min_and_max_numbers_valid?(min_number, max_number) and
+         timeout_valid?(auto_shutdown_timeout) do
+      {:ok,
+       %__MODULE__{
+         min_number: min_number,
+         max_number: max_number,
+         queue: :queue.new(),
+         auto_shutdown_timeout: auto_shutdown_timeout
+       }}
     else
       {:error, :invalid_configuration}
     end
@@ -41,6 +48,14 @@ defmodule TakeANumberDeluxe.State do
       true ->
         {:error, :priority_number_not_found}
     end
+  end
+
+  defp min_and_max_numbers_valid?(min_number, max_number) do
+    is_integer(min_number) and is_integer(max_number) and min_number < max_number
+  end
+
+  defp timeout_valid?(timeout) do
+    timeout == :infinity || (is_integer(timeout) && timeout >= 0)
   end
 
   defp find_next_available_number(state) do
