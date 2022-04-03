@@ -11,7 +11,7 @@ defmodule TakeANumberDeluxe.Queue do
   @spec out(t()) :: {{:value, any()}, t()} | {:empty, t()}
   def out(%__MODULE__{in: [], out: []} = q), do: {:empty, q}
   def out(%__MODULE__{out: [head | tail]} = q), do: {{:value, head}, %__MODULE__{q | out: tail}}
-  def out(%__MODULE__{in: in_q} = q), do: out(%__MODULE__{out: Enum.reverse(in_q)})
+  def out(%__MODULE__{in: in_q}), do: out(%__MODULE__{out: Enum.reverse(in_q)})
 
   @spec empty?(t()) :: boolean()
   def empty?(%__MODULE__{in: [], out: []}), do: true
