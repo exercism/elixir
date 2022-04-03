@@ -1,6 +1,8 @@
 defmodule TakeANumberDeluxeTest do
   use ExUnit.Case
 
+  alias TakeANumberDeluxe.Queue
+
   describe "start_link/1" do
     @tag task_id: 1
     test "starts a new process" do
@@ -99,7 +101,7 @@ defmodule TakeANumberDeluxeTest do
                %TakeANumberDeluxe.State{
                  min_number: 1,
                  max_number: 99,
-                 queue: :queue.in(3, :queue.in(2, :queue.in(1, :queue.new())))
+                 queue: Queue.new() |> Queue.push(1) |> Queue.push(2) |> Queue.push(3)
                }
     end
   end
@@ -159,14 +161,11 @@ defmodule TakeANumberDeluxeTest do
       assert TakeANumberDeluxe.serve_next_queued_number(pid) == {:ok, 1}
       assert TakeANumberDeluxe.serve_next_queued_number(pid) == {:ok, 2}
 
-      queue =
-        :queue.delete(2, :queue.delete(1, :queue.in(3, :queue.in(2, :queue.in(1, :queue.new())))))
-
       assert TakeANumberDeluxe.report_state(pid) ==
                %TakeANumberDeluxe.State{
                  min_number: 1,
                  max_number: 99,
-                 queue: queue
+                 queue: Queue.from_list([3])
                }
     end
   end
@@ -194,7 +193,7 @@ defmodule TakeANumberDeluxeTest do
                %TakeANumberDeluxe.State{
                  min_number: 7,
                  max_number: 77,
-                 queue: :queue.from_list([])
+                 queue: Queue.new()
                }
     end
 

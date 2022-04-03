@@ -2,6 +2,8 @@ defmodule TakeANumberDeluxe.State do
   defstruct min_number: 1, max_number: 999, queue: nil, auto_shutdown_timeout: :infinity
   @type t :: %__MODULE__{}
 
+  alias TakeANumberDeluxe.Queue
+
   @spec new(integer, integer, timeout) :: {:ok, TakeANumberDeluxe.State.t()} | {:error, atom()}
   def new(min_number, max_number, auto_shutdown_timeout \\ :infinity) do
     if min_and_max_numbers_valid?(min_number, max_number) and
@@ -10,7 +12,7 @@ defmodule TakeANumberDeluxe.State do
        %__MODULE__{
          min_number: min_number,
          max_number: max_number,
-         queue: :queue.new(),
+         queue: Queue.new(),
          auto_shutdown_timeout: auto_shutdown_timeout
        }}
     else
@@ -24,7 +26,7 @@ defmodule TakeANumberDeluxe.State do
     case find_next_available_number(state) do
       {:ok, next_available_number} ->
         {:ok, next_available_number,
-         %{state | queue: :queue.in(next_available_number, state.queue)}}
+         %{state | queue: Queue.push(state.queue, next_available_number)}}
 
       {:error, error} ->
         {:error, error}
@@ -35,15 +37,15 @@ defmodule TakeANumberDeluxe.State do
           {:ok, integer(), TakeANumberDeluxe.State.t()} | {:error, atom()}
   def serve_next_queued_number(%__MODULE__{} = state, priority_number) do
     cond do
-      :queue.is_empty(state.queue) ->
+      Queue.empty?(state.queue) ->
         {:error, :empty_queue}
 
       is_nil(priority_number) ->
-        {{:value, next_number}, new_queue} = :queue.out(state.queue)
+        {{:value, next_number}, new_queue} = Queue.out(state.queue)
         {:ok, next_number, %{state | queue: new_queue}}
 
-      :queue.member(priority_number, state.queue) ->
-        {:ok, priority_number, %{state | queue: :queue.delete(priority_number, state.queue)}}
+      Queue.member?(state.queue, priority_number) ->
+        {:ok, priority_number, %{state | queue: Queue.delete(state.queue, priority_number)}}
 
       true ->
         {:error, :priority_number_not_found}
@@ -59,7 +61,7 @@ defmodule TakeANumberDeluxe.State do
   end
 
   defp find_next_available_number(state) do
-    all_numbers_in_use = :queue.to_list(state.queue)
+    all_numbers_in_use = Queue.to_list(state.queue)
     all_numbers = Enum.to_list(state.min_number..state.max_number)
 
     case all_numbers_in_use do
