@@ -11,7 +11,8 @@
       "lib/take_a_number_deluxe.ex"
     ],
     "editor": [
-      "lib/take_a_number_deluxe/state.ex"
+      "lib/take_a_number_deluxe/state.ex",
+      "lib/take_a_number_deluxe/queue.ex"
     ],
     "test": [
       "test/take_a_number_deluxe_test.exs"
