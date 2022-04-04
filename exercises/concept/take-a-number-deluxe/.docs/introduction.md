@@ -2,10 +2,6 @@
 
 ## GenServer
 
-~~~~exercism/caution
-This is an advanced topic.
-~~~~
-
 `GenServer` (generic server) is a [behaviour][concept-behaviours] that abstracts common client-server interactions between Elixir processes.
 
 Remember the receive loop from when we learned about [processes][concept-processes]? The `GenServer` behaviour provides abstractions for implementing such loops, and for exchanging messages with a process that runs such a loop. It makes it easier to keep state and execute asynchronous code.
