@@ -1,4 +1,11 @@
 defmodule TakeANumberDeluxe.Queue do
+  # You don't need to read this module to solve this exercise.
+
+  # We would have used Erlang's queue module instead
+  # (https://www.erlang.org/doc/man/queue.html),
+  # but it lacks a `delete` function before OTP 24,
+  # and we want this exercise to work on older versions too.
+
   defstruct in: [], out: []
   @type t :: %__MODULE__{}
 
