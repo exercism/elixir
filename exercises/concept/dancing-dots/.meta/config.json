@@ -1,5 +1,4 @@
 {
-  "blurb": "TODO",
   "authors": [
     "angelikatyborska"
   ],
@@ -10,16 +9,17 @@
     "solution": [
       "lib/dancing_dots/animation.ex"
     ],
-    "editor": [
-      "lib/dancing_dots/dot.ex",
-      "lib/dancing_dots/dot_group.ex"
-    ],
     "test": [
       "test/dancing_dots/animation_test.exs"
     ],
     "exemplar": [
       ".meta/exemplar.ex"
+    ],
+    "editor": [
+      "lib/dancing_dots/dot.ex",
+      "lib/dancing_dots/dot_group.ex"
     ]
   },
-  "language_versions": ">=1.10"
+  "language_versions": ">=1.10",
+  "blurb": "TODO"
 }
