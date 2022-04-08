@@ -161,19 +161,23 @@ defmodule DancingDots.AnimationTest do
     end
 
     @tag task_id: 4
-    test "every frame after the first, handle_frame/3 grows the dot's radius by the given velocity" do
-      dot1 = %DancingDots.Dot{x: 90, y: 90, radius: 100, opacity: 0.5}
-      dot2 = %DancingDots.Dot{x: 100, y: 0, radius: 400, opacity: 0.9}
+    test "every frame after the first, handle_frame/3 grows the dot's radius by the given positive velocity" do
+      dot = %DancingDots.Dot{x: 90, y: 90, radius: 100, opacity: 0.5}
 
-      assert DancingDots.Zoom.handle_frame(dot1, 1, velocity: 3) == %{dot1 | radius: 100}
-      assert DancingDots.Zoom.handle_frame(dot1, 2, velocity: 3) == %{dot1 | radius: 103}
-      assert DancingDots.Zoom.handle_frame(dot1, 3, velocity: 3) == %{dot1 | radius: 106}
-      assert DancingDots.Zoom.handle_frame(dot1, 101, velocity: 3) == %{dot1 | radius: 400}
+      assert DancingDots.Zoom.handle_frame(dot, 1, velocity: 3) == %{dot | radius: 100}
+      assert DancingDots.Zoom.handle_frame(dot, 2, velocity: 3) == %{dot | radius: 103}
+      assert DancingDots.Zoom.handle_frame(dot, 3, velocity: 3) == %{dot | radius: 106}
+      assert DancingDots.Zoom.handle_frame(dot, 101, velocity: 3) == %{dot | radius: 400}
+    end
 
-      assert DancingDots.Zoom.handle_frame(dot2, 1, velocity: -1) == %{dot2 | radius: 400}
-      assert DancingDots.Zoom.handle_frame(dot2, 2, velocity: -1) == %{dot2 | radius: 399}
-      assert DancingDots.Zoom.handle_frame(dot2, 3, velocity: -1) == %{dot2 | radius: 398}
-      assert DancingDots.Zoom.handle_frame(dot2, 101, velocity: -1) == %{dot2 | radius: 300}
+    @tag task_id: 4
+    test "every frame after the first, handle_frame/3 shrinks the dot's radius by the given negative velocity" do
+      dot = %DancingDots.Dot{x: 100, y: 0, radius: 400, opacity: 0.9}
+
+      assert DancingDots.Zoom.handle_frame(dot, 1, velocity: -1) == %{dot | radius: 400}
+      assert DancingDots.Zoom.handle_frame(dot, 2, velocity: -1) == %{dot | radius: 399}
+      assert DancingDots.Zoom.handle_frame(dot, 3, velocity: -1) == %{dot | radius: 398}
+      assert DancingDots.Zoom.handle_frame(dot, 101, velocity: -1) == %{dot | radius: 300}
     end
 
     @tag task_id: 4
