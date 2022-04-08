@@ -117,7 +117,9 @@ defmodule DancingDots.AnimationTest do
       dot1 = %DancingDots.Dot{x: 44, y: 44, radius: 2, opacity: 0.8}
       dot2 = %DancingDots.Dot{x: 0, y: 0, radius: 3, opacity: 0.5}
 
-      {:ok, dot_group} = DancingDots.DotGroup.new([dot1, dot2], [{DancingDots.Flicker, []}])
+      {:ok, dot_group} =
+        DancingDots.DotGroup.new([dot1, dot2])
+        |> DancingDots.DotGroup.add_animation(DancingDots.Flicker, [])
 
       assert dot_group ==
                %DancingDots.DotGroup{
@@ -186,7 +188,8 @@ defmodule DancingDots.AnimationTest do
       dot2 = %DancingDots.Dot{x: 0, y: 0, radius: 150, opacity: 0.3}
 
       {:ok, dot_group} =
-        DancingDots.DotGroup.new([dot1, dot2], [{DancingDots.Zoom, [velocity: 10]}])
+        DancingDots.DotGroup.new([dot1, dot2])
+        |> DancingDots.DotGroup.add_animation(DancingDots.Zoom, velocity: 10)
 
       assert dot_group ==
                %DancingDots.DotGroup{

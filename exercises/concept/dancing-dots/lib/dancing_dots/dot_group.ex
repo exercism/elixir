@@ -11,32 +11,32 @@ defmodule DancingDots.DotGroup do
   @type t :: %__MODULE__{}
 
   @doc """
-  Validates the given animation modules with their given options.
+  Creates a new dot group with given dots and an empty list of animations.
   """
-  @spec new([DancingDots.Dot.t()], [{module, DancingDots.Animation.opts()}]) ::
-          {:ok, t()} | {:error, atom, {module, DancingDots.Animation.error()}}
-  def new(dots, animations_with_opts) do
-    animations_with_opts_or_error =
-      Enum.reduce_while(animations_with_opts, [], fn {animation_module, opts}, acc ->
-        # using Animation's init/1 callback
-        init_result = animation_module.init(opts)
+  @spec new([DancingDots.Dot.t()]) :: t()
+  def new(dots) do
+    %__MODULE__{
+      dots: dots,
+      animations_with_opts: []
+    }
+  end
 
-        case init_result do
-          {:error, error} -> {:halt, {animation_module, {:error, error, opts}}}
-          {:ok, opts} -> {:cont, [{animation_module, opts} | acc]}
-        end
-      end)
+  @doc """
+  Validates the given animation module with its given options and adds it to the group.
+  """
+  @spec add_animation(t(), module, DancingDots.Animation.opts()) ::
+          {:ok, t()} | {:error, DancingDots.Animation.error()}
+  def add_animation(dot_group, animation_module, opts) do
+    init_result = animation_module.init(opts)
 
-    case animations_with_opts_or_error do
-      animations_with_opts when is_list(animations_with_opts) ->
-        {:ok,
-         %__MODULE__{
-           dots: dots,
-           animations_with_opts: animations_with_opts_or_error
-         }}
+    case init_result do
+      {:ok, opts} ->
+        animations_with_opts = [{animation_module, opts} | dot_group.animations_with_opts]
+        dot_group = %{dot_group | animations_with_opts: animations_with_opts}
+        {:ok, dot_group}
 
-      {animation_module, {:error, error}} ->
-        {:error, :invalid_animation_module_opts, {animation_module, error}}
+      {:error, error} ->
+        {:error, error}
     end
   end
 
