@@ -3,7 +3,9 @@
   "authors": [
     "angelikatyborska"
   ],
-  "contributors": [],
+  "contributors": [
+    "jiegillet"
+  ],
   "files": {
     "solution": [
       "lib/dancing_dots/animation.ex"
