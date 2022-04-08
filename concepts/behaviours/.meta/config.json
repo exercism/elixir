@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO",
+  "blurb": "Behaviours allow us to define interfaces in a behaviour module_that can be later implemented by different callback modules.",
   "authors": [
     "angelikatyborska"
   ],

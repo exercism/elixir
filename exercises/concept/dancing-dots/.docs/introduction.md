@@ -36,7 +36,7 @@ The options can be given as a second argument when calling `use`, e.g. `use ExUn
 
 ## Behaviours
 
-Behaviours allow us to define interfaces (sets of functions and macros) in a _behaviour module_ that can be later implemented by multiple different _callback modules_. Thanks to the shared interface, those callback modules can be used interchangeably.
+Behaviours allow us to define interfaces (sets of functions and macros) in a _behaviour module_ that can be later implemented by different _callback modules_. Thanks to the shared interface, those callback modules can be used interchangeably.
 
 ~~~~exercism/note
 Note the British spelling of "behaviours".
