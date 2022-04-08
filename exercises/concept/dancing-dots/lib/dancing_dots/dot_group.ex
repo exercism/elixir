@@ -27,6 +27,7 @@ defmodule DancingDots.DotGroup do
   @spec add_animation(t(), module, DancingDots.Animation.opts()) ::
           {:ok, t()} | {:error, DancingDots.Animation.error()}
   def add_animation(dot_group, animation_module, opts) do
+    # using Animation's init/1 callback
     init_result = animation_module.init(opts)
 
     case init_result do
