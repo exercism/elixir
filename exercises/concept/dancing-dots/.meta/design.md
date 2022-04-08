@@ -9,6 +9,9 @@
 
 ## Out of scope
 
+- `@macrocallback`
+- `@optional_callbacks`
+
 ## Concepts
 
 - `behaviours`
