@@ -42,7 +42,7 @@ Behaviours allow us to define interfaces (sets of functions and macros) in a _be
 Note the British spelling of "behaviours".
 ~~~~
 
-### Defining behaviors
+### Defining behaviours
 
 To define a behaviour, we need to create a new module and specify a list of functions that are part of the desired interface. Each function needs to be defined using the `@callback` module attribute. The syntax is identical to a [function typespec][concept-typespecs] (`@spec`). We need to specify a function name, a list of argument types, and all the possible return types.
 
