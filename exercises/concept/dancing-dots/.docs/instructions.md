@@ -57,7 +57,7 @@ This animation takes one option - velocity. Velocity can be any number. If it's 
 
 Implement the `init/1` callback. It should validate that the passed options is a keyword list with a `:velocity` key. The value of velocity must be a number. If it's not a number, return the error `"Expected required option :velocity to be a number, got: #{inspect(velocity)}"`.
 
-Implement the `handle_frame/3` callback. It should return the dot with its radius increased by the `n` times velocity, where `n` is the current frame number minus one.
+Implement the `handle_frame/3` callback. It should return the dot with its radius increased by the current frame number, minus one, times velocity.
 
 Frames are counted from `1`. The dot passed to `handle_frame/3` is always the dot in its original state, not in the state from the previous frame.
 
