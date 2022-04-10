@@ -55,7 +55,7 @@ Use the `Animation` behaviour to implement a zooming animation.
 
 This animation takes one option - velocity. Velocity can be any number. If it's negative, the dot gets zoomed out instead of zoomed in.
 
-Implement the `init/1` callback. It should validate that the passed options is a keyword list with a `:velocity` key. The value of velocity must be a number. If it's not a number, return the error `"Expected required option :velocity to be a number, got: #{inspect(velocity)}"`.
+Implement the `init/1` callback. It should validate that the passed options is a keyword list with a `:velocity` key. The value of velocity must be a number. If it's not a number, return the error `"The :velocity option is required, and its value must be a number. Got: #{inspect(velocity)}"`.
 
 Implement the `handle_frame/3` callback. It should return the dot with its radius increased by the current frame number, minus one, times velocity.
 

@@ -36,7 +36,8 @@ defmodule DancingDots.Zoom do
     if is_number(velocity) do
       {:ok, [velocity: velocity]}
     else
-      {:error, "Expected required option :velocity to be a number, got: #{inspect(velocity)}"}
+      {:error,
+       "The :velocity option is required, and its value must be a number. Got: #{inspect(velocity)}"}
     end
   end
 

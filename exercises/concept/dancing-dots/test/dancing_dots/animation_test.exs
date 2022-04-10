@@ -147,10 +147,12 @@ defmodule DancingDots.AnimationTest do
       assert DancingDots.Zoom.init(velocity: 10) == {:ok, [velocity: 10]}
 
       assert DancingDots.Zoom.init([]) ==
-               {:error, "Expected required option :velocity to be a number, got: nil"}
+               {:error,
+                "The :velocity option is required, and its value must be a number. Got: nil"}
 
       assert DancingDots.Zoom.init(velocity: "7") ==
-               {:error, "Expected required option :velocity to be a number, got: \"7\""}
+               {:error,
+                "The :velocity option is required, and its value must be a number. Got: \"7\""}
     end
 
     @tag task_id: 4
