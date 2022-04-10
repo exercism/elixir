@@ -616,6 +616,23 @@
         "status": "active"
       },
       {
+        "slug": "dancing-dots",
+        "name": "Dancing Dots",
+        "uuid": "cf9e346b-d809-4c0c-9801-8f59461ece95",
+        "concepts": [
+          "behaviours",
+          "use"
+        ],
+        "prerequisites": [
+          "typespecs",
+          "structs",
+          "ast",
+          "enum",
+          "import"
+        ],
+        "status": "beta"
+      },
+      {
         "slug": "take-a-number-deluxe",
         "name": "Take-A-Number Deluxe",
         "uuid": "93e8ef96-0c76-4466-bd02-f16c4fb29c12",
@@ -2929,6 +2946,11 @@
       "name": "Basics"
     },
     {
+      "uuid": "8cee26b5-2f55-4b6d-9902-64d10e96a7b6",
+      "slug": "behaviours",
+      "name": "Behaviours"
+    },
+    {
       "uuid": "d291ca4b-7163-43e4-ab02-383904f19c34",
       "slug": "binaries",
       "name": "Binaries"
@@ -3172,6 +3194,11 @@
       "uuid": "cf4b56eb-d8c5-4180-820a-d839eaa0962a",
       "slug": "typespecs",
       "name": "Typespecs"
+    },
+    {
+      "uuid": "399e6943-dd79-4de5-a7a6-5df95ee35a85",
+      "slug": "use",
+      "name": "Use"
     },
     {
       "uuid": "870a9af1-9354-451c-a0ab-6deada59254a",
