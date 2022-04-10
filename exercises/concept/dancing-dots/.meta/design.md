@@ -24,3 +24,8 @@
 - `ast`
 - `enum`
 - `import`
+
+## Analyzer
+
+- Check for `@impl DancingDots.Animation` (should be used with a module, not with a boolean)
+- Check that `DancingDots.Flicker` doesn't reimplement `init/1`
