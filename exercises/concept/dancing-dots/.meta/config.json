@@ -1,0 +1,25 @@
+{
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [
+    "jiegillet"
+  ],
+  "files": {
+    "solution": [
+      "lib/dancing_dots/animation.ex"
+    ],
+    "test": [
+      "test/dancing_dots/animation_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ],
+    "editor": [
+      "lib/dancing_dots/dot.ex",
+      "lib/dancing_dots/dot_group.ex"
+    ]
+  },
+  "language_versions": ">=1.10",
+  "blurb": "Learn about behaviours by writing animations for dot-based generative art."
+}
