@@ -47,7 +47,7 @@ The returned monthly rate should be rounded up (take the ceiling) to the nearest
 
 ## 4. Calculate the number of workdays given a budget, hourly rate and discount
 
-Implement a function that takes a budget, a hourly rate, and a discount, and calculates how many days of work that covers.
+Implement a function that takes a budget, an hourly rate, and a discount, and calculates how many days of work that covers.
 
 ```elixir
 FreelancerRates.days_in_budget(20000, 80, 11.0)
