@@ -1,7 +1,7 @@
 defmodule LogLevelTest do
   use ExUnit.Case
 
-  describe "LogLevel.to_label/1" do
+  describe "LogLevel.to_label/2" do
     @tag task_id: 1
     test "level 0 has label trace only in a non-legacy app" do
       assert LogLevel.to_label(0, false) == :trace
