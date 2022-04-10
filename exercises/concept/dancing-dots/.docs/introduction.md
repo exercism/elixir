@@ -81,7 +81,21 @@ end
 
 ### Default callback implementations
 
-When defining a behaviour, it is possible to provide a default implementation of a callbacks. This implementation should be defined in the quoted expression of the `__using__/1` macro. To make it possible for users of the behaviour module to override the default implementation, call the `defoverridable/1` macro after the function implementation. It accepts a keyword list of function names as keys and function arities as values.
+When defining a behaviour, it is possible to provide a default implementation of a callback. This implementation should be defined in the quoted expression of the `__using__/1` macro. To make it possible for users of the behaviour module to override the default implementation, call the `defoverridable/1` macro after the function implementation. It accepts a keyword list of function names as keys and function arities as values.
+
+```elixir
+defmodule Countable do
+  @callback count(collection :: any) :: pos_integer
+
+  defmacro __using__(_) do
+    quote do
+      @behaviour Countable
+      def count(collection), do: Enum.count(collection)
+      defoverridable count: 1
+    end
+  end
+end
+```
 
 Note that defining functions inside of `__using__/1` is discouraged for any other purpose than defining default callback implementations, but you can always define functions in another module and import them in the  `__using__/1` macro.
 
