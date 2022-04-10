@@ -81,7 +81,7 @@ end
 
 ### Default callback implementations
 
-When defining a behaviour, it is possible to provide a default implementation of a callbacks. The `__using__/1` macro can be used for this purpose. To make it possible for the user of the behaviour module to override the default implementation, call the `defoverridable/1` macro after the function implementation. It accepts a keyword list of function names as keys and function arities as values.
+When defining a behaviour, it is possible to provide a default implementation of a callbacks. This implementation should be defined in the quoted expression of the `__using__/1` macro. To make it possible for users of the behaviour module to override the default implementation, call the `defoverridable/1` macro after the function implementation. It accepts a keyword list of function names as keys and function arities as values.
 
 Note that defining functions inside of `__using__/1` is discouraged for any other purpose than defining default callback implementations, but you can always define functions in another module and import them in the  `__using__/1` macro.
 
