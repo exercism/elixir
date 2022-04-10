@@ -102,4 +102,3 @@ Note that defining functions inside of `__using__/1` is discouraged for any othe
 [concept-ast]: https://exercism.org/tracks/elixir/concepts/ast
 [concept-typespecs]: https://exercism.org/tracks/elixir/concepts/typespecs
 [hexdocs]: https://hexdocs.pm
-[genserver-callbacks]: https://hexdocs.pm
