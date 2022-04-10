@@ -47,6 +47,11 @@ defmodule YachtTest do
   end
 
   @tag :pending
+  test "Fives" do
+    assert Yacht.score(:fives, [1, 5, 3, 5, 3]) == 10
+  end
+
+  @tag :pending
   test "Sixes" do
     assert Yacht.score(:sixes, [2, 3, 4, 5, 6]) == 6
   end
