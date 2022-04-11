@@ -19,7 +19,7 @@ Let's take a look at a simple example of a `GenServer` first, and then learn wha
 This is an example server that can respond to the repetitive inquisitions of annoying passengers during a long road trip, more exactly the question: "are we there yet?". It keeps track of how many times this question has been asked, returning increasingly more annoyed responses.
 
 ```elixir
-defmodule AnnoyingPassengerAutoreponder do
+defmodule AnnoyingPassengerAutoresponder do
   use GenServer
   # Client API
 
