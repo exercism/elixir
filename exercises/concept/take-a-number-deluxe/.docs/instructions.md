@@ -6,7 +6,7 @@ The manufacturer listened to user feedback and decided to release a deluxe model
 
 The new features added to the deluxe model include:
 - Keeping track of currently queued numbers.
-- Setting the minimum and maximum number. This will allow using multiple deluxe Take-A-Number machines for queueing customers to different departments at the same facility, and  to tell apart the departments by the number range.
+- Setting the minimum and maximum number. This will allow using multiple deluxe Take-A-Number machines for queueing customers to different departments at the same facility, and to tell apart the departments by the number range.
 - Allowing certain numbers to skip the queue to provide priority service to pregnant women and the elderly.
 - Auto shutdown to prevent accidentally leaving the machine on for the whole weekend and wasting energy.
 
