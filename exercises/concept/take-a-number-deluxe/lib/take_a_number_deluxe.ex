@@ -1,7 +1,7 @@
 defmodule TakeANumberDeluxe do
   # Client API
 
-  @spec start_link(keyword()) :: {:ok, pid()}
+  @spec start_link(keyword()) :: {:ok, pid()} | {:error, atom()}
   def start_link(init_arg) do
     # Please implement the start_link/1 function
   end

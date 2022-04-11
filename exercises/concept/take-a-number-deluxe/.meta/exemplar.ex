@@ -3,7 +3,7 @@ defmodule TakeANumberDeluxe do
 
   # Client API
 
-  @spec start_link(keyword()) :: {:ok, pid()}
+  @spec start_link(keyword()) :: {:ok, pid()} | {:error, atom()}
   def start_link(init_arg) do
     GenServer.start_link(__MODULE__, init_arg)
   end
