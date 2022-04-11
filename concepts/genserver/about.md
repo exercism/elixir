@@ -12,7 +12,7 @@ Often, a single module defines both a _client API_, a set of functions that othe
 
 Let's take a look at a simple example of a `GenServer` first, and then learn what each callback means.
 
-## Examples
+## Example
 
 This is an example server that can respond to the repetitive inquisitions of annoying passengers during a long road trip, more exactly the question: "are we there yet?". It keeps track of how many times this question has been asked, returning increasingly more annoyed responses.
 
