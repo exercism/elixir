@@ -12,7 +12,7 @@
 - There is [a built-in function][start-link] that starts a linked `GenServer` process. The only thing that `TakeANumberDeluxe.start_link/2` needs to do is call that function with the right arguments.
 - `__MODULE__` is a special variable that holds the name of the current module.
 - Implement the [`GenServer` callback used when starting the process][init].
-- The callback should return either `{:ok, state}` or `{:error, reason}`.
+- The callback should return either `{:ok, state}` or `{:stop, reason}`.
 - Read the options from the `init_arg` keyword list.
 - There is [a built-in function][keyword-get] to get a value from a keyword list.
 - Use `TakeANumberDeluxe.State.new/2` to get the initial state.
