@@ -102,7 +102,7 @@ TakeANumberDeluxe.reset_state(machine)
 
 ## 6. Implement auto shutdown
 
-Modify starting the machine. It should read the value under the key `:auto_shutdown_timeout` in the keyword list passed as `init_arg` and pass it as the third argument to `TakeANumberDeluxe.State.new/3`.
+Modify starting the machine. It should read the value under the key `:auto_shutdown_timeout` in the keyword list passed as `init_arg` and pass it as the third argument to `TakeANumberDeluxe.State.new/3`. Use the default value of `:infinity` if `:auto_shutdown_timeout` was not given.
 
 Modify resetting the machine state to also pass `auto_shutdown_timeout` to `TakeANumberDeluxe.State.new/3`.
 
