@@ -2674,10 +2674,12 @@
           "multiple-clause-functions",
           "pattern-matching",
           "guards",
-          "errors"
+          "errors",
+          "genserver"
         ],
         "practices": [
           "processes",
+          "genserver",
           "errors"
         ],
         "difficulty": 8
