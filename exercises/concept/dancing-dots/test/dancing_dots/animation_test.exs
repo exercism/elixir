@@ -41,11 +41,23 @@ defmodule DancingDots.AnimationTest do
     end
 
     @tag task_id: 2
+    test "the default implementation of init/1 can be overridden" do
+      defmodule TestAnimation3 do
+        use DancingDots.Animation
+        def init(_), do: {:ok, []}
+        def handle_frame(dot, _frame_number, _opts), do: dot
+      end
+
+      assert TestAnimation3.init(3) == {:ok, []}
+      assert TestAnimation3.init(:anything) == {:ok, []}
+    end
+
+    @tag task_id: 2
     test "__using__ does not provide a default implementation of handle_frame/3" do
       capture_io(:stderr, fn ->
         Code.compile_quoted do
           quote do
-            defmodule TestAnimation3 do
+            defmodule TestAnimation4 do
               use DancingDots.Animation
             end
           end
@@ -61,7 +73,7 @@ defmodule DancingDots.AnimationTest do
         capture_io(:stderr, fn ->
           Code.compile_quoted do
             quote do
-              defmodule TestAnimation4 do
+              defmodule TestAnimation5 do
                 use DancingDots.Animation
               end
             end
