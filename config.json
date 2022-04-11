@@ -647,8 +647,7 @@
           "structs",
           "tuples",
           "keyword-lists",
-          "typespecs",
-          "erlang-libraries"
+          "typespecs"
         ],
         "status": "beta"
       }
