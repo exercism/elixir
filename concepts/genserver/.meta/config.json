@@ -1,0 +1,6 @@
+{
+  "blurb": "GenServer is a behaviour that abstracts common client-server interactions between Elixir processes.",
+  "authors": [
+    "angelikatyborska"
+  ]
+}
