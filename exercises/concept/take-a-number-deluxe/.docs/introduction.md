@@ -43,10 +43,10 @@ defmodule AnnoyingPassengerAutoreponder do
   @impl GenServer
   def handle_call(:are_we_there_yet?, _from, state) do
     reply =
-      case state do
-        n when n <= 3 -> "No."
-        n when n <= 10 -> "I told you #{state} times already. No."
-        n when n > 10 -> "..."
+      cond do
+        state <= 3 -> "No."
+        state <= 10 -> "I told you #{state} times already. No."
+        true -> "..."
       end
 
     # increase the count of questions asked
