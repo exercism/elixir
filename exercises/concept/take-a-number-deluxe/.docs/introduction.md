@@ -88,7 +88,7 @@ The `handle_call/3` callback is responsible for handling and responding to synch
 2. `from` - the `pid` of the process calling `GenServer.call/2`. Most often this argument can be ignored.
 3. `state` - the current state of the server. Remember that its initial value was set in the `init/1` callback.
 
-The `handle_call/3` usually returns a 3 tuple of `{:reply, reply, state}`. This means that the second element in the tuple, a `reply` that can be of any type, will be sent back to the caller. The third element in the tuple, `state`, is the new state of the server after handling this message.
+The `handle_call/3` callback usually returns a 3 tuple of `{:reply, reply, state}`. This means that the second element in the tuple, a `reply` that can be of any type, will be sent back to the caller. The third element in the tuple, `state`, is the new state of the server after handling this message.
 
 There are also more advanced possibilities that we won't cover now.
 
@@ -105,7 +105,7 @@ A message that doesn't require a reply can be sent to a server process with `Gen
 
 The `handle_cast/2` callback is responsible for handling those messages. It receives two arguments, `message` and `state`, which are the same arguments as in the  `handle_call/3` callback (except for `from`).
 
-The `handle_cast/2` usually returns a 2 tuple of `{:noreply, state}`.
+The `handle_cast/2` callback usually returns a 2 tuple of `{:noreply, state}`.
 
 There are also more advanced possibilities that we won't cover now.
 
