@@ -62,7 +62,7 @@ end
 A server can be started by calling `GenServer.start/3` or `GenServer.start_link/3`. We learned about the difference between those functions in the [links concept][concept-links].
 
 Those two functions:
-- Accept a module implementing the `GenServer` behavior as the first argument.
+- Accept a module implementing the `GenServer` behaviour as the first argument.
 - Accept anything as the second argument called `init_arg`. As the name suggest, this argument gets passed to the `init/1` callback.
 - Accept an optional third argument with advanced options for running the process that we wont' cover now.
 

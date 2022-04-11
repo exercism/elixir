@@ -3,7 +3,7 @@
 ## Learning objectives
 
 - Know what GenServer is.
-- Know how to use GenServer to mix state and behavior.
+- Know how to use GenServer to mix state and behaviour.
 - Use the `init` callback to modify initial state.
 - Know the difference between `handle_call`, `handle_cast`, and `handle_info`, and use each.
 - Know how to send user input to callbacks.
