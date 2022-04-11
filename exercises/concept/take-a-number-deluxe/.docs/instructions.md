@@ -42,7 +42,7 @@ TakeANumberDeluxe.report_state(machine)
 # => %TakeANumberDeluxe.State{
 #      max_number: 10,
 #      min_number: 1,
-#      queue: {[], []},
+#      queue: %TakeANumberDeluxe.Queue{in: [], out: []},
 #      auto_shutdown_timeout: :infinity,
 #    }
 ```
