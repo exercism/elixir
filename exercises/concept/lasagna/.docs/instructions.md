@@ -15,7 +15,7 @@ Lasagna.expected_minutes_in_oven()
 
 ## 2. Calculate the remaining oven time in minutes
 
-Define the `Lasagna.remaining_minutes_in_oven/1` method that takes the actual minutes the lasagna has been in the oven as a argument and returns how many minutes the lasagna still has to remain in the oven, based on the expected oven time in minutes from the previous task.
+Define the `Lasagna.remaining_minutes_in_oven/1` method that takes the actual minutes the lasagna has been in the oven as an argument and returns how many minutes the lasagna still has to remain in the oven, based on the expected oven time in minutes from the previous task.
 
 ```elixir
 Lasagna.remaining_minutes_in_oven(30)
@@ -24,7 +24,7 @@ Lasagna.remaining_minutes_in_oven(30)
 
 ## 3. Calculate the preparation time in minutes
 
-Define the `Lasagna.preparation_time_in_minutes/1` method that takes the number of layers you added to the lasagna as a argument and returns how many minutes you spent preparing the lasagna, assuming each layer takes you 2 minutes to prepare.
+Define the `Lasagna.preparation_time_in_minutes/1` method that takes the number of layers you added to the lasagna as an argument and returns how many minutes you spent preparing the lasagna, assuming each layer takes you 2 minutes to prepare.
 
 ```elixir
 Lasagna.preparation_time_in_minutes(2)
