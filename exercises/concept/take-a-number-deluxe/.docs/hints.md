@@ -62,7 +62,7 @@
 - The return value `{:stop, reason}` of `init/1` does not need a timeout.
 - Implement the [`GenServer` callback used when handling messages that weren't sent in the usual `GenServer` way][handle-info].
 - This callback needs to handle `:timeout` messages and exit the process, but also catch and ignore any other messages.
-- There is [a built-in function][exit] that exits the current process.
+- To exit a GenServer process, return `{:stop, reason, state}` from the callback.
 - The exit reason should be `:normal`.
 
 [getting-started-genserver]: https://elixir-lang.org/getting-started/mix-otp/genserver.html
@@ -79,4 +79,3 @@
 [handle-info]: https://hexdocs.pm/elixir/GenServer.html#c:handle_info/2
 [keyword-get]: https://hexdocs.pm/elixir/Keyword.html#get/3
 [case]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#case/2
-[exit]: https://hexdocs.pm/elixir/Process.html#exit/2
