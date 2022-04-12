@@ -35,7 +35,7 @@
 ## 5. Create a notification that the lasagna is ready
 
 - You need to define a [function][functions] without any arguments.
-- You need to return an [string][string].
+- You need to return a [string][string].
 
 [functions]: https://elixir-lang.org/getting-started/modules-and-functions.html#named-functions
 [return]: https://stackoverflow.com/questions/37445838/returning-values-in-elixir
