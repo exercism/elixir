@@ -21,5 +21,6 @@
     ]
   },
   "language_versions": ">=1.10",
+  "icon": "take-a-number",
   "blurb": "Learn about GenServers by writing an embedded system for a Take-A-Number machine."
 }

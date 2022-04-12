@@ -59,6 +59,7 @@
 ## 6. Implement auto shutdown
 
 - Extend all `init/1` and `handle_*` callbacks to return one extra element in their tuples. Its value should be `state.auto_shutdown_timeout`.
+- The return value `{:stop, reason}` of `init/1` does not need a timeout.
 - Implement the [`GenServer` callback used when handling messages that weren't sent in the usual `GenServer` way][handle-info].
 - This callback needs to handle `:timeout` messages and exit the process, but also catch and ignore any other messages.
 - There is [a built-in function][exit] that exits the current process.

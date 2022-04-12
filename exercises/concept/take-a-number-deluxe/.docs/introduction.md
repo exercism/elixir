@@ -14,12 +14,12 @@ Often, a single module defines both a _client API_, a set of functions that othe
 
 Let's take a look at a simple example of a `GenServer` first, and then learn what each callback means.
 
-### Examples
+### Example
 
 This is an example server that can respond to the repetitive inquisitions of annoying passengers during a long road trip, more exactly the question: "are we there yet?". It keeps track of how many times this question has been asked, returning increasingly more annoyed responses.
 
 ```elixir
-defmodule AnnoyingPassengerAutoreponder do
+defmodule AnnoyingPassengerAutoresponder do
   use GenServer
   # Client API
 
@@ -64,7 +64,7 @@ end
 A server can be started by calling `GenServer.start/3` or `GenServer.start_link/3`. We learned about the difference between those functions in the [links concept][concept-links].
 
 Those two functions:
-- Accept a module implementing the `GenServer` behavior as the first argument.
+- Accept a module implementing the `GenServer` behaviour as the first argument.
 - Accept anything as the second argument called `init_arg`. As the name suggest, this argument gets passed to the `init/1` callback.
 - Accept an optional third argument with advanced options for running the process that we wont' cover now.
 
@@ -88,7 +88,7 @@ The `handle_call/3` callback is responsible for handling and responding to synch
 2. `from` - the `pid` of the process calling `GenServer.call/2`. Most often this argument can be ignored.
 3. `state` - the current state of the server. Remember that its initial value was set in the `init/1` callback.
 
-The `handle_call/3` usually returns a 3 tuple of `{:reply, reply, state}`. This means that the second element in the tuple, a `reply` that can be of any type, will be sent back to the caller. The third element in the tuple, `state`, is the new state of the server after handling this message.
+The `handle_call/3` callback usually returns a 3 tuple of `{:reply, reply, state}`. This means that the second element in the tuple, a `reply` that can be of any type, will be sent back to the caller. The third element in the tuple, `state`, is the new state of the server after handling this message.
 
 There are also more advanced possibilities that we won't cover now.
 
@@ -105,7 +105,7 @@ A message that doesn't require a reply can be sent to a server process with `Gen
 
 The `handle_cast/2` callback is responsible for handling those messages. It receives two arguments, `message` and `state`, which are the same arguments as in the  `handle_call/3` callback (except for `from`).
 
-The `handle_cast/2` usually returns a 2 tuple of `{:noreply, state}`.
+The `handle_cast/2` callback usually returns a 2 tuple of `{:noreply, state}`.
 
 There are also more advanced possibilities that we won't cover now.
 
