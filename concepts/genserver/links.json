@@ -8,6 +8,10 @@
     "description": "Documentation - Genserver"
   },
   {
+    "url": "https://elixirschool.com/en/lessons/advanced/otp_concurrency",
+    "description": "Elixir School - OTP Concurrency"
+  },
+  {
     "url": "https://en.wikipedia.org/wiki/Actor_model",
     "description": "Actor model"
   }
