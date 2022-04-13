@@ -28,7 +28,7 @@
 - You need to define a [named function][named-function] with 1 argument. The first argument is a [list][list] of language [string-literals][string].
 - Elixir [provides a function][length] to count the length of a list.
 
-## 6. Define a function to determine if the list is exciting
+## 6. Define a function to determine if the list includes a functional language
 
 - You need to define a [named function][named-function] with 1 argument. The first argument is a [list][list] of language [string-literals][string].
 - Your function should return a boolean value indicating whether `"Elixir"` is a member of the list. Elixir [provides a function][in] to test list membership.
