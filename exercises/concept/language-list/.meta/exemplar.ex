@@ -19,7 +19,7 @@ defmodule LanguageList do
     length(list)
   end
 
-  def exciting_list?(list) do
+  def functional_list?(list) do
     "Elixir" in list
   end
 end

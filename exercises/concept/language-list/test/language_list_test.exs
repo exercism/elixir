@@ -102,15 +102,15 @@ defmodule LanguageListTest do
     end
   end
 
-  describe "exciting_list?/1" do
+  describe "functional_list?/1" do
     @tag task_id: 6
-    test "an exciting language list" do
-      assert LanguageList.exciting_list?(["Clojure", "Haskell", "Erlang", "F#", "Elixir"])
+    test "a functional language list" do
+      assert LanguageList.functional_list?(["Clojure", "Haskell", "Erlang", "F#", "Elixir"])
     end
 
     @tag task_id: 6
-    test "not an exciting language list" do
-      refute LanguageList.exciting_list?(["Java", "C", "JavaScript"])
+    test "not a functional language list" do
+      refute LanguageList.functional_list?(["Java", "C", "JavaScript"])
     end
   end
 end

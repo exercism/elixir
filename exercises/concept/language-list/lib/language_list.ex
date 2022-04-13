@@ -19,7 +19,7 @@ defmodule LanguageList do
     # Please implement the count/1 function
   end
 
-  def exciting_list?(list) do
-    # Please implement the exciting_list?/1 function
+  def functional_list?(list) do
+    # Please implement the functional_list?/1 function
   end
 end
