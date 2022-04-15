@@ -1,15 +1,16 @@
 {
-  "authors": ["jiegillet"],
-  "contributors": [],
+  "authors": [
+    "jiegillet"
+  ],
   "files": {
-    "example": [
-      ".meta/example.ex"
-    ],
     "solution": [
       "lib/killer_sudoku_helper.ex"
     ],
     "test": [
       "test/killer_sudoku_helper_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
     ]
   },
   "blurb": "Write a tool that makes it easier to solve Killer Sudokus",
