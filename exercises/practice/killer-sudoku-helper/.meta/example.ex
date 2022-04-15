@@ -4,7 +4,7 @@ defmodule KillerSudokuHelper do
   """
   @spec combinations(cage :: %{exclude: [integer], size: integer, sum: integer}) :: [[integer]]
   def combinations(%{exclude: exclude, size: size, sum: sum}) do
-    numbers = Enum.to_list(9..1//-1) -- exclude
+    numbers = [9, 8, 7, 6, 5, 4, 3, 2, 1] -- exclude
 
     do_combinations(numbers, size, [[]])
     |> Enum.filter(&(Enum.sum(&1) == sum))
