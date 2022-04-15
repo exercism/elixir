@@ -195,6 +195,38 @@ end
 
 Mix.Generator.create_file("exercises/practice/#{exercise}/mix.exs", mix)
 
+# .gitignore
+gitignore = """
+# The directory Mix will write compiled artifacts to.
+/_build/
+
+# If you run "mix test --cover", coverage assets end up here.
+/cover/
+
+# The directory Mix downloads your dependencies sources to.
+/deps/
+
+# Where third-party dependencies like ExDoc output generated docs.
+/doc/
+
+# Ignore .fetch files in case you like to edit your project deps locally.
+/.fetch
+
+# If the VM crashes, it generates a dump, let's ignore it too.
+erl_crash.dump
+
+# Also ignore archive artifacts (built via "mix archive.build").
+*.ez
+
+# Ignore package tarball (built via "mix hex.build").
+#{exercise_snake_case}-*.tar
+
+# Temporary files, for example, from tests.
+/tmp/
+"""
+
+Mix.Generator.create_file("exercises/practice/#{exercise}/.gitignore", gitignore)
+
 # test/test_helper.exs
 test_helper = """
 ExUnit.start()
