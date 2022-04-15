@@ -2251,6 +2251,22 @@
         "difficulty": 5
       },
       {
+        "slug": "killer-sudoku-helper",
+        "name": "Killer Sudoku Helper",
+        "uuid": "ac7f32a8-920b-4132-b904-76131b344f12",
+        "prerequisites": [
+          "integers",
+          "lists",
+          "ranges",
+          "enum",
+          "maps",
+          "pattern-matching",
+          "recursion"
+        ],
+        "practices": [],
+        "difficulty": 6
+      },
+      {
         "slug": "knapsack",
         "name": "Knapsack",
         "uuid": "1770aab6-2289-4134-b6ac-7d346e421e06",
