@@ -2,6 +2,9 @@
   "authors": [
     "jiegillet"
   ],
+  "contributors": [
+    "angelikatyborska"
+  ],
   "files": {
     "solution": [
       "lib/state_of_tic_tac_toe.ex"
