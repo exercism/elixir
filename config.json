@@ -2230,9 +2230,11 @@
           "lists",
           "enum",
           "maps",
-          "list-comprehensions"
+          "list-comprehensions",
+          "case",
+          "charlists"
         ],
-        "practices": [],
+        "practices": ["cond"],
         "difficulty": 5
       },
       {
