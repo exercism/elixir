@@ -2219,25 +2219,6 @@
         "difficulty": 5
       },
       {
-        "slug": "state-of-tic-tac-toe",
-        "name": "State of Tic Tac Toe",
-        "uuid": "905ac84d-7ba1-4208-bee1-55d8efde0c01",
-        "prerequisites": [
-          "strings",
-          "tuples",
-          "atoms",
-          "cond",
-          "lists",
-          "enum",
-          "maps",
-          "list-comprehensions",
-          "case",
-          "charlists"
-        ],
-        "practices": ["cond"],
-        "difficulty": 5
-      },
-      {
         "slug": "transpose",
         "name": "Transpose",
         "uuid": "ce270a34-add1-422c-bb86-53b310f05e27",
@@ -2403,6 +2384,25 @@
         "practices": [
           "recursion"
         ],
+        "difficulty": 6
+      },
+      {
+        "slug": "state-of-tic-tac-toe",
+        "name": "State of Tic Tac Toe",
+        "uuid": "905ac84d-7ba1-4208-bee1-55d8efde0c01",
+        "prerequisites": [
+          "strings",
+          "tuples",
+          "atoms",
+          "cond",
+          "lists",
+          "enum",
+          "maps",
+          "list-comprehensions",
+          "case",
+          "charlists"
+        ],
+        "practices": ["cond"],
         "difficulty": 6
       },
       {
