@@ -10,7 +10,7 @@ defmodule StateOfTicTacToeTest do
       X..
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:ok, :win}
+      assert StateOfTicTacToe.game_state(board) == {:ok, :win}
     end
 
     @tag :pending
@@ -21,7 +21,7 @@ defmodule StateOfTicTacToeTest do
       .X.
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:ok, :win}
+      assert StateOfTicTacToe.game_state(board) == {:ok, :win}
     end
 
     @tag :pending
@@ -32,7 +32,7 @@ defmodule StateOfTicTacToeTest do
       ..X
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:ok, :win}
+      assert StateOfTicTacToe.game_state(board) == {:ok, :win}
     end
 
     @tag :pending
@@ -43,7 +43,7 @@ defmodule StateOfTicTacToeTest do
       O..
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:ok, :win}
+      assert StateOfTicTacToe.game_state(board) == {:ok, :win}
     end
 
     @tag :pending
@@ -54,7 +54,7 @@ defmodule StateOfTicTacToeTest do
       .O.
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:ok, :win}
+      assert StateOfTicTacToe.game_state(board) == {:ok, :win}
     end
 
     @tag :pending
@@ -65,7 +65,7 @@ defmodule StateOfTicTacToeTest do
       ..O
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:ok, :win}
+      assert StateOfTicTacToe.game_state(board) == {:ok, :win}
     end
 
     @tag :pending
@@ -76,7 +76,7 @@ defmodule StateOfTicTacToeTest do
       O..
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:ok, :win}
+      assert StateOfTicTacToe.game_state(board) == {:ok, :win}
     end
 
     @tag :pending
@@ -87,7 +87,7 @@ defmodule StateOfTicTacToeTest do
       .O.
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:ok, :win}
+      assert StateOfTicTacToe.game_state(board) == {:ok, :win}
     end
 
     @tag :pending
@@ -98,7 +98,7 @@ defmodule StateOfTicTacToeTest do
       XXX
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:ok, :win}
+      assert StateOfTicTacToe.game_state(board) == {:ok, :win}
     end
 
     @tag :pending
@@ -109,7 +109,7 @@ defmodule StateOfTicTacToeTest do
       XX.
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:ok, :win}
+      assert StateOfTicTacToe.game_state(board) == {:ok, :win}
     end
 
     @tag :pending
@@ -120,7 +120,7 @@ defmodule StateOfTicTacToeTest do
       X..
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:ok, :win}
+      assert StateOfTicTacToe.game_state(board) == {:ok, :win}
     end
 
     @tag :pending
@@ -131,7 +131,7 @@ defmodule StateOfTicTacToeTest do
       OOO
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:ok, :win}
+      assert StateOfTicTacToe.game_state(board) == {:ok, :win}
     end
 
     @tag :pending
@@ -142,7 +142,7 @@ defmodule StateOfTicTacToeTest do
       ..X
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:ok, :win}
+      assert StateOfTicTacToe.game_state(board) == {:ok, :win}
     end
 
     @tag :pending
@@ -153,7 +153,7 @@ defmodule StateOfTicTacToeTest do
       X..
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:ok, :win}
+      assert StateOfTicTacToe.game_state(board) == {:ok, :win}
     end
 
     @tag :pending
@@ -164,7 +164,7 @@ defmodule StateOfTicTacToeTest do
       X.O
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:ok, :win}
+      assert StateOfTicTacToe.game_state(board) == {:ok, :win}
     end
 
     @tag :pending
@@ -175,7 +175,7 @@ defmodule StateOfTicTacToeTest do
       OXX
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:ok, :win}
+      assert StateOfTicTacToe.game_state(board) == {:ok, :win}
     end
 
     @tag :pending
@@ -186,7 +186,7 @@ defmodule StateOfTicTacToeTest do
       XOO
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:ok, :win}
+      assert StateOfTicTacToe.game_state(board) == {:ok, :win}
     end
 
     @tag :pending
@@ -197,7 +197,7 @@ defmodule StateOfTicTacToeTest do
       XOX
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:ok, :win}
+      assert StateOfTicTacToe.game_state(board) == {:ok, :win}
     end
   end
 
@@ -210,7 +210,7 @@ defmodule StateOfTicTacToeTest do
       OXO
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:ok, :draw}
+      assert StateOfTicTacToe.game_state(board) == {:ok, :draw}
     end
 
     @tag :pending
@@ -223,7 +223,7 @@ defmodule StateOfTicTacToeTest do
 
       {:ok, :draw}
 
-      assert StateOfTicTacToe.gamestate(board) == {:ok, :draw}
+      assert StateOfTicTacToe.game_state(board) == {:ok, :draw}
     end
   end
 
@@ -236,7 +236,7 @@ defmodule StateOfTicTacToeTest do
       ...
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:ok, :ongoing}
+      assert StateOfTicTacToe.game_state(board) == {:ok, :ongoing}
     end
 
     @tag :pending
@@ -247,7 +247,7 @@ defmodule StateOfTicTacToeTest do
       ...
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:ok, :ongoing}
+      assert StateOfTicTacToe.game_state(board) == {:ok, :ongoing}
     end
 
     @tag :pending
@@ -258,7 +258,7 @@ defmodule StateOfTicTacToeTest do
       OX.
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:ok, :ongoing}
+      assert StateOfTicTacToe.game_state(board) == {:ok, :ongoing}
     end
   end
 
@@ -271,7 +271,7 @@ defmodule StateOfTicTacToeTest do
       ...
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:error, "Wrong turn order: X went twice"}
+      assert StateOfTicTacToe.game_state(board) == {:error, "Wrong turn order: X went twice"}
     end
 
     @tag :pending
@@ -282,7 +282,7 @@ defmodule StateOfTicTacToeTest do
       ...
       """
 
-      assert StateOfTicTacToe.gamestate(board) == {:error, "Wrong turn order: O started"}
+      assert StateOfTicTacToe.game_state(board) == {:error, "Wrong turn order: O started"}
     end
 
     @tag :pending
@@ -293,7 +293,7 @@ defmodule StateOfTicTacToeTest do
       ...
       """
 
-      assert StateOfTicTacToe.gamestate(board) ==
+      assert StateOfTicTacToe.game_state(board) ==
                {:error, "Impossible board: game should have ended after X won"}
     end
   end
