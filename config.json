@@ -1807,6 +1807,22 @@
         "difficulty": 4
       },
       {
+        "slug": "killer-sudoku-helper",
+        "name": "Killer Sudoku Helper",
+        "uuid": "ac7f32a8-920b-4132-b904-76131b344f12",
+        "prerequisites": [
+          "integers",
+          "lists",
+          "ranges",
+          "enum",
+          "maps",
+          "pattern-matching",
+          "recursion"
+        ],
+        "practices": [],
+        "difficulty": 4
+      },
+      {
         "slug": "largest-series-product",
         "name": "Largest Series Product",
         "uuid": "79525094-76dd-4cf0-8956-fdd33de855e2",
