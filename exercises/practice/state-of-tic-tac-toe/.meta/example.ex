@@ -22,12 +22,23 @@ defmodule StateOfTicTacToe do
     o_wins = wins?(board, ?O)
 
     cond do
-      x_count - o_count > 1 -> {:error, "Wrong turn order: X went twice"}
-      o_count - x_count > 0 -> {:error, "Wrong turn order: O started"}
-      x_wins and o_wins -> {:error, "Impossible board: game should have ended after the game was won"}
-      x_wins or o_wins -> {:ok, :win}
-      o_count == 4 -> {:ok, :draw}
-      true -> {:ok, :ongoing}
+      x_count - o_count > 1 ->
+        {:error, "Wrong turn order: X went twice"}
+
+      o_count - x_count > 0 ->
+        {:error, "Wrong turn order: O started"}
+
+      x_wins and o_wins ->
+        {:error, "Impossible board: game should have ended after the game was won"}
+
+      x_wins or o_wins ->
+        {:ok, :win}
+
+      o_count == 4 ->
+        {:ok, :draw}
+
+      true ->
+        {:ok, :ongoing}
     end
   end
 
