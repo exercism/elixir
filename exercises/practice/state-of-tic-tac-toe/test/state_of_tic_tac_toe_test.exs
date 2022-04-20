@@ -286,7 +286,7 @@ defmodule StateOfTicTacToeTest do
     end
 
     @tag :pending
-    test "Invalid board (3)" do
+    test "Invalid board: X won and O kept playing" do
       board = """
       XXX
       OOO
@@ -294,7 +294,19 @@ defmodule StateOfTicTacToeTest do
       """
 
       assert StateOfTicTacToe.game_state(board) ==
-               {:error, "Impossible board: game should have ended after X won"}
+               {:error, "Impossible board: game should have ended after the game was won"}
+    end
+
+    @tag :pending
+    test "Invalid board: players kept playing after a win" do
+      board = """
+      XXX
+      OOO
+      XOX
+      """
+
+      assert StateOfTicTacToe.game_state(board) ==
+               {:error, "Impossible board: game should have ended after the game was won"}
     end
   end
 end
