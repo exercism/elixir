@@ -2403,6 +2403,25 @@
         "difficulty": 6
       },
       {
+        "slug": "state-of-tic-tac-toe",
+        "name": "State of Tic Tac Toe",
+        "uuid": "905ac84d-7ba1-4208-bee1-55d8efde0c01",
+        "prerequisites": [
+          "strings",
+          "tuples",
+          "atoms",
+          "cond",
+          "lists",
+          "enum",
+          "maps",
+          "list-comprehensions",
+          "case",
+          "charlists"
+        ],
+        "practices": ["cond"],
+        "difficulty": 6
+      },
+      {
         "slug": "variable-length-quantity",
         "name": "Variable Length Quantity",
         "uuid": "2e8b9b75-609d-4c99-947c-28274a9dbf27",
