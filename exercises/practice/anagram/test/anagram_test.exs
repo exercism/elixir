@@ -74,14 +74,26 @@ defmodule AnagramTest do
   end
 
   @tag :pending
-  test "words are not anagrams of themselves (case-insensitive)" do
-    matches = Anagram.match("BANANA", ~w(BANANA Banana banana))
+  test "words are not anagrams of themselves" do
+    matches = Anagram.match("BANANA", ~w(BANANA))
+    assert matches == []
+  end
+
+  @tag :pending
+  test "words are not anagrams of themselves even if letter case is partially different" do
+    matches = Anagram.match("BANANA", ~w(Banana))
+    assert matches == []
+  end
+
+  @tag :pending
+  test "words are not anagrams of themselves even if letter case is completely different" do
+    matches = Anagram.match("BANANA", ~w(banana))
     assert matches == []
   end
 
   @tag :pending
   test "words other than themselves can be anagrams" do
-    matches = Anagram.match("LISTEN", ~w(Listen Silent LISTEN))
+    matches = Anagram.match("LISTEN", ~w(Silent LISTEN))
     assert matches == ~w(Silent)
   end
 end
