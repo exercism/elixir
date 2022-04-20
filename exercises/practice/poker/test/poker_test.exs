@@ -108,6 +108,22 @@ defmodule PokerTest do
   end
 
   @tag :pending
+  test "both hands have two pairs that add to the same value, win goes to highest pair" do
+    sixes_threes_and_ace = ~w(6S 6H 3S 3H AS)
+    sevens_twos_and_ace = ~w(7H 7S 2H 2S AC)
+    winning_hands = Poker.best_hand([sixes_threes_and_ace, sevens_twos_and_ace])
+    assert_poker(winning_hands, [sevens_twos_and_ace])
+  end
+
+  @tag :pending
+  test "two pairs first ranked by largest pair" do
+    fives_fours_and_two = ~w(5C 2S 5S 4H 4C)
+    sixes_twos_and_seven = ~w(6S 2S 6H 7C 2C)
+    winning_hands = Poker.best_hand([fives_fours_and_two, sixes_twos_and_seven])
+    assert_poker(winning_hands, [sixes_twos_and_seven])
+  end
+
+  @tag :pending
   test "three of a kind beats two pair" do
     eights_and_twos = ~w(2S 8H 2H 8D JH)
     three_fours = ~w(4S 5H 4C 8S 4H)
