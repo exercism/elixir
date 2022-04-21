@@ -1,6 +1,6 @@
 # About
 
-[Elixir](http://elixir-lang.org/), initially released in 2012, extends upon the already robust features of Erlang while also being easier for beginners to access, read, test, and write.
+[Elixir](https://elixir-lang.org/), initially released in 2012, extends upon the already robust features of Erlang while also being easier for beginners to access, read, test, and write.
 
 José Valim, the creator of Elixir, explains [in his 2012 conference talk](https://vimeo.com/53221562) how he built the language for applications to be:
 
@@ -9,7 +9,7 @@ José Valim, the creator of Elixir, explains [in his 2012 conference talk](https
   3. Soft-Real-Time
   4. Hot-Code-Swapped (can introduce new code without stopping the server)
 
-Elixir actually compiles down to [bytecode](https://en.wikipedia.org/wiki/Bytecode) and then runs on the [BEAM Erlang Virtual Machine](http://erlangcentral.org/videos/euc-2014-robert-virding-hitchhikers-tour-of-the-beam/).
+Elixir actually compiles down to [bytecode](https://en.wikipedia.org/wiki/Bytecode) and then runs on the [BEAM Erlang Virtual Machine](https://codesync.global/media/robert-virding-co-creator-of-erlang-explains-the-beam/).
 
 There is no "conversion cost" for calling Erlang, meaning you can run Erlang code right next to Elixir code.
 
@@ -25,4 +25,4 @@ Programmers use Elixir to handle thousands of requests and responses *concurrent
 
 It has been used successfully for microservices that need to consume and serve a multitude of APIs rapidly.
 
-The [Phoenix framework](http://www.phoenixframework.org/) helps structure Elixir applications for the web.
+The [Phoenix framework](https://www.phoenixframework.org/) helps structure Elixir applications for the web.
