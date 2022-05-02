@@ -3,7 +3,7 @@ defmodule StateOfTicTacToeTest do
 
   describe "Won games" do
     # @tag :pending
-    test "Finished game where X won via column victory (1)" do
+    test "Finished game where X won via left column victory" do
       board = """
       XOO
       X..
@@ -14,7 +14,7 @@ defmodule StateOfTicTacToeTest do
     end
 
     @tag :pending
-    test "Finished game where X won via column victory (2)" do
+    test "Finished game where X won via middle column victory" do
       board = """
       OXO
       .X.
@@ -25,7 +25,7 @@ defmodule StateOfTicTacToeTest do
     end
 
     @tag :pending
-    test "Finished game where X won via column victory (3)" do
+    test "Finished game where X won via right column victory" do
       board = """
       OOX
       ..X
@@ -36,7 +36,7 @@ defmodule StateOfTicTacToeTest do
     end
 
     @tag :pending
-    test "Finished game where O won via column victory (1)" do
+    test "Finished game where O won via left column victory" do
       board = """
       OXX
       OX.
@@ -47,7 +47,7 @@ defmodule StateOfTicTacToeTest do
     end
 
     @tag :pending
-    test "Finished game where O won via column victory (2)" do
+    test "Finished game where O won via middle column victory" do
       board = """
       XOX
       .OX
@@ -58,7 +58,7 @@ defmodule StateOfTicTacToeTest do
     end
 
     @tag :pending
-    test "Finished game where O won via column victory (3)" do
+    test "Finished game where O won via right column victory" do
       board = """
       XXO
       .XO
@@ -69,7 +69,7 @@ defmodule StateOfTicTacToeTest do
     end
 
     @tag :pending
-    test "Finished game where X won via row victory (1)" do
+    test "Finished game where X won via top row victory" do
       board = """
       XXX
       XOO
@@ -80,7 +80,7 @@ defmodule StateOfTicTacToeTest do
     end
 
     @tag :pending
-    test "Finished game where X won via row victory (2)" do
+    test "Finished game where X won via middle row victory" do
       board = """
       O..
       XXX
@@ -91,7 +91,7 @@ defmodule StateOfTicTacToeTest do
     end
 
     @tag :pending
-    test "Finished game where X won via row victory (3)" do
+    test "Finished game where X won via bottom row victory" do
       board = """
       .OO
       O.X
@@ -102,7 +102,7 @@ defmodule StateOfTicTacToeTest do
     end
 
     @tag :pending
-    test "Finished game where O won via row victory (1)" do
+    test "Finished game where O won via top row victory" do
       board = """
       OOO
       XXO
@@ -113,7 +113,7 @@ defmodule StateOfTicTacToeTest do
     end
 
     @tag :pending
-    test "Finished game where O won via row victory (2)" do
+    test "Finished game where O won via middle row victory" do
       board = """
       XX.
       OOO
@@ -124,7 +124,7 @@ defmodule StateOfTicTacToeTest do
     end
 
     @tag :pending
-    test "Finished game where O won via row victory (3)" do
+    test "Finished game where O won via bottom row victory" do
       board = """
       XOX
       .XX
@@ -135,7 +135,7 @@ defmodule StateOfTicTacToeTest do
     end
 
     @tag :pending
-    test "Finished game where X won via diagonal victory (1)" do
+    test "Finished game where X won via falling diagonal victory" do
       board = """
       XOO
       .X.
@@ -146,7 +146,7 @@ defmodule StateOfTicTacToeTest do
     end
 
     @tag :pending
-    test "Finished game where X won via diagonal victory (2)" do
+    test "Finished game where X won via rising diagonal victory" do
       board = """
       O.X
       OX.
@@ -157,7 +157,7 @@ defmodule StateOfTicTacToeTest do
     end
 
     @tag :pending
-    test "Finished game where O won via diagonal victory (3)" do
+    test "Finished game where O won via falling diagonal victory" do
       board = """
       OXX
       OOX
@@ -168,7 +168,7 @@ defmodule StateOfTicTacToeTest do
     end
 
     @tag :pending
-    test "Finished game where O won via diagonal victory (1)" do
+    test "Finished game where O won via rising diagonal victory" do
       board = """
       ..O
       .OX
@@ -203,7 +203,7 @@ defmodule StateOfTicTacToeTest do
 
   describe "Drawn games" do
     @tag :pending
-    test "Draw (1)" do
+    test "Draw" do
       board = """
       XOX
       XXO
@@ -214,7 +214,7 @@ defmodule StateOfTicTacToeTest do
     end
 
     @tag :pending
-    test "Draw (2)" do
+    test "Another Draw" do
       board = """
       XXO
       OXX
@@ -229,7 +229,7 @@ defmodule StateOfTicTacToeTest do
 
   describe "Ongoing games" do
     @tag :pending
-    test "Ongoing game (1)" do
+    test "Ongoing game: one move in" do
       board = """
       ...
       X..
@@ -240,7 +240,7 @@ defmodule StateOfTicTacToeTest do
     end
 
     @tag :pending
-    test "Ongoing game (2)" do
+    test "Ongoing game: two moves in" do
       board = """
       O..
       .X.
@@ -251,7 +251,7 @@ defmodule StateOfTicTacToeTest do
     end
 
     @tag :pending
-    test "Ongoing game (3)" do
+    test "Ongoing game: five moves in" do
       board = """
       X..
       .XO
@@ -264,7 +264,7 @@ defmodule StateOfTicTacToeTest do
 
   describe "Invalid boards" do
     @tag :pending
-    test "Invalid board (1)" do
+    test "Invalid board: X went twice" do
       board = """
       XX.
       ...
@@ -275,7 +275,7 @@ defmodule StateOfTicTacToeTest do
     end
 
     @tag :pending
-    test "Invalid board (2)" do
+    test "Invalid board: O started" do
       board = """
       OOX
       ...
