@@ -82,7 +82,7 @@ defmodule StateOfTicTacToeTest do
     @tag :pending
     test "Finished game where X won via row victory (2)" do
       board = """
-      O.O
+      O..
       XXX
       .O.
       """
