@@ -53,6 +53,8 @@ To reset a player's score, define `HighScore.reset_score/2`, which takes 2 argum
 - The first argument is the map of scores.
 - The second argument is the name of the player as a string, whose score you wish to reset.
 
+The function should also work if the player doesn't have a score.
+
 ```elixir
 score_map = HighScore.new()
 # => %{}
