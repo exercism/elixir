@@ -63,7 +63,7 @@ Frames are counted from `1`. The dot passed to `handle_frame/3` is always the do
 
 ```elixir
 DancingDots.Zoom.init([velocity: nil])
-# => {:error, "Expected required option :velocity to be a number, got: nil"}
+# => {:error, "The :velocity option is required, and its value must be a number. Got: nil"}
 
 dot = %DancingDots.Dot{x: 100, y: 100, radius: 24, opacity: 1}
 
