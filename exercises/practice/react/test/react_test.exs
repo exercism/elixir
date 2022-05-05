@@ -105,7 +105,7 @@ defmodule ReactTest do
     myself = self()
     React.add_callback(cells, "output", "callback1", send_callback(myself))
     React.set_value(cells, "input", 2)
-    refute_receive {:callback, _}, 50, "Expected no callback"
+    refute_receive {:callback, _, _}, 50, "Expected no callback"
     React.set_value(cells, "input", 4)
     assert_receive {:callback, "callback1", 222}
   end
@@ -161,7 +161,7 @@ defmodule ReactTest do
 
     React.add_callback(cells, "output", "callback3", send_callback(myself))
     React.set_value(cells, "input", 41)
-    refute_receive {:callback, _}, 50, "Expected no callback"
+    refute_receive {:callback, "callback1", _}, 50, "Expected no callback"
     assert_receive {:callback, "callback2", 42}
     assert_receive {:callback, "callback3", 42}
   end
@@ -184,7 +184,7 @@ defmodule ReactTest do
     React.remove_callback(cells, "output", "callback1")
     React.remove_callback(cells, "output", "callback1")
     React.set_value(cells, "input", 2)
-    refute_receive {:callback, _}, 50, "Expected no callback"
+    refute_receive {:callback, "callback1", _}, 50, "Expected no callback"
     assert_receive {:callback, "callback2", 3}
   end
 
@@ -223,12 +223,12 @@ defmodule ReactTest do
     myself = self()
     React.add_callback(cells, "always_two", "callback1", send_callback(myself))
     React.set_value(cells, "input", 2)
-    refute_receive {:callback, _}, 50, "Expected no callback"
+    refute_receive {:callback, _, _}, 50, "Expected no callback"
     React.set_value(cells, "input", 3)
-    refute_receive {:callback, _}, 50, "Expected no callback"
+    refute_receive {:callback, _, _}, 50, "Expected no callback"
     React.set_value(cells, "input", 4)
-    refute_receive {:callback, _}, 50, "Expected no callback"
+    refute_receive {:callback, _, _}, 50, "Expected no callback"
     React.set_value(cells, "input", 5)
-    refute_receive {:callback, _}, 50, "Expected no callback"
+    refute_receive {:callback, _, _}, 50, "Expected no callback"
   end
 end
