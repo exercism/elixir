@@ -135,7 +135,7 @@ do
 done
 
 # clean up
-#rm -rf tmp-exercises
+rm -rf tmp-exercises
 
 # report
 printf -- '-%.0s' {1..80}; echo ""
