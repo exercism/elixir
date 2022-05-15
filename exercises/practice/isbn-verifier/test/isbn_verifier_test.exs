@@ -22,6 +22,11 @@ defmodule IsbnVerifierTest do
   end
 
   @tag :pending
+  test "check digit in isbn is not treated as zero" do
+    refute IsbnVerifier.isbn?("4-598-21507-B")
+  end
+
+  @tag :pending
   test "invalid character in isbn" do
     refute IsbnVerifier.isbn?("3-598-P1581-X")
   end
