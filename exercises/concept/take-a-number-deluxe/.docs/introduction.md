@@ -6,7 +6,9 @@
 
 Remember the receive loop from when we learned about [processes][concept-processes]? The `GenServer` behaviour provides abstractions for implementing such loops, and for exchanging messages with a process that runs such a loop. It makes it easier to keep state and execute asynchronous code.
 
+~~~~exercism/note
 Be warned that the name `GenServer` is loaded. It is also used to describe a _module_ that _uses_ the `GenServer` behaviour, as well as a _process_ that was started from a module that _uses_ the `GenServer` behaviour.
+~~~~
 
 The `GenServer` behaviour defines one required callback, `init/1`, and a few interesting optional callbacks: `handle_call/3`, `handle_cast/2`, and `handle_info/3`. The _clients_ using a `GenServer` aren't supposed to call those callbacks directly. Instead, the `GenServer` module provides functions that clients can use to communicate with a `GenServer` process.
 
