@@ -92,18 +92,22 @@ defmodule FormTest do
 
       {:"::", _, [_, type_definition]} = Code.Typespec.type_to_quoted(type)
 
-      actual_type_definition = Macro.to_string(type_definition)
+      # Alphabetize by label so that the test is insensitive to order.
+      normalized_type_definition =
+        case type_definition do
+          {:%{}, opts, map_keys} ->
+            {:%{}, opts, List.keysort(map_keys, 0)}
 
-      if is_list(unquote(expected_type_definition)) do
-        if actual_type_definition in unquote(expected_type_definition) do
-          assert true
-        else
-          # we know this will fail at this point, but we're using it to provide a nice failure message
-          assert actual_type_definition == hd(unquote(expected_type_definition))
+          {:|, opts, tuple_elements} ->
+            {:|, opts, Enum.sort_by(tuple_elements, fn {name, _, _} -> name end)}
+
+          x ->
+            x
         end
-      else
-        assert actual_type_definition == unquote(expected_type_definition)
-      end
+
+      actual_type_definition = Macro.to_string(normalized_type_definition)
+
+      assert actual_type_definition == unquote(expected_type_definition)
     end
   end
 
@@ -217,16 +221,10 @@ defmodule FormTest do
   describe "custom types in the Form module" do
     @tag task_id: 5
     test "has a custom 'address_map' type" do
-      expected_type_definitions = [
-        "%{street: String.t(), postal_code: String.t(), city: String.t()}",
-        "%{street: String.t(), city: String.t(), postal_code: String.t()}",
-        "%{postal_code: String.t(), street: String.t(), city: String.t()}",
-        "%{postal_code: String.t(), city: String.t(), street: String.t()}",
-        "%{city: String.t(), street: String.t(), postal_code: String.t()}",
+      expected_type_definition =
         "%{city: String.t(), postal_code: String.t(), street: String.t()}"
-      ]
 
-      assert_type({Form, :address_map}, expected_type_definitions)
+      assert_type({Form, :address_map}, expected_type_definition)
     end
 
     @tag task_id: 5
@@ -239,12 +237,9 @@ defmodule FormTest do
 
     @tag task_id: 5
     test "has a custom 'address' type that is a union of 'address_map' and 'address_tuple'" do
-      expected_type_definitions = [
-        "address_map() | address_tuple()",
-        "address_tuple() | address_map()"
-      ]
+      expected_type_definition = "address_map() | address_tuple()"
 
-      assert_type({Form, :address}, expected_type_definitions)
+      assert_type({Form, :address}, expected_type_definition)
     end
   end
 
