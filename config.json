@@ -2740,7 +2740,8 @@
           "ast"
         ],
         "practices": [
-          "ast"
+          "ast",
+          "keyword-lists"
         ],
         "difficulty": 8
       },
