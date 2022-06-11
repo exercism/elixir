@@ -35,7 +35,7 @@ Use the `Animation` behaviour to implement a flickering animation.
 
 It should use the default `init/1` callback because it doesn't take any options.
 
-Implement the `handle_frame/3` callback. This function handles a single frame. If the frame is a multiple of four, the function should return the dot with half of its original opacity. In other frames, it should return the dot unchanged.
+Implement the `handle_frame/3` callback, which handles a single frame. If the frame number is a multiple of four, the function should return the dot with half of its original opacity. In other frames, it should return the dot unchanged.
 
 Frames are counted from `1`. The dot passed to `handle_frame/3` is always the dot in its original state, not in the state from the previous frame.
 
