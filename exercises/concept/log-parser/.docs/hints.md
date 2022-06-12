@@ -27,7 +27,7 @@
 
 ## 4. Tag lines with user names
 
-There is a [`Regex` function][regex-run] that runs a regular expression against a string and returns all captures.
+- There is a [`Regex` function][regex-run] that runs a regular expression against a string and returns all captures.
 
 [regex-docs]: https://hexdocs.pm/elixir/Regex.html
 [sigils-regex]: https://elixir-lang.org/getting-started/sigils.html#regular-expressions
