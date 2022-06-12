@@ -220,9 +220,7 @@
         "name": "Date Parser",
         "uuid": "57198686-71c9-4f38-973a-a111435560e7",
         "concepts": [],
-        "prerequisites": [
-          "strings"
-        ],
+        "prerequisites": [],
         "status": "deprecated"
       },
       {
