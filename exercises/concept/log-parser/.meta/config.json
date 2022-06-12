@@ -17,5 +17,5 @@
   "forked_from": [
     "go/parsing-log-files"
   ],
-  "blurb": "Learn about regular expressions by parsing dates."
+  "blurb": "Learn about regular expressions by parsing logs."
 }
