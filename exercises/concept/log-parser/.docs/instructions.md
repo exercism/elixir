@@ -44,7 +44,7 @@ Implement the `remove_artifacts/1` function to take a string and remove all occu
 
 Lines not containing end-of-line text should be returned unmodified.
 
-Just remove the end of line string. Do not attempt to adjust the whitespaces.
+Just remove the end of line string, there's no need to adjust the whitespaces.
 
 ```elixir
 LogParser.remove_artifacts("[WARNING] end-of-line23033 Network Failure end-of-line27")
