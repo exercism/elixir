@@ -17,3 +17,5 @@ Bitwise.bsl(1, 2)
 ```
 
 All bitwise functions only work on integers.
+
+If you are running Elixir version 1.9 or lower, you will need to call `require Bitwise` at the beginning of the module definition to be able to use the _Bitwise_ module.
