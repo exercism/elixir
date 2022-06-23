@@ -8,7 +8,7 @@ Lists are built-in to the Elixir language. They are considered a basic type, den
 empty_list = []
 one_item_list = [1]
 two_item_list = [1, 2]
-multiple_type_list = [1, :pi, 3.14]
+multiple_type_list = [1, :pi, 3.14, "four"]
 ```
 
 Elixir implements lists as a linked list, where each node stores the reference to the next list. The first item in the list is referred to as the _head_ and the remaining list of items is called the _tail_. We can use this notation in code:
