@@ -1,5 +1,3 @@
 # Introduction
 
-## Ranges
-
 %{concept:ranges}

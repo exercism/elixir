@@ -1,5 +1,3 @@
 # Introduction
 
-## File
-
 %{concept:file}

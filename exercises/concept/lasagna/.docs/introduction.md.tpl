@@ -1,5 +1,3 @@
 # Introduction
 
-## Basics
-
 %{concept:basics}

@@ -1,5 +1,3 @@
 # Introduction
 
-## Enum
-
 %{concept:enum}

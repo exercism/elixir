@@ -1,5 +1,3 @@
 # Introduction
 
-## Streams
-
 %{concept:streams}

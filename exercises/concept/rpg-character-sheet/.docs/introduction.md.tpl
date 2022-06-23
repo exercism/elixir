@@ -1,5 +1,3 @@
 # Introduction
 
-## IO
-
 %{concept:io}

@@ -1,5 +1,3 @@
 # Introduction
 
-## With
-
 %{concept:with}

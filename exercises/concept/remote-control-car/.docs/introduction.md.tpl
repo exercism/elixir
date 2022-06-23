@@ -1,5 +1,3 @@
 # Introduction
 
-## Structs
-
 %{concept:structs}

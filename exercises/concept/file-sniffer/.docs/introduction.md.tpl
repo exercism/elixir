@@ -1,5 +1,3 @@
 # Introduction
 
-## Binaries
-
 %{concept:binaries}

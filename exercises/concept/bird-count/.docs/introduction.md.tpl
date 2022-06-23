@@ -1,5 +1,3 @@
 # Introduction
 
-## Recursion
-
 %{concept:recursion}

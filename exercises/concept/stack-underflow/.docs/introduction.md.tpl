@@ -1,5 +1,3 @@
 # Introduction
 
-## Exceptions
-
 %{concept:exceptions}

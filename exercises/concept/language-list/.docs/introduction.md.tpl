@@ -1,5 +1,3 @@
 # Introduction
 
-## Lists
-
 %{concept:lists}

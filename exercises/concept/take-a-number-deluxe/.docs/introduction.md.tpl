@@ -1,5 +1,3 @@
 # Introduction
 
-## GenServer
-
 %{concept:genserver}

@@ -1,5 +1,3 @@
 # Introduction
 
-## Protocols
-
 %{concept:protocols}
