@@ -1,0 +1,5 @@
+# Introduction
+
+## Structs
+
+%{concept:structs}
