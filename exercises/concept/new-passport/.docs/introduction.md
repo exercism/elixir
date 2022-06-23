@@ -1,5 +1,7 @@
 # Introduction
 
+## With
+
 The [special form with][with] provides a way to focus on the "happy path" of a series of potentially failing steps and deal with the failures later.
 
 ```elixir
