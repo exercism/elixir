@@ -1,6 +1,6 @@
 # Introduction
 
-## Try Rescue Else After
+## Try/Rescue/Else/After
 
 %{concept:try-rescue-else-after}
 

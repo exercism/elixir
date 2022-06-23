@@ -4,6 +4,6 @@
 
 %{concept:errors}
 
-## Try Rescue
+## Try/Rescue
 
 %{concept:try-rescue}

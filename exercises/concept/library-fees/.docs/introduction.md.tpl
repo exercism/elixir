@@ -1,5 +1,5 @@
 # Introduction
 
-## Dates and time
+## Dates and Time
 
 %{concept:dates-and-time}

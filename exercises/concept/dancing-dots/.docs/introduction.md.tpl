@@ -1,6 +1,6 @@
 # Introduction
 
-## `use`
+## Use
 
 %{concept:use}
 

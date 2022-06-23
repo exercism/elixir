@@ -1,6 +1,6 @@
 # Introduction
 
-## `use`
+## Use
 
 The `use` macro allows us to quickly extend our module with functionally provided by another module. When we `use` a module, that module can inject code into our module - it can for example define functions, `import` or `alias` other modules, or set module attributes.
 

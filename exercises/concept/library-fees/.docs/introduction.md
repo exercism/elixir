@@ -1,6 +1,6 @@
 # Introduction
 
-## Dates and time
+## Dates and Time
 
 Elixir's standard library offers 4 different modules for working with dates and time, each with its own struct.
 
