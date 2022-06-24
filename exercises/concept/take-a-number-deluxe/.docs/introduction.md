@@ -105,7 +105,7 @@ If that person is available, you'll receive a reply immediately (synchronously).
 
 A message that doesn't require a reply can be sent to a server process with `GenServer.cast/2`. Its arguments are identical to those of `GenServer.call/2`.
 
-The `handle_cast/2` callback is responsible for handling those messages. It receives two arguments, `message` and `state`, which are the same arguments as in the  `handle_call/3` callback (except for `from`).
+The `handle_cast/2` callback is responsible for handling those messages. It receives two arguments, `message` and `state`, which are the same arguments as in the `handle_call/3` callback (except for `from`).
 
 The `handle_cast/2` callback usually returns a 2 tuple of `{:noreply, state}`.
 
