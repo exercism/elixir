@@ -61,6 +61,53 @@ defmodule FileSnifferTest do
     end
   end
 
+  describe "raises error when given uncompleted signature file" do
+    @tag task_id: 2
+    test "bmp" do
+      assert_raise(FunctionClauseError, fn ->
+        @bmp_file
+        |> String.slice(0..0)
+        |> FileSniffer.type_from_binary()
+      end)
+    end
+
+    @tag task_id: 2
+    test "gif" do
+      assert_raise(FunctionClauseError, fn ->
+        @gif_file
+        |> String.slice(0..1)
+        |> FileSniffer.type_from_binary()
+      end)
+    end
+
+    @tag task_id: 2
+    test "jpg" do
+      assert_raise(FunctionClauseError, fn ->
+        @jpg_file
+        |> String.slice(0..1)
+        |> FileSniffer.type_from_binary()
+      end)
+    end
+
+    @tag task_id: 2
+    test "png" do
+      assert_raise(FunctionClauseError, fn ->
+        @png_file
+        |> String.slice(0..5)
+        |> FileSniffer.type_from_binary()
+      end)
+    end
+
+    @tag task_id: 2
+    test "exe" do
+      assert_raise(FunctionClauseError, fn ->
+        @exe_file
+        |> String.slice(0..2)
+        |> FileSniffer.type_from_binary()
+      end)
+    end
+  end
+
   describe "verify valid files" do
     @tag task_id: 3
     test "bmp" do
