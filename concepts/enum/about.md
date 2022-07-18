@@ -74,7 +74,7 @@ Enum.reduce([1, 2, 3, 4, 5], [], fn x, acc -> [x + 10 | acc] end)
   |> Enum.into(%{}, fn {key, value} -> {key, value * 10} end)
   ```
 
-- With [`Enum.map/3`][enum-map]:
+- With [`Enum.map/2`][enum-map]:
   ```elixir
   %{a: 1, b: 2}
   |> Enum.map(fn {key, value} -> {key, value * 10} end)
