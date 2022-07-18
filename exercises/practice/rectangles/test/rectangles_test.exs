@@ -147,4 +147,19 @@ defmodule RectanglesTest do
 
     assert Rectangles.count(input) == 60
   end
+
+  @tag :pending
+  test "rectangles must have four sides" do
+    input = """
+    +-+ +-+
+    | | | |
+    +-+-+-+
+      | |
+    +-+-+-+
+    | | | |
+    +-+ +-+
+    """
+
+    assert Rectangles.count(input) == 5
+  end
 end
