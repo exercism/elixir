@@ -42,6 +42,11 @@ defmodule LuhnTest do
   end
 
   @tag :pending
+  test "invalid long number with a remainder divisible by 5" do
+    refute Luhn.valid?("1 2345 6789 1234 5678 9013")
+  end
+
+  @tag :pending
   test "valid number with an even number of digits" do
     assert Luhn.valid?("095 245 88")
   end
