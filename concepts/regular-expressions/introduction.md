@@ -83,6 +83,8 @@ _Anchors_ are used to tie the regular expression to the beginning or end of the 
 - `^` anchors to the beginning of the string
 - `$` anchors to the end of the string
 
+## Interpolation
+
 Because the `~r` is a shortcut for `"pattern" |> Regex.escape() |> Regex.compile!()`, you may also use string interpolation to dynamically build a regular expression pattern:
 
 ```elixir

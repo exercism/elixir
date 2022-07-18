@@ -1,6 +1,6 @@
 # Introduction
 
-## `use`
+## Use
 
 The `use` macro allows us to quickly extend our module with functionally provided by another module. When we `use` a module, that module can inject code into our module - it can for example define functions, `import` or `alias` other modules, or set module attributes.
 
@@ -97,7 +97,7 @@ defmodule Countable do
 end
 ```
 
-Note that defining functions inside of `__using__/1` is discouraged for any other purpose than defining default callback implementations, but you can always define functions in another module and import them in the  `__using__/1` macro.
+Note that defining functions inside of `__using__/1` is discouraged for any other purpose than defining default callback implementations, but you can always define functions in another module and import them in the `__using__/1` macro.
 
 [concept-ast]: https://exercism.org/tracks/elixir/concepts/ast
 [concept-typespecs]: https://exercism.org/tracks/elixir/concepts/typespecs

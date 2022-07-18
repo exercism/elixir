@@ -1,6 +1,6 @@
 # Introduction
 
-Elixir represents true and false values with the boolean type. There are only two values: `true` and `false`.
+Elixir represents true and false values with the boolean type. There are only two values: `true` and `false`. These values can be bound to a variable:
 
 ```elixir
 true_variable = true
