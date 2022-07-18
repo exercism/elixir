@@ -66,6 +66,7 @@ end
 A server can be started by calling `GenServer.start/3` or `GenServer.start_link/3`. We learned about the difference between those functions in the [links concept][concept-links].
 
 Those two functions:
+
 - Accept a module implementing the `GenServer` behaviour as the first argument.
 - Accept anything as the second argument called `init_arg`. As the name suggest, this argument gets passed to the `init/1` callback.
 - Accept an optional third argument with advanced options for running the process that we wont' cover now.
@@ -73,6 +74,7 @@ Those two functions:
 Starting a server by calling `GenServer.start/3` or `GenServer.start_link/3` will invoke the `init/1` callback in a blocking way. The return value of `init/1` dictates if the server can be started successfully.
 
 The `init/1` callback usually returns one of those values:
+
 - `{:ok, state}`. The server will start its receive loop using `state` as its initial state. `state` can be of any type.
 - `{:stop, reason}`. `reason` can be of any type. The server will not start its receive loop. The process will exit with the given reason.
 
@@ -105,7 +107,7 @@ If that person is available, you'll receive a reply immediately (synchronously).
 
 A message that doesn't require a reply can be sent to a server process with `GenServer.cast/2`. Its arguments are identical to those of `GenServer.call/2`.
 
-The `handle_cast/2` callback is responsible for handling those messages. It receives two arguments, `message` and `state`, which are the same arguments as in the  `handle_call/3` callback (except for `from`).
+The `handle_cast/2` callback is responsible for handling those messages. It receives two arguments, `message` and `state`, which are the same arguments as in the `handle_call/3` callback (except for `from`).
 
 The `handle_cast/2` callback usually returns a 2 tuple of `{:noreply, state}`.
 

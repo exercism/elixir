@@ -78,5 +78,5 @@ Typespecs aren't limited to just the built-in types. Custom types can be defined
 
 A custom type can be used from the same module where it's defined, or from another module.
 
-[types]: https://hexdocs.pm/elixir/typespecs.html#types-and-their-syntax
 [markdown]: https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax
+[types]: https://hexdocs.pm/elixir/typespecs.html#types-and-their-syntax

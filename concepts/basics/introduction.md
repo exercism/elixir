@@ -1,5 +1,7 @@
 # Introduction
 
+## Variables
+
 Elixir is a dynamically-typed language, meaning that the type of a variable is only checked at runtime. Using the match `=` operator, we can bind a value of any type to a variable name:
 
 ```elixir
@@ -33,7 +35,7 @@ defmodule Calculator do
     x + y
   end
 end
- ```
+```
 
 Invoking a function is done by specifying its module and function name and passing arguments for each of the function's arguments.
 

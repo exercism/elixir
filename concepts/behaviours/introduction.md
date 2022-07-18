@@ -61,7 +61,7 @@ defmodule Countable do
 end
 ```
 
-Note that defining functions inside of `__using__/1` is discouraged for any other purpose than defining default callback implementations, but you can always define functions in another module and import them in the  `__using__/1` macro.
+Note that defining functions inside of `__using__/1` is discouraged for any other purpose than defining default callback implementations, but you can always define functions in another module and import them in the `__using__/1` macro.
 
 [concept-typespecs]: https://exercism.org/tracks/elixir/concepts/typespecs
 [hexdocs]: https://hexdocs.pm

@@ -64,7 +64,7 @@ defmodule DancingDots.AnimationTest do
         end
       end)
 
-      refute function_exported?(TestAnimation3, :handle_frame, 3)
+      refute function_exported?(TestAnimation4, :handle_frame, 3)
     end
 
     @tag task_id: 2

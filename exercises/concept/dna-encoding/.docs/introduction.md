@@ -4,7 +4,7 @@
 
 Working with binary data is an important concept in any language, and Elixir provides an elegant syntax to write, match, and construct binary data.
 
-In Elixir, binary data is referred to as the bitstring type. The binary data*type* (not to be confused with binary data in general) is a specific form of a bitstring, which we will discuss in a later exercise.
+In Elixir, binary data is referred to as the bitstring type. The binary data _type_ (not to be confused with binary data in general) is a specific form of a bitstring, which we will discuss in a later exercise.
 
 Bitstring literals are defined using the bitstring special form `<<>>`. When defining a bitstring literal, it is defined in segments. Each segment has a value and type, separated by the `::` operator. The type specifies how many bits will be used to encode the value. If the value of the segment overflows the capacity of the segment's type, it will be truncated from the left.
 

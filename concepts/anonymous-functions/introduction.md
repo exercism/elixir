@@ -1,10 +1,10 @@
 # Introduction
 
-Functions are treated as first class citizens in Elixir. This means functions:
+Functions are treated as first class citizens in Elixir. This means that:
 
-- Can be assigned to variables.
-- Can be passed around like data as arguments and return values.
-- Can be created dynamically.
+- Named and anonymous functions can be assigned to variables.
+- Named and anonymous functions can be passed around like data as arguments and return values.
+- Anonymous functions can be created dynamically.
 
 Anonymous functions, in contrast to named functions, don't have a static reference available to them, they are only available if they are assigned to a variable or immediately invoked.
 
