@@ -36,7 +36,7 @@ defmodule Rectangles do
       connected?(coord, r1, r2, column: c1),
       connected?(coord, r1, r2, column: c2),
       connected?(coord, c1, c2, row: r1),
-      connected?(coord, c1, c2, row: r1)
+      connected?(coord, c1, c2, row: r2)
     ])
   end
 
