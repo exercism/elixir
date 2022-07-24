@@ -318,6 +318,15 @@ defmodule ComplexNumbersTest do
 
       equal(output, expected)
     end
+
+    @tag :pending
+    test "Exponential resulting in a number with real and imaginary part" do
+      z = {:math.log(2) / 2, :math.pi() / 4}
+      output = ComplexNumbers.exp(z)
+      expected = {1, 1}
+
+      equal(output, expected)
+    end
   end
 
   describe "Operations between real numbers and complex numbers" do

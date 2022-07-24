@@ -66,7 +66,7 @@ defmodule ComplexNumbers do
   Exponential of a complex number
   """
   @spec exp(a :: complex) :: complex
-  def exp({a, b}), do: {:math.exp(a) * :math.cos(b), -:math.exp(a) * :math.sin(b)}
+  def exp({a, b}), do: {:math.exp(a) * :math.cos(b), :math.exp(a) * :math.sin(b)}
 
   defp to_complex({a, b}), do: {a, b}
   defp to_complex(a), do: {a, 0}
