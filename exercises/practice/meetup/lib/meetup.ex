@@ -20,7 +20,7 @@ defmodule Meetup do
   The schedule is in which week (1..4, last or "teenth") the meetup date should
   fall.
   """
-  @spec meetup(pos_integer, pos_integer, weekday, schedule) :: :calendar.date()
+  @spec meetup(pos_integer, pos_integer, weekday, schedule) :: Date.t()
   def meetup(year, month, weekday, schedule) do
   end
 end
