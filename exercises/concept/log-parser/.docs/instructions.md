@@ -40,7 +40,7 @@ LogParser.split_line("[INFO] Start.<*>[INFO] Processing...<~~~>[INFO] Success.")
 
 You have found that some upstream processing of the logs has been scattering the text "end-of-line" followed by a line number (without an intervening space) throughout the logs.
 
-Implement the `remove_artifacts/1` function to take a string and remove all occurrence end-of-line text and return a clean log line.
+Implement the `remove_artifacts/1` function to take a string and remove all occurrence end-of-line text (case-insensitive) and return a clean log line.
 
 Lines not containing end-of-line text should be returned unmodified.
 

@@ -24,7 +24,7 @@ Note that all Elixir sigils support [different kinds of delimiters][sigils], not
 
 ### Matching
 
-The `=~/2` can be used to perform a regex match that returns `boolean` result. Alternatively, there are also `match/3` functions in the `Regex` module as well as the `String` module.
+The `=~/2` operator can be used to perform a regex match that returns `boolean` result. Alternatively, there are also `match?/2` functions in the `Regex` module as well as the `String` module.
 
 ```elixir
 "this is a test" =~ ~r/test/
@@ -49,7 +49,7 @@ The behavior of a regular expression can be modified by appending special flags.
 
 Common modifiers are:
 - `i` - makes the match case-insensitive.
-- `u` - enables Unicode specific patterns like `\p` snf causes character classes like `\w`, `\s` etc. to also match Unicode.
+- `u` - enables Unicode specific patterns like `\p` and causes character classes like `\w`, `\s` etc. to also match Unicode.
 
 ```elixir
 "this is a TEST" =~ ~r/test/i
