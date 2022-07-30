@@ -8,6 +8,8 @@ The `Regex` module offers functions for working with regular expressions. Some o
 
 ~~~~exercism/note
 This exercise assumes that you already know regular expression syntax, including character classes, quantifiers, groups, and captures.
+
+If you need a refresh your regular expression knowledge, check out one of those sources: [Regular-Expressions.info][website-regex-info], [Rex Egg][website-rexegg], [RegexOne][website-regexone], [Regular Expressions 101][website-regex-101], [RegExr][website-regexr].
 ~~~~
 
 ### Sigils
@@ -50,3 +52,8 @@ Common modifiers are:
 ```
 
 [sigils]: https://hexdocs.pm/elixir/syntax-reference.html#sigils
+[website-regex-info]: https://www.regular-expressions.info
+[website-rexegg]: https://www.rexegg.com/
+[website-regexone]: https://regexone.com/
+[website-regex-101]: https://regex101.com/
+[website-regexr]: https://regexr.com/
