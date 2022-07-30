@@ -28,3 +28,6 @@ We assume that the student already knows basic regular expressions. The goal of 
 
 - `regular-expressions`
 
+## Analyzer
+
+- Do not use `String.starts_with?` in this exercise (learn regex instead).
