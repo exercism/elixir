@@ -219,13 +219,9 @@
         "slug": "date-parser",
         "name": "Date Parser",
         "uuid": "57198686-71c9-4f38-973a-a111435560e7",
-        "concepts": [
-          "regular-expressions"
-        ],
-        "prerequisites": [
-          "strings"
-        ],
-        "status": "active"
+        "concepts": [],
+        "prerequisites": [],
+        "status": "deprecated"
       },
       {
         "slug": "rpg-character-sheet",
@@ -648,6 +644,22 @@
           "tuples",
           "keyword-lists",
           "typespecs"
+        ],
+        "status": "beta"
+      },
+      {
+        "slug": "log-parser",
+        "name": "Log Parser",
+        "uuid": "708fa8b8-59b9-43e7-be40-74759c3cc9a4",
+        "concepts": [
+          "regular-expressions"
+        ],
+        "prerequisites": [
+          "strings",
+          "lists",
+          "pattern-matching",
+          "nil",
+          "if"
         ],
         "status": "beta"
       }

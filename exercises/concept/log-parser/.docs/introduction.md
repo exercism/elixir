@@ -1,5 +1,7 @@
 # Introduction
 
+## Regular Expressions
+
 Regular expressions in Elixir follow the **PCRE** specification (**P**erl **C**ompatible **R**egular **E**xpressions), similarly to other popular languages like Java, JavaScript, or Ruby.
 
 The `Regex` module offers functions for working with regular expressions. Some of the `String` module functions accept regular expressions as arguments as well.
@@ -10,7 +12,7 @@ This exercise assumes that you already know regular expression syntax, including
 If you need a refresh your regular expression knowledge, check out one of those sources: [Regular-Expressions.info][website-regex-info], [Rex Egg][website-rexegg], [RegexOne][website-regexone], [Regular Expressions 101][website-regex-101], [RegExr][website-regexr].
 ~~~~
 
-## Sigils
+### Sigils
 
 The most common way to create regular expressions is using the `~r` sigil.
 
@@ -20,7 +22,7 @@ The most common way to create regular expressions is using the `~r` sigil.
 
 Note that all Elixir sigils support [different kinds of delimiters][sigils], not only `/`.
 
-## Matching
+### Matching
 
 The `=~/2` can be used to perform a regex match that returns `boolean` result. Alternatively, there are also `match/3` functions in the `Regex` module as well as the `String` module.
 
@@ -32,7 +34,7 @@ String.match?("Alice has 7 apples", ~r/\d{2}/)
 # => false
 ```
 
-## Capturing
+### Capturing
 
 If a simple boolean check is not enough, use the `Regex.run/3` function to get a list of all captures (or `nil` if there was no match). The first element in the returned list is always a match for the whole regular expression, and the following elements are matched groups.
 
@@ -41,7 +43,7 @@ Regex.run(~r/(\d) apples/, "Alice has 7 apples")
 # => ["7 apples", "7"]
 ```
 
-## Modifiers
+### Modifiers
 
 The behavior of a regular expression can be modified by appending special flags. When using a sigil to create a regular expression, add the modifiers after the second delimiter.
 
@@ -55,3 +57,8 @@ Common modifiers are:
 ```
 
 [sigils]: https://hexdocs.pm/elixir/syntax-reference.html#sigils
+[website-regex-info]: https://www.regular-expressions.info
+[website-rexegg]: https://www.rexegg.com/
+[website-regexone]: https://regexone.com/
+[website-regex-101]: https://regex101.com/
+[website-regexr]: https://regexr.com/

@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "angelikatyborska"
+  ],
+  "files": {
+    "solution": [
+      "lib/log_parser.ex"
+    ],
+    "test": [
+      "test/log_parser_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
+  },
+  "language_versions": ">=1.10",
+  "forked_from": [
+    "go/parsing-log-files"
+  ],
+  "blurb": "Learn about regular expressions by parsing logs."
+}
