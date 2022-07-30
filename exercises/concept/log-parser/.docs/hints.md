@@ -15,10 +15,12 @@
 
 - Use the [`r` sigil][sigil-r] to create a regular expression.
 - There is [an operator]([match-operator]) that can be used to check a string against a regular expression. There is also a [`Regex` function][regex-match] and a [`String` function][string-match] that can do the same.
+- Don't forget to escape characters that have special meaning in regular expressions.
 
 ## 2. Split the log line
 
 - There is a [`Regex` function][regex-split] as well as a [`String` function][string-split] that can split a string into a list of strings based on a regular expression.
+- Don't forget to escape characters that have special meaning in regular expressions.
 
 ## 3. Remove artifacts from log
 
