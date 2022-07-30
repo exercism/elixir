@@ -36,7 +36,12 @@ String.match?("Alice has 7 apples", ~r/\d{2}/)
 
 ### Capturing
 
-If a simple boolean check is not enough, use the `Regex.run/3` function to get a list of all captures (or `nil` if there was no match). The first element in the returned list is always the whole string, and the following elements are matched groups.
+If a simple boolean check is not enough, use the `Regex.run/3` function to get a list of all captures (or `nil` if there was no match). The first element in the returned list is always a match for the whole regular expression, and the following elements are matched groups.
+
+```elixir
+Regex.run(~r/(\d) apples/, "Alice has 7 apples")
+# => ["7 apples", "7"]
+```
 
 ### Modifiers
 
