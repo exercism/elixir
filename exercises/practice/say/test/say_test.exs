@@ -26,10 +26,12 @@ defmodule SayTest do
     assert Say.in_english(22) == {:ok, "twenty-two"}
   end
 
+  @tag :pending
   test "thirty" do
     assert Say.in_english(30) == {:ok, "thirty"}
   end
 
+  @tag :pending
   test "ninety-nine" do
     assert Say.in_english(99) == {:ok, "ninety-nine"}
   end
@@ -44,10 +46,12 @@ defmodule SayTest do
     assert Say.in_english(123) == {:ok, "one hundred twenty-three"}
   end
 
+  @tag :pending
   test "two hundred" do
     assert Say.in_english(200) == {:ok, "two hundred"}
   end
 
+  @tag :pending
   test "nine hundred ninety-nine" do
     assert Say.in_english(999) == {:ok, "nine hundred ninety-nine"}
   end
