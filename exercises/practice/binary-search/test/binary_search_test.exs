@@ -1,7 +1,7 @@
 defmodule BinarySearchTest do
   use ExUnit.Case
 
-  @tag :pending
+  # @tag :pending
   test "finds a value in a tuple with one element" do
     assert BinarySearch.search({6}, 6) == {:ok, 0}
     assert BinarySearch.search({3}, 3) == {:ok, 0}
