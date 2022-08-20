@@ -91,7 +91,7 @@ defmodule RPNCalculator.ExceptionTest do
       end
   end
 
-  describe "divide/2" do
+  describe "divide/1" do
     @tag task_id: 3
     test "when stack doesn't contain any numbers, raise StackUnderflowError" do
       assert_raise(
