@@ -34,6 +34,23 @@ defmodule FileSnifferTest do
     end
   end
 
+  describe "return nil when type doesn't match:" do
+    @tag task_id: 1
+    test "txt" do
+      assert FileSniffer.type_from_extension("txt") == nil
+    end
+
+    @tag task_id: 1
+    test "md" do
+      assert FileSniffer.type_from_extension("md") == nil
+    end
+
+    @tag task_id: 1
+    test "svg" do
+      assert FileSniffer.type_from_extension("svg") == nil
+    end
+  end
+
   describe "get type from binary:" do
     @tag task_id: 2
     test "bmp" do
@@ -58,6 +75,33 @@ defmodule FileSnifferTest do
     @tag task_id: 2
     test "exe" do
       assert FileSniffer.type_from_binary(@exe_file) == "application/octet-stream"
+    end
+  end
+
+  describe "return nil when given uncompleted signature file" do
+    @tag task_id: 2
+    test "bmp" do
+      assert FileSniffer.type_from_binary(String.slice(@bmp_file, 0..0)) == nil
+    end
+
+    @tag task_id: 2
+    test "gif" do
+      assert FileSniffer.type_from_binary(String.slice(@gif_file, 0..1)) == nil
+    end
+
+    @tag task_id: 2
+    test "jpg" do
+      assert FileSniffer.type_from_binary(String.slice(@jpg_file, 0..1)) == nil
+    end
+
+    @tag task_id: 2
+    test "png" do
+      assert FileSniffer.type_from_binary(String.slice(@png_file, 0..5)) == nil
+    end
+
+    @tag task_id: 2
+    test "exe" do
+      assert FileSniffer.type_from_binary(String.slice(@exe_file, 0..2)) == nil
     end
   end
 

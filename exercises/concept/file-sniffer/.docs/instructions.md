@@ -14,21 +14,28 @@ Use the following table for reference:
 
 ## 1. Given an extension, return the expected media type
 
-Implement the `type_from_extension/1` function. It should take a file extension (string) and return the media type (string).
+Implement the `type_from_extension/1` function. It should take a file extension (string) and return the media type (string) or nil if the extension does not match with the expected ones.
 
 ```elixir
 FileSniffer.type_from_extension("exe")
 # => "application/octet-stream"
+
+FileSniffer.type_from_extension("txt")
+# => nil
 ```
 
 ## 2. Given a binary file, return the expected media type
 
-Implement the `type_from_binary/1` function. It should take a file (binary) and return the media type (string).
+Implement the `type_from_binary/1` function. It should take a file (binary) and return the media type (string) or nil if the extension does not match with the expected ones.
 
 ```elixir
 file = File.read!("application.exe")
 FileSniffer.type_from_binary(file)
 # => "application/octet-stream"
+
+file = File.read!("example.txt")
+FileSniffer.type_from_binary(file)
+# => nil
 ```
 
 Don't worry about reading the file as a binary. Assume that has been done for you and is provided by the tests as an argument.
