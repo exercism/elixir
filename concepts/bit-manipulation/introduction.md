@@ -13,7 +13,7 @@ Here is an example how to use a bitwise function:
 
 ```elixir
 Bitwise.bsl(1, 3)
-# => 3
+# => 8
 ```
 
 All bitwise functions only work on integers.
