@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        elixir: [1.13]
-        otp: [24.1]
+        elixir: [1.14]
+        otp: [25.0]
 
     steps:
       - name: Checkout PR
@@ -86,6 +86,8 @@ jobs:
             otp: '24.0'
           - elixir: '1.13.0'
             otp: '24.1'
+          - elixir: '1.14.0'
+            otp: '25.0'
 
     steps:
       - uses: actions/checkout@v3
