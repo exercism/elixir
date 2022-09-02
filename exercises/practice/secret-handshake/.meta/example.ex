@@ -1,5 +1,5 @@
 defmodule SecretHandshake do
-  use Bitwise
+  import Bitwise
 
   @codes ["wink", "double blink", "close your eyes", "jump"]
 

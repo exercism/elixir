@@ -1,5 +1,5 @@
 defmodule Grep do
-  use Bitwise
+  import Bitwise
 
   @line_num_flag 1
   @file_name 2
