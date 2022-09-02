@@ -1,5 +1,5 @@
 defmodule VariableLengthQuantity do
-  use Bitwise
+  import Bitwise
 
   @doc """
   Encode integers into a bitstring of VLQ encoded bytes
