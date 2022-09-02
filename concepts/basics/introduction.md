@@ -37,7 +37,7 @@ defmodule Calculator do
 end
 ```
 
-Invoking a function is done by specifying its module and function name and passing arguments for each of the function's arguments.
+Invoking a function is done by specifying its module and function name and passing arguments for each of the function's parameters.
 
 ```elixir
 sum = Calculator.add(1, 2)
