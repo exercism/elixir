@@ -18,7 +18,7 @@ adder.(2)
 
 ## 2. Create a subtractor
 
-Implement `Secrets.secret_subtract/1`. It should return a function which takes one argument and subtracts from it the secret passed in to `secret_subtract`.
+Implement `Secrets.secret_subtract/1`. It should return a function which takes one argument and subtracts the secret passed in to `secret_subtract` from that argument.
 
 ```elixir
 subtractor = Secrets.secret_subtract(2)
