@@ -12,8 +12,8 @@ Elixir supports many functions for working with bits found in the _Bitwise modul
 Here is an example how to use a bitwise function:
 
 ```elixir
-Bitwise.bsl(1, 2)
-# => 4
+Bitwise.bsl(1, 3)
+# => 8
 ```
 
 All bitwise functions only work on integers.
