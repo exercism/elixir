@@ -16,21 +16,21 @@ defmodule TwoFerTest do
   end
 
   @tag :pending
-  test "when the parameter is a number" do
+  test "when the argument is a number" do
     assert_raise FunctionClauseError, fn ->
       TwoFer.two_fer(10)
     end
   end
 
   @tag :pending
-  test "when the parameter is an atom" do
+  test "when the argument is an atom" do
     assert_raise FunctionClauseError, fn ->
       TwoFer.two_fer(:bob)
     end
   end
 
   @tag :pending
-  test "when the parameter is a charlist" do
+  test "when the argument is a charlist" do
     assert_raise FunctionClauseError, fn ->
       refute TwoFer.two_fer('Jon Snow')
     end
