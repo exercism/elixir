@@ -8,7 +8,7 @@
 
 ## Setup
 
-The exercises currently target Elixir versions from 1.8 to 1.14 and Erlang/OTP versions from 21 to 25. Detailed installation instructions can be found at
+The exercises currently target Elixir versions from 1.9 to 1.14 and Erlang/OTP versions from 21 to 25. Detailed installation instructions can be found at
 [http://elixir-lang.org/install.html](http://elixir-lang.org/install.html). We recommend using the [asdf version manager](https://github.com/asdf-vm/asdf) to manage multiple Elixir versions.
 
 ## Testing
