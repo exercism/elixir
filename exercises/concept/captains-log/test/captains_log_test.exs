@@ -59,15 +59,9 @@ defmodule CaptainsLogTest do
     end
 
     @tag task_id: 3
-    test "is equal to or greater than 41_000.0" do
+    test "is greater than or equal to 41_000.0 and less than 42_000.0" do
       Enum.each(0..100, fn _ ->
         assert CaptainsLog.random_stardate() >= 41_000.0
-      end)
-    end
-
-    @tag task_id: 3
-    test "is less than 42_000.0" do
-      Enum.each(0..100, fn _ ->
         assert CaptainsLog.random_stardate() < 42_000.0
       end)
     end
