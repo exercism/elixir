@@ -26,6 +26,8 @@ CommunityGarden.list_registrations(pid)
 
 Implement the `CommunityGarden.register/2` function. It should receive the `pid` for the community garden and a name to register the plot. It should return the `Plot` struct with the plot's id and person registered to when it is successful.
 
+The ids should be incremental and unique. You can keep an id counter in the agent's state.
+
 ```elixir
 CommunityGarden.register(pid, "Emma Balan")
 # => %Plot{plot_id: 1, registered_to: "Emma Balan"}

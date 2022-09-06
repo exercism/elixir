@@ -27,15 +27,22 @@ defmodule CommunityGardenTest do
   end
 
   @tag task_id: 3
-  test "registered plots have unique id" do
+  test "the first plot has an id of 1" do
     assert {:ok, pid} = CommunityGarden.start()
-    CommunityGarden.register(pid, "Johnny Appleseed")
-    CommunityGarden.register(pid, "Frederick Law Olmsted")
-    CommunityGarden.register(pid, "Lancelot (Capability) Brown")
+    plot = CommunityGarden.register(pid, "Johnny Appleseed")
+    assert plot.plot_id == 1
+  end
 
-    plots = pid |> CommunityGarden.list_registrations()
-    unique_ids = plots |> Enum.map(& &1.plot_id) |> Enum.uniq()
-    assert length(plots) == length(unique_ids)
+  @tag task_id: 3
+  test "registered plots have incremental unique id" do
+    assert {:ok, pid} = CommunityGarden.start()
+    plot_1 = CommunityGarden.register(pid, "Johnny Appleseed")
+    plot_2 = CommunityGarden.register(pid, "Frederick Law Olmsted")
+    plot_3 = CommunityGarden.register(pid, "Lancelot (Capability) Brown")
+
+    assert plot_1.plot_id == 1
+    assert plot_2.plot_id == 2
+    assert plot_3.plot_id == 3
   end
 
   @tag task_id: 4
@@ -53,17 +60,17 @@ defmodule CommunityGardenTest do
     plot_1 = CommunityGarden.register(pid, "Keanu Reeves")
     plot_2 = CommunityGarden.register(pid, "Thomas A. Anderson")
 
-    ids = CommunityGarden.list_registrations(pid) |> Enum.map(& &1.plot_id)
+    assert plot_1.plot_id == 1
+    assert plot_2.plot_id == 2
 
     CommunityGarden.release(pid, plot_1.plot_id)
     CommunityGarden.release(pid, plot_2.plot_id)
 
-    CommunityGarden.register(pid, "John Doe")
-    CommunityGarden.register(pid, "Jane Doe")
+    plot_3 = CommunityGarden.register(pid, "John Doe")
+    plot_4 = CommunityGarden.register(pid, "Jane Doe")
 
-    new_ids = CommunityGarden.list_registrations(pid) |> Enum.map(& &1.plot_id)
-
-    refute Enum.sort(ids) == Enum.sort(new_ids)
+    assert plot_3.plot_id == 3
+    assert plot_4.plot_id == 4
   end
 
   @tag task_id: 5
