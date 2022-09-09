@@ -18,7 +18,7 @@ If you get an `:error` tuple, use the `else` block to return it.
 
 The information desk is notorious for taking long coffee breaks. If you are lucky enough to find someone there, they will give you an instruction manual which will explain which counter you need to go to depending on your birth date.
 
-Call the function `find_counter_information/1` with the current time. You will get either a tuple with `:ok` and a manual, represented by an anonymous function, or a tuple with `:coffee_break` and more instructions. In your happy path where you receive the manual, apply it to you birthday (second argument of `get_new_passport/3`). It will return the number of the counter where you need to go. Return an `:ok` tuple with that counter number.
+Call the function `find_counter_information/1` with the current time. You will get either a tuple with `:ok` and a manual, represented by an anonymous function, or a tuple with `:coffee_break` and more instructions. In your happy path where you receive the manual, apply it to your birthday (second argument of `get_new_passport/3`). It will return the number of the counter where you need to go. Return an `:ok` tuple with that counter number.
 
 If you get a `:coffee_break` message, return a tuple with `:retry` and a `NaiveDateTime` pointing to 15 minutes after the current time. As before, if you get an `:error` tuple, return it.
 
