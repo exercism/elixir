@@ -80,7 +80,7 @@ score_map = HighScore.new()
 score_map = HighScore.add_player(score_map, "José Valim", 486_373)
 # => %{"José Valim"=> 486_373}
 score_map = HighScore.update_score(score_map, "José Valim", 5)
-# => %{"José Valim"=> 486_378}
+# => %{"José Valim"=> 5}
 ```
 
 ## 6. Get a list of players
