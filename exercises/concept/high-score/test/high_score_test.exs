@@ -139,7 +139,7 @@ defmodule HighScoreTest do
         |> HighScore.update_score("José Valim", 1)
         |> HighScore.update_score("José Valim", 486_373)
 
-      assert scores == %{"José Valim" => 486_374}
+      assert scores == %{"José Valim" => 486_373}
     end
   end
 
