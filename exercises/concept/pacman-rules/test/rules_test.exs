@@ -16,6 +16,11 @@ defmodule RulesTest do
     test "ghost does not get eaten because not touching ghost" do
       refute Rules.eat_ghost?(true, false)
     end
+
+    @tag task_id: 1
+    test "ghost does not get eaten because no power pellet is active, even if not touching ghost" do
+      refute Rules.eat_ghost?(false, false)
+    end
   end
 
   describe "score?/2" do
