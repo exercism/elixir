@@ -81,5 +81,4 @@ defmodule StringSeriesTest do
     assert StringSeries.slices("01234", -1) == []
     assert StringSeries.slices("01234", 0) == []
   end
-
 end
