@@ -62,6 +62,8 @@ defmodule RPGTest do
       character = %Character{mana: 10}
       {_byproduct, %Character{} = character} = Edible.eat(%ManaPotion{strength: 6}, character)
       assert character.mana == 16
+      {_byproduct, %Character{} = character} = Edible.eat(%ManaPotion{strength: 9}, character)
+      assert character.mana == 25
     end
 
     @tag task_id: 3
