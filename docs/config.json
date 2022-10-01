@@ -27,6 +27,13 @@
       "path": "docs/RESOURCES.md",
       "title": "Useful Elixir resources",
       "blurb": "A collection of useful resources to help you master Elixir"
+    },
+    {
+      "uuid": "10c32321-69df-4b2f-82eb-8fec2e743f6a",
+      "slug": "representer-normalizations",
+      "path": "docs/REPRESENTER_NORMALIZATIONS.md",
+      "title": "Elixir representer normalizations",
+      "blurb": "An overview of the normalizations the Elixir representer applies to solutions"
     }
   ]
 }
