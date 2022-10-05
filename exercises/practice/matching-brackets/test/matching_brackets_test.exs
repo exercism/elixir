@@ -67,6 +67,11 @@ defmodule MatchingBracketsTest do
   end
 
   @tag :pending
+  test "paired and wrong nested brackets but innermost are correct" do
+    refute MatchingBrackets.check_brackets("[({}])")
+  end
+
+  @tag :pending
   test "paired and incomplete brackets" do
     refute MatchingBrackets.check_brackets("{}[")
   end
