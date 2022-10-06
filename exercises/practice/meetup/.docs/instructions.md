@@ -10,7 +10,7 @@ Examples of general descriptions are:
 - Teenth Sunday of July 2021
 - Last Thursday of November 2021
 
-The descriptors you are expected to process are: `first`, `second`, `third`, `fourth`, `fifth`, `last`, `teenth`.
+The descriptors you are expected to process are: `first`, `second`, `third`, `fourth`, `last`, `teenth`.
 
 Note that descriptor `teenth` is a made-up word.
 There are exactly seven numbered days in a month that end with "teenth" ("thirteenth" to "nineteenth").
