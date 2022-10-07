@@ -67,6 +67,11 @@ defmodule DominoesTest do
   end
 
   @tag :pending
+  test "separate three-domino loops" do
+    refute Dominoes.chain?([{1, 2}, {2, 3}, {3, 1}, {4, 5}, {5, 6}, {6, 4}])
+  end
+
+  @tag :pending
   test "disconnected - simple" do
     refute Dominoes.chain?([{1, 1}, {2, 2}])
   end
