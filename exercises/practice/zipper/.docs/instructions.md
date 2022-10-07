@@ -2,7 +2,7 @@
 
 Creating a zipper for a binary tree.
 
-[Zippers](https://en.wikipedia.org/wiki/Zipper_%28data_structure%29) are
+[Zippers][] are
 a purely functional way of navigating within a data structure and
 manipulating it.  They essentially contain a data structure and a
 pointer into that data structure (called the focus).
@@ -26,3 +26,5 @@ list of child nodes) a zipper might support these operations:
 - `delete` (removes the focus node and all subtrees, focus moves to the
   `next` node if possible otherwise to the `prev` node if possible,
   otherwise to the parent node, returns a new zipper)
+
+[Zippers]: https://en.wikipedia.org/wiki/Zipper_%28data_structure%29

@@ -20,11 +20,12 @@ Repeat until you have processed each number in your range.
 When the algorithm terminates, all the numbers in the list that have not
 been marked are prime.
 
-The wikipedia article has a useful graphic that explains the algorithm:
-[https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
+[This wikipedia article][eratosthenes] has a useful graphic that explains the algorithm.
 
 Notice that this is a very specific algorithm, and the tests don't check
 that you've implemented the algorithm, only that you've come up with the
 correct list of primes. A good first test is to check that you do not use
 division or remainder operations (div, /, mod or % depending on the
 language).
+
+[eratosthenes]: https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes

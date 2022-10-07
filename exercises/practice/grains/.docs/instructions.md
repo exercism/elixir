@@ -15,14 +15,3 @@ Write code that shows:
 
 - how many grains were on a given square, and
 - the total number of grains on the chessboard
-
-## For bonus points
-
-Did you get the tests passing and the code clean? If you want to, these
-are some additional things you could try:
-
-- Optimize for speed.
-- Optimize for readability.
-
-Then please share your thoughts in a comment on the submission. Did this
-experiment make the code better? Worse? Did you learn anything from it?

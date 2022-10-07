@@ -40,4 +40,6 @@ In Roman numerals 1990 is MCMXC:
 2000=MM
 8=VIII
 
-See also: [https://wiki.imperivm-romanvm.com/wiki/Roman_Numerals](https://wiki.imperivm-romanvm.com/wiki/Roman_Numerals)
+Learn more about [Roman numberals on Wikipedia][roman-numerals].
+
+[roman-numerals]: https://wiki.imperivm-romanvm.com/wiki/Roman_Numerals

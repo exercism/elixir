@@ -16,7 +16,7 @@ a < b < c
 For example,
 
 ```text
-3² + 4² = 9 + 16 = 25 = 5².
+3² + 4² = 5².
 ```
 
 Given an input integer N, find all Pythagorean triplets for which `a + b + c = N`.

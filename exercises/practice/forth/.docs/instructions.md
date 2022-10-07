@@ -2,7 +2,7 @@
 
 Implement an evaluator for a very simple subset of Forth.
 
-[Forth](https://en.wikipedia.org/wiki/Forth_%28programming_language%29)
+[Forth][]
 is a stack-based programming language. Implement a very basic evaluator
 for a small subset of Forth.
 
@@ -24,3 +24,5 @@ more letters, digits, symbols or punctuation that is not a number.
 enough.)
 
 Words are case-insensitive.
+
+[Forth]: https://en.wikipedia.org/wiki/Forth_%28programming_language%29
