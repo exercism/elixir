@@ -2,8 +2,7 @@
 
 Write a function to solve alphametics puzzles.
 
-[Alphametics](https://en.wikipedia.org/wiki/Alphametics) is a puzzle where
-letters in words are replaced with numbers.
+[Alphametics][] is a puzzle where letters in words are replaced with numbers.
 
 For example `SEND + MORE = MONEY`:
 
@@ -30,3 +29,5 @@ Each letter must represent a different digit, and the leading digit of
 a multi-digit number must not be zero.
 
 Write a function to solve alphametics puzzles.
+
+[Alphametics]: https://en.wikipedia.org/wiki/Alphametics

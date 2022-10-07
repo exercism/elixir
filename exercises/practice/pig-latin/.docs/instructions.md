@@ -15,4 +15,6 @@ to understand.
 There are a few more rules for edge cases, and there are regional
 variants too.
 
-See <http://en.wikipedia.org/wiki/Pig_latin> for more details.
+Read more about [Pig Latin on Wikipedia][pig-latin].
+
+[pig-latin]: http://en.wikipedia.org/wiki/Pig_latin

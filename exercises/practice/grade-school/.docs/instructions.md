@@ -26,16 +26,3 @@ do you want?) and each student cannot be added more than once to a grade or the
 roster.
 In fact, when a test attempts to add the same student more than once, your
 implementation should indicate that this is incorrect.
-
-## For bonus points
-
-Did you get the tests passing and the code clean? If you want to, these
-are some additional things you could try:
-
-- If you're working in a language with mutable data structures and your
-  implementation allows outside code to mutate the school's internal DB
-  directly, see if you can prevent this. Feel free to introduce additional
-  tests.
-
-Then please share your thoughts in a comment on the submission. Did this
-experiment make the code better? Worse? Did you learn anything from it?
