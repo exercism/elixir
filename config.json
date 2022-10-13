@@ -1035,7 +1035,7 @@
       },
       {
         "slug": "run-length-encoding",
-        "name": "Run Length Encoding",
+        "name": "Run-Length Encoding",
         "uuid": "f4f759ea-53e1-42d6-a580-6e7b7d6a99a0",
         "prerequisites": [
           "strings",
@@ -1161,7 +1161,7 @@
       },
       {
         "slug": "sum-of-multiples",
-        "name": "Sum Of Multiples",
+        "name": "Sum of Multiples",
         "uuid": "5b8eece1-845f-4a5a-8a2f-fe2bf66f5e57",
         "prerequisites": [
           "enum",
@@ -1300,7 +1300,7 @@
       },
       {
         "slug": "dnd-character",
-        "name": "DnD Character",
+        "name": "D&D Character",
         "uuid": "bd15a0e0-c19e-4a52-be6c-1a61d14c54cd",
         "prerequisites": [
           "integers",
@@ -1523,7 +1523,7 @@
       },
       {
         "slug": "pascals-triangle",
-        "name": "Pascals Triangle",
+        "name": "Pascal's Triangle",
         "uuid": "b85c37c7-a76e-41fa-9ce6-abcdba2bd683",
         "prerequisites": [
           "enum",
@@ -1745,7 +1745,7 @@
       },
       {
         "slug": "difference-of-squares",
-        "name": "Difference Of Squares",
+        "name": "Difference of Squares",
         "uuid": "bb9b24da-1ee6-42fb-936f-5fc41d97ee27",
         "prerequisites": [
           "integers",
@@ -1759,7 +1759,7 @@
       },
       {
         "slug": "diffie-hellman",
-        "name": "Diffie Hellman",
+        "name": "Diffie-Hellman",
         "uuid": "92caf2b9-3fca-401c-8daa-aaa0193e704f",
         "prerequisites": [
           "ranges",
@@ -2416,7 +2416,7 @@
       },
       {
         "slug": "state-of-tic-tac-toe",
-        "name": "State of Tic Tac Toe",
+        "name": "State of Tic-Tac-Toe",
         "uuid": "905ac84d-7ba1-4208-bee1-55d8efde0c01",
         "prerequisites": [
           "strings",
@@ -2733,7 +2733,7 @@
       },
       {
         "slug": "dot-dsl",
-        "name": "Dot DSL",
+        "name": "DOT DSL",
         "uuid": "c316b8ef-7b2d-43d4-b402-f7d28b0cdaa7",
         "prerequisites": [
           "structs",
