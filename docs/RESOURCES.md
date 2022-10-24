@@ -8,7 +8,6 @@
 
 ## Communication channels
 
-* [Exercism's BEAM Gitter Channel](https://gitter.im/exercism/xerlang)
 * [Elixir Forum](https://elixirforum.com/)
 * [Slack](https://elixir-slackin.herokuapp.com/)
 * [Discord](https://discord.gg/elixir)
