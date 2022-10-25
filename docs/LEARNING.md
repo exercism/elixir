@@ -16,5 +16,4 @@ The official [Elixir Getting Started Guide](http://elixir-lang.org/getting-start
 * [Elixir School](https://elixirschool.com)
 * [Joy of Elixir](https://joyofelixir.com/toc.html)
 * [Elixir Examples](https://elixir-examples.github.io/)
-* [Exercism's BEAM Gitter channel](https://gitter.im/exercism/xerlang)
 * [Elixir Forum](https://elixirforum.com/)
