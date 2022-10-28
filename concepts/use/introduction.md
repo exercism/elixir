@@ -1,6 +1,6 @@
 # Introduction
 
-The `use` macro allows us to quickly extend our module with functionally provided by another module. When we `use` a module, that module can inject code into our module - it can for example define functions, `import` or `alias` other modules, or set module attributes.
+The `use` macro allows us to quickly extend our module with functionality provided by another module. When we `use` a module, that module can inject code into our module - it can for example define functions, `import` or `alias` other modules, or set module attributes.
 
 If you ever looked at the test files of some of the Elixir exercises here on Exercism, you most likely noticed that they all start with `use ExUnit.Case`. This single line of code is what makes the macros `test` and `assert` available in the test module.
 
