@@ -154,7 +154,7 @@ defmodule RectanglesTest do
     +-+ +-+
     | | | |
     +-+-+-+
-      | |
+      | | \s
     +-+-+-+
     | | | |
     +-+ +-+
