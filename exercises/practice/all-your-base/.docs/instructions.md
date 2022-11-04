@@ -2,8 +2,8 @@
 
 Convert a number, represented as a sequence of digits in one base, to any other base.
 
-Implement general base conversion. Given a number in base **a**,
-represented as a sequence of digits, convert it to base **b**.
+Implement general base conversion.
+Given a number in base **a**, represented as a sequence of digits, convert it to base **b**.
 
 ## Note
 
@@ -12,8 +12,7 @@ represented as a sequence of digits, convert it to base **b**.
 
 ## About [Positional Notation][positional-notation]
 
-In positional notation, a number in base **b** can be understood as a linear
-combination of powers of **b**.
+In positional notation, a number in base **b** can be understood as a linear combination of powers of **b**.
 
 The number 42, *in base 10*, means:
 
