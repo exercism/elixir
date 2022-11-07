@@ -11,7 +11,7 @@
 
 ## 2. Generate a random starship registry number
 
-- There is a [build-in function][enum-random] for choosing an element from a range at random.
+- There is a [built-in function][enum-random] for choosing an element from a range at random.
 
 ## 3. Generate a random stardate
 
