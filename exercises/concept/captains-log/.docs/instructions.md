@@ -47,7 +47,12 @@ In the captain's log, stardates are usually rounded to a single decimal place.
 
 Implement the `format_stardate/1` function that will take a floating point number and return a string with the number rounded to a single decimal place.
 
+While there are valid approaches to this solution that might use an Elixir module, the implementation we are testing for expects an implementation using an Erlang function.
+
 ```elixir
 CaptainsLog.format_stardate(41458.15721310934)
 # => "41458.2"
+
+CaptainsLog.format_stardate(41411)
+# => ** (ArgumentError) argument error
 ```
