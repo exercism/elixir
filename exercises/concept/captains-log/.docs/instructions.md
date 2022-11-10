@@ -36,6 +36,8 @@ A stardate is a floating point number. The adventures of the _Starship Enterpris
 
 Implement the function `random_stardate/0` that returns a floating point number between 41000.0 (inclusive) and 42000.0 (exclusive).
 
+The implementation should use an Erlang function.
+
 ```elixir
 CaptainsLog.random_stardate()
 # => 41458.15721310934
