@@ -47,7 +47,7 @@ CaptainsLog.random_stardate()
 
 In the captain's log, stardates are usually rounded to a single decimal place.
 
-Implement the `format_stardate/1` function that will take a floating point number and return a string with the number rounded to a single decimal place. 
+Implement the `format_stardate/1` function that will take a floating point number and return a string with the number rounded to a single decimal place.
 
 The implementation should use an Erlang function.
 
