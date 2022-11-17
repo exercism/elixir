@@ -77,25 +77,25 @@ defmodule LogLevelTest do
 
     @tag task_id: 2
     test "trace code does not send alert" do
-      refute LogLevel.alert_recipient(0, false)
+       assert false == LogLevel.alert_recipient(0, false)
     end
 
     @tag task_id: 2
     test "debug code does not send alert" do
-      refute LogLevel.alert_recipient(1, false)
-      refute LogLevel.alert_recipient(1, true)
+      assert false == LogLevel.alert_recipient(1, false)
+      assert false == LogLevel.alert_recipient(1, true)
     end
 
     @tag task_id: 2
     test "info code does not send alert" do
-      refute LogLevel.alert_recipient(2, false)
-      refute LogLevel.alert_recipient(2, true)
+       assert false == LogLevel.alert_recipient(2, false)
+       assert false == LogLevel.alert_recipient(2, true)
     end
 
     @tag task_id: 2
     test "warning code does not send alert" do
-      refute LogLevel.alert_recipient(3, false)
-      refute LogLevel.alert_recipient(3, true)
+      assert false == LogLevel.alert_recipient(3, false)
+      assert false == LogLevel.alert_recipient(3, true)
     end
   end
 end
