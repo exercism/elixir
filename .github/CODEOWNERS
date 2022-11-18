@@ -2,4 +2,4 @@
 .github/CODEOWNERS      @exercism/maintainers-admin
 
 # Changes to `fetch-configlet` should be made in the `exercism/configlet` repo
-bin/fetch_configlet.sh  @exercism/maintainers-admin
+bin/fetch-configlet     @exercism/maintainers-admin
