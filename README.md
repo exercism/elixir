@@ -59,7 +59,7 @@ To check formatting of all exercises and all documents, run `./bin/check_formatt
 [`configlet`](https://github.com/exercism/configlet) is an Exercism-wide tool for working with tracks. You can download it by running:
 
 ```shell
-$ ./bin/fetch_configlet.sh
+$ ./bin/fetch-configlet
 ```
 
 Run its `lint` command to verify if all exercises have all the necessary files and if config files are correct:
