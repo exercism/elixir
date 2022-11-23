@@ -97,6 +97,7 @@ jobs:
         with:
           otp-version: ${{matrix.otp}}
           elixir-version: ${{matrix.elixir}}
+          version-type: strict
 
       - name: Retrieve Mix Dependencies Cache
         uses: actions/cache@v3
