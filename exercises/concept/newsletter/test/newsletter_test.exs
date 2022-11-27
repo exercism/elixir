@@ -1,14 +1,12 @@
 defmodule NewsletterTest do
-  use ExUnit.Case, async: true
+  # run test synchronously to be able to use the same file path for all tests without write conflicts
+  use ExUnit.Case, async: false
+
+  @temp_file_path Path.join(["assets", "temp.txt"])
 
   setup do
-    rand = Integer.to_string(:rand.uniform(2**32), 32)
-    temp_file = Path.join([System.tmp_dir!, "temp-#{rand}.txt"])
-
-    File.write!(temp_file, "")
-    on_exit(fn -> File.rm!(temp_file) end)
-
-    [temp_file: temp_file]
+    File.write!(@temp_file_path, "")
+    on_exit(fn -> File.rm!(@temp_file_path) end)
   end
 
   describe "read_emails" do
@@ -33,45 +31,45 @@ defmodule NewsletterTest do
 
   describe "open_log" do
     @tag task_id: 2
-    test "returns a pid", context do
-      file = Newsletter.open_log(context.temp_file)
+    test "returns a pid" do
+      file = Newsletter.open_log(@temp_file_path)
       assert is_pid(file)
       File.close(file)
     end
 
     @tag task_id: 2
-    test "opens the file for writing", context do
-      file = Newsletter.open_log(context.temp_file)
+    test "opens the file for writing" do
+      file = Newsletter.open_log(@temp_file_path)
       assert IO.write(file, "hello") == :ok
-      assert File.read!(context.temp_file) == "hello"
+      assert File.read!(@temp_file_path) == "hello"
       File.close(file)
     end
   end
 
   describe "log_sent_email" do
     @tag task_id: 3
-    test "returns ok", context do
-      file = File.open!(context.temp_file, [:write])
+    test "returns ok" do
+      file = File.open!(@temp_file_path, [:write])
       assert Newsletter.log_sent_email(file, "janice@example.com") == :ok
       File.close(file)
     end
 
     @tag task_id: 3
-    test "writes the email address to the given file", context do
-      file = File.open!(context.temp_file, [:write])
+    test "writes the email address to the given file" do
+      file = File.open!(@temp_file_path, [:write])
       Newsletter.log_sent_email(file, "joe@example.com")
-      assert File.read!(context.temp_file) == "joe@example.com\n"
+      assert File.read!(@temp_file_path) == "joe@example.com\n"
       File.close(file)
     end
 
     @tag task_id: 3
-    test "writes many email addresses to the given file", context do
-      file = File.open!(context.temp_file, [:write])
+    test "writes many email addresses to the given file" do
+      file = File.open!(@temp_file_path, [:write])
       Newsletter.log_sent_email(file, "joe@example.com")
       Newsletter.log_sent_email(file, "kathrine@example.com")
       Newsletter.log_sent_email(file, "lina@example.com")
 
-      assert File.read!(context.temp_file) ==
+      assert File.read!(@temp_file_path) ==
                "joe@example.com\nkathrine@example.com\nlina@example.com\n"
 
       File.close(file)
@@ -80,14 +78,14 @@ defmodule NewsletterTest do
 
   describe "close_log" do
     @tag task_id: 4
-    test "returns ok", context do
-      file = File.open!(context.temp_file, [:write])
+    test "returns ok" do
+      file = File.open!(@temp_file_path, [:write])
       assert Newsletter.close_log(file) == :ok
     end
 
     @tag task_id: 4
-    test "closes the file", context do
-      file = File.open!(context.temp_file, [:read])
+    test "closes the file" do
+      file = File.open!(@temp_file_path, [:read])
       assert Newsletter.close_log(file) == :ok
       assert IO.read(file, :all) == {:error, :terminated}
     end
@@ -95,21 +93,21 @@ defmodule NewsletterTest do
 
   describe "send_newsletter" do
     @tag task_id: 5
-    test "returns ok", context do
+    test "returns ok" do
       send_fun = fn _ -> :ok end
 
       assert Newsletter.send_newsletter(
                Path.join(["assets", "emails.txt"]),
-               context.temp_file,
+               @temp_file_path,
                send_fun
              ) == :ok
     end
 
     @tag task_id: 5
-    test "calls send function for every email from the emails file", context do
+    test "calls send function for every email from the emails file" do
       send_fun = fn email -> send(self(), {:send, email}) && :ok end
 
-      Newsletter.send_newsletter(Path.join(["assets", "emails.txt"]), context.temp_file, send_fun)
+      Newsletter.send_newsletter(Path.join(["assets", "emails.txt"]), @temp_file_path, send_fun)
 
       assert_received {:send, "alice@example.com"}
       assert_received {:send, "bob@example.com"}
@@ -118,12 +116,12 @@ defmodule NewsletterTest do
     end
 
     @tag task_id: 5
-    test "logs emails that were sent", context do
+    test "logs emails that were sent" do
       send_fun = fn _ -> :ok end
 
-      Newsletter.send_newsletter(Path.join(["assets", "emails.txt"]), context.temp_file, send_fun)
+      Newsletter.send_newsletter(Path.join(["assets", "emails.txt"]), @temp_file_path, send_fun)
 
-      assert File.read!(context.temp_file) ==
+      assert File.read!(@temp_file_path) ==
                """
                alice@example.com
                bob@example.com
@@ -133,28 +131,28 @@ defmodule NewsletterTest do
     end
 
     @tag task_id: 5
-    test "does not log emails that could not be sent", context do
+    test "does not log emails that could not be sent" do
       send_fun = fn
         "bob@example.com" -> :error
         "charlie@example.com" -> :error
         _ -> :ok
       end
 
-      Newsletter.send_newsletter(Path.join(["assets", "emails.txt"]), context.temp_file, send_fun)
+      Newsletter.send_newsletter(Path.join(["assets", "emails.txt"]), @temp_file_path, send_fun)
 
-      assert File.read!(context.temp_file) == """
+      assert File.read!(@temp_file_path) == """
              alice@example.com
              dave@example.com
              """
     end
 
     @tag task_id: 5
-    test "sending the same newsletter twice resets the log", context do
+    test "sending the same newsletter twice resets the log" do
       send_fun = fn _ -> :ok end
-      Newsletter.send_newsletter(Path.join(["assets", "emails.txt"]), context.temp_file, send_fun)
-      Newsletter.send_newsletter(Path.join(["assets", "emails.txt"]), context.temp_file, send_fun)
+      Newsletter.send_newsletter(Path.join(["assets", "emails.txt"]), @temp_file_path, send_fun)
+      Newsletter.send_newsletter(Path.join(["assets", "emails.txt"]), @temp_file_path, send_fun)
 
-      assert File.read!(context.temp_file) ==
+      assert File.read!(@temp_file_path) ==
                """
                alice@example.com
                bob@example.com
@@ -164,21 +162,21 @@ defmodule NewsletterTest do
     end
 
     @tag task_id: 5
-    test "logs the email immediately after it was sent", context do
+    test "logs the email immediately after it was sent" do
       send_fun = fn email ->
         case email do
           "alice@example.com" ->
             :ok
 
           "bob@example.com" ->
-            assert File.read!(context.temp_file) == """
+            assert File.read!(@temp_file_path) == """
                    alice@example.com
                    """
 
             :ok
 
           "charlie@example.com" ->
-            assert File.read!(context.temp_file) == """
+            assert File.read!(@temp_file_path) == """
                    alice@example.com
                    bob@example.com
                    """
@@ -186,7 +184,7 @@ defmodule NewsletterTest do
             :error
 
           "dave@example.com" ->
-            assert File.read!(context.temp_file) == """
+            assert File.read!(@temp_file_path) == """
                    alice@example.com
                    bob@example.com
                    """
@@ -195,9 +193,9 @@ defmodule NewsletterTest do
         end
       end
 
-      Newsletter.send_newsletter(Path.join(["assets", "emails.txt"]), context.temp_file, send_fun)
+      Newsletter.send_newsletter(Path.join(["assets", "emails.txt"]), @temp_file_path, send_fun)
 
-      assert File.read!(context.temp_file) ==
+      assert File.read!(@temp_file_path) ==
                """
                alice@example.com
                bob@example.com
