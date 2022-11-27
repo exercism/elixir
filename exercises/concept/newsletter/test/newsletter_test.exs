@@ -1,6 +1,5 @@
 defmodule NewsletterTest do
-  # run test synchronously to be able to use the same file path for all tests without write conflicts
-  use ExUnit.Case, async: false
+  use ExUnit.Case
 
   @temp_file_path Path.join(["assets", "temp.txt"])
 
