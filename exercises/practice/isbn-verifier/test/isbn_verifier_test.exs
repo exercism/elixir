@@ -37,6 +37,11 @@ defmodule IsbnVerifierTest do
   end
 
   @tag :pending
+  test "X is only valid as a check digit even if sum is correct" do
+    refute IsbnVerifier.isbn?("3-598-2X507-9")
+  end
+
+  @tag :pending
   test "valid isbn without separating dashes" do
     assert IsbnVerifier.isbn?("3598215088")
   end
@@ -158,4 +163,10 @@ defmodule IsbnVerifierTest do
   test "English-speaking area	KT Publishing" do
     assert IsbnVerifier.isbn?("0-9752298-0-X")
   end
+
+  @tag :pending
+  test "Short isbn with correct sum" do
+    refute IsbnVerifier.isbn?("81X")
+  end
+
 end
