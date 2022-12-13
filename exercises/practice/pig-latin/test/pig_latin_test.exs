@@ -122,6 +122,11 @@ defmodule PigLatinTest do
     test "word beginning with xb" do
       assert PigLatin.translate("xbot") == "xbotay"
     end
+
+    @tag :pending
+    test "x anywhere except word beginning doesn't make vowel sound : aliens speak Pig Latin too" do
+      assert PigLatin.translate("zkrrxkrkrkrzzzkewk") == "ewkzkrrxkrkrkrzzzkay"
+    end
   end
 
   describe "position of y in a word determines if it is a consonant or a vowel" do
