@@ -33,7 +33,7 @@ defmodule IsbnVerifierTest do
 
   @tag :pending
   test "X is only valid as a check digit" do
-    refute IsbnVerifier.isbn?("3-598-2X507-0")
+    refute IsbnVerifier.isbn?("3-598-2X507-9")
   end
 
   @tag :pending
