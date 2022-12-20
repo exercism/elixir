@@ -11,7 +11,6 @@ defmodule BoutiqueSuggestionsTest do
     top = %{
       item_name: "Long Sleeve T-shirt",
       price: 19.95,
-      quantity: 15,
       color: "Deep Red",
       base_color: "red"
     }
@@ -19,7 +18,6 @@ defmodule BoutiqueSuggestionsTest do
     bottom = %{
       item_name: "Wonderwall Pants",
       price: 48.97,
-      quantity: 3,
       color: "French Navy",
       base_color: "blue"
     }
@@ -32,7 +30,6 @@ defmodule BoutiqueSuggestionsTest do
     top1 = %{
       item_name: "Long Sleeve T-shirt",
       price: 19.95,
-      quantity: 15,
       color: "Deep Red",
       base_color: "red"
     }
@@ -40,7 +37,6 @@ defmodule BoutiqueSuggestionsTest do
     top2 = %{
       item_name: "Brushwood Shirt",
       price: 19.10,
-      quantity: 10,
       color: "Camel-Sandstone Woodland Plaid",
       base_color: "brown"
     }
@@ -48,7 +44,6 @@ defmodule BoutiqueSuggestionsTest do
     bottom1 = %{
       item_name: "Wonderwall Pants",
       price: 48.97,
-      quantity: 3,
       color: "French Navy",
       base_color: "blue"
     }
@@ -56,7 +51,6 @@ defmodule BoutiqueSuggestionsTest do
     bottom2 = %{
       item_name: "Terrena Stretch Pants",
       price: 79.95,
-      quantity: 7,
       color: "Cast Iron",
       base_color: "grey"
     }
@@ -72,7 +66,6 @@ defmodule BoutiqueSuggestionsTest do
     top = %{
       item_name: "Long Sleeve T-shirt",
       price: 19.95,
-      quantity: 15,
       color: "Deep Red",
       base_color: "red"
     }
@@ -80,7 +73,6 @@ defmodule BoutiqueSuggestionsTest do
     bottom = %{
       item_name: "Happy Hike Studio Pants",
       price: 99.00,
-      quantity: 8,
       color: "Ochre Red",
       base_color: "red"
     }
@@ -98,7 +90,6 @@ defmodule BoutiqueSuggestionsTest do
     top = %{
       item_name: "Sano Long Sleeve Shirt",
       price: 45.47,
-      quantity: 3,
       color: "Linen Chambray",
       base_color: "yellow"
     }
@@ -106,7 +97,6 @@ defmodule BoutiqueSuggestionsTest do
     bottom = %{
       item_name: "Happy Hike Studio Pants",
       price: 99.00,
-      quantity: 8,
       color: "Ochre Red",
       base_color: "red"
     }
@@ -119,7 +109,6 @@ defmodule BoutiqueSuggestionsTest do
     top = %{
       item_name: "Sano Long Sleeve Shirt",
       price: 45.47,
-      quantity: 3,
       color: "Linen Chambray",
       base_color: "yellow"
     }
@@ -127,7 +116,6 @@ defmodule BoutiqueSuggestionsTest do
     bottom = %{
       item_name: "Happy Hike Studio Pants",
       price: 99.00,
-      quantity: 8,
       color: "Ochre Red",
       base_color: "red"
     }
@@ -142,7 +130,6 @@ defmodule BoutiqueSuggestionsTest do
     top = %{
       item_name: "Sano Long Sleeve Shirt",
       price: 45.47,
-      quantity: 3,
       color: "Linen Chambray",
       base_color: "yellow"
     }
@@ -150,7 +137,6 @@ defmodule BoutiqueSuggestionsTest do
     bottom = %{
       item_name: "Happy Hike Studio Pants",
       price: 99.00,
-      quantity: 8,
       color: "Ochre Red",
       base_color: "red"
     }
@@ -163,7 +149,6 @@ defmodule BoutiqueSuggestionsTest do
     top1 = %{
       item_name: "Long Sleeve T-shirt",
       price: 19.95,
-      quantity: 15,
       color: "Deep Red",
       base_color: "red"
     }
@@ -171,7 +156,6 @@ defmodule BoutiqueSuggestionsTest do
     top2 = %{
       item_name: "Brushwood Shirt",
       price: 19.10,
-      quantity: 10,
       color: "Camel-Sandstone Woodland Plaid",
       base_color: "brown"
     }
@@ -179,7 +163,6 @@ defmodule BoutiqueSuggestionsTest do
     top3 = %{
       item_name: "Sano Long Sleeve Shirt",
       price: 45.47,
-      quantity: 3,
       color: "Linen Chambray",
       base_color: "yellow"
     }
@@ -187,7 +170,6 @@ defmodule BoutiqueSuggestionsTest do
     bottom1 = %{
       item_name: "Wonderwall Pants",
       price: 48.97,
-      quantity: 3,
       color: "French Navy",
       base_color: "blue"
     }
@@ -195,7 +177,6 @@ defmodule BoutiqueSuggestionsTest do
     bottom2 = %{
       item_name: "Terrena Stretch Pants",
       price: 79.95,
-      quantity: 7,
       color: "Cast Iron",
       base_color: "grey"
     }
@@ -203,7 +184,6 @@ defmodule BoutiqueSuggestionsTest do
     bottom3 = %{
       item_name: "Happy Hike Studio Pants",
       price: 99.00,
-      quantity: 8,
       color: "Ochre Red",
       base_color: "red"
     }
