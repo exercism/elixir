@@ -18,4 +18,4 @@ Bitwise.bsl(1, 3)
 
 All bitwise functions only work on integers.
 
-If you are running Elixir version 1.9 or lower, you will need to call `require Bitwise` at the beginning of the module definition to be able to use the _Bitwise_ module.
+**Note:** You will need to call `require Bitwise` at the beginning of the module definition to be able to use the _Bitwise_ module functions like in the example above: `Bitwise.bsl(1, 3)` . Also you can call `import Bitwise` and use imported functions directly: `bsl(1, 3)`.
