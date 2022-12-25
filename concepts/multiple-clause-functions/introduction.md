@@ -1,6 +1,6 @@
 # Introduction
 
-Elixir facilitates **Open-Close Principle** practices by allowing functions to have multiple clauses, so instead of sprawling and hard-coded control-logic, pointed functions can be written to add/remove behavior easily.
+Elixir facilitates **Open-Closed Principle** practices by allowing functions to have multiple clauses, so instead of sprawling and hard-coded control-logic, pointed functions can be written to add/remove behavior easily.
 
 Elixir offers _multiple function clauses_ and _guards_ to write:
 
