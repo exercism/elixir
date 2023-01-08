@@ -69,7 +69,7 @@ Those two functions:
 
 - Accept a module implementing the `GenServer` behaviour as the first argument.
 - Accept anything as the second argument called `init_arg`. As the name suggest, this argument gets passed to the `init/1` callback.
-- Accept an optional third argument with advanced options for running the process that we wont' cover now.
+- Accept an optional third argument with advanced options for running the process that we won't cover now.
 
 Starting a server by calling `GenServer.start/3` or `GenServer.start_link/3` will invoke the `init/1` callback in a blocking way. The return value of `init/1` dictates if the server can be started successfully.
 

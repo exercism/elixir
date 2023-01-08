@@ -11,7 +11,7 @@ two_item_list = [1, 2]
 multiple_type_list = [1, :pi, 3.14, "four"]
 ```
 
-Elixir implements lists as a linked list, where each node stores the reference to the next list. The first item in the list is referred to as the _head_ and the remaining list of items is called the _tail_. We can use this notation in code:
+Elixir implements lists as a linked list, where each node stores two values: the first item and another list with all the remaining items. The first item in the list is referred to as the _head_ and the remaining list of items is called the _tail_. We can use this notation in code:
 
 ```elixir
 # [1] represented in [head | tail] notation

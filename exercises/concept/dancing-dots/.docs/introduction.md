@@ -66,7 +66,7 @@ To mark which function comes from which behaviour, we should use the module attr
 defmodule BookCollection do
   @behaviour Countable
 
-  defstruct :list, :owner
+  defstruct [:list, :owner]
 
   @impl Countable
   def count(collection) do

@@ -7,7 +7,7 @@ All errors in Elixir implement the _Exception Behaviour_. Just like the _Access 
 - The module's name defines the error's name.
 - The module defines an error-struct.
 - The struct will have a `:message` field.
-- The module can be be used with `raise/1` and `raise/2` to raise the intended error
+- The module can be used with `raise/1` and `raise/2` to raise the intended error
 
 The _Exception Behaviour_ also specifies two callbacks: `message/1` and `exception/1`. If unimplemented, default implementations will be used. `message/1` transforms the error-struct to a readable message when called with `raise`. `exception/1` allows additional context to be added to the message when it is called with `raise/2`
 
