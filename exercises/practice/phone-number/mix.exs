@@ -1,9 +1,9 @@
-defmodule Phone.MixProject do
+defmodule PhoneNumber.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :phone,
+      app: :phone_number,
       version: "0.1.0",
       # elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,

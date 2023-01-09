@@ -1,4 +1,4 @@
-defmodule RemoteControlCar.MixProject do
+defmodule NeedForSpeed.MixProject do
   use Mix.Project
 
   def project do

@@ -1,9 +1,9 @@
-defmodule Atbash.MixProject do
+defmodule AtbashCipher.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :atbash,
+      app: :atbash_cipher,
       version: "0.1.0",
       # elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,

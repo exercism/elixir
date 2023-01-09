@@ -1,9 +1,9 @@
-defmodule Scrabble.MixProject do
+defmodule ScrabbleScore.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :scrabble,
+      app: :scrabble_score,
       version: "0.1.0",
       # elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,

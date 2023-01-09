@@ -1,4 +1,4 @@
-defmodule RPG.MixProject do
+defmodule BreadAndPotions.MixProject do
   use Mix.Project
 
   def project do

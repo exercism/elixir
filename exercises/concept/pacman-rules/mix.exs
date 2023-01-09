@@ -1,4 +1,4 @@
-defmodule Rules.MixProject do
+defmodule PacmanRules.MixProject do
   use Mix.Project
 
   def project do

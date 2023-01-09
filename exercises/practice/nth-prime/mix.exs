@@ -1,9 +1,9 @@
-defmodule Prime.MixProject do
+defmodule NthPrime.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :prime,
+      app: :nth_prime,
       version: "0.1.0",
       # elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,

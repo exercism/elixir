@@ -1,4 +1,4 @@
-defmodule Form.MixProject do
+defmodule CityOffice.MixProject do
   use Mix.Project
 
   def project do

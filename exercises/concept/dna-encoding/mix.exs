@@ -1,9 +1,9 @@
-defmodule DNA.MixProject do
+defmodule DNAEncoding.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :dna,
+      app: :dna_encoding,
       version: "0.1.0",
       # elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,

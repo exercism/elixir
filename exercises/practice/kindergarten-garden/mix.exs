@@ -1,9 +1,9 @@
-defmodule Garden.MixProject do
+defmodule KindergartenGarden.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :garden,
+      app: :kindergarten_garden,
       version: "0.1.0",
       # elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,

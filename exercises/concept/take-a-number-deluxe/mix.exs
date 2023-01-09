@@ -1,4 +1,4 @@
-defmodule TakeANumber.MixProject do
+defmodule TakeANumberDeluxe.MixProject do
   use Mix.Project
 
   def project do

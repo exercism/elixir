@@ -1,4 +1,4 @@
-defmodule RPNCalculator.MixProject do
+defmodule RPNCalculatorInspection.MixProject do
   use Mix.Project
 
   def project do

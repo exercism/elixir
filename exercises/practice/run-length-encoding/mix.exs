@@ -1,9 +1,9 @@
-defmodule RunLengthEncoder.MixProject do
+defmodule RunLengthEncoding.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :run_length_encoder,
+      app: :run_length_encoding,
       version: "0.1.0",
       # elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,

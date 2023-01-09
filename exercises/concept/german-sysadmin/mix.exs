@@ -1,4 +1,4 @@
-defmodule Username.MixProject do
+defmodule GermanSysadmin.MixProject do
   use Mix.Project
 
   def project do
