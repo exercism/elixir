@@ -1,4 +1,4 @@
-defmodule CaptainsLog.MixProject do
+defmodule LibraryFees.MixProject do
   use Mix.Project
 
   def project do
