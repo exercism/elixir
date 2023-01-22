@@ -10,7 +10,7 @@ defmodule ResistorColorDuoTest do
     assert output == expected
   end
 
-  @tag :pending
+  # @tag :pending
   test "Blue and grey" do
     colors = [:blue, :grey]
     output = ResistorColorDuo.value(colors)
@@ -19,7 +19,7 @@ defmodule ResistorColorDuoTest do
     assert output == expected
   end
 
-  @tag :pending
+  # @tag :pending
   test "Yellow and violet" do
     colors = [:yellow, :violet]
     output = ResistorColorDuo.value(colors)
@@ -28,7 +28,7 @@ defmodule ResistorColorDuoTest do
     assert output == expected
   end
 
-  @tag :pending
+  # @tag :pending
   test "White and red" do
     colors = [:white, :red]
     output = ResistorColorDuo.value(colors)
@@ -37,7 +37,7 @@ defmodule ResistorColorDuoTest do
     assert output == expected
   end
 
-  @tag :pending
+  # @tag :pending
   test "Orange and orange" do
     colors = [:orange, :orange]
     output = ResistorColorDuo.value(colors)
@@ -46,7 +46,7 @@ defmodule ResistorColorDuoTest do
     assert output == expected
   end
 
-  @tag :pending
+  # @tag :pending
   test "Ignore additional colors" do
     colors = [:green, :brown, :orange]
     output = ResistorColorDuo.value(colors)
@@ -55,7 +55,7 @@ defmodule ResistorColorDuoTest do
     assert output == expected
   end
 
-  @tag :pending
+  # @tag :pending
   test "Black and brown, one digit" do
     colors = [:black, :brown]
     output = ResistorColorDuo.value(colors)
