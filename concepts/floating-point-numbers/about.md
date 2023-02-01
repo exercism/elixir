@@ -25,7 +25,7 @@ Floats are infamous for their rounding errors.
 # => 0.30000000000000004
 ```
 
-However, those kind of errors are not specific to Elixir. They happen in all programming languages. This is because all data on our computers is stored and processed as binary code. In binary, only fractions whose denominator can be expressed as `2^n` (e.g. `1/4`, `3/8`, `5/16`) can be expressed exactly. Other fractions are expressed as estimations.
+However, those kinds of errors are not specific to Elixir. They happen in all programming languages. This is because all data on our computers is stored and processed as binary code. In binary, only fractions whose denominator can be expressed as `2^n` (e.g. `1/4`, `3/8`, `5/16`) can be expressed exactly. Other fractions are expressed as estimations.
 
 ```elixir
 # 3/4
