@@ -34,7 +34,7 @@
 - You can use `_` to match all messages that didn't match previous patterns.
 
 [getting-started-processes]: https://elixir-lang.org/getting-started/processes.html
-[mullen-processes]: https://samuelmullen.com/articles/elixir-processes-send-and-receive/
+[mullen-processes]: https://samuelmullen.com/articles/elixir-processes-send-and-receive
 [kernel-spawn-1]: https://hexdocs.pm/elixir/Kernel.html#spawn/1
 [kernel-receive]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#receive/1
 [kernel-send]: https://hexdocs.pm/elixir/Kernel.html#send/2
