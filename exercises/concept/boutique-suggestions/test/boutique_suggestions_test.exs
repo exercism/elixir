@@ -72,7 +72,7 @@ defmodule BoutiqueSuggestionsTest do
 
     bottom = %{
       item_name: "Happy Hike Studio Pants",
-      price: 99.00,
+      price: 19.00,
       color: "Ochre Red",
       base_color: "red"
     }
