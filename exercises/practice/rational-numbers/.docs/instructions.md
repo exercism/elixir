@@ -4,7 +4,7 @@ A rational number is defined as the quotient of two integers `a` and `b`, called
 
 ~~~~exercism/note
 Note that mathematically, the denominator can't be zero.
-However in many implementations of rational numbers, you will find that the denominator is allowed to be zero with behaviour similar to positive or negative infinity in floating point numbers.
+However, in many implementations of rational numbers, you will find that the denominator is allowed to be zero with behavior similar to positive or negative infinity in floating point numbers.
 In those cases, the denominator and numerator generally still can't both be zero at once.
 ~~~~
 
@@ -36,7 +36,7 @@ For example, `4/4` should reduce to `1/1`, `30/60` should reduce to `1/2`, `12/8
 To reduce a rational number `r = a/b`, divide `a` and `b` by the greatest common divisor (gcd) of `a` and `b`.
 So, for example, `gcd(12, 8) = 4`, so `r = 12/8` can be reduced to `(12/4)/(8/4) = 3/2`.
 The reduced form of a rational number should be in "standard form" (the denominator should always be a positive integer).
-If a denominator with a negative integer is present, multiply both numerator and denominator by `-1` to ensure standard form is reached.
+If a denominator with a negative integer is present, multiply both numerator and denominator by `-1` to ensure a standard form is reached.
 For example, `3/-4` should be reduced to `-3/4`
 
 Assume that the programming language you are using does not have an implementation of rational numbers.
