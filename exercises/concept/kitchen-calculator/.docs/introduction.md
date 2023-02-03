@@ -43,7 +43,8 @@ The use of pattern matching is dominant in assertive, idiomatic Elixir code. You
 
 Remember, matches occur from the right side to the left side.
 
-In the last example if we don't need a variable in a pattern match, we can discard it by referencing `_`. Any variable starting with an `_` is not tracked by the runtime.
+In the last example, if we don't need a variable in a pattern match, we can discard it by referencing `_`.
+Any variable starting with an `_` is not tracked by the runtime.
 
 ### Pattern matching in named functions
 
