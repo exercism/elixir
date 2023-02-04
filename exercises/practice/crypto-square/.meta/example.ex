@@ -8,9 +8,11 @@ defmodule CryptoSquare do
     "ac bd"
   """
   @spec encode(String.t()) :: String.t()
-  def encode(""), do: ""
+  def encode(str), do: do_encode(normalize_string(str))
 
-  def encode(str) do
+  defp do_encode(""), do: ""
+
+  defp do_encode(str) do
     normalized = normalize_string(str)
     section_length = normalized |> byte_size |> :math.sqrt() |> Float.ceil() |> trunc
 
