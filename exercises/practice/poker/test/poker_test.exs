@@ -177,7 +177,6 @@ defmodule PokerTest do
 
   @tag :pending
   test "aces cannot be in the middle of a straight (Q K A 2 3)" do
-    # "2C 3D 7H 5H 2S", "QS KH AC 2D 3S"
     pair = ~w(2C 3D 7H 5H 2S)
     not_a_straight = ~w(QS KH AC 2D 3S)
     winning_hands = Poker.best_hand([pair, not_a_straight = ~w(QS KH AC 2D 3S)])
@@ -294,8 +293,6 @@ defmodule PokerTest do
 
   @tag :pending
   test "aces cannot be in the middle of a straight flush (Q K A 2 3)" do
-    # both hands have nothing so highest card wins
-    # A K Q 10 2 wins over A K Q 3 2 because 10 > 3
     nothing = ~w(2C AC QC 10C KC)
     not_a_straight_flush = ~w(QH KH AH 2H 3H)
     winning_hands = Poker.best_hand([nothing, not_a_straight_flush])
@@ -312,7 +309,6 @@ defmodule PokerTest do
 
   @tag :pending
   test "even though an ace is usually high, a 5-high straight flush is the lowest-scoring straight flush" do
-    ["2H 3H 4H 5H 6H", "4D AD 3D 2D 5D"]
     straight_flush_to_6 = ~w(2H 3H 4H 5H 6H)
     straight_flush_to_5 = ~w(4D AD 3D 2D 5D)
     winning_hands = Poker.best_hand([straight_flush_to_6, straight_flush_to_5])
