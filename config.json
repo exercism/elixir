@@ -1600,7 +1600,7 @@
           "integers",
           "lists",
           "pattern-matching",
-          "if",
+          "cond",
           "maps"
         ],
         "practices": [
