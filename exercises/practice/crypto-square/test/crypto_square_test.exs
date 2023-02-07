@@ -7,6 +7,11 @@ defmodule CryptoSquareTest do
   end
 
   @tag :pending
+  test "normalization results in empty plaintext" do
+    assert CryptoSquare.encode("... --- ...") == ""
+  end
+
+  @tag :pending
   test "lowercase" do
     assert CryptoSquare.encode("A") == "a"
   end
