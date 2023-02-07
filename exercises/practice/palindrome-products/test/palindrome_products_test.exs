@@ -77,4 +77,11 @@ defmodule PalindromeProductsTest do
       PalindromeProducts.generate(1, 10000)
     end
   end
+
+  @tag :pending
+  test "smallest product does not use the smallest factor" do
+    palindromes = PalindromeProducts.generate(4000, 3215)
+    assert palindromes |> Map.keys() |> Enum.sort() |> hd == 10_988_901
+    assert Enum.sort(palindromes[10_988_901]) == [[3297, 3333]]
+  end
 end
