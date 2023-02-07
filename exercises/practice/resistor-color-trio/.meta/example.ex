@@ -13,16 +13,24 @@ defmodule ResistorColorTrio do
   }
 
   @doc """
-  Calculate the resistance value in ohm or kiloohm from resistor colors
+  Calculate the resistance value in ohms from resistor colors
   """
-  @spec label(colors :: [atom]) :: {number, :ohms | :kiloohms}
-  def label([a, b, c]) do
+  @spec label(colors :: [atom]) :: {number, :ohms | :kiloohms | :megaohms | :gigaohms}
+  def label([a, b, c | _rest]) do
     value = (10 * @colors[a] + @colors[b]) * round(:math.pow(10, @colors[c]))
 
-    if value >= 1000 do
-      {div(value, 1000), :kiloohms}
-    else
-      {value, :ohms}
+    cond do
+      value >= 1_000_000_000 ->
+        {div(value, 1_000_000_000), :gigaohms}
+
+      value >= 1_000_000 ->
+        {div(value, 1_000_000), :megaohms}
+
+      value >= 1_000 ->
+        {div(value, 1_000), :kiloohms}
+
+      true ->
+        {value, :ohms}
     end
   end
 end
