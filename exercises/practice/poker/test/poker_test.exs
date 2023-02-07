@@ -179,7 +179,7 @@ defmodule PokerTest do
   test "aces cannot be in the middle of a straight (Q K A 2 3)" do
     pair = ~w(2C 3D 7H 5H 2S)
     not_a_straight = ~w(QS KH AC 2D 3S)
-    winning_hands = Poker.best_hand([pair, not_a_straight = ~w(QS KH AC 2D 3S)])
+    winning_hands = Poker.best_hand([pair, not_a_straight])
     assert_poker(winning_hands, [pair])
   end
 
