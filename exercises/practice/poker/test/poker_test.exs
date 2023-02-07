@@ -160,7 +160,7 @@ defmodule PokerTest do
   end
 
   @tag :pending
-  test "aces can be end a straight (10 J Q K A)" do
+  test "aces can end a straight (10 J Q K A)" do
     three_fours = ~w(4S 5H 4C 8D 4H)
     straight_to_ace = ~w(10D JH QS KD AC)
     winning_hands = Poker.best_hand([three_fours, straight_to_ace])
@@ -168,11 +168,19 @@ defmodule PokerTest do
   end
 
   @tag :pending
-  test "aces can be start a straight (A 2 3 4 5)" do
+  test "aces can start a straight (A 2 3 4 5)" do
     three_fours = ~w(4S 5H 4C 8D 4H)
     straight_to_5 = ~w(4D AH 3S 2D 5C)
     winning_hands = Poker.best_hand([three_fours, straight_to_5])
     assert_poker(winning_hands, [straight_to_5])
+  end
+
+  @tag :pending
+  test "aces cannot be in the middle of a straight (Q K A 2 3)" do
+    pair = ~w(2C 3D 7H 5H 2S)
+    not_a_straight = ~w(QS KH AC 2D 3S)
+    winning_hands = Poker.best_hand([pair, not_a_straight])
+    assert_poker(winning_hands, [pair])
   end
 
   @tag :pending
@@ -268,10 +276,42 @@ defmodule PokerTest do
   end
 
   @tag :pending
-  test "both hands have straight flush, tie goes to highest-ranked card" do
+  test "aces can end a straight flush (10 J Q K A)" do
+    four_aces = ~w(KC AH AS AD AC)
+    straight_flush_to_ace = ~w(10C JC QC KC AC)
+    winning_hands = Poker.best_hand([four_aces, straight_flush_to_ace])
+    assert_poker(winning_hands, [straight_flush_to_ace])
+  end
+
+  @tag :pending
+  test "aces can start a straight flush (A 2 3 4 5)" do
+    four_aces = ~w(KS AH AS AD AC)
+    straight_flush_to_5 = ~w(4H AH 3H 2H 5H)
+    winning_hands = Poker.best_hand([four_aces, straight_flush_to_5])
+    assert_poker(winning_hands, [straight_flush_to_5])
+  end
+
+  @tag :pending
+  test "aces cannot be in the middle of a straight flush (Q K A 2 3)" do
+    nothing = ~w(2C AC QC 10C KC)
+    not_a_straight_flush = ~w(QH KH AH 2H 3H)
+    winning_hands = Poker.best_hand([nothing, not_a_straight_flush])
+    assert_poker(winning_hands, [nothing])
+  end
+
+  @tag :pending
+  test "both hands have a straight flush, tie goes to highest-ranked card" do
     straight_flush_to_8 = ~w(4H 6H 7H 8H 5H)
     straight_flush_to_9 = ~w(5S 7S 8S 9S 6S)
     winning_hands = Poker.best_hand([straight_flush_to_8, straight_flush_to_9])
     assert_poker(winning_hands, [straight_flush_to_9])
+  end
+
+  @tag :pending
+  test "even though an ace is usually high, a 5-high straight flush is the lowest-scoring straight flush" do
+    straight_flush_to_6 = ~w(2H 3H 4H 5H 6H)
+    straight_flush_to_5 = ~w(4D AD 3D 2D 5D)
+    winning_hands = Poker.best_hand([straight_flush_to_6, straight_flush_to_5])
+    assert_poker(winning_hands, [straight_flush_to_6])
   end
 end
