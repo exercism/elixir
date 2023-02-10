@@ -48,7 +48,7 @@ HighSchoolSweetheart.initials("Lance Green")
 
 ## 4. Put the initials inside of the heart
 
-Implement the `HighSchoolSweetheart.pair/2` function. It should take two full names and return the initials. Make sure to reuse `HighSchoolSweetheart.initials/1` that you defined in the previous step.
+Implement the `HighSchoolSweetheart.pair/2` function. It should take two full names and return the initials inside an ASCII heart. Make sure to reuse `HighSchoolSweetheart.initials/1` that you defined in the previous step.
 
 ```elixir
 HighSchoolSweetheart.pair("Blake Miller", "Riley Lewis")
