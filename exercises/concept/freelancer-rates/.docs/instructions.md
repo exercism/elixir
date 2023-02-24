@@ -8,7 +8,7 @@ We first establish a few rules between the freelancer and the project manager:
 - The daily rate is 8 times the hourly rate.
 - A month has 22 billable days.
 
-The freelancer is offering to apply a discount if the project manager chooses to let the freelancer bill per month, which can come in handy if there is a certain budget the project manager has to work with.
+Sometimes, the freelancer is offering to apply a discount on their daily rate (for example for their most loyal customers or for non-for-profit customers).
 
 Discounts are modeled as fractional numbers representing percentage, for example `25.0` (25%).
 
