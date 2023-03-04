@@ -30,6 +30,7 @@
 
 - Reuse functions implemented in previous steps.
 - There is a [built-in function][io-inspect], useful for debugging, that can write to the standard output more than just strings. That functions accepts options, for example a string that will be written before the passed value.
+- The function and its option mentioned above will append a colon and a space to that string for you.
 
 [module-io]: https://hexdocs.pm/elixir/IO.html
 [getting-started-io]: https://elixir-lang.org/getting-started/io-and-the-file-system.html#the-io-module
