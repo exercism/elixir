@@ -99,6 +99,22 @@ defmodule RPG.CharacterSheetTest do
     end
 
     @tag task_id: 5
+    test "it only has a single colon and single space after the 'Your character' label" do
+      io =
+        capture_io("Anne\nhealer\n4\n", fn ->
+          RPG.CharacterSheet.run()
+        end)
+
+      case Regex.run(~r/.*(Your character.*)%{/, io) do
+        [_, label] ->
+          assert label == "Your character: "
+
+        _ ->
+          nil
+      end
+    end
+
+    @tag task_id: 5
     test "it inspects the character map" do
       io =
         capture_io("Anne\nhealer\n4\n", fn ->
