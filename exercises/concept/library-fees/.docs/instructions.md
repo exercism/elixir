@@ -39,7 +39,7 @@ LibraryFees.return_date(~N[2020-11-28 15:55:33])
 
 The library has a flat rate for late returns. To be able to calculate the fee, we need to know how many days after the return date the book was actually returned.
 
-Implement the `LibraryFees.days_late/2` function. It should take a `Date` struct - the planned return datetime, and a `NaiveDateTime` struct - the actual return datetime.
+Implement the `LibraryFees.days_late/2` function. It should take a `Date` struct - the planned return date, and a `NaiveDateTime` struct - the actual return datetime.
 
 If the actual return date is on an earlier or the same day as the planned return datetime, the function should return 0. Otherwise, the function should return the difference between those two dates in days.
 
