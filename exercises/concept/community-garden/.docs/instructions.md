@@ -4,7 +4,7 @@ Your community association has asked you to implement a simple registry applicat
 
 ## 1. Open the garden
 
-Implement the `CommunityGarden.start/1` function, it should receive a optional keyword list of options to pass forward to the _agent process_. The garden's initial state should be initialized to represent an empty collection of plots. It should return an `:ok` tuple with the garden's pid.
+Implement the `CommunityGarden.start/1` function, it should receive an optional keyword list of options to pass forward to the _agent process_. The garden's initial state should be initialized to represent an empty collection of plots. It should return an `:ok` tuple with the garden's pid.
 
 ```elixir
 {:ok, pid} = CommunityGarden.start()
