@@ -25,8 +25,8 @@ defmodule RationalNumbers do
   @doc """
   Divide two rational numbers
   """
-  @spec divide_by(num :: rational, den :: rational) :: rational
-  def divide_by(num, den) do
+  @spec divide_by(a :: rational, b :: rational) :: rational
+  def divide_by(a, b) do
   end
 
   @doc """
