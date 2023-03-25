@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [],
+  "files": {
+    "solution": [
+      "lib/paint_by_numbers.ex"
+    ],
+    "test": [
+      "test/paint_by_numbers_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
+  },
+  "language_versions": ">=1.10",
+  "blurb": "TODO"
+}
