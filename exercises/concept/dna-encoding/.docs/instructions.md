@@ -18,7 +18,8 @@ Implement `encode_nucleotide/1` to accept the code point for the nucleic acid an
 
 ```elixir
 DNA.encode_nucleotide(?A)
-# => 0b0001
+# => 1
+# (which is equal to 0b0001)
 ```
 
 ## 2. Decode the binary value to the nucleic acid
@@ -27,7 +28,8 @@ Implement `decode_nucleotide/1` to accept the integer value of the encoded code 
 
 ```elixir
 DNA.decode_nucleotide(0b0001)
-# => ?A
+# => 65
+# (which is equal to ?A)
 ```
 
 ## 3. Encode a DNA charlist
