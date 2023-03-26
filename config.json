@@ -308,6 +308,7 @@
           "tail-call-recursion"
         ],
         "prerequisites": [
+          "bitstrings",
           "charlists",
           "recursion",
           "pattern-matching"
