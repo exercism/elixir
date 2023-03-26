@@ -35,7 +35,7 @@ If the value of the segment overflows the capacity of the segment's type, it wil
 
 ### Concatenating
 
-We can combine bitstrings stored in variables using the special form:
+We can combine bitstrings stored in variables using the special form. The `::bistring` type must be used when concatenating two bitstrings of unknown sizes.
 
 ```elixir
 first = <<0b110::3>>
@@ -46,7 +46,7 @@ combined = <<first::bitstring, second::bitstring>>
 
 ### Pattern matching
 
-Pattern matching can also be done to obtain the value from within the special form:
+Pattern matching can also be done to obtain the value from within the special form. The `::bitstring` type must be used to pattern match on a bitstring of an unknown size. It can only be used for the last fragment of the bitstring.
 
 ```elixir
 <<value::4, rest::bitstring>> = <<0b01101001::8>>

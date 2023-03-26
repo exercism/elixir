@@ -78,7 +78,7 @@ The same data represented in binary numbers, in 2-bit segments, would look like 
 
 ## 1. Calculate palette bit size
 
-Implement the `PaintByNumber.palette_bit_size/1` function. It should take the count of colors in the palette and return how many bits are necessary to represent that many different color indices as binary numbers. Assume color indices always start at 0.
+Implement the `PaintByNumber.palette_bit_size/1` function. It should take the count of colors in the palette and return how many bits are necessary to represent that many color indices as binary numbers. Color indices always start at 0 and are continuous ascending integers.
 
 For example, representing 13 different colors require 4 bits. 4 bits can store up to 16 color indices (2^4). 3 bits would not be enough because 3 bits can only store up to 8 color indices (2^3).
 

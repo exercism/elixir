@@ -12,8 +12,41 @@
 - This task doesn't use the bitstring data type.
 - Find the smallest positive number `n` such that 2 raised to the power of `n` is greater than or equal than the number of colors we need to represent.
 - Create a recursive function for this.
-- Choose a starting bit size of 1. If 2 raised to the power of 1 is greater than or equal to the color count, we've found our bit size. If not, add 1 to the bit size and check again (recursion).
+- Choose a starting bit size of 1. If 2 raised to the power of the bit size is greater than or equal to the color count, we've found our bit size. If not, add 1 to the bit size and check again (recursion).
 - Use [`Integer.pow/2`][integer-pow] to raise 2 to a given power.
+
+## 2. Create an empty picture
+
+- Use the [bitstring special form][bitstring-form] to create a new bitstring.
+
+## 3. Create a test picture
+
+- Use the [bitstring special form][bitstring-form] to create a new bitstring.
+- Use the [type operator][type-operator] to specify the bit size of each fragment.
+
+## 4. Prepend a pixel to a picture
+
+- The [bitstring special form][bitstring-form] can be used to append a new fragment to an existing bitstring.
+- Use the [type operator][type-operator] to specify the bit size of the new fragment as well as the existing bitstring.
+- Use the previously implemented `PaintByNumber.palette_bit_size/1` function to get the bit size of the new fragment.
+- Use the special `::bitstring` type to specify that the old fragment is of unknown size.
+
+## 5. Get the first pixel from a picture
+
+- The [bitstring special form][bitstring-form] can be used to [pattern match bitstrings][bitstring-matching].
+- Use the previously implemented `PaintByNumber.palette_bit_size/1` function to get the bit size of one pixel.
+- Use the special `::bitstring` type to specify that the rest of the bitstring is of unknown size.
+
+## 6. Drop the first pixel from a picture
+
+- The [bitstring special form][bitstring-form] can be used to [pattern match bitstrings][bitstring-matching].
+- Use the previously implemented `PaintByNumber.palette_bit_size/1` function to get the bit size of one pixel.
+- Use the special `::bitstring` type to specify that the rest of the bitstring is of unknown size.
+
+## 7. Concatenate two pictures
+
+- The [bitstring special form][bitstring-form] can be used to concatenate two bitstrings.
+- Use the special `::bitstring` type to specify that the two bitstring fragments are of unknown size.
 
 [decimal-to-binary-youtube]: https://www.youtube.com/watch?v=gGiEu7QTi68
 [integer-literal]: https://hexdocs.pm/elixir/master/syntax-reference.html#integers-in-other-bases-and-unicode-code-points
