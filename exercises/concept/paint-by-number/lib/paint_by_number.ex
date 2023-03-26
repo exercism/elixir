@@ -1,49 +1,29 @@
 defmodule PaintByNumber do
   def palette_bit_size(color_count) do
-    do_palette_bit_size(color_count)
-  end
-
-  defp do_palette_bit_size(color_count, bits \\ 1) do
-    if Math.pow(2, bits) >= color_count do
-      bits
-    else
-      do_palette_bit_size(color_count, bits + 1)
-    end
+    # Please implement the palette_bit_size/1 function
   end
 
   def empty_picture() do
-    <<>>
+    # Please implement the empty_picture/0 function
   end
 
   def test_picture() do
-    <<0::2, 1::2, 2::2, 3::2>>
+    # Please implement the test_picture/0 function
   end
 
   def prepend_pixel(picture, color_count, pixel_color_index) do
-    palette_bit_size = palette_bit_size(color_count)
-
-    <<pixel_color_index::size(palette_bit_size), picture::bitstring>>
+    # Please implement the prepend_pixel/3 function
   end
 
   def get_first_pixel(picture, color_count) do
-    palette_bit_size = palette_bit_size(color_count)
-
-    case picture do
-      <<>> -> nil
-      <<pixel_color_index::size(palette_bit_size), _::bitstring>> -> pixel_color_index
-    end
+    # Please implement the get_first_pixel/2 function
   end
 
   def drop_first_pixel(picture, color_count) do
-    palette_bit_size = palette_bit_size(color_count)
-
-    case picture do
-      <<>> -> <<>>
-      <<_::size(palette_bit_size), rest::bitstring>> -> rest
-    end
+    # Please implement the drop_first_pixel/2 function
   end
 
   def concat_pictures(picture1, picture2) do
-    <<picture1::bitstring, picture2::bitstring>>
+    # Please implement the concat_pictures/2 function
   end
 end
