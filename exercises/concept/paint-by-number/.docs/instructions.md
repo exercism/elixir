@@ -39,7 +39,7 @@ The picture has a white background. The heart has a black border and a red fill 
 This picture uses 3 colors.
 Let's say we assign indices to those colors:
 - `0` (binary: `0b00`) for white,
-- `1` (binary: `0b01`) for black`,
+- `1` (binary: `0b01`) for black,
 - `2` (binary: `0b10`) for red.
 
 We can now use those color indices to represent the color of each pixel.
