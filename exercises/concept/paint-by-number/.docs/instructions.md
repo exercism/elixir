@@ -101,12 +101,58 @@ The test picture consists of 4 pixels with 4 different colors.
 Implement the `PaintByNumber.test_picture/0` function. It should return a bitstring that consists of 4 segments.
 Each segment should have a bit size of 2. The segments should have values 0, 1, 2, and 3.
 
-## 4. Create a test picture
+## 4. Prepend a pixel to a picture
 
+Implement the `PaintByNumber.prepend_pixel/3` function. It should take three arguments: a bitstring with the picture to which we're prepending, the count of colors in the palette, and the index of the color for the new pixel. It should return a bitstring with a picture with the new pixel added to the beginning.
+
+```elixir
+picture = <<2::4, 0::4>>
+color_count = 13
+pixel_color_index = 11
+
+PaintByNumber.prepend_pixel(picture, color_count, pixel_color_index)
+# => <<178, 0::size(4)>>
+# (which is equal to <<11::4, 2::4, 0::4>>)
 ```
-PaintByNumber.prepend_pixel(<<2::3>>, 5, 3)
-# => 4
+
+## 5. Get the first pixel from a picture
+
+Implement the `PaintByNumber.get_first_pixel/2` function. It should take two arguments: a bitstring with the picture from which we're reading, and the count of colors in the palette. It should return the color index of the first pixel in the given picture. When given an empty picture, it should return `nil`.
+
+```elixir
+picture = <<19::5, 2::5, 18::5>>
+color_count = 20
+
+PaintByNumber.get_first_pixel(picture, color_count)
+# => 19
 ```
+
+## 6. Drop the first pixel from a picture
+
+Implement the `PaintByNumber.drop_first_pixel/2` function. It should take two arguments: a bitstring with the picture from which we're removing a pixel, and the count of colors in the palette. It should return the picture without the first pixel. When given an empty picture, it should return an empty picture.
+
+```elixir
+picture = <<2::3, 5::3, 5::3, 0::3>>
+color_count = 6
+
+PaintByNumber.drop_first_pixel(picture, color_count)
+# => <<180, 0::size(1)>>
+# (which is equal to <<5::3, 5::3, 0::3>>)
+```
+
+## 7. Concatenate two pictures
+
+Implement the `PaintByNumber.concat_pictures/2` function. It should take two arguments, two bitstrings. It should return a bitstrings that is the result of prepending the first argument to the second argument.
+
+```elixir
+picture1 = <<52::6, 51::6>>
+picture2 = <<0::6, 34::6, 12::6>>
+
+PaintByNumber.concat_pictures(picture1, picture2)
+# => <<211, 48, 34, 12::size(6)>>
+# (which is equal to <<52::6, 51::6, 0::6, 34::6, 12::6>>)
+```
+
 
 [paint-by-number]: https://en.wikipedia.org/wiki/Paint_by_number
 [binary-file]: https://en.wikipedia.org/wiki/Binary_file

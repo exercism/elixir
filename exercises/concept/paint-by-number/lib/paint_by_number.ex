@@ -20,9 +20,9 @@ defmodule PaintByNumber do
   end
 
   def prepend_pixel(picture, color_count, pixel_color_index) do
-    palette_size = palette_bit_size(color_count)
+    palette_bit_size = palette_bit_size(color_count)
 
-    <<pixel_color_index::size(palette_size), picture::bitstring>>
+    <<pixel_color_index::size(palette_bit_size), picture::bitstring>>
   end
 
   def get_first_pixel(picture, color_count) do
@@ -34,12 +34,12 @@ defmodule PaintByNumber do
     end
   end
 
-  def drop_first_pixel(picture, palette_size) do
-    palette_size = palette_bit_size(palette_size)
+  def drop_first_pixel(picture, color_count) do
+    palette_bit_size = palette_bit_size(color_count)
 
     case picture do
       <<>> -> <<>>
-      <<_::size(palette_size), rest::bitstring>> -> rest
+      <<_::size(palette_bit_size), rest::bitstring>> -> rest
     end
   end
 
