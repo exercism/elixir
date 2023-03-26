@@ -32,4 +32,4 @@ The goal of this exercise was to be very explicit and to a lot of hand holding. 
 ## Analyzer
 
 - empty bitstring as `<<>>`, not `""` (informative)
-- test picture as ` <<0::2, 1::2, 2::2, 3::2>>` (also using `size(2)`) not as `<<27>>` 
+- test picture as `<<0::2, 1::2, 2::2, 3::2>>` (allowing for also using `size(2)`) not as `<<27>>`

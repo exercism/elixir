@@ -15,25 +15,25 @@ You have decided to use [binary files][binary-file] to store your picture data.
 ~~~~exercism/note
 This exercise assumes that you're familiar with [binary numbers](https://en.wikipedia.org/wiki/Binary_number)
 and understand the principles behind changing binary numbers to decimal numbers
-and decimal numbers to binary numbers. 
+and decimal numbers to binary numbers.
 ~~~~
 
 Let's imagine you have a picture of a heart, like the one represented by ASCII art below.
 The picture has a white background. The heart has a black border and a red fill color.
 
 ```
-    * * *       * * *    
-  * . . . *   * . . . *  
+    * * *       * * *
+  * . . . *   * . . . *
 * . . . . . * . . . . . *
 * . . . . . . . . . . . *
 * . . . . . . . . . . . *
 * . . . . . . . . . . . *
-  * . . . . . . . . . *  
-    * . . . . . . . *    
-      * . . . . . *      
-        * . . . *        
-          * . *          
-            *            
+  * . . . . . . . . . *
+    * . . . . . . . *
+      * . . . . . *
+        * . . . *
+          * . *
+            *
 ```
 
 This picture uses 3 colors.
