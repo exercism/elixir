@@ -2,7 +2,9 @@
   "authors": [
     "angelikatyborska"
   ],
-  "contributors": [],
+  "contributors": [
+    "jiegillet"
+  ],
   "files": {
     "solution": [
       "lib/paint_by_number.ex"
