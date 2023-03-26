@@ -76,14 +76,18 @@ The same data represented in binary numbers, in 2-bit segments, would look like 
 00 00 00 00 00 00 01 00 00 00 00 00 00
 ```
 
-## 1. Calculate number of bits necessary to represent a given color palette
+## 1. Calculate palette bit size
 
-Note: there is no `log2` function in the Elixir standard library (you will later learn how to use [Erlang libraries][erlang-libraries] from Elixir where you can find this function). Solve this task with recursion and the [`Integer.pow/2`][integer-pow] function instead. If you're solving this exercise on your own computer using an older Elixir version (1.11 or lower) that doesn't have `Integer.pow/2`, use the `Math.pow/2` function we provided in the `lib/math.ex` file for this exercise.
+Calculate how many bits are necessary to represent the given number of colors.
+
+For example, representing 13 different colors require 4 bits. 4 bits can store up to 16 colors (2^4). 3 bits would not be enough because 3 bits can only store up to 8 colors (2^3).
 
 ```elixir
 PaintByNumber.palette_bit_size(13)
 # => 4
 ```
+
+Note: there is no `log2` function in the Elixir standard library (you will later learn how to use [Erlang libraries][erlang-libraries] from Elixir where you can find this function). Solve this task with recursion and the [`Integer.pow/2`][integer-pow] function instead. If you're solving this exercise on your own computer using an older Elixir version (1.11 or lower) that doesn't have `Integer.pow/2` function, use the `Math.pow/2` function we provided in the `lib/math.ex` file for this exercise.
 
 
 [paint-by-number]: https://en.wikipedia.org/wiki/Paint_by_number
