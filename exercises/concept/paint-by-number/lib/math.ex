@@ -1,5 +1,6 @@
 # You can ignore this file if you're solving this exercise in the web editor,
 # or on your own computer if you have Elixir version 1.12 or higher.
+# You can check which Elixir version you have by running `elixir -v` in your terminal.
 defmodule Math do
   import Bitwise
 
