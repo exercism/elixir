@@ -282,13 +282,29 @@
           "default-arguments"
         ],
         "status": "active"
+      },      {
+        "slug": "paint-by-number",
+        "name": "Paint By Number",
+        "uuid": "0af87ee0-97c3-49b8-8907-4734ec7e488b",
+        "concepts": [
+          "bitstrings"
+        ],
+        "prerequisites": [
+          "integers",
+          "case",
+          "nil",
+          "strings",
+          "charlists",
+          "recursion",
+          "pattern-matching"
+        ],
+        "status": "active"
       },
       {
         "slug": "dna-encoding",
         "name": "DNA Encoding",
         "uuid": "994c8760-8a58-4ef3-8a28-a0f9182f4d9f",
         "concepts": [
-          "bitstrings",
           "tail-call-recursion"
         ],
         "prerequisites": [

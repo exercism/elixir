@@ -87,7 +87,7 @@ PaintByNumber.palette_bit_size(13)
 # => 4
 ```
 
-Note: there is no `log2` function in the Elixir standard library (you will later learn how to use [Erlang libraries][erlang-libraries] from Elixir where you can find this function). Solve this task with recursion and the [`Integer.pow/2`][integer-pow] function instead. If you're solving this exercise on your own computer using an older Elixir version (1.11 or lower) that doesn't have `Integer.pow/2` function, use the `Math.pow/2` function we provided in the `lib/math.ex` file for this exercise.
+Note: there is no `log2` function in the Elixir standard library. You will later learn how to use [Erlang libraries][erlang-libraries] from Elixir where you can find this function. Now, solve this task with recursion and the [`Integer.pow/2`][integer-pow] function instead. If you're solving this exercise on your own computer using an older Elixir version (1.11 or lower) that doesn't have `Integer.pow/2` function, use the `Math.pow/2` function we provided in the `lib/math.ex` file for this exercise.
 
 ## 2. Create an empty picture
 
@@ -152,7 +152,6 @@ PaintByNumber.concat_pictures(picture1, picture2)
 # => <<211, 48, 34, 12::size(6)>>
 # (which is equal to <<52::6, 51::6, 0::6, 34::6, 12::6>>)
 ```
-
 
 [paint-by-number]: https://en.wikipedia.org/wiki/Paint_by_number
 [binary-file]: https://en.wikipedia.org/wiki/Binary_file

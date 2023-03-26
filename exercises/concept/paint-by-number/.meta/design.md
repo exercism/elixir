@@ -1,5 +1,7 @@
 # Design
 
+The goal of this exercise was to be very explicit and to a lot of hand holding. The previous exercise that taught bitstrings, dna-encoding, had a low completion rate.
+
 ## Learning objectives
 
 - Know what a bitstring is
@@ -21,10 +23,11 @@
 ## Prerequisites
 
 - `recursion`
-- `numbers`
+- `integers`
 - `pattern-matching`
 - `case`
 - `nil`
+- `strings`
 
 ## Analyzer
 
