@@ -1,9 +1,9 @@
-defmodule DNA.MixProject do
+defmodule PaintByNumber.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :dna,
+      app: :paint_by_number,
       version: "0.1.0",
       # elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
