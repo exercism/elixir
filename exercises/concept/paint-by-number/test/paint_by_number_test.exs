@@ -49,6 +49,12 @@ defmodule PaintByNumberTest do
       color_count = 50
       assert PaintByNumber.palette_bit_size(color_count) == 6
     end
+
+    @tag task_id: 1
+    test "needs 20 bits to encode 1 million colors" do
+      color_count = 1_000_000
+      assert PaintByNumber.palette_bit_size(color_count) == 20
+    end
   end
 
   describe "empty_painting" do
