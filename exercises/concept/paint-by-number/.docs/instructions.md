@@ -78,9 +78,9 @@ The same data represented in binary numbers, in 2-bit segments, would look like 
 
 ## 1. Calculate palette bit size
 
-Calculate how many bits are necessary to represent the given number of colors.
+Implement the `PaintByNumber.palette_bit_size/1` function. It should take the count of colors in the palette and return how many bits are necessary to represent that many different color indices as binary numbers. Assume color indices always start at 0.
 
-For example, representing 13 different colors require 4 bits. 4 bits can store up to 16 colors (2^4). 3 bits would not be enough because 3 bits can only store up to 8 colors (2^3).
+For example, representing 13 different colors require 4 bits. 4 bits can store up to 16 color indices (2^4). 3 bits would not be enough because 3 bits can only store up to 8 color indices (2^3).
 
 ```elixir
 PaintByNumber.palette_bit_size(13)
@@ -89,6 +89,24 @@ PaintByNumber.palette_bit_size(13)
 
 Note: there is no `log2` function in the Elixir standard library (you will later learn how to use [Erlang libraries][erlang-libraries] from Elixir where you can find this function). Solve this task with recursion and the [`Integer.pow/2`][integer-pow] function instead. If you're solving this exercise on your own computer using an older Elixir version (1.11 or lower) that doesn't have `Integer.pow/2` function, use the `Math.pow/2` function we provided in the `lib/math.ex` file for this exercise.
 
+## 2. Create an empty picture
+
+Implement the `PaintByNumber.empty_picture/0` function. It should return an empty bitstring.
+
+## 3. Create a test picture
+
+A predefined test picture will be used for manual testing of basic features of your app.
+The test picture consists of 4 pixels with 4 different colors.
+
+Implement the `PaintByNumber.test_picture/0` function. It should return a bitstring that consists of 4 segments.
+Each segment should have a bit size of 2. The segments should have values 0, 1, 2, and 3.
+
+## 4. Create a test picture
+
+```
+PaintByNumber.prepend_pixel(<<2::3>>, 5, 3)
+# => 4
+```
 
 [paint-by-number]: https://en.wikipedia.org/wiki/Paint_by_number
 [binary-file]: https://en.wikipedia.org/wiki/Binary_file

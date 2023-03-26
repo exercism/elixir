@@ -29,4 +29,4 @@
 ## Analyzer
 
 - empty bitstring as `<<>>`, not `""` (informative)
-- test painting as ` <<0::2, 1::2, 2::2, 3::2>>` (also using `size(2)`) not as `<<27>>` 
+- test picture as ` <<0::2, 1::2, 2::2, 3::2>>` (also using `size(2)`) not as `<<27>>` 
