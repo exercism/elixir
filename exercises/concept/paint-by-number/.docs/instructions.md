@@ -18,63 +18,20 @@ and understand the principles behind changing binary numbers to decimal numbers
 and decimal numbers to binary numbers.
 ~~~~
 
-Let's imagine you have a picture of a heart, like the one represented by ASCII art below.
-The picture has a white background. The heart has a black border and a red fill color.
-
-```
-    * * *       * * *
-  * . . . *   * . . . *
-* . . . . . * . . . . . *
-* . . . . . . . . . . . *
-* . . . . . . . . . . . *
-* . . . . . . . . . . . *
-  * . . . . . . . . . *
-    * . . . . . . . *
-      * . . . . . *
-        * . . . *
-          * . *
-            *
-```
+Let's imagine you have a picture of a smiley, like the one shown below.
+The picture has a white background. The smiley has a black border and a yellow fill color.
 
 This picture uses 3 colors.
 Let's say we assign indices to those colors:
 - `0` (binary: `0b00`) for white,
 - `1` (binary: `0b01`) for black,
-- `2` (binary: `0b10`) for red.
+- `2` (binary: `0b10`) for yellow.
 
 We can now use those color indices to represent the color of each pixel.
 
-```
-0 0 1 1 1 0 0 0 1 1 1 0 0
-0 1 2 2 2 1 0 1 2 2 2 1 0
-1 2 2 2 2 2 1 2 2 2 2 2 1
-1 2 2 2 2 2 2 2 2 2 2 2 1
-1 2 2 2 2 2 2 2 2 2 2 2 1
-1 2 2 2 2 2 2 2 2 2 2 2 1
-0 1 2 2 2 2 2 2 2 2 2 1 0
-0 0 1 2 2 2 2 2 2 2 1 0 0
-0 0 0 1 2 2 2 2 2 1 0 0 0
-0 0 0 0 1 2 2 2 1 0 0 0 0
-0 0 0 0 0 1 2 1 0 0 0 0 0
-0 0 0 0 0 0 1 0 0 0 0 0 0
-```
-
-The same data represented in binary numbers, in 2-bit segments, would look like this:
-
-```
-00 00 01 01 01 00 00 00 01 01 01 00 00
-00 01 10 10 10 01 00 01 10 10 10 01 00
-01 10 10 10 10 10 01 10 10 10 10 10 01
-01 10 10 10 10 10 10 10 10 10 10 10 01
-01 10 10 10 10 10 10 10 10 10 10 10 01
-01 10 10 10 10 10 10 10 10 10 10 10 01
-00 01 10 10 10 10 10 10 10 10 10 01 00
-00 00 01 10 10 10 10 10 10 10 01 00 00
-00 00 00 01 10 10 10 10 10 01 00 00 00
-00 00 00 00 01 10 10 10 01 00 00 00 00
-00 00 00 00 00 01 10 01 00 00 00 00 00
-00 00 00 00 00 00 01 00 00 00 00 00 00
-```
+| Smiley            | Smiley with color indices |
+|-------------------|---------------------------|
+| ![](./smiley.png) | ![](./smiley-numbers.png) |
 
 ## 1. Calculate palette bit size
 
