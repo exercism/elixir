@@ -14,43 +14,43 @@ defmodule BankAccountTest do
   @tag :pending
   test "single deposit", %{account: account} do
     assert BankAccount.balance(account) == 0
-    BankAccount.deposit(account, 100)
+    assert BankAccount.deposit(account, 100) == :ok
     assert BankAccount.balance(account) == 100
   end
 
   @tag :pending
   test "multiple deposits", %{account: account} do
     assert BankAccount.balance(account) == 0
-    BankAccount.deposit(account, 100)
-    BankAccount.deposit(account, 50)
+    assert BankAccount.deposit(account, 100) == :ok
+    assert BankAccount.deposit(account, 50) == :ok
     assert BankAccount.balance(account) == 150
   end
 
   @tag :pending
   test "withdraw once", %{account: account} do
     assert BankAccount.balance(account) == 0
-    BankAccount.deposit(account, 100)
-    BankAccount.withdraw(account, 75)
+    assert BankAccount.deposit(account, 100) == :ok
+    assert BankAccount.withdraw(account, 75) == :ok
     assert BankAccount.balance(account) == 25
   end
 
   @tag :pending
   test "withdraw twice", %{account: account} do
     assert BankAccount.balance(account) == 0
-    BankAccount.deposit(account, 100)
-    BankAccount.withdraw(account, 80)
-    BankAccount.withdraw(account, 20)
+    assert BankAccount.deposit(account, 100) == :ok
+    assert BankAccount.withdraw(account, 80) == :ok
+    assert BankAccount.withdraw(account, 20) == :ok
     assert BankAccount.balance(account) == 0
   end
 
   @tag :pending
   test "can do multiple operations sequentially", %{account: account} do
     assert BankAccount.balance(account) == 0
-    BankAccount.deposit(account, 100)
-    BankAccount.deposit(account, 110)
-    BankAccount.withdraw(account, 200)
-    BankAccount.deposit(account, 60)
-    BankAccount.withdraw(account, 50)
+    assert BankAccount.deposit(account, 100) == :ok
+    assert BankAccount.deposit(account, 110) == :ok
+    assert BankAccount.withdraw(account, 200) == :ok
+    assert BankAccount.deposit(account, 60) == :ok
+    assert BankAccount.withdraw(account, 50) == :ok
     assert BankAccount.balance(account) == 20
   end
 
@@ -78,14 +78,14 @@ defmodule BankAccountTest do
   @tag :pending
   test "cannot withdraw more than deposited", %{account: account} do
     assert BankAccount.balance(account) == 0
-    BankAccount.deposit(account, 25)
+    assert BankAccount.deposit(account, 25) == :ok
     assert BankAccount.withdraw(account, 50) == {:error, :not_enough_balance}
   end
 
   @tag :pending
   test "cannot withdraw negative", %{account: account} do
     assert BankAccount.balance(account) == 0
-    BankAccount.deposit(account, 100)
+    assert BankAccount.deposit(account, 100) == :ok
     assert BankAccount.withdraw(account, -50) == {:error, :amount_must_be_positive}
   end
 
@@ -103,7 +103,7 @@ defmodule BankAccountTest do
     |> Enum.map(fn _ ->
       Task.async(fn ->
         :timer.sleep(Enum.random(0..20))
-        BankAccount.deposit(account, 1)
+        :ok = BankAccount.deposit(account, 1)
       end)
     end)
     |> Enum.map(fn task -> Task.await(task, 100) end)
@@ -119,7 +119,7 @@ defmodule BankAccountTest do
     this = self()
 
     spawn(fn ->
-      BankAccount.deposit(account, 20)
+      :ok = BankAccount.deposit(account, 20)
       send(this, :continue)
     end)
 
@@ -141,7 +141,7 @@ defmodule BankAccountTest do
 
     assert account != account_two
 
-    BankAccount.deposit(account, 20)
+    assert BankAccount.deposit(account, 20) == :ok
     assert BankAccount.balance(account) != BankAccount.balance(account_two)
   end
 end

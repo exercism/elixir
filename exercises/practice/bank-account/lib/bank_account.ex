@@ -30,14 +30,17 @@ defmodule BankAccount do
   end
 
   @doc """
-  Add the given positive amount to the account's balance.
+  Add the given amount to the account's balance.
   """
+  @spec deposit(account, integer) :: :ok | {:error, :account_closed | :amount_must_be_positive}
   def deposit(account, amount) do
   end
 
   @doc """
-  Subtract the given positive amount from the account's balance.
+  Subtract the given amount from the account's balance.
   """
+  @spec withdraw(account, integer) ::
+          :ok | {:error, :account_closed | :amount_must_be_positive | :not_enough_balance}
   def withdraw(account, amount) do
   end
 end
