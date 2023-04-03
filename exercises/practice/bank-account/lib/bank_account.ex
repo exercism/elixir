@@ -9,17 +9,17 @@ defmodule BankAccount do
   @opaque account :: pid
 
   @doc """
-  Open the bank. Makes the account available.
+  Open the bank account, making it available for further operations.
   """
-  @spec open_bank() :: account
-  def open_bank() do
+  @spec open() :: account
+  def open() do
   end
 
   @doc """
-  Close the bank. Makes the account unavailable.
+  Close the bank account, making it unavailable for further operations.
   """
-  @spec close_bank(account) :: none
-  def close_bank(account) do
+  @spec close(account) :: any
+  def close(account) do
   end
 
   @doc """
@@ -30,9 +30,17 @@ defmodule BankAccount do
   end
 
   @doc """
-  Update the account's balance by adding the given amount which may be negative.
+  Add the given amount to the account's balance.
   """
-  @spec update(account, integer) :: any
-  def update(account, amount) do
+  @spec deposit(account, integer) :: :ok | {:error, :account_closed | :amount_must_be_positive}
+  def deposit(account, amount) do
+  end
+
+  @doc """
+  Subtract the given amount from the account's balance.
+  """
+  @spec withdraw(account, integer) ::
+          :ok | {:error, :account_closed | :amount_must_be_positive | :not_enough_balance}
+  def withdraw(account, amount) do
   end
 end

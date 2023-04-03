@@ -2024,6 +2024,8 @@
         "uuid": "5d5e0f6c-f4b7-418e-88f8-4b1d0f99bfb0",
         "prerequisites": [
           "if",
+          "cond",
+          "case",
           "processes",
           "pids",
           "agent",

@@ -18,8 +18,26 @@ defmodule BankAccount do
   end
 
   @impl true
-  def handle_call({:update, amount}, _from, balance) do
-    {:reply, :ok, balance + amount}
+  def handle_call({:deposit, amount}, _from, balance) do
+    if amount <= 0 do
+      {:reply, {:error, :amount_must_be_positive}, balance}
+    else
+      {:reply, :ok, balance + amount}
+    end
+  end
+
+  @impl true
+  def handle_call({:withdraw, amount}, _from, balance) do
+    cond do
+      amount <= 0 ->
+        {:reply, {:error, :amount_must_be_positive}, balance}
+
+      balance < amount ->
+        {:reply, {:error, :not_enough_balance}, balance}
+
+      true ->
+        {:reply, :ok, balance - amount}
+    end
   end
 
   @impl true
@@ -36,19 +54,19 @@ defmodule BankAccount do
   @opaque account :: pid
 
   @doc """
-  Open the bank. Makes the account available.
+  Open the bank account, making it available for further operations.
   """
-  @spec open_bank() :: account
-  def open_bank() do
+  @spec open() :: account
+  def open() do
     {:ok, pid} = GenServer.start_link(__MODULE__, [], [])
     pid
   end
 
   @doc """
-  Close the bank. Makes the account unavailable.
+  Close the bank account, making it unavailable for further operations.
   """
-  @spec close_bank(account) :: any
-  def close_bank(account) do
+  @spec close(account) :: any
+  def close(account) do
     GenServer.stop(account)
   end
 
@@ -65,11 +83,25 @@ defmodule BankAccount do
   end
 
   @doc """
-  Update the account's balance by adding the given amount which may be negative.
+  Add the given amount to the account's balance.
   """
-  def update(account, amount) do
+  @spec deposit(account, integer) :: :ok | {:error, :account_closed | :amount_must_be_positive}
+  def deposit(account, amount) do
     if Process.alive?(account) do
-      GenServer.call(account, {:update, amount})
+      GenServer.call(account, {:deposit, amount})
+    else
+      {:error, :account_closed}
+    end
+  end
+
+  @doc """
+  Subtract the given amount from the account's balance.
+  """
+  @spec withdraw(account, integer) ::
+          :ok | {:error, :account_closed | :amount_must_be_positive | :not_enough_balance}
+  def withdraw(account, amount) do
+    if Process.alive?(account) do
+      GenServer.call(account, {:withdraw, amount})
     else
       {:error, :account_closed}
     end
