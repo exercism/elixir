@@ -46,7 +46,7 @@
 ## 7. Concatenate two pictures
 
 - The [bitstring special form][bitstring-form] can be used to concatenate two bitstrings.
-- Use the special `::bitstring` type to specify that the two bitstring fragments are of unknown size.
+- Use the special `::bitstring` type to specify that each of the bitstring fragments is of unknown size.
 
 [decimal-to-binary-youtube]: https://www.youtube.com/watch?v=gGiEu7QTi68
 [integer-literal]: https://hexdocs.pm/elixir/master/syntax-reference.html#integers-in-other-bases-and-unicode-code-points
