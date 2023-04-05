@@ -31,14 +31,24 @@ If the value of the segment overflows the capacity of the segment's type, it wil
 # => true
 ```
 
+## Prepending and appending
+
+You can both prepend and append to an existing bitstring using the special form. The `::bistring` type must be used on the existing bitstring if it's of unknown size.
+
+```elixir
+value = <<0b110::3, 0b001::3>>
+new_value = <<0b011::3, value::bitstring, 0b000::3>>
+# => <<120, 8::size(4)>>
+```
+
 ## Concatenating
 
-We can combine bitstrings stored in variables using the special form. The `::bistring` type must be used when concatenating two bitstrings of unknown sizes.
+We can concatenate bitstrings stored in variables using the special form. The `::bistring` type must be used when concatenating two bitstrings of unknown sizes.
 
 ```elixir
 first = <<0b110::3>>
 second = <<0b001::3>>
-combined = <<first::bitstring, second::bitstring>>
+concatenated = <<first::bitstring, second::bitstring>>
 # => <<49::size(6)>>
 ```
 
