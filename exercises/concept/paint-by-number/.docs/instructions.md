@@ -29,9 +29,9 @@ Let's say we assign indices to those colors:
 
 We can now use those color indices to represent the color of each pixel.
 
-| Smiley            | Smiley with color indices |
-|-------------------|---------------------------|
-| ![](./smiley.png) | ![](./smiley-numbers.png) |
+| Smiley                                                                                                | Smiley with color indices                                                                                     |
+|-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| ![](https://exercism-v3-icons.s3.eu-west-2.amazonaws.com/images/exercises/paint-by-number/smiley.png) | ![](https://exercism-v3-icons.s3.eu-west-2.amazonaws.com/images/exercises/paint-by-number/smiley-numbers.png) |
 
 ## 1. Calculate palette bit size
 
