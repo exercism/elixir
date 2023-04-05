@@ -46,7 +46,7 @@ combined = <<first::bitstring, second::bitstring>>
 
 ### Pattern matching
 
-Pattern matching can also be done to obtain the value from within the special form. The `::bitstring` type must be used to pattern match on a bitstring of an unknown size. It can only be used for the last fragment of the bitstring.
+Pattern matching can also be done to obtain values from the special form. You have to know the number of bits for each fragment you want to capture, with one exception: the `::bitstring` type can be used to pattern match on a bitstring of an unknown size, but this can only be used for the last fragment.
 
 ```elixir
 <<value::4, rest::bitstring>> = <<0b01101001::8>>
