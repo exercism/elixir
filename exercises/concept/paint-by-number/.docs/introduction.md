@@ -1,5 +1,7 @@
 # Introduction
 
+## Bitstrings
+
 Working with binary data is an important concept in any language, and Elixir provides an elegant syntax to write, match, and construct binary data.
 
 In Elixir, binary data is referred to as the bitstring type. The binary data _type_ (not to be confused with binary data in general) is a specific form of a bitstring, which we will discuss in a later exercise.
@@ -13,7 +15,7 @@ Bitstring literals are defined using the bitstring special form `<<>>`. When def
 
 Specifying the type as `::1` is a shorthand for writing `::size(1)`. You need to use the longer syntax if the bit size comes from a variable.
 
-## Binary
+### Binary
 
 When writing binary integer literals, we can write them directly in base-2 notation by prefixing the literal with `0b`. Note that they will be anyway displayed as decimal numbers when printed in tests results or when using iex.
 
@@ -22,7 +24,7 @@ When writing binary integer literals, we can write them directly in base-2 notat
 # => true
 ```
 
-## Truncating
+### Truncating
 
 If the value of the segment overflows the capacity of the segment's type, it will be truncated from the left.
 
@@ -31,7 +33,7 @@ If the value of the segment overflows the capacity of the segment's type, it wil
 # => true
 ```
 
-## Prepending and appending
+### Prepending and appending
 
 You can both prepend and append to an existing bitstring using the special form. The `::bistring` type must be used on the existing bitstring if it's of unknown size.
 
@@ -41,7 +43,7 @@ new_value = <<0b011::3, value::bitstring, 0b000::3>>
 # => <<120, 8::size(4)>>
 ```
 
-## Concatenating
+### Concatenating
 
 We can concatenate bitstrings stored in variables using the special form. The `::bistring` type must be used when concatenating two bitstrings of unknown sizes.
 
@@ -52,7 +54,7 @@ concatenated = <<first::bitstring, second::bitstring>>
 # => <<49::size(6)>>
 ```
 
-## Pattern matching
+### Pattern matching
 
 Pattern matching can also be done to obtain values from the special form. You have to know the number of bits for each fragment you want to capture, with one exception: the `::bitstring` type can be used to pattern match on a bitstring of an unknown size, but this can only be used for the last fragment.
 
@@ -62,7 +64,7 @@ value == 0b0110
 # => true
 ```
 
-## Inspecting bitstrings
+### Inspecting bitstrings
 
 ~~~~exericism/note
 Bitstrings might be printed (by the test runner or in iex) in a different format than the format that was used to create them. This often causes confusion when learning bistrings.

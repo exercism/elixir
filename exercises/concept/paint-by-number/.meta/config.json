@@ -1,0 +1,27 @@
+{
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [
+    "neenjaw",
+    "meatball133",
+    "vaeng",
+    "glennj"
+  ],
+  "files": {
+    "solution": [
+      "lib/paint_by_number.ex"
+    ],
+    "test": [
+      "test/paint_by_number_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ],
+    "editor": [
+      "lib/math.ex"
+    ]
+  },
+  "language_versions": ">=1.10",
+  "blurb": "Learn about bitstrings by creating binary files with pictures for a paint-by-number app."
+}
