@@ -6,7 +6,7 @@ defmodule Math do
 
   # copied from https://github.com/elixir-lang/elixir/blob/v1.12.0/lib/elixir/lib/integer.ex#L103-L114
   def pow(base, exponent) when is_integer(base) and is_integer(exponent) do
-    if exponent < 0, do: :erlang.error(:badarith, [base, exponent])
+    if exponent < 0, do: raise("exponent cannot be negative")
     guarded_pow(base, exponent)
   end
 
