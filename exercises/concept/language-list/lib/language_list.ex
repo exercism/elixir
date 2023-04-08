@@ -7,7 +7,7 @@ defmodule LanguageList do
     # Please implement the add/2 function
   end
 
-  def remove(list) do
+  def remove(language) do
     # Please implement the remove/1 function
   end
 
