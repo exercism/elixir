@@ -13,13 +13,15 @@ You want your app to be able to import and export pictures in a custom data form
 You have decided to use [binary files][binary-file] to store your picture data.
 
 ~~~~exercism/note
-This exercise assumes that you're familiar with [binary numbers](https://en.wikipedia.org/wiki/Binary_number)
+This exercise assumes that you're familiar with 
+[binary numbers](https://en.wikipedia.org/wiki/Binary_number)
 and understand the principles behind changing binary numbers to decimal numbers
 and decimal numbers to binary numbers.
 ~~~~
 
 Let's imagine you have a picture of a smiley, like the one shown below.
-The picture has a white background. The smiley has a black border and a yellow fill color.
+The picture has a white background. 
+The smiley has a black border and a yellow fill color.
 
 This picture uses 3 colors.
 Let's say we assign indices to those colors:
@@ -35,32 +37,53 @@ We can now use those color indices to represent the color of each pixel.
 
 ## 1. Calculate palette bit size
 
-Implement the `PaintByNumber.palette_bit_size/1` function. It should take the count of colors in the palette and return how many bits are necessary to represent that many color indices as binary numbers. Color indices always start at 0 and are continuous ascending integers.
+Implement the `PaintByNumber.palette_bit_size/1` function. 
+It should take the count of colors in the palette and return how many 
+bits are necessary to represent that many color indices as binary numbers.
+Color indices always start at 0 and are continuous ascending integers.
 
-For example, representing 13 different colors require 4 bits. 4 bits can store up to 16 color indices (2^4). 3 bits would not be enough because 3 bits can only store up to 8 color indices (2^3).
+For example, representing 13 different colors require 4 bits. 
+4 bits can store up to 16 color indices (2^4).
+3 bits would not be enough because 3 bits can only store up to 8 color indices (2^3).
 
 ```elixir
 PaintByNumber.palette_bit_size(13)
 # => 4
 ```
 
-Note: there is no `log2` function in the Elixir standard library. You will later learn how to use [Erlang libraries][erlang-libraries] from Elixir where you can find this function. Now, solve this task with recursion and the [`Integer.pow/2`][integer-pow] function instead. If you're solving this exercise on your own computer using an older Elixir version (1.11 or lower) that doesn't have `Integer.pow/2` function, use the `Math.pow/2` function we provided in the `lib/math.ex` file for this exercise.
+Note: there is no `log2` function in the Elixir standard library.
+You will later learn how to use [Erlang libraries][erlang-libraries]
+from Elixir where you can find this function.
+Now, solve this task with recursion and the [`Integer.pow/2`][integer-pow]
+function instead. If you're solving this exercise on your own computer 
+using an older Elixir version (1.11 or lower) that doesn't have `Integer.pow/2`
+function, use the `Math.pow/2` function we provided in the `lib/math.ex`
+file for this exercise.
 
 ## 2. Create an empty picture
 
-Implement the `PaintByNumber.empty_picture/0` function. It should return an empty bitstring.
+Implement the `PaintByNumber.empty_picture/0` function.
+It should return an empty bitstring.
 
 ## 3. Create a test picture
 
-A predefined test picture will be used for manual testing of basic features of your app.
+A predefined test picture will be used for manual testing of basic features 
+of your app.
 The test picture consists of 4 pixels with 4 different colors.
 
-Implement the `PaintByNumber.test_picture/0` function. It should return a bitstring that consists of 4 segments.
-Each segment should have a bit size of 2. The segments should have values 0, 1, 2, and 3.
+Implement the `PaintByNumber.test_picture/0` function. 
+It should return a bitstring that consists of 4 segments.
+
+Each segment should have a bit size of 2.
+The segments should have values 0, 1, 2, and 3.
 
 ## 4. Prepend a pixel to a picture
 
-Implement the `PaintByNumber.prepend_pixel/3` function. It should take three arguments: a bitstring with the picture to which we're prepending, the count of colors in the palette, and the index of the color for the new pixel. It should return a bitstring with a picture with the new pixel added to the beginning.
+Implement the `PaintByNumber.prepend_pixel/3` function. 
+It should take three arguments: a bitstring with the picture to which we're
+prepending, the count of colors in the palette, and the index of the
+color for the new pixel. It should return a bitstring with a picture with 
+the new pixel added to the beginning.
 
 ```elixir
 picture = <<2::4, 0::4>>
@@ -74,7 +97,11 @@ PaintByNumber.prepend_pixel(picture, color_count, pixel_color_index)
 
 ## 5. Get the first pixel from a picture
 
-Implement the `PaintByNumber.get_first_pixel/2` function. It should take two arguments: a bitstring with the picture from which we're reading, and the count of colors in the palette. It should return the color index of the first pixel in the given picture. When given an empty picture, it should return `nil`.
+Implement the `PaintByNumber.get_first_pixel/2` function.
+It should take two arguments: a bitstring with the picture from which we're
+reading, and the count of colors in the palette. It should return the color
+index of the first pixel in the given picture.
+When given an empty picture, it should return `nil`.
 
 ```elixir
 picture = <<19::5, 2::5, 18::5>>
@@ -86,7 +113,11 @@ PaintByNumber.get_first_pixel(picture, color_count)
 
 ## 6. Drop the first pixel from a picture
 
-Implement the `PaintByNumber.drop_first_pixel/2` function. It should take two arguments: a bitstring with the picture from which we're removing a pixel, and the count of colors in the palette. It should return the picture without the first pixel. When given an empty picture, it should return an empty picture.
+Implement the `PaintByNumber.drop_first_pixel/2` function. 
+It should take two arguments: a bitstring with the picture from which we're
+removing a pixel, and the count of colors in the palette. 
+It should return the picture without the first pixel.
+When given an empty picture, it should return an empty picture.
 
 ```elixir
 picture = <<2::3, 5::3, 5::3, 0::3>>
@@ -99,7 +130,10 @@ PaintByNumber.drop_first_pixel(picture, color_count)
 
 ## 7. Concatenate two pictures
 
-Implement the `PaintByNumber.concat_pictures/2` function. It should take two arguments, two bitstrings. It should return a bitstrings that is the result of prepending the first argument to the second argument.
+Implement the `PaintByNumber.concat_pictures/2` function. 
+It should take two arguments: two bitstrings. 
+It should return a bitstrings that is the result of prepending the first
+argument to the second argument.
 
 ```elixir
 picture1 = <<52::6, 51::6>>
