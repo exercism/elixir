@@ -67,9 +67,9 @@ value == 0b0110
 ### Inspecting bitstrings
 
 ~~~~exercism/note
-Bitstrings might be printed (by the test runner or in iex) in a different
-format than the format that was used to create them. This often causes
-confusion when learning bistrings.
+Bitstrings might be printed (by the test runner or in iex) in a
+different format than the format that was used to create them. This often
+causes confusion when learning bitstrings.
 ~~~~
 
 By default, bitstrings are displayed in fragments of 8 bits (a byte), even if you created them with fragments of a different size.
