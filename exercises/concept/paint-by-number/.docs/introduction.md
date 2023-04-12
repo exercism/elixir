@@ -35,7 +35,7 @@ If the value of the segment overflows the capacity of the segment's type, it wil
 
 ### Prepending and appending
 
-You can both prepend and append to an existing bitstring using the special form. The `::bistring` type must be used on the existing bitstring if it's of unknown size.
+You can both prepend and append to an existing bitstring using the special form. The `::bitstring` type must be used on the existing bitstring if it's of unknown size.
 
 ```elixir
 value = <<0b110::3, 0b001::3>>
@@ -45,7 +45,7 @@ new_value = <<0b011::3, value::bitstring, 0b000::3>>
 
 ### Concatenating
 
-We can concatenate bitstrings stored in variables using the special form. The `::bistring` type must be used when concatenating two bitstrings of unknown sizes.
+We can concatenate bitstrings stored in variables using the special form. The `::bitstring` type must be used when concatenating two bitstrings of unknown sizes.
 
 ```elixir
 first = <<0b110::3>>
@@ -67,7 +67,7 @@ value == 0b0110
 ### Inspecting bitstrings
 
 ~~~~exericism/note
-Bitstrings might be printed (by the test runner or in iex) in a different format than the format that was used to create them. This often causes confusion when learning bistrings.
+Bitstrings might be printed (by the test runner or in iex) in a different format than the format that was used to create them. This often causes confusion when learning bitstrings.
 ~~~~
 
 By default, bitstrings are displayed in fragments of 8 bits (a byte), even if you created them with fragments of a different size.
