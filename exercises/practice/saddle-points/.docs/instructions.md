@@ -18,7 +18,7 @@ Here is a grid that has exactly one candidate tree.
 2 | 5  3  2  4  <--- potential tree house at row 2, column 1, for tree with height 5
 3 | 6  6  7  1
 
-- Row 2 has values 5, 3, and 1. The largest value is 5.
+- Row 2 has values 5, 3, 2, and 4. The largest value is 5.
 - Column 1 has values 9, 5, and 6. The smallest value is 5.
 
 So the point at `[2, 1]` (row: 2, column: 1) is a great spot for a tree house.
