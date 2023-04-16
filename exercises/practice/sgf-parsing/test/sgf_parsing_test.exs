@@ -125,7 +125,7 @@ defmodule SgfParsingTest do
   test "within property values, whitespace characters such as tab are converted to spaces" do
     encoded = "(;A[hello\t\tworld])"
     output = SgfParsing.parse(encoded)
-    expected = {:ok, %Sgf{properties: %{"A" => ["hello\t\tworld"]}}}
+    expected = {:ok, %Sgf{properties: %{"A" => ["hello  world"]}}}
 
     assert output == expected
   end
@@ -152,7 +152,7 @@ defmodule SgfParsingTest do
   test "escaped backslash in property value becomes just a backslash" do
     encoded = "(;A[\\\\])"
     output = SgfParsing.parse(encoded)
-    expected = {:ok, %Sgf{properties: %{"A" => ["\\\\"]}}}
+    expected = {:ok, %Sgf{properties: %{"A" => ["\\"]}}}
 
     assert output == expected
   end
