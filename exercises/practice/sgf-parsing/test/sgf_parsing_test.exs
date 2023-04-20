@@ -122,10 +122,124 @@ defmodule SgfParsingTest do
   end
 
   @tag :pending
-  test "escaped property" do
-    encoded = "(;A[\\]b\\nc\\nd\\t\\te \\n\\]])"
+  test "within property values, whitespace characters such as tab are converted to spaces" do
+    encoded = "(;A[hello\t\tworld])"
     output = SgfParsing.parse(encoded)
-    expected = {:ok, %Sgf{properties: %{"A" => ["]b\nc\nd\t\te \n]"]}}}
+    expected = {:ok, %Sgf{properties: %{"A" => ["hello  world"]}}}
+
+    assert output == expected
+  end
+
+  @tag :pending
+  test "within property values, newlines remain as newlines" do
+    encoded = "(;A[hello\n\nworld])"
+    output = SgfParsing.parse(encoded)
+    expected = {:ok, %Sgf{properties: %{"A" => ["hello\n\nworld"]}}}
+
+    assert output == expected
+  end
+
+  @tag :pending
+  test "escaped closing bracket within property value becomes just a closing bracket" do
+    encoded = "(;A[\\]])"
+    output = SgfParsing.parse(encoded)
+    expected = {:ok, %Sgf{properties: %{"A" => ["]"]}}}
+
+    assert output == expected
+  end
+
+  @tag :pending
+  test "escaped backslash in property value becomes just a backslash" do
+    encoded = "(;A[\\\\])"
+    output = SgfParsing.parse(encoded)
+    expected = {:ok, %Sgf{properties: %{"A" => ["\\"]}}}
+
+    assert output == expected
+  end
+
+  @tag :pending
+  test "opening bracket within property value doesn't need to be escaped" do
+    encoded = "(;A[x[y\\]z][foo]B[bar];C[baz])"
+    output = SgfParsing.parse(encoded)
+
+    expected =
+      {:ok,
+       %Sgf{
+         properties: %{"A" => ["x[y]z", "foo"], "B" => ["bar"]},
+         children: [
+           %Sgf{properties: %{"C" => ["baz"]}}
+         ]
+       }}
+
+    assert output == expected
+  end
+
+  @tag :pending
+  test "semicolon in property value doesn't need to be escaped" do
+    encoded = "(;A[a;b][foo]B[bar];C[baz])"
+    output = SgfParsing.parse(encoded)
+
+    expected =
+      {:ok,
+       %Sgf{
+         properties: %{"A" => ["a;b", "foo"], "B" => ["bar"]},
+         children: [
+           %Sgf{properties: %{"C" => ["baz"]}}
+         ]
+       }}
+
+    assert output == expected
+  end
+
+  @tag :pending
+  test "parentheses in property value don't need to be escaped" do
+    encoded = "(;A[x(y)z][foo]B[bar];C[baz])"
+    output = SgfParsing.parse(encoded)
+
+    expected =
+      {:ok,
+       %Sgf{
+         properties: %{"A" => ["x(y)z", "foo"], "B" => ["bar"]},
+         children: [
+           %Sgf{properties: %{"C" => ["baz"]}}
+         ]
+       }}
+
+    assert output == expected
+  end
+
+  @tag :pending
+  test "escaped tab in property value is converted to space" do
+    encoded = "(;A[hello\\\tworld])"
+    output = SgfParsing.parse(encoded)
+    expected = {:ok, %Sgf{properties: %{"A" => ["hello world"]}}}
+
+    assert output == expected
+  end
+
+  @tag :pending
+  test "escaped newline in property value is converted to nothing at all" do
+    encoded = "(;A[hello\\\nworld])"
+    output = SgfParsing.parse(encoded)
+    expected = {:ok, %Sgf{properties: %{"A" => ["helloworld"]}}}
+
+    assert output == expected
+  end
+
+  @tag :pending
+  test "escaped t and n in property value are just letters, not whitespace" do
+    encoded = "(;A[\\t = t and \\n = n])"
+    output = SgfParsing.parse(encoded)
+    expected = {:ok, %Sgf{properties: %{"A" => ["t = t and n = n"]}}}
+
+    assert output == expected
+  end
+
+  @tag :pending
+  test "mixing various kinds of whitespace and escaped characters in property value" do
+    encoded = "(;A[\\]b\nc\\\nd\t\te\\\\ \\\n\\]])"
+    output = SgfParsing.parse(encoded)
+    expected = {:ok, %Sgf{properties: %{"A" => ["]b\ncd  e\\ ]"]}}}
 
     assert output == expected
   end

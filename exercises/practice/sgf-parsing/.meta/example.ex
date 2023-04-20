@@ -71,15 +71,21 @@ defmodule SgfParsing do
 
   defp escaped(p) do
     one_of([
-      lift2(&escape/2, char(?\\), satisfy(&(&1 in 'nt]['))),
+      lift2(&escape/2, char(?\\), satisfy(fn _ -> true end)),
+      map(char(?\t), fn _ -> " " end),
       satisfy(p)
     ])
   end
 
-  defp escape("\\", "n"), do: "\n"
-  defp escape("\\", "t"), do: "\t"
+  defp escape("\\", "\\"), do: "\\"
+  defp escape("\\", "\n"), do: ""
+  defp escape("\\", " "), do: " "
+  defp escape("\\", "\t"), do: " "
+  defp escape("\\", "n"), do: "n"
+  defp escape("\\", "t"), do: "t"
   defp escape("\\", "]"), do: "]"
   defp escape("\\", "["), do: "["
+  defp escape("\\", other), do: "\\" <> other
 
   # PARSER COMBINATORS LIBRARY
   # Inspired from Haskell libraries like Parsec
