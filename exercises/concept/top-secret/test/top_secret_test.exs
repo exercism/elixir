@@ -86,6 +86,27 @@ defmodule TopSecretTest do
       assert actual_ast == ast
       assert actual_acc == acc
     end
+    
+    @tag task_id: 2
+    test "works for AST made only of basic types" do
+      acc = ["abc"]
+
+      {actual_ast, actual_acc} = TopSecret.decode_secret_message_part(12, acc)
+      assert actual_ast == 12
+      assert actual_acc == acc
+      
+      {actual_ast, actual_acc} = TopSecret.decode_secret_message_part(true, acc)
+      assert actual_ast == true
+      assert actual_acc == acc
+      
+      {actual_ast, actual_acc} = TopSecret.decode_secret_message_part(:ok, acc)
+      assert actual_ast == :ok
+      assert actual_acc == acc
+      
+      {actual_ast, actual_acc} = TopSecret.decode_secret_message_part("meh", acc)
+      assert actual_ast == "meh"
+      assert actual_acc == acc
+    end
 
     @tag task_id: 2
     test "appends a public function name to the accumulator" do
