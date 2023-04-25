@@ -70,7 +70,7 @@ To update a player's score by adding to the previous score, define `HighScore.up
 
 - The first argument is the map of scores.
 - The second argument is the name of the player as a string, whose score you wish to update.
-- The third argument is the score that you wish to **add** to the stored high score.
+- The third argument is the score that you wish to use as the **new** stored high score.
 
 The function should also work if the player doesn't have a previous score - assume the previous score is 0.
 
@@ -80,7 +80,7 @@ score_map = HighScore.new()
 score_map = HighScore.add_player(score_map, "José Valim", 486_373)
 # => %{"José Valim"=> 486_373}
 score_map = HighScore.update_score(score_map, "José Valim", 5)
-# => %{"José Valim"=> 486_378}
+# => %{"José Valim"=> 5}
 ```
 
 ## 6. Get a list of players
