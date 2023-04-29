@@ -77,7 +77,7 @@ defmodule TopSecretTest do
 
   describe "decode_secret_message_part/2" do
     @tag task_id: 2
-    test "returns the AST and accumulator unchanged" do
+    test "returns the AST and accumulator unchanged (function call)" do
       string = "2 + 3"
       ast = TopSecret.to_ast(string)
       acc = ["le", "mo"]
@@ -88,7 +88,7 @@ defmodule TopSecretTest do
     end
 
     @tag task_id: 2
-    test "works for AST made only of basic types" do
+    test "returns the AST and accumulator unchanged (literal values)" do
       acc = ["abc"]
 
       {actual_ast, actual_acc} = TopSecret.decode_secret_message_part(12, acc)
