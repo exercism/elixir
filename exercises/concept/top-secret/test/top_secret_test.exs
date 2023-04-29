@@ -77,13 +77,34 @@ defmodule TopSecretTest do
 
   describe "decode_secret_message_part/2" do
     @tag task_id: 2
-    test "returns the AST and accumulator unchanged" do
+    test "returns the AST and accumulator unchanged (function call)" do
       string = "2 + 3"
       ast = TopSecret.to_ast(string)
       acc = ["le", "mo"]
 
       {actual_ast, actual_acc} = TopSecret.decode_secret_message_part(ast, acc)
       assert actual_ast == ast
+      assert actual_acc == acc
+    end
+
+    @tag task_id: 2
+    test "returns the AST and accumulator unchanged (literal values)" do
+      acc = ["abc"]
+
+      {actual_ast, actual_acc} = TopSecret.decode_secret_message_part(12, acc)
+      assert actual_ast == 12
+      assert actual_acc == acc
+
+      {actual_ast, actual_acc} = TopSecret.decode_secret_message_part(true, acc)
+      assert actual_ast == true
+      assert actual_acc == acc
+
+      {actual_ast, actual_acc} = TopSecret.decode_secret_message_part(:ok, acc)
+      assert actual_ast == :ok
+      assert actual_acc == acc
+
+      {actual_ast, actual_acc} = TopSecret.decode_secret_message_part("meh", acc)
+      assert actual_ast == "meh"
       assert actual_acc == acc
     end
 
