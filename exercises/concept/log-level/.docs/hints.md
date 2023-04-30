@@ -4,7 +4,7 @@
 
 - The [atom type is described here][atom].
 
-## 1. Return the logging code label
+## 1. Determine the log label
 
 - You can use the [`cond/1` special form][cond] to elegantly handle the various log codes.
 - You can use [equality operators][equality] to compare integers for strict type equality.
