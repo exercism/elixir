@@ -6,6 +6,7 @@ defmodule FileSnifferTest do
   @jpg_file File.read!(Path.join("assets", "jpeg.jpg"))
   @png_file File.read!(Path.join("assets", "png-transparent.png"))
   @exe_file File.read!(Path.join("assets", "elf.o"))
+  @dat_file File.read!(Path.join("assets", "data.dat"))
 
   describe "get type from extension:" do
     @tag task_id: 1
@@ -31,6 +32,11 @@ defmodule FileSnifferTest do
     @tag task_id: 1
     test "exe" do
       assert FileSniffer.type_from_extension("exe") == "application/octet-stream"
+    end
+
+    @tag task_id: 1
+    test "dat" do
+      assert FileSniffer.type_from_extension("dat") == nil
     end
   end
 
@@ -103,6 +109,11 @@ defmodule FileSnifferTest do
     test "exe" do
       assert FileSniffer.type_from_binary(String.slice(@exe_file, 0..2)) == nil
     end
+
+    @tag task_id: 2
+    test "dat" do
+      assert FileSniffer.type_from_binary(@dat_file) == nil
+    end
   end
 
   describe "verify valid files" do
@@ -160,6 +171,12 @@ defmodule FileSnifferTest do
     @tag task_id: 3
     test "exe" do
       assert FileSniffer.verify(@png_file, "exe") ==
+               {:error, "Warning, file format and file extension do not match."}
+    end
+
+    @tag task_id: 3
+    test "dat" do
+      assert FileSniffer.verify(@dat_file, "dat") ==
                {:error, "Warning, file format and file extension do not match."}
     end
   end
