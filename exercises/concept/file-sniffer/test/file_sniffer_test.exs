@@ -104,7 +104,9 @@ defmodule FileSnifferTest do
     test "exe" do
       assert FileSniffer.type_from_binary(String.slice(@exe_file, 0..2)) == nil
     end
+  end
 
+  describe "return nil when given unknown signature" do
     @tag task_id: 2
     test "dat" do
       assert FileSniffer.type_from_binary(@dat_file) == nil
@@ -168,7 +170,9 @@ defmodule FileSnifferTest do
       assert FileSniffer.verify(@png_file, "exe") ==
                {:error, "Warning, file format and file extension do not match."}
     end
+  end
 
+  describe "reject unknown file types" do
     @tag task_id: 3
     test "dat" do
       assert FileSniffer.verify(@dat_file, "dat") ==
