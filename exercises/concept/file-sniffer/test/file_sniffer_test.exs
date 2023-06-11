@@ -8,7 +8,7 @@ defmodule FileSnifferTest do
   @exe_file File.read!(Path.join("assets", "elf.o"))
   @dat_file File.read!(Path.join("assets", "data.dat"))
 
-  describe "get type from extension:" do
+  describe "get type from extension" do
     @tag task_id: 1
     test "bmp" do
       assert FileSniffer.type_from_extension("bmp") == "image/bmp"
@@ -35,7 +35,7 @@ defmodule FileSnifferTest do
     end
   end
 
-  describe "return nil when type doesn't match:" do
+  describe "return nil when type doesn't match" do
     @tag task_id: 1
     test "txt" do
       assert FileSniffer.type_from_extension("txt") == nil
@@ -52,7 +52,7 @@ defmodule FileSnifferTest do
     end
   end
 
-  describe "get type from binary:" do
+  describe "get type from binary" do
     @tag task_id: 2
     test "bmp" do
       assert FileSniffer.type_from_binary(@bmp_file) == "image/bmp"
