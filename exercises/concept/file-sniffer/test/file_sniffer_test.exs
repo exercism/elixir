@@ -33,11 +33,6 @@ defmodule FileSnifferTest do
     test "exe" do
       assert FileSniffer.type_from_extension("exe") == "application/octet-stream"
     end
-
-    @tag task_id: 1
-    test "dat" do
-      assert FileSniffer.type_from_extension("dat") == nil
-    end
   end
 
   describe "return nil when type doesn't match:" do
@@ -52,8 +47,8 @@ defmodule FileSnifferTest do
     end
 
     @tag task_id: 1
-    test "svg" do
-      assert FileSniffer.type_from_extension("svg") == nil
+    test "dat" do
+      assert FileSniffer.type_from_extension("dat") == nil
     end
   end
 
