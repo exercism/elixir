@@ -375,7 +375,8 @@
           "strings",
           "pattern-matching",
           "if",
-          "bitstrings"
+          "bitstrings",
+          "nil"
         ],
         "status": "active"
       },
