@@ -2,5 +2,9 @@
   {
     "url": "https://elixir-lang.org/getting-started/binaries-strings-and-char-lists.html#binaries",
     "description": "Getting Started guide - Binaries"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/Kernel.SpecialForms.html#%3C%3C%3E%3E/1",
+    "description": "Documentation - bitstring special form"
   }
 ]
