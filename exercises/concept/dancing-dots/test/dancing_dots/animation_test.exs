@@ -15,6 +15,7 @@ defmodule DancingDots.AnimationTest do
 
     @tag task_id: 2
     test "defines a __using__ macro" do
+      Code.ensure_loaded(DancingDots.Animation)
       assert macro_exported?(DancingDots.Animation, :__using__, 1)
     end
 
