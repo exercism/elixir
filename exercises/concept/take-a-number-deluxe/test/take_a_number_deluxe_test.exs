@@ -41,6 +41,7 @@ defmodule TakeANumberDeluxeTest do
 
     @tag task_id: 1
     test "the init/1 GenServer callback is defined" do
+      Code.ensure_loaded(TakeANumberDeluxe)
       assert function_exported?(TakeANumberDeluxe, :init, 1)
     end
   end
@@ -62,6 +63,7 @@ defmodule TakeANumberDeluxeTest do
 
     @tag task_id: 2
     test "the handle_call/3 GenServer callback is defined" do
+      Code.ensure_loaded(TakeANumberDeluxe)
       assert function_exported?(TakeANumberDeluxe, :handle_call, 3)
     end
   end
@@ -199,6 +201,7 @@ defmodule TakeANumberDeluxeTest do
 
     @tag task_id: 5
     test "the handle_cast/2 GenServer callback is defined" do
+      Code.ensure_loaded(TakeANumberDeluxe)
       assert function_exported?(TakeANumberDeluxe, :handle_cast, 2)
     end
   end
@@ -386,6 +389,7 @@ defmodule TakeANumberDeluxeTest do
 
     @tag task_id: 6
     test "the handle_info/2 GenServer callback is defined" do
+      Code.ensure_loaded(TakeANumberDeluxe)
       assert function_exported?(TakeANumberDeluxe, :handle_info, 2)
     end
   end
