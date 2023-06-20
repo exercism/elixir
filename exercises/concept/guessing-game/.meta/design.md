@@ -35,7 +35,7 @@ This exercise is a fork from [F#'s Number Guessing Game](https://github.com/exer
 
 ## Resources to refer to
 
-- <https://hexdocs.pm/elixir/master/Kernel.html#guards>
+- <https://hexdocs.pm/elixir/Kernel.html#guards>
 - <https://elixir-lang.org/getting-started/modules-and-functions.html#default-arguments>
 - [multiple clauses in anon functions](https://til.hashrocket.com/posts/36c6d2684e-defining-multiple-clauses-in-an-anonymous-function)
 - <https://elixirschool.com/en/lessons/basics/functions/#guards>

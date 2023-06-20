@@ -37,7 +37,7 @@
 - Do not forget to specify the types of bitstring segments using the `::` operator.
 - You will need to reverse the accumulator at the end. Write a private tail-recursive `reverse` function to do that and use it in the base-case of the `decode` function.
 
-[integer-literal]: https://hexdocs.pm/elixir/master/syntax-reference.html#integers-in-other-bases-and-unicode-code-points
+[integer-literal]: https://hexdocs.pm/elixir/syntax-reference.html#integers-in-other-bases-and-unicode-code-points
 [codepoint]: https://elixir-lang.org/getting-started/binaries-strings-and-char-lists.html#unicode-and-code-points
 [charlist]: https://elixir-lang.org/getting-started/binaries-strings-and-char-lists.html#charlists
 [bitstring]: https://elixir-lang.org/getting-started/binaries-strings-and-char-lists.html#bitstrings

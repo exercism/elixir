@@ -54,4 +54,4 @@ Integers and floats can be considered equal ([`==`][kernel-equal]) if they have 
 [kernel-equal]: https://hexdocs.pm/elixir/Kernel.html#==/2
 [kernel-strictly-equal]: https://hexdocs.pm/elixir/Kernel.html#===/2
 [integer]: https://hexdocs.pm/elixir/Integer.html
-[integers-in-other-bases]: https://hexdocs.pm/elixir/master/syntax-reference.html#integers-in-other-bases-and-unicode-code-points
+[integers-in-other-bases]: https://hexdocs.pm/elixir/syntax-reference.html#integers-in-other-bases-and-unicode-code-points
