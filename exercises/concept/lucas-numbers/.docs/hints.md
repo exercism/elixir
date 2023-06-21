@@ -21,7 +21,7 @@
 - Use a [guard][guards] to catch the cases when an integer isn't passed as an argument to `generate/1`.
 
 [enum]: https://hexdocs.pm/elixir/Enum.html#content
-[guards]: https://hexdocs.pm/elixir/master/patterns-and-guards.html#guards
+[guards]: https://hexdocs.pm/elixir/patterns-and-guards.html#guards
 [list]: https://elixir-lang.org/getting-started/basic-types.html#linked-lists
 [multiple-fn-clauses]: https://elixir-lang.org/getting-started/modules-and-functions.html#named-functions
 [pattern-matching]: https://elixir-lang.org/getting-started/pattern-matching.html#pattern-matching-1

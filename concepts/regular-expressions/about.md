@@ -103,5 +103,5 @@ if String.ends_with?("YELLING!", "!"), do: "Whoa, chill out!"
 [regex-character-classes]: https://hexdocs.pm/elixir/Regex.html#module-character-classes
 [regex-run]: https://hexdocs.pm/elixir/Regex.html#run/3
 [regex-named-captures]: https://hexdocs.pm/elixir/Regex.html#named_captures/3
-[regex-match-operator]: https://hexdocs.pm/elixir/master/Kernel.html#=~/2
-[regex-compile]: https://hexdocs.pm/elixir/master/Regex.html#compile!/2
+[regex-match-operator]: https://hexdocs.pm/elixir/Kernel.html#=~/2
+[regex-compile]: https://hexdocs.pm/elixir/Regex.html#compile!/2

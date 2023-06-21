@@ -4,7 +4,7 @@
     "description": "The Integer module"
   },
   {
-    "url": "https://hexdocs.pm/elixir/master/syntax-reference.html#integers-in-other-bases-and-unicode-code-points",
+    "url": "https://hexdocs.pm/elixir/syntax-reference.html#integers-in-other-bases-and-unicode-code-points",
     "description": "Integers in other bases"
   }
 ]

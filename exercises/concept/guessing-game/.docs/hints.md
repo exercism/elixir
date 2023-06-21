@@ -28,6 +28,6 @@
 - Use a function header before all the other function clauses to define the default argument.
 
 [default-arg]: https://elixir-lang.org/getting-started/modules-and-functions.html#default-arguments
-[guard]: https://hexdocs.pm/elixir/master/Kernel.html#guards
+[guard]: https://hexdocs.pm/elixir/Kernel.html#guards
 [guide]: https://elixir-lang.org/getting-started/modules-and-functions.html#named-functions
 [multiple-fn-clauses]: https://elixir-lang.org/getting-started/modules-and-functions.html#named-functions

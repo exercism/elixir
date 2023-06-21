@@ -7,4 +7,4 @@ Guards are used to prevent Elixir from invoking functions based on evaluation of
 
 A list of common guards can be found in the [Elixir documentation][kernel-guards]. It includes type checks, basic arithmetic, comparisons, and strictly boolean operators.
 
-[kernel-guards]: https://hexdocs.pm/elixir/master/Kernel.html#guards
+[kernel-guards]: https://hexdocs.pm/elixir/Kernel.html#guards

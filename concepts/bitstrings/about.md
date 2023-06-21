@@ -39,7 +39,7 @@
 - Elixir provides syntactic sugar for working with [integer literals][integer-literal] in different forms:
   - `0b1000001 = ?A = 65`
 
-[integer-literal]: https://hexdocs.pm/elixir/master/syntax-reference.html#integers-in-other-bases-and-unicode-code-points
+[integer-literal]: https://hexdocs.pm/elixir/syntax-reference.html#integers-in-other-bases-and-unicode-code-points
 [bitstring]: https://elixir-lang.org/getting-started/binaries-strings-and-char-lists.html#bitstrings
 [bitstring-form]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#%3C%3C%3E%3E/1
 [bitstring-matching]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#%3C%3C%3E%3E/1-binary-bitstring-matching

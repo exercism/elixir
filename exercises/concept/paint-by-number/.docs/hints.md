@@ -49,9 +49,9 @@
 - Use the special `::bitstring` type to specify that each of the bitstring fragments is of unknown size.
 
 [decimal-to-binary-youtube]: https://www.youtube.com/watch?v=gGiEu7QTi68
-[integer-literal]: https://hexdocs.pm/elixir/master/syntax-reference.html#integers-in-other-bases-and-unicode-code-points
+[integer-literal]: https://hexdocs.pm/elixir/syntax-reference.html#integers-in-other-bases-and-unicode-code-points
 [bitstring]: https://elixir-lang.org/getting-started/binaries-strings-and-char-lists.html#bitstrings
 [bitstring-form]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#%3C%3C%3E%3E/1
 [bitstring-matching]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#%3C%3C%3E%3E/1-binary-bitstring-matching
 [type-operator]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#::/2
-[integer-pow]: https://hexdocs.pm/elixir/master/Integer.html#pow/2
+[integer-pow]: https://hexdocs.pm/elixir/Integer.html#pow/2

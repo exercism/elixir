@@ -32,22 +32,22 @@ end
     end
     ```
 
-[guards]: https://hexdocs.pm/elixir/master/patterns-and-guards.html#guards
-[kernel-guards]: https://hexdocs.pm/elixir/master/Kernel.html#guards
+[guards]: https://hexdocs.pm/elixir/patterns-and-guards.html#guards
+[kernel-guards]: https://hexdocs.pm/elixir/Kernel.html#guards
 [pure-function]: https://gist.github.com/tomekowal/16cb4192b73fe9222de9fd09e653c03e
-[guard-is-integer]: https://hexdocs.pm/elixir/master/Kernel.html#is_integer/1
-[guard-is-list]: https://hexdocs.pm/elixir/master/Kernel.html#is_list/1
-[guard-is-nil]: https://hexdocs.pm/elixir/master/Kernel.html#is_nil/1
-[guard-plus]: https://hexdocs.pm/elixir/master/Kernel.html#+/2
-[guard-minus]: https://hexdocs.pm/elixir/master/Kernel.html#-/2
-[guard-equals]: https://hexdocs.pm/elixir/master/Kernel.html#==/2
-[guard-greater]: https://hexdocs.pm/elixir/master/Kernel.html#%3E/2
-[guard-less]: https://hexdocs.pm/elixir/master/Kernel.html#%3C/2
-[guard-and]: https://hexdocs.pm/elixir/master/Kernel.html#and/2
-[guard-or]: https://hexdocs.pm/elixir/master/Kernel.html#or/2
-[guard-not]: https://hexdocs.pm/elixir/master/Kernel.html#not/1
-[guard-in]: https://hexdocs.pm/elixir/master/Kernel.html#in/2
+[guard-is-integer]: https://hexdocs.pm/elixir/Kernel.html#is_integer/1
+[guard-is-list]: https://hexdocs.pm/elixir/Kernel.html#is_list/1
+[guard-is-nil]: https://hexdocs.pm/elixir/Kernel.html#is_nil/1
+[guard-plus]: https://hexdocs.pm/elixir/Kernel.html#+/2
+[guard-minus]: https://hexdocs.pm/elixir/Kernel.html#-/2
+[guard-equals]: https://hexdocs.pm/elixir/Kernel.html#==/2
+[guard-greater]: https://hexdocs.pm/elixir/Kernel.html#%3E/2
+[guard-less]: https://hexdocs.pm/elixir/Kernel.html#%3C/2
+[guard-and]: https://hexdocs.pm/elixir/Kernel.html#and/2
+[guard-or]: https://hexdocs.pm/elixir/Kernel.html#or/2
+[guard-not]: https://hexdocs.pm/elixir/Kernel.html#not/1
+[guard-in]: https://hexdocs.pm/elixir/Kernel.html#in/2
 [defguard]: https://hexdocs.pm/elixir/Kernel.html#defguard/1
 [naming]: https://hexdocs.pm/elixir/naming-conventions.html#is_-prefix-is_foo
-[where-guards-can-be-used]: https://hexdocs.pm/elixir/master/patterns-and-guards.html#where-patterns-and-guards-can-be-used
+[where-guards-can-be-used]: https://hexdocs.pm/elixir/patterns-and-guards.html#where-patterns-and-guards-can-be-used
 [exercism-pattern-matching]: https://exercism.org/tracks/elixir/concepts/pattern-matching
