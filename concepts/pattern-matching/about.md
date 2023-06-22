@@ -47,7 +47,7 @@ end
   # => ** (FunctionClauseError) no function clause matching in Example.named_function/1
   ```
 
-[assertive-style]: https//blog.plataformatec.com.br/2014/09/writing-assertive-code-with-elixir/
+[assertive-style]: https://blog.plataformatec.com.br/2014/09/writing-assertive-code-with-elixir/
 [pattern-match-doc]: https://elixir-lang.org/getting-started/pattern-matching.html
 [match-op]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#=/2
 [getting-started-pin-operator]: https://elixir-lang.org/getting-started/pattern-matching.html#the-pin-operator
