@@ -29,43 +29,47 @@ defmodule DNATest do
 
   describe "encoding" do
     @tag task_id: 3
-    test "' '", do: assert(DNA.encode(' ') == <<0b0000::4>>)
+    test "' '", do: assert(DNA.encode(~c" ") == <<0b0000::4>>)
     @tag task_id: 3
-    test "'A'", do: assert(DNA.encode('A') == <<0b0001::4>>)
+    test "'A'", do: assert(DNA.encode(~c"A") == <<0b0001::4>>)
     @tag task_id: 3
-    test "'C'", do: assert(DNA.encode('C') == <<0b0010::4>>)
+    test "'C'", do: assert(DNA.encode(~c"C") == <<0b0010::4>>)
     @tag task_id: 3
-    test "'G'", do: assert(DNA.encode('G') == <<0b0100::4>>)
+    test "'G'", do: assert(DNA.encode(~c"G") == <<0b0100::4>>)
     @tag task_id: 3
-    test "'T'", do: assert(DNA.encode('T') == <<0b1000::4>>)
+    test "'T'", do: assert(DNA.encode(~c"T") == <<0b1000::4>>)
 
     @tag task_id: 3
     test "' ACGT'",
-      do: assert(DNA.encode(' ACGT') == <<0b0000::4, 0b0001::4, 0b0010::4, 0b0100::4, 0b1000::4>>)
+      do:
+        assert(DNA.encode(~c" ACGT") == <<0b0000::4, 0b0001::4, 0b0010::4, 0b0100::4, 0b1000::4>>)
 
     @tag task_id: 3
     test "'TGCA '",
-      do: assert(DNA.encode('TGCA ') == <<0b1000::4, 0b0100::4, 0b0010::4, 0b0001::4, 0b0000::4>>)
+      do:
+        assert(DNA.encode(~c"TGCA ") == <<0b1000::4, 0b0100::4, 0b0010::4, 0b0001::4, 0b0000::4>>)
   end
 
   describe "decoding" do
     @tag task_id: 4
-    test "' '", do: assert(DNA.decode(<<0b0000::4>>) == ' ')
+    test "' '", do: assert(DNA.decode(<<0b0000::4>>) == ~c" ")
     @tag task_id: 4
-    test "'A'", do: assert(DNA.decode(<<0b0001::4>>) == 'A')
+    test "'A'", do: assert(DNA.decode(<<0b0001::4>>) == ~c"A")
     @tag task_id: 4
-    test "'C'", do: assert(DNA.decode(<<0b0010::4>>) == 'C')
+    test "'C'", do: assert(DNA.decode(<<0b0010::4>>) == ~c"C")
     @tag task_id: 4
-    test "'G'", do: assert(DNA.decode(<<0b0100::4>>) == 'G')
+    test "'G'", do: assert(DNA.decode(<<0b0100::4>>) == ~c"G")
     @tag task_id: 4
-    test "'T'", do: assert(DNA.decode(<<0b1000::4>>) == 'T')
+    test "'T'", do: assert(DNA.decode(<<0b1000::4>>) == ~c"T")
 
     @tag task_id: 4
     test "' ACGT'",
-      do: assert(DNA.decode(<<0b0000::4, 0b0001::4, 0b0010::4, 0b0100::4, 0b1000::4>>) == ' ACGT')
+      do:
+        assert(DNA.decode(<<0b0000::4, 0b0001::4, 0b0010::4, 0b0100::4, 0b1000::4>>) == ~c" ACGT")
 
     @tag task_id: 4
     test "'TGCA '",
-      do: assert(DNA.decode(<<0b1000::4, 0b0100::4, 0b0010::4, 0b0001::4, 0b0000::4>>) == 'TGCA ')
+      do:
+        assert(DNA.decode(<<0b1000::4, 0b0100::4, 0b0010::4, 0b0001::4, 0b0000::4>>) == ~c"TGCA ")
   end
 end

@@ -238,19 +238,20 @@ Mix.Generator.create_file("exercises/practice/#{exercise}/test/test_helper.exs",
 ## Step 3: write files that depend on problem specifications
 
 url =
-  'https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/#{exercise}'
+  ~c"https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/#{exercise}"
 
 :inets.start()
 :ssl.start()
 
 # .docs/instructions.md
 {:ok, {_status, _header, description}} =
-  :httpc.request(:get, {url ++ '/description.md', []}, [], [])
+  :httpc.request(:get, {url ++ ~c"/description.md", []}, [], [])
 
 Mix.Generator.create_file("exercises/practice/#{exercise}/.docs/instructions.md", description)
 
 # .meta/config.json
-{:ok, {_status, _header, metadata}} = :httpc.request(:get, {url ++ '/metadata.toml', []}, [], [])
+{:ok, {_status, _header, metadata}} =
+  :httpc.request(:get, {url ++ ~c"/metadata.toml", []}, [], [])
 
 metadata =
   metadata
@@ -276,7 +277,7 @@ IO.puts("Don't forget to add your name and the names of contributors")
 
 # tests and lib files
 {:ok, {_status, _header, data}} =
-  :httpc.request(:get, {url ++ '/canonical-data.json', []}, [], [])
+  :httpc.request(:get, {url ++ ~c"/canonical-data.json", []}, [], [])
 
 data = Jason.decode!(data)
 

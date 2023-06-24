@@ -32,7 +32,7 @@ defmodule TwoFerTest do
   @tag :pending
   test "when the argument is a charlist" do
     assert_raise FunctionClauseError, fn ->
-      refute TwoFer.two_fer('Jon Snow')
+      refute TwoFer.two_fer(~c"Jon Snow")
     end
   end
 end
