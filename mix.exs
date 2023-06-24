@@ -19,10 +19,10 @@ defmodule ExercismTestRunner.Mixfile do
   end
 
   def application do
-    [applications: [:logger]]
+    [extra_applications: [:logger, :dialyzer]]
   end
 
   defp deps do
-    [{:dialyxir, "~> 1.0.0-rc.7"}]
+    [{:dialyxir, "~> 1.3.0", runtime: false}]
   end
 end
