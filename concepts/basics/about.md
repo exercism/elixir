@@ -44,6 +44,12 @@
   def add(x, y, z), do: x + y + z
   ```
 
+## Naming conventions
+
+Module names should use `PascalCase`. A module name must start with an uppercase letter `A-Z` and can contain letters `a-zA-Z`, numbers `0-9`, and underscores `_`.
+
+Variable and function names should use `snake_case`. A variable or function name must start with a lowercase letter `a-z` or an underscore `_`, can contain letters `a-zA-Z`, numbers `0-9`, and underscores `_`, and might end with a question mark `?` or an exclamation mark `!`.
+
 ## Integers
 
 Integer values are whole numbers written with one or more digits. You can perform [basic mathematical operations][operators] on them.
