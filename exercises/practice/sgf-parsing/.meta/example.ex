@@ -53,7 +53,7 @@ defmodule SgfParsing do
 
   defp parse_property() do
     parse_name =
-      some(satisfy(&(&1 not in '[();')))
+      some(satisfy(&(&1 not in ~c"[();")))
       |> map(&Enum.join(&1, ""))
       |> validate(&(&1 == String.upcase(&1)), "property must be in uppercase")
 

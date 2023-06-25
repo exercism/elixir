@@ -20,6 +20,8 @@ defmodule TakeANumberDeluxeTest do
 
     @tag task_id: 1
     test "min and max numbers get validated" do
+      Process.flag(:trap_exit, true)
+
       assert TakeANumberDeluxe.start_link(min_number: 999, max_number: 99) ==
                {:error, :invalid_configuration}
 
@@ -28,6 +30,8 @@ defmodule TakeANumberDeluxeTest do
 
       assert TakeANumberDeluxe.start_link(min_number: 1, max_number: "not a number") ==
                {:error, :invalid_configuration}
+
+      Process.flag(:trap_exit, false)
     end
 
     @tag task_id: 1
