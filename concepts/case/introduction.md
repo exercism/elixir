@@ -6,12 +6,12 @@
 age = 15
 
 case age do
-  0 -> 'infant'
-  age when age < 4 -> 'baby'
-  age when age < 13 -> 'child'
-  age when age < 18 -> 'teenager'
-  _ -> 'adult'
+  0 -> ~c"infant"
+  age when age < 4 -> ~c"baby"
+  age when age < 13 -> ~c"child"
+  age when age < 18 -> ~c"teenager"
+  _ -> ~c"adult"
 end
 
-# => 'teenager'
+# => ~c"teenager"
 ```
