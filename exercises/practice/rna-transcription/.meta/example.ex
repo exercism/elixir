@@ -4,8 +4,8 @@ defmodule RnaTranscription do
 
   ## Examples
 
-    iex> RnaTranscription.to_rna('ACTG')
-    'UGAC'
+    iex> RnaTranscription.to_rna(~c"ACTG")
+    ~c"UGAC"
   """
   def to_rna(dna) do
     Enum.map(dna, &transcribe/1)

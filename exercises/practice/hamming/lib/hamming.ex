@@ -4,7 +4,7 @@ defmodule Hamming do
 
   ## Examples
 
-  iex> Hamming.hamming_distance('AAGTCATA', 'TAGCGATC')
+  iex> Hamming.hamming_distance(~c"AAGTCATA", ~c"TAGCGATC")
   {:ok, 4}
   """
   @spec hamming_distance([char], [char]) :: {:ok, non_neg_integer} | {:error, String.t()}

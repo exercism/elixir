@@ -11,8 +11,8 @@ Telling people to give up their favorite old email client is a lost battle, so y
 Implement the `sanitize/1` function. It should accept a username as a charlist and return the username with all characters but lowercase letters removed.
 
 ```elixir
-Username.sanitize('schmidt1985')
-# => 'schmidt'
+Username.sanitize(~c"schmidt1985")
+# => ~c"schmidt"
 ```
 
 ## 2. Allow underscores
@@ -20,8 +20,8 @@ Username.sanitize('schmidt1985')
 Extend the `sanitize/1` function. It should not remove underscores from the username.
 
 ```elixir
-Username.sanitize('mark_fischer$$$')
-# => 'mark_fischer'
+Username.sanitize(~c"mark_fischer$$$")
+# => ~c"mark_fischer"
 ```
 
 ## 3. Substitute German characters
@@ -38,6 +38,6 @@ There are 4 non-Latin characters in the German alphabet, and all of them have co
 Extend the `sanitize/1` function. It should substitute German characters according to the table. You can safely assume all usernames are already downcase.
 
 ```elixir
-Username.sanitize('cäcilie_weiß')
-# => 'caecilie_weiss'
+Username.sanitize(~c"cäcilie_weiß")
+# => ~c"caecilie_weiss"
 ```

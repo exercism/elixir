@@ -4,7 +4,7 @@ defmodule Hamming do
 
   ## Examples
 
-  iex> Hamming.hamming_distance('AAGTCATA', 'TAGCGATC')
+  iex> Hamming.hamming_distance(~c"AAGTCATA", ~c"TAGCGATC")
   {:ok, 4}
   """
   def hamming_distance(strand1, strand2) when length(strand1) === length(strand2) do
