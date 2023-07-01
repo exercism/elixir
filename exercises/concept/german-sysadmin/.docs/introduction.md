@@ -7,7 +7,6 @@ Charlists are created using the `~c` Sigil.
 ```elixir
 ~c"hello"
 ```
-
 > Note that in older versions of Elixir, charlists are represented as `'hello'` with single quotes.
 
 Although they look very similar to strings, the two data types are quite different from one another. A charlist is a list of integers. The integers represent the Unicode values of a given character — also known as code points.
@@ -52,12 +51,12 @@ The longer the first list is, the slower the concatenation, so avoid repeatedly 
 age = 15
 
 case age do
-  0 -> ~c"infant"
-  age when age < 4 -> ~c"baby"
-  age when age < 13 -> ~c"child"
-  age when age < 18 -> ~c"teenager"
-  _ -> ~c"adult"
+  0 -> 'infant'
+  age when age < 4 -> 'baby'
+  age when age < 13 -> 'child'
+  age when age < 18 -> 'teenager'
+  _ -> 'adult'
 end
 
-# => ~c"teenager"
+# => 'teenager'
 ```
