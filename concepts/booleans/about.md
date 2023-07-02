@@ -24,11 +24,11 @@ not true and false # => false
 not (true and false) # => true
 ```
 
-When writing a function that returns a boolean value, it is [idiomatic to end the function name][naming] with a `?`.
+When writing a function that returns a boolean value, it is [idiomatic to end the function name][naming] with a `?`. The same convention can be used for variables that store boolean values.
 
 ```elixir
-def either_true?(a, b) do
-  a or b
+def either_true?(a?, b?) do
+  a? or b?
 end
 ```
 

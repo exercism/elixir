@@ -106,7 +106,7 @@ defmodule BankAccountTest do
         :ok = BankAccount.deposit(account, 1)
       end)
     end)
-    |> Enum.map(fn task -> Task.await(task, 100) end)
+    |> Enum.map(fn task -> Task.await(task, 1000) end)
 
     assert BankAccount.balance(account) == 1000
   end

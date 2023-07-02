@@ -41,8 +41,8 @@ defmodule Rectangles do
   end
 
   defp connected?(coord, r1, r2, column: c),
-    do: Enum.all?(r1..r2, fn r -> coord[{r, c}] in '+|' end)
+    do: Enum.all?(r1..r2, fn r -> coord[{r, c}] in ~c"+|" end)
 
   defp connected?(coord, c1, c2, row: r),
-    do: Enum.all?(c1..c2, fn c -> coord[{r, c}] in '+-' end)
+    do: Enum.all?(c1..c2, fn c -> coord[{r, c}] in ~c"+-" end)
 end

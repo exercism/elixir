@@ -25,7 +25,7 @@ function test_or_tests () {
     then
       tests+="s"
     fi
-    printf "%s" "$tests"
+    printf '%s' "${tests}"
 }
 
 # Initialize counts / array
@@ -59,7 +59,7 @@ do
     exercise_name=$(basename $exercise)
     test_count=$((test_count+1))
 
-    printf "\\033[33mTesting\\033[0m: $exercise_name "
+    printf "\\033[33mTesting\\033[0m: "; printf '%s' "${exercise_name} "
 
     exercise_config=".meta/config.json"
     files_to_remove=($(jq -r '.files.solution[]' "${exercise_config}"))
@@ -117,12 +117,12 @@ do
       if [ "${compile_exit_code}" -ne 0 ]
       then
         printf "\\033[36mcompiler output\\033[0m "; printf -- '-%.0s' {1..61}; echo ""
-        printf "${compiler_results}\n"
+        printf '%s\n' "${compiler_results}"
       fi
       if [ "${test_exit_code}" -ne 0 -a "${test_exit_code}" -ne 5 ]
       then
         printf "\\033[36mtest output\\033[0m "; printf -- '-%.0s' {1..65}; echo ""
-        printf "${test_results}\n"
+        printf '%s\n' "${test_results}"
       fi
       printf -- '-%.0s' {1..80}; echo ""
 
@@ -139,7 +139,7 @@ rm -rf tmp-exercises
 
 # report
 printf -- '-%.0s' {1..80}; echo ""
-printf "${pass_count}/${test_count} tests passed.\n"
+printf '%s\n' "${pass_count}/${test_count} tests passed.";
 
 if [ "${fail_count}" -eq 0 ]
 then
@@ -147,11 +147,11 @@ then
   exit 0;
 else
   # There was at least one problem, list the exercises with problems.
-  printf "${fail_count} $(test_or_tests "${fail_count}") failing:\n"
+  printf '%s\n' "${fail_count} $(test_or_tests "${fail_count}") failing:"
 
   for exercise in ${failing_exercises[@]}
   do
-    printf " - ${exercise}\n"
+    printf '%s\n' " - ${exercise}"
   done
 
   exit 1;

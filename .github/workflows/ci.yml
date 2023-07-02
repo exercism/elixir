@@ -16,15 +16,15 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        elixir: [1.14]
-        otp: [25.0]
+        elixir: [1.15]
+        otp: [26.0]
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Use Elixir
-        uses: erlef/setup-beam@v1.15
+        uses: erlef/setup-beam@v1.16
         with:
           otp-version: ${{matrix.otp}}
           elixir-version: ${{matrix.elixir}}
@@ -75,8 +75,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - elixir: '1.9.0'
-            otp: '21.0'
           - elixir: '1.10.0'
             otp: '21.0'
           - elixir: '1.10.0'
@@ -89,11 +87,13 @@ jobs:
             otp: '24.1'
           - elixir: '1.14.0'
             otp: '25.0'
+          - elixir: '1.15.0'
+            otp: '26.0'
 
     steps:
       - uses: actions/checkout@v3
       - name: Use Elixir ${{matrix.elixir}} / OTP ${{matrix.otp}}
-        uses: erlef/setup-beam@v1.15
+        uses: erlef/setup-beam@v1.16
         with:
           otp-version: ${{matrix.otp}}
           elixir-version: ${{matrix.elixir}}
