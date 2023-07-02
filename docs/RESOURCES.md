@@ -15,7 +15,7 @@
 
 ## Elixir Podcasts
 
-- [Thinking Elixir](https://thinkingelixir.com/the-podcast/)
+- [Thinking Elixir](https://podcast.thinkingelixir.com/)
 - [Elixir Wizards](https://smartlogic.io/podcast/elixir-wizards/)
 - [Elixir Mix](https://devchat.tv/elixir-mix/)
 - [Elixir Outlaws](https://elixiroutlaws.com/)
