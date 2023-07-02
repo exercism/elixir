@@ -5,7 +5,10 @@ Charlists are created using the `~c` Sigil.
 ```elixir
 ~c"hello"
 ```
-> Note that in older versions of Elixir, charlists are represented as `'hello'` with single quotes.
+
+~~~~exercism/note
+Note that in older versions of Elixir, charlists are represented as `'hello'` with single quotes.
+~~~~
 
 A charlist is a list of integers. The integers represent the Unicode values of a given character — also known as code points.
 
