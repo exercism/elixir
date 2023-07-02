@@ -17,7 +17,7 @@ In Elixir, to choose a random element from an enumerable data structure (e.g. li
 - Choosing a random letter as a charlist
   ```elixir
   [Enum.random(?A..?Z)]
-  # => 'J'
+  # => ~c"J"
   ```
 
 To choose more than one element from an enumerable data structure, use [`Enum.take_random/2`][enum-take-random]. To sort an enumerable data structure in a random order, use [`Enum.shuffle/1`][enum-shuffle].

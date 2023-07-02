@@ -1,47 +1,51 @@
 # About
 
-Charlists are created using single quotes.
+Charlists are created using the `~c` Sigil.
 
 ```elixir
-'hello'
+~c"hello"
 ```
+
+~~~~exercism/note
+Note that in older versions of Elixir, charlists are represented as `'hello'` with single quotes.
+~~~~
 
 A charlist is a list of integers. The integers represent the Unicode values of a given character — also known as code points.
 
 ```elixir
 [65, 66, 67]
-# => 'ABC'
+# => ~c"ABC"
 ```
 
 ## Charlists _are_ lists
 
 ```elixir
-'' === []
+~c"" === []
 # => true
 
-is_list('hello')
+is_list(~c"hello")
 # => true
 ```
 
 Because charlist are lists, you can work with them just like with any other list - using recursion and pattern matching, or using the [`List`][list] module.
 
 ```elixir
-[first_letter | _] = 'cat'
+[first_letter | _] = ~c"cat"
 first_letter
 # => 99
 
-List.first('hello')
+List.first(~c"hello")
 # => 104
-List.pop_at('hello', 0)
-# => {104, 'ello'}
+List.pop_at(~c"hello", 0)
+# => {104, ~c"ello"}
 
 ```
 
 You can concatenate two lists together using [`++`][kernel-concat-list].
 
 ```elixir
-'hi' ++ '!'
-# => 'hi!'
+~c"hi" ++ ~c"!"
+# => ~c"hi!"
 ```
 
 The longer the first list is, the slower the concatenation, so avoid repeatedly appending to lists of arbitrary length.
@@ -51,17 +55,17 @@ The longer the first list is, the slower the concatenation, so avoid repeatedly 
 If a list of integers contains only integers that are code points of printable character, it will be displayed as a charlist. Even if it was defined using the `[]` syntax.
 
 ```elixir
-'ABC'
-# => 'ABC'
+~c"ABC"
+# => ~c"ABC"
 
 [65, 66, 67]
-# => 'ABC'
+# => ~c"ABC"
 ```
 
-If a list of integers contains even one code point of an unprintable character (e.g. `0-6`, `14-26`, `28-31`), it will be displayed as a list. Even if it was defined using the`''` syntax.
+If a list of integers contains even one code point of an unprintable character (e.g. `0-6`, `14-26`, `28-31`), it will be displayed as a list. Even if it was defined using the`~c""` syntax.
 
 ```elixir
-'ABC\0'
+~c"ABC\0"
 # => [65, 66, 67, 0]
 
 [65, 66, 67, 0]
@@ -80,17 +84,17 @@ List.ascii_printable?([65, 66, 67, 0])
 Keep in mind that those are two different ways of _displaying_ the same data. The values are strictly equal.
 
 ```elixir
-'ABC' === [65, 66, 67]
+~c"ABC" === [65, 66, 67]
 # => true
 ```
 
 When printing a list with [`IO.inspect`][io-inspect], you can use the [`:charlists`][inspect-opts] option to control how lists are printed.
 
 ```elixir
-IO.inspect('ABC', charlists: :as_charlists)
-# => prints 'ABC'
+IO.inspect(~c"ABC", charlists: :as_charlists)
+# => prints ~c"ABC"
 
-IO.inspect('ABC', charlists: :as_lists)
+IO.inspect(~c"ABC", charlists: :as_lists)
 # => prints [65, 66, 67]
 ```
 
@@ -103,7 +107,7 @@ You can prepend a character with `?` to get its code point.
 # => 65
 
 [?:, ?)]
-# => ':)'
+# => ~c":)"
 ```
 
 ## Charlists vs strings
@@ -111,14 +115,14 @@ You can prepend a character with `?` to get its code point.
 Charlists and strings consisting of the same characters are not considered equal.
 
 ```elixir
-'hello' == "hello"
+~c"hello" == "hello"
 false
 ```
 
 Each value in a charlist is the [Unicode code point of a character][unicode-table] whereas in a string, the code points are encoded as [UTF-8][utf8].
 
 ```elixir
-IO.inspect('tschüss', charlists: :as_lists)
+IO.inspect(~c"tschüss", charlists: :as_lists)
 # => prints [116, 115, 99, 104, 252, 115, 115]
 
 IO.inspect("tschüss", binaries: :as_binaries)
@@ -134,7 +138,7 @@ When working with Elixir, **use strings to store text**. The `String` module off
 Charlists can be converted to strings with [`to_string`][kernel-to-string].
 
 ```elixir
-to_string('hello')
+to_string(~c"hello")
 # => "hello"
 ```
 

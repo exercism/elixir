@@ -37,7 +37,7 @@ DNA.decode_nucleotide(0b0001)
 Implement `encode/1` to accept a charlist representing nucleic acids and gaps and return a bitstring of the encoded data.
 
 ```elixir
-DNA.encode('AC GT')
+DNA.encode(~c"AC GT")
 # => <<18, 4, 8::size(4)>>
 ```
 
@@ -47,5 +47,5 @@ Implement `decode/1` to accept a bitstring representing nucleic acids and gaps a
 
 ```elixir
 DNA.decode(<<132, 2, 1::size(4)>>)
-# => 'TG CA'
+# => ~c"TG CA"
 ```
