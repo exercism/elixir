@@ -17,7 +17,7 @@ A charlist is a list of integers. The integers represent the Unicode values of a
 ## Charlists _are_ lists
 
 ```elixir
-'' === []
+~c"" === []
 # => true
 
 is_list(~c"hello")
