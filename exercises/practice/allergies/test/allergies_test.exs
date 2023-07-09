@@ -30,8 +30,33 @@ defmodule AllergiesTest do
     end
 
     @tag :pending
+    test "allergic to just shellfish" do
+      Allergies.list(4) |> assert_is_a_set_containing(~w[shellfish])
+    end
+
+    @tag :pending
     test "allergic to just strawberries" do
       Allergies.list(8) |> assert_is_a_set_containing(~w[strawberries])
+    end
+
+    @tag :pending
+    test "allergic to just tomatoes" do
+      Allergies.list(16) |> assert_is_a_set_containing(~w[tomatoes])
+    end
+
+    @tag :pending
+    test "allergic to just chocolate" do
+      Allergies.list(32) |> assert_is_a_set_containing(~w[chocolate])
+    end
+
+    @tag :pending
+    test "allergic to just pollen" do
+      Allergies.list(64) |> assert_is_a_set_containing(~w[pollen])
+    end
+
+    @tag :pending
+    test "allergic to just cats" do
+      Allergies.list(128) |> assert_is_a_set_containing(~w[cats])
     end
 
     @tag :pending
