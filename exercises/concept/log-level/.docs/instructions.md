@@ -35,9 +35,6 @@ Implement the `LogLevel.alert_recipient/2` function to determine to whom the ale
 Use the `LogLevel.to_label/2` function from the previous task. If the log label is _error_ or _fatal_, send the alert to the _ops_ team. If you receive a log with an _unknown_ label from a legacy system, send the alert to the _dev1_ team, other unknown labels should be sent to the _dev2_ team. All other log labels can be safely ignored by returning _false_.
 
 ```elixir
-LogLevel.alert(4, false)
-# => :ops
-
 LogLevel.alert_recipient(-1, true)
 # => :dev1
 
