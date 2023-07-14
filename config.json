@@ -16,7 +16,7 @@
     "highlightjs_language": "elixir"
   },
   "test_runner": {
-    "average_run_time": 4.1
+    "average_run_time": 4
   },
   "files": {
     "solution": [
