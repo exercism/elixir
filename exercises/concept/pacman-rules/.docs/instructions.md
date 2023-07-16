@@ -17,7 +17,7 @@ Rules.eat_ghost?(false, true)
 
 ## 2. Define if Pac-Man scores
 
-Define the `Rules.score?/2` function that takes two arguments (_if Pac-Man is touching a power pellet_ and _if Pac-Man is touching a dot_) and returns a boolean value if Pac-Man scored. The function should return true if Pac-Man is touching a power pellet or a dot.
+Define the `Rules.score?/2` function that takes two arguments (_if Pac-Man is touching a power pellet_ or _if Pac-Man is touching a dot_) and returns a boolean value if Pac-Man scored. The function should return true if Pac-Man is touching a power pellet or a dot.
 
 ```elixir
 Rules.score?(true, true)
