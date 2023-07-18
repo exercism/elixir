@@ -42,7 +42,11 @@ Elixir provides many functions for working with strings in the `String` module.
 
 ## Pipe Operator
 
-The `|>` operator is called the pipe operator. It can be used to chain function calls together in such a way that the value returned by the previous function call is passed as the first argument to the next function call.
+The `|>` operator is called the pipe operator. It is used to chain function calls together in such a way that the value returned by the previous function call is passed as the first argument to the next function call.
+
+When using the pipeline, you can place the `|>` operator after the result of a function call to pass its return value as the first argument to the next function. However, there is no need to use the `|>` operator on the first function call, as you can simply call the function with its arguments.
+
+Here's an example:
 
 ```elixir
 "hello"
@@ -50,3 +54,5 @@ The `|>` operator is called the pipe operator. It can be used to chain function 
 |> Kernel.<>("?!")
 # => "HELLO?!"
 ```
+
+In this example, we first call `String.upcase/1` with the argument `"hello"`, and then we pass the result of that call `("HELLO")` as the first argument to `Kernel.<>/2` along with the argument `"?!"`.
