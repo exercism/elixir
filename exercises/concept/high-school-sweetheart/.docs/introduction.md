@@ -63,4 +63,4 @@ Here's an example:
 # => "HELLO?!"
 ```
 
-In this example, we first call `String.upcase/1` with the argument `"hello"`, and then we pass the result of that call `("HELLO")` as the first argument to `Kernel.<>/2` along with the argument `"?!"`.
+In this example, we "pipe" the string `"hello"` into the `String.upcase` function, and the resulting string is piped into `Kernel.<>` as the first argument.
