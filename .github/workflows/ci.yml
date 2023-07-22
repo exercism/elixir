@@ -121,10 +121,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Retrieve Lychee Cache
+        uses: actions/cache@v3
+        id: lychee-cache # id to use in retrieve action
+        with:
+          path: .lycheecache
+          key: lychee-v1
+
       - name: Link Checker
         uses: lycheeverse/lychee-action@v1
         with:
-          args: --require-https --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36" --no-progress './**/*.md' './**/*.html' './**/*.json'
+          args: --cache --max-cache-age 7d --require-https --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36" --no-progress './**/*.md' './**/*.html' './**/*.json'
           fail: true
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
