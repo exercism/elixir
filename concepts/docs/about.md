@@ -99,7 +99,7 @@ If a module or a function is intended for internal usage only, you can mark it w
 [hexdocs-pm]: https://hexdocs.pm/
 [writing-documentation-recommendations]: https://hexdocs.pm/elixir/writing-documentation.html#recommendations
 [intellij-elixir-documentation]: https://github.com/KronicDeth/intellij-elixir#quick-documentation
-[vsc-documentation]: https://thinkingelixir.com/elixir-in-vs-code/#Documentation_displayed_on_hover
+[vsc-documentation]: https://fly.io/phoenix-files/setup-vscode-for-elixir-development/
 [iex-h]: https://hexdocs.pm/iex/IEx.Helpers.html#h/1
 [getting-started-iex]: https://elixir-lang.org/getting-started/introduction.html#interactive-mode
 [hiding-internal-modules-and-functions]: https://hexdocs.pm/elixir/writing-documentation.html#hiding-internal-modules-and-functions

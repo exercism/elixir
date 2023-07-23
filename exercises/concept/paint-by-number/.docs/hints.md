@@ -4,7 +4,7 @@
 
 - Read about [bitstrings][bitstring] in the Getting Started guide.
 - Review the documentation for the [bitstring special form][bitstring-form].
-- Review [how to convert decimal numbers to binary numbers]([decimal-to-binary-youtube]).
+- Review [how to convert decimal numbers to binary numbers][decimal-to-binary-youtube].
 - Elixir supports [different ways of writing integers][integer-literal], including binary notation.
 
 ## 1. Calculate palette bit size

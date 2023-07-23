@@ -85,5 +85,5 @@ On the other hand, `string()` is a different type. It's an Erlang string, in Eli
 [string-t]: https://hexdocs.pm/elixir/String.html#t:t/0
 [enum-t]: https://hexdocs.pm/elixir/Enum.html#t:t/0
 [range-t]: https://hexdocs.pm/elixir/Range.html#t:t/0
-[dialyzer]: http://www.erlang.org/doc/man/dialyzer.html
+[dialyzer]: https://www.erlang.org/doc/man/dialyzer.html
 [dialyxir]: https://hexdocs.pm/dialyxir/readme.html

@@ -68,11 +68,11 @@ The random values returned by `Enum.random` and the Erlang's `rand` module are n
 [enum-random]: https://hexdocs.pm/elixir/Enum.html#random/1
 [enum-take-random]: https://hexdocs.pm/elixir/Enum.html#take_random/2
 [enum-shuffle]: https://hexdocs.pm/elixir/Enum.html#shuffle/1
-[erl-rand]: http://www.erlang.org/doc/man/rand.html
-[erl-crypto-strong-rand-bytes]: http://www.erlang.org/doc/man/crypto.html#strong_rand_bytes-1
+[erl-rand]: https://www.erlang.org/doc/man/rand.html
+[erl-crypto-strong-rand-bytes]: https://www.erlang.org/doc/man/crypto.html#strong_rand_bytes-1
 [cryptographically-secure-rng]: https://en.wikipedia.org/wiki/Cryptographically_secure_pseudorandom_number_generator
 [normal-distribution]: https://en.wikipedia.org/wiki/Normal_distribution
-[erl-rand-normal-0]: http://www.erlang.org/doc/man/rand.html#normal-0
-[erl-rand-normal-2]: http://www.erlang.org/doc/man/rand.html#normal-2
+[erl-rand-normal-0]: https://www.erlang.org/doc/man/rand.html#normal-0
+[erl-rand-normal-2]: https://www.erlang.org/doc/man/rand.html#normal-2
 [prng]: https://en.wikipedia.org/wiki/Pseudorandom_number_generator
-[rand-seed-2]: http://www.erlang.org/doc/man/rand.html#seed-2
+[rand-seed-2]: https://www.erlang.org/doc/man/rand.html#seed-2

@@ -9,13 +9,13 @@
 ## Communication channels
 
 * [Elixir Forum](https://elixirforum.com/)
-* [Slack](https://elixir-slackin.herokuapp.com/)
+* [Slack](https://elixir-lang.slack.com/)
 * [Discord](https://discord.gg/elixir)
 * [Official #elixir on irc.libera.chat](irc://irc.libera.chat/elixir)
 
 ## Elixir Podcasts
 
-- [Thinking Elixir](https://thinkingelixir.com/the-podcast/)
+- [Thinking Elixir](https://podcast.thinkingelixir.com/)
 - [Elixir Wizards](https://smartlogic.io/podcast/elixir-wizards/)
 - [Elixir Mix](https://devchat.tv/elixir-mix/)
 - [Elixir Outlaws](https://elixiroutlaws.com/)
