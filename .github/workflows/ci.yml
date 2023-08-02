@@ -8,7 +8,8 @@ name: elixir / main ci
 
 on:
   push:
-    branches: [master, main]
+    branches: [ main ]
+  pull_request:
   workflow_dispatch:
 
 jobs:
@@ -98,12 +99,22 @@ jobs:
           otp-version: ${{matrix.otp}}
           elixir-version: ${{matrix.elixir}}
 
+      - name: Set cache key
+        id: set_cache_key
+        run: |
+          erl -eval '{ok, Version} = file:read_file(filename:join([code:root_dir(), "releases", erlang:system_info(otp_release), "OTP_VERSION"])), io:fwrite(Version), halt().' -noshell > ERLANG_VERSION
+          cat ERLANG_VERSION
+          elixir --version | tail -n 1 > ELIXIR_VERSION
+          cat ELIXIR_VERSION
+          cache_key="os-${{ runner.os }}-erlang-$( sha256sum ERLANG_VERSION | cut -d ' ' -f 1 )-elixir-$( sha256sum ELIXIR_VERSION | cut -d ' ' -f 1 )-mix-lock-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}"
+          echo "::set-output name=cache_key::$cache_key"
+
       - name: Retrieve Mix Dependencies Cache
         uses: actions/cache@v3
         id: mix-cache # id to use in retrieve action
         with:
           path: deps
-          key: ${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-mix-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}-v2
+          key: mix-${{ steps.set_cache_key.outputs.cache_key }}-v1
 
       - name: Install Mix Dependencies
         if: steps.mix-cache.outputs.cache-hit != 'true'

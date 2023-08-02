@@ -3,7 +3,7 @@
 # ###
 # ci.sh
 # ###
-# Actions to run on a commit to master
+# Actions to run on every commit
 # ###
 
 echo "Running test_exercises.sh"
