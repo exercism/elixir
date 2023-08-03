@@ -73,6 +73,21 @@ defmodule CommunityGardenTest do
     assert plot_4.plot_id == 4
   end
 
+  @tag task_id: 4
+  test "release only one plot at time" do
+    assert {:ok, pid} = CommunityGarden.start()
+
+    plot_1 = CommunityGarden.register(pid, "Keanu Reeves")
+    plot_2 = CommunityGarden.register(pid, "Thomas A. Anderson")
+
+    assert plot_1.plot_id == 1
+    assert plot_2.plot_id == 2
+
+    CommunityGarden.release(pid, plot_1.plot_id)
+
+    assert [plot_2] = CommunityGarden.list_registrations(pid)
+  end
+
   @tag task_id: 5
   test "can get registration of a registered plot" do
     assert {:ok, pid} = CommunityGarden.start()
