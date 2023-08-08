@@ -12,6 +12,11 @@ defmodule LasagnaTest do
     assert Lasagna.remaining_minutes_in_oven(25) === 15
   end
 
+  @tag task_id: 2
+  test "remaining minutes in oven, a few minutes later" do
+    assert Lasagna.remaining_minutes_in_oven(30) === 10
+  end
+
   @tag task_id: 3
   test "preparation time in minutes for one layer" do
     assert Lasagna.preparation_time_in_minutes(1) === 2
