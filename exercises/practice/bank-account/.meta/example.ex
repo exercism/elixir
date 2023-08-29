@@ -73,7 +73,7 @@ defmodule BankAccount do
   @doc """
   Get the account's balance.
   """
-  @spec balance(account) :: integer
+  @spec balance(account) :: integer | {:error, :account_closed}
   def balance(account) do
     if Process.alive?(account) do
       GenServer.call(account, :balance)
