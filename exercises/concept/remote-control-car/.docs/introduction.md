@@ -24,7 +24,7 @@ Since structs are built on maps, we can use most map functions to get and manipu
   plane.engine
   # => nil
   Map.fetch(plane, :wings)
-  # => 2
+  # => {:ok, 2}
   ```
 
 - update field values
