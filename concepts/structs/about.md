@@ -31,7 +31,7 @@ plane = %Plane{}
   plane.engine
   # => nil
   Map.fetch(plane, :wings)
-  # => 2
+  # => {:ok, 2}
   ```
 
 - Update field values
