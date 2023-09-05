@@ -1247,7 +1247,8 @@
           "multiple-clause-functions",
           "default-arguments"
         ],
-        "difficulty": 3
+        "difficulty": 3,
+        "status": "deprecated"
       },
       {
         "slug": "binary",
@@ -1789,7 +1790,8 @@
           "randomness",
           "erlang-libraries"
         ],
-        "difficulty": 4
+        "difficulty": 4,
+        "status": "deprecated"
       },
       {
         "slug": "dominoes",
