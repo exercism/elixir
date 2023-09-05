@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Use Elixir
         uses: erlef/setup-beam@v1.16
@@ -92,7 +92,7 @@ jobs:
             otp: '26.0'
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Use Elixir ${{matrix.elixir}} / OTP ${{matrix.otp}}
         uses: erlef/setup-beam@v1.16
         with:
@@ -130,7 +130,7 @@ jobs:
     name: Link Checker
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Retrieve Lychee Cache
         uses: actions/cache@v3
