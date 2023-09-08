@@ -1235,19 +1235,10 @@
         "slug": "beer-song",
         "name": "Beer Song",
         "uuid": "24db624b-7c80-409d-97d5-e1177f025c67",
-        "prerequisites": [
-          "strings",
-          "multiple-clause-functions",
-          "default-arguments",
-          "ranges",
-          "enum",
-          "recursion"
-        ],
-        "practices": [
-          "multiple-clause-functions",
-          "default-arguments"
-        ],
-        "difficulty": 3
+        "prerequisites": [],
+        "practices": [],
+        "difficulty": 3,
+        "status": "deprecated"
       },
       {
         "slug": "binary",
@@ -1779,17 +1770,10 @@
         "slug": "diffie-hellman",
         "name": "Diffie-Hellman",
         "uuid": "92caf2b9-3fca-401c-8daa-aaa0193e704f",
-        "prerequisites": [
-          "ranges",
-          "randomness",
-          "erlang-libraries"
-        ],
-        "practices": [
-          "ranges",
-          "randomness",
-          "erlang-libraries"
-        ],
-        "difficulty": 4
+        "prerequisites": [],
+        "practices": [],
+        "difficulty": 4,
+        "status": "deprecated"
       },
       {
         "slug": "dominoes",
