@@ -2,5 +2,9 @@
   {
     "url": "https://hexdocs.pm/elixir/Kernel.html#%7C%3E/2",
     "description": "The pipe operator"
+  },
+  {
+    "url": "https://elixirschool.com/en/lessons/basics/pipe_operator",
+    "description": "Pipe Operator - Elixir School"
   }
 ]
