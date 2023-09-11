@@ -19,7 +19,7 @@ We assume that the student already knows basic regular expressions. The goal of 
 ## Prerequisites
 
 - `strings`
-- `list`
+- `lists`
 - `pattern-matching`
 - `nil`
 - `if`
