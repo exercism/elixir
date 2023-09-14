@@ -18,7 +18,7 @@ defmodule PhoneNumberTest do
 
     @tag :pending
     test "invalid when 9 digits" do
-      assert PhoneNumber.clean("212555010") == {:error, "incorrect number of digits"}
+      assert PhoneNumber.clean("123456789") == {:error, "must not be fewer than 10 digits"}
     end
 
     @tag :pending
@@ -38,7 +38,7 @@ defmodule PhoneNumberTest do
 
     @tag :pending
     test "invalid when more than 11 digits" do
-      assert PhoneNumber.clean("321234567890") == {:error, "incorrect number of digits"}
+      assert PhoneNumber.clean("321234567890") == {:error, "must not be greater than 11 digits"}
     end
 
     @tag :pending
