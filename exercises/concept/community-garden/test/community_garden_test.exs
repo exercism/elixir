@@ -85,7 +85,7 @@ defmodule CommunityGardenTest do
 
     CommunityGarden.release(pid, plot_1.plot_id)
 
-    assert [plot_2] = CommunityGarden.list_registrations(pid)
+    assert [^plot_2] = CommunityGarden.list_registrations(pid)
   end
 
   @tag task_id: 5
