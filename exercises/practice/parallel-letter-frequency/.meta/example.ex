@@ -7,7 +7,7 @@ defmodule Frequency do
   The number of worker processes to use can be set with 'workers'.
   """
 
-  @reject_characters ~r/[0-9\s,]/
+  @reject_characters ~r/[0-9\s,\p{P}]/u
 
   @spec frequency([String.t()], pos_integer) :: map
   def frequency([], _workers), do: []
