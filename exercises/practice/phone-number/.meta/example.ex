@@ -36,10 +36,12 @@ defmodule PhoneNumber do
   end
 
   defp validate_length(number) do
-    case String.length(number) do
-      invalid when invalid < 10 -> {:error, "must not be fewer than 10 digits"}
-      invalid when invalid > 11 -> {:error, "must not be greater than 11 digits"}
-      _valid -> {:ok, number}
+    length = String.length(number)
+    
+    cond do
+      length < 10 -> {:error, "must not be fewer than 10 digits"}
+      length > 11 -> {:error, "must not be greater than 11 digits"}
+      true -> {:ok, number}
     end
   end
 
