@@ -54,5 +54,10 @@ defmodule UsernameTest do
       assert Username.sanitize(~c"jäger") == ~c"jaeger"
       assert Username.sanitize(~c"groß") == ~c"gross"
     end
+
+    @tag task_id: 3
+    test "it substitutes German letters and removes disallowed characters" do
+      assert Username.sanitize(~c"köhler_jäger42") == ~c"koehler_jaeger"
+    end
   end
 end
