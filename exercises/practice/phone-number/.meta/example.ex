@@ -37,7 +37,7 @@ defmodule PhoneNumber do
 
   defp validate_length(number) do
     length = String.length(number)
-    
+
     cond do
       length < 10 -> {:error, "must not be fewer than 10 digits"}
       length > 11 -> {:error, "must not be greater than 11 digits"}
