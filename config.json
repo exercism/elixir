@@ -2299,6 +2299,25 @@
         "difficulty": 6
       },
       {
+        "slug": "ledger",
+        "name": "Ledger",
+        "uuid": "a3134be3-ac2f-4612-9cd2-4f2a6a4de48f",
+        "prerequisites": [
+          "if",
+          "lists",
+          "atoms",
+          "strings",
+          "maps",
+          "dates-and-time",
+          "multiple-clause-functions",
+          "pattern-matching"
+        ],
+        "practices": [
+          "multiple-clause-functions"
+        ],
+        "difficulty": 6
+      },
+      {
         "slug": "list-ops",
         "name": "List Ops",
         "uuid": "86658a31-d401-401b-80df-2c4df35f9b15",
