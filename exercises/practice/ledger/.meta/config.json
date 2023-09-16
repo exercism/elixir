@@ -2,18 +2,16 @@
   "authors": [
     "jiegillet"
   ],
-  "contributors": [],
   "files": {
-    "example": [
-      ".meta/example.ex"
-    ],
     "solution": [
       "lib/ledger.ex"
     ],
     "test": [
       "test/ledger_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
     ]
   },
-  "blurb": "Refactor a ledger printer.",
-  "title": "Ledger"
+  "blurb": "Refactor a ledger printer."
 }
