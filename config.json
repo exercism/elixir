@@ -1241,14 +1241,6 @@
         "status": "deprecated"
       },
       {
-        "uuid": "6c240d6c-d897-4c4e-a556-b595f45c2d3b",
-        "slug": "bottle-song",
-        "name": "Bottle Song",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1
-      },
-      {
         "slug": "binary",
         "name": "Binary",
         "uuid": "29c3c9ff-c7f3-4646-9612-7cd768d237ab",
@@ -1313,6 +1305,14 @@
           "booleans",
           "cond"
         ],
+        "difficulty": 3
+      },
+      {
+        "slug": "bottle-song",
+        "name": "Bottle Song",
+        "uuid": "6c240d6c-d897-4c4e-a556-b595f45c2d3b",
+        "prerequisites": [],
+        "practices": [],
         "difficulty": 3
       },
       {
