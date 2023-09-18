@@ -23,6 +23,7 @@ defmodule BottleSong do
     |> Enum.map(&stanza(start_bottle - &1))
     |> Enum.intersperse("")
     |> List.flatten()
+    |> Enum.join("\n")
   end
 
   @spec stanza(pos_integer) :: Enum.t()
