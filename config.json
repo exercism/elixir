@@ -1319,7 +1319,7 @@
           "recursion"
         ],
         "practices": [
-          "multiple-clause-functions",
+          "multiple-clause-functions"
         ],
         "difficulty": 3
       },
