@@ -1,0 +1,15 @@
+{
+  "authors": ["antoine-duchenet"],
+  "contributors": [],
+  "files": {
+    "solution": [
+      "lib/bottle_song.ex"
+    ],
+    "test": [
+      "test/bottle_song_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
+  }
+}
