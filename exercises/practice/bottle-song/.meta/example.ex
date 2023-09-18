@@ -39,7 +39,8 @@ defmodule BottleSong do
   end
 
   @spec main_line(pos_integer) :: String.t()
-  defp main_line(n), do: "#{n |> quantifier() |> String.capitalize()} green #{bottle(n)} hanging on the wall,"
+  defp main_line(n),
+    do: "#{n |> quantifier() |> String.capitalize()} green #{bottle(n)} hanging on the wall,"
 
   @spec quantifier(pos_integer) :: String.t()
   defp quantifier(n), do: Map.get(@quantifiers, n)
