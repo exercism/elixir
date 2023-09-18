@@ -1,4 +1,8 @@
 defmodule BottleSong do
+  @moduledoc """
+  Handles lyrics of the popular children song: Ten Green Bottles
+  """
+
   @quantifiers %{
     10 => "ten",
     9 => "nine",
