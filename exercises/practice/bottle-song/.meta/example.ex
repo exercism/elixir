@@ -17,7 +17,7 @@ defmodule BottleSong do
     0 => "no"
   }
 
-  @spec recite(pos_integer, pos_integer) :: Enum.t()
+  @spec recite(pos_integer, pos_integer) :: String.t()
   def recite(start_bottle, take_down) do
     0..(take_down - 1)
     |> Enum.map(&stanza(start_bottle - &1))
