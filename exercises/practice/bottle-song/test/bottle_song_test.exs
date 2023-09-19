@@ -1,9 +1,9 @@
 defmodule BottleSongTest do
   use ExUnit.Case
 
-  describe "[Single stanza]" do
+  describe "[Single verse]" do
     # @tag :pending
-    test "First generic stanza" do
+    test "First generic verse" do
       assert BottleSong.recite(10, 1) ==
                """
                Ten green bottles hanging on the wall,
@@ -14,7 +14,7 @@ defmodule BottleSongTest do
     end
 
     @tag :pending
-    test "Last generic stanza" do
+    test "Last generic verse" do
       assert BottleSong.recite(3, 1) ==
                """
                Three green bottles hanging on the wall,
@@ -25,7 +25,7 @@ defmodule BottleSongTest do
     end
 
     @tag :pendin
-    test "Stanza with 2 bottles" do
+    test "Verse with 2 bottles" do
       assert BottleSong.recite(2, 1) ==
                """
                Two green bottles hanging on the wall,
@@ -36,7 +36,7 @@ defmodule BottleSongTest do
     end
 
     @tag :pending
-    test "Stanza with 1 bottle" do
+    test "Verse with 1 bottle" do
       assert BottleSong.recite(1, 1) ==
                """
                One green bottle hanging on the wall,
@@ -47,9 +47,9 @@ defmodule BottleSongTest do
     end
   end
 
-  describe "[Multiple stanzas]" do
+  describe "[Multiple verses]" do
     @tag :pending
-    test "First two stanzas" do
+    test "First two verses" do
       assert BottleSong.recite(10, 2) ==
                """
                Ten green bottles hanging on the wall,
@@ -65,7 +65,7 @@ defmodule BottleSongTest do
     end
 
     @tag :pending
-    test "Last three stanzas" do
+    test "Last three verses" do
       assert BottleSong.recite(3, 3) ==
                """
                Three green bottles hanging on the wall,
@@ -86,7 +86,7 @@ defmodule BottleSongTest do
     end
 
     @tag :pending
-    test "All stanzas" do
+    test "All verses" do
       assert BottleSong.recite(10, 10) ==
                """
                Ten green bottles hanging on the wall,

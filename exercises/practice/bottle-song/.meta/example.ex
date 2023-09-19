@@ -20,14 +20,14 @@ defmodule BottleSong do
   @spec recite(pos_integer, pos_integer) :: String.t()
   def recite(start_bottle, take_down) do
     0..(take_down - 1)
-    |> Enum.map(&stanza(start_bottle - &1))
+    |> Enum.map(&verse(start_bottle - &1))
     |> Enum.intersperse("")
     |> List.flatten()
     |> Enum.join("\n")
   end
 
-  @spec stanza(pos_integer) :: Enum.t()
-  defp stanza(before_the_fall) do
+  @spec verse(pos_integer) :: Enum.t()
+  defp verse(before_the_fall) do
     after_the_fall = before_the_fall - 1
 
     [
