@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "antoine-duchenet"
+  ],
+  "files": {
+    "solution": [
+      "lib/bottle_song.ex"
+    ],
+    "test": [
+      "test/bottle_song_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
+  },
+  "blurb": "Produce the lyrics to the popular children's repetitive song: Ten Green Bottles.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Ten_Green_Bottles"
+}

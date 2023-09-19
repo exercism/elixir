@@ -1308,6 +1308,22 @@
         "difficulty": 3
       },
       {
+        "slug": "bottle-song",
+        "name": "Bottle Song",
+        "uuid": "6c240d6c-d897-4c4e-a556-b595f45c2d3b",
+        "prerequisites": [
+          "strings",
+          "multiple-clause-functions",
+          "ranges",
+          "enum",
+          "recursion"
+        ],
+        "practices": [
+          "multiple-clause-functions"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "dnd-character",
         "name": "D&D Character",
         "uuid": "bd15a0e0-c19e-4a52-be6c-1a61d14c54cd",
