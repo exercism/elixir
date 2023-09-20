@@ -104,6 +104,6 @@ defmodule AllYourBaseTest do
 
   @tag :pending
   test "convert both bases are negative" do
-    assert AllYourBase.convert([1], -2, -7) == {:error, "output base must be >= 2"}
+    assert AllYourBase.convert([1], -2, -7) == {:error, "input base must be >= 2"}
   end
 end
