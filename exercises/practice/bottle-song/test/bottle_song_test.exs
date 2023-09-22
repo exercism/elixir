@@ -24,7 +24,7 @@ defmodule BottleSongTest do
                """
     end
 
-    @tag :pendin
+    @tag :pending
     test "Verse with 2 bottles" do
       assert BottleSong.recite(2, 1) ==
                """
