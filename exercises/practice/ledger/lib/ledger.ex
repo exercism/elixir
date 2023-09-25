@@ -92,7 +92,7 @@ defmodule Ledger do
       |> String.pad_leading(14, " ")
 
     description =
-      if entry.description |> String.length() > 27 do
+      if entry.description |> String.length() > 26 do
         " " <> String.slice(entry.description, 0, 22) <> "..."
       else
         " " <> String.pad_trailing(entry.description, 25, " ")
