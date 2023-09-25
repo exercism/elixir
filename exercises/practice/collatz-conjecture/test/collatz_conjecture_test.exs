@@ -21,7 +21,7 @@ defmodule CollatzConjectureTest do
   end
 
   @tag :pending
-  test "Large number of even and odd steps" do
+  test "large number of even and odd steps" do
     assert CollatzConjecture.calc(1_000_000) == 152
   end
 
