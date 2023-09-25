@@ -3,12 +3,13 @@ defmodule Ledger do
   Format the given entries given a currency and locale
   """
   @type currency :: :usd | :eur
+  @type locale :: :en_US | :nl_NL
   @type entry :: %{amount_in_cents: integer(), date: Date.t(), description: String.t()}
 
-  @spec format_entries(currency(), String.t(), list(entry())) :: String.t()
+  @spec format_entries(currency(), locale(), list(entry())) :: String.t()
   def format_entries(currency, locale, entries) do
     header =
-      if locale == "en_US" do
+      if locale == :en_US do
         "Date       | Description               | Change       \n"
       else
         "Datum      | Omschrijving              | Verandering  \n"
@@ -40,14 +41,14 @@ defmodule Ledger do
     day = entry.date.day |> to_string() |> String.pad_leading(2, "0")
 
     date =
-      if locale == "en_US" do
+      if locale == :en_US do
         month <> "/" <> day <> "/" <> year <> " "
       else
         day <> "-" <> month <> "-" <> year <> " "
       end
 
     number =
-      if locale == "en_US" do
+      if locale == :en_US do
         decimal =
           entry.amount_in_cents |> abs |> rem(100) |> to_string() |> String.pad_leading(2, "0")
 
@@ -77,13 +78,13 @@ defmodule Ledger do
 
     amount =
       if entry.amount_in_cents >= 0 do
-        if locale == "en_US" do
+        if locale == :en_US do
           "  #{if(currency == :eur, do: "€", else: "$")}#{number} "
         else
           " #{if(currency == :eur, do: "€", else: "$")} #{number} "
         end
       else
-        if locale == "en_US" do
+        if locale == :en_US do
           " (#{if(currency == :eur, do: "€", else: "$")}#{number})"
         else
           " #{if(currency == :eur, do: "€", else: "$")} -#{number} "

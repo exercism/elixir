@@ -3,7 +3,7 @@ defmodule LedgerTest do
 
   # @tag :pending
   test "empty ledger" do
-    assert Ledger.format_entries(:usd, "en_US", []) ==
+    assert Ledger.format_entries(:usd, :en_US, []) ==
              """
              Date       | Description               | Change\s\s\s\s\s\s\s
              """
@@ -15,7 +15,7 @@ defmodule LedgerTest do
       %{amount_in_cents: -1000, date: ~D[2015-01-01], description: "Buy present"}
     ]
 
-    assert Ledger.format_entries(:usd, "en_US", entries) ==
+    assert Ledger.format_entries(:usd, :en_US, entries) ==
              """
              Date       | Description               | Change\s\s\s\s\s\s\s
              01/01/2015 | Buy present               |      ($10.00)
@@ -29,7 +29,7 @@ defmodule LedgerTest do
       %{amount_in_cents: -1000, date: ~D[2015-01-01], description: "Buy present"}
     ]
 
-    assert Ledger.format_entries(:usd, "en_US", entries) ==
+    assert Ledger.format_entries(:usd, :en_US, entries) ==
              """
              Date       | Description               | Change\s\s\s\s\s\s\s
              01/01/2015 | Buy present               |      ($10.00)
@@ -44,7 +44,7 @@ defmodule LedgerTest do
       %{amount_in_cents: -1000, date: ~D[2015-01-01], description: "Buy present"}
     ]
 
-    assert Ledger.format_entries(:usd, "en_US", entries) ==
+    assert Ledger.format_entries(:usd, :en_US, entries) ==
              """
              Date       | Description               | Change\s\s\s\s\s\s\s
              01/01/2015 | Buy present               |      ($10.00)
@@ -60,7 +60,7 @@ defmodule LedgerTest do
       %{amount_in_cents: 1, date: ~D[2015-01-01], description: "Something"}
     ]
 
-    assert Ledger.format_entries(:usd, "en_US", entries) ==
+    assert Ledger.format_entries(:usd, :en_US, entries) ==
              """
              Date       | Description               | Change\s\s\s\s\s\s\s
              01/01/2015 | Something                 |       ($0.01)
@@ -79,7 +79,7 @@ defmodule LedgerTest do
       }
     ]
 
-    assert Ledger.format_entries(:usd, "en_US", entries) ==
+    assert Ledger.format_entries(:usd, :en_US, entries) ==
              """
              Date       | Description               | Change\s\s\s\s\s\s\s
              01/01/2015 | Freude schoner Gotterf... |   ($1,234.56)
@@ -92,7 +92,7 @@ defmodule LedgerTest do
       %{amount_in_cents: -1000, date: ~D[2015-01-01], description: "Buy present"}
     ]
 
-    assert Ledger.format_entries(:eur, "en_US", entries) ==
+    assert Ledger.format_entries(:eur, :en_US, entries) ==
              """
              Date       | Description               | Change\s\s\s\s\s\s\s
              01/01/2015 | Buy present               |      (€10.00)
@@ -105,7 +105,7 @@ defmodule LedgerTest do
       %{amount_in_cents: 123_456, date: ~D[2015-03-12], description: "Buy present"}
     ]
 
-    assert Ledger.format_entries(:usd, "nl_NL", entries) ==
+    assert Ledger.format_entries(:usd, :nl_NL, entries) ==
              """
              Datum      | Omschrijving              | Verandering\s\s
              12-03-2015 | Buy present               |   $ 1.234,56\s
@@ -118,7 +118,7 @@ defmodule LedgerTest do
       %{amount_in_cents: 123_456, date: ~D[2015-03-12], description: "Buy present"}
     ]
 
-    assert Ledger.format_entries(:eur, "nl_NL", entries) ==
+    assert Ledger.format_entries(:eur, :nl_NL, entries) ==
              """
              Datum      | Omschrijving              | Verandering\s\s
              12-03-2015 | Buy present               |   € 1.234,56\s
@@ -131,7 +131,7 @@ defmodule LedgerTest do
       %{amount_in_cents: -12345, date: ~D[2015-03-12], description: "Buy present"}
     ]
 
-    assert Ledger.format_entries(:usd, "nl_NL", entries) ==
+    assert Ledger.format_entries(:usd, :nl_NL, entries) ==
              """
              Datum      | Omschrijving              | Verandering\s\s
              12-03-2015 | Buy present               |    $ -123,45\s
@@ -144,7 +144,7 @@ defmodule LedgerTest do
       %{amount_in_cents: -12345, date: ~D[2015-03-12], description: "Buy present"}
     ]
 
-    assert Ledger.format_entries(:usd, "en_US", entries) ==
+    assert Ledger.format_entries(:usd, :en_US, entries) ==
              """
              Date       | Description               | Change\s\s\s\s\s\s\s
              03/12/2015 | Buy present               |     ($123.45)

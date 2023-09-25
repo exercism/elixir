@@ -3,9 +3,10 @@ defmodule Ledger do
   Format the given entries given a currency and locale
   """
   @type currency :: :usd | :eur
+  @type locale :: :en_US | :nl_NL
   @type entry :: %{amount_in_cents: integer(), date: Date.t(), description: String.t()}
 
-  @spec format_entries(currency(), String.t(), list(entry())) :: String.t()
+  @spec format_entries(currency(), locale(), list(entry())) :: String.t()
   def format_entries(currency, locale, entries) do
     header = header(locale)
 
@@ -17,8 +18,8 @@ defmodule Ledger do
     Enum.join([header | entries], "\n") <> "\n"
   end
 
-  defp header("en_US"), do: "Date       | Description               | Change       "
-  defp header("nl_NL"), do: "Datum      | Omschrijving              | Verandering  "
+  defp header(:en_US), do: "Date       | Description               | Change       "
+  defp header(:nl_NL), do: "Datum      | Omschrijving              | Verandering  "
 
   defp compare_entries(a, b) do
     case Date.compare(a.date, b.date) do
@@ -61,21 +62,21 @@ defmodule Ledger do
     Enum.join([date, description, amount], " | ")
   end
 
-  defp format_date(date, "en_US") do
+  defp format_date(date, :en_US) do
     year = date.year
     month = date.month |> to_string() |> String.pad_leading(2, "0")
     day = date.day |> to_string() |> String.pad_leading(2, "0")
     Enum.join([month, day, year], "/")
   end
 
-  defp format_date(date, "nl_NL") do
+  defp format_date(date, :nl_NL) do
     year = date.year
     month = date.month |> to_string() |> String.pad_leading(2, "0")
     day = date.day |> to_string() |> String.pad_leading(2, "0")
     Enum.join([day, month, year], "-")
   end
 
-  defp format_amount(amount, currency, "en_US") do
+  defp format_amount(amount, currency, :en_US) do
     currency = format_currency(currency)
     number = format_number(abs(amount), ".", ",")
 
@@ -86,7 +87,7 @@ defmodule Ledger do
     end
   end
 
-  defp format_amount(amount, currency, "nl_NL") do
+  defp format_amount(amount, currency, :nl_NL) do
     currency = format_currency(currency)
     number = format_number(abs(amount), ",", ".")
 
