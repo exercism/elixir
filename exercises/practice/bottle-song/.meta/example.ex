@@ -42,10 +42,10 @@ defmodule BottleSong do
   defp main_line(n),
     do: "#{n |> quantifier() |> String.capitalize()} green #{bottle(n)} hanging on the wall,"
 
-  @spec quantifier(pos_integer) :: String.t()
+  @spec quantifier(non_neg_integer) :: String.t()
   defp quantifier(n), do: Map.get(@quantifiers, n)
 
-  @spec bottle(pos_integer) :: String.t()
+  @spec bottle(non_neg_integer) :: String.t()
   defp bottle(1), do: "bottle"
   defp bottle(_), do: "bottles"
 end
