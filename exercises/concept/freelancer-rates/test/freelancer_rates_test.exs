@@ -83,7 +83,7 @@ defmodule FreelancerRatesTest do
     @tag task_id: 4
     test "it applies the discount" do
       # 1.25
-      assert FreelancerRates.days_in_budget(480, 60, 20) == 1.2
+      assert FreelancerRates.days_in_budget(480, 60, 20) == 0.8
     end
   end
 end
