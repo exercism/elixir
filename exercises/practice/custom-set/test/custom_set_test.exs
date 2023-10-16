@@ -172,6 +172,13 @@ defmodule CustomSetTest do
       custom_set_2 = CustomSet.new([1, 2, 3, 4])
       assert CustomSet.equal?(custom_set_1, custom_set_2) == false
     end
+
+    @tag :pending
+    test "set is equal to a set constructed from an array with duplicates" do
+      custom_set_1 = CustomSet.new([1])
+      custom_set_2 = CustomSet.new([1, 1])
+      assert CustomSet.equal?(custom_set_1, custom_set_2) == true
+    end
   end
 
   describe "add" do
