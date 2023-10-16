@@ -63,7 +63,7 @@ defmodule AnagramTest do
 
   @tag :pending
   test "does not detect an anagram if the original word is repeated" do
-    matches = Anagram.match("go", ~w(go Go GO))
+    matches = Anagram.match("go", ~w(goGoGO))
     assert matches == []
   end
 
