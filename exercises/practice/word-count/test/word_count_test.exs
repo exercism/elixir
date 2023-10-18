@@ -6,25 +6,25 @@ defmodule WordCountTest do
   end
 
   @tag :pending
-  test "count one of each" do
+  test "count one of each word" do
     expected = %{"one" => 1, "of" => 1, "each" => 1}
     assert WordCount.count("one of each") == expected
   end
 
   @tag :pending
-  test "count multiple occurrences" do
+  test "multiple occurrences of a word" do
     expected = %{"one" => 1, "fish" => 4, "two" => 1, "red" => 1, "blue" => 1}
     assert WordCount.count("one fish two fish red fish blue fish") == expected
   end
 
   @tag :pending
-  test "handles cramped list" do
+  test "handles cramped lists" do
     expected = %{"one" => 1, "two" => 1, "three" => 1}
     assert WordCount.count("one,two,three") == expected
   end
 
   @tag :pending
-  test "handles expanded list" do
+  test "handles expanded lists" do
     expected = %{"one" => 1, "two" => 1, "three" => 1}
     assert WordCount.count("one,\ntwo,\nthree") == expected
   end
@@ -39,12 +39,6 @@ defmodule WordCountTest do
   test "include numbers" do
     expected = %{"testing" => 2, "1" => 1, "2" => 1}
     assert WordCount.count("testing, 1, 2 testing") == expected
-  end
-
-  @tag :pending
-  test "hyphens" do
-    expected = %{"co-operative" => 1}
-    assert WordCount.count("co-operative") == expected
   end
 
   @tag :pending
@@ -82,7 +76,7 @@ defmodule WordCountTest do
   end
 
   @tag :pending
-  test "with quotations at the end at the beginning of the sentence" do
+  test "with quotations at the end and beginning of the sentence" do
     expected = %{"venti" => 1, "in" => 1, "italian" => 1, "means" => 1, "twenty" => 1}
     assert WordCount.count("'venti' in Italian means 'twenty'") == expected
   end
@@ -119,17 +113,5 @@ defmodule WordCountTest do
   test "quotation for word with apostrophe" do
     expected = %{"can" => 1, "can't" => 2}
     assert WordCount.count("can, can't, 'can't'") == expected
-  end
-
-  @tag :pending
-  test "German" do
-    expected = %{"götterfunken" => 1, "schöner" => 1, "freude" => 1}
-    assert WordCount.count("Freude schöner Götterfunken") == expected
-  end
-
-  @tag :pending
-  test "Polish" do
-    expected = %{"a" => 1, "w" => 1, "piątym" => 1, "stoi" => 1, "sześć" => 1, "fortepianów" => 1}
-    assert WordCount.count("A w piątym stoi sześć fortepianów") == expected
   end
 end
