@@ -282,7 +282,8 @@
           "default-arguments"
         ],
         "status": "active"
-      },      {
+      },
+      {
         "slug": "paint-by-number",
         "name": "Paint By Number",
         "uuid": "0af87ee0-97c3-49b8-8907-4734ec7e488b",
@@ -687,20 +688,19 @@
         "slug": "hello-world",
         "name": "Hello World",
         "uuid": "cc96d65d-1c79-40d0-8fd2-9a6665a43b01",
-        "prerequisites": [],
         "practices": [],
-        "difficulty": 1,
-        "order": 1
+        "prerequisites": [],
+        "difficulty": 1
       },
       {
         "slug": "resistor-color",
         "name": "Resistor Color",
         "uuid": "c1532449-bf9e-446a-8e8f-97a6c19608e5",
-        "prerequisites": [
+        "practices": [
           "atoms",
           "maps"
         ],
-        "practices": [
+        "prerequisites": [
           "atoms",
           "maps"
         ],
@@ -710,12 +710,12 @@
         "slug": "two-fer",
         "name": "Two Fer",
         "uuid": "6a130540-1b84-4147-8e6f-776dbf750489",
-        "prerequisites": [
-          "strings",
+        "practices": [
           "guards",
           "default-arguments"
         ],
-        "practices": [
+        "prerequisites": [
+          "strings",
           "guards",
           "default-arguments"
         ],
@@ -725,8 +725,8 @@
         "slug": "accumulate",
         "name": "Accumulate",
         "uuid": "e7c6a0d2-6aaf-4d55-99e2-8ffa65a5e8f0",
-        "prerequisites": [],
         "practices": [],
+        "prerequisites": [],
         "difficulty": 2,
         "status": "deprecated"
       },
@@ -734,13 +734,13 @@
         "slug": "acronym",
         "name": "Acronym",
         "uuid": "23989815-1b3f-4377-b6bf-ce9536432517",
-        "prerequisites": [
-          "strings",
-          "enum",
+        "practices": [
           "regular-expressions",
           "pipe-operator"
         ],
-        "practices": [
+        "prerequisites": [
+          "strings",
+          "enum",
           "regular-expressions",
           "pipe-operator"
         ],
@@ -750,6 +750,10 @@
         "slug": "all-your-base",
         "name": "All Your Base",
         "uuid": "f71d5f38-fcc9-4044-ade9-f779a8686c69",
+        "practices": [
+          "integers",
+          "multiple-clause-functions"
+        ],
         "prerequisites": [
           "atoms",
           "tuples",
@@ -764,21 +768,17 @@
           "tail-call-recursion",
           "enum"
         ],
-        "practices": [
-          "integers",
-          "multiple-clause-functions"
-        ],
         "difficulty": 2
       },
       {
         "slug": "anagram",
         "name": "Anagram",
         "uuid": "21e70267-097e-476f-aaff-233483514802",
-        "prerequisites": [
+        "practices": [
           "strings",
           "enum"
         ],
-        "practices": [
+        "prerequisites": [
           "strings",
           "enum"
         ],
@@ -788,14 +788,14 @@
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "8f40f0f6-95e6-4a4c-a576-3d677ffbbd9f",
+        "practices": [
+          "integers"
+        ],
         "prerequisites": [
           "integers",
           "lists",
           "enum",
           "erlang-libraries"
-        ],
-        "practices": [
-          "integers"
         ],
         "difficulty": 2
       },
@@ -803,14 +803,14 @@
         "slug": "collatz-conjecture",
         "name": "Collatz Conjecture",
         "uuid": "01f7ce73-ad6a-42bb-a401-cbd485c081d4",
+        "practices": [
+          "integers",
+          "guards"
+        ],
         "prerequisites": [
           "integers",
           "recursion",
           "multiple-clause-functions",
-          "guards"
-        ],
-        "practices": [
-          "integers",
           "guards"
         ],
         "difficulty": 2
@@ -819,13 +819,13 @@
         "slug": "darts",
         "name": "Darts",
         "uuid": "a68113f8-92be-40e0-a97f-eb4239303ef5",
+        "practices": [
+          "cond"
+        ],
         "prerequisites": [
           "cond",
           "integers",
           "floating-point-numbers"
-        ],
-        "practices": [
-          "cond"
         ],
         "difficulty": 2
       },
@@ -833,13 +833,13 @@
         "slug": "etl",
         "name": "ETL",
         "uuid": "b3a4c561-344a-403e-b5b3-3533d51e65f4",
+        "practices": [
+          "list-comprehensions"
+        ],
         "prerequisites": [
           "strings",
           "maps",
           "enum",
-          "list-comprehensions"
-        ],
-        "practices": [
           "list-comprehensions"
         ],
         "difficulty": 2
@@ -848,6 +848,9 @@
         "slug": "hamming",
         "name": "Hamming",
         "uuid": "aca03bcb-eb70-4646-be34-8c1a44026e9b",
+        "practices": [
+          "enum"
+        ],
         "prerequisites": [
           "atoms",
           "tuples",
@@ -857,15 +860,17 @@
           "enum",
           "recursion"
         ],
-        "practices": [
-          "enum"
-        ],
         "difficulty": 2
       },
       {
         "slug": "nth-prime",
         "name": "Nth Prime",
         "uuid": "6d0c0785-3514-44fc-9b5a-0758989d1c6a",
+        "practices": [
+          "integers",
+          "ranges",
+          "errors"
+        ],
         "prerequisites": [
           "integers",
           "cond",
@@ -880,24 +885,19 @@
           "errors",
           "exceptions"
         ],
-        "practices": [
-          "integers",
-          "ranges",
-          "errors"
-        ],
         "difficulty": 2
       },
       {
         "slug": "nucleotide-count",
         "name": "Nucleotide Count",
         "uuid": "7404e885-747a-46fc-be0c-c53f4b0e162f",
+        "practices": [
+          "charlists"
+        ],
         "prerequisites": [
           "charlists",
           "maps",
           "enum"
-        ],
-        "practices": [
-          "charlists"
         ],
         "difficulty": 2
       },
@@ -905,15 +905,15 @@
         "slug": "pangram",
         "name": "Pangram",
         "uuid": "20a0bbf8-751c-477a-a2cb-dd7cf4e4896c",
+        "practices": [
+          "charlists",
+          "ranges"
+        ],
         "prerequisites": [
           "strings",
           "charlists",
           "enum",
           "recursion",
-          "ranges"
-        ],
-        "practices": [
-          "charlists",
           "ranges"
         ],
         "difficulty": 2
@@ -922,6 +922,10 @@
         "slug": "pig-latin",
         "name": "Pig Latin",
         "uuid": "3aa45a2b-d3bc-4763-b11d-5d41a1cf505c",
+        "practices": [
+          "strings",
+          "binaries"
+        ],
         "prerequisites": [
           "strings",
           "regular-expressions",
@@ -932,16 +936,16 @@
           "case",
           "binaries"
         ],
-        "practices": [
-          "strings",
-          "binaries"
-        ],
         "difficulty": 2
       },
       {
         "slug": "protein-translation",
         "name": "Protein Translation",
         "uuid": "84af7be8-8f90-4990-9d48-b5324a0d4354",
+        "practices": [
+          "case",
+          "pattern-matching"
+        ],
         "prerequisites": [
           "atoms",
           "tuples",
@@ -954,16 +958,15 @@
           "binaries",
           "regular-expressions"
         ],
-        "practices": [
-          "case",
-          "pattern-matching"
-        ],
         "difficulty": 2
       },
       {
         "slug": "raindrops",
         "name": "Raindrops",
         "uuid": "4522b139-6f0c-4172-a4fa-6a6adef33a9e",
+        "practices": [
+          "enum"
+        ],
         "prerequisites": [
           "integers",
           "multiple-clause-functions",
@@ -973,23 +976,20 @@
           "maps",
           "enum"
         ],
-        "practices": [
-          "enum"
-        ],
         "difficulty": 2
       },
       {
         "slug": "resistor-color-duo",
         "name": "Resistor Color Duo",
         "uuid": "92387ac7-4c6d-4568-819e-e037b1d86a72",
+        "practices": [
+          "atoms",
+          "maps"
+        ],
         "prerequisites": [
           "atoms",
           "lists",
           "pattern-matching",
-          "maps"
-        ],
-        "practices": [
-          "atoms",
           "maps"
         ],
         "difficulty": 2
@@ -998,6 +998,9 @@
         "slug": "rna-transcription",
         "name": "RNA Transcription",
         "uuid": "a4629a60-752f-4234-99f1-6b3ac0b4ba18",
+        "practices": [
+          "charlists"
+        ],
         "prerequisites": [
           "charlists",
           "pattern-matching",
@@ -1005,15 +1008,15 @@
           "case",
           "enum"
         ],
-        "practices": [
-          "charlists"
-        ],
         "difficulty": 2
       },
       {
         "slug": "roman-numerals",
         "name": "Roman Numerals",
         "uuid": "4c0ece49-5710-43a1-88b3-2fb149de8552",
+        "practices": [
+          "recursion"
+        ],
         "prerequisites": [
           "strings",
           "recursion",
@@ -1025,15 +1028,16 @@
           "cond",
           "case"
         ],
-        "practices": [
-          "recursion"
-        ],
         "difficulty": 2
       },
       {
         "slug": "rotational-cipher",
         "name": "Rotational Cipher",
         "uuid": "99b344ff-b74c-4af5-9952-7738b493ee7b",
+        "practices": [
+          "charlists",
+          "ranges"
+        ],
         "prerequisites": [
           "strings",
           "charlists",
@@ -1045,25 +1049,21 @@
           "multiple-clause-functions",
           "guards"
         ],
-        "practices": [
-          "charlists",
-          "ranges"
-        ],
         "difficulty": 2
       },
       {
         "slug": "run-length-encoding",
         "name": "Run-Length Encoding",
         "uuid": "f4f759ea-53e1-42d6-a580-6e7b7d6a99a0",
+        "practices": [
+          "strings",
+          "regular-expressions"
+        ],
         "prerequisites": [
           "strings",
           "regular-expressions",
           "enum",
           "if"
-        ],
-        "practices": [
-          "strings",
-          "regular-expressions"
         ],
         "difficulty": 2
       },
@@ -1071,6 +1071,10 @@
         "slug": "scrabble-score",
         "name": "Scrabble Score",
         "uuid": "cc198564-72e6-444b-93b6-6b7ecf4d1759",
+        "practices": [
+          "pipe-operator",
+          "maps"
+        ],
         "prerequisites": [
           "strings",
           "maps",
@@ -1078,16 +1082,15 @@
           "recursion",
           "pipe-operator"
         ],
-        "practices": [
-          "pipe-operator",
-          "maps"
-        ],
         "difficulty": 2
       },
       {
         "slug": "secret-handshake",
         "name": "Secret Handshake",
         "uuid": "ea7da409-6bda-4cff-b26e-0909ba36f4f5",
+        "practices": [
+          "bit-manipulation"
+        ],
         "prerequisites": [
           "lists",
           "cond",
@@ -1098,23 +1101,20 @@
           "recursion",
           "bit-manipulation"
         ],
-        "practices": [
-          "bit-manipulation"
-        ],
         "difficulty": 2
       },
       {
         "slug": "series",
         "name": "Series",
         "uuid": "4a084cb7-335d-41f1-8148-5d3abbce8ab0",
+        "practices": [
+          "pipe-operator"
+        ],
         "prerequisites": [
           "multiple-clause-functions",
           "guards",
           "strings",
           "enum",
-          "pipe-operator"
-        ],
-        "practices": [
           "pipe-operator"
         ],
         "difficulty": 2
@@ -1123,6 +1123,11 @@
         "slug": "space-age",
         "name": "Space Age",
         "uuid": "1d02554e-15f3-46aa-9f14-60b4049f3100",
+        "practices": [
+          "atoms",
+          "floating-point-numbers",
+          "module-attributes-as-constants"
+        ],
         "prerequisites": [
           "floating-point-numbers",
           "atoms",
@@ -1132,17 +1137,17 @@
           "maps",
           "module-attributes-as-constants"
         ],
-        "practices": [
-          "atoms",
-          "floating-point-numbers",
-          "module-attributes-as-constants"
-        ],
         "difficulty": 2
       },
       {
         "slug": "strain",
         "name": "Strain",
         "uuid": "d51edc8a-893b-4b05-912f-759e0d85123b",
+        "practices": [
+          "lists",
+          "recursion",
+          "anonymous-functions"
+        ],
         "prerequisites": [
           "anonymous-functions",
           "lists",
@@ -1152,17 +1157,15 @@
           "case",
           "if"
         ],
-        "practices": [
-          "lists",
-          "recursion",
-          "anonymous-functions"
-        ],
         "difficulty": 2
       },
       {
         "slug": "sublist",
         "name": "Sublist",
         "uuid": "146dd0ed-5210-4b3c-bb4b-8d0a8e832aab",
+        "practices": [
+          "lists"
+        ],
         "prerequisites": [
           "lists",
           "cond",
@@ -1172,20 +1175,17 @@
           "pattern-matching",
           "recursion"
         ],
-        "practices": [
-          "lists"
-        ],
         "difficulty": 2
       },
       {
         "slug": "sum-of-multiples",
         "name": "Sum of Multiples",
         "uuid": "5b8eece1-845f-4a5a-8a2f-fe2bf66f5e57",
-        "prerequisites": [
+        "practices": [
           "enum",
           "ranges"
         ],
-        "practices": [
+        "prerequisites": [
           "enum",
           "ranges"
         ],
@@ -1195,6 +1195,11 @@
         "slug": "triangle",
         "name": "Triangle",
         "uuid": "546d92c7-c57b-4cbb-a721-9c393817a193",
+        "practices": [
+          "atoms",
+          "pattern-matching",
+          "guards"
+        ],
         "prerequisites": [
           "atoms",
           "tuples",
@@ -1205,17 +1210,16 @@
           "case",
           "if"
         ],
-        "practices": [
-          "atoms",
-          "pattern-matching",
-          "guards"
-        ],
         "difficulty": 2
       },
       {
         "slug": "atbash-cipher",
         "name": "Atbash Cipher",
         "uuid": "eab8a96f-74af-4e3d-8039-d1d74714f72b",
+        "practices": [
+          "strings",
+          "charlists"
+        ],
         "prerequisites": [
           "strings",
           "charlists",
@@ -1225,18 +1229,14 @@
           "enum",
           "recursion"
         ],
-        "practices": [
-          "strings",
-          "charlists"
-        ],
         "difficulty": 3
       },
       {
         "slug": "beer-song",
         "name": "Beer Song",
         "uuid": "24db624b-7c80-409d-97d5-e1177f025c67",
-        "prerequisites": [],
         "practices": [],
+        "prerequisites": [],
         "difficulty": 3,
         "status": "deprecated"
       },
@@ -1244,8 +1244,8 @@
         "slug": "binary",
         "name": "Binary",
         "uuid": "29c3c9ff-c7f3-4646-9612-7cd768d237ab",
-        "prerequisites": [],
         "practices": [],
+        "prerequisites": [],
         "difficulty": 3,
         "status": "deprecated"
       },
@@ -1253,6 +1253,11 @@
         "slug": "binary-search",
         "name": "Binary Search",
         "uuid": "89204af8-3914-404b-8984-39a8d60362c4",
+        "practices": [
+          "tuples",
+          "recursion",
+          "cond"
+        ],
         "prerequisites": [
           "tuples",
           "integers",
@@ -1261,17 +1266,17 @@
           "guards",
           "cond"
         ],
-        "practices": [
-          "tuples",
-          "recursion",
-          "cond"
-        ],
         "difficulty": 3
       },
       {
         "slug": "binary-search-tree",
         "name": "Binary Search Tree",
         "uuid": "77fe5eb6-a35b-4af4-9512-275f140c25d6",
+        "practices": [
+          "maps",
+          "recursion",
+          "nil"
+        ],
         "prerequisites": [
           "multiple-clause-functions",
           "pattern-matching",
@@ -1280,11 +1285,6 @@
           "case",
           "if",
           "enum",
-          "maps",
-          "recursion",
-          "nil"
-        ],
-        "practices": [
           "maps",
           "recursion",
           "nil"
@@ -1295,14 +1295,14 @@
         "slug": "bob",
         "name": "Bob",
         "uuid": "d20b49dc-cb6d-45fc-a168-78d002072c75",
+        "practices": [
+          "booleans",
+          "cond"
+        ],
         "prerequisites": [
           "booleans",
           "strings",
           "regular-expressions",
-          "cond"
-        ],
-        "practices": [
-          "booleans",
           "cond"
         ],
         "difficulty": 3
@@ -1311,6 +1311,9 @@
         "slug": "bottle-song",
         "name": "Bottle Song",
         "uuid": "6c240d6c-d897-4c4e-a556-b595f45c2d3b",
+        "practices": [
+          "multiple-clause-functions"
+        ],
         "prerequisites": [
           "strings",
           "multiple-clause-functions",
@@ -1318,25 +1321,22 @@
           "enum",
           "recursion"
         ],
-        "practices": [
-          "multiple-clause-functions"
-        ],
         "difficulty": 3
       },
       {
         "slug": "dnd-character",
         "name": "D&D Character",
         "uuid": "bd15a0e0-c19e-4a52-be6c-1a61d14c54cd",
+        "practices": [
+          "structs",
+          "randomness"
+        ],
         "prerequisites": [
           "integers",
           "enum",
           "recursion",
           "structs",
           "ranges",
-          "randomness"
-        ],
-        "practices": [
-          "structs",
           "randomness"
         ],
         "difficulty": 3
@@ -1345,6 +1345,10 @@
         "slug": "flatten-array",
         "name": "Flatten Array",
         "uuid": "0aae3af1-7c35-4d7c-aecf-8f89c7fbc300",
+        "practices": [
+          "lists",
+          "nil"
+        ],
         "prerequisites": [
           "lists",
           "recursion",
@@ -1353,21 +1357,17 @@
           "guards",
           "nil"
         ],
-        "practices": [
-          "lists",
-          "nil"
-        ],
         "difficulty": 3
       },
       {
         "slug": "gigasecond",
         "name": "Gigasecond",
         "uuid": "287331a4-64d5-4b35-b4c1-a1171dc338e1",
-        "prerequisites": [
-          "integers",
+        "practices": [
           "dates-and-time"
         ],
-        "practices": [
+        "prerequisites": [
+          "integers",
           "dates-and-time"
         ],
         "difficulty": 3
@@ -1376,6 +1376,9 @@
         "slug": "grade-school",
         "name": "Grade School",
         "uuid": "4e6d3ddf-b696-40dc-ba02-ed998e595be7",
+        "practices": [
+          "maps"
+        ],
         "prerequisites": [
           "atoms",
           "tuples",
@@ -1383,15 +1386,17 @@
           "maps",
           "enum"
         ],
-        "practices": [
-          "maps"
-        ],
         "difficulty": 3
       },
       {
         "slug": "grains",
         "name": "Grains",
         "uuid": "b030fa38-8935-4665-98c3-77f8434a6ea1",
+        "practices": [
+          "atoms",
+          "tuples",
+          "ranges"
+        ],
         "prerequisites": [
           "atoms",
           "tuples",
@@ -1403,19 +1408,14 @@
           "erlang-libraries",
           "bit-manipulation"
         ],
-        "practices": [
-          "atoms",
-          "tuples",
-          "ranges"
-        ],
         "difficulty": 3
       },
       {
         "slug": "hexadecimal",
         "name": "Hexadecimal",
         "uuid": "8154a099-5d6f-4e71-83fe-45ab23475778",
-        "prerequisites": [],
         "practices": [],
+        "prerequisites": [],
         "difficulty": 3,
         "status": "deprecated"
       },
@@ -1423,19 +1423,23 @@
         "slug": "house",
         "name": "House",
         "uuid": "5ff34497-3a3f-4aaf-b50c-872e7a7b8f51",
+        "practices": [],
         "prerequisites": [
           "lists",
           "enum",
           "strings",
           "ranges"
         ],
-        "practices": [],
         "difficulty": 3
       },
       {
         "slug": "isbn-verifier",
         "name": "ISBN Verifier",
         "uuid": "0fb09d01-1f8b-4654-9004-52baa057412e",
+        "practices": [
+          "regular-expressions",
+          "ranges"
+        ],
         "prerequisites": [
           "strings",
           "regular-expressions",
@@ -1445,22 +1449,18 @@
           "ranges",
           "enum"
         ],
-        "practices": [
-          "regular-expressions",
-          "ranges"
-        ],
         "difficulty": 3
       },
       {
         "slug": "isogram",
         "name": "Isogram",
         "uuid": "55a20a0f-0131-4e4e-b14f-f3cb49e3cc04",
+        "practices": [
+          "regular-expressions"
+        ],
         "prerequisites": [
           "strings",
           "enum",
-          "regular-expressions"
-        ],
-        "practices": [
           "regular-expressions"
         ],
         "difficulty": 3
@@ -1469,6 +1469,10 @@
         "slug": "kindergarten-garden",
         "name": "Kindergarten Garden",
         "uuid": "ae72ff68-e4c9-472c-8a86-7adaaa9086ee",
+        "practices": [
+          "maps",
+          "module-attributes-as-constants"
+        ],
         "prerequisites": [
           "tuples",
           "lists",
@@ -1483,23 +1487,19 @@
           "regular-expressions",
           "module-attributes-as-constants"
         ],
-        "practices": [
-          "maps",
-          "module-attributes-as-constants"
-        ],
         "difficulty": 3
       },
       {
         "slug": "leap",
         "name": "Leap",
         "uuid": "f231c263-61fa-4139-a1c9-a69e6986a4cd",
-        "prerequisites": [
+        "practices": [
           "integers",
           "booleans",
           "multiple-clause-functions",
           "guards"
         ],
-        "practices": [
+        "prerequisites": [
           "integers",
           "booleans",
           "multiple-clause-functions",
@@ -1511,6 +1511,9 @@
         "slug": "matching-brackets",
         "name": "Matching Brackets",
         "uuid": "cf0084a0-7b1d-4714-b7b2-618e3ad6e147",
+        "practices": [
+          "recursion"
+        ],
         "prerequisites": [
           "strings",
           "regular-expressions",
@@ -1524,15 +1527,16 @@
           "multiple-clause-functions",
           "binaries"
         ],
-        "practices": [
-          "recursion"
-        ],
         "difficulty": 3
       },
       {
         "slug": "matrix",
         "name": "Matrix",
         "uuid": "f0df392c-8ace-4639-b555-5e61e54a854e",
+        "practices": [
+          "structs",
+          "tuples"
+        ],
         "prerequisites": [
           "strings",
           "enum",
@@ -1540,22 +1544,18 @@
           "tuples",
           "maps"
         ],
-        "practices": [
-          "structs",
-          "tuples"
-        ],
         "difficulty": 3
       },
       {
         "slug": "pascals-triangle",
         "name": "Pascal's Triangle",
         "uuid": "b85c37c7-a76e-41fa-9ce6-abcdba2bd683",
+        "practices": [
+          "recursion"
+        ],
         "prerequisites": [
           "enum",
           "ranges",
-          "recursion"
-        ],
-        "practices": [
           "recursion"
         ],
         "difficulty": 3
@@ -1564,6 +1564,11 @@
         "slug": "perfect-numbers",
         "name": "Perfect Numbers",
         "uuid": "cf4816a5-8cee-4a85-8bbb-236c0676123c",
+        "practices": [
+          "atoms",
+          "cond",
+          "pattern-matching"
+        ],
         "prerequisites": [
           "atoms",
           "tuples",
@@ -1575,17 +1580,16 @@
           "enum",
           "recursion"
         ],
-        "practices": [
-          "atoms",
-          "cond",
-          "pattern-matching"
-        ],
         "difficulty": 3
       },
       {
         "slug": "prime-factors",
         "name": "Prime Factors",
         "uuid": "47328272-b2f6-42e4-a5a3-a5d276bfbdee",
+        "practices": [
+          "multiple-clause-functions",
+          "tail-call-recursion"
+        ],
         "prerequisites": [
           "integers",
           "case",
@@ -1595,16 +1599,13 @@
           "recursion",
           "tail-call-recursion"
         ],
-        "practices": [
-          "multiple-clause-functions",
-          "tail-call-recursion"
-        ],
         "difficulty": 3
       },
       {
         "slug": "proverb",
         "name": "Proverb",
         "uuid": "e230f49d-e92a-4440-8e7d-733755451cf5",
+        "practices": [],
         "prerequisites": [
           "lists",
           "strings",
@@ -1612,13 +1613,17 @@
           "multiple-clause-functions",
           "enum"
         ],
-        "practices": [],
         "difficulty": 3
       },
       {
         "slug": "resistor-color-trio",
         "name": "Resistor Color Trio",
         "uuid": "f1bad952-302b-4754-a439-a8c60c1d22a4",
+        "practices": [
+          "atoms",
+          "integers",
+          "maps"
+        ],
         "prerequisites": [
           "atoms",
           "tuples",
@@ -1628,17 +1633,16 @@
           "cond",
           "maps"
         ],
-        "practices": [
-          "atoms",
-          "integers",
-          "maps"
-        ],
         "difficulty": 3
       },
       {
         "slug": "say",
         "name": "Say",
         "uuid": "5ecbe1c9-12e3-42b6-921a-bc2d32011930",
+        "practices": [
+          "guards",
+          "module-attributes-as-constants"
+        ],
         "prerequisites": [
           "integers",
           "atoms",
@@ -1653,16 +1657,16 @@
           "ranges",
           "module-attributes-as-constants"
         ],
-        "practices": [
-          "guards",
-          "module-attributes-as-constants"
-        ],
         "difficulty": 3
       },
       {
         "slug": "simple-cipher",
         "name": "Simple Cipher",
         "uuid": "dbea6e3b-1c0c-471f-9af3-f8fd3cbb957a",
+        "practices": [
+          "charlists",
+          "randomness"
+        ],
         "prerequisites": [
           "multiple-clause-functions",
           "pattern-matching",
@@ -1676,16 +1680,15 @@
           "randomness",
           "erlang-libraries"
         ],
-        "practices": [
-          "charlists",
-          "randomness"
-        ],
         "difficulty": 3
       },
       {
         "slug": "twelve-days",
         "name": "Twelve Days",
         "uuid": "9dfb5dfc-1123-492b-9383-2a4312c219a4",
+        "practices": [
+          "multiple-clause-functions"
+        ],
         "prerequisites": [
           "lists",
           "strings",
@@ -1696,24 +1699,21 @@
           "maps",
           "ranges"
         ],
-        "practices": [
-          "multiple-clause-functions"
-        ],
         "difficulty": 3
       },
       {
         "slug": "word-count",
         "name": "Word Count",
         "uuid": "4a24ba2f-ae92-4095-be53-64bc881422ea",
+        "practices": [
+          "regular-expressions",
+          "pipe-operator"
+        ],
         "prerequisites": [
           "strings",
           "regular-expressions",
           "enum",
           "maps",
-          "pipe-operator"
-        ],
-        "practices": [
-          "regular-expressions",
           "pipe-operator"
         ],
         "difficulty": 3
@@ -1722,13 +1722,13 @@
         "slug": "allergies",
         "name": "Allergies",
         "uuid": "9a1b599c-3175-4166-9b53-491a2f565db6",
+        "practices": [
+          "bit-manipulation"
+        ],
         "prerequisites": [
           "lists",
           "maps",
           "enum",
-          "bit-manipulation"
-        ],
-        "practices": [
           "bit-manipulation"
         ],
         "difficulty": 4
@@ -1737,15 +1737,15 @@
         "slug": "complex-numbers",
         "name": "Complex Numbers",
         "uuid": "0cc86a92-7118-4cb9-8417-db4557baf364",
+        "practices": [
+          "erlang-libraries",
+          "floating-point-numbers"
+        ],
         "prerequisites": [
           "pattern-matching",
           "erlang-libraries",
           "floating-point-numbers",
           "tuples"
-        ],
-        "practices": [
-          "erlang-libraries",
-          "floating-point-numbers"
         ],
         "difficulty": 4
       },
@@ -1753,6 +1753,9 @@
         "slug": "crypto-square",
         "name": "Crypto Square",
         "uuid": "132981c5-d3cd-426a-8a93-8a72b1cd8564",
+        "practices": [
+          "strings"
+        ],
         "prerequisites": [
           "integers",
           "floating-point-numbers",
@@ -1763,21 +1766,18 @@
           "enum",
           "erlang-libraries"
         ],
-        "practices": [
-          "strings"
-        ],
         "difficulty": 4
       },
       {
         "slug": "difference-of-squares",
         "name": "Difference of Squares",
         "uuid": "bb9b24da-1ee6-42fb-936f-5fc41d97ee27",
+        "practices": [
+          "ranges"
+        ],
         "prerequisites": [
           "integers",
           "enum",
-          "ranges"
-        ],
-        "practices": [
           "ranges"
         ],
         "difficulty": 4
@@ -1786,8 +1786,8 @@
         "slug": "diffie-hellman",
         "name": "Diffie-Hellman",
         "uuid": "92caf2b9-3fca-401c-8daa-aaa0193e704f",
-        "prerequisites": [],
         "practices": [],
+        "prerequisites": [],
         "difficulty": 4,
         "status": "deprecated"
       },
@@ -1795,6 +1795,9 @@
         "slug": "dominoes",
         "name": "Dominoes",
         "uuid": "9fdeb525-90d8-45ca-9a24-ca46b4363e03",
+        "practices": [
+          "tail-call-recursion"
+        ],
         "prerequisites": [
           "tuples",
           "atoms",
@@ -1808,15 +1811,17 @@
           "recursion",
           "tail-call-recursion"
         ],
-        "practices": [
-          "tail-call-recursion"
-        ],
         "difficulty": 4
       },
       {
         "slug": "grep",
         "name": "Grep",
         "uuid": "b2630a58-6ee1-4b3b-ad5c-e09b8bfe2a30",
+        "practices": [
+          "case",
+          "regular-expressions",
+          "file"
+        ],
         "prerequisites": [
           "multiple-clause-functions",
           "pattern-matching",
@@ -1829,17 +1834,13 @@
           "regular-expressions",
           "file"
         ],
-        "practices": [
-          "case",
-          "regular-expressions",
-          "file"
-        ],
         "difficulty": 4
       },
       {
         "slug": "killer-sudoku-helper",
         "name": "Killer Sudoku Helper",
         "uuid": "ac7f32a8-920b-4132-b904-76131b344f12",
+        "practices": [],
         "prerequisites": [
           "integers",
           "lists",
@@ -1849,13 +1850,15 @@
           "pattern-matching",
           "recursion"
         ],
-        "practices": [],
         "difficulty": 4
       },
       {
         "slug": "largest-series-product",
         "name": "Largest Series Product",
         "uuid": "79525094-76dd-4cf0-8956-fdd33de855e2",
+        "practices": [
+          "integers"
+        ],
         "prerequisites": [
           "multiple-clause-functions",
           "pattern-matching",
@@ -1867,15 +1870,17 @@
           "errors",
           "exceptions"
         ],
-        "practices": [
-          "integers"
-        ],
         "difficulty": 4
       },
       {
         "slug": "meetup",
         "name": "Meetup",
         "uuid": "68fee2cd-a5bc-40f2-8936-a3bb10463498",
+        "practices": [
+          "atoms",
+          "pattern-matching",
+          "dates-and-time"
+        ],
         "prerequisites": [
           "atoms",
           "cond",
@@ -1888,17 +1893,16 @@
           "ranges",
           "dates-and-time"
         ],
-        "practices": [
-          "atoms",
-          "pattern-matching",
-          "dates-and-time"
-        ],
         "difficulty": 4
       },
       {
         "slug": "parallel-letter-frequency",
         "name": "Parallel Letter Frequency",
         "uuid": "1992eaf7-7fbe-4176-ad46-01e325c27bcb",
+        "practices": [
+          "processes",
+          "tasks"
+        ],
         "prerequisites": [
           "strings",
           "regular-expressions",
@@ -1907,16 +1911,16 @@
           "pids",
           "tasks"
         ],
-        "practices": [
-          "processes",
-          "tasks"
-        ],
         "difficulty": 4
       },
       {
         "slug": "phone-number",
         "name": "Phone Number",
         "uuid": "e8b049b7-6648-412c-8a11-0c95a15e2641",
+        "practices": [
+          "strings",
+          "regular-expressions"
+        ],
         "prerequisites": [
           "atoms",
           "tuples",
@@ -1932,16 +1936,15 @@
           "with",
           "binaries"
         ],
-        "practices": [
-          "strings",
-          "regular-expressions"
-        ],
         "difficulty": 4
       },
       {
         "slug": "rational-numbers",
         "name": "Rational Numbers",
         "uuid": "e2777a03-d890-453e-af5b-d61f60adbbf5",
+        "practices": [
+          "basics"
+        ],
         "prerequisites": [
           "pattern-matching",
           "basics",
@@ -1949,25 +1952,22 @@
           "floating-point-numbers",
           "guards"
         ],
-        "practices": [
-          "basics"
-        ],
         "difficulty": 4
       },
       {
         "slug": "simple-linked-list",
         "name": "Simple Linked List",
         "uuid": "e5d2386a-3021-4329-a4b7-6164e49df776",
+        "practices": [
+          "atoms",
+          "tuples",
+          "tail-call-recursion"
+        ],
         "prerequisites": [
           "atoms",
           "tuples",
           "pattern-matching",
           "recursion",
-          "tail-call-recursion"
-        ],
-        "practices": [
-          "atoms",
-          "tuples",
           "tail-call-recursion"
         ],
         "difficulty": 4
@@ -1976,13 +1976,13 @@
         "slug": "spiral-matrix",
         "name": "Spiral Matrix",
         "uuid": "cf28d2b2-763e-404b-90b0-637263d3bba6",
+        "practices": [
+          "lists",
+          "recursion"
+        ],
         "prerequisites": [
           "lists",
           "enum",
-          "recursion"
-        ],
-        "practices": [
-          "lists",
           "recursion"
         ],
         "difficulty": 4
@@ -1991,6 +1991,10 @@
         "slug": "tournament",
         "name": "Tournament",
         "uuid": "29a6f3f4-0d20-4447-8916-b98270780e0e",
+        "practices": [
+          "maps",
+          "pattern-matching"
+        ],
         "prerequisites": [
           "tuples",
           "strings",
@@ -2003,16 +2007,16 @@
           "case",
           "if"
         ],
-        "practices": [
-          "maps",
-          "pattern-matching"
-        ],
         "difficulty": 4
       },
       {
         "slug": "affine-cipher",
         "name": "Affine Cipher",
         "uuid": "18d12bac-ead0-456c-bcef-ccb2fd06fe72",
+        "practices": [
+          "pipe-operator",
+          "strings"
+        ],
         "prerequisites": [
           "pattern-matching",
           "guards",
@@ -2030,16 +2034,18 @@
           "list-comprehensions",
           "charlists"
         ],
-        "practices": [
-          "pipe-operator",
-          "strings"
-        ],
         "difficulty": 5
       },
       {
         "slug": "bank-account",
         "name": "Bank Account",
         "uuid": "5d5e0f6c-f4b7-418e-88f8-4b1d0f99bfb0",
+        "practices": [
+          "if",
+          "processes",
+          "pids",
+          "agent"
+        ],
         "prerequisites": [
           "if",
           "cond",
@@ -2049,18 +2055,16 @@
           "agent",
           "genserver"
         ],
-        "practices": [
-          "if",
-          "processes",
-          "pids",
-          "agent"
-        ],
         "difficulty": 5
       },
       {
         "slug": "clock",
         "name": "Clock",
         "uuid": "e7cb9cd0-5893-4ebb-b801-f5d548945531",
+        "practices": [
+          "structs",
+          "protocols"
+        ],
         "prerequisites": [
           "integers",
           "multiple-clause-functions",
@@ -2073,16 +2077,15 @@
           "structs",
           "protocols"
         ],
-        "practices": [
-          "structs",
-          "protocols"
-        ],
         "difficulty": 5
       },
       {
         "slug": "custom-set",
         "name": "Custom Set",
         "uuid": "1219528b-3438-4313-84c5-a9c1bbb6ffd3",
+        "practices": [
+          "maps"
+        ],
         "prerequisites": [
           "lists",
           "cond",
@@ -2095,15 +2098,15 @@
           "maps",
           "enum"
         ],
-        "practices": [
-          "maps"
-        ],
         "difficulty": 5
       },
       {
         "slug": "diamond",
         "name": "Diamond",
         "uuid": "89633764-ace4-4ad5-a1aa-22cae7be7d18",
+        "practices": [
+          "charlists"
+        ],
         "prerequisites": [
           "charlists",
           "strings",
@@ -2111,15 +2114,15 @@
           "recursion",
           "ranges"
         ],
-        "practices": [
-          "charlists"
-        ],
         "difficulty": 5
       },
       {
         "slug": "food-chain",
         "name": "Food Chain",
         "uuid": "7541eeac-169f-4b28-b9d2-7125225b121b",
+        "practices": [
+          "strings"
+        ],
         "prerequisites": [
           "lists",
           "strings",
@@ -2127,15 +2130,15 @@
           "multiple-clause-functions",
           "enum"
         ],
-        "practices": [
-          "strings"
-        ],
         "difficulty": 5
       },
       {
         "slug": "luhn",
         "name": "Luhn",
         "uuid": "c38ca1a8-9f0e-49de-81f9-5712ce459839",
+        "practices": [
+          "integers"
+        ],
         "prerequisites": [
           "integers",
           "strings",
@@ -2149,15 +2152,16 @@
           "recursion",
           "enum"
         ],
-        "practices": [
-          "integers"
-        ],
         "difficulty": 5
       },
       {
         "slug": "palindrome-products",
         "name": "Palindrome Products",
         "uuid": "5ab8275f-bf1d-472d-9545-8ac622ce6f5d",
+        "practices": [
+          "ranges",
+          "list-comprehensions"
+        ],
         "prerequisites": [
           "strings",
           "enum",
@@ -2167,16 +2171,15 @@
           "errors",
           "exceptions"
         ],
-        "practices": [
-          "ranges",
-          "list-comprehensions"
-        ],
         "difficulty": 5
       },
       {
         "slug": "pythagorean-triplet",
         "name": "Pythagorean Triplet",
         "uuid": "087a2a3b-71e2-4473-ab2f-3be5240567b5",
+        "practices": [
+          "enum"
+        ],
         "prerequisites": [
           "integers",
           "ranges",
@@ -2184,22 +2187,19 @@
           "list-comprehensions",
           "recursion"
         ],
-        "practices": [
-          "enum"
-        ],
         "difficulty": 5
       },
       {
         "slug": "saddle-points",
         "name": "Saddle Points",
         "uuid": "8e5c050a-ff42-4a23-ba32-84595b7476f4",
+        "practices": [
+          "maps"
+        ],
         "prerequisites": [
           "lists",
           "strings",
           "enum",
-          "maps"
-        ],
-        "practices": [
           "maps"
         ],
         "difficulty": 5
@@ -2208,6 +2208,10 @@
         "slug": "scale-generator",
         "name": "Scale Generator",
         "uuid": "94de8b3f-79d7-4367-821c-e239c95e32ca",
+        "practices": [
+          "lists",
+          "module-attributes-as-constants"
+        ],
         "prerequisites": [
           "lists",
           "strings",
@@ -2223,16 +2227,16 @@
           "module-attributes-as-constants",
           "default-arguments"
         ],
-        "practices": [
-          "lists",
-          "module-attributes-as-constants"
-        ],
         "difficulty": 5
       },
       {
         "slug": "sieve",
         "name": "Sieve",
         "uuid": "78cfa21b-bc7f-426b-9ef3-57b8639e887b",
+        "practices": [
+          "lists",
+          "recursion"
+        ],
         "prerequisites": [
           "integers",
           "lists",
@@ -2243,16 +2247,15 @@
           "enum",
           "recursion"
         ],
-        "practices": [
-          "lists",
-          "recursion"
-        ],
         "difficulty": 5
       },
       {
         "slug": "square-root",
         "name": "Square Root",
         "uuid": "bf9e6251-105b-4fd7-b388-c6f5a652d174",
+        "practices": [
+          "integers"
+        ],
         "prerequisites": [
           "if",
           "cond",
@@ -2261,20 +2264,17 @@
           "pattern-matching",
           "recursion"
         ],
-        "practices": [
-          "integers"
-        ],
         "difficulty": 5
       },
       {
         "slug": "transpose",
         "name": "Transpose",
         "uuid": "ce270a34-add1-422c-bb86-53b310f05e27",
-        "prerequisites": [
-          "strings",
+        "practices": [
           "enum"
         ],
-        "practices": [
+        "prerequisites": [
+          "strings",
           "enum"
         ],
         "difficulty": 5
@@ -2283,6 +2283,9 @@
         "slug": "yacht",
         "name": "Yacht",
         "uuid": "d2ee3ff4-2f01-404a-a4f0-d15823ac0482",
+        "practices": [
+          "multiple-clause-functions"
+        ],
         "prerequisites": [
           "lists",
           "cond",
@@ -2293,15 +2296,13 @@
           "guards",
           "enum"
         ],
-        "practices": [
-          "multiple-clause-functions"
-        ],
         "difficulty": 5
       },
       {
         "slug": "knapsack",
         "name": "Knapsack",
         "uuid": "1770aab6-2289-4134-b6ac-7d346e421e06",
+        "practices": [],
         "prerequisites": [
           "atoms",
           "integers",
@@ -2311,13 +2312,15 @@
           "recursion",
           "guards"
         ],
-        "practices": [],
         "difficulty": 6
       },
       {
         "slug": "ledger",
         "name": "Ledger",
         "uuid": "a3134be3-ac2f-4612-9cd2-4f2a6a4de48f",
+        "practices": [
+          "multiple-clause-functions"
+        ],
         "prerequisites": [
           "if",
           "lists",
@@ -2328,15 +2331,16 @@
           "multiple-clause-functions",
           "pattern-matching"
         ],
-        "practices": [
-          "multiple-clause-functions"
-        ],
         "difficulty": 6
       },
       {
         "slug": "list-ops",
         "name": "List Ops",
         "uuid": "86658a31-d401-401b-80df-2c4df35f9b15",
+        "practices": [
+          "lists",
+          "tail-call-recursion"
+        ],
         "prerequisites": [
           "lists",
           "recursion",
@@ -2344,16 +2348,15 @@
           "multiple-clause-functions",
           "pattern-matching"
         ],
-        "practices": [
-          "lists",
-          "tail-call-recursion"
-        ],
         "difficulty": 6
       },
       {
         "slug": "markdown",
         "name": "Markdown",
         "uuid": "5dfa24bf-e77c-47c6-88e1-e50cbeecd159",
+        "practices": [
+          "regular-expressions"
+        ],
         "prerequisites": [
           "strings",
           "enum",
@@ -2365,15 +2368,16 @@
           "case",
           "if"
         ],
-        "practices": [
-          "regular-expressions"
-        ],
         "difficulty": 6
       },
       {
         "slug": "ocr-numbers",
         "name": "OCR Numbers",
         "uuid": "3f321191-afb1-4aa1-995b-204aa460269e",
+        "practices": [
+          "strings",
+          "multiple-clause-functions"
+        ],
         "prerequisites": [
           "strings",
           "charlists",
@@ -2386,16 +2390,15 @@
           "maps",
           "binaries"
         ],
-        "practices": [
-          "strings",
-          "multiple-clause-functions"
-        ],
         "difficulty": 6
       },
       {
         "slug": "rail-fence-cipher",
         "name": "Rail Fence Cipher",
         "uuid": "3daeb229-0638-443f-9ae2-222ebb88c11a",
+        "practices": [
+          "ranges"
+        ],
         "prerequisites": [
           "strings",
           "cond",
@@ -2409,15 +2412,16 @@
           "ranges",
           "streams"
         ],
-        "practices": [
-          "ranges"
-        ],
         "difficulty": 6
       },
       {
         "slug": "robot-simulator",
         "name": "Robot Simulator",
         "uuid": "e5e55560-852f-4551-b4da-c9f4a3141470",
+        "practices": [
+          "structs",
+          "multiple-clause-functions"
+        ],
         "prerequisites": [
           "atoms",
           "multiple-clause-functions",
@@ -2429,16 +2433,15 @@
           "structs",
           "default-arguments"
         ],
-        "practices": [
-          "structs",
-          "multiple-clause-functions"
-        ],
         "difficulty": 6
       },
       {
         "slug": "satellite",
         "name": "Satellite",
         "uuid": "a07e01e6-7cea-4db9-a514-7c95788e90a9",
+        "practices": [
+          "recursion"
+        ],
         "prerequisites": [
           "pattern-matching",
           "tuples",
@@ -2448,15 +2451,15 @@
           "lists",
           "enum"
         ],
-        "practices": [
-          "recursion"
-        ],
         "difficulty": 6
       },
       {
         "slug": "state-of-tic-tac-toe",
         "name": "State of Tic-Tac-Toe",
         "uuid": "905ac84d-7ba1-4208-bee1-55d8efde0c01",
+        "practices": [
+          "cond"
+        ],
         "prerequisites": [
           "strings",
           "tuples",
@@ -2469,13 +2472,16 @@
           "case",
           "charlists"
         ],
-        "practices": ["cond"],
         "difficulty": 6
       },
       {
         "slug": "variable-length-quantity",
         "name": "Variable Length Quantity",
         "uuid": "2e8b9b75-609d-4c99-947c-28274a9dbf27",
+        "practices": [
+          "bit-manipulation",
+          "bitstrings"
+        ],
         "prerequisites": [
           "atoms",
           "tuples",
@@ -2491,16 +2497,16 @@
           "bit-manipulation",
           "bitstrings"
         ],
-        "practices": [
-          "bit-manipulation",
-          "bitstrings"
-        ],
         "difficulty": 6
       },
       {
         "slug": "alphametics",
         "name": "Alphametics",
         "uuid": "7ed99829-acd8-4724-b92f-85146f1709f9",
+        "practices": [
+          "strings",
+          "pattern-matching"
+        ],
         "prerequisites": [
           "strings",
           "regular-expressions",
@@ -2514,16 +2520,15 @@
           "charlists",
           "ranges"
         ],
-        "practices": [
-          "strings",
-          "pattern-matching"
-        ],
         "difficulty": 7
       },
       {
         "slug": "change",
         "name": "Change",
         "uuid": "14bddd31-a68f-4a16-830f-6e8ecf8199f2",
+        "practices": [
+          "integers"
+        ],
         "prerequisites": [
           "integers",
           "atoms",
@@ -2535,15 +2540,15 @@
           "enum",
           "maps"
         ],
-        "practices": [
-          "integers"
-        ],
         "difficulty": 7
       },
       {
         "slug": "connect",
         "name": "Connect",
         "uuid": "c36fd67a-a370-49b7-b778-9a542e2c5a75",
+        "practices": [
+          "enum"
+        ],
         "prerequisites": [
           "lists",
           "cond",
@@ -2555,15 +2560,15 @@
           "strings",
           "enum"
         ],
-        "practices": [
-          "enum"
-        ],
         "difficulty": 7
       },
       {
         "slug": "minesweeper",
         "name": "Minesweeper",
         "uuid": "8d665135-31dc-490a-8f6d-51c6654099bd",
+        "practices": [
+          "enum"
+        ],
         "prerequisites": [
           "lists",
           "charlists",
@@ -2578,15 +2583,18 @@
           "maps",
           "ranges"
         ],
-        "practices": [
-          "enum"
-        ],
         "difficulty": 7
       },
       {
         "slug": "queen-attack",
         "name": "Queen Attack",
         "uuid": "5bc0d877-ad13-461e-bdbd-cd262b875dbb",
+        "practices": [
+          "structs",
+          "pattern-matching",
+          "errors",
+          "exceptions"
+        ],
         "prerequisites": [
           "lists",
           "cond",
@@ -2602,18 +2610,15 @@
           "exceptions",
           "structs"
         ],
-        "practices": [
-          "structs",
-          "pattern-matching",
-          "errors",
-          "exceptions"
-        ],
         "difficulty": 7
       },
       {
         "slug": "rectangles",
         "name": "Rectangles",
         "uuid": "bc7f9ea3-4e67-406a-91fe-807859fb9c7f",
+        "practices": [
+          "list-comprehensions"
+        ],
         "prerequisites": [
           "tuples",
           "maps",
@@ -2623,15 +2628,13 @@
           "enum",
           "ranges"
         ],
-        "practices": [
-          "list-comprehensions"
-        ],
         "difficulty": 7
       },
       {
         "slug": "two-bucket",
         "name": "Two Bucket",
         "uuid": "07b4679a-3d9f-42bc-ad1e-b9ba272a1c15",
+        "practices": [],
         "prerequisites": [
           "atoms",
           "tuples",
@@ -2645,13 +2648,15 @@
           "enum",
           "recursion"
         ],
-        "practices": [],
         "difficulty": 7
       },
       {
         "slug": "word-search",
         "name": "Word Search",
         "uuid": "41ab29d0-e094-4910-bb51-b99bdedc7f17",
+        "practices": [
+          "list-comprehensions"
+        ],
         "prerequisites": [
           "atoms",
           "tuples",
@@ -2669,15 +2674,15 @@
           "maps",
           "structs"
         ],
-        "practices": [
-          "list-comprehensions"
-        ],
         "difficulty": 7
       },
       {
         "slug": "wordy",
         "name": "Wordy",
         "uuid": "087940a2-5372-4ff3-aa9f-ce2eb982d91c",
+        "practices": [
+          "pattern-matching"
+        ],
         "prerequisites": [
           "strings",
           "regular-expressions",
@@ -2691,15 +2696,15 @@
           "errors",
           "exceptions"
         ],
-        "practices": [
-          "pattern-matching"
-        ],
         "difficulty": 7
       },
       {
         "slug": "book-store",
         "name": "Book Store",
         "uuid": "d6d9687c-8bf0-482e-8309-4f3d706ba753",
+        "practices": [
+          "list-comprehensions"
+        ],
         "prerequisites": [
           "lists",
           "pattern-matching",
@@ -2712,15 +2717,18 @@
           "ranges",
           "recursion"
         ],
-        "practices": [
-          "list-comprehensions"
-        ],
         "difficulty": 8
       },
       {
         "slug": "bowling",
         "name": "Bowling",
         "uuid": "3b252cc6-cc55-4187-891e-c10aaabac81f",
+        "practices": [
+          "pattern-matching",
+          "guards",
+          "structs",
+          "multiple-clause-functions"
+        ],
         "prerequisites": [
           "pattern-matching",
           "multiple-clause-functions",
@@ -2733,18 +2741,17 @@
           "case",
           "structs"
         ],
-        "practices": [
-          "pattern-matching",
-          "guards",
-          "structs",
-          "multiple-clause-functions"
-        ],
         "difficulty": 8
       },
       {
         "slug": "circular-buffer",
         "name": "Circular Buffer",
         "uuid": "535d64c9-95f7-4f59-b7b6-d459337b82b0",
+        "practices": [
+          "processes",
+          "genserver",
+          "errors"
+        ],
         "prerequisites": [
           "atoms",
           "tuples",
@@ -2763,17 +2770,16 @@
           "errors",
           "genserver"
         ],
-        "practices": [
-          "processes",
-          "genserver",
-          "errors"
-        ],
         "difficulty": 8
       },
       {
         "slug": "dot-dsl",
         "name": "DOT DSL",
         "uuid": "c316b8ef-7b2d-43d4-b402-f7d28b0cdaa7",
+        "practices": [
+          "ast",
+          "keyword-lists"
+        ],
         "prerequisites": [
           "structs",
           "regular-expressions",
@@ -2790,16 +2796,15 @@
           "nil",
           "ast"
         ],
-        "practices": [
-          "ast",
-          "keyword-lists"
-        ],
         "difficulty": 8
       },
       {
         "slug": "poker",
         "name": "Poker",
         "uuid": "53d67dde-5a53-4d89-b77c-027d144135b9",
+        "practices": [
+          "pattern-matching"
+        ],
         "prerequisites": [
           "tuples",
           "lists",
@@ -2814,15 +2819,16 @@
           "if",
           "structs"
         ],
-        "practices": [
-          "pattern-matching"
-        ],
         "difficulty": 8
       },
       {
         "slug": "react",
         "name": "React",
         "uuid": "e4462e0c-b396-459c-815a-993a0f04c46a",
+        "practices": [
+          "processes",
+          "genserver"
+        ],
         "prerequisites": [
           "atoms",
           "tuples",
@@ -2843,16 +2849,15 @@
           "genserver",
           "recursion"
         ],
-        "practices": [
-          "processes",
-          "genserver"
-        ],
         "difficulty": 8
       },
       {
         "slug": "sgf-parsing",
         "name": "SGF Parsing",
         "uuid": "f87d00fa-99c4-4fda-9d90-d9c4d569a82e",
+        "practices": [
+          "regular-expressions"
+        ],
         "prerequisites": [
           "atoms",
           "tuples",
@@ -2870,15 +2875,15 @@
           "with",
           "regular-expressions"
         ],
-        "practices": [
-          "regular-expressions"
-        ],
         "difficulty": 8
       },
       {
         "slug": "zipper",
         "name": "Zipper",
         "uuid": "bc315734-051c-4735-9a8a-3aacb094d2ca",
+        "practices": [
+          "structs"
+        ],
         "prerequisites": [
           "recursion",
           "structs",
@@ -2889,15 +2894,15 @@
           "pattern-matching",
           "multiple-clause-functions"
         ],
-        "practices": [
-          "structs"
-        ],
         "difficulty": 8
       },
       {
         "slug": "go-counting",
         "name": "Go Counting",
         "uuid": "560347a2-9f20-4bad-b932-72a75ee08e14",
+        "practices": [
+          "list-comprehensions"
+        ],
         "prerequisites": [
           "atoms",
           "if",
@@ -2914,15 +2919,15 @@
           "pipe-operator",
           "recursion"
         ],
-        "practices": [
-          "list-comprehensions"
-        ],
         "difficulty": 9
       },
       {
         "slug": "pov",
         "name": "POV",
         "uuid": "abc93451-451d-4497-b590-68cbf82e0a20",
+        "practices": [
+          "recursion"
+        ],
         "prerequisites": [
           "pattern-matching",
           "case",
@@ -2935,15 +2940,16 @@
           "structs",
           "multiple-clause-functions"
         ],
-        "practices": [
-          "recursion"
-        ],
         "difficulty": 9
       },
       {
         "slug": "zebra-puzzle",
         "name": "Zebra Puzzle",
         "uuid": "0a561b08-6e61-4415-a3f1-e7d411a4a0e2",
+        "practices": [
+          "enum",
+          "cond"
+        ],
         "prerequisites": [
           "pattern-matching",
           "case",
@@ -2953,16 +2959,17 @@
           "maps",
           "atoms"
         ],
-        "practices": [
-          "enum",
-          "cond"
-        ],
         "difficulty": 9
       },
       {
         "slug": "forth",
         "name": "Forth",
         "uuid": "2abfa3e5-d358-4a07-91f9-d4ad04eb719d",
+        "practices": [
+          "regular-expressions",
+          "errors",
+          "exceptions"
+        ],
         "prerequisites": [
           "pattern-matching",
           "multiple-clause-functions",
@@ -2977,11 +2984,6 @@
           "if",
           "case",
           "structs",
-          "errors",
-          "exceptions"
-        ],
-        "practices": [
-          "regular-expressions",
           "errors",
           "exceptions"
         ],
@@ -3327,14 +3329,14 @@
     }
   ],
   "tags": [
+    "execution_mode/compiled",
     "paradigm/functional",
+    "platform/linux",
+    "platform/mac",
+    "platform/windows",
+    "runtime/beam",
     "typing/dynamic",
     "typing/strong",
-    "execution_mode/compiled",
-    "platform/windows",
-    "platform/mac",
-    "platform/linux",
-    "runtime/beam",
     "used_for/backends",
     "used_for/embedded_systems",
     "used_for/financial_systems",
