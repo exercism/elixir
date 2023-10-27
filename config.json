@@ -1702,6 +1702,18 @@
         "difficulty": 3
       },
       {
+        "slug": "pop-count",
+        "name": "Pop Count",
+        "uuid": "8a9d6e1e-9188-44c9-8681-ade84d340dd0",
+        "practices": [
+          "bit-manipulation"
+        ],
+        "prerequisites": [
+          "bit-manipulation"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "word-count",
         "name": "Word Count",
         "uuid": "4a24ba2f-ae92-4095-be53-64bc881422ea",
