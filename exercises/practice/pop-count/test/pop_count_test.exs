@@ -3,22 +3,22 @@ defmodule PopCountTest do
 
   describe "egg count" do
     test "0 eggs" do
-      assert PopCount.eggCount(0) == 0
+      assert PopCount.egg_count(0) == 0
     end
 
     @tag :pending
     test "1 egg" do
-      assert PopCount.eggCount(16) == 1
+      assert PopCount.egg_count(16) == 1
     end
 
     @tag :pending
     test "4 eggs" do
-      assert PopCount.eggCount(89) == 4
+      assert PopCount.egg_count(89) == 4
     end
 
     @tag :pending
     test "13 eggs" do
-      assert PopCount.eggCount(2_000_000_000) == 13
+      assert PopCount.egg_count(2_000_000_000) == 13
     end
   end
 end
