@@ -1583,6 +1583,21 @@
         "difficulty": 3
       },
       {
+        "slug": "pop-count",
+        "name": "Pop Count",
+        "uuid": "8a9d6e1e-9188-44c9-8681-ade84d340dd0",
+        "practices": [
+          "bit-manipulation"
+        ],
+        "prerequisites": [
+          "bit-manipulation",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "recursion"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "prime-factors",
         "name": "Prime Factors",
         "uuid": "47328272-b2f6-42e4-a5a3-a5d276bfbdee",
