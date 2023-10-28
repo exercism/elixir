@@ -20,5 +20,10 @@ defmodule PopCountTest do
     test "13 eggs" do
       assert PopCount.egg_count(2_000_000_000) == 13
     end
+    
+    @tag :pending
+    test "100 eggs" do
+      assert PopCount.egg_count(1_267_650_600_228_229_401_496_703_205_375) == 100
+    end
   end
 end
