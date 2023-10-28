@@ -1590,7 +1590,10 @@
           "bit-manipulation"
         ],
         "prerequisites": [
-          "bit-manipulation"
+          "bit-manipulation",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "recursion"
         ],
         "difficulty": 3
       },
