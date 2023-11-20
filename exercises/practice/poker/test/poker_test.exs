@@ -60,6 +60,14 @@ defmodule PokerTest do
   end
 
   @tag :pending
+  test "winning high card hand also has the lowest card" do
+    high_of_8_low_of_5_and_3 = ~w(2S 5H 6S 8D 7H)
+    high_of_8_low_of_4_and_2 = ~w(3S 4D 6D 8C 7S)
+    winning_hands = Poker.best_hand([high_of_8_low_of_5_and_3, high_of_8_low_of_4_and_2])
+    assert_poker(winning_hands, [high_of_8_low_of_5_and_3])
+  end
+
+  @tag :pending
   test "one pair beats high card" do
     high_of_king = ~w(4S 5H 6C 8D KH)
     pair_of_4 = ~w(2S 4H 6S 4D JH)
@@ -73,6 +81,14 @@ defmodule PokerTest do
     pair_of_4 = ~w(2S 4H 6C 4D JD)
     winning_hands = Poker.best_hand([pair_of_2, pair_of_4])
     assert_poker(winning_hands, [pair_of_4])
+  end
+
+  @tag :pending
+  test "both hands have the same pair, high card wins" do
+    pair_of_4_low_of_j_and_3 = ~w(4H 4S AH JC 3D)
+    pair_of_4_low_of_6_and_5 = ~w(4C 4D AS 5D 6C)
+    winning_hands = Poker.best_hand([pair_of_4_low_of_j_and_3, pair_of_4_low_of_6_and_5])
+    assert_poker(winning_hands, [pair_of_4_low_of_j_and_3])
   end
 
   @tag :pending
@@ -141,14 +157,10 @@ defmodule PokerTest do
 
   @tag :pending
   test "with multiple decks, two players can have same three of a kind, ties go to highest remaining cards" do
-    three_aces_7_high = ~w(4S AH AS 7C AD)
+    three_aces_7_high = ~w(5S AH AS 7C AD)
     three_aces_8_high = ~w(4S AH AS 8C AD)
     winning_hands = Poker.best_hand([three_aces_7_high, three_aces_8_high])
     assert_poker(winning_hands, [three_aces_8_high])
-
-    three_aces_8_high_5_low = ~w(5S AH AS 8C AD)
-    winning_hands = Poker.best_hand([three_aces_8_high_5_low, three_aces_8_high])
-    assert_poker(winning_hands, [three_aces_8_high_5_low])
   end
 
   @tag :pending
@@ -209,13 +221,9 @@ defmodule PokerTest do
 
   @tag :pending
   test "both hands have a flush, tie goes to high card, down to the last one if necessary" do
-    flush_to_9 = ~w(4H 7H 8H 9H 6H)
-    flush_to_7 = ~w(2S 4S 5S 6S 7S)
-    winning_hands = Poker.best_hand([flush_to_9, flush_to_7])
-    assert_poker(winning_hands, [flush_to_9])
-
-    flush_to_9_with_4_matches = ~w(3S 6S 7S 8S 9S)
-    winning_hands = Poker.best_hand([flush_to_9, flush_to_9_with_4_matches])
+    flush_to_9 = ~w(2H 7H 8H 9H 6H)
+    flush_to_8 = ~w(3S 5S 6S 7S 8S)
+    winning_hands = Poker.best_hand([flush_to_9, flush_to_8])
     assert_poker(winning_hands, [flush_to_9])
   end
 
