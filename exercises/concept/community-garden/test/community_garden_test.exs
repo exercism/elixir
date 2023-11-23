@@ -45,6 +45,32 @@ defmodule CommunityGardenTest do
     assert plot_3.plot_id == 3
   end
 
+  @tag task_id: 3
+  test "registered plots have incremental unique id when registered concurrently" do
+    {:ok, pid} = CommunityGarden.start()
+
+    total_plots = 20
+    test_process_pid = self()
+
+    Enum.each(1..total_plots, fn n ->
+      spawn(fn ->
+        plot = CommunityGarden.register(pid, "Mary Bumblebee #{n}")
+        send(test_process_pid, {n, plot})
+      end)
+    end)
+
+    plot_ids =
+      Enum.map(1..total_plots, fn n ->
+        receive do
+          {^n, plot} -> plot.plot_id
+        after
+          100 -> nil
+        end
+      end)
+
+    assert Enum.sort(plot_ids) == Enum.to_list(1..total_plots)
+  end
+
   @tag task_id: 4
   test "can release a plot" do
     assert {:ok, pid} = CommunityGarden.start()
