@@ -27,7 +27,7 @@ raise StackUnderflowError, "when dividing"
 
 ## 3. Write a dividing function
 
-Implement the `divide/1` function which takes a stack _(list of numbers)_ and:
+Implement the `divide/1` function which takes a stack _(a list of two numbers)_ and:
 
 - raises _stack underflow_ when the stack does not contain enough numbers
 - raises _division by zero_ when the divisor is 0 (note the stack of numbers is stored in the reverse order)
