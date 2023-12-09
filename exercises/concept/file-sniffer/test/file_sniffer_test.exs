@@ -113,6 +113,35 @@ defmodule FileSnifferTest do
     end
   end
 
+  describe "return nil when input is a bitstring, but not a binary" do
+    @tag task_id: 2
+    test "bmp" do
+      assert FileSniffer.type_from_binary(<<0x42, 0x4D, 0::1>>) == nil
+    end
+
+    @tag task_id: 2
+    test "gif" do
+      assert FileSniffer.type_from_binary(<<0x47, 0x49, 0x46, 0::1>>) == nil
+    end
+
+    @tag task_id: 2
+    test "jpg" do
+      assert FileSniffer.type_from_binary(<<0xFF, 0xD8, 0xFF, 0::1>>) == nil
+    end
+
+    @tag task_id: 2
+    test "png" do
+      assert FileSniffer.type_from_binary(
+               <<0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A, 0::1>>
+             ) == nil
+    end
+
+    @tag task_id: 2
+    test "exe" do
+      assert FileSniffer.type_from_binary(<<0x7F, 0x45, 0x4C, 0x46, 0::1>>) == nil
+    end
+  end
+
   describe "verify valid files" do
     @tag task_id: 3
     test "bmp" do
