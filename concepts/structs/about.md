@@ -58,9 +58,9 @@ end
 # => (ArgumentError) the following keys must also be given when building struct User: [:username]
 ```
 
-[atom]: https://elixir-lang.org/getting-started/basic-types.html#atoms
+[atom]: https://hexdocs.pm/elixir/basic-types.html#atoms
 [access-behaviour]: https://hexdocs.pm/elixir/Access.html#content
 [maps]: https://hexdocs.pm/elixir/Map.html#content
-[getting-started]: https://elixir-lang.org/getting-started/structs.html
+[getting-started]: https://hexdocs.pm/elixir/structs.html
 [docs-defstruct]: https://hexdocs.pm/elixir/Kernel.html#defstruct/1
 [enforcing-keys]: https://hexdocs.pm/elixir/Kernel.html#defstruct/1-enforcing-keys

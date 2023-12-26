@@ -94,7 +94,7 @@ defmodule MyApp.Hello do
 end
 ```
 
-[getting-started-strings]: https://elixir-lang.org/getting-started/basic-types.html#strings
+[getting-started-strings]: https://hexdocs.pm/elixir/basic-types.html#strings
 [kernel-concat]: https://hexdocs.pm/elixir/Kernel.html#%3C%3E/2
 [io-puts]: https://hexdocs.pm/elixir/IO.html#puts/2
 [string-module-functions]: https://hexdocs.pm/elixir/String.html#functions

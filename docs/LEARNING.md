@@ -3,11 +3,11 @@
 We recommend learning Elixir by working through the syllabus and learning exercises on Exercism.
 They were designed to teach you Elixir from scratch.
 
-The official [Elixir Getting Started Guide](https://elixir-lang.org/getting-started/introduction.html) is also an excellent place to start.
+The official [Elixir Getting Started Guide](https://hexdocs.pm/elixir/introduction.html) is also an excellent place to start.
 
 ## Additional learning resources
 
-* [Elixir Getting Started Guide](https://elixir-lang.org/getting-started/introduction.html)
+* [Elixir Getting Started Guide](https://hexdocs.pm/elixir/introduction.html)
 * [Elixir Documentation](https://hexdocs.pm/elixir/)
 * [Programming Elixir](https://pragprog.com/titles/elixir16/programming-elixir-1-6/), by Dave Thomas
 * [Elixir in Action](https://www.manning.com/books/elixir-in-action-second-edition), by Saša Jurić

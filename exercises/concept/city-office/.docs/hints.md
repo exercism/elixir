@@ -57,7 +57,7 @@
 [writing-documentation]: https://hexdocs.pm/elixir/writing-documentation.html
 [typespecs]: https://hexdocs.pm/elixir/typespecs.html
 [typespecs-types]: https://hexdocs.pm/elixir/typespecs.html#types-and-their-syntax
-[getting-started-module-attributes]: https://elixir-lang.org/getting-started/module-attributes.html#as-annotations
-[getting-started-typespecs]: https://elixir-lang.org/getting-started/typespecs-and-behaviours.html#types-and-specs
+[getting-started-module-attributes]: https://hexdocs.pm/elixir/module-attributes.html#as-annotations
+[getting-started-typespecs]: https://hexdocs.pm/elixir/typespecs.html#types-and-their-syntax
 [string-t]: https://hexdocs.pm/elixir/String.html#t:t/0
 [type-operator]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#::/2

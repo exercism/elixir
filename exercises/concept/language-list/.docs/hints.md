@@ -28,7 +28,7 @@
 
 - Your function should return a boolean value indicating whether `"Elixir"` is a member of the list. Elixir [provides a function][in] to test list membership.
 
-[list]: https://elixir-lang.org/getting-started/basic-types.html#linked-lists
+[list]: https://hexdocs.pm/elixir/lists-and-tuples.html#linked-lists
 [hd]: https://hexdocs.pm/elixir/Kernel.html#hd/1
 [tl]: https://hexdocs.pm/elixir/Kernel.html#tl/1
 [length]: https://hexdocs.pm/elixir/Kernel.html#length/1

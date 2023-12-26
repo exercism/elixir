@@ -1,9 +1,5 @@
 [
   {
-    "url": "https://elixir-lang.org/getting-started/typespecs-and-behaviours.html#behaviours",
-    "description": "Getting Started - Behaviours"
-  },
-  {
     "url": "https://hexdocs.pm/elixir/typespecs.html#behaviours",
     "description": "Documentation - Behaviours"
   },

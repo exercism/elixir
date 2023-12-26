@@ -25,7 +25,7 @@
 - There is a special syntax for [interpolating][string-interpolation] an expression inside of a string.
 - There is a special syntax for writing [multiline strings][heredoc-syntax] without needing to escape newlines.
 
-[getting-started-strings]: https://elixir-lang.org/getting-started/basic-types.html#strings
+[getting-started-strings]: https://hexdocs.pm/elixir/basic-types.html#strings
 [string-module-functions]: https://hexdocs.pm/elixir/String.html#functions
 [string-first]: https://hexdocs.pm/elixir/String.html#first/1
 [string-trim]: https://hexdocs.pm/elixir/String.html#trim/1

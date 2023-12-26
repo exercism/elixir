@@ -19,4 +19,4 @@ File.read("invalid.txt")
 
 [tuple-module]: https://hexdocs.pm/elixir/Tuple.html
 [kernel-module]: https://hexdocs.pm/elixir/Kernel.html
-[getting-started-lists-or-tuples]: https://elixir-lang.org/getting-started/basic-types.html#lists-or-tuples
+[getting-started-lists-or-tuples]: https://hexdocs.pm/elixir/lists-and-tuples.html#lists-or-tuples

@@ -25,7 +25,7 @@
 - There is a [built-in function][keyword-get] for getting a single value for a given key.
 - You do not need to implement the filtering of bottles on your own. You just need to conditionally use the already-implemented `filter_by_country/2` function.
 
-[getting-started-keyword-lists]: https://elixir-lang.org/getting-started/keywords-and-maps.html#keyword-lists
+[getting-started-keyword-lists]: https://hexdocs.pm/elixir/keywords-and-maps.html#keyword-lists
 [elixir-school-keyword-lists]: https://elixirschool.com/en/lessons/basics/collections/#keyword-lists
 [keyword]: https://hexdocs.pm/elixir/Keyword.html
 [keyword-get-values]: https://hexdocs.pm/elixir/Keyword.html#get_values/2

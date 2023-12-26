@@ -22,7 +22,7 @@
 
 - There is a [built-in function][float-floor] for rounding floats down with desired precision.
 
-[getting-started-basic-arithmetic]: https://elixir-lang.org/getting-started/basic-types.html#basic-arithmetic
+[getting-started-basic-arithmetic]: https://hexdocs.pm/elixir/basic-types.html#basic-arithmetic
 [kernel-arithmetic-operators]: https://hexdocs.pm/elixir/Kernel.html#*/2
 [kernel-trunc]: https://hexdocs.pm/elixir/Kernel.html#trunc/1
 [float-functions]: https://hexdocs.pm/elixir/Float.html#functions

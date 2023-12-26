@@ -1,10 +1,10 @@
 [
   {
-    "url": "https://elixir-lang.org/getting-started/case-cond-and-if.html#if-and-unless",
+    "url": "https://hexdocs.pm/elixir/case-cond-and-if.html#if-unless",
     "description": "Getting Started: `if` and `unless`"
   },
   {
-    "url": "https://elixir-lang.org/getting-started/basic-types.html#booleans",
+    "url": "https://hexdocs.pm/elixir/basic-types.html#booleans-and-nil",
     "description": "Getting Started: Booleans"
   },
   {

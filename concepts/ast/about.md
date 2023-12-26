@@ -37,7 +37,7 @@ The ability to represent code as an AST is at the heart of metaprogramming in El
 
 Another use case for ASTs is static code analysis, like Exercism's own tool, the Analyzer, which you might already know as the little bot that leaves comments on your solutions.
 
-[getting-started-quote]: https://elixir-lang.org/getting-started/meta/quote-and-unquote.html#quoting
+[getting-started-quote]: https://hexdocs.pm/elixir/quote-and-unquote.html
 [doc-quote]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#quote/2
 [doc-code-string-to-quoted]: https://hexdocs.pm/elixir/Code.html#string_to_quoted/2
 [macro-prewalk]: https://hexdocs.pm/elixir/Macro.html#prewalk/3

@@ -76,11 +76,11 @@ string = "this is a string! 1, 2, 3!"
 Comments can be used to leave notes for other developers reading the source code. Single line comments in Elixir are preceded by `#`.
 
 [match]: https://elixirschool.com/en/lessons/basics/pattern_matching/
-[operators]: https://elixir-lang.org/getting-started/basic-types.html#basic-arithmetic
+[operators]: https://hexdocs.pm/elixir/basic-types.html#basic-arithmetic
 [modules]: https://elixirschool.com/en/lessons/basics/modules/#modules
 [functions]: https://elixirschool.com/en/lessons/basics/functions/#named-functions
 [def]: https://hexdocs.pm/elixir/Kernel.html#def/2
 [defp]: https://hexdocs.pm/elixir/Kernel.html#defp/2
 [defmodule]: https://hexdocs.pm/elixir/Kernel.html#defmodule/2
-[string]: https://elixir-lang.org/getting-started/basic-types.html#strings
+[string]: https://hexdocs.pm/elixir/basic-types.html#strings
 [docs]: https://hexdocs.pm/elixir/Kernel.html#content

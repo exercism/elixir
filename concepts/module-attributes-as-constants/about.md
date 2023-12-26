@@ -21,5 +21,5 @@ defmodule Example do
 end
 ```
 
-[module-attr]: https://elixir-lang.org/getting-started/module-attributes.html
-[attr-as-const]: https://elixir-lang.org/getting-started/module-attributes.html#as-constants
+[module-attr]: https://hexdocs.pm/elixir/module-attributes.html
+[attr-as-const]: https://hexdocs.pm/elixir/module-attributes.html#as-constants

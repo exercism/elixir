@@ -37,8 +37,8 @@
 - You need to define a [function][functions] without any arguments.
 - You need to return a [string][string].
 
-[functions]: https://elixir-lang.org/getting-started/modules-and-functions.html#named-functions
+[functions]: https://hexdocs.pm/elixir/modules-and-functions.html#function-definition
 [return]: https://stackoverflow.com/questions/37445838/returning-values-in-elixir
-[operators]: https://elixir-lang.org/getting-started/basic-types.html#basic-arithmetic
-[integers]: https://elixir-lang.org/getting-started/basic-types.html
-[string]: https://elixir-lang.org/getting-started/basic-types.html#strings
+[operators]: https://hexdocs.pm/elixir/basic-types.html#basic-arithmetic
+[integers]: https://hexdocs.pm/elixir/basic-types.html
+[string]: https://hexdocs.pm/elixir/basic-types.html#strings

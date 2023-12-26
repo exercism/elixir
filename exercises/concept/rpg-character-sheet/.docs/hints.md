@@ -33,8 +33,8 @@
 - The function and its option mentioned above will append a colon and a space to that string for you.
 
 [module-io]: https://hexdocs.pm/elixir/IO.html
-[getting-started-io]: https://elixir-lang.org/getting-started/io-and-the-file-system.html#the-io-module
-[getting-started-debugging-io-inspect]: https://elixir-lang.org/getting-started/debugging.html#ioinspect2
+[getting-started-io]: https://hexdocs.pm/elixir/io-and-the-file-system.html#the-io-module
+[getting-started-debugging-io-inspect]: https://hexdocs.pm/elixir/debugging.html#io-inspect-2
 [elixir-school-io-inspect-label]: https://elixirschool.com/blog/til-io-inspect-labels/
 [io-puts]: https://hexdocs.pm/elixir/IO.html#puts/2
 [io-gets]: https://hexdocs.pm/elixir/IO.html#gets/2

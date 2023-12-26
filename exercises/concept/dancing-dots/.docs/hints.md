@@ -39,11 +39,11 @@
 - Use the [`Keyword`][keyword] module to work with the options keyword list.
 - There is [a built-in guard][is_number] for checking if a value is a number.
 
-[getting-started-behaviours]: https://elixir-lang.org/getting-started/typespecs-and-behaviours.html#behaviours
+[getting-started-behaviours]: https://hexdocs.pm/elixir/typespecs.html#behaviours
 [doc-behaviours]: https://hexdocs.pm/elixir/typespecs.html#behaviours
 [elixir-school-behaviours]: https://elixirschool.com/en/lessons/advanced/behaviours
 [doc-use]: https://hexdocs.pm/elixir/Kernel.html#use/2
-[getting-started-use]: https://elixir-lang.org/getting-started/alias-require-and-import.html#use
+[getting-started-use]: https://hexdocs.pm/elixir/alias-require-and-import.html#use
 [typespec]: https://hexdocs.pm/elixir/typespecs.html
 [defoverridable]: https://hexdocs.pm/elixir/Kernel.html#defoverridable/1
 [quote]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#quote/2

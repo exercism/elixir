@@ -20,9 +20,9 @@
 - Compare the return value of each function, then return the appropriate value.
   - You can use the [`if` macro conditional][if] for binary conditions.
 
-[binary-matching]: https://elixir-lang.org/getting-started/binaries-strings-and-char-lists.html#binaries
-[if]: https://elixir-lang.org/getting-started/case-cond-and-if.html#if-and-unless
-[mfc]: https://elixir-lang.org/getting-started/modules-and-functions.html#named-functions
+[binary-matching]: https://hexdocs.pm/elixir/binaries-strings-and-charlists.html#binaries
+[if]: https://hexdocs.pm/elixir/case-cond-and-if.html#if-unless
+[mfc]: https://hexdocs.pm/elixir/modules-and-functions.html#function-definition
 [mimetype]: https://en.wikipedia.org/wiki/Media_type
-[pattern-matching]: https://elixir-lang.org/getting-started/pattern-matching.html#pattern-matching
+[pattern-matching]: https://hexdocs.pm/elixir/pattern-matching.html#pattern-matching
 [special-forms]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#%3C%3C%3E%3E/1

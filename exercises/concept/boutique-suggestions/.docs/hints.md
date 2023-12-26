@@ -21,8 +21,8 @@
 - There a number of [keyword list functions][kw-module] available to use to retrieve options from a keyword list.
 - Use a _filter_ expression to return false when the combined price is greater than the maximum price.
 
-[elixir-lists]: https://elixir-lang.org/getting-started/basic-types.html#linked-lists
-[elixir-maps]: https://elixir-lang.org/getting-started/keywords-and-maps.html#maps
-[elixir-kwlists]: https://elixir-lang.org/getting-started/keywords-and-maps.html#keyword-lists
-[elixir-comprehensions]: https://elixir-lang.org/getting-started/comprehensions.html
+[elixir-lists]: https://hexdocs.pm/elixir/lists-and-tuples.html#linked-lists
+[elixir-maps]: https://hexdocs.pm/elixir/keywords-and-maps.html#maps-as-key-value-pairs
+[elixir-kwlists]: https://hexdocs.pm/elixir/keywords-and-maps.html#keyword-lists
+[elixir-comprehensions]: https://hexdocs.pm/elixir/comprehensions.html
 [kw-module]: https://hexdocs.pm/elixir/Keyword.html

@@ -25,7 +25,7 @@
 - There is a [special macro][kernel-defimpl] for implementing a protocol for a given data type.
 - Implementing a protocol means writing a function definition for each function header from the protocol.
 
-[getting-started-protocols]: https://elixir-lang.org/getting-started/protocols.html
+[getting-started-protocols]: https://hexdocs.pm/elixir/protocols.html
 [elixir-school-protocols]: https://elixirschool.com/en/lessons/advanced/protocols/
 [kernel-defprotocol]: https://hexdocs.pm/elixir/Kernel.html#defprotocol/2
 [kernel-defimpl]: https://hexdocs.pm/elixir/Kernel.html#defimpl/3

@@ -32,4 +32,4 @@ end
 
 Note that multiple clause functions should not be confused with function overloading that you might know from other programming languages. In Elixir, functions are identified by their name and arity only, not types of arguments (since there is no static typing). The function `number/1` from the example is considered to be a single function regardless of how many clauses it has.
 
-[multi-function-clause]: https://elixir-lang.org/getting-started/modules-and-functions.html#named-functions
+[multi-function-clause]: https://hexdocs.pm/elixir/modules-and-functions.html#function-definition

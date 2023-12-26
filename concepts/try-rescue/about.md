@@ -70,8 +70,8 @@ As it's written in [Elixir's getting started guide][getting-started]:
 
 > It’s up to your application to decide if an error while [performing an action] is exceptional or not. That’s why Elixir doesn’t impose exceptions on [...] functions. Instead, it leaves it up to the developer to choose the best way to proceed.
 
-[getting-started]: https://elixir-lang.org/getting-started/try-catch-and-rescue.html
-[errors]: https://elixir-lang.org/getting-started/try-catch-and-rescue.html#errors
+[getting-started]: https://hexdocs.pm/elixir/try-catch-and-rescue.html
+[errors]: https://hexdocs.pm/elixir/try-catch-and-rescue.html#errors
 [docs-try]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#try/1
 [argument-error]: https://hexdocs.pm/elixir/ArgumentError.html#content
 [exercism-exceptions]: https://exercism.org/tracks/elixir/concepts/exceptions

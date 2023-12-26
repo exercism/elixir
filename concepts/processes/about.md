@@ -97,8 +97,8 @@ end
 
 In practice, this approach is rarely used directly. Elixir offers concurrency abstractions, such as the [`Agent` module][agent] or a [`GenServer` behaviour][genserver], that both build on top of the receive loop. However, it is crucial to understand those basics to be able to efficiently use the abstractions.
 
-[getting-started-processes-state]: https://elixir-lang.org/getting-started/processes.html#state
-[getting-started-processes-links]: https://elixir-lang.org/getting-started/processes.html#links
+[getting-started-processes-state]: https://hexdocs.pm/elixir/processes.html#state
+[getting-started-processes-links]: https://hexdocs.pm/elixir/processes.html#links
 [process-alive]: https://hexdocs.pm/elixir/Process.html#alive?
 [agent]: https://hexdocs.pm/elixir/Agent.html
 [genserver]: https://hexdocs.pm/elixir/GenServer.html

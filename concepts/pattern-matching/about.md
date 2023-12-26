@@ -48,6 +48,6 @@ end
   ```
 
 [assertive-style]: https://blog.plataformatec.com.br/2014/09/writing-assertive-code-with-elixir/
-[pattern-match-doc]: https://elixir-lang.org/getting-started/pattern-matching.html
+[pattern-match-doc]: https://hexdocs.pm/elixir/pattern-matching.html
 [match-op]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#=/2
-[getting-started-pin-operator]: https://elixir-lang.org/getting-started/pattern-matching.html#the-pin-operator
+[getting-started-pin-operator]: https://hexdocs.pm/elixir/pattern-matching.html#the-pin-operator

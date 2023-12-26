@@ -22,8 +22,8 @@
 
 [enum]: https://hexdocs.pm/elixir/Enum.html#content
 [guards]: https://hexdocs.pm/elixir/patterns-and-guards.html#guards
-[list]: https://elixir-lang.org/getting-started/basic-types.html#linked-lists
-[multiple-fn-clauses]: https://elixir-lang.org/getting-started/modules-and-functions.html#named-functions
-[pattern-matching]: https://elixir-lang.org/getting-started/pattern-matching.html#pattern-matching-1
+[list]: https://hexdocs.pm/elixir/lists-and-tuples.html#linked-lists
+[multiple-fn-clauses]: https://hexdocs.pm/elixir/modules-and-functions.html#function-definition
+[pattern-matching]: https://hexdocs.pm/elixir/pattern-matching.html#pattern-matching
 [stream]: https://hexdocs.pm/elixir/Stream.html#content
 [stream-iterate]: https://hexdocs.pm/elixir/Stream.html#iterate/2

@@ -15,6 +15,6 @@
 - You can use the [`cond/1` special form][cond] to decide if an alert should be sent.
 - You can use [equality operators][equality] to compare atoms for equality.
 
-[equality]: https://elixir-lang.org/getting-started/basic-operators.html
-[atom]: https://elixir-lang.org/getting-started/basic-types.html#atoms
-[cond]: https://elixir-lang.org/getting-started/case-cond-and-if.html#cond
+[equality]: https://hexdocs.pm/elixir/Kernel.html#==/2
+[atom]: https://hexdocs.pm/elixir/basic-types.html#atoms
+[cond]: https://hexdocs.pm/elixir/case-cond-and-if.html#cond

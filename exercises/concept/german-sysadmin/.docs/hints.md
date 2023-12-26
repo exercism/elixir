@@ -25,9 +25,9 @@
 - There is [a built-in function][kernel-concat-list] that allows you to concatenate two lists.
 
 [syntax-reference-code-points]: https://hexdocs.pm/elixir/syntax-reference.html#integers-in-other-bases-and-unicode-code-points
-[getting-started-code-points]: https://elixir-lang.org/getting-started/binaries-strings-and-char-lists.html#unicode-and-code-points
-[getting-started-charlists]: https://elixir-lang.org/getting-started/binaries-strings-and-char-lists.html#charlists
-[getting-started-case]: https://elixir-lang.org/getting-started/case-cond-and-if.html#case
+[getting-started-code-points]: https://hexdocs.pm/elixir/binaries-strings-and-charlists.html#unicode-and-code-points
+[getting-started-charlists]: https://hexdocs.pm/elixir/binaries-strings-and-charlists.html#charlists
+[getting-started-case]: https://hexdocs.pm/elixir/case-cond-and-if.html#case
 [elixirschool-charlists]: https://elixirschool.com/en/lessons/basics/strings/#charlists
 [elixirschool-case]: https://elixirschool.com/en/lessons/basics/control-structures/#case
 [unicode-character-reference]: https://en.wikibooks.org/wiki/Unicode/Character_reference/0000-0FFF

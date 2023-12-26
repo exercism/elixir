@@ -141,9 +141,7 @@ above the function declaration. These start with the `@spec` tag and
 typically follow the `@spec function_name(type1, type2) :: return_type`
 format. These are used in Elixir and Erlang as documentation and
 in conjunction with a tool called Dialyzer to find type inconsistencies
-and possible bugs. For more information see the
-[Elixir typespecs guide](https://elixir-lang.org/getting-started/typespecs-and-behaviours.html)
-or the [typespecs documentation](https://hexdocs.pm/elixir/typespecs.html). For
+and possible bugs. For more information see the [typespecs documentation](https://hexdocs.pm/elixir/typespecs.html). For
 documentation about Dialyzer see [Erlang -- dialyzer](https://www.erlang.org/doc/man/dialyzer.html).
 
 Optionally, you may want to check
