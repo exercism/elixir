@@ -105,7 +105,7 @@ defmodule LanguageListTest do
   describe "functional_list?/1" do
     @tag task_id: 6
     test "a functional language list" do
-      assert LanguageList.functional_list?(["Clojure", "Haskell", "Erlang", "F#", "Elixir"])
+      assert LanguageList.functional_list?(["Clojure", "Haskell", "Erlang", "Elixir", "F#"])
     end
 
     @tag task_id: 6
