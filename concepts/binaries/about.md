@@ -57,8 +57,8 @@ This can be also done for strings:
 
 [bin-concat]: https://hexdocs.pm/elixir/Kernel.html#%3C%3E/2
 [bin-size]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#%3C%3C%3E%3E/1-unit-and-size
-[binary]: https://elixir-lang.org/getting-started/binaries-strings-and-char-lists.html#binaries
-[bitstring]: https://elixir-lang.org/getting-started/binaries-strings-and-char-lists.html#bitstrings
+[binary]: https://hexdocs.pm/elixir/binaries-strings-and-charlists.html#binaries
+[bitstring]: https://hexdocs.pm/elixir/binaries-strings-and-charlists.html#bitstrings
 [byte-size]: https://hexdocs.pm/elixir/Kernel.html#byte_size/1
 [special-form]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#%3C%3C%3E%3E/1
 [string-length]: https://hexdocs.pm/elixir/String.html#length/1

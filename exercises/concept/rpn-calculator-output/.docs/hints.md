@@ -20,6 +20,6 @@
 
 - You can use the `after` block to carry out a function whether a `try` block succeeds or is rescued.
 
-[getting-started-errors]: https://elixir-lang.org/getting-started/try-catch-and-rescue.html
-[getting-started-io]: https://elixir-lang.org/getting-started/io-and-the-file-system.html
+[getting-started-errors]: https://hexdocs.pm/elixir/try-catch-and-rescue.html
+[getting-started-io]: https://hexdocs.pm/elixir/io-and-the-file-system.html
 [io-write]: https://hexdocs.pm/elixir/IO.html#write/2

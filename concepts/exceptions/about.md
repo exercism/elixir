@@ -58,6 +58,6 @@ raise MyCustomizedError, "a very bad error occurred"
 # => ** (MyCustomizedError) Alert: a very bad error occurred
 ```
 
-[getting-started-errors]: https://elixir-lang.org/getting-started/try-catch-and-rescue.html#errors
+[getting-started-errors]: https://hexdocs.pm/elixir/try-catch-and-rescue.html#errors
 [defexception]: https://hexdocs.pm/elixir/Kernel.html#defexception/1
 [exception-behaviour]: https://hexdocs.pm/elixir/Exception.html

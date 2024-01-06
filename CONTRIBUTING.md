@@ -42,7 +42,7 @@ Please keep the following in mind:
 
 - For practice exercises, `instructions.md` come from the [problem specifications](https://github.com/exercism/problem-specifications) repository. They cannot be changed without updating them in that repository first. If Elixir-specific changes are necessary, they can be appended to the instructions by creating a `instructions.append.md` file.
 
-- For practice exercises, use typespecs in the example and template files as described [here](https://elixir-lang.org/getting-started/typespecs-and-behaviours.html).
+- For practice exercises, use typespecs in the example and template files as described [here](https://hexdocs.pm/elixir/typespecs.html).
 
 - Each practice exercise test file should have a `test_helper.exs` with code like the following at the top of the file.
   This allows the tests to be run on CI and configures tests to be skipped with the `:pending` flag.

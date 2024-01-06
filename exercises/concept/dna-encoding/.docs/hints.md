@@ -38,9 +38,9 @@
 - You will need to reverse the accumulator at the end. Write a private tail-recursive `reverse` function to do that and use it in the base-case of the `decode` function.
 
 [integer-literal]: https://hexdocs.pm/elixir/syntax-reference.html#integers-in-other-bases-and-unicode-code-points
-[codepoint]: https://elixir-lang.org/getting-started/binaries-strings-and-char-lists.html#unicode-and-code-points
-[charlist]: https://elixir-lang.org/getting-started/binaries-strings-and-char-lists.html#charlists
-[bitstring]: https://elixir-lang.org/getting-started/binaries-strings-and-char-lists.html#bitstrings
+[codepoint]: https://hexdocs.pm/elixir/binaries-strings-and-charlists.html#unicode-and-code-points
+[charlist]: https://hexdocs.pm/elixir/binaries-strings-and-charlists.html#charlists
+[bitstring]: https://hexdocs.pm/elixir/binaries-strings-and-charlists.html#bitstrings
 [bitstring-form]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#%3C%3C%3E%3E/1
 [bitstring-matching]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#%3C%3C%3E%3E/1-binary-bitstring-matching
 [type-operator]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#::/2

@@ -32,7 +32,7 @@
 - There is a [`Regex` function][regex-run] that runs a regular expression against a string and returns all captures.
 
 [regex-docs]: https://hexdocs.pm/elixir/Regex.html
-[sigils-regex]: https://elixir-lang.org/getting-started/sigils.html#regular-expressions
+[sigils-regex]: https://hexdocs.pm/elixir/sigils.html#regular-expressions
 [website-regex-info]: https://www.regular-expressions.info
 [website-rexegg]: https://www.rexegg.com/
 [website-regexone]: https://regexone.com/

@@ -97,7 +97,7 @@ if "YELLING!" =~ ~r/!$/, do: "Whoa, chill out!"
 if String.ends_with?("YELLING!", "!"), do: "Whoa, chill out!"
 ```
 
-[sigils-regex]: https://elixir-lang.org/getting-started/sigils.html#regular-expressions
+[sigils-regex]: https://hexdocs.pm/elixir/sigils.html#regular-expressions
 [string-functions]: https://hexdocs.pm/elixir/String.html#functions
 [regex-modifiers]: https://hexdocs.pm/elixir/Regex.html#module-modifiers
 [regex-character-classes]: https://hexdocs.pm/elixir/Regex.html#module-character-classes

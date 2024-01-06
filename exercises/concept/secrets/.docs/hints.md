@@ -40,7 +40,7 @@
 - Return an anonymous function which [composes the functions][fn-composition] passed in to `Secret.secret_combine/2`.
 - Use a `.` before `()` when calling an anonymous function.
 
-[anon-fns]: https://elixir-lang.org/getting-started/basic-types.html#anonymous-functions
+[anon-fns]: https://hexdocs.pm/elixir/anonymous-functions.html
 [bitwise-hexdocs]: https://hexdocs.pm/elixir/Bitwise.html
 [bitwise-wiki]: https://en.wikipedia.org/wiki/Bitwise_operation
 [closure]: https://en.wikipedia.org/wiki/Closure_(computer_programming)

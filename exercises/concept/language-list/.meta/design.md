@@ -49,4 +49,4 @@ It may benefit from additions which ensure the use of the `hd/1`, `tl/1`, `lengt
 
 [analyzer]: https://github.com/exercism/csharp-analyzer
 [hexdocs-lists]: https://hexdocs.pm/elixir/List.html
-[getting-started-lists]: https://elixir-lang.org/getting-started/basic-types.html#linked-lists
+[getting-started-lists]: https://hexdocs.pm/elixir/lists-and-tuples.html#linked-lists

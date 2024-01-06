@@ -23,6 +23,6 @@
 - Write a multi-clause function using guards for control-flow.
 - You can pattern match in the function argument list to bind the stack's values to variables.
 
-[getting-started-errors]: https://elixir-lang.org/getting-started/try-catch-and-rescue.html#errors
+[getting-started-errors]: https://hexdocs.pm/elixir/try-catch-and-rescue.html#errors
 [defexception]: https://hexdocs.pm/elixir/Kernel.html#defexception/1
 [exception-behaviour]: https://hexdocs.pm/elixir/Exception.html

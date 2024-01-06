@@ -21,5 +21,5 @@ guess()
 # => true
 ```
 
-[default-arguments]: https://elixir-lang.org/getting-started/modules-and-functions.html#default-arguments
+[default-arguments]: https://hexdocs.pm/elixir/modules-and-functions.html#default-arguments
 [function-header]: https://inquisitivedeveloper.com/lwm-elixir-25/

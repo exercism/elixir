@@ -30,7 +30,7 @@
 - `Enum` functions convert maps to a list of `{key, value}` tuples.
 - There is a [built-in function][enum-reduce] for reducing an enumerable to a single value.
 
-[getting-started-enum]: https://elixir-lang.org/getting-started/enumerables-and-streams.html#enumerables
+[getting-started-enum]: https://hexdocs.pm/elixir/enumerable-and-streams.html#enumerables
 [elixir-school-enum]: https://elixirschool.com/en/lessons/basics/enum/
 [enum-functions]: https://hexdocs.pm/elixir/Enum.html#functions
 [enum-sort-by]: https://hexdocs.pm/elixir/Enum.html#sort_by/3

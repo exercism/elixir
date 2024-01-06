@@ -43,7 +43,7 @@
 - Reuse the `capture_numeric_date/0`, `capture_month_name_date/0`, and `capture_day_month_name_date/0` functions that you already implemented.
 
 [regex-docs]: https://hexdocs.pm/elixir/Regex.html
-[sigils-regex]: https://elixir-lang.org/getting-started/sigils.html#regular-expressions
+[sigils-regex]: https://hexdocs.pm/elixir/sigils.html#regular-expressions
 [website-regex-info]: https://www.regular-expressions.info
 [website-rexegg]: https://www.rexegg.com/
 [website-regexone]: https://regexone.com/

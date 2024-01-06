@@ -41,5 +41,5 @@
 [task-await]: https://hexdocs.pm/elixir/Task.html#await/2
 [task]: https://hexdocs.pm/elixir/Task.html
 [appsignal-processes]: https://blog.appsignal.com/2017/05/18/elixir-alchemy-demystifying-processes-in-elixir.html
-[getting-started-links]: https://elixir-lang.org/getting-started/processes.html#links
+[getting-started-links]: https://hexdocs.pm/elixir/processes.html#links
 [codemancers-exit-signals]: https://crypt.codemancers.com/posts/2016-01-24-understanding-exit-signals-in-erlang-slash-elixir/

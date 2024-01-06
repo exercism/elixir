@@ -20,7 +20,7 @@
 - Use the [capture operator][special-forms-capture] to capture the `roll/0` function.
 
 [stream]: https://hexdocs.pm/elixir/Stream.html
-[getting-started-streams]: https://elixir-lang.org/getting-started/enumerables-and-streams.html
+[getting-started-streams]: https://hexdocs.pm/elixir/enumerable-and-streams.html
 [enum-random]: https://hexdocs.pm/elixir/Enum.html#random/1
 [stream-repeatedly]: https://hexdocs.pm/elixir/Stream.html#repeatedly/1
 [stream-transform]: https://hexdocs.pm/elixir/Stream.html#transform/3

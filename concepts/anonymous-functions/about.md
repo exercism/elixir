@@ -62,7 +62,7 @@ x
 # => ** (CompileError): undefined function x/0
 ```
 
-[anon-fns]: https://elixir-lang.org/getting-started/basic-types.html#anonymous-functions
+[anon-fns]: https://hexdocs.pm/elixir/anonymous-functions.html
 [kernel-fn]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#fn/1
 [kernel-capture]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#&/1
 [capture]: https://dockyard.com/blog/2016/08/05/understand-capture-operator-in-elixir

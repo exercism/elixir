@@ -20,6 +20,6 @@
 - There is a [macro][kernel-if] that returns one of the two options, depending of whether it was given a _truthy_ or a _falsy_ value.
 
 [kernel-if]: https://hexdocs.pm/elixir/Kernel.html#if/2
-[getting-started-basic-strings]: https://elixir-lang.org/getting-started/basic-types.html#strings
-[getting-started-if-unless]: https://elixir-lang.org/getting-started/case-cond-and-if.html#if-and-unless
+[getting-started-basic-strings]: https://hexdocs.pm/elixir/basic-types.html#strings
+[getting-started-if-unless]: https://hexdocs.pm/elixir/case-cond-and-if.html#if-unless
 [elixir-school-if-unless]: https://elixirschool.com/en/lessons/basics/control-structures/#if-and-unless

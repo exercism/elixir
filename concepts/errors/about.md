@@ -37,7 +37,7 @@ case MyModule.janky_function() do
 end
 ```
 
-[getting-started]: https://elixir-lang.org/getting-started/try-catch-and-rescue.html
-[errors]: https://elixir-lang.org/getting-started/try-catch-and-rescue.html#errors
+[getting-started]: https://hexdocs.pm/elixir/try-catch-and-rescue.html
+[errors]: https://hexdocs.pm/elixir/try-catch-and-rescue.html#errors
 [let-it-crash]: https://www.amberbit.com/blog/2019/7/26/the-misunderstanding-of-let-it-crash/
 [happy-path]: https://en.wikipedia.org/wiki/Happy_path

@@ -79,12 +79,12 @@
   # => [{"D", 1}, {"C", 2}, {"B", 3}, {"A", 4}]
   ```
 
-[anon-fn]: https://elixir-lang.org/getting-started/basic-types.html#anonymous-functions
-[captured-fn]: https://elixir-lang.org/getting-started/modules-and-functions.html#function-capturing
-[keyword-list]: https://elixir-lang.org/getting-started/keywords-and-maps.html#keyword-lists
+[anon-fn]: https://hexdocs.pm/elixir/basic-types.html#anonymous-functions
+[captured-fn]: https://hexdocs.pm/elixir/Function.html#module-the-capture-operator
+[keyword-list]: https://hexdocs.pm/elixir/keywords-and-maps.html#keyword-lists
 [enum]: https://hexdocs.pm/elixir/Enumerable.html#content
 [hamt]: https://en.wikipedia.org/wiki/Hash_array_mapped_trie
-[maps]: https://elixir-lang.org/getting-started/keywords-and-maps.html#maps
+[maps]: https://hexdocs.pm/elixir/keywords-and-maps.html#maps-as-key-value-pairs
 [map-module]: https://hexdocs.pm/elixir/Map.html
 [map-new]: https://hexdocs.pm/elixir/Map.html#new/0
 [stackoverflow]: https://stackoverflow.com/a/40408469

@@ -65,7 +65,7 @@
 - To exit a GenServer process, return `{:stop, reason, state}` from the callback.
 - The exit reason should be `:normal`.
 
-[getting-started-genserver]: https://elixir-lang.org/getting-started/mix-otp/genserver.html
+[getting-started-genserver]: https://hexdocs.pm/elixir/genservers.html
 [elixir-school-genserver]: https://elixirschool.com/en/lessons/advanced/otp_concurrency
 [genserver]: https://hexdocs.pm/elixir/GenServer.html
 [use]: https://hexdocs.pm/elixir/Kernel.html#use/2

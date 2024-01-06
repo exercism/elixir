@@ -31,7 +31,7 @@
 - In the `do` part of `with`, use `get_new_passport_number/3` and return the result in an `:ok` tuple.
 
 [with]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#with/1
-[getting-started-with]: https://elixir-lang.org/getting-started/mix-otp/docs-tests-and-with.html#with
+[getting-started-with]: https://hexdocs.pm/elixir/docs-tests-and-with.html#with
 [naive-date-time]: https://hexdocs.pm/elixir/NaiveDateTime.html
 [time]: https://hexdocs.pm/elixir/Time.html
 [date]: https://hexdocs.pm/elixir/Date.html

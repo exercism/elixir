@@ -28,4 +28,4 @@
 [alias]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#alias/2
 [import]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#import/2
 [elixir-school-module-composition]: https://elixirschool.com/en/lessons/basics/modules/#composition
-[getting-started]: https://elixir-lang.org/getting-started/alias-require-and-import.html
+[getting-started]: https://hexdocs.pm/elixir/alias-require-and-import.html

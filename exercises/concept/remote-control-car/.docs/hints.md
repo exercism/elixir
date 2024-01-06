@@ -37,8 +37,8 @@
 
 - If the battery is dead, it should return the struct unchanged.
 
-[getting-started-structs]: https://elixir-lang.org/getting-started/structs.html
+[getting-started-structs]: https://hexdocs.pm/elixir/structs.html
 [docs-defstruct]: https://hexdocs.pm/elixir/Kernel.html#defstruct/1
 [elixir-casts]: https://elixircasts.io/intro-to-structs
-[multiple-fn-clauses]: https://elixir-lang.org/getting-started/modules-and-functions.html#named-functions
-[default-arg]: https://elixir-lang.org/getting-started/modules-and-functions.html#default-arguments
+[multiple-fn-clauses]: https://hexdocs.pm/elixir/modules-and-functions.html#function-definition
+[default-arg]: https://hexdocs.pm/elixir/modules-and-functions.html#default-arguments

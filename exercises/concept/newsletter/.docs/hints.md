@@ -30,7 +30,7 @@
 - Before writing to a file, the file must be opened.
 - After all write operations to a file finished, the file should be closed.
 
-[getting-started-file]: https://elixir-lang.org/getting-started/io-and-the-file-system.html#the-file-module
+[getting-started-file]: https://hexdocs.pm/elixir/io-and-the-file-system.html#the-file-module
 [joy-of-elixir-file]: https://joyofelixir.com/11-files/
 [file]: https://hexdocs.pm/elixir/File.html
 [file-read]: https://hexdocs.pm/elixir/File.html#read!/1

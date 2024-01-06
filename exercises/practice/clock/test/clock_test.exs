@@ -10,7 +10,7 @@ defmodule ClockTest do
         refute(true, """
         Can't convert Clock to string.
         Hint: implement the String.Chars protocol for Clock.
-        https://elixir-lang.org/getting-started/protocols.html
+        https://hexdocs.pm/elixir/protocols.html
         https://hexdocs.pm/elixir/String.Chars.html
         """)
     end

@@ -23,4 +23,4 @@ After completing this exercise, the student should:
 - `anonymous-functions`: know of the existence of anonymous functions and know how to write them.
 - `bit-manipulation`
 
-[fns]: https://elixir-lang.org/getting-started/basic-types.html#anonymous-functions
+[fns]: https://hexdocs.pm/elixir/basic-types.html#anonymous-functions

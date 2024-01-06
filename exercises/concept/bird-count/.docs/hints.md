@@ -34,8 +34,8 @@
 - A function can have more than one recursive case.
 - Use a [guard][kernel-equal-or-greater-than] for one of the function clauses.
 
-[getting-started-recursion]: https://elixir-lang.org/getting-started/recursion.html
-[getting-started-pattern-matching]: https://elixir-lang.org/getting-started/pattern-matching.html#pattern-matching-1
-[getting-started-strings]: https://elixir-lang.org/getting-started/recursion.html
+[getting-started-recursion]: https://hexdocs.pm/elixir/recursion.html
+[getting-started-pattern-matching]: https://hexdocs.pm/elixir/pattern-matching.html#pattern-matching
+[getting-started-strings]: https://hexdocs.pm/elixir/recursion.html
 [elixir-school-recursion]: https://elixirschool.com/blog/recursion/
 [kernel-equal-or-greater-than]: https://hexdocs.pm/elixir/Kernel.html#%3E=/2

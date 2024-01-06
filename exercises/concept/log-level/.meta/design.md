@@ -25,4 +25,4 @@ After completing this exercise, the student should:
 
 - `booleans`: be able to work with boolean values, boolean expressions
 
-[atom]: https://elixir-lang.org/getting-started/basic-types.html#atoms
+[atom]: https://hexdocs.pm/elixir/basic-types.html#atoms

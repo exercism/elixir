@@ -34,7 +34,7 @@
 
 - [Map module][map-module] contains functions useful for manipulating maps. [One of them][map-keys] returns a list of all keys in a map.
 
-[maps]: https://elixir-lang.org/getting-started/keywords-and-maps.html#maps
+[maps]: https://hexdocs.pm/elixir/keywords-and-maps.html#maps-as-key-value-pairs
 [map-module]: https://hexdocs.pm/elixir/Map.html
 [map-put]: https://hexdocs.pm/elixir/Map.html#put/3
 [map-delete]: https://hexdocs.pm/elixir/Map.html#delete/2

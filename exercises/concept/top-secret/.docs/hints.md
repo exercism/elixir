@@ -42,7 +42,7 @@
 - Use the function `decode_secret_message_part/2` that you implemented in previous tasks to prewalk the AST.
 - To reverse the accumulator at the end and turn it into a string, refresh your knowledge of the [`Enum` module][enum].
 
-[getting-started-quote]: https://elixir-lang.org/getting-started/meta/quote-and-unquote.html#quoting
+[getting-started-quote]: https://hexdocs.pm/elixir/quote-and-unquote.html
 [doc-quote]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#quote/2
 [ast-intro-lucas]: https://dorgan.ar/posts/2021/04/the_elixir_ast/
 [doc-code-string-to-quoted]: https://hexdocs.pm/elixir/Code.html#string_to_quoted/2
