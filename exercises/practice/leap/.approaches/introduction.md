@@ -40,9 +40,9 @@ Instead of using boolean operators, we can define multiple `leap_year?/1` functi
 We can use the order of the definitions to ensure correct check.
 
 ```elixir
-def leap_year?(year) when rem(year,400)==0, do: true
-def leap_year?(year) when rem(year,100)==0, do: false
-def leap_year?(year) when rem(year,4)==0, do: true
+def leap_year?(year) when rem(year, 400) == 0, do: true
+def leap_year?(year) when rem(year, 100) == 0, do: false
+def leap_year?(year) when rem(year, 4) == 0, do: true
 def leap_year?(_), do: false
 ```
 
@@ -54,10 +54,10 @@ Similarly to the functions with guards, the order of the checks can be done insi
 
 ```elixir
 cond do
-	rem(year, 400) == 0 -> true
+    rem(year, 400) == 0 -> true
     rem(year, 100) == 0 -> false
-	rem(year, 4) == 0 -> true
-	true -> false
+    rem(year, 4) == 0 -> true
+    true -> false
 end
 ```
 
@@ -65,7 +65,8 @@ We discuss this briefly in the [cond approach][cond-approach]
 
 ## Approach: Using case
 
-Using `case` is yet another way to check for a leap year. This time, all the reminders are calculated and put into a tuple, and pattern matching is used to decide the outcome. 
+Using `case` is yet another way to check for a leap year.
+This time, all the reminders are calculated and put into a tuple, and pattern matching is used to decide the outcome. 
 
 ```elixir
 case { rem(year, 400), rem(year, 100), rem(year, 4) } do
