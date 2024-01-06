@@ -1,0 +1,45 @@
+{
+  "introduction": {
+    "authors": [
+      "michalporeba"
+    ]
+  },
+  "approaches": [
+    {
+      "uuid": "be6d6c6e-8e19-4657-aad5-3382e7ec01db",
+      "slug": "operators",
+      "title": "Boolean Operators",
+      "blurb": "Use boolean operators to combine the checks.",
+      "authors": [
+        "michalporeba"
+      ]
+    },
+    {
+      "uuid": "0267853e-9607-4b60-b2f9-e4a34f5316db",
+      "slug": "guards",
+      "title": "Function Guards",
+      "blurb": "Use function guards to control order of checks.",
+      "authors": [
+        "michalporeba"
+      ]
+    },
+    {
+      "uuid": "428e3cee-309a-4c45-a6d4-3bff4eb41daa",
+      "slug": "cond",
+      "title": "Cond",
+      "blurb": "Use `cond` to control order of checks.",
+      "authors": [
+        "michalporeba"
+      ]
+    },
+    {
+      "uuid": "129e6863-275b-4fa3-abfe-4cb07c97acae",
+      "slug": "case",
+      "title": "Case",
+      "blurb": "Use `case` and tuples to decide if the year is a leap one.",
+      "authors": [
+        "michalporeba"
+      ]
+    }
+  ]
+}
