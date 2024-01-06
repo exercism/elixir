@@ -13,7 +13,11 @@ all the numbers are non-negative, both could work, depending on the approach.
 
 ## General Solution
 
-To check if a year is divisible by `n`, we can do `rem(year, n) == 0`.
+To check if a year is divisible by `n`, we can do `rem(year, n) == 0`. We can define a function to make the intent clearer. 
+
+```elixir
+defp divides?(n, d), do: rem(n, d) == 0 
+```
 
 Any approach to the problem will perform this check three times to check if a year is equally divisible by 4, 100 and 400.
 What will differ is what Elixir features we will use to combine the checks. 
@@ -29,7 +33,7 @@ A year is a leap year if
 We can use [boolean operators][boolean-operators] to combine the checks, for example, like so: 
 
 ```elixir
-rem(year, 400) == 0 or (rem(year, 100) != 0) and rem(year, 4) == 0
+divides?(year, 400) or (not(divides?(year, 100))) and divides?(year, 4)
 ```
 In the [boolean operators appraoch][operators-approach] we discuss the details of the solution.
 It includes variations of the operators and their precendence.
@@ -54,9 +58,9 @@ Similarly to the functions with guards, the order of the checks can be done insi
 
 ```elixir
 cond do
-    rem(year, 400) == 0 -> true
-    rem(year, 100) == 0 -> false
-    rem(year, 4) == 0 -> true
+    divides?(year, 400) -> true
+    divides?(year, 100) -> false
+    divides?(year, 4) -> true
     true -> false
 end
 ```
