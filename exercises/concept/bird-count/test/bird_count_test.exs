@@ -9,7 +9,7 @@ defmodule BirdCountTest do
 
     @tag task_id: 1
     test "returns today's bird count" do
-      assert BirdCount.today([7]) == 7
+      assert BirdCount.today([5]) == 5
       assert BirdCount.today([2, 4, 11, 10, 6, 8]) == 2
     end
   end
@@ -22,7 +22,7 @@ defmodule BirdCountTest do
 
     @tag task_id: 2
     test "adds 1 to today's bird count" do
-      assert BirdCount.increment_day_count([7]) == [8]
+      assert BirdCount.increment_day_count([5]) == [6]
       assert BirdCount.increment_day_count([4, 2, 1, 0, 10]) == [5, 2, 1, 0, 10]
     end
   end
