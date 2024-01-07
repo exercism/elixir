@@ -40,7 +40,7 @@ defmodule LedgerTest do
   @tag :pending
   test "multiple entries on same date ordered by description" do
     entries = [
-      %{amount_in_cents: 1000, date: ~D[2015-01-02], description: "Get present"},
+      %{amount_in_cents: 1000, date: ~D[2015-01-01], description: "Get present"},
       %{amount_in_cents: -1000, date: ~D[2015-01-01], description: "Buy present"}
     ]
 
@@ -48,7 +48,7 @@ defmodule LedgerTest do
              """
              Date       | Description               | Change\s\s\s\s\s\s\s
              01/01/2015 | Buy present               |      ($10.00)
-             01/02/2015 | Get present               |       $10.00\s
+             01/01/2015 | Get present               |       $10.00\s
              """
   end
 
