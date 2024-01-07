@@ -16,7 +16,7 @@ all the numbers are non-negative, both could work, depending on the approach.
 To check if a year is divisible by `n`, we can do `rem(year, n) == 0`. We can define a function to make the intent clearer. 
 
 ```elixir
-defp divides?(n, d), do: rem(n, d) == 0 
+defp divides?(number, divisor), do: rem(number, divisor) == 0 
 ```
 
 Any approach to the problem will perform this check three times to check if a year is equally divisible by 4, 100 and 400.
