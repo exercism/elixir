@@ -1,8 +1,8 @@
 def leap_year?(year) do
-    cond do
-        divides?(year, 400) -> true
-        divides?(year, 100) -> false
-        divides?(year, 4) -> true
-        true -> false
-    end
+  cond do
+    divides?(year, 400) -> true
+    divides?(year, 100) -> false
+    divides?(year, 4) -> true
+    true -> false
+  end
 end
