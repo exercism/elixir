@@ -54,7 +54,7 @@ In the [functions with guards approach][guards-approach] we discuss why in this 
 
 ## Approach: Using cond
 
-Similarly to the functions with guards, the order of the checks can be done inside a function with `cond` expression. 
+Similarly to the multiple clause function approach, we can also use a `cond` expression. 
 
 ```elixir
 cond do
