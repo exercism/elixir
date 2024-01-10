@@ -11,7 +11,7 @@ Instead, it provides [`rem/2`][rem] guard and the [`Integer.mod/2`][mod] functio
 The two functions differ in how they work with negative numbers, but since, in this exercise,
 all the numbers are non-negative, both could work, depending on the approach.
 
-## General Solution
+## General solution
 
 To check if a year is divisible by `n`, we can do `rem(year, n) == 0`. We can define a function to make the intent clearer. 
 
