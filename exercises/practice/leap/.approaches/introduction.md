@@ -6,7 +6,7 @@ To solve the Leap problem, we must determine if a year is evenly divisible by a 
 Such operation in computing is called [modulo][modulo]. 
 
 Unlike many languages, Elixir does not have [operators][operators] for either integer division or modulo. 
-Instead, it provides [`rem/2`][rem] guard and the [`Integer.mod/2`][mod] function.
+Instead, it provides the [`Kernel.rem/2`][rem] function and the [`Integer.mod/2`][mod] function.
 
 The two functions differ in how they work with negative numbers, but since, in this exercise,
 all the numbers are non-negative, both could work, depending on the approach.
