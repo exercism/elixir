@@ -40,7 +40,7 @@ It includes variations of the operators and their precendence.
 
 ## Approach: Multiple clause function
 
-Instead of using boolean operators, we can define multiple `leap_year?/1` functions with different guards. 
+Instead of using boolean operators, we can define multiple `leap_year?/1` function clauses with different guards. 
 We can use the order of the definitions to ensure correct check.
 
 ```elixir
