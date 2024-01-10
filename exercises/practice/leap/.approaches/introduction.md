@@ -38,7 +38,7 @@ divides?(year, 400) or (not(divides?(year, 100))) and divides?(year, 4)
 In the [boolean operators appraoch][operators-approach] we discuss the details of the solution.
 It includes variations of the operators and their precendence.
 
-## Approach: Function Guards
+## Approach: Multiple clause function
 
 Instead of using boolean operators, we can define multiple `leap_year?/1` functions with different guards. 
 We can use the order of the definitions to ensure correct check.
