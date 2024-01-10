@@ -84,10 +84,10 @@ In the [case approach][case-approach] we discuss the pattern matchin in a case e
 
 
 [modulo]: https://en.wikipedia.org/wiki/Modulo
-[operators]: https://hexdocs.pm/elixir/1.16.0/operators.html
-[rem]: https://hexdocs.pm/elixir/1.16.0/Kernel.html#rem/2
-[mod]: https://hexdocs.pm/elixir/1.16.0/Integer.html#mod/2
-[boolean-operators]: https://hexdocs.pm/elixir/1.11.4/operators.html#general-operators
+[operators]: https://hexdocs.pm/elixir/operators.html
+[rem]: https://hexdocs.pm/elixir/Kernel.html#rem/2
+[mod]: https://hexdocs.pm/elixir/Integer.html#mod/2
+[boolean-operators]: https://hexdocs.pm/elixir/operators.html#general-operators
 [operators-approach]: https://exercism.org/tracks/elixir/exercises/leap/approaches/operators
 [guards-approach]: https://exercism.org/tracks/elixir/exercises/leap/approaches/guards
 [cond-approach]: https://exercism.org/tracks/elixir/exercises/leap/approaches/cond
