@@ -37,7 +37,6 @@ It includes variations of the operators and their precendence.
 ## Approach: multiple clause function
 
 Instead of using boolean operators, we can define multiple `leap_year?/1` function clauses with different guards. 
-We can use the order of the definitions to ensure correct check.
 
 ```elixir
 def leap_year?(year) when rem(year, 400) == 0, do: true
