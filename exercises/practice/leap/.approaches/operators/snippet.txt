@@ -1,5 +1,5 @@
 def leap_year?(year) do
-  divides?(year, 4) and 
-    not divides?(year, 100) or 
-      divides?(year, 400)
+  rem(year, 4) == 0 and 
+    not rem(year, 100) == 0 or 
+      rem(year, 400) == 0
 end

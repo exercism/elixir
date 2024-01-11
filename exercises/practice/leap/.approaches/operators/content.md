@@ -2,12 +2,9 @@
 
 ```elixir
 defmodule Year do
-  @spec divides?(non_neg_integer, non_neg_integer) :: boolean
-  defp divides?(number, divisor), do: rem(number, divisor) == 0
-
   @spec leap_year?(non_neg_integer) :: boolean
   def leap_year?(year) do
-    divides?(year, 4) and not divides?(year, 100) or divides?(year, 400)
+    rem(year, 4) == 0 and not rem(year, 100) == 0 or rem(year, 400) == 0
   end
 end
 ```
@@ -25,7 +22,6 @@ However, if `left` is *true*, `right` has to be evaluated to determin the outcom
 The expression `left or right` can be true if either `left` or `right` is *true*. 
 If `left` is *true*, `right` will not be evaluated. The result will be *true*. 
 However, if `left` is *false*, `right` has to be evaluated to determine the outcome.
-
 
 ## Precedence of operators
 
@@ -52,7 +48,12 @@ Elixir offers two sets of Boolean operators: strict and relaxed.
 The strict versions `not`, `and`, `or` require the first (left) argument to be of [boolean type][hexdocs-booleans].
 The relaxed versions `!`, `&&`, `||` require the first argument to be only [truthy or falsy][hexdocs-truthy].
 
-In the case of this exercise, both types will work equally well. 
+In the case of this exercise, both types will work equally well, so the solution could be:
+```elixir
+def leap_year?(year) do
+  rem(year, 4) == 0 && !(rem(year, 100) == 0) || rem(year, 400) == 0
+end
+```
 
 ## Being explicit
 
@@ -62,19 +63,24 @@ def leap_year?(year) do
   rem(year, 4) == 0 and not rem(year, 100) == 0 or rem(year, 400) == 0
 end
 ```
+
 Some prefer this form, as it is very direct. We can see what is happening. 
 We are explicitly checking the reminder, comparing it to zero. 
 
 ```elixir
+defp divides?(number, divisor), do: rem(number, divisor) == 0
+
 def leap_year?(year) do
   divides?(year, 4) and not divides?(year, 100) or divides?(year, 400)
 end
 ```
-Other might prefer the above form, which requires defining the `devides?` function. 
+
+Other might prefer the above form, which requires defining the `devides?` function or something similar. 
 By doing so, we can be explicit about the *intent*. 
 We want to check if a year can be equally divided into a number. 
 
-Yet another approach might be use variables to capture the results of individual checks. 
+Yet another approach might be to use variables to capture the results of individual checks and provided the extra meaning.
+This approach also shortens the check so the Boolean operators and relationships between them are more prominent. 
 
 ```elixir
 def leap_year?(year) do
