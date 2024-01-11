@@ -8,7 +8,7 @@
     {
       "uuid": "be6d6c6e-8e19-4657-aad5-3382e7ec01db",
       "slug": "operators",
-      "title": "Boolean Operators",
+      "title": "Boolean operators",
       "blurb": "Use boolean operators to combine the checks.",
       "authors": [
         "michalporeba"

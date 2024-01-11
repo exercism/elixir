@@ -6,7 +6,7 @@ To solve the Leap problem, we must determine if a year is evenly divisible by a 
 Such operation in computing is called [modulo][modulo]. 
 
 Unlike many languages, Elixir does not have [operators][operators] for either integer division or modulo. 
-Instead, it provides the [`Kernel.rem/2`][rem] function and the [`Integer.mod/2`][mod] function.
+Instead, it provides the [`Kernel.rem/2`][rem] and the [`Integer.mod/2`][mod] functions.
 
 The two functions differ in how they work with negative numbers, but since, in this exercise,
 all the numbers are non-negative, both could work, depending on the approach.
@@ -23,7 +23,7 @@ defp divides?(number, divisor), do: rem(number, divisor) == 0
 Any approach to the problem will perform this check three times to see if a year is equally divisible by 4, 100 and 400.
 What will differ between approaches is what Elixir features we will use to combine the checks. 
 
-## Approach: Boolean Operators
+## Approach: Boolean operators
 
 The full rules are as follows:
 A year is a leap year if 
@@ -39,7 +39,7 @@ divides?(year, 400) or (not(divides?(year, 100))) and divides?(year, 4)
 In the [boolean operators appraoch][operators-approach] we discuss the details of the solution.
 It includes variations of the operators and their precendence.
 
-## Approach: Multiple clause function
+## Approach: multiple clause function
 
 Instead of using boolean operators, we can define multiple `leap_year?/1` function clauses with different guards. 
 We can use the order of the definitions to ensure correct check.
@@ -53,7 +53,7 @@ def leap_year?(_), do: false
 
 In the [functions with guards approach][guards-approach] we discuss why in this approach the `Integer.mod/2` function will not work. 
 
-## Approach: Using cond
+## Approach: using cond
 
 Similarly to the multiple clause function approach, we can also use a `cond` expression. 
 
@@ -68,7 +68,7 @@ end
 
 We discuss this briefly in the [cond approach][cond-approach]
 
-## Approach: Using case
+## Approach: using case
 
 Using `case` is yet another way to check for a leap year.
 This time, all the reminders are calculated and put into a tuple, and pattern matching is used to decide the outcome. 
