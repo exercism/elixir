@@ -45,7 +45,7 @@ def leap_year?(year) when rem(year, 4) == 0, do: true
 def leap_year?(_), do: false
 ```
 
-In the [functions with guards approach][guards-approach] we discuss why in this approach the `Integer.mod/2` function will not work. 
+In the [multiple clause functions approach][functions-approach] we discuss why in this approach the `Integer.mod/2` function will not work. 
 
 ## Approach: using cond
 
@@ -85,7 +85,7 @@ In the [case approach][case-approach] we discuss the pattern matchin in a case e
 [mod]: https://hexdocs.pm/elixir/Integer.html#mod/2
 [boolean-operators]: https://hexdocs.pm/elixir/operators.html#general-operators
 [operators-approach]: https://exercism.org/tracks/elixir/exercises/leap/approaches/operators
-[guards-approach]: https://exercism.org/tracks/elixir/exercises/leap/approaches/guards
+[functions-approach]: https://exercism.org/tracks/elixir/exercises/leap/approaches/functions
 [cond-approach]: https://exercism.org/tracks/elixir/exercises/leap/approaches/cond
 [case-approach]: https://exercism.org/tracks/elixir/exercises/leap/approaches/case
 
