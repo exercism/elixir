@@ -45,7 +45,7 @@ def leap_year?(year) when rem(year, 4) == 0, do: true
 def leap_year?(_), do: false
 ```
 
-In the [multiple clause functions approach][functions-approach] we discuss why in this approach the `Integer.mod/2` function will not work. 
+In the [multiple clause function approach][functions-approach] we discuss why in this approach the `Integer.mod/2` function will not work. 
 
 ## Approach: control flow structures
 
