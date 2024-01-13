@@ -79,5 +79,3 @@ We discuss these and other solutions depending on various control flow structure
 [operators-approach]: https://exercism.org/tracks/elixir/exercises/leap/approaches/operators
 [clause-approach]: https://exercism.org/tracks/elixir/exercises/leap/approaches/clauses
 [flow-approach]: https://exercism.org/tracks/elixir/exercises/leap/approaches/flow
-
-
