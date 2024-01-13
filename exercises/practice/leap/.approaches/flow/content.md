@@ -15,7 +15,7 @@ end
 
 ## If
 
-Elixir provides for [condition flow structures][hexdocs-structures]: `case`, `cond`, `if`, and `unless`. 
+Elixir provides for [control flow structures][hexdocs-structures]: `case`, `cond`, `if`, and `unless`. 
 The `if` and `unless` allow to evaluate only one condition. 
 Unlike in many other languages, there is no `else if` option in Elixir. 
 
