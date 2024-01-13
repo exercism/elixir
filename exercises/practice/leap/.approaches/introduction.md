@@ -5,7 +5,7 @@ Every fourth year is a leap year (with some exceptions), but let's consider this
 To solve the Leap problem, we must determine if a year is evenly divisible by a number or if a reminder of an integer division is zero.
 Such operation in computing is called [modulo][modulo].
 
-Unlike many languages, Elixir does not have [operators][operators] for either integer division or modulo. 
+Unlike many languages, Elixir does not have [operators][operators] for either integer division or modulo.
 Instead, it provides the [`Kernel.rem/2`][rem] and the [`Integer.mod/2`][mod] functions.
 
 The two functions differ in how they work with negative divisors, but since, in this exercise,
@@ -55,7 +55,7 @@ Here are two examples using `if` and `case`.
 ```elixir
 if rem(year, 100) == 0 do
   rem(year, 400) == 0
-else 
+else
   rem(year, 4) == 0
 end
 ```
