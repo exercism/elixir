@@ -1,0 +1,36 @@
+{
+  "introduction": {
+    "authors": [
+      "michalporeba"
+    ]
+  },
+  "approaches": [
+    {
+      "uuid": "be6d6c6e-8e19-4657-aad5-3382e7ec01db",
+      "slug": "operators",
+      "title": "Boolean operators",
+      "blurb": "Use boolean operators to combine the checks.",
+      "authors": [
+        "michalporeba"
+      ]
+    },
+    {
+      "uuid": "0267853e-9607-4b60-b2f9-e4a34f5316db",
+      "slug": "clauses",
+      "title": "Multiple clause functions",
+      "blurb": "Use a multiple clause function to control the order of checks.",
+      "authors": [
+        "michalporeba"
+      ]
+    },
+    {
+      "uuid": "428e3cee-309a-4c45-a6d4-3bff4eb41daa",
+      "slug": "flow",
+      "title": "Control flow structures",
+      "blurb": "Use `if, `case` or `cond`, to control order of checks.",
+      "authors": [
+        "michalporeba"
+      ]
+    }
+  ]
+}

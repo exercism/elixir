@@ -1,0 +1,7 @@
+def leap_year?(year) do
+  if rem(year, 100) == 0 do
+    rem(year, 400) == 0
+  else
+    rem(year, 4) == 0
+  end
+end
