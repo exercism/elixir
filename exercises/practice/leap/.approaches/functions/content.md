@@ -36,7 +36,7 @@ The final clause, `def leap_year?(_), do: false`, returns false if previous clau
 
 ## Guards
 
-The [guards][guards] are part of the pattern-matching mechanism. 
+The [guards][hexdocs-guards] are part of the pattern-matching mechanism. 
 They allow for more complex checks of values. 
 However, because of when they are executed to allow the compiler to perform necessary optimization,
 only a minimal subset of operations are permitted. 
@@ -47,4 +47,4 @@ In this approach, the boolean operators matter too. Only the strict ones, `not`,
 The relaxed `!`, `&&`, `||` will fail to compile. 
 
 [operators-approach]: https://exercism.org/tracks/elixir/exercises/leap/approaches/operators
-[guards]: https://hexdocs.pm/elixir/main/patterns-and-guards.html#guards
+[hexdocs-guards]: https://hexdocs.pm/elixir/main/patterns-and-guards.html#guards

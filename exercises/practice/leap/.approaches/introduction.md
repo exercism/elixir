@@ -47,25 +47,18 @@ def leap_year?(_), do: false
 
 In the [multiple clause functions approach][functions-approach] we discuss why in this approach the `Integer.mod/2` function will not work. 
 
-## Approach: using cond
+## Approach: control flow structures
 
-Similarly to the multiple clause function approach, we can also use a `cond` expression. 
+In addition to the above two approaches, control flow structures offer a number of solutions.
+Here are two examples using `if` and `case`. 
 
 ```elixir
-cond do
-    rem(year, 400) == 0 -> true
-    rem(year, 100) == 0 -> false
-    rem(year, 4) == 0 -> true
-    true -> false
+if rem(year, 100) == 0 do
+    rem(year, 400) == 0
+else 
+    rem(year, 4) == 0
 end
 ```
-
-We discuss this briefly in the [cond approach][cond-approach]
-
-## Approach: using case
-
-Using `case` is yet another way to check for a leap year.
-This time, all the reminders are calculated and put into a tuple, and pattern matching is used to decide the outcome. 
 
 ```elixir
 case { rem(year, 400), rem(year, 100), rem(year, 4) } do
@@ -76,8 +69,7 @@ case { rem(year, 400), rem(year, 100), rem(year, 4) } do
 end
 ```
 
-In the [case approach][case-approach] we discuss the pattern matchin in a case expression. 
-
+We discuss these and other solutions depending on various control flow structures in the [control flow structures approach][flow-approach].
 
 [modulo]: https://en.wikipedia.org/wiki/Modulo
 [operators]: https://hexdocs.pm/elixir/operators.html
@@ -86,7 +78,6 @@ In the [case approach][case-approach] we discuss the pattern matchin in a case e
 [boolean-operators]: https://hexdocs.pm/elixir/operators.html#general-operators
 [operators-approach]: https://exercism.org/tracks/elixir/exercises/leap/approaches/operators
 [functions-approach]: https://exercism.org/tracks/elixir/exercises/leap/approaches/functions
-[cond-approach]: https://exercism.org/tracks/elixir/exercises/leap/approaches/cond
-[case-approach]: https://exercism.org/tracks/elixir/exercises/leap/approaches/case
+[flow-approach]: https://exercism.org/tracks/elixir/exercises/leap/approaches/cond
 
 

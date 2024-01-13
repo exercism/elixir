@@ -25,18 +25,9 @@
     },
     {
       "uuid": "428e3cee-309a-4c45-a6d4-3bff4eb41daa",
-      "slug": "cond",
-      "title": "Cond",
-      "blurb": "Use `cond` to control order of checks.",
-      "authors": [
-        "michalporeba"
-      ]
-    },
-    {
-      "uuid": "129e6863-275b-4fa3-abfe-4cb07c97acae",
-      "slug": "case",
-      "title": "Case",
-      "blurb": "Use `case` and tuples to decide if the year is a leap one.",
+      "slug": "flow",
+      "title": "Control flow structures",
+      "blurb": "Use `if, `case` or `cond`, to control order of checks.",
       "authors": [
         "michalporeba"
       ]
