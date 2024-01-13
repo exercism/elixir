@@ -64,7 +64,7 @@ def leap_year?(year) do
 end
 ```
 
-But `case` also supports [guards][hexdocs-guards], offering another way to solve the problem. 
+It also supports [guards][hexdocs-guards], offering another way to solve the problem. 
 
 ```elixir
 def leap_year?(year) do
@@ -77,8 +77,9 @@ def leap_year?(year) do
 end  
 ```
 
-`case` can be very flexible, supporting pattern matching on a tuple. 
-In this case, a tuple is created with all three checks. 
+The `case` can be very flexible, so many variations are possible. 
+Using it with pattern matching on a tuple is considered **the most idiomatic**. 
+In this case, a tuple is created with all the checks. 
 Then, pattern matching to tuples is performed. 
 
 ```elixir
