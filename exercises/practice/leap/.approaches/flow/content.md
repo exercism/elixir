@@ -84,10 +84,10 @@ Then, pattern matching to tuples is performed.
 
 ```elixir
 def leap_year?(year) do
-  case { rem(year, 400), rem(year, 100), rem(year, 4) } do
-    { 0, _, _ } -> true
-    { _, 0, _ } -> false
-    { _, _, 0 } -> true
+  case {rem(year, 400), rem(year, 100), rem(year, 4)} do
+    {0, _, _} -> true
+    {_, 0, _} -> false
+    {_, _, 0} -> true
     _ -> false
   end
 end

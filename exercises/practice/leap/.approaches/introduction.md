@@ -54,18 +54,18 @@ Here are two examples using `if` and `case`.
 
 ```elixir
 if rem(year, 100) == 0 do
-    rem(year, 400) == 0
+  rem(year, 400) == 0
 else 
-    rem(year, 4) == 0
+  rem(year, 4) == 0
 end
 ```
 
 ```elixir
-case { rem(year, 400), rem(year, 100), rem(year, 4) } do
-    { 0, _, _ } -> true
-    { _, 0, _ } -> false
-    { _, _, 0 } -> true
-    true -> false
+case {rem(year, 400), rem(year, 100), rem(year, 4)} do
+  {0, _, _} -> true
+  {_, 0, _} -> false
+  {_, _, 0} -> true
+  _ -> false
 end
 ```
 

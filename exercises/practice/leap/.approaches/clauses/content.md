@@ -29,7 +29,7 @@ But because of the order they are evaluated in, they are equivalent to:
 ```elixir
 when rem(year, 400) == 0
 when rem(year, 100) == 0 and not rem(year, 400) == 0 
-when rem(year, 4) == 0 and not rem(year, 100) == 0 and not rem(year, 400) = 0
+when rem(year, 4) == 0 and not rem(year, 100) == 0 and not rem(year, 400) == 0
 ```
 
 The final clause, `def leap_year?(_), do: false`, returns false if previous clauses are not a match.
