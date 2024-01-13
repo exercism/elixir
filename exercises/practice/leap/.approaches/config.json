@@ -16,9 +16,9 @@
     },
     {
       "uuid": "0267853e-9607-4b60-b2f9-e4a34f5316db",
-      "slug": "functions",
+      "slug": "clauses",
       "title": "Multiple clause functions",
-      "blurb": "Use multiple clause function to control the order of checks.",
+      "blurb": "Use a multiple clause function to control the order of checks.",
       "authors": [
         "michalporeba"
       ]

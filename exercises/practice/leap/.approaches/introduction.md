@@ -45,7 +45,7 @@ def leap_year?(year) when rem(year, 4) == 0, do: true
 def leap_year?(_), do: false
 ```
 
-In the [multiple clause function approach][functions-approach] we discuss why in this approach the `Integer.mod/2` function will not work. 
+In the [multiple clause function approach][clause-approach] we discuss why in this approach the `Integer.mod/2` function will not work. 
 
 ## Approach: control flow structures
 
@@ -77,7 +77,7 @@ We discuss these and other solutions depending on various control flow structure
 [mod]: https://hexdocs.pm/elixir/Integer.html#mod/2
 [boolean-operators]: https://hexdocs.pm/elixir/operators.html#general-operators
 [operators-approach]: https://exercism.org/tracks/elixir/exercises/leap/approaches/operators
-[functions-approach]: https://exercism.org/tracks/elixir/exercises/leap/approaches/functions
+[clause-approach]: https://exercism.org/tracks/elixir/exercises/leap/approaches/clauses
 [flow-approach]: https://exercism.org/tracks/elixir/exercises/leap/approaches/cond
 
 

@@ -48,7 +48,7 @@ def leap_year?(year) do
 end
 ```
 
-Similarly to the [functions approach][functions-approach], the order here matters. 
+Similarly to the [multiple clause function approach][clause-approach], the order here matters. 
 The conditions are evaluated in order, and the first that is not `nil` or `false` leads to the result. 
 
 ## Case
@@ -95,4 +95,4 @@ end
 
 [hexdocs-structures]: https://hexdocs.pm/elixir/case-cond-and-if.html
 [hexdocs-guards]: https://hexdocs.pm/elixir/main/patterns-and-guards.html#guards
-[functions-approach]: https://exercism.org/tracks/elixir/exercises/leap/approaches/functions
+[clause-approach]: https://exercism.org/tracks/elixir/exercises/leap/approaches/clauses
