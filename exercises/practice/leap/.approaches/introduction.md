@@ -8,8 +8,8 @@ Such operation in computing is called [modulo][modulo].
 Unlike many languages, Elixir does not have [operators][operators] for either integer division or modulo. 
 Instead, it provides the [`Kernel.rem/2`][rem] and the [`Integer.mod/2`][mod] functions.
 
-The two functions differ in how they work with negative numbers, but since, in this exercise,
-all the numbers are non-negative, both could work, depending on the approach.
+The two functions differ in how they work with negative divisors, but since, in this exercise,
+all the divisors are non-negative, both could work, depending on the approach you choose.
 
 ## General solution
 
