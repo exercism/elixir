@@ -75,11 +75,11 @@ def leap_year?(year) do
 end
 ```
 
-Other might prefer the above form, which requires defining the `devides?` function or something similar.
+Others might prefer the above form, which requires defining the `devides?` function or something similar.
 By doing so, we can be explicit about the *intent*.
 We want to check if a year can be equally divided into a number.
 
-Yet another approach might be to use variables to capture the results of individual checks and provided the extra meaning.
+Yet another approach might be to use variables to capture the results of individual checks and provide the extra meaning.
 This approach also shortens the check so the Boolean operators and relationships between them are more prominent.
 
 ```elixir
