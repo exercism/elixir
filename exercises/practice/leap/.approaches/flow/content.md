@@ -20,8 +20,8 @@ The `if` and `unless` allow to evaluate only one condition.
 Unlike in many other languages, there is no `else if` option in Elixir. 
 
 However, in this case, it is not necessary. We can use `if` once to check if the year is divisible by 100. 
-If it is, then whether it is a leap year or not depends if it is divisible by 400. 
-If it is not, then whether it is a leap year or not depends if it is divisible by 4. 
+If it is, then whether it is a leap year or not depends on if it is divisible by 400. 
+If it is not, then whether it is a leap year or not depends on if it is divisible by 4. 
 
 ```elixir
 def leap_year?(year) do

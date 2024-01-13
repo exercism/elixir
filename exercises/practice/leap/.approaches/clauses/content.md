@@ -39,7 +39,7 @@ The final clause, `def leap_year?(_), do: false`, returns false if previous clau
 The [guards][hexdocs-guards] are part of the pattern-matching mechanism. 
 They allow for more complex checks of values. 
 However, because of when they are executed to allow the compiler to perform necessary optimization,
-only a minimal subset of operations are permitted. 
+only a minimal subset of operations is permitted. 
 `Kernel.rem/2` is on this limited list, and `Integer.mod/2` is not. 
 This is why, in this approach, only the first one will work, and the latter will not. 
 
