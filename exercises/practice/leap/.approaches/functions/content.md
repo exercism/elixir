@@ -1,4 +1,4 @@
-# Multiple clause functions
+# Multiple clause function
 
 ```elixir
 defmodule Year do
