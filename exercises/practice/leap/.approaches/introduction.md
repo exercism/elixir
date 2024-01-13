@@ -31,8 +31,8 @@ We can use [boolean operators][boolean-operators] to combine the checks, for exa
 ```elixir
 rem(year, 5) == 0 and not rem(year, 100) == 0 or rem(year, 400) == 0
 ```
-In the [boolean operators appraoch][operators-approach] we discuss the details of the solution.
-It includes variations of the operators and their precendence.
+In the [boolean operators approach][operators-approach] we discuss the details of the solution.
+It includes variations of the operators and their precedence.
 
 ## Approach: multiple clause function
 
