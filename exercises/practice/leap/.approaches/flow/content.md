@@ -6,7 +6,7 @@ defmodule Year do
   def leap_year?(year) do
     if rem(year, 100) == 0 do
       rem(year, 400) == 0
-    else 
+    else
       rem(year, 4) == 0
     end
   end
@@ -15,25 +15,26 @@ end
 
 ## If
 
-Elixir provides four [control flow structures][hexdocs-structures]: `case`, `cond`, `if`, and `unless`. 
-The `if` and `unless` allow to evaluate only one condition. 
-Unlike in many other languages, there is no `else if` option in Elixir. 
+Elixir provides four [control flow structures][hexdocs-structures]: `case`, `cond`, `if`, and `unless`.
 
-However, in this case, it is not necessary. We can use `if` once to check if the year is divisible by 100. 
-If it is, then whether it is a leap year or not depends on if it is divisible by 400. 
-If it is not, then whether it is a leap year or not depends on if it is divisible by 4. 
+The `if` and `unless` allow to evaluate only one condition.
+Unlike in many other languages, there is no `else if` option in Elixir.
+
+However, in this case, it is not necessary. We can use `if` once to check if the year is divisible by 100.
+If it is, then whether it is a leap year or not depends on if it is divisible by 400.
+If it is not, then whether it is a leap year or not depends on if it is divisible by 4.
 
 ```elixir
 def leap_year?(year) do
   if rem(year, 100) == 0 do
     rem(year, 400) == 0
-  else 
+  else
     rem(year, 4) == 0
   end
 end
 ```
 
-## Cond 
+## Cond
 
 Another option is `cond` which allows for evaluating multiple conditions, similar to `else if` in other languages.
 
@@ -48,12 +49,12 @@ def leap_year?(year) do
 end
 ```
 
-Similarly to the [multiple clause function approach][clause-approach], the order here matters. 
-The conditions are evaluated in order, and the first that is not `nil` or `false` leads to the result. 
+Similarly to the [multiple clause function approach][clause-approach], the order here matters.
+The conditions are evaluated in order, and the first that is not `nil` or `false` leads to the result.
 
 ## Case
 
-`case` allows to compare a value to multiple patterns, but can also replicate what `if` offers. 
+`case` allows to compare a value to multiple patterns, but can also replicate what `if` offers.
 
 ```elixir
 def leap_year?(year) do
@@ -64,7 +65,7 @@ def leap_year?(year) do
 end
 ```
 
-It also supports [guards][hexdocs-guards], offering another way to solve the problem. 
+It also supports [guards][hexdocs-guards], offering another way to solve the problem.
 
 ```elixir
 def leap_year?(year) do
@@ -74,13 +75,13 @@ def leap_year?(year) do
     _ when rem(year, 4) == 0 -> true
     _ -> false
   end
-end  
+end
 ```
 
-The `case` can be very flexible, so many variations are possible. 
-Using it with pattern matching on a tuple is considered **the most idiomatic**. 
-In this case, a tuple is created with all the checks. 
-Then, pattern matching to tuples is performed. 
+The `case` can be very flexible, so many variations are possible.
+Using it with pattern matching on a tuple is considered **the most idiomatic**.
+In this case, a tuple is created with all the checks.
+Then, pattern matching to tuples is performed.
 
 ```elixir
 def leap_year?(year) do
