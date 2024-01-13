@@ -65,7 +65,7 @@ case { rem(year, 400), rem(year, 100), rem(year, 4) } do
     { 0, _, _ } -> true
     { _, 0, _ } -> false
     { _, _, 0 } -> true
-    { _, _, _ } -> false
+    true -> false
 end
 ```
 
