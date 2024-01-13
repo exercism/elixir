@@ -1,4 +1,4 @@
-# Condition flow structures
+# Control flow structures
 
 ```elixir
 defmodule Year do
