@@ -48,7 +48,7 @@
 - The [bitstring special form][bitstring-form] can be used to concatenate two bitstrings.
 - Use the special `::bitstring` type to specify that each of the bitstring fragments is of unknown size.
 
-[decimal-to-binary-youtube]: https://www.youtube.com/watch?v=gGiEu7QTi68
+[decimal-to-binary-youtube]: https://www.youtube.com/watch?v=H4BstqvgBow
 [integer-literal]: https://hexdocs.pm/elixir/syntax-reference.html#integers-in-other-bases-and-unicode-code-points
 [bitstring]: https://hexdocs.pm/elixir/binaries-strings-and-charlists.html#bitstrings
 [bitstring-form]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#%3C%3C%3E%3E/1
