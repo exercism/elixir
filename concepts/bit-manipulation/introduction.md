@@ -9,7 +9,7 @@ Elixir supports many functions for working with bits found in the _Bitwise modul
 - `bor/2`: bitwise OR
 - `bnot/1`: bitwise NOT
 
-Here is an example how to use a bitwise function:
+Here is an example of how to use a bitwise function:
 
 ```elixir
 Bitwise.bsl(1, 3)
