@@ -77,3 +77,5 @@ BoutiqueSuggestions.get_combinations(tops, bottoms, maximum_price: 50)
 #       %{item_name: "Jeans", base_color: "blue", price: 30}}
 #    ]
 ```
+
+For your final solution you can assume that each top and bottom always includes `:price` and `:base_color` fields.
