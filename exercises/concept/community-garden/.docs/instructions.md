@@ -51,6 +51,9 @@ CommunityGarden.list_registrations(pid)
 Implement the `CommunityGarden.get_registration/2` function. It should receive the `pid` and `id` of the plot to be checked. It should return the plot if it is registered, and `:not_found` if it is unregistered.
 
 ```elixir
+{:ok, pid} = CommunityGarden.start()
+CommunityGarden.register(pid, "Emma Balan")
+
 CommunityGarden.get_registration(pid, 1)
 # => %Plot{plot_id: 1, registered_to: "Emma Balan"}
 CommunityGarden.get_registration(pid, 7)
