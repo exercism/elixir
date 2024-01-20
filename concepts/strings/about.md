@@ -30,6 +30,7 @@ Any Elixir expression is valid inside the interpolation. If a string is given, t
 # => "And lists, too!"
 
 "But not functions: #{fn x -> x end}"
+
 # => ** (Protocol.UndefinedError) protocol String.Chars not implemented for #Function<7.126501267/1 in :erl_eval.expr/5> of type Function
 #        (elixir 1.10.1) lib/string/chars.ex:3: String.Chars.impl_for!/1
 #        (elixir 1.10.1) lib/string/chars.ex:22: String.Chars.to_string/1

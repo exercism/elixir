@@ -41,6 +41,7 @@ WineCellar.filter(
   ],
   :white
 )
+
 # => [
 #      {"Chardonnay", 2015, "Italy"},
 #      {"Pinot grigio", 2017, "Germany"}
@@ -64,6 +65,7 @@ WineCellar.filter(
   :white,
   year: 2015
 )
+
 # => [
 #      {"Chardonnay", 2015, "Italy"}
 #    ]
@@ -89,5 +91,6 @@ WineCellar.filter(
   year: 2015,
   country: "Germany"
 )
+
 # => []
 ```

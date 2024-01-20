@@ -4,7 +4,6 @@ In Elixir, we can define module attributes which can be used as constants in our
 
 ```elixir
 defmodule Example do
-
   # Defines the attribute as the value 1
   @constant_number 1
 

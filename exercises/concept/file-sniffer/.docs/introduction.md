@@ -10,7 +10,8 @@ Binary literals are defined using the bitstring special form `<<>>`. When defini
 
 ```elixir
 <<255>> == <<0xFF>>
-<<256>> == <<0>> # Overflowing bits are truncated
+# Overflowing bits are truncated
+<<256>> == <<0>>
 <<2, 4, 6, 8, 10, 12, 14, 16>> == <<0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0E, 0x10>>
 ```
 

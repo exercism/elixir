@@ -113,11 +113,12 @@ Implement a `GenServer` callback to handle the `:timeout` message that will be s
 Make sure to also handle any unexpected messages by ignoring them.
 
 ```elixir
-{:ok, machine} = TakeANumberDeluxe.start_link(
-  min_number: 1,
-  max_number: 10,
-  auto_shutdown_timeout: :timer.hours(2)
-)
+{:ok, machine} =
+  TakeANumberDeluxe.start_link(
+    min_number: 1,
+    max_number: 10,
+    auto_shutdown_timeout: :timer.hours(2)
+  )
 
 # after 3 hours...
 

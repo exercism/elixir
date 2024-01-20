@@ -20,6 +20,7 @@ else
 after
   :some_action
 end
+
 # => :success
 ```
 

@@ -8,10 +8,15 @@ Let's say that you want to validate a username with several checks. You might re
 case check_ascii(username) do
   {:ok, username} ->
     case check_starts_with_letter(username) do
-      {:ok, username} -> {:ok, username}
-      {:error, "usernames may only start with a letter"} = err -> err
-  end
-  {:error, "usernames may only contain ascii letters"} = err -> err
+      {:ok, username} ->
+        {:ok, username}
+
+      {:error, "usernames may only start with a letter"} = err ->
+        err
+    end
+
+  {:error, "usernames may only contain ascii letters"} = err ->
+    err
 end
 ```
 

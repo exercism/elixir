@@ -9,6 +9,8 @@ favorite_color = nil
 
 `nil` is an atom, but it is usually written as `nil`, not `:nil`. The boolean values `true` and `false` are atoms too.
 
+[]: # (elixir-formatter-disable-next-block)
+
 ```elixir
 nil === :nil
 # => true

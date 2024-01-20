@@ -98,6 +98,7 @@ If you need to run tasks that perform different operations, you might need `Task
 inputs
 |> Enum.map(&Task.async(fn -> function.(&1) end))
 |> Task.await_many(1_000)
+
 # => ** (exit) exited in: Task.await_many([...], 1000)
 #        ** (EXIT) time out
 #        (elixir 1.11.3) lib/task.ex:725: Task.await_many/5

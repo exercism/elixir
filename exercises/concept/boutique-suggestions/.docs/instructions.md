@@ -21,10 +21,12 @@ tops = [
   %{item_name: "Dress shirt"},
   %{item_name: "Casual shirt"}
 ]
+
 bottoms = [
   %{item_name: "Jeans"},
   %{item_name: "Dress trousers"}
 ]
+
 BoutiqueSuggestions.get_combinations(tops, bottoms)
 # => [
 #      {%{item_name: "Dress shirt"}, %{item_name: "Jeans"}},
@@ -43,10 +45,12 @@ tops = [
   %{item_name: "Dress shirt", base_color: "blue"},
   %{item_name: "Casual shirt", base_color: "black"}
 ]
+
 bottoms = [
   %{item_name: "Jeans", base_color: "blue"},
   %{item_name: "Dress trousers", base_color: "black"}
 ]
+
 BoutiqueSuggestions.get_combinations(tops, bottoms)
 # => [
 #      {%{item_name: "Dress shirt", base_color: "blue"},
@@ -67,10 +71,12 @@ tops = [
   %{item_name: "Dress shirt", base_color: "blue", price: 35},
   %{item_name: "Casual shirt", base_color: "black", price: 20}
 ]
+
 bottoms = [
   %{item_name: "Jeans", base_color: "blue", price: 30},
   %{item_name: "Dress trousers", base_color: "black", price: 75}
 ]
+
 BoutiqueSuggestions.get_combinations(tops, bottoms, maximum_price: 50)
 # => [
 #      {%{item_name: "Casual shirt", base_color: "black", price: 20},

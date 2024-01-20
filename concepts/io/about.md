@@ -28,6 +28,7 @@ When this happens, you might want to use [`IO.inspect/2`][io-inspect] instead.
 |> IO.inspect(label: "step 1")
 |> String.downcase()
 |> IO.inspect(label: "step 2")
+
 # > step 1: "HELLO"
 # > step 2: "hello"
 # => "hello"

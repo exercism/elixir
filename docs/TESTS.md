@@ -71,6 +71,8 @@ Multiple tests may be executed by giving multiple line numbers separated by `:`.
 
 For example, given a file with the following content with line numbers:
 
+[]: # (elixir-formatter-disable-next-block)
+
 ```elixir
 test "Test 1" do           # 1
   # test implementation    # 2-6
@@ -151,7 +153,8 @@ dependency to the `mix.exs` file for your problem.
 
 ```elixir
 defp deps do
-  [{:dialyxir, "~> 0.4", only: [:dev]}] # <-- Add this
+  # Add this:
+  [{:dialyxir, "~> 0.4", only: [:dev]}]
 end
 ```
 
@@ -173,7 +176,7 @@ and Erlang types. To create a plt with sensible defaults run:
 $ mix dialyzer --plt
 ```
 
-Finally it can be run with:
+Finally, it can be run with:
 
 ```bash
 $ mix dialyzer
@@ -190,7 +193,7 @@ implementation of the `Bob` exercise.
 
 ```elixir
 defmodule Bob do
-  @spec hey(input :: String.t) :: String.t
+  @spec hey(input :: String.t()) :: String.t()
   def hey(input) do
     1
   end

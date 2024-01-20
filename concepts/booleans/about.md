@@ -20,8 +20,11 @@ Boolean operators use _short-circuit evaluation_, which means that the expressio
 Each of the operators has a different precedence, where `not/1` is evaluated before `and/2` and `or/2`. Brackets can be used to evaluate one part of the expression before the others:
 
 ```elixir
-not true and false # => false
-not (true and false) # => true
+not true and false
+# => false
+
+not (true and false)
+# => true
 ```
 
 When writing a function that returns a boolean value, it is [idiomatic to end the function name][naming] with a `?`. The same convention can be used for variables that store boolean values.

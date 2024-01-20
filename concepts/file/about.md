@@ -58,7 +58,7 @@ Reading a file with [`File.read/1`][file-read] is going to load the whole file i
 
 ```elixir
 File.stream!("file.txt")
-|> Stream.map(& &1 <> "!")
+|> Stream.map(&(&1 <> "!"))
 |> Stream.into(File.stream!("new_file.txt"))
 |> Stream.run()
 ```

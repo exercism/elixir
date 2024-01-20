@@ -39,6 +39,7 @@ RPNCalculatorInspection.await_reliability_check_result(
   %{input: "5 7 -", pid: pid},
   %{}
 )
+
 # => %{"5 7 -" => :ok}
 
 # when there are no messages in the process inbox
@@ -46,6 +47,7 @@ RPNCalculatorInspection.await_reliability_check_result(
   %{input: "3 2 *", pid: pid},
   %{"5 7 -" => :ok}
 )
+
 # => %{"5 7 -" => :ok, "3 2 *" => :timeout}
 ```
 
@@ -61,7 +63,7 @@ The function should return a map with the results of reliability checks of all t
 
 ```elixir
 fake_broken_calculator = fn input ->
-  if String.ends_with?(input, "*"), do: raise "oops"
+  if String.ends_with?(input, "*"), do: raise("oops")
 end
 
 inputs = ["2 3 +", "10 3 *", "20 2 /"]
