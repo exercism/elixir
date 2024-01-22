@@ -52,6 +52,7 @@ pid = spawn_link(fn -> :timer.sleep(50_000) end)
 self()
 |> Process.info()
 |> Keyword.get(:links)
+
 # => [#PID<0.126.0>]
 ```
 
@@ -69,6 +70,7 @@ The current value of the flag can be checked using [`Process.info/1`][process-in
 pid
 |> Process.info()
 |> Keyword.get(:trap_exit)
+
 # => false
 ```
 

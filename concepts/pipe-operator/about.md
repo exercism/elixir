@@ -31,7 +31,7 @@ It is a matter of personal preference when to use the pipe operator and when not
 
   ```elixir
   # do
-  String.split("hello" , "")
+  String.split("hello", "")
 
   # don't
   "hello" |> String.split("")

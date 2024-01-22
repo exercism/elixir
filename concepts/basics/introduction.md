@@ -5,12 +5,16 @@
 Elixir is a dynamically-typed language, meaning that the type of a variable is only checked at runtime. Using the match `=` operator, we can bind a value of any type to a variable name:
 
 ```elixir
-count = 1 # Bound an integer value of 1
-count = 2 # You may re-bind variables
+# Bound an integer value of 1
+count = 1
+# You may re-bind variables
+count = 2
 
-count = false # You may re-bind any type to a variable
+# You may re-bind any type to a variable
+count = false
 
-message = "Success!" # Strings can be created by enclosing characters within double quotes
+# Strings can be created by enclosing characters within double quotes
+message = "Success!"
 ```
 
 ## Modules

@@ -32,7 +32,7 @@ Anonymous functions may be created with the [`&` capture shorthand][kernel-captu
   fn x, y -> abs(x) + abs(y) end
 
   # We can write:
-  & abs(&1) + abs(&2)
+  &(abs(&1) + abs(&2))
   ```
 
 - The `&` capture operator can also be used to [_capture_ existing named function][capture]:

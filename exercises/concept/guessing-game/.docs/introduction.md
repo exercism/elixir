@@ -10,6 +10,7 @@ Elixir offers _multiple function clauses_ and _guards_ to write:
 def number(n) when n == 7 do
   "Awesome, that's my favorite"
 end
+
 def number(_n) do
   "That's not my favorite"
 end

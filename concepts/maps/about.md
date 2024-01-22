@@ -20,8 +20,8 @@
   # A map with the string key "a" associated to the float value 2.0
   %{"a" => 2.0}
 
-  # A map with the map key %{} with the list value [1,2,3]
-  %{%{} => [1,2,3]}
+  # A map with the map key %{} with the list value [1 ,2, 3]
+  %{%{} => [1, 2, 3]}
 
   # A map with keys of different types
   %{:a => 1, "b" => 2}

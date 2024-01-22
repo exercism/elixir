@@ -33,6 +33,7 @@ defmodule MyCustomizedError do
     case value do
       [] ->
         %MyCustomizedError{}
+
       _ ->
         %MyCustomizedError{message: "Alert: " <> value}
     end

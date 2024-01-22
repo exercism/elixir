@@ -2,10 +2,12 @@
 
 [Comprehension][for] provide a facility for transforming _Enumerables_ easily and declaratively. They are _syntactic sugar_ for iterating through enumerables in Elixir.
 
+[]: # (elixir-formatter-disable-next-block)
+
 ```elixir
 for s <- ["a", "b", "hello", "c"], # 1. generator
-  String.length(s) == 1, # 2. filter
-  into: "", # 3. collectable
+  String.length(s) == 1,           # 2. filter
+  into: "",                        # 3. collectable
   do: String.upcase(s)
 
 # => "ABC"
@@ -29,6 +31,7 @@ for x <- [0, 1],
     y <- [0, 1] do
   {x, y}
 end
+
 # => [{0, 0}, {0, 1}, {1, 0}, {1, 1}]
 ```
 
@@ -49,6 +52,7 @@ for pair <- [a: "string"],
     {atom, str} = pair do
   str
 end
+
 # => ["string"]
 ```
 

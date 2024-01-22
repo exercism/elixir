@@ -48,5 +48,6 @@ The `|>` operator is called the pipe operator. It can be used to chain function 
 "hello"
 |> String.upcase()
 |> Kernel.<>("?!")
+
 # => "HELLO?!"
 ```

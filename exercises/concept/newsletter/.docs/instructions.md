@@ -52,5 +52,6 @@ Newsletter.send_newsletter(
   "newsletter_issue1_log.txt",
   fn email -> :ok end
 )
+
 # => :ok
 ```

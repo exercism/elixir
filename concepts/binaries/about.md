@@ -11,7 +11,8 @@
 
 ```elixir
 <<255>> == <<0xFF>>
-<<256>> == <<0>> # Overflowing bits are truncated
+# Overflowing bits are truncated
+<<256>> == <<0>>
 <<256::size(16)>> == <<1, 0>>
 
 <<"Hello">> == <<72, 101, 108, 108, 111>>

@@ -4,7 +4,7 @@
 defmodule Year do
   @spec leap_year?(non_neg_integer) :: boolean
   def leap_year?(year) do
-    rem(year, 4) == 0 and not rem(year, 100) == 0 or rem(year, 400) == 0
+    (rem(year, 4) == 0 and not rem(year, 100) == 0) or rem(year, 400) == 0
   end
 end
 ```
@@ -24,6 +24,8 @@ If `left` is *true*, `right` will not be evaluated. The result will be *true*.
 However, if `left` is *false*, `right` has to be evaluated to determine the outcome.
 
 ## Precedence of operators
+
+[]: # (elixir-formatter-disable-next-block)
 
 Another thing to consider when using Boolean operators is their precedence.
 ```elixir
@@ -51,7 +53,7 @@ The relaxed versions `!`, `&&`, `||` require the first argument to be only [trut
 In the case of this exercise, both types will work equally well, so the solution could be:
 ```elixir
 def leap_year?(year) do
-  rem(year, 4) == 0 && !(rem(year, 100) == 0) || rem(year, 400) == 0
+  (rem(year, 4) == 0 && !(rem(year, 100) == 0)) || rem(year, 400) == 0
 end
 ```
 
@@ -60,7 +62,7 @@ end
 The `leap_year?` function could be written like so:
 ```elixir
 def leap_year?(year) do
-  rem(year, 4) == 0 and not rem(year, 100) == 0 or rem(year, 400) == 0
+  (rem(year, 4) == 0 and not rem(year, 100) == 0) or rem(year, 400) == 0
 end
 ```
 
@@ -71,7 +73,7 @@ We are explicitly checking the reminder, comparing it to zero.
 defp divides?(number, divisor), do: rem(number, divisor) == 0
 
 def leap_year?(year) do
-  divides?(year, 4) and not divides?(year, 100) or divides?(year, 400)
+  (divides?(year, 4) and not divides?(year, 100)) or divides?(year, 400)
 end
 ```
 
@@ -87,7 +89,7 @@ def leap_year?(year) do
   by4? = divides?(year, 4)
   by100? = divides?(year, 100)
   by400? = divides?(year, 400)
-  by4? and not by100? or by400?
+  (by4? and not by100?) or by400?
 end
 ```
 

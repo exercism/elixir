@@ -47,6 +47,7 @@ Enum.reduce([4, 20, 31, 9, 2], nil, fn x, acc ->
     x <= acc -> acc
   end
 end)
+
 # => 31
 ```
 

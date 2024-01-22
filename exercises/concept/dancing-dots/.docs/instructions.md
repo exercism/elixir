@@ -25,7 +25,7 @@ defmodule MyCustomAnimation do
   use DancingDots.Animation
 end
 
-MyCustomAnimation.init([some_option: true])
+MyCustomAnimation.init(some_option: true)
 # => {:ok, [some_option: true]}
 ```
 
@@ -62,15 +62,15 @@ Implement the `handle_frame/3` callback. It should return the dot with its radiu
 Frames are counted from `1`. The dot passed to `handle_frame/3` is always the dot in its original state, not in the state from the previous frame.
 
 ```elixir
-DancingDots.Zoom.init([velocity: nil])
+DancingDots.Zoom.init(velocity: nil)
 # => {:error, "The :velocity option is required, and its value must be a number. Got: nil"}
 
 dot = %DancingDots.Dot{x: 100, y: 100, radius: 24, opacity: 1}
 
-DancingDots.Zoom.handle_frame(dot, 1, [velocity: 10])
+DancingDots.Zoom.handle_frame(dot, 1, velocity: 10)
 # => %DancingDots.Dot{radius: 24, opacity: 1, x: 100, y: 100}
 
-DancingDots.Zoom.handle_frame(dot, 2, [velocity: 10])
+DancingDots.Zoom.handle_frame(dot, 2, velocity: 10)
 # => %DancingDots.Dot{radius: 34, opacity: 1, x: 100, y: 100}
 ```
 

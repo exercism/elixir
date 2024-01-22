@@ -24,6 +24,7 @@ send(machine_pid, {:report_state, self()})
 receive do
   msg -> msg
 end
+
 # => 0
 ```
 
@@ -38,6 +39,7 @@ send(machine_pid, {:take_a_number, self()})
 receive do
   msg -> msg
 end
+
 # => 1
 ```
 

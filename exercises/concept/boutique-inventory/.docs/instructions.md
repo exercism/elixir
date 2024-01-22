@@ -23,6 +23,7 @@ BoutiqueInventory.sort_by_price([
   %{price: 50, name: "Black Short Skirt", quantity_by_size: %{}},
   %{price: 20, name: "Bamboo Socks Cats", quantity_by_size: %{}}
 ])
+
 # => [
 #      %{price: 20, name: "Bamboo Socks Cats", quantity_by_size: %{}},
 #      %{price: 50, name: "Red Short Skirt", quantity_by_size: %{}},
@@ -44,6 +45,7 @@ BoutiqueInventory.with_missing_price([
   %{price: nil, name: "Denim Skirt", quantity_by_size: %{}},
   %{price: 40, name: "Orange T-shirt", quantity_by_size: %{}}
 ])
+
 # => [
 #      %{price: nil, name: "Denim Pants", quantity_by_size: %{}},
 #      %{price: nil, name: "Denim Skirt", quantity_by_size: %{}}
@@ -67,6 +69,7 @@ BoutiqueInventory.update_names(
   "T-shirt",
   "Tee"
 )
+
 # => [
 #      %{price: 40, name: "Black Tee", quantity_by_size: %{}},
 #      %{price: 70, name: "Denim Pants", quantity_by_size: %{}},
@@ -84,19 +87,19 @@ Implement the `increase_quantity/2` function. It should take a single item and a
 
 ```elixir
 BoutiqueInventory.increase_quantity(
- %{
-   name: "Polka Dot Skirt",
-   price: 68,
-   quantity_by_size: %{s: 3, m: 5, l: 3, xl: 4}
- },
- 6
+  %{
+    name: "Polka Dot Skirt",
+    price: 68,
+    quantity_by_size: %{s: 3, m: 5, l: 3, xl: 4}
+  },
+  6
 )
+
 # => %{
 #      name: "Polka Dot Skirt",
 #      price: 68,
 #      quantity_by_size: %{l: 9, m: 11, s: 9, xl: 10}
 #    }
-
 ```
 
 ## 5. Calculate the item's total quantity
@@ -111,5 +114,6 @@ BoutiqueInventory.total_quantity(%{
   price: 62,
   quantity_by_size: %{s: 3, m: 6, l: 5, xl: 2}
 })
+
 # => 16
 ```

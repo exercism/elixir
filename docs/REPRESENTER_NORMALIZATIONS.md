@@ -87,6 +87,8 @@ Types are written without.
 
 ### Before
 
+[]: # (elixir-formatter-disable-next-block)
+
 ```elixir
 defmodule    Fake   do
         @type foo() :: integer() | atom

@@ -14,11 +14,14 @@ Lists can be written in literal form, head-tail notation, (which uses the `cons`
 
 # Head-tail Notation
 []
-[1 | []] # same as [1]
-[1 | [2 | [3 | []]]] # same as [1, 2, 3]
+# same as [1]
+[1 | []]
+# same as [1, 2, 3]
+[1 | [2 | [3 | []]]]
 
 # Mixed
-[1 | [2, 3]] # same as [1, 2, 3]
+# same as [1, 2, 3]
+[1 | [2, 3]]
 ```
 
 There can also be more than one element before the _cons_ (`|`) operator.
@@ -46,7 +49,8 @@ We can achieve the same result by prepending an element to the reversed list, an
 [1, 2, 3] ++ [4] ++ [5] ++ [6]
 
 # Prepend to the start of a list (faster, due to the nature of linked lists)
-[6 | [5 | [4 | [3, 2, 1]]]] # then reverse!
+[6 | [5 | [4 | [3, 2, 1]]]]
+# then reverse!
 ```
 
 There are several common `Kernel` functions for lists:

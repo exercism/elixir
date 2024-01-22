@@ -40,6 +40,7 @@ Implement `capture_day/0`, `capture_month/0`, `capture_year/0`, `capture_day_nam
 DateParser.capture_month_name()
 |> Regex.compile!()
 |> Regex.named_captures("December")
+
 # => %{"month_name" => "December"}
 ```
 
@@ -55,6 +56,7 @@ Implement `capture_numeric_date/0`, `capture_month_name_date()`, and `capture_da
 DateParser.capture_numeric_date()
 |> Regex.compile!()
 |> Regex.named_captures("01/01/1970")
+
 # => %{"day" => "01", "month" => "01", "year" => "1970"}
 ```
 
@@ -70,6 +72,7 @@ Implement `match_numeric_date/0`, `match_month_name_date/0`, and `match_day_mont
 
 DateParser.match_day_month_name_date()
 |> Regex.named_captures("Thursday, January 1, 1970")
+
 # => %{
 #     "day" => "1",
 #     "day_name" => "Thursday",

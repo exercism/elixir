@@ -18,6 +18,8 @@ While in the [operators approach][operators-approach], it was possible to reorde
 
 In our case, the three guards in the function clauses are as follows:
 
+[]: # (elixir-formatter-disable-next-block)
+
 ```elixir
 when rem(year, 400) == 0
 when rem(year, 100) == 0
@@ -25,6 +27,8 @@ when rem(year, 4) == 0
 ```
 
 But because of the order they are evaluated in, they are equivalent to:
+
+[]: # (elixir-formatter-disable-next-block)
 
 ```elixir
 when rem(year, 400) == 0

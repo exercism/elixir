@@ -73,12 +73,12 @@ Implement the `RemoteControlCar.drive/1` function that:
 ```elixir
 RemoteControlCar.new("Red")
 |> RemoteControlCar.drive()
+
 # => %RemoteControlCar{
 #      battery_percentage: 99,
 #      distance_driven_in_meters: 20,
 #      nickname: "Red"
 #    }
-
 ```
 
 Make sure the function only accepts a `RemoteControlCar` struct as the argument.
@@ -94,6 +94,7 @@ Update the `RemoteControlCar.drive/1` function to not increase the distance driv
   nickname: "Red"
 }
 |> RemoteControlCar.drive()
+
 # => %RemoteControlCar{
 #      battery_percentage: 0,
 #      distance_driven_in_meters: 1980,
