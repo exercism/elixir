@@ -5,14 +5,18 @@
       "slug": "pattern-matching",
       "title": "Pattern Matching",
       "blurb": "",
-      "authors": []
+      "authors": [
+        "michalporeba"
+      ]
     },
     {
       "uuid": "925ccb59-3414-472b-9054-1cdfc5e44fad",
       "slug": "step-by-step",
       "title": "Step By Step",
       "blurb": "",
-      "authors": []
+      "authors": [
+        "michalporeba"
+      ]
     }
   ]
 }
