@@ -1,9 +1,9 @@
 # Introduction
 
-## Pattern matching
+## Check every possibility
 
-The output of the `convert` method depends on three conditions.
-We can be very explicit with the solution and match all the possible patterns.
+The output of the `convert` method depends on three conditions which can be either true or false.
+This gives only eight possibilities and we can check them all.
 
 ```elixir
 def convert(number) do
@@ -20,7 +20,7 @@ def convert(number) do
 end
 ```
 
-We can use a few Elixir features to do more or less the same and we explore them in the [pattern matching approach][pattern-matching-approach].
+We can use a few Elixir features to do more or less the same and we explore them in the [check every possibility approach][check-every-possibility-approach].
 
 ## Step by step
 
@@ -45,5 +45,5 @@ end
 
 Let's have a look at a few variations of this [step by step approach][step-by-step-approach].
 
-[pattern-matching-approach]: https://exercism.org/tracks/elixir/exercises/raindrops/approaches/pattern-matching
+[check-every-possibility-approach]: https://exercism.org/tracks/elixir/exercises/raindrops/approaches/check-every-possibility
 [step-by-step-approach]: https://exercism.org/tracks/elixir/exercises/raindrops/approaches/step-by-step
