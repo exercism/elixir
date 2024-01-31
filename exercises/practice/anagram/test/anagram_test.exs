@@ -96,4 +96,23 @@ defmodule AnagramTest do
     matches = Anagram.match("LISTEN", ~w(Silent LISTEN))
     assert matches == ~w(Silent)
   end
+
+  @tag :pending
+  test "handles case of greek letters" do
+    matches = Anagram.match("ΑΒΓ", ~w(ΒΓΑ ΒΓΔ γβα αβγ))
+    assert matches == ~w(ΒΓΑ γβα)
+  end
+
+  @tag :pending
+  test "different characters may have the same bytes" do
+    matches =
+      Anagram.match(
+        # binary representation: <<0x61, 0xE2, 0xAC, 0x82>>
+        "a⬂",
+        # binary representation: <<0xE2, 0x82, 0xAC, 0x61>>
+        ["€a"]
+      )
+
+    assert matches == []
+  end
 end
