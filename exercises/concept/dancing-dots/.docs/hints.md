@@ -17,10 +17,10 @@
 
 ## 2. Provide a default implementation of the `init/1` callback
 
-- Define a `__using__/1` macro in the `DacingDots.Animation` module.
+- Define a `__using__/1` macro in the `DancingDots.Animation` module.
 - The macros' argument can be ignored.
 - The macro must return a [quoted expression][quote].
-- In the quoted expression, use `@behaviour` so that calling `use DacingDots.Animation` sets `DacingDots.Animation` as the using module's behaviour.
+- In the quoted expression, use `@behaviour` so that calling `use DancingDots.Animation` sets `DancingDots.Animation` as the using module's behaviour.
 - In the quoted expression, implement the `init/1` function.
 - The default implementation of the `init/1` function should wrap the given `opts` argument in `:ok` tuple.
 - There is [a macro][defoverridable] that can mark a function as overridable.
