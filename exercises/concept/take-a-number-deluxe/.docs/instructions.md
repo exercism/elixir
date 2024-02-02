@@ -106,7 +106,7 @@ Modify starting the machine. It should read the value under the key `:auto_shutd
 
 Modify resetting the machine state to also pass `auto_shutdown_timeout` to `TakeANumberDeluxe.State.new/3`.
 
-Modify the return values of all implemented callbacks (`init/1` and all `handle_*` callbacks) to set a timeout. Use the the value under the key `:auto_shutdown_timeout` in the current machine state. Do not add the timeout to the `{:stop, reason}` return value of `init/1` - timeouts only apply after the server has started its receive loop.
+Modify the return values of all implemented callbacks (`init/1` and all `handle_*` callbacks) to set a timeout. Use the value under the key `:auto_shutdown_timeout` in the current machine state. Do not add the timeout to the `{:stop, reason}` return value of `init/1` - timeouts only apply after the server has started its receive loop.
 
 Implement a `GenServer` callback to handle the `:timeout` message that will be sent to the machine if it doesn't receive any other messages within the given timeout. It should exit the process with reason `:normal`.
 
