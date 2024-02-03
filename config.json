@@ -1342,6 +1342,21 @@
         "difficulty": 3
       },
       {
+        "slug": "eliuds-eggs",
+        "name": "Eliud's Eggs",
+        "uuid": "8a9d6e1e-9188-44c9-8681-ade84d340dd0",
+        "practices": [
+          "bit-manipulation"
+        ],
+        "prerequisites": [
+          "bit-manipulation",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "recursion"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "flatten-array",
         "name": "Flatten Array",
         "uuid": "0aae3af1-7c35-4d7c-aecf-8f89c7fbc300",
@@ -1578,21 +1593,6 @@
           "pattern-matching",
           "guards",
           "enum",
-          "recursion"
-        ],
-        "difficulty": 3
-      },
-      {
-        "slug": "eliuds-eggs",
-        "name": "Eliud's Eggs",
-        "uuid": "8a9d6e1e-9188-44c9-8681-ade84d340dd0",
-        "practices": [
-          "bit-manipulation"
-        ],
-        "prerequisites": [
-          "bit-manipulation",
-          "multiple-clause-functions",
-          "pattern-matching",
           "recursion"
         ],
         "difficulty": 3
