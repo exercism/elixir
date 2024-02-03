@@ -4,10 +4,10 @@
   ],
   "files": {
     "solution": [
-      "lib/pop_count.ex"
+      "lib/eliuds_eggs.ex"
     ],
     "test": [
-      "test/pop_count_test.exs"
+      "test/eliuds_eggs_test.exs"
     ],
     "example": [
       ".meta/example.ex"
