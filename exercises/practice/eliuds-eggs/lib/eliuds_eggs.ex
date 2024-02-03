@@ -1,4 +1,4 @@
-defmodule PopCount do
+defmodule EliudsEggs do
   @doc """
   Given the number, count the number of eggs.
   """

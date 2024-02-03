@@ -1,9 +1,9 @@
-defmodule PopCount.MixProject do
+defmodule EliudsEggs.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :pop_count,
+      app: :eliuds_eggs,
       version: "0.1.0",
       # elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
