@@ -7,7 +7,7 @@
       "lib/eliuds_eggs.ex"
     ],
     "test": [
-      "test/.meta/eliuds_eggs_test.exs"
+      "test/eliuds_eggs_test.exs"
     ],
     "example": [
       ".meta/example.ex"
