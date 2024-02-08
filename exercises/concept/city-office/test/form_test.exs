@@ -223,7 +223,14 @@ defmodule FormTest do
         "%{postal_code: String.t(), street: String.t(), city: String.t()}",
         "%{postal_code: String.t(), city: String.t(), street: String.t()}",
         "%{city: String.t(), street: String.t(), postal_code: String.t()}",
-        "%{city: String.t(), postal_code: String.t(), street: String.t()}"
+        "%{city: String.t(), postal_code: String.t(), street: String.t()}",
+
+        "%{(:street | :postal_code | :city) => String.t()}",
+        "%{(:street | :city | :postal_code) => String.t()}",
+        "%{(:postal_code | :street | :city) => String.t()}",
+        "%{(:postal_code | :city | :street) => String.t()}",
+        "%{(:city | :street | :postal_code) => String.t()}",
+        "%{(:city | :postal_code | :street) => String.t()}"
       ]
 
       assert_type({Form, :address_map}, expected_type_definitions)
