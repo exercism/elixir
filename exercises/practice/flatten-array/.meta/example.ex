@@ -5,7 +5,7 @@ defmodule FlattenArray do
     ## Examples
 
       iex> FlattenArray.flatten([1, [2], 3, nil])
-      [1,2,3]
+      [1, 2, 3]
 
       iex> FlattenArray.flatten([nil, nil])
       []
