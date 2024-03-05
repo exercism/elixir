@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
 
       - name: Use Elixir
-        uses: erlef/setup-beam@904c511e63061a8f501ae4b081ce2c0e9cfc70ab
+        uses: erlef/setup-beam@2f0cc07b4b9bea248ae098aba9e1a8a1de5ec24c
         with:
           otp-version: ${{matrix.otp}}
           elixir-version: ${{matrix.elixir}}
@@ -92,7 +92,7 @@ jobs:
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
       - name: Use Elixir ${{matrix.elixir}} / OTP ${{matrix.otp}}
-        uses: erlef/setup-beam@904c511e63061a8f501ae4b081ce2c0e9cfc70ab
+        uses: erlef/setup-beam@2f0cc07b4b9bea248ae098aba9e1a8a1de5ec24c
         with:
           otp-version: ${{matrix.otp}}
           elixir-version: ${{matrix.elixir}}
