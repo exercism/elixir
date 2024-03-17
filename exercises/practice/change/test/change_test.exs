@@ -58,6 +58,13 @@ defmodule ChangeTest do
   end
 
   @tag :pending
+  test "a greedy approach is not optimal" do
+    coins = [1, 10, 11]
+    expected = [10, 10]
+    assert Change.generate(coins, 20) == {:ok, expected}
+  end
+
+  @tag :pending
   test "no coins make 0 change" do
     coins = [1, 5, 10, 21, 25]
     expected = []
