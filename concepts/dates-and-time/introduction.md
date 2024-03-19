@@ -21,7 +21,11 @@ Elixir's standard library offers 4 different modules for working with dates and 
   ```
 
 - The `DateTime` module for datetimes with a timezone. Using this module for timezones other than UTC requires an external dependency, a timezone database.
-
+  
+  ```elixir
+  ~U[2021-01-01 12:00:00Z]
+  ```
+  
 ## Comparisons
 
 To compare dates or times to one another, look for a `compare` or `diff` function in the corresponding module. Comparison operators such as `==`, `>`, and `<` _seem_ to work, but they don't do a correct semantic comparison for those structs.
