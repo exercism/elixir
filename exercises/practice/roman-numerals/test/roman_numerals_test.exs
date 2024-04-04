@@ -37,6 +37,11 @@ defmodule RomanNumeralsTest do
   end
 
   @tag :pending
+  test "16" do
+    assert RomanNumerals.numeral(16) == "XVI"
+  end
+
+  @tag :pending
   test "27" do
     assert RomanNumerals.numeral(27) == "XXVII"
   end
@@ -49,6 +54,11 @@ defmodule RomanNumeralsTest do
   @tag :pending
   test "59" do
     assert RomanNumerals.numeral(59) == "LIX"
+  end
+
+  @tag :pending
+  test "66" do
+    assert RomanNumerals.numeral(66) == "LXVI"
   end
 
   @tag :pending
@@ -77,6 +87,11 @@ defmodule RomanNumeralsTest do
   end
 
   @tag :pending
+  test "666" do
+    assert RomanNumerals.numeral(666) == "DCLXVI"
+  end
+
+  @tag :pending
   test "911" do
     assert RomanNumerals.numeral(911) == "CMXI"
   end
@@ -87,38 +102,23 @@ defmodule RomanNumeralsTest do
   end
 
   @tag :pending
-  test "3000" do
-    assert RomanNumerals.numeral(3000) == "MMM"
-  end
-
-  @tag :pending
-  test "16" do
-    assert RomanNumerals.numeral(16) == "XVI"
-  end
-
-  @tag :pending
-  test "66" do
-    assert RomanNumerals.numeral(66) == "LXVI"
-  end
-
-  @tag :pending
-  test "166" do
-    assert RomanNumerals.numeral(166) == "CLXVI"
-  end
-
-  @tag :pending
-  test "666" do
-    assert RomanNumerals.numeral(666) == "DCLXVI"
-  end
-
-  @tag :pending
   test "1666" do
     assert RomanNumerals.numeral(1666) == "MDCLXVI"
   end
 
   @tag :pending
+  test "3000" do
+    assert RomanNumerals.numeral(3000) == "MMM"
+  end
+
+  @tag :pending
   test "3001" do
     assert RomanNumerals.numeral(3001) == "MMMI"
+  end
+
+  @tag :pending
+  test "3888" do
+    assert RomanNumerals.numeral(3888) == "MMMDCCCLXXXVIII"
   end
 
   @tag :pending
