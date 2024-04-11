@@ -122,7 +122,13 @@ defmodule RPG.CharacterSheetTest do
         end)
 
       assert io =~
-               "\nYour character: " <>
+               """
+               Welcome! Let's fill out your character sheet together.
+               What is your character's name?
+               What is your character's class?
+               What is your character's level?
+               """ <>
+                 "Your character: " <>
                  inspect(%{
                    name: "Anne",
                    class: "healer",
