@@ -138,7 +138,7 @@ jobs:
           key: lychee-v1
 
       - name: Link Checker
-        uses: lycheeverse/lychee-action@c053181aa0c3d17606addfe97a9075a32723548a
+        uses: lycheeverse/lychee-action@2b973e86fc7b1f6b36a93795fe2c9c6ae1118621
         with:
           args: --cache --max-cache-age 7d --require-https --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36" --no-progress './**/*.md' './**/*.html' './**/*.json'
           fail: true
