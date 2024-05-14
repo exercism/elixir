@@ -35,6 +35,8 @@ defmodule LogParserTest do
     @tag task_id: 1
     test "level must be wrapped in square brackets" do
       assert LogParser.valid_line?("ERROR something really bad happened") == false
+      assert LogParser.valid_line?("[INFO the latest information") == false
+      assert LogParser.valid_line?("DEBUG] response time 3ms") == false
     end
 
     @tag task_id: 1
