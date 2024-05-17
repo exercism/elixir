@@ -10,7 +10,6 @@ if [ -z "$1" ]; then
 fi
 
 SLUG="$1"
-exercise_dir="exercises/practice/${SLUG}"
 
 # build configlet
 echo "Fetching latest version of configlet..."
