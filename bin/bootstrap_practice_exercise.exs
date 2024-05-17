@@ -1,8 +1,8 @@
 # Generate all files required for a practice exercise.
 # File content is filled as much as possible, but some, including tests, need manual input.
 #
-# Run the following command from the root of the repo:
-# $ elixir bin/boostrap_practice_exercise.exs complex-numbers
+# Do not run directly, instead use this script:
+# $ bin/generate_practice_exercise.sh complex-numbers
 # Pass the name of the exercise (e. g., "complex-numbers") as an argument
 
 Mix.install([
@@ -143,9 +143,6 @@ module =
 
 ## Step 1: create folder structure
 
-Mix.Generator.create_directory("exercises/practice/#{exercise}")
-Mix.Generator.create_directory("exercises/practice/#{exercise}/.docs")
-Mix.Generator.create_directory("exercises/practice/#{exercise}/.meta")
 Mix.Generator.create_directory("exercises/practice/#{exercise}/lib")
 Mix.Generator.create_directory("exercises/practice/#{exercise}/test")
 
@@ -242,38 +239,6 @@ url =
 
 :inets.start()
 :ssl.start()
-
-# .docs/instructions.md
-{:ok, {_status, _header, description}} =
-  :httpc.request(:get, {url ++ ~c"/description.md", []}, [], [])
-
-Mix.Generator.create_file("exercises/practice/#{exercise}/.docs/instructions.md", description)
-
-# .meta/config.json
-{:ok, {_status, _header, metadata}} =
-  :httpc.request(:get, {url ++ ~c"/metadata.toml", []}, [], [])
-
-metadata =
-  metadata
-  |> to_string
-  |> Toml.decode!()
-
-config = %{
-  authors: [],
-  contributors: [],
-  files: %{
-    solution: ["lib/#{exercise_snake_case}.ex"],
-    test: ["test/#{exercise_snake_case}_test.exs"],
-    example: [".meta/example.ex"]
-  }
-}
-
-config =
-  Map.merge(metadata, config)
-  |> Jason.encode!(pretty: true)
-
-Mix.Generator.create_file("exercises/practice/#{exercise}/.meta/config.json", config)
-IO.puts("Don't forget to add your name and the names of contributors")
 
 # tests and lib files
 {:ok, {_status, _header, data}} =
