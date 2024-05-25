@@ -63,7 +63,7 @@ defmodule YachtTest do
 
   @tag :pending
   test "Full house three small, two big" do
-    assert Yacht.score(:full_house, [5, 3, 3, 5, 3]) == 19
+    assert Yacht.score(:full_house, [3, 5, 3, 5, 3]) == 19
   end
 
   @tag :pending
