@@ -53,7 +53,7 @@ defmodule ComplexNumbers do
   @doc """
   Absolute value of a complex number
   """
-  @spec abs(a :: complex) :: float
+  @spec abs(a :: complex) :: number
   def abs({a, b}), do: :math.sqrt(a * a + b * b)
 
   @doc """
