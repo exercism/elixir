@@ -8,6 +8,7 @@ Clothing items are stored as a map:
 %{
   item_name: "Descriptive Name",
   price: 99.00,
+  color: "Ochre Red",
   base_color: "red"
 }
 ```
