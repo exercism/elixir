@@ -8,7 +8,8 @@
 ## 1. Start the machine
 
 - The machine should run in a new process. There is [a built-in function that starts a new process][kernel-spawn-1].
-- You will need another function that the new process will execute.
+- You will need another function that the new process will execute. You can name it, for example, `loop`.
+- Use the [capture operator][special-forms-capture] to pass a named function as an argument.
 
 ## 2. Report the machine state
 
@@ -38,3 +39,4 @@
 [kernel-spawn-1]: https://hexdocs.pm/elixir/Kernel.html#spawn/1
 [kernel-receive]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#receive/1
 [kernel-send]: https://hexdocs.pm/elixir/Kernel.html#send/2
+[special-forms-capture]: https://hexdocs.pm/elixir/Kernel.SpecialForms.html#&/1
