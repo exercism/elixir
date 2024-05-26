@@ -10,5 +10,9 @@
   {
     "url": "https://hexdocs.pm/elixir/Kernel.SpecialForms.html#with/1",
     "description": "Kernel.SpecialForms.with/1"
+  },
+  {
+    "url": "https://hexdocs.pm/elixir/main/code-anti-patterns.html#complex-else-clauses-in-with",
+    "description": "Anti-pattern: complex else clauses in with"
   }
 ]
