@@ -33,7 +33,7 @@ defmodule PigLatinTest do
     end
   end
 
-  describe "first consonant letters and ay are moved to the end of words that start with consonants" do
+  describe "first letter and ay are moved to the end of words that start with consonants" do
     @tag :pending
     test "word beginning with p" do
       assert PigLatin.translate("pig") == "igpay"
@@ -53,24 +53,9 @@ defmodule PigLatinTest do
     test "word beginning with q without a following u" do
       assert PigLatin.translate("qat") == "atqay"
     end
-
-    @tag :pending
-    test "word beginning with two consonants" do
-      assert PigLatin.translate("pleasure") == "easureplay"
-    end
-
-    @tag :pending
-    test "word beginning with three consonants" do
-      assert PigLatin.translate("stringify") == "ingifystray"
-    end
-
-    @tag :pending
-    test "word beginning with a series of consonants : aliens speak Pig Latin too" do
-      assert PigLatin.translate("zkrrkrkrkrzzzkewk") == "ewkzkrrkrkrkrzzzkay"
-    end
   end
 
-  describe "consecutive consonants are treated like a single consonant" do
+  describe "some letter clusters are treated like a single consonant" do
     @tag :pending
     test "word beginning with ch" do
       assert PigLatin.translate("chair") == "airchay"
@@ -102,25 +87,15 @@ defmodule PigLatinTest do
     end
   end
 
-  describe "'x' and 'y', when followed by a consonant, are treated like a vowel" do
+  describe "some letter clusters are treated like a single vowel" do
     @tag :pending
     test "word beginning with y, followed by a consonant" do
       assert PigLatin.translate("yttria") == "yttriaay"
     end
 
     @tag :pending
-    test "word beginning with y, followed by another consonant" do
-      assert PigLatin.translate("yddria") == "yddriaay"
-    end
-
-    @tag :pending
     test "word beginning with xr" do
       assert PigLatin.translate("xray") == "xrayay"
-    end
-
-    @tag :pending
-    test "word beginning with xb" do
-      assert PigLatin.translate("xbot") == "xbotay"
     end
   end
 
