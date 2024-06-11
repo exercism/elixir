@@ -21,7 +21,7 @@ Keyword.keyword?([{"month", "April"}])
 
 If you want to use characters other than letters, numbers, and `_` in the key, you need to wrap it in quotes. However, that does not make it a string - it is still an atom.
 
-[]: # (elixir-formatter-disable-next-block)
+[//]: # (elixir-formatter-disable-next-block)
 
 ```elixir
 Keyword.keyword?(["day of week": "Monday"])
@@ -61,7 +61,7 @@ if age >= 16, do: "beer", else: "no beer"
 
 This may look like `if` accepts two arguments, but the `do:` and `else:` pair is actually a single argument - a keyword list. The same code could be written as:
 
-[]: # (elixir-formatter-disable-next-block)
+[//]: # (elixir-formatter-disable-next-block)
 
 ```elixir
 if age >= 16, [do: "beer", else: "no beer"]

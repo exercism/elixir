@@ -25,7 +25,7 @@ However, if `left` is *false*, `right` has to be evaluated to determine the outc
 
 ## Precedence of operators
 
-[]: # (elixir-formatter-disable-next-block)
+[//]: # (elixir-formatter-disable-next-block)
 
 Another thing to consider when using Boolean operators is their precedence.
 ```elixir

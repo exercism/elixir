@@ -71,7 +71,7 @@ Multiple tests may be executed by giving multiple line numbers separated by `:`.
 
 For example, given a file with the following content with line numbers:
 
-[]: # (elixir-formatter-disable-next-block)
+[//]: # (elixir-formatter-disable-next-block)
 
 ```elixir
 test "Test 1" do           # 1

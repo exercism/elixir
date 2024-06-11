@@ -15,7 +15,7 @@ Map.fetch!(%{a: 1}, :b)
 
 Elixir provides a construct for rescuing from errors using `try .. rescue`
 
-[]: # (elixir-formatter-disable-next-block)
+[//]: # (elixir-formatter-disable-next-block)
 
 ```elixir
 try do                             #1
