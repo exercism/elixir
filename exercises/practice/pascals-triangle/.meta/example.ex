@@ -24,7 +24,7 @@ defmodule PascalsTriangle do
   defp each_cons(list) do
     list
     |> Enum.flat_map(&[&1, &1])
-    |> Enum.slice(1..-2)
+    |> Enum.slice(1..-2//-1)
     |> Enum.chunk_every(2)
   end
 

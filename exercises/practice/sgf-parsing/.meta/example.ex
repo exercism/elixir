@@ -134,7 +134,7 @@ defmodule SgfParsing do
       with {:ok, result, rest} <- some(parser).(input) do
         {:ok, result, rest}
       else
-        {:error, _err, ^input} -> {:ok, [], input}
+        {:error, _err, rest} when rest == input -> {:ok, [], input}
         err -> err
       end
     end

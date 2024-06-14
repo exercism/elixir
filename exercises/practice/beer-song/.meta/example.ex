@@ -15,7 +15,7 @@ defmodule BeerSong do
     "#{number} bottles of beer on the wall, #{number} bottles of beer.\nTake one down and pass it around, #{number - 1} bottles of beer on the wall.\n"
   end
 
-  def lyrics(range \\ 99..0) do
+  def lyrics(range \\ 99..0//-1) do
     range
     |> Enum.map(&verse/1)
     |> Enum.join("\n")

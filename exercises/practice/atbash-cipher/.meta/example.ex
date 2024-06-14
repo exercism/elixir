@@ -1,5 +1,5 @@
 defmodule Atbash do
-  @key Enum.zip(?a..?z, ?z..?a) |> Enum.into(%{})
+  @key Enum.zip(?a..?z, ?z..?a//-1) |> Enum.into(%{})
 
   @doc """
   Encode a given plaintext to the corresponding ciphertext

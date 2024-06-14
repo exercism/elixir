@@ -18,7 +18,7 @@ defmodule IsbnVerifier do
         isbn
         |> String.replace("-", "")
         |> String.graphemes()
-        |> Enum.zip(10..1)
+        |> Enum.zip(10..1//-1)
         |> Enum.map(&checksum_weighting/1)
         |> Enum.sum()
 

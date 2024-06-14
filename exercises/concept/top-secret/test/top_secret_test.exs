@@ -37,41 +37,46 @@ defmodule TopSecretTest do
       end
       """
 
-      ast = {
-        :defmodule,
-        [line: 1],
-        [
-          {:__aliases__, [line: 1], [:List]},
-          [
-            do: {
-              :__block__,
-              [],
-              [
-                {:@, [line: 2],
+      assert {
+               :defmodule,
+               [line: 1],
+               [
+                 {:__aliases__, [line: 1], [:List]},
                  [
-                   {:spec, [line: 2],
-                    [{:"::", [line: 2], [{:delete, [line: 2], [[], {:any, [line: 2], nil}]}, []]}]}
-                 ]},
-                {:@, [line: 3],
-                 [
-                   {:spec, [line: 3],
-                    [
-                      {:"::", [line: 3],
-                       [
-                         {:delete, [line: 3], [[{:..., [line: 3], nil}], {:any, [line: 3], nil}]},
-                         {:list, [line: 3], nil}
-                       ]}
-                    ]}
-                 ]},
-                {:def, [line: 4],
-                 [{:delete, [line: 4], [{:list, [line: 4], nil}, {:element, [line: 4], nil}]}]}
-              ]
-            }
-          ]
-        ]
-      }
-
-      assert TopSecret.to_ast(string) == ast
+                   do: {
+                     :__block__,
+                     [],
+                     [
+                       {:@, [line: 2],
+                        [
+                          {:spec, [line: 2],
+                           [
+                             {:"::", [line: 2],
+                              [{:delete, [line: 2], [[], {:any, [line: 2], nil}]}, []]}
+                           ]}
+                        ]},
+                       {:@, [line: 3],
+                        [
+                          {:spec, [line: 3],
+                           [
+                             {:"::", [line: 3],
+                              [
+                                {:delete, [line: 3],
+                                 [[{:..., [line: 3], _nil_or_empty_list}], {:any, [line: 3], nil}]},
+                                {:list, [line: 3], nil}
+                              ]}
+                           ]}
+                        ]},
+                       {:def, [line: 4],
+                        [
+                          {:delete, [line: 4],
+                           [{:list, [line: 4], nil}, {:element, [line: 4], nil}]}
+                        ]}
+                     ]
+                   }
+                 ]
+               ]
+             } = TopSecret.to_ast(string)
     end
   end
 
