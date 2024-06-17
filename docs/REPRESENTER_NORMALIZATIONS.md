@@ -87,7 +87,7 @@ Types are written without.
 
 ### Before
 
-[]: # (elixir-formatter-disable-next-block)
+[//]: # (elixir-formatter-disable-next-block)
 
 ```elixir
 defmodule    Fake   do

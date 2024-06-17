@@ -74,7 +74,7 @@ If you have Elixir installed on your computer, you can use it in [the interactiv
 
 In `iex`, you can type [`h`][iex-h], followed by a space and a module name or a function name, to read its documentation.
 
-[]: # (elixir-formatter-disable-next-block)
+[//]: # (elixir-formatter-disable-next-block)
 
 ```elixir
 iex()> h String.upcase/1

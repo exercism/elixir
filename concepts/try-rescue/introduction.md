@@ -2,13 +2,11 @@
 
 Elixir provides a construct for rescuing from errors using `try .. rescue`
 
-[]: # (elixir-formatter-disable-next-block)
-
 ```elixir
-try do                             #1
-  raise RuntimeError, "error"      #2
+try do
+  raise RuntimeError, "error"
 rescue
-  e in RuntimeError -> :error      #3
+  e in RuntimeError -> :error
 end
 ```
 
@@ -16,7 +14,7 @@ Let's examine this construct:
 
 - **Line 1**, the block is declared with `try`.
 - **Line 2**, the function call which may error is placed here, in this case we are calling `raise/2`.
-- **Line 3**, in the `rescue` section, we pattern match on the _Module_ name of the error raised
+- **Line 4**, in the `rescue` section, we pattern match on the _Module_ name of the error raised
   - on the left side of `->`:
     - `e` is matched to the error struct.
     - `in` is a keyword.
