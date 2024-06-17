@@ -18,7 +18,7 @@
 ## 3. Convert the milliliter volume-pair to another unit
 
 - Use [multiple clause functions][multi-clause] and [pattern matching][pattern-matching] to reduce conditional control flow logic.
-- Implement the function for all units to milliliters, including milliliters to milliliters.
+- Implement the function for milliliters to all units, including milliliters to milliliters.
 
 ## 4. Convert from any unit to any unit
 
