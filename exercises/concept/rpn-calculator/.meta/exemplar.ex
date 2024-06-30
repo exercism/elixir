@@ -15,7 +15,7 @@ defmodule RPNCalculator do
     try do
       {:ok, operation.(stack)}
     rescue
-      e -> {:error, Exception.message(e)}
+      e in ArgumentError -> {:error, e.message}
     end
   end
 end
