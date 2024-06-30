@@ -51,8 +51,8 @@ defmodule Garden do
     letters = "#{first_row_letters}#{second_row_letters}"
     map = add_to_map(map, current_name, letters)
 
-    first_row = String.slice(first_row, 2..-1)
-    second_row = String.slice(second_row, 2..-1)
+    first_row = String.slice(first_row, 2..-1//-1)
+    second_row = String.slice(second_row, 2..-1//-1)
     populate_map(first_row, second_row, map, student_names)
   end
 

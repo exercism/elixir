@@ -8,7 +8,7 @@ name: elixir / main ci
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
@@ -17,8 +17,8 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        elixir: [1.16]
-        otp: [26.2]
+        elixir: [1.17]
+        otp: [27.0]
 
     steps:
       - name: Checkout code
@@ -76,8 +76,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - elixir: '1.11.0'
-            otp: '23.2'
           - elixir: '1.12.0'
             otp: '24.0'
           - elixir: '1.13.0'
@@ -88,6 +86,8 @@ jobs:
             otp: '26.0'
           - elixir: '1.16.0'
             otp: '26.2'
+          - elixir: '1.17.0'
+            otp: '27.0'
 
     steps:
       - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
