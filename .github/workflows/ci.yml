@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
 
       - name: Use Elixir
         uses: erlef/setup-beam@a6e26b22319003294c58386b6f25edbc7336819a
@@ -90,7 +90,7 @@ jobs:
             otp: '26.2'
 
     steps:
-      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
       - name: Use Elixir ${{matrix.elixir}} / OTP ${{matrix.otp}}
         uses: erlef/setup-beam@a6e26b22319003294c58386b6f25edbc7336819a
         with:
@@ -128,7 +128,7 @@ jobs:
     name: Link Checker
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
 
       - name: Retrieve Lychee Cache
         uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
