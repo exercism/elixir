@@ -2314,6 +2314,22 @@
         "difficulty": 5
       },
       {
+        "slug": "game-of-life",
+        "name": "Game of Life",
+        "uuid": "32d53ab8-abea-4483-a8cb-ee3b908a9dd7",
+        "practices": [
+          "enum"
+        ],
+        "prerequisites": [
+          "enum",
+          "lists",
+          "pattern-matching",
+          "pipe-operator",
+          "multiple-clause-functions"
+        ],
+        "difficulty": 6
+      },
+      {
         "slug": "knapsack",
         "name": "Knapsack",
         "uuid": "1770aab6-2289-4134-b6ac-7d346e421e06",
