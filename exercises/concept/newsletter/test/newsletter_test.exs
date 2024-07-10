@@ -86,7 +86,7 @@ defmodule NewsletterTest do
     test "closes the file" do
       file = File.open!(@temp_file_path, [:read])
       assert Newsletter.close_log(file) == :ok
-      assert IO.read(file, :all) == {:error, :terminated}
+      assert IO.read(file, :eof) == {:error, :terminated}
     end
   end
 
