@@ -13,8 +13,7 @@
       ".meta/exemplar.ex"
     ]
   },
-  "language_versions": ">=1.10",
-  "forked_from": [
+    "forked_from": [
     "go/parsing-log-files"
   ],
   "blurb": "Learn about regular expressions by parsing logs."

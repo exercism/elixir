@@ -17,6 +17,5 @@
       ".meta/exemplar.ex"
     ]
   },
-  "language_versions": ">=1.10",
-  "blurb": "Learn about binaries by verifying the mime type of files uploaded to your server."
+    "blurb": "Learn about binaries by verifying the mime type of files uploaded to your server."
 }

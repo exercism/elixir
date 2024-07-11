@@ -20,8 +20,7 @@
       "lib/need_for_speed/remote_control_car.ex"
     ]
   },
-  "language_versions": ">=1.10",
-  "forked_from": [
+    "forked_from": [
     "csharp/need-for-speed"
   ],
   "blurb": "Learn about reusing code with alias and import by racing remote controlled cars."

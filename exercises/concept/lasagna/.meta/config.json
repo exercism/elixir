@@ -16,8 +16,7 @@
       ".meta/exemplar.ex"
     ]
   },
-  "language_versions": ">=1.10",
-  "forked_from": [
+    "forked_from": [
     "csharp/lucians-luscious-lasagna"
   ],
   "blurb": "Learn about the basics of Elixir by following a lasagna recipe."

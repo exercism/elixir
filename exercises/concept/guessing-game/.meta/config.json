@@ -16,8 +16,7 @@
       ".meta/exemplar.ex"
     ]
   },
-  "language_versions": ">=1.10",
-  "forked_from": [
+    "forked_from": [
     "fsharp/guessing-game"
   ],
   "blurb": "Learn about multiple clause functions, guards, and default arguments by implementing a simple game in which the player needs to guess a secret number."

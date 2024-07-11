@@ -20,6 +20,5 @@
       ".meta/exemplar.ex"
     ]
   },
-  "language_versions": ">=1.10",
-  "blurb": "Learn about the Agent module by helping your local community handle community garden registrations."
+    "blurb": "Learn about the Agent module by helping your local community handle community garden registrations."
 }

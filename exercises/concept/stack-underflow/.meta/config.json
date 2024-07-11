@@ -16,7 +16,6 @@
       ".meta/exemplar.ex"
     ]
   },
-  "language_versions": ">=1.10",
-  "icon": "error-handling",
+    "icon": "error-handling",
   "blurb": "Learn about defining custom exceptions by continuing work on your experimental Reverse Polish Notation calculator."
 }

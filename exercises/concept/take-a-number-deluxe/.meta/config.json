@@ -20,7 +20,6 @@
       "lib/take_a_number_deluxe/queue.ex"
     ]
   },
-  "language_versions": ">=1.10",
-  "icon": "take-a-number",
+    "icon": "take-a-number",
   "blurb": "Learn about GenServers by writing an embedded system for a Take-A-Number machine."
 }
