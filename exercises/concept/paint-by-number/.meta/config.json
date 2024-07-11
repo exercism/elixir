@@ -17,9 +17,6 @@
     ],
     "exemplar": [
       ".meta/exemplar.ex"
-    ],
-    "editor": [
-      "lib/math.ex"
     ]
   },
   "language_versions": ">=1.10",
