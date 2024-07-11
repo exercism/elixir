@@ -16,6 +16,6 @@
       ".meta/exemplar.ex"
     ]
   },
-    "icon": "instruments-of-texas",
+  "icon": "instruments-of-texas",
   "blurb": "Learn about tasks and links by inspecting a working prototype of your experimental Reverse Polish Notation calculator."
 }

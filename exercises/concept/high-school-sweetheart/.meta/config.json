@@ -16,6 +16,6 @@
       ".meta/exemplar.ex"
     ]
   },
-    "icon": "high-school-sweethearts",
+  "icon": "high-school-sweethearts",
   "blurb": "Learn about strings and the pipe operator by helping high school sweethearts profess their love on social media via ASCII art."
 }

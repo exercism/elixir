@@ -16,7 +16,7 @@
       ".meta/exemplar.ex"
     ]
   },
-    "forked_from": [
+  "forked_from": [
     "javascript/freelancer-rates"
   ],
   "blurb": "Learn about integers and floating point numbers by helping a freelancer communicate with a project manager about billing."

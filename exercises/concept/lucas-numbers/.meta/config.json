@@ -16,5 +16,5 @@
       ".meta/exemplar.ex"
     ]
   },
-    "blurb": "Learn about streams by generating the Lucas number sequence."
+  "blurb": "Learn about streams by generating the Lucas number sequence."
 }

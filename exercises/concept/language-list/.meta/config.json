@@ -16,7 +16,7 @@
       ".meta/exemplar.ex"
     ]
   },
-    "forked_from": [
+  "forked_from": [
     "clojure/tracks-on-tracks-on-tracks"
   ],
   "blurb": "Learn about lists by keeping track of the programming languages you're currently learning on Exercism."

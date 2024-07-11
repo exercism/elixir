@@ -16,5 +16,5 @@
       ".meta/exemplar.ex"
     ]
   },
-    "blurb": "Learn about processes and process identifiers by writing an embedded system for a Take-A-Number machine."
+  "blurb": "Learn about processes and process identifiers by writing an embedded system for a Take-A-Number machine."
 }

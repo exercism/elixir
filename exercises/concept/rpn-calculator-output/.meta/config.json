@@ -17,6 +17,6 @@
       ".meta/exemplar.ex"
     ]
   },
-    "icon": "calculator-conundrum",
+  "icon": "calculator-conundrum",
   "blurb": "Learn about dynamic dispatch and advanced options for rescuing errors by implementing an output in your experimental Reverse Polish Notation calculator."
 }

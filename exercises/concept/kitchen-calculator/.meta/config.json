@@ -16,5 +16,5 @@
       ".meta/exemplar.ex"
     ]
   },
-    "blurb": "Learn about tuples and pattern matching by converting common US baking measurements to the metric system."
+  "blurb": "Learn about tuples and pattern matching by converting common US baking measurements to the metric system."
 }

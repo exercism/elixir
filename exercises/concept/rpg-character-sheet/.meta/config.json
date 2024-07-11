@@ -16,6 +16,6 @@
       ".meta/exemplar.ex"
     ]
   },
-    "icon": "wizards-and-warriors",
+  "icon": "wizards-and-warriors",
   "blurb": "Learn about IO (input/output) by guiding your friends through the character creation process for your pen-and-paper role-playing game."
 }

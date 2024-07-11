@@ -17,5 +17,5 @@
       ".meta/exemplar.ex"
     ]
   },
-    "blurb": "Learn about bitstrings and tail call recursion by encoding DNA sequences as binary data."
+  "blurb": "Learn about bitstrings and tail call recursion by encoding DNA sequences as binary data."
 }

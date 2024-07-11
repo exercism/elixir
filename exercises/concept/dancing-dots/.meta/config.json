@@ -20,5 +20,5 @@
       "lib/dancing_dots/dot_group.ex"
     ]
   },
-    "blurb": "Learn about behaviours by writing animations for dot-based generative art."
+  "blurb": "Learn about behaviours by writing animations for dot-based generative art."
 }
