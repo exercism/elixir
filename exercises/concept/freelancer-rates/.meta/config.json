@@ -16,7 +16,6 @@
       ".meta/exemplar.ex"
     ]
   },
-  "language_versions": ">=1.10",
   "forked_from": [
     "javascript/freelancer-rates"
   ],

@@ -20,7 +20,6 @@
       "lib/need_for_speed/remote_control_car.ex"
     ]
   },
-  "language_versions": ">=1.10",
   "forked_from": [
     "csharp/need-for-speed"
   ],

@@ -167,7 +167,6 @@ defmodule #{module}.MixProject do
     [
       app: :#{exercise_snake_case},
       version: "0.1.0",
-      # elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]

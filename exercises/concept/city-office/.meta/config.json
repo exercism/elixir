@@ -17,6 +17,5 @@
       ".meta/exemplar.ex"
     ]
   },
-  "language_versions": ">=1.10",
   "blurb": "Learn about writing documentation and typespecs by getting your code ready for the arrival of a new colleague at the city office."
 }

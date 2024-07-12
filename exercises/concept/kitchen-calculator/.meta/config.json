@@ -16,6 +16,5 @@
       ".meta/exemplar.ex"
     ]
   },
-  "language_versions": ">=1.10",
   "blurb": "Learn about tuples and pattern matching by converting common US baking measurements to the metric system."
 }
