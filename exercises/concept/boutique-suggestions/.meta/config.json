@@ -17,6 +17,5 @@
       ".meta/exemplar.ex"
     ]
   },
-  "language_versions": ">=1.10",
   "blurb": "Learn about list comprehensions by generating outfit suggestions for the clients of your fashion boutique."
 }

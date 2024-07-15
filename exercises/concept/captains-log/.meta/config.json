@@ -16,6 +16,5 @@
       ".meta/exemplar.ex"
     ]
   },
-  "language_versions": ">=1.10",
   "blurb": "Learn about randomness and using Erlang libraries from Elixir by helping Mary generate stardates and starship registry numbers for her Star Trek themed pen-and-paper role playing sessions."
 }

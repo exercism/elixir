@@ -17,6 +17,5 @@
       ".meta/exemplar.ex"
     ]
   },
-  "language_versions": ">=1.10",
   "blurb": "Learn about Access Behaviour by helping extract deeply nested data for the basketball team's website."
 }

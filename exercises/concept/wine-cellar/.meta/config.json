@@ -16,6 +16,5 @@
       ".meta/exemplar.ex"
     ]
   },
-  "language_versions": ">=1.10",
   "blurb": "Learn about keyword lists by providing wine suggestions to the customers in your restaurant."
 }

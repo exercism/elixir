@@ -16,6 +16,5 @@
       ".meta/exemplar.ex"
     ]
   },
-  "language_versions": ">=1.10",
   "blurb": "no-op"
 }

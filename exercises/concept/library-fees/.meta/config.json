@@ -16,6 +16,5 @@
       ".meta/exemplar.ex"
     ]
   },
-  "language_versions": ">=1.10",
   "blurb": "Learn about dates and time by calculating late fees for the local library."
 }

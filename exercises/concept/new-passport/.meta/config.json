@@ -16,6 +16,5 @@
       ".meta/exemplar.ex"
     ]
   },
-  "language_versions": ">=1.10",
   "blurb": "Learn about `with` to concentrate on the happy path and manage a stressful day of facing bureaucracy."
 }
