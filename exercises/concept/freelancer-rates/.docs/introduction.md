@@ -45,7 +45,18 @@ However, when doing division, the result will always be a float, even if only in
 
 To convert a float to an integer, you can discard the decimal part with [`trunc/1`][trunc-1].
 
+There are functions to check if a value is a specific type. These are defined in
+[`Kernel`][kernel-type-check-operators].
+
+```elixir
+is_integer(3)
+# => true
+```
+
+There is also a function to check if a value is a float.
+
 [integer-functions]: https://hexdocs.pm/elixir/Integer.html#functions
 [float-functions]: https://hexdocs.pm/elixir/Float.html#functions
 [kernel-arithmetic-operators]: https://hexdocs.pm/elixir/Kernel.html#*/2
+[kernel-type-check-operators]: https://hexdocs.pm/elixir/Kernel.html#is_integer/1
 [trunc-1]: https://hexdocs.pm/elixir/Kernel.html#trunc/1

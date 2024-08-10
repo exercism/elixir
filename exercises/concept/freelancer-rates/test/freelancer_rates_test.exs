@@ -9,7 +9,7 @@ defmodule FreelancerRatesTest do
 
     @tag task_id: 1
     test "it always returns a float" do
-      assert FreelancerRates.daily_rate(60) === 480.0
+      assert is_float(FreelancerRates.daily_rate(60))
     end
 
     @tag task_id: 1
@@ -26,7 +26,7 @@ defmodule FreelancerRatesTest do
 
     @tag task_id: 2
     test "it always returns a float" do
-      assert FreelancerRates.apply_discount(100, 10) == 90.0
+      assert is_float(FreelancerRates.apply_discount(100, 10))
     end
 
     @tag task_id: 2
@@ -43,7 +43,7 @@ defmodule FreelancerRatesTest do
 
     @tag task_id: 3
     test "it always returns an integer" do
-      assert FreelancerRates.monthly_rate(70, 0.0) === 12_320
+      assert is_integer(FreelancerRates.monthly_rate(70, 0.0))
     end
 
     @tag task_id: 3
@@ -69,7 +69,7 @@ defmodule FreelancerRatesTest do
 
     @tag task_id: 4
     test "it always returns a float" do
-      assert FreelancerRates.days_in_budget(520, 65, 0.0) === 1.0
+      assert is_float(FreelancerRates.days_in_budget(520, 65, 0.0))
     end
 
     @tag task_id: 4
