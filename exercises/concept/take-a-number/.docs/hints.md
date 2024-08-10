@@ -28,7 +28,7 @@
 
 - This step doesn't require sending any messages as a response.
 - A process will exit if it has no more code to execute.
-- When you need to create an "empty" code block in Elixir, you can use `nil` as the only expression in that code block. 
+- When you need to create an "empty" code block in Elixir, you can use `nil` as the only expression in that code block.
 - This is a base case of the recursive function.
 
 ## 5. Ignore unexpected messages
