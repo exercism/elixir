@@ -11,7 +11,7 @@ spawn(fn -> 2 + 2 end)
 # => #PID<0.125.0>
 ```
 
-`spawn/1` creates a new process that executes the given function and returns a _process identifier_ (PID). The new process will stay alive as long as the function executes, and then silently exit.
+`spawn/1` creates a new process that executes the given 0-arity function and returns a _process identifier_ (PID). The new process will stay alive as long as the function executes, and then silently exit.
 
 Elixir's processes should not be confused with operating system processes. Elixir's processes use much less memory and CPU. It's perfectly fine to have Elixir applications that run hundreds of Elixir processes.
 
