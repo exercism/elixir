@@ -35,7 +35,18 @@ Since structs are built on maps, we can use most map functions to get and manipu
   # => %Plane{engine: nil, wings: 4}
   ```
 
-Structs can also be used in pattern matching for ensuring that the matching value is a struct of the same type as the matched value.
+### Pattern matching
+
+Structs can be used in pattern matching with or without the struct name.
+
+```elixir
+plane = %Plane{}
+%Plane{wings: wings} = plane
+%{wings: wings} = plane
+```
+
+By including the struct name in the pattern, you can ensure that both the left and right side are structs of the same type.
+
 ```elixir
 defmodule Helicopter do
   defstruct [:engine, rotors: 1]
