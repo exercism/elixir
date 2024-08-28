@@ -289,6 +289,15 @@ defmodule CustomSetTest do
       expected = CustomSet.new([1, 3])
       assert CustomSet.equal?(actual, expected)
     end
+
+    @tag :pending
+    test "difference removes all duplicates in the first set" do
+      custom_set_1 = CustomSet.new([1, 1])
+      custom_set_2 = CustomSet.new([1])
+      actual = CustomSet.difference(custom_set_1, custom_set_2)
+      expected = CustomSet.new([])
+      assert CustomSet.equal?(actual, expected)
+    end
   end
 
   describe "union" do
