@@ -128,14 +128,14 @@ defmodule ProteinTranslationTest do
     end
 
     @tag :pending
-    test "incomplete codon, invalid RNA" do
-      strand = "UG"
-      assert ProteinTranslation.of_rna(strand) == {:error, "invalid RNA"}
+    test "sequence of two non-STOP codons does not translate to a STOP codon" do
+      strand = "AUGAUG"
+      assert ProteinTranslation.of_rna(strand) == {:ok, ~w(Methionine Methionine)}
     end
 
     @tag :pending
-    test "known amino acids, but invalid codon, invalid RNA" do
-      strand = "AAA"
+    test "incomplete codon, invalid RNA" do
+      strand = "UG"
       assert ProteinTranslation.of_rna(strand) == {:error, "invalid RNA"}
     end
 
