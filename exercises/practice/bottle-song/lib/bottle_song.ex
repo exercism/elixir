@@ -4,6 +4,6 @@ defmodule BottleSong do
   """
 
   @spec recite(pos_integer, pos_integer) :: String.t()
-  def recite(_start_bottle, _take_down) do
+  def recite(start_bottle, take_down) do
   end
 end
