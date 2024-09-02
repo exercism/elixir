@@ -34,7 +34,7 @@ defmodule AffineCipher do
   @doc """
   Decode an encrypted message using a key
   """
-  @spec decode(key :: key(), message :: String.t()) :: {:ok, String.t()} | {:error, String.t()}
+  @spec decode(key :: key(), encrypted :: String.t()) :: {:ok, String.t()} | {:error, String.t()}
   def decode(%{a: a, b: b}, encrypted) do
     if Integer.gcd(a, @alphabet_size) != 1 do
       {:error, "a and m must be coprime."}
