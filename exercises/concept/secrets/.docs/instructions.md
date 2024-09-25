@@ -11,9 +11,9 @@ All functions should expect integer arguments. Integers are also suitable for pe
 Implement `Secrets.secret_add/1`. It should return a function which takes one argument and adds to it the argument passed in to `secret_add`.
 
 ```elixir
-adder = Secrets.secret_add(2)
+adder = Secrets.secret_add(3)
 adder.(2)
-# => 4
+# => 5
 ```
 
 ## 2. Create a subtractor
