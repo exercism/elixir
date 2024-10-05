@@ -1,6 +1,6 @@
 # Instructions
 
-In this exercise, you're implementing a way to keep track of the high scores for the most popular game in your local arcade hall.
+In this exercise, you're implementing a way to keep track of the high scores for the most popular game in your local arcade hall. Note: Store a reset value (value to reset to) as an attribute and use in your functions where sensible (at least in the reset_score() function).
 
 ## 1. Define a new high score map
 
@@ -19,7 +19,6 @@ To add a player to the high score map, define `HighScore.add_player/3`, which is
 - The second argument is the name of a player as a string.
 - The third argument is the score as an integer. The argument is optional, implement the third argument with a default value of 0.
 
-Store the default initial score in a module attribute. It will be needed again.
 
 ```elixir
 score_map = HighScore.new()
