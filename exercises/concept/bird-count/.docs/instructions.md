@@ -6,6 +6,8 @@ You decided to bring your bird watching to a new level and implement a few tools
 
 You have chosen to store the data as a list of integers. The first number in the list is the number of birds that visited your garden today, the second yesterday, and so on.
 
+Note: This exercise is meant to help you practice recursion. Do not make use of the Enum, Stream or List modules in your solution.
+
 ## 1. Check how many birds visited today
 
 Implement the `BirdCount.today/1` function. It should take a list of daily bird counts and return today's count. If the list is empty, it should return `nil`.
