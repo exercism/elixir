@@ -129,7 +129,7 @@ Documentation:
   in the same order they were defined in
 * `--stale` - runs only tests which reference modules that changed since the last
   time tests were ran with `--stale`
-* `--only task-id:1` - or with another number, on learning exercises runs only the tests associated with the instructions' number
+* `--only task_id:1` - or with another number, on learning exercises runs only the tests associated with the specific task
 
 Documentation:
 
