@@ -43,7 +43,7 @@ Extend the `TopSecret.decode_secret_message_part/2` function. If the operation i
 ```elixir
 ast_node = TopSecret.to_ast("defp cat(a, b), do: nil")
 TopSecret.decode_secret_message_part(ast_node, ["day"])
-# => {ast_node, ["ca", "day"]}
+# => {ast_node, ["cat", "day"]}
 
 ast_node = TopSecret.to_ast("defp cat(), do: nil")
 TopSecret.decode_secret_message_part(ast_node, ["day"])
@@ -57,7 +57,7 @@ Extend the `TopSecret.decode_secret_message_part/2` function. Make sure the func
 ```elixir
 ast_node = TopSecret.to_ast("defp cat(a, b) when is_nil(a), do: nil")
 TopSecret.decode_secret_message_part(ast_node, ["day"])
-# => {ast_node, ["ca", "day"]}
+# => {ast_node, ["cat", "day"]}
 ```
 
 ## 5. Decode the full secret message
