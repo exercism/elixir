@@ -41,7 +41,7 @@ jobs:
           echo "::set-output name=cache_key::$cache_key"
 
       - name: Retrieve Mix Dependencies Cache
-        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+        uses: actions/cache@6849a6489940f00c2f30c0fb92c6274307ccb58a
         id: mix-cache # id to use in retrieve action
         with:
           path: deps
@@ -55,7 +55,7 @@ jobs:
         run: mix
 
       - name: Retrieve PLT Cache
-        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+        uses: actions/cache@6849a6489940f00c2f30c0fb92c6274307ccb58a
         id: plt-cache
         with:
           path: priv/plts
@@ -106,7 +106,7 @@ jobs:
           echo "::set-output name=cache_key::$cache_key"
 
       - name: Retrieve Mix Dependencies Cache
-        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+        uses: actions/cache@6849a6489940f00c2f30c0fb92c6274307ccb58a
         id: mix-cache # id to use in retrieve action
         with:
           path: deps
@@ -129,7 +129,7 @@ jobs:
       - uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938
 
       - name: Retrieve Lychee Cache
-        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+        uses: actions/cache@6849a6489940f00c2f30c0fb92c6274307ccb58a
         id: lychee-cache # id to use in retrieve action
         with:
           path: .lycheecache
