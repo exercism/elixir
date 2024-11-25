@@ -73,10 +73,10 @@ xorer.(3)
 Implement `Secrets.secret_combine/2`. It should return a function which takes one argument and applies to it the two functions passed in to `secret_combine` in order.
 
 ```elixir
-multiply = Secrets.secret_multiply(7)
-divide = Secrets.secret_divide(3)
-combined = Secrets.secret_combine(multiply, divide)
+add_one = Secrets.secret_add(1)
+multiply_by_2 = Secrets.secret_multiply(2)
+combined = Secrets.secret_combine(add_one, multiply_by_2)
 
-combined.(6)
-# => 14
+combined.(3)
+# => 8
 ```
