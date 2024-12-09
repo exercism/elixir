@@ -38,7 +38,7 @@ Please keep the following in mind:
   exercise.
 
 - Each problem should have a test suite, an example solution, and a template
-  file for the real implementation. Read about [the anatomy of practice exercises](https://github.com/exercism/docs/blob/main/building/tracks/practice-exercises.md) or [the anatomy of concept exercises](https://github.com/exercism/docs/blob/main/building/tracks/concept-exercises.md), depending on to which type of exercise you want to contribute.
+  file for the real implementation. Read about [the anatomy of practice exercises](https://github.com/exercism/docs/blob/main/building/tracks/practice-exercises/README.md) or [the anatomy of concept exercises](https://github.com/exercism/docs/blob/main/building/tracks/concept-exercises.md), depending on to which type of exercise you want to contribute.
 
 - For practice exercises, `instructions.md` come from the [problem specifications](https://github.com/exercism/problem-specifications) repository. They cannot be changed without updating them in that repository first. If Elixir-specific changes are necessary, they can be appended to the instructions by creating a `instructions.append.md` file.
 
