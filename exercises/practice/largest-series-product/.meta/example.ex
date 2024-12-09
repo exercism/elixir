@@ -25,7 +25,7 @@ defmodule Series do
   end
 
   def largest_product(number_string, size) do
-    unless Enum.member?(Range.new(0, String.length(number_string)), size) do
+    if not Enum.member?(Range.new(0, String.length(number_string)), size) do
       raise ArgumentError
     end
 
