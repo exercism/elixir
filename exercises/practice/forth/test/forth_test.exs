@@ -52,6 +52,16 @@ defmodule ForthTest do
     end
 
     @tag :pending
+    test "more than two values on the stack" do
+      s =
+        Forth.new()
+        |> Forth.eval("1 2 3 +")
+        |> Forth.format_stack()
+
+      assert s == "1 5"
+    end
+
+    @tag :pending
     test "raises if there is nothing on the stack" do
       assert_raise Forth.StackUnderflow, fn ->
         Forth.new() |> Forth.eval("+")
@@ -75,6 +85,16 @@ defmodule ForthTest do
         |> Forth.format_stack()
 
       assert s == "-1"
+    end
+
+    @tag :pending
+    test "more than two values on the stack" do
+      s =
+        Forth.new()
+        |> Forth.eval("1 12 3 -")
+        |> Forth.format_stack()
+
+      assert s == "1 9"
     end
 
     @tag :pending
@@ -104,6 +124,16 @@ defmodule ForthTest do
     end
 
     @tag :pending
+    test "more than two values on the stack" do
+      s =
+        Forth.new()
+        |> Forth.eval("1 2 3 *")
+        |> Forth.format_stack()
+
+      assert s == "1 6"
+    end
+
+    @tag :pending
     test "raises if there is nothing on the stack" do
       assert_raise Forth.StackUnderflow, fn ->
         Forth.new() |> Forth.eval("*")
@@ -127,6 +157,16 @@ defmodule ForthTest do
         |> Forth.format_stack()
 
       assert s == "4"
+    end
+
+    @tag :pending
+    test "more than two values on the stack" do
+      s =
+        Forth.new()
+        |> Forth.eval("1 12 3 /")
+        |> Forth.format_stack()
+
+      assert s == "1 4"
     end
 
     @tag :pending
@@ -180,6 +220,26 @@ defmodule ForthTest do
         |> Forth.format_stack()
 
       assert s == "2"
+    end
+
+    @tag :pending
+    test "multiplication and addition" do
+      s =
+        Forth.new()
+        |> Forth.eval("1 3 4 * +")
+        |> Forth.format_stack()
+
+      assert s == "13"
+    end
+
+    @tag :pending
+    test "addition and multiplication" do
+      s =
+        Forth.new()
+        |> Forth.eval("1 3 4 + *")
+        |> Forth.format_stack()
+
+      assert s == "7"
     end
   end
 
