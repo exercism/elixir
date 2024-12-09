@@ -53,6 +53,11 @@ defmodule PigLatinTest do
     test "word beginning with q without a following u" do
       assert PigLatin.translate("qat") == "atqay"
     end
+
+    @tag :pending
+    test "word beginning with consonant and vowel containing qu" do
+      assert PigLatin.translate("liquid") == "iquidlay"
+    end
   end
 
   describe "some letter clusters are treated like a single consonant" do
