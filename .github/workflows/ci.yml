@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
 
       - name: Use Elixir
         uses: erlef/setup-beam@5304e04ea2b355f03681464e683d92e3b2f18451
@@ -41,7 +41,7 @@ jobs:
           echo "::set-output name=cache_key::$cache_key"
 
       - name: Retrieve Mix Dependencies Cache
-        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+        uses: actions/cache@6849a6489940f00c2f30c0fb92c6274307ccb58a
         id: mix-cache # id to use in retrieve action
         with:
           path: deps
@@ -55,7 +55,7 @@ jobs:
         run: mix
 
       - name: Retrieve PLT Cache
-        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+        uses: actions/cache@6849a6489940f00c2f30c0fb92c6274307ccb58a
         id: plt-cache
         with:
           path: priv/plts
@@ -88,7 +88,7 @@ jobs:
             otp: '27.0'
 
     steps:
-      - uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - name: Use Elixir ${{matrix.elixir}} / OTP ${{matrix.otp}}
         uses: erlef/setup-beam@5304e04ea2b355f03681464e683d92e3b2f18451
         with:
@@ -106,7 +106,7 @@ jobs:
           echo "::set-output name=cache_key::$cache_key"
 
       - name: Retrieve Mix Dependencies Cache
-        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+        uses: actions/cache@6849a6489940f00c2f30c0fb92c6274307ccb58a
         id: mix-cache # id to use in retrieve action
         with:
           path: deps
@@ -126,17 +126,17 @@ jobs:
     name: Link Checker
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
 
       - name: Retrieve Lychee Cache
-        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+        uses: actions/cache@6849a6489940f00c2f30c0fb92c6274307ccb58a
         id: lychee-cache # id to use in retrieve action
         with:
           path: .lycheecache
           key: lychee-v1
 
       - name: Link Checker
-        uses: lycheeverse/lychee-action@2b973e86fc7b1f6b36a93795fe2c9c6ae1118621
+        uses: lycheeverse/lychee-action@f81112d0d2814ded911bd23e3beaa9dda9093915
         with:
           args: --cache --max-cache-age 7d --require-https --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36" --no-progress './**/*.md' './**/*.html' './**/*.json'
           fail: true
