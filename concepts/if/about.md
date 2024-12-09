@@ -85,4 +85,4 @@ truthy?.(nil)
 [kernel-and]: https://hexdocs.pm/elixir/Kernel.html#&&/2
 [kernel-or]: https://hexdocs.pm/elixir/Kernel.html#%7C%7C/2
 [kernel-not]: https://hexdocs.pm/elixir/Kernel.html#!/1
-[falsy-various-langs]: https://www.peachesnstink.com/p/vvCzwCNRfqyPSgTdigNPvC
+[falsy-various-langs]: https://www.commentcastles.org/p/vvCzwCNRfqyPSgTdigNPvC
