@@ -15,9 +15,9 @@ end
 
 ## If
 
-Elixir provides four [control flow structures][hexdocs-structures]: `case`, `cond`, `if`, and `unless`.
+Elixir provides three [control flow structures][hexdocs-structures]: `case`, `cond`, `if`.
 
-The `if` and `unless` allow to evaluate only one condition.
+The `if` allows to evaluate only one condition.
 Unlike in many other languages, there is no `else if` option in Elixir.
 
 However, in this case, it is not necessary. We can use `if` once to check if the year is divisible by 100.

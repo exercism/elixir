@@ -2,7 +2,7 @@
 
 ## General
 
-- Read about `if` in the official [Getting Started guide][getting-started-if-unless] or on [elixirschool.com][elixirschool-if-unless].
+- Read about `if` in the official [Getting Started guide][getting-started-if] or on [elixirschool.com][elixirschool-if].
 
 ## 1. Print a badge for an employee
 
@@ -21,5 +21,5 @@
 
 [kernel-if]: https://hexdocs.pm/elixir/Kernel.html#if/2
 [getting-started-basic-strings]: https://hexdocs.pm/elixir/basic-types.html#strings
-[getting-started-if-unless]: https://hexdocs.pm/elixir/case-cond-and-if.html#if-unless
-[elixir-school-if-unless]: https://elixirschool.com/en/lessons/basics/control-structures/#if-and-unless
+[getting-started-if]: https://hexdocs.pm/elixir/case-cond-and-if.html#if-unless
+[elixirschool-if]: https://elixirschool.com/en/lessons/basics/control-structures/#if-and-unless-0

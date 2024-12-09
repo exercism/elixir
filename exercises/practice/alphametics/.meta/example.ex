@@ -35,7 +35,7 @@ defmodule Alphametics do
     Enum.find_value(numbers, fn number ->
       leading_zero? = number == 0 && letter in problem.first_letters
 
-      unless leading_zero? do
+      if !leading_zero? do
         numbers = List.delete(numbers, number)
         solution = put_in(solution[letter], number)
         solve(letters, numbers, solution, problem)
