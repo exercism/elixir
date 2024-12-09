@@ -97,7 +97,7 @@ defmodule BobTest do
 
   @tag :pending
   test "multiple line question" do
-    assert Bob.hey("\nDoes this cryogenic chamber make me look fat?\nNo.") == "Whatever."
+    assert Bob.hey("\nDoes this cryogenic chamber make me look fat?") == "Sure."
   end
 
   @tag :pending
