@@ -5,7 +5,7 @@
 - Know what `nil` represents
 - Know that `nil` is a special atom
 - Know how to pattern match on `nil`
-- Know how to use the `if`/`unless` macros
+- Know how to use the `if` macro
 - Know about truthiness
 
 ## Out of scope

@@ -13,7 +13,7 @@ In other programming languages, `null` or `none` values might play a similar rol
 
 ## If
 
-Besides `cond`, Elixir also provides the macro [`if/2`][getting-started-if-unless] which is useful when you need to check for only one condition.
+Besides `cond`, Elixir also provides the macro [`if/2`][getting-started-if] which is useful when you need to check for only one condition.
 
 [`if/2`][kernel-if] accepts a condition and two options. It returns the first option if the condition is _truthy_, and the second option if the condition is _falsy_.
 
@@ -42,5 +42,5 @@ This syntax is helpful for very short expressions, but should be avoided if the 
 In Elixir, all datatypes evaluate to a _truthy_ or _falsy_ value when they are encountered in a boolean context (like an `if` expression). All data is considered _truthy_ **except** for `false` and `nil`. In particular, empty strings, the integer `0`, and empty lists are all considered _truthy_ in Elixir.
 
 [nil-dictionary]: https://www.merriam-webster.com/dictionary/nil
-[getting-started-if-unless]: https://hexdocs.pm/elixir/case-cond-and-if.html#if-unless
+[getting-started-if]: https://hexdocs.pm/elixir/case-cond-and-if.html#if-unless
 [kernel-if]: https://hexdocs.pm/elixir/Kernel.html#if/2
