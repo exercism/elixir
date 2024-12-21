@@ -19,7 +19,7 @@ defmodule CryptoSquare do
     normalized
     |> String.graphemes()
     |> Enum.chunk_every(section_length, section_length, List.duplicate(" ", section_length))
-    |> List.zip()
+    |> Enum.zip()
     |> Enum.map(&Tuple.to_list/1)
     |> Enum.join(" ")
   end

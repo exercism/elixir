@@ -16,4 +16,4 @@ The `cond` conditional is usually used when there are more than two logical bran
 
 [cond]: https://hexdocs.pm/elixir/case-cond-and-if.html#cond
 [case]: https://hexdocs.pm/elixir/case-cond-and-if.html#case
-[if]: https://hexdocs.pm/elixir/case-cond-and-if.html#if-unless
+[if]: https://hexdocs.pm/elixir/case-cond-and-if.html#if
