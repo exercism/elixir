@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        elixir: [1.17]
+        elixir: [1.18]
         otp: [27.0]
 
     steps:
@@ -76,8 +76,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - elixir: '1.13.0'
-            otp: '24.1'
           - elixir: '1.14.0'
             otp: '25.0'
           - elixir: '1.15.0'
@@ -85,6 +83,8 @@ jobs:
           - elixir: '1.16.0'
             otp: '26.2'
           - elixir: '1.17.0'
+            otp: '27.0'
+          - elixir: '1.18.0'
             otp: '27.0'
 
     steps:
