@@ -21,5 +21,5 @@
 
 [kernel-if]: https://hexdocs.pm/elixir/Kernel.html#if/2
 [getting-started-basic-strings]: https://hexdocs.pm/elixir/basic-types.html#strings
-[getting-started-if]: https://hexdocs.pm/elixir/case-cond-and-if.html#if-unless
+[getting-started-if]: https://hexdocs.pm/elixir/case-cond-and-if.html#if
 [elixirschool-if]: https://elixirschool.com/en/lessons/basics/control-structures/#if-and-unless-0

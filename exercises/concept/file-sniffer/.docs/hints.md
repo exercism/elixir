@@ -21,7 +21,7 @@
   - You can use the [`if` macro conditional][if] for binary conditions.
 
 [binary-matching]: https://hexdocs.pm/elixir/binaries-strings-and-charlists.html#binaries
-[if]: https://hexdocs.pm/elixir/case-cond-and-if.html#if-unless
+[if]: https://hexdocs.pm/elixir/case-cond-and-if.html#if
 [mfc]: https://hexdocs.pm/elixir/modules-and-functions.html#function-definition
 [mimetype]: https://en.wikipedia.org/wiki/Media_type
 [pattern-matching]: https://hexdocs.pm/elixir/pattern-matching.html#pattern-matching
