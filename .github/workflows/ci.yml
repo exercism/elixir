@@ -17,8 +17,8 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        elixir: [1.18]
-        otp: [27.0]
+        elixir: [1.18.1]
+        otp: [27.2]
 
     steps:
       - name: Checkout code
@@ -84,8 +84,8 @@ jobs:
             otp: '26.2'
           - elixir: '1.17.0'
             otp: '27.0'
-          - elixir: '1.18.0'
-            otp: '27.0'
+          - elixir: '1.18.1'
+            otp: '27.2'
 
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
