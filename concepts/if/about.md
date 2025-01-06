@@ -66,7 +66,7 @@ truthy?.(nil)
 # => true
 ```
 
-[getting-started-if]: https://hexdocs.pm/elixir/case-cond-and-if.html#if-unless
+[getting-started-if]: https://hexdocs.pm/elixir/case-cond-and-if.html#if
 [kernel-if]: https://hexdocs.pm/elixir/Kernel.html#if/2
 [kernel-boolean-and]: https://hexdocs.pm/elixir/Kernel.html#and/2
 [kernel-boolean-or]: https://hexdocs.pm/elixir/Kernel.html#or/2

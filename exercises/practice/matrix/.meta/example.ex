@@ -14,7 +14,7 @@ defmodule Matrix do
 
     %Matrix{
       matrix: rows,
-      transposed_matrix: rows |> List.zip() |> Enum.map(&Tuple.to_list/1)
+      transposed_matrix: rows |> Enum.zip() |> Enum.map(&Tuple.to_list/1)
     }
   end
 

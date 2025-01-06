@@ -24,7 +24,7 @@ defmodule SaddlePoints do
   def columns(str) do
     str
     |> rows
-    |> List.zip()
+    |> Enum.zip()
     |> Enum.map(&Tuple.to_list/1)
   end
 

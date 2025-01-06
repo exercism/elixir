@@ -26,7 +26,7 @@ defmodule Transpose do
     rows
     |> Enum.map(fn x -> get_padded_row(x, max_length) end)
     |> Enum.map(&String.to_charlist/1)
-    |> List.zip()
+    |> Enum.zip()
     |> Enum.map(&Tuple.to_list/1)
     |> Enum.map(&List.to_string/1)
     |> Enum.map(fn x -> x |> String.trim_trailing("*") |> String.replace("*", " ") end)

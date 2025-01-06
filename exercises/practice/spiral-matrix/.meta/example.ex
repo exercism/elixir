@@ -27,6 +27,6 @@ defmodule Spiral do
   end
 
   defp transpose(matrix) do
-    matrix |> List.zip() |> Enum.map(&Tuple.to_list/1)
+    matrix |> Enum.zip() |> Enum.map(&Tuple.to_list/1)
   end
 end
