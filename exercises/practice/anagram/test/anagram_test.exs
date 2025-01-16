@@ -10,7 +10,7 @@ defmodule AnagramTest do
   @tag :pending
   test "detects two anagrams" do
     matches = Anagram.match("solemn", ~w(lemons cherry melons))
-    assert matches == ~w(lemons melons)
+    assert Enum.sort(matches) == Enum.sort(~w(lemons melons))
   end
 
   @tag :pending
@@ -28,13 +28,13 @@ defmodule AnagramTest do
   @tag :pending
   test "detects three anagrams" do
     matches = Anagram.match("allergy", ~w(gallery ballerina regally clergy largely leading))
-    assert matches == ~w(gallery regally largely)
+    assert Enum.sort(matches) == Enum.sort(~w(gallery regally largely))
   end
 
   @tag :pending
   test "detects multiple anagrams with different case" do
     matches = Anagram.match("nose", ~w(Eons ONES))
-    assert matches == ~w(Eons ONES)
+    assert Enum.sort(matches) == Enum.sort(~w(Eons ONES))
   end
 
   @tag :pending
@@ -100,7 +100,7 @@ defmodule AnagramTest do
   @tag :pending
   test "handles case of greek letters" do
     matches = Anagram.match("ΑΒΓ", ~w(ΒΓΑ ΒΓΔ γβα αβγ))
-    assert matches == ~w(ΒΓΑ γβα)
+    assert Enum.sort(matches) == Enum.sort(~w(ΒΓΑ γβα))
   end
 
   @tag :pending
