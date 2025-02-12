@@ -99,7 +99,7 @@ PaintByNumber.drop_first_pixel(picture, color_count)
 
 ## 7. Concatenate two pictures
 
-Implement the `PaintByNumber.concat_pictures/2` function. It should take two arguments, two bitstrings. It should return a bitstrings that is the result of prepending the first argument to the second argument.
+Implement the `PaintByNumber.concat_pictures/2` function. It should take two arguments, two bitstrings. It should return a bitstring that is the result of prepending the first argument to the second argument.
 
 ```elixir
 picture1 = <<52::6, 51::6>>
