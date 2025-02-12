@@ -44,7 +44,7 @@ PaintByNumber.palette_bit_size(13)
 # => 4
 ```
 
-Note: there is no `log2` function in the Elixir standard library. You will later learn how to use [Erlang libraries][erlang-libraries] from Elixir where you can find this function. Now, solve this task with recursion and the [power operator][power-operator] instead.
+Note: there is no `log2` function in the Elixir standard library. You will later learn how to use [Erlang libraries][erlang-libraries] from Elixir where you can find this function. Now, solve this task with recursion and the [power operator `**`][power-operator] instead.
 
 ## 2. Create an empty picture
 
