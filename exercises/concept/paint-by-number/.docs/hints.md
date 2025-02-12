@@ -13,7 +13,7 @@
 - Find the smallest positive number `n` such that 2 raised to the power of `n` is greater than or equal than the number of colors we need to represent.
 - Create a recursive function for this.
 - Choose a starting bit size of 1. If 2 raised to the power of the bit size is greater than or equal to the color count, we've found our bit size. If not, add 1 to the bit size and check again (recursion).
-- Use the [`power operator `**`][power-operator] to raise 2 to a given power.
+- Use the [power operator `**`][power-operator] to raise 2 to a given power.
 
 ## 2. Create an empty picture
 
