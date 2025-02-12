@@ -4,7 +4,7 @@ defmodule PaintByNumber do
   end
 
   defp do_palette_bit_size(color_count, bits \\ 1) do
-    if Integer.pow(2, bits) >= color_count do
+    if 2 ** bits >= color_count do
       bits
     else
       do_palette_bit_size(color_count, bits + 1)

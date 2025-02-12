@@ -44,7 +44,7 @@ PaintByNumber.palette_bit_size(13)
 # => 4
 ```
 
-Note: there is no `log2` function in the Elixir standard library. You will later learn how to use [Erlang libraries][erlang-libraries] from Elixir where you can find this function. Now, solve this task with recursion and the [`Integer.pow/2`][integer-pow] function instead.
+Note: there is no `log2` function in the Elixir standard library. You will later learn how to use [Erlang libraries][erlang-libraries] from Elixir where you can find this function. Now, solve this task with recursion and the [power operator `**`][power-operator] instead.
 
 ## 2. Create an empty picture
 
@@ -113,4 +113,4 @@ PaintByNumber.concat_pictures(picture1, picture2)
 [paint-by-number]: https://en.wikipedia.org/wiki/Paint_by_number
 [binary-file]: https://en.wikipedia.org/wiki/Binary_file
 [erlang-libraries]: https://exercism.org/tracks/elixir/concepts/erlang-libraries
-[integer-pow]: https://hexdocs.pm/elixir/Integer.html#pow/2
+[power-operator]: https://hexdocs.pm/elixir/Kernel.html#**/2
