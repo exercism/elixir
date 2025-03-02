@@ -2011,7 +2011,11 @@
         ],
         "prerequisites": [
           "strings",
-          "dates-and-time"
+          "regular-expressions",
+          "dates-and-time",
+          "cond",
+          "case",
+          "if"
         ],
         "difficulty": "TODO"
       },
