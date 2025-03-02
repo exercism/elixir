@@ -1,0 +1,22 @@
+{
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [
+    "TODO"
+  ],
+  "files": {
+    "solution": [
+      "lib/swift_scheduling.ex"
+    ],
+    "test": [
+      "test/swift_scheduling_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
+  },
+  "blurb": "TODO",
+  "source": "TODO",
+  "source_url": "TODO"
+}

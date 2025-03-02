@@ -2003,6 +2003,19 @@
         "difficulty": 4
       },
       {
+        "slug": "swift-scheduling",
+        "name": "Swift Scheduling",
+        "uuid": "0eb21dfc-9666-475c-bc92-558f2663a598",
+        "practices": [
+          "dates-and-time"
+        ],
+        "prerequisites": [
+          "strings",
+          "dates-and-time"
+        ],
+        "difficulty": "TODO"
+      },
+      {
         "slug": "tournament",
         "name": "Tournament",
         "uuid": "29a6f3f4-0d20-4447-8916-b98270780e0e",
