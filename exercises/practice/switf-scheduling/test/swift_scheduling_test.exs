@@ -12,7 +12,7 @@ defmodule SwiftSchedulingTest do
   end
 
   @tag :pending
-  test "ASAP before noon translates to today at five in the afternoon" do
+  test "ASAP before one in the afternoon translates to today at five in the afternoon" do
     meeting_date = ~N[1999-06-03T09:45:00]
     description = "ASAP"
     expected_output = ~N[1999-06-03T17:00:00]
@@ -22,10 +22,20 @@ defmodule SwiftSchedulingTest do
   end
 
   @tag :pending
-  test "ASAP after noon translates to tomorrow at noon" do
-    meeting_date = ~N[2008-12-21T13:30:00]
+  test "ASAP at one in the afternoon translates to tomorrow at one in the afternoon" do
+    meeting_date = ~N[2008-12-21T13:00:00]
     description = "ASAP"
-    expected_output = ~N[2008-12-22T12:00:00]
+    expected_output = ~N[2008-12-22T13:00:00]
+
+    output = SwiftScheduling.delivery_date(meeting_date, description)
+    assert output == expected_output
+  end
+
+  @tag :pending
+  test "ASAP after one in the afternoon translates to tomorrow at one in the afternoon" do
+    meeting_date = ~N[2008-12-21T14:50:00]
+    description = "ASAP"
+    expected_output = ~N[2008-12-22T13:00:00]
 
     output = SwiftScheduling.delivery_date(meeting_date, description)
     assert output == expected_output
@@ -63,9 +73,19 @@ defmodule SwiftSchedulingTest do
 
   @tag :pending
   test "EOW on Friday translates to Sunday at eight in the evening" do
-    meeting_date = ~N[2022-08-05T12:00:00]
+    meeting_date = ~N[2022-08-05T14:00:00]
     description = "EOW"
     expected_output = ~N[2022-08-07T20:00:00]
+
+    output = SwiftScheduling.delivery_date(meeting_date, description)
+    assert output == expected_output
+  end
+
+  @tag :pending
+  test "EOW translates to leap day" do
+    meeting_date = ~N[2008-02-25T10:30:00]
+    description = "EOW"
+    expected_output = ~N[2008-02-29T17:00:00]
 
     output = SwiftScheduling.delivery_date(meeting_date, description)
     assert output == expected_output

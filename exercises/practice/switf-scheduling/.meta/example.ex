@@ -89,7 +89,7 @@ defmodule SwiftScheduling do
 
     last_month_of_nth_quarter_this_year = %{
       NaiveDateTime.to_date(meeting_date)
-    | month: quarter_number * 3
+      | month: quarter_number * 3
     }
 
     new_date =
