@@ -16,7 +16,5 @@
       ".meta/example.ex"
     ]
   },
-  "blurb": "TODO",
-  "source": "TODO",
-  "source_url": "TODO"
+  "blurb": "Convert delivery date descriptions to actual delivery dates."
 }
