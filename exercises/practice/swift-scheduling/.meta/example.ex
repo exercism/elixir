@@ -1,7 +1,4 @@
 defmodule SwiftScheduling do
-  @doc """
-  TODO
-  """
   @spec delivery_date(NaiveDateTime.t(), String.t()) :: NaiveDateTime.t()
   def delivery_date(meeting_date, description) do
     cond do
@@ -74,7 +71,7 @@ defmodule SwiftScheduling do
       if schedule_for_this_year? do
         first_workday_of_month(nth_month_this_year)
       else
-        nth_month_next_year = nth_month_this_year |> Date.shift(year: 1)
+        nth_month_next_year = nth_month_this_year |> shift_year(1)
         first_workday_of_month(nth_month_next_year)
       end
 
@@ -98,7 +95,7 @@ defmodule SwiftScheduling do
       else
         last_month_of_nth_quarter_next_year =
           last_month_of_nth_quarter_this_year
-          |> Date.shift(year: 1)
+          |> shift_year(1)
 
         last_workday_of_month(last_month_of_nth_quarter_next_year)
       end
@@ -128,5 +125,10 @@ defmodule SwiftScheduling do
       6 -> Date.add(first_day_of_month, -1)
       7 -> Date.add(first_day_of_month, -2)
     end
+  end
+
+  # Date.shift is only available from 1.17
+  defp shift_year(date, n) do
+    %{date | year: date.year + n}
   end
 end
