@@ -18,21 +18,21 @@ defmodule SwiftScheduling do
   end
 
   defp asap(meeting_date) do
-    before_noon? =
+    meet_today? =
       meeting_date
       |> NaiveDateTime.to_time()
-      |> Time.compare(~T[12:00:00])
+      |> Time.compare(~T[13:00:00])
       |> Kernel.==(:lt)
 
     [new_date, new_time] =
-      if before_noon? do
+      if meet_today? do
         [meeting_date |> NaiveDateTime.to_date(), ~T[17:00:00]]
       else
         [
           meeting_date
           |> NaiveDateTime.to_date()
           |> Date.add(1),
-          ~T[12:00:00]
+          ~T[13:00:00]
         ]
       end
 
