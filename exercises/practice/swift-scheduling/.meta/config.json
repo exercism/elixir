@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "angelikatyborska"
+  ],
+  "contributors": [
+    "neenjaw"
+  ],
+  "files": {
+    "solution": [
+      "lib/swift_scheduling.ex"
+    ],
+    "test": [
+      "test/swift_scheduling_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
+  },
+  "blurb": "Convert delivery date descriptions to actual delivery dates."
+}

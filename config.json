@@ -2506,6 +2506,23 @@
         "difficulty": 6
       },
       {
+        "slug": "swift-scheduling",
+        "name": "Swift Scheduling",
+        "uuid": "0eb21dfc-9666-475c-bc92-558f2663a598",
+        "practices": [
+          "dates-and-time"
+        ],
+        "prerequisites": [
+          "strings",
+          "regular-expressions",
+          "dates-and-time",
+          "cond",
+          "case",
+          "if"
+        ],
+        "difficulty": 6
+      },
+      {
         "slug": "variable-length-quantity",
         "name": "Variable Length Quantity",
         "uuid": "2e8b9b75-609d-4c99-947c-28274a9dbf27",
