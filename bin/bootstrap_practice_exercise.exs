@@ -143,8 +143,9 @@ module =
 
 ## Step 1: create folder structure
 
-Mix.Generator.create_directory("exercises/practice/#{exercise}/lib")
-Mix.Generator.create_directory("exercises/practice/#{exercise}/test")
+File.cd!("exercises/practice/#{exercise}")
+Mix.Generator.create_directory("lib")
+Mix.Generator.create_directory("test")
 
 ## Step 2: add common files
 
@@ -156,7 +157,7 @@ format = """
 ]
 """
 
-Mix.Generator.create_file("exercises/practice/#{exercise}/.formatter.exs", format)
+Mix.Generator.create_file(".formatter.exs", format)
 
 # mix.exs
 mix = """
@@ -189,7 +190,7 @@ defmodule #{module}.MixProject do
 end
 """
 
-Mix.Generator.create_file("exercises/practice/#{exercise}/mix.exs", mix)
+Mix.Generator.create_file("mix.exs", mix)
 
 # .gitignore
 gitignore = """
@@ -221,7 +222,7 @@ erl_crash.dump
 /tmp/
 """
 
-Mix.Generator.create_file("exercises/practice/#{exercise}/.gitignore", gitignore)
+Mix.Generator.create_file(".gitignore", gitignore)
 
 # test/test_helper.exs
 test_helper = """
@@ -229,7 +230,7 @@ ExUnit.start()
 ExUnit.configure(exclude: :pending, trace: true)
 """
 
-Mix.Generator.create_file("exercises/practice/#{exercise}/test/test_helper.exs", test_helper)
+Mix.Generator.create_file("test/test_helper.exs", test_helper)
 
 ## Step 3: write files that depend on problem specifications
 
@@ -256,10 +257,10 @@ defmodule #{module} do
 end
 """
 
-path = "exercises/practice/#{exercise}/lib/#{exercise_snake_case}.ex"
+path = "lib/#{exercise_snake_case}.ex"
 Mix.Generator.create_file(path, lib_file)
 
-Mix.Generator.copy_file(path, "exercises/practice/#{exercise}/.meta/example.ex")
+Mix.Generator.copy_file(path, ".meta/example.ex")
 
 # Generating test file
 test_file =
@@ -273,8 +274,8 @@ test_file =
   """
   |> String.replace("@tag", "# @tag", global: false)
 
-path = "exercises/practice/#{exercise}/test/#{exercise_snake_case}_test.exs"
+path = "test/#{exercise_snake_case}_test.exs"
 Mix.Generator.create_file(path, test_file)
 
 # mix format all files
-Mix.Tasks.Format.run(["exercises/practice/#{exercise}/**/*.{ex,exs}"])
+Mix.Tasks.Format.run(["**/*.{ex,exs}"])
