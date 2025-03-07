@@ -1,0 +1,17 @@
+{
+  "authors": [],
+  "files": {
+    "solution": [
+      "lib/relative_distance.ex"
+    ],
+    "test": [
+      "test/relative_distance_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
+  },
+  "blurb": "Given a family tree, calculate the degree of separation.",
+  "source": "vaeng",
+  "source_url": "https://github.com/exercism/problem-specifications/pull/2537"
+}
