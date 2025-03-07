@@ -73,24 +73,24 @@ defmodule Generate do
         "# #{Enum.map_join(values, "\n# ", &String.trim/1)}"
 
       {field, values} when is_list(values) ->
-        "#\n# --#{field} --\n# #{Enum.map_join(values, "\n# ", &inspect/1)}"
+        "#\n# --#{field} --\n# #{Enum.map_join(values, "\n# ", &inspect(&1, limit: :infinity))}"
 
       {field, value} ->
-        "#\n# -- #{field} --\n# #{inspect(value)}"
+        "#\n# -- #{field} --\n# #{inspect(value, limit: :infinity)}"
     end)
   end
 
   def print_input(%{} = input),
     do:
       Enum.map_join(input, "\n", fn {variable, value} ->
-        "#{Macro.underscore(variable)} = #{inspect(value)}"
+        "#{Macro.underscore(variable)} = #{inspect(value, limit: :infinity)}"
       end)
 
-  def print_input(input), do: "input = #{inspect(input)}"
+  def print_input(input), do: "input = #{inspect(input, limit: :infinity)}"
 
-  def print_expected(%{"error" => err}, _error), do: "{:error, #{inspect(err)}}"
-  def print_expected(expected, true), do: "{:ok, #{inspect(expected)}}"
-  def print_expected(expected, false), do: inspect(expected)
+  def print_expected(%{"error" => err}, _error), do: "{:error, #{inspect(err, limit: :infinity)}}"
+  def print_expected(expected, true), do: "{:ok, #{inspect(expected, limit: :infinity)}}"
+  def print_expected(expected, false), do: inspect(expected, limit: :infinity)
 
   def print_test_case(
         %{"description" => description, "cases" => sub_cases} = category,
