@@ -66,8 +66,8 @@ defmodule PrimeFactorsTest do
   # @tag timeout: 2000
   #
   # The timeout tag above will set the below test to fail unless it completes
-  # in under two seconds. Uncomment it if you want to test the efficiency of your
-  # solution.
+  # in under two seconds. If you want to test the efficiency of your solution,
+  # uncomment it and run the tests with the `--no-trace` flag.
   test "10000000055" do
     assert PrimeFactors.factors_for(10_000_000_055) == [5, 2_000_000_011]
   end
