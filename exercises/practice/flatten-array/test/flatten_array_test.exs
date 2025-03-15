@@ -14,13 +14,13 @@ defmodule FlattenArrayTest do
   end
 
   @tag :pending
-  test "flattens a nested array" do
+  test "flattens a nested list" do
     assert FlattenArray.flatten([[[]]]) ==
              []
   end
 
   @tag :pending
-  test "flattens array with just integers present" do
+  test "flattens list with just integers present" do
     assert FlattenArray.flatten([1, [2, 3, 4, 5, 6, 7], 8]) ==
              [1, 2, 3, 4, 5, 6, 7, 8]
   end
