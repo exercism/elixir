@@ -42,20 +42,9 @@ defmodule HighSchoolSweetheartTest do
     test "prints the pair's initials inside a heart" do
       assert HighSchoolSweetheart.pair("Avery Bryant", "Charlie Dixon") ==
                """
-                    ******       ******
-                  **      **   **      **
-                **         ** **         **
-               **            *            **
-               **                         **
-               **     A. B.  +  C. D.     **
-                **                       **
-                  **                   **
-                    **               **
-                      **           **
-                        **       **
-                          **   **
-                            ***
-                             *
+               ❤-------------------❤
+               |  A. B.  +  C. D.  |
+               ❤-------------------❤
                """
     end
   end
