@@ -17,7 +17,7 @@
 
 - [Thinking Elixir](https://podcast.thinkingelixir.com/)
 - [Elixir Wizards](https://smartlogic.io/podcast/elixir-wizards/)
-- [Elixir Mix](https://devchat.tv/elixir-mix/)
+- [Elixir Mix](https://topenddevs.com/podcasts/elixir-mix)
 - [Elixir Outlaws](https://elixiroutlaws.com/)
 - [BEAM Radio](https://www.beamrad.io/)
 
