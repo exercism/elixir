@@ -1,22 +1,11 @@
 # Instructions
 
-In this exercise, you are going to help high school sweethearts profess their love on social media by generating an ASCII heart with their initials:
+In this exercise, you are going to help high school sweethearts profess their love on social media by generating an ASCII box with their initials:
 
 ```
-     ******       ******
-   **      **   **      **
- **         ** **         **
-**            *            **
-**                         **
-**     J. K.  +  M. B.     **
- **                       **
-   **                   **
-     **               **
-       **           **
-         **       **
-           **   **
-             ***
-              *
+❤-------------------❤
+|  J. K.  +  M. B.  |
+❤-------------------❤
 ```
 
 ## 1. Get the name's first letter
@@ -46,26 +35,15 @@ HighSchoolSweetheart.initials("Lance Green")
 # => "L. G."
 ```
 
-## 4. Put the initials inside of the heart
+## 4. Put the initials inside of the ASCII box
 
-Implement the `HighSchoolSweetheart.pair/2` function. It should take two full names and return the initials inside an ASCII heart. Make sure to reuse `HighSchoolSweetheart.initials/1` that you defined in the previous step.
+Implement the `HighSchoolSweetheart.pair/2` function. It should take two full names and return the initials inside an ASCII box. You don't need to draw the box yourself - make use of the box included in the code comment. Make sure to reuse `HighSchoolSweetheart.initials/1` that you defined in the previous step.
 
 ```elixir
 HighSchoolSweetheart.pair("Blake Miller", "Riley Lewis")
 # => """
-#      ******       ******
-#    **      **   **      **
-#  **         ** **         **
-# **            *            **
-# **                         **
-# **     B. M.  +  R. L.     **
-#  **                       **
-#    **                   **
-#      **               **
-#        **           **
-#          **       **
-#            **   **
-#              ***
-#               *
+# ❤-------------------❤
+# |  B. M.  +  R. L.  |
+# ❤-------------------❤
 # """
 ```

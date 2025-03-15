@@ -12,20 +12,9 @@ defmodule HighSchoolSweetheart do
   end
 
   def pair(full_name1, full_name2) do
-    #      ******       ******
-    #    **      **   **      **
-    #  **         ** **         **
-    # **            *            **
-    # **                         **
-    # **     X. X.  +  X. X.     **
-    #  **                       **
-    #    **                   **
-    #      **               **
-    #        **           **
-    #          **       **
-    #            **   **
-    #              ***
-    #               *
+    # ❤-------------------❤
+    # |  X. X.  +  X. X.  |
+    # ❤-------------------❤
 
     # Please implement the pair/2 function
   end
