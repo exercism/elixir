@@ -4,7 +4,7 @@
 
 - Use `?` to work with the character [code points][codepoint].
 - `\s` can be used to represent a space.
-- Use [integer binary notation][integer-literal] for working with the codes.
+- Use [binary integer literal][integer-literal] shortcut notation for working with the codes.
 - Try to use the tail call recursion strategy.
 
 ## 1. Encode nucleic acid to binary value
@@ -37,7 +37,7 @@
 - Do not forget to specify the types of bitstring segments using the `::` operator.
 - You will need to reverse the accumulator at the end. Write a private tail-recursive `reverse` function to do that and use it in the base-case of the `decode` function.
 
-[integer-literal]: https://hexdocs.pm/elixir/syntax-reference.html#integers-in-other-bases-and-unicode-code-points
+[integer-literal]: https://hexdocs.pm/elixir/basic-types.html#basic-arithmetic
 [codepoint]: https://hexdocs.pm/elixir/binaries-strings-and-charlists.html#unicode-and-code-points
 [charlist]: https://hexdocs.pm/elixir/binaries-strings-and-charlists.html#charlists
 [bitstring]: https://hexdocs.pm/elixir/binaries-strings-and-charlists.html#bitstrings
