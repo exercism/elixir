@@ -1,5 +1,7 @@
 {
-  "authors": [],
+  "authors": [
+    "jiegillet"
+  ],
   "files": {
     "solution": [
       "lib/relative_distance.ex"

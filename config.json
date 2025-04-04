@@ -2446,6 +2446,24 @@
         "difficulty": 6
       },
       {
+        "slug": "relative-distance",
+        "name": "Relative Distance",
+        "uuid": "ba1d165a-774f-4b8f-9763-2d4279769e75",
+        "practices": [
+          "recursion"
+        ],
+        "prerequisites": [
+          "maps",
+          "tuples",
+          "lists",
+          "list-comprehensions",
+          "enum",
+          "multiple-clause-functions",
+          "nil"
+        ],
+        "difficulty": 6
+      },
+      {
         "slug": "robot-simulator",
         "name": "Robot Simulator",
         "uuid": "e5e55560-852f-4551-b4da-c9f4a3141470",
@@ -3036,14 +3054,6 @@
           "exceptions"
         ],
         "difficulty": 10
-      },
-      {
-        "slug": "relative-distance",
-        "name": "Relative Distance",
-        "uuid": "ba1d165a-774f-4b8f-9763-2d4279769e75",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
       }
     ],
     "foregone": [
