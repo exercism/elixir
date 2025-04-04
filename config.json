@@ -2449,10 +2449,9 @@
         "slug": "relative-distance",
         "name": "Relative Distance",
         "uuid": "ba1d165a-774f-4b8f-9763-2d4279769e75",
-        "practices": [
-          "recursion"
-        ],
+        "practices": [],
         "prerequisites": [
+          "recursion",
           "maps",
           "tuples",
           "lists",
