@@ -37,7 +37,7 @@ defmodule CryptoSquareTest do
   end
 
   @tag :pending
-  test "54 character plaintext results in 7 chunks, the last two with trailing spaces" do
+  test "54 character plaintext results in 8 chunks, the last two with trailing spaces" do
     msg = "If man was meant to stay on the ground, god would have given us roots."
     cipher = "imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau "
     assert CryptoSquare.encode(msg) == cipher
