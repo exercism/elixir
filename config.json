@@ -2148,6 +2148,23 @@
         "difficulty": 5
       },
       {
+        "slug": "intergalactic-transmission",
+        "name": "Intergalactic Transmission",
+        "uuid": "3ba8f12a-a873-4882-8eef-e44ebc3ff946",
+        "practices": [
+          "bit-manipulation",
+          "bitstrings"
+        ],
+        "prerequisites": [
+          "atoms",
+          "bit-manipulation",
+          "bitstrings",
+          "pattern-matching",
+          "tuples"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "luhn",
         "name": "Luhn",
         "uuid": "c38ca1a8-9f0e-49de-81f9-5712ce459839",
