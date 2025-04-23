@@ -2159,7 +2159,12 @@
           "atoms",
           "bit-manipulation",
           "bitstrings",
+          "case",
+          "enum",
+           "if",
           "pattern-matching",
+          "recursion",
+          "tail-call-recursion",
           "tuples"
         ],
         "difficulty": 5
