@@ -1,6 +1,4 @@
 defmodule Transmission do
-  import Bitwise
-
   @doc """
   Return the transmission sequence for a message.
   """

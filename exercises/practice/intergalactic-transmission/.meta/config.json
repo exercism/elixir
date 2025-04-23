@@ -4,10 +4,10 @@
   ],
   "files": {
     "solution": [
-      "lib/intergalactic_transmission.ex"
+      "lib/transmission.ex"
     ],
     "test": [
-      "test/intergalactic_transmission_test.exs"
+      "test/transmission_test.exs"
     ],
     "example": [
       ".meta/example.ex"
