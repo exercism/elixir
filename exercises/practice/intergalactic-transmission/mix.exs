@@ -1,4 +1,4 @@
-defmodule IntergalacticTransmission.MixProject do
+defmodule Transmission.MixProject do
   use Mix.Project
 
   def project do
