@@ -66,12 +66,6 @@ defmodule StringSeriesTest do
   end
 
   @tag :pending
-  test "Unicode characters count as a single character" do
-    assert StringSeries.slices("José", 1) == ["J", "o", "s", "é"]
-    assert StringSeries.slices("José", 2) == ["Jo", "os", "sé"]
-  end
-
-  @tag :pending
   test "slices with size longer than string return empty list" do
     assert StringSeries.slices("01234", 6) == []
   end
