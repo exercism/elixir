@@ -137,7 +137,7 @@ defmodule HighScoreTest do
         HighScore.new()
         |> HighScore.add_player("José Valim")
         |> HighScore.update_score("José Valim", 1)
-        |> HighScore.update_score("José Valim", 486_373)
+        |> HighScore.update_score("José Valim", 486_374)
 
       assert scores == %{"José Valim" => 486_374}
     end
