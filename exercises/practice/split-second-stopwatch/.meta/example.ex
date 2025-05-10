@@ -39,15 +39,15 @@ defmodule SplitSecondStopwatch do
     %Stopwatch{stopwatch | current_lap: current_lap}
   end
 
+  def advance_time(%Stopwatch{} = stopwatch, _duration) do
+    stopwatch
+  end
+
   @spec total(Stopwatch.t()) :: Duration.t()
   def total(%Stopwatch{current_lap: current_lap, previous_laps: previous_laps}) do
     previous_laps
     |> Enum.reduce(current_lap, &Duration.add/2)
     |> normalize()
-  end
-
-  def advance_time(%Stopwatch{} = stopwatch, _duration) do
-    stopwatch
   end
 
   @spec start(Stopwatch.t()) :: Stopwatch.t() | {:error, String.t()}
