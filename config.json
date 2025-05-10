@@ -2288,7 +2288,7 @@
       },
       {
         "slug": "split-second-stopwatch",
-        "name": "Split Second Stopwatch",
+        "name": "Split-Second Stopwatch",
         "uuid": "06a76963-1c9d-44a5-99b8-c7dbef9a9298",
         "practices": [
           "structs"
