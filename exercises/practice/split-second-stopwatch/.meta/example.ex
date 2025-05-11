@@ -8,15 +8,15 @@ defmodule SplitSecondStopwatch do
   defmodule Stopwatch do
     @type t :: %Stopwatch{
             state: SplitSecondStopwatch.state(),
-            current_lap: Duration.t(),
-            previous_laps: [Duration.t()]
+            current_lap: Time.t(),
+            previous_laps: [Time.t()]
           }
-    defstruct [:state, :current_lap, :previous_laps]
+    defstruct state: :ready, current_lap: ~T[00:00:00], previous_laps: []
   end
 
   @spec new() :: Stopwatch.t()
   def new() do
-    %Stopwatch{state: :ready, current_lap: zero(), previous_laps: []}
+    %Stopwatch{}
   end
 
   @spec state(Stopwatch.t()) :: state()
@@ -24,35 +24,29 @@ defmodule SplitSecondStopwatch do
     state
   end
 
-  @spec current_lap(Stopwatch.t()) :: Duration.t()
+  @spec current_lap(Stopwatch.t()) :: Time.t()
   def current_lap(%Stopwatch{current_lap: current_lap}) do
     current_lap
   end
 
-  @spec previous_laps(Stopwatch.t()) :: [Duration.t()]
+  @spec previous_laps(Stopwatch.t()) :: [Time.t()]
   def previous_laps(%Stopwatch{previous_laps: previous_laps}) do
     Enum.reverse(previous_laps)
   end
 
-  @spec advance_time(Stopwatch.t(), Duration.t()) :: Stopwatch.t()
-  def advance_time(%Stopwatch{state: :running, current_lap: current_lap} = stopwatch, duration) do
-    current_lap =
-      current_lap
-      |> Duration.add(duration)
-      |> normalize()
-
-    %Stopwatch{stopwatch | current_lap: current_lap}
+  @spec advance_time(Stopwatch.t(), Time.t()) :: Stopwatch.t()
+  def advance_time(%Stopwatch{state: :running, current_lap: current_lap} = stopwatch, time) do
+    current_lap = add_times(current_lap, time)
+    %{stopwatch | current_lap: current_lap}
   end
 
-  def advance_time(%Stopwatch{} = stopwatch, _duration) do
+  def advance_time(%Stopwatch{} = stopwatch, _time) do
     stopwatch
   end
 
-  @spec total(Stopwatch.t()) :: Duration.t()
+  @spec total(Stopwatch.t()) :: Time.t()
   def total(%Stopwatch{current_lap: current_lap, previous_laps: previous_laps}) do
-    previous_laps
-    |> Enum.reduce(current_lap, &Duration.add/2)
-    |> normalize()
+    Enum.reduce(previous_laps, current_lap, &add_times/2)
   end
 
   @spec start(Stopwatch.t()) :: Stopwatch.t() | {:error, String.t()}
@@ -61,12 +55,12 @@ defmodule SplitSecondStopwatch do
   end
 
   def start(%Stopwatch{} = stopwatch) do
-    %Stopwatch{stopwatch | state: :running}
+    %{stopwatch | state: :running}
   end
 
   @spec stop(Stopwatch.t()) :: Stopwatch.t() | {:error, String.t()}
   def stop(%Stopwatch{state: :running} = stopwatch) do
-    %Stopwatch{stopwatch | state: :stopped}
+    %{stopwatch | state: :stopped}
   end
 
   def stop(%Stopwatch{}) do
@@ -74,11 +68,11 @@ defmodule SplitSecondStopwatch do
   end
 
   @spec lap(Stopwatch.t()) :: Stopwatch.t() | {:error, String.t()}
-  def lap(
-        %Stopwatch{state: :running, current_lap: current_lap, previous_laps: previous_laps} =
-          stopwatch
-      ) do
-    %Stopwatch{stopwatch | current_lap: zero(), previous_laps: [current_lap | previous_laps]}
+  def lap(%Stopwatch{state: :running} = stopwatch) do
+    current_lap = ~T[00:00:00]
+    previous_laps = [stopwatch.current_lap | stopwatch.previous_laps]
+
+    %{stopwatch | current_lap: current_lap, previous_laps: previous_laps}
   end
 
   def lap(%Stopwatch{}) do
@@ -87,22 +81,15 @@ defmodule SplitSecondStopwatch do
 
   @spec reset(Stopwatch.t()) :: Stopwatch.t() | {:error, String.t()}
   def reset(%Stopwatch{state: :stopped}) do
-    new()
+    %Stopwatch{}
   end
 
   def reset(%Stopwatch{}) do
     {:error, "cannot reset a stopwatch that is not stopped"}
   end
 
-  defp zero, do: Duration.new!(second: 0)
-
-  defp normalize(%Duration{} = duration) do
-    minute = duration.minute + div(duration.second, 60)
-    second = rem(duration.second, 60)
-
-    hour = duration.hour + div(minute, 60)
-    minute = rem(minute, 60)
-
-    Duration.new!(hour: hour, minute: minute, second: second)
+  defp add_times(time1, time2) do
+    {time2_in_seconds, _microseconds} = Time.to_seconds_after_midnight(time2)
+    Time.add(time1, time2_in_seconds, :second)
   end
 end

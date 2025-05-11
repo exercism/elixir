@@ -10,13 +10,13 @@ defmodule SplitSecondStopwatchTest do
   @tag :pending
   test "new stopwatch's current lap has no elapsed time" do
     stopwatch = SplitSecondStopwatch.new()
-    assert SplitSecondStopwatch.current_lap(stopwatch) == Duration.new!(second: 0)
+    assert SplitSecondStopwatch.current_lap(stopwatch) == ~T[00:00:00]
   end
 
   @tag :pending
   test "new stopwatch's total has no elapsed time" do
     stopwatch = SplitSecondStopwatch.new()
-    assert SplitSecondStopwatch.total(stopwatch) == Duration.new!(second: 0)
+    assert SplitSecondStopwatch.total(stopwatch) == ~T[00:00:00]
   end
 
   @tag :pending
@@ -48,9 +48,9 @@ defmodule SplitSecondStopwatchTest do
     stopwatch =
       SplitSecondStopwatch.new()
       |> SplitSecondStopwatch.start()
-      |> SplitSecondStopwatch.advance_time(Duration.new!(second: 5))
+      |> SplitSecondStopwatch.advance_time(~T[00:00:05])
 
-    assert SplitSecondStopwatch.current_lap(stopwatch) == Duration.new!(second: 5)
+    assert SplitSecondStopwatch.current_lap(stopwatch) == ~T[00:00:05]
   end
 
   @tag :pending
@@ -58,9 +58,9 @@ defmodule SplitSecondStopwatchTest do
     stopwatch =
       SplitSecondStopwatch.new()
       |> SplitSecondStopwatch.start()
-      |> SplitSecondStopwatch.advance_time(Duration.new!(second: 23))
+      |> SplitSecondStopwatch.advance_time(~T[00:00:23])
 
-    assert SplitSecondStopwatch.total(stopwatch) == Duration.new!(second: 23)
+    assert SplitSecondStopwatch.total(stopwatch) == ~T[00:00:23]
   end
 
   @tag :pending
@@ -88,11 +88,11 @@ defmodule SplitSecondStopwatchTest do
     stopwatch =
       SplitSecondStopwatch.new()
       |> SplitSecondStopwatch.start()
-      |> SplitSecondStopwatch.advance_time(Duration.new!(second: 5))
+      |> SplitSecondStopwatch.advance_time(~T[00:00:05])
       |> SplitSecondStopwatch.stop()
-      |> SplitSecondStopwatch.advance_time(Duration.new!(second: 8))
+      |> SplitSecondStopwatch.advance_time(~T[00:00:08])
 
-    assert SplitSecondStopwatch.current_lap(stopwatch) == Duration.new!(second: 5)
+    assert SplitSecondStopwatch.current_lap(stopwatch) == ~T[00:00:05]
   end
 
   @tag :pending
@@ -100,11 +100,11 @@ defmodule SplitSecondStopwatchTest do
     stopwatch =
       SplitSecondStopwatch.new()
       |> SplitSecondStopwatch.start()
-      |> SplitSecondStopwatch.advance_time(Duration.new!(second: 13))
+      |> SplitSecondStopwatch.advance_time(~T[00:00:13])
       |> SplitSecondStopwatch.stop()
-      |> SplitSecondStopwatch.advance_time(Duration.new!(second: 44))
+      |> SplitSecondStopwatch.advance_time(~T[00:00:44])
 
-    assert SplitSecondStopwatch.total(stopwatch) == Duration.new!(second: 13)
+    assert SplitSecondStopwatch.total(stopwatch) == ~T[00:00:13]
   end
 
   @tag :pending
@@ -143,13 +143,13 @@ defmodule SplitSecondStopwatchTest do
     stopwatch =
       SplitSecondStopwatch.new()
       |> SplitSecondStopwatch.start()
-      |> SplitSecondStopwatch.advance_time(Duration.new!(minute: 1, second: 20))
+      |> SplitSecondStopwatch.advance_time(~T[00:01:20])
       |> SplitSecondStopwatch.stop()
-      |> SplitSecondStopwatch.advance_time(Duration.new!(second: 20))
+      |> SplitSecondStopwatch.advance_time(~T[00:00:20])
       |> SplitSecondStopwatch.start()
-      |> SplitSecondStopwatch.advance_time(Duration.new!(second: 8))
+      |> SplitSecondStopwatch.advance_time(~T[00:00:08])
 
-    assert SplitSecondStopwatch.current_lap(stopwatch) == Duration.new!(minute: 1, second: 28)
+    assert SplitSecondStopwatch.current_lap(stopwatch) == ~T[00:01:28]
   end
 
   @tag :pending
@@ -157,13 +157,13 @@ defmodule SplitSecondStopwatchTest do
     stopwatch =
       SplitSecondStopwatch.new()
       |> SplitSecondStopwatch.start()
-      |> SplitSecondStopwatch.advance_time(Duration.new!(second: 23))
+      |> SplitSecondStopwatch.advance_time(~T[00:00:23])
       |> SplitSecondStopwatch.stop()
-      |> SplitSecondStopwatch.advance_time(Duration.new!(second: 44))
+      |> SplitSecondStopwatch.advance_time(~T[00:00:44])
       |> SplitSecondStopwatch.start()
-      |> SplitSecondStopwatch.advance_time(Duration.new!(second: 9))
+      |> SplitSecondStopwatch.advance_time(~T[00:00:09])
 
-    assert SplitSecondStopwatch.total(stopwatch) == Duration.new!(second: 32)
+    assert SplitSecondStopwatch.total(stopwatch) == ~T[00:00:32]
   end
 
   @tag :pending
@@ -171,21 +171,21 @@ defmodule SplitSecondStopwatchTest do
     stopwatch =
       SplitSecondStopwatch.new()
       |> SplitSecondStopwatch.start()
-      |> SplitSecondStopwatch.advance_time(Duration.new!(minute: 1, second: 38))
+      |> SplitSecondStopwatch.advance_time(~T[00:01:38])
       |> SplitSecondStopwatch.lap()
 
     assert SplitSecondStopwatch.previous_laps(stopwatch) == [
-             Duration.new!(minute: 1, second: 38)
+             ~T[00:01:38]
            ]
 
     stopwatch =
       stopwatch
-      |> SplitSecondStopwatch.advance_time(Duration.new!(second: 44))
+      |> SplitSecondStopwatch.advance_time(~T[00:00:44])
       |> SplitSecondStopwatch.lap()
 
     assert SplitSecondStopwatch.previous_laps(stopwatch) == [
-             Duration.new!(minute: 1, second: 38),
-             Duration.new!(second: 44)
+             ~T[00:01:38],
+             ~T[00:00:44]
            ]
   end
 
@@ -194,13 +194,13 @@ defmodule SplitSecondStopwatchTest do
     stopwatch =
       SplitSecondStopwatch.new()
       |> SplitSecondStopwatch.start()
-      |> SplitSecondStopwatch.advance_time(Duration.new!(minute: 8, second: 22))
+      |> SplitSecondStopwatch.advance_time(~T[00:08:22])
       |> SplitSecondStopwatch.lap()
 
-    assert SplitSecondStopwatch.current_lap(stopwatch) == Duration.new!(second: 0)
+    assert SplitSecondStopwatch.current_lap(stopwatch) == ~T[00:00:00]
 
-    stopwatch = SplitSecondStopwatch.advance_time(stopwatch, Duration.new!(second: 15))
-    assert SplitSecondStopwatch.current_lap(stopwatch) == Duration.new!(second: 15)
+    stopwatch = SplitSecondStopwatch.advance_time(stopwatch, ~T[00:00:15])
+    assert SplitSecondStopwatch.current_lap(stopwatch) == ~T[00:00:15]
   end
 
   @tag :pending
@@ -208,11 +208,11 @@ defmodule SplitSecondStopwatchTest do
     stopwatch =
       SplitSecondStopwatch.new()
       |> SplitSecondStopwatch.start()
-      |> SplitSecondStopwatch.advance_time(Duration.new!(second: 22))
+      |> SplitSecondStopwatch.advance_time(~T[00:00:22])
       |> SplitSecondStopwatch.lap()
-      |> SplitSecondStopwatch.advance_time(Duration.new!(second: 33))
+      |> SplitSecondStopwatch.advance_time(~T[00:00:33])
 
-    assert SplitSecondStopwatch.total(stopwatch) == Duration.new!(second: 55)
+    assert SplitSecondStopwatch.total(stopwatch) == ~T[00:00:55]
   end
 
   @tag :pending
@@ -240,17 +240,17 @@ defmodule SplitSecondStopwatchTest do
     stopwatch =
       SplitSecondStopwatch.new()
       |> SplitSecondStopwatch.start()
-      |> SplitSecondStopwatch.advance_time(Duration.new!(minute: 11, second: 22))
+      |> SplitSecondStopwatch.advance_time(~T[00:11:22])
       |> SplitSecondStopwatch.lap()
 
     assert SplitSecondStopwatch.previous_laps(stopwatch) == [
-             Duration.new!(minute: 11, second: 22)
+             ~T[00:11:22]
            ]
 
     stopwatch = SplitSecondStopwatch.stop(stopwatch)
 
     assert SplitSecondStopwatch.previous_laps(stopwatch) == [
-             Duration.new!(minute: 11, second: 22)
+             ~T[00:11:22]
            ]
   end
 
@@ -270,11 +270,11 @@ defmodule SplitSecondStopwatchTest do
     stopwatch =
       SplitSecondStopwatch.new()
       |> SplitSecondStopwatch.start()
-      |> SplitSecondStopwatch.advance_time(Duration.new!(second: 10))
+      |> SplitSecondStopwatch.advance_time(~T[00:00:10])
       |> SplitSecondStopwatch.stop()
       |> SplitSecondStopwatch.reset()
 
-    assert SplitSecondStopwatch.current_lap(stopwatch) == Duration.new!(second: 0)
+    assert SplitSecondStopwatch.current_lap(stopwatch) == ~T[00:00:00]
   end
 
   @tag :pending
@@ -282,14 +282,14 @@ defmodule SplitSecondStopwatchTest do
     stopwatch =
       SplitSecondStopwatch.new()
       |> SplitSecondStopwatch.start()
-      |> SplitSecondStopwatch.advance_time(Duration.new!(second: 10))
+      |> SplitSecondStopwatch.advance_time(~T[00:00:10])
       |> SplitSecondStopwatch.lap()
-      |> SplitSecondStopwatch.advance_time(Duration.new!(second: 20))
+      |> SplitSecondStopwatch.advance_time(~T[00:00:20])
       |> SplitSecondStopwatch.lap()
 
     assert SplitSecondStopwatch.previous_laps(stopwatch) == [
-             Duration.new!(second: 10),
-             Duration.new!(second: 20)
+             ~T[00:00:10],
+             ~T[00:00:20]
            ]
 
     stopwatch =
@@ -324,54 +324,37 @@ defmodule SplitSecondStopwatchTest do
     stopwatch =
       SplitSecondStopwatch.new()
       |> SplitSecondStopwatch.start()
-      |> SplitSecondStopwatch.advance_time(Duration.new!(hour: 1, minute: 23, second: 45))
+      |> SplitSecondStopwatch.advance_time(~T[01:23:45])
 
-    assert SplitSecondStopwatch.current_lap(stopwatch) ==
-             Duration.new!(hour: 1, minute: 23, second: 45)
+    assert SplitSecondStopwatch.current_lap(stopwatch) == ~T[01:23:45]
 
     stopwatch = SplitSecondStopwatch.lap(stopwatch)
 
     assert SplitSecondStopwatch.previous_laps(stopwatch) == [
-             Duration.new!(hour: 1, minute: 23, second: 45)
+             ~T[01:23:45]
            ]
 
-    stopwatch =
-      SplitSecondStopwatch.advance_time(
-        stopwatch,
-        Duration.new!(hour: 4, minute: 1, second: 40)
-      )
-
-    assert SplitSecondStopwatch.current_lap(stopwatch) ==
-             Duration.new!(hour: 4, minute: 1, second: 40)
-
-    assert SplitSecondStopwatch.total(stopwatch) ==
-             Duration.new!(hour: 5, minute: 25, second: 25)
+    stopwatch = SplitSecondStopwatch.advance_time(stopwatch, ~T[04:01:40])
+    assert SplitSecondStopwatch.current_lap(stopwatch) == ~T[04:01:40]
+    assert SplitSecondStopwatch.total(stopwatch) == ~T[05:25:25]
 
     stopwatch = SplitSecondStopwatch.lap(stopwatch)
 
     assert SplitSecondStopwatch.previous_laps(stopwatch) == [
-             Duration.new!(hour: 1, minute: 23, second: 45),
-             Duration.new!(hour: 4, minute: 1, second: 40)
+             ~T[01:23:45],
+             ~T[04:01:40]
            ]
 
-    stopwatch =
-      SplitSecondStopwatch.advance_time(
-        stopwatch,
-        Duration.new!(hour: 8, minute: 43, second: 5)
-      )
-
-    assert SplitSecondStopwatch.current_lap(stopwatch) ==
-             Duration.new!(hour: 8, minute: 43, second: 5)
-
-    assert SplitSecondStopwatch.total(stopwatch) ==
-             Duration.new!(hour: 14, minute: 8, second: 30)
+    stopwatch = SplitSecondStopwatch.advance_time(stopwatch, ~T[08:43:05])
+    assert SplitSecondStopwatch.current_lap(stopwatch) == ~T[08:43:05]
+    assert SplitSecondStopwatch.total(stopwatch) == ~T[14:08:30]
 
     stopwatch = SplitSecondStopwatch.lap(stopwatch)
 
     assert SplitSecondStopwatch.previous_laps(stopwatch) == [
-             Duration.new!(hour: 1, minute: 23, second: 45),
-             Duration.new!(hour: 4, minute: 1, second: 40),
-             Duration.new!(hour: 8, minute: 43, second: 5)
+             ~T[01:23:45],
+             ~T[04:01:40],
+             ~T[08:43:05]
            ]
   end
 end

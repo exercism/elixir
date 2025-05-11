@@ -6,6 +6,7 @@ defmodule SplitSecondStopwatch do
   @type state :: :ready | :running | :stopped
 
   defmodule Stopwatch do
+    @type t :: :todo
     defstruct [:todo]
   end
 
@@ -17,20 +18,20 @@ defmodule SplitSecondStopwatch do
   def state(stopwatch) do
   end
 
-  @spec current_lap(Stopwatch.t()) :: Duration.t()
+  @spec current_lap(Stopwatch.t()) :: Time.t()
   def current_lap(stopwatch) do
   end
 
-  @spec previous_laps(Stopwatch.t()) :: [Duration.t()]
+  @spec previous_laps(Stopwatch.t()) :: [Time.t()]
   def previous_laps(stopwatch) do
   end
 
-  @spec total(Stopwatch.t()) :: Duration.t()
-  def total(stopwatch) do
+  @spec advance_time(Stopwatch.t(), Time.t()) :: Stopwatch.t()
+  def advance_time(stopwatch, time) do
   end
 
-  @spec advance_time(Stopwatch.t(), Duration.t()) :: Stopwatch.t()
-  def advance_time(stopwatch, duration) do
+  @spec total(Stopwatch.t()) :: Time.t()
+  def total(stopwatch) do
   end
 
   @spec start(Stopwatch.t()) :: Stopwatch.t() | {:error, String.t()}
