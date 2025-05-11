@@ -2287,6 +2287,25 @@
         "difficulty": 5
       },
       {
+        "slug": "split-second-stopwatch",
+        "name": "Split-Second Stopwatch",
+        "uuid": "06a76963-1c9d-44a5-99b8-c7dbef9a9298",
+        "practices": [
+          "structs",
+          "dates-and-time"
+        ],
+        "prerequisites": [
+          "structs",
+          "dates-and-time",
+          "lists",
+          "enum",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "errors"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "square-root",
         "name": "Square Root",
         "uuid": "bf9e6251-105b-4fd7-b388-c6f5a652d174",
