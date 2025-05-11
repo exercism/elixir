@@ -6,6 +6,11 @@ defmodule SplitSecondStopwatch do
   @type state :: :ready | :running | :stopped
 
   defmodule Stopwatch do
+    @type t :: %Stopwatch{
+            state: SplitSecondStopwatch.state(),
+            current_lap: Duration.t(),
+            previous_laps: [Duration.t()]
+          }
     defstruct [:state, :current_lap, :previous_laps]
   end
 
@@ -19,7 +24,7 @@ defmodule SplitSecondStopwatch do
     state
   end
 
-  @spec current_lap(Stopwatch.t() :: Duration.t())
+  @spec current_lap(Stopwatch.t()) :: Duration.t()
   def current_lap(%Stopwatch{current_lap: current_lap}) do
     current_lap
   end
