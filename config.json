@@ -2245,25 +2245,8 @@
         "slug": "scale-generator",
         "name": "Scale Generator",
         "uuid": "94de8b3f-79d7-4367-821c-e239c95e32ca",
-        "practices": [
-          "lists",
-          "module-attributes-as-constants"
-        ],
-        "prerequisites": [
-          "lists",
-          "strings",
-          "binaries",
-          "cond",
-          "case",
-          "if",
-          "multiple-clause-functions",
-          "guards",
-          "pattern-matching",
-          "recursion",
-          "enum",
-          "module-attributes-as-constants",
-          "default-arguments"
-        ],
+        "practices": [],
+        "prerequisites": [],
         "difficulty": 5,
         "status": "deprecated"
       },
