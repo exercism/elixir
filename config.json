@@ -2264,7 +2264,8 @@
           "module-attributes-as-constants",
           "default-arguments"
         ],
-        "difficulty": 5
+        "difficulty": 5,
+        "status": "deprecated"
       },
       {
         "slug": "sieve",
