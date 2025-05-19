@@ -209,7 +209,7 @@ defmodule FormTest do
       assert_spec(
         {:check_length, 2},
         ["word :: String.t(), length :: non_neg_integer()", "String.t(), non_neg_integer()"],
-        ":ok | {:error, pos_integer()}"
+        ":ok | {:error, non_neg_integer()}"
       )
     end
   end
