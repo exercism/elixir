@@ -1549,15 +1549,15 @@
         "name": "Matrix",
         "uuid": "f0df392c-8ace-4639-b555-5e61e54a854e",
         "practices": [
-          "structs",
-          "tuples"
+          "structs"
         ],
         "prerequisites": [
           "strings",
           "enum",
           "structs",
           "tuples",
-          "maps"
+          "maps",
+          "lists"
         ],
         "difficulty": 3
       },
