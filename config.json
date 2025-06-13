@@ -2680,7 +2680,9 @@
         "name": "Piecing It Together",
         "uuid": "e20ce41a-ff3f-46e4-9fbb-8810883c488f",
         "practices": [
-          "structs"
+          "structs",
+          "integers",
+          "floating-point-numbers"
         ],
         "prerequisites": [
           "structs",
