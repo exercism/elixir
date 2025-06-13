@@ -1,34 +1,32 @@
-defmodule PiecingItTogether do
+defmodule JigsawPuzzle do
   @doc """
   Fill in missing jigsaw puzzle details from partial data
   """
 
-  defmodule JigsawPuzzle do
-    @type format() :: :landscape | :portrait | :square
-    @type t() :: %__MODULE__{
-            pieces: pos_integer() | nil,
-            rows: pos_integer() | nil,
-            columns: pos_integer() | nil,
-            format: format() | nil,
-            aspect_ratio: float() | nil,
-            border: pos_integer() | nil,
-            inside: pos_integer() | nil
-          }
+  @type format() :: :landscape | :portrait | :square
+  @type t() :: %__MODULE__{
+          pieces: pos_integer() | nil,
+          rows: pos_integer() | nil,
+          columns: pos_integer() | nil,
+          format: format() | nil,
+          aspect_ratio: float() | nil,
+          border: pos_integer() | nil,
+          inside: pos_integer() | nil
+        }
 
-    defstruct [:pieces, :rows, :columns, :format, :aspect_ratio, :border, :inside]
-  end
+  defstruct [:pieces, :rows, :columns, :format, :aspect_ratio, :border, :inside]
 
-  @spec jigsaw_data(jigsaw_puzzle :: JigsawPuzzle.t()) ::
+  @spec data(jigsaw_puzzle :: JigsawPuzzle.t()) ::
           {:ok, JigsawPuzzle.t()} | {:error, String.t()}
-  def jigsaw_data(%JigsawPuzzle{} = jigsaw_puzzle) do
+  def data(%JigsawPuzzle{} = jigsaw_puzzle) do
     jigsaw_puzzle
     |> Map.from_struct()
     |> Enum.filter(fn {_, value} -> value end)
     |> Enum.sort_by(fn {key, _} -> key end)
-    |> complete_jigsaw_data()
+    |> complete_data()
   end
 
-  defp complete_jigsaw_data(aspect_ratio: aspect_ratio, pieces: pieces) do
+  defp complete_data(aspect_ratio: aspect_ratio, pieces: pieces) do
     columns = round(:math.sqrt(aspect_ratio * pieces))
     rows = Integer.floor_div(pieces, columns)
     border = 2 * (rows + columns) - 4
@@ -46,7 +44,7 @@ defmodule PiecingItTogether do
      }}
   end
 
-  defp complete_jigsaw_data(format: :square, rows: rows) do
+  defp complete_data(format: :square, rows: rows) do
     columns = rows
     pieces = rows * columns
     border = 2 * (rows + columns) - 4
@@ -64,11 +62,11 @@ defmodule PiecingItTogether do
      }}
   end
 
-  defp complete_jigsaw_data(format: _, rows: _) do
+  defp complete_data(format: _, rows: _) do
     {:error, "Insufficient data"}
   end
 
-  defp complete_jigsaw_data(aspect_ratio: 1.0, inside: inside) do
+  defp complete_data(aspect_ratio: 1.0, inside: inside) do
     columns = 2 + round(:math.sqrt(inside))
     rows = columns
     pieces = rows * columns
@@ -86,11 +84,11 @@ defmodule PiecingItTogether do
      }}
   end
 
-  defp complete_jigsaw_data(aspect_ratio: _, inside: _) do
+  defp complete_data(aspect_ratio: _, inside: _) do
     {:error, "Insufficient data"}
   end
 
-  defp complete_jigsaw_data(aspect_ratio: aspect_ratio, rows: rows) do
+  defp complete_data(aspect_ratio: aspect_ratio, rows: rows) do
     columns = round(rows * aspect_ratio)
     pieces = rows * columns
     border = 2 * (rows + columns) - 4
@@ -108,11 +106,11 @@ defmodule PiecingItTogether do
      }}
   end
 
-  defp complete_jigsaw_data(border: border, format: :square, pieces: pieces) do
-    complete_jigsaw_data(aspect_ratio: 1.0, inside: pieces - border)
+  defp complete_data(border: border, format: :square, pieces: pieces) do
+    complete_data(aspect_ratio: 1.0, inside: pieces - border)
   end
 
-  defp complete_jigsaw_data(border: border, format: format, pieces: pieces) do
+  defp complete_data(border: border, format: format, pieces: pieces) do
     center = 1 + border / 4
     diff = :math.sqrt(center ** 2 - pieces)
 
@@ -137,7 +135,7 @@ defmodule PiecingItTogether do
      }}
   end
 
-  defp complete_jigsaw_data(columns: columns, format: format, rows: rows) do
+  defp complete_data(columns: columns, format: format, rows: rows) do
     aspect_ratio = columns / rows
 
     if format == aspect_ratio_to_format(aspect_ratio) do
@@ -160,7 +158,7 @@ defmodule PiecingItTogether do
     end
   end
 
-  defp complete_jigsaw_data(_) do
+  defp complete_data(_) do
     {:error, "Insufficient data"}
   end
 

@@ -1,6 +1,5 @@
-defmodule PiecingItTogetherTest do
+defmodule JigsawPuzzleTest do
   use ExUnit.Case
-  alias PiecingItTogether.JigsawPuzzle
 
   # @tag :pending
   test "1000 pieces puzzle with 1.6 aspect ratio" do
@@ -20,7 +19,7 @@ defmodule PiecingItTogetherTest do
         inside: 874
       }
 
-    assert PiecingItTogether.jigsaw_data(incomplete_puzzle) == {:ok, expected}
+    assert JigsawPuzzle.data(incomplete_puzzle) == {:ok, expected}
   end
 
   @tag :pending
@@ -41,7 +40,7 @@ defmodule PiecingItTogetherTest do
         inside: 900
       }
 
-    assert PiecingItTogether.jigsaw_data(incomplete_puzzle) == {:ok, expected}
+    assert JigsawPuzzle.data(incomplete_puzzle) == {:ok, expected}
   end
 
   @tag :pending
@@ -62,7 +61,7 @@ defmodule PiecingItTogetherTest do
         inside: 324
       }
 
-    assert PiecingItTogether.jigsaw_data(incomplete_puzzle) == {:ok, expected}
+    assert JigsawPuzzle.data(incomplete_puzzle) == {:ok, expected}
   end
 
   @tag :pending
@@ -83,7 +82,7 @@ defmodule PiecingItTogetherTest do
         inside: 1344
       }
 
-    assert PiecingItTogether.jigsaw_data(incomplete_puzzle) == {:ok, expected}
+    assert JigsawPuzzle.data(incomplete_puzzle) == {:ok, expected}
   end
 
   @tag :pending
@@ -105,7 +104,7 @@ defmodule PiecingItTogetherTest do
         inside: 230
       }
 
-    assert PiecingItTogether.jigsaw_data(incomplete_puzzle) == {:ok, expected}
+    assert JigsawPuzzle.data(incomplete_puzzle) == {:ok, expected}
   end
 
   @tag :pending
@@ -115,7 +114,7 @@ defmodule PiecingItTogetherTest do
       pieces: 1500
     }
 
-    assert PiecingItTogether.jigsaw_data(incomplete_puzzle) == {:error, "Insufficient data"}
+    assert JigsawPuzzle.data(incomplete_puzzle) == {:error, "Insufficient data"}
   end
 
   @tag :pending
@@ -126,6 +125,6 @@ defmodule PiecingItTogetherTest do
       rows: 100
     }
 
-    assert PiecingItTogether.jigsaw_data(incomplete_puzzle) == {:error, "Contradictory data"}
+    assert JigsawPuzzle.data(incomplete_puzzle) == {:error, "Contradictory data"}
   end
 end
