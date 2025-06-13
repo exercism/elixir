@@ -1,6 +1,6 @@
 defmodule PiecingItTogether do
   @doc """
-  TODO: add function description and replace types in @spec
+  Fill in missing jigsaw puzzle details from partial data
   """
 
   defmodule JigsawPuzzle do
