@@ -2681,7 +2681,6 @@
         "uuid": "e20ce41a-ff3f-46e4-9fbb-8810883c488f",
         "practices": [
           "structs",
-          "integers",
           "floating-point-numbers"
         ],
         "prerequisites": [
@@ -2692,6 +2691,7 @@
           "guards",
           "if",
           "case",
+          "integers",
           "floating-point-numbers",
           "maps",
           "enum",
