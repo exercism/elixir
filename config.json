@@ -2692,7 +2692,11 @@
           "guards",
           "if",
           "case",
-          "floating-point-numbers"
+          "floating-point-numbers",
+          "maps",
+          "enum",
+          "keyword-lists",
+          "erlang-libraries"
         ],
         "difficulty": 7
       },
