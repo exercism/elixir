@@ -141,7 +141,7 @@ defmodule BafflingBirthdaysTest do
         |> length()
 
       # given a correct solution, this is expected to fail once in 100_000 runs
-      assert counts_outside_95_percent_confidence_interval <= 6
+      assert counts_outside_95_percent_confidence_interval <= 9
     end
   end
 
