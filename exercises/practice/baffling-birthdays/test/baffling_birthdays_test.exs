@@ -90,7 +90,7 @@ defmodule BafflingBirthdaysTest do
         |> Enum.frequencies()
 
       number_of_months = 12
-      assert Map.size(month_frequencies) == number_of_months
+      assert map_size(month_frequencies) == number_of_months
 
       expected_count = group_size / number_of_months
 
@@ -119,7 +119,7 @@ defmodule BafflingBirthdaysTest do
         |> Enum.frequencies()
 
       number_of_days = 31
-      assert Map.size(day_frequencies) == number_of_days
+      assert map_size(day_frequencies) == number_of_days
 
       expected_count = fn
         day when day <= 28 -> group_size * 12 / 365
