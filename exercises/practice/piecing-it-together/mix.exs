@@ -1,4 +1,4 @@
-defmodule PiecingItTogether.MixProject do
+defmodule JigsawPuzzle.MixProject do
   use Mix.Project
 
   def project do
