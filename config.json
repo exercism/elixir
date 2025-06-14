@@ -2676,6 +2676,31 @@
         "difficulty": 7
       },
       {
+        "slug": "piecing-it-together",
+        "name": "Piecing It Together",
+        "uuid": "e20ce41a-ff3f-46e4-9fbb-8810883c488f",
+        "practices": [
+          "structs",
+          "floating-point-numbers"
+        ],
+        "prerequisites": [
+          "structs",
+          "errors",
+          "multiple-clause-functions",
+          "pattern-matching",
+          "guards",
+          "if",
+          "case",
+          "integers",
+          "floating-point-numbers",
+          "maps",
+          "enum",
+          "keyword-lists",
+          "erlang-libraries"
+        ],
+        "difficulty": 7
+      },
+      {
         "slug": "queen-attack",
         "name": "Queen Attack",
         "uuid": "5bc0d877-ad13-461e-bdbd-cd262b875dbb",

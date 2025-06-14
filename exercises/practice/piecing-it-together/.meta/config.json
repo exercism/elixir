@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "jiegillet"
+  ],
+  "files": {
+    "solution": [
+      "lib/jigsaw_puzzle.ex"
+    ],
+    "test": [
+      "test/jigsaw_puzzle_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
+  },
+  "blurb": "Fill in missing jigsaw puzzle details from partial data",
+  "source": "atk just started another 1000-pieces jigsaw puzzle when this idea hit him",
+  "source_url": "https://github.com/exercism/problem-specifications/pull/2554"
+}
