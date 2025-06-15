@@ -47,7 +47,7 @@ defmodule BafflingBirthdaysTest do
     @tag :pending
     test "multiple birthdates with one shared birthday" do
       birthdates = [~D[1966-07-29], ~D[1977-02-12], ~D[2001-07-29], ~D[1980-11-10]]
-      BafflingBirthdays.shared_birthday?(birthdates) == true
+      assert BafflingBirthdays.shared_birthday?(birthdates) == true
     end
 
     @tag :pending
@@ -60,7 +60,7 @@ defmodule BafflingBirthdaysTest do
         ~D[2019-02-12]
       ]
 
-      BafflingBirthdays.shared_birthday?(birthdates) == true
+      assert BafflingBirthdays.shared_birthday?(birthdates) == true
     end
   end
 
