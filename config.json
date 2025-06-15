@@ -681,6 +681,23 @@
           "if"
         ],
         "status": "beta"
+      },
+      {
+        "slug": "gotta-snatch-em-all",
+        "name": "Gotta Snatch'Em All",
+        "uuid": "e1059f7a-d75f-4141-af19-fe548449167f",
+        "concepts": [
+          "mapsets"
+        ],
+        "prerequisites": [
+          "strings",
+          "lists",
+          "enum",
+          "tuples",
+          "pattern-matching",
+          "booleans"
+        ],
+        "status": "beta"
       }
     ],
     "practice": [
@@ -3289,6 +3306,11 @@
       "uuid": "68417562-6ef3-4a1d-9983-96b4182d444f",
       "slug": "lists",
       "name": "Lists"
+    },
+    {
+      "uuid": "8c1fcb63-5e43-49c9-b1f9-46ceec099c28",
+      "slug": "mapsets",
+      "name": "MapSets"
     },
     {
       "uuid": "c1dca378-b124-4b9b-8822-ddfa23643047",
