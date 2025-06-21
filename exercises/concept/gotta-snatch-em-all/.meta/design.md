@@ -39,12 +39,12 @@ Make sure that:
 
 - (essential) `add_card` uses `MapSet.member?` and `MapSet.put`
 - (essential) `trade_card` uses `MapSet.member?`, `MapSet.put` and `MapSet.delete`
-- (essential) `remove_duplicates` uses `MapSet.to_list`
+- (essential) `remove_duplicates` uses `MapSet.new` and `Enum.sort`
+- (essential) `remove_duplicates` does not use `Enum.unique`
 - (essential) `extra_cards` uses `MapSet.difference` and `MapSet.size`
-- (essential) `boring_cards` uses `MapSet.intersection` and `MapSet.toList`
+- (essential) `boring_cards` uses `MapSet.intersection` and `Enum.sort`
 - (actionable) `boring_cards` uses `Enum.reduce`
 - (essential) `total_cards` uses `MapSet.union` and `MapSet.size`
 - (actionable) `total_cards` uses `Enum.reduce`
-- (essential) `split_shiny_cards` uses `MapSet.partition` and `MapSet.toList`
+- (essential) `split_shiny_cards` uses `MapSet.partition` and `Enum.sort`
 - (actionable) `split_shiny_cards` uses `String.startsWith`
-- (essential) `remove_duplicates`, `boring_cards` and `split_shiny_cards` use `Enum.sort`

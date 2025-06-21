@@ -3,9 +3,9 @@
 A `MapSet` is a collection of unique values, representing sets in Elixir.
 It can contain values of any kind, without a notion of order.
 
-Note that the `Set` module also exists, but it is deprecated in favor of `MapSet`.
+Note that the `Set` module also exists, but is deprecated in favor of `MapSet`.
 
-You can create sets using `MapSet.new/0`, `MapSet.new/1` and `MapSet.new/3`, and transform them into lists using `MapSet.to_list/1`.
+You can create sets using `MapSet.new/0`, `MapSet.new/1` and `MapSet.new/2`, and transform them into lists using `MapSet.to_list/1`.
 
 ```elixir
 MapSet.new()
@@ -78,6 +78,6 @@ MapSet.filter(a, even)
 MapSet.reject(a, even)
 # => MapSet.new([1, 3, 5, 7, 9])
 
- MapSet.split_with(a, even)
+MapSet.split_with(a, even)
 # => {MapSet.new([2, 4, 6, 8, 10]), MapSet.new([1, 3, 5, 7, 9])}
 ```
