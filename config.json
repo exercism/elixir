@@ -2351,7 +2351,8 @@
           "multiple-clause-functions",
           "pattern-matching",
           "guards",
-          "enum"
+          "enum",
+          "mapsets"
         ],
         "difficulty": 5
       },
@@ -2364,6 +2365,7 @@
         ],
         "prerequisites": [
           "randomness",
+          "mapsets",
           "dates-and-time",
           "lists",
           "enum",
@@ -2509,10 +2511,13 @@
         "slug": "relative-distance",
         "name": "Relative Distance",
         "uuid": "ba1d165a-774f-4b8f-9763-2d4279769e75",
-        "practices": [],
+        "practices": [
+          "mapsets"
+        ],
         "prerequisites": [
           "recursion",
           "maps",
+          "mapsets",
           "tuples",
           "lists",
           "list-comprehensions",
@@ -2548,7 +2553,8 @@
         "name": "Satellite",
         "uuid": "a07e01e6-7cea-4db9-a514-7c95788e90a9",
         "practices": [
-          "recursion"
+          "recursion",
+          "mapsets"
         ],
         "prerequisites": [
           "pattern-matching",
@@ -2557,7 +2563,8 @@
           "recursion",
           "atoms",
           "lists",
-          "enum"
+          "enum",
+          "mapsets"
         ],
         "difficulty": 6
       },
@@ -2784,8 +2791,11 @@
         "slug": "two-bucket",
         "name": "Two Bucket",
         "uuid": "07b4679a-3d9f-42bc-ad1e-b9ba272a1c15",
-        "practices": [],
+        "practices": [
+          "mapsets"
+        ],
         "prerequisites": [
+          "mapsets",
           "atoms",
           "tuples",
           "integers",
@@ -3065,6 +3075,7 @@
           "integers",
           "list-comprehensions",
           "maps",
+          "mapsets",
           "pattern-matching",
           "pipe-operator",
           "recursion"
@@ -3107,7 +3118,8 @@
           "if",
           "enum",
           "maps",
-          "atoms"
+          "atoms",
+          "mapsets"
         ],
         "difficulty": 9
       },
