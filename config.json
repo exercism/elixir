@@ -2356,6 +2356,24 @@
         "difficulty": 5
       },
       {
+        "slug": "baffling-birthdays",
+        "name": "Baffling Birthdays",
+        "uuid": "e5ebca45-1e54-45b6-89bb-0cddfd23b6e1",
+        "practices": [
+          "randomness"
+        ],
+        "prerequisites": [
+          "randomness",
+          "dates-and-time",
+          "lists",
+          "enum",
+          "ranges",
+          "list-comprehensions",
+          "tuples"
+        ],
+        "difficulty": 6
+      },
+      {
         "slug": "game-of-life",
         "name": "Game of Life",
         "uuid": "32d53ab8-abea-4483-a8cb-ee3b908a9dd7",
