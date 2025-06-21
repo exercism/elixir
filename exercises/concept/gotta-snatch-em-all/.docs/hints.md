@@ -47,7 +47,7 @@
 
 ## 8. Shiny for the win
 
-- Use [this `MapSet` function][split_with] to separate your collection
+- Use [this `MapSet` function][split_with] to separate your collection (from Elixir 1.15, otherwise, [this][filter] and [that][reject] function can be used instead)
 - Use [this `String` function][starts_with] to detect shiny cards
 - [This `MapSet` function][to_list] can create a list
 - `MapSet`s do not have a notion of order, you should use [this `Enum` function][sort] to sort the cards, even if the tests pass without it
@@ -64,6 +64,8 @@
 [new_empty]: https://hexdocs.pm/elixir/MapSet.html#new/0
 [union]: https://hexdocs.pm/elixir/MapSet.html#union/2
 [split_with]: https://hexdocs.pm/elixir/MapSet.html#split_with/2
+[filter]: https://hexdocs.pm/elixir/MapSet.html#filter/2
+[reject]: https://hexdocs.pm/elixir/MapSet.html#reject/2
 [starts_with]: https://hexdocs.pm/elixir/String.html#starts_with?/2
 [enum]: https://hexdocs.pm/elixir/Enum.html
 [reduce]: https://hexdocs.pm/elixir/Enum.html#reduce/3
