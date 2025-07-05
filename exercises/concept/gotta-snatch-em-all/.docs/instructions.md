@@ -88,7 +88,7 @@ total_cards([MapSet.new(["Scientuna"]), MapSet.new(["Newthree", "Scientuna"])])
 
 ## 8. Shiny for the win
 
-You nephew is coming to visit you soon, and you feel like impressing him.
+Your nephew is coming to visit you soon, and you feel like impressing him.
 Kids like shiny things right?
 Blorkemon™️ cards can be shiny!
 
