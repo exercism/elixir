@@ -2,8 +2,6 @@
   "authors": [
     "jiegillet"
   ],
-  "contributors": [
-  ],
   "files": {
     "solution": [
       "lib/gotta_snatch_em_all.ex"

@@ -1,5 +1,7 @@
 # Introduction
 
+## MapSets
+
 A `MapSet` is a collection of unique values, representing sets in Elixir.
 It can contain values of any kind, without a notion of order.
 
