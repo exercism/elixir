@@ -1,0 +1,35 @@
+{
+  "authors": [],
+  "contributors": [
+    "andrewsardone",
+    "angelikatyborska",
+    "Cohen-Carlisle",
+    "dalexj",
+    "devonestes",
+    "jinyeow",
+    "kahgoh",
+    "kytrinyx",
+    "lpil",
+    "neenjaw",
+    "parkerl",
+    "petehuang",
+    "pminten",
+    "rubysolo",
+    "sotojuan",
+    "Teapane",
+    "tjcelaya",
+    "waiting-for-dev"
+  ],
+  "files": {
+    "solution": [
+      "lib/flower_field.ex"
+    ],
+    "test": [
+      "test/flower_field_test.exs"
+    ],
+    "example": [
+      ".meta/example.ex"
+    ]
+  },
+  "blurb": "Mark all the flowers in a garden."
+}
