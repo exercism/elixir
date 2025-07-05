@@ -644,8 +644,7 @@
           "ast",
           "enum",
           "import"
-        ],
-        "status": "beta"
+        ]
       },
       {
         "slug": "take-a-number-deluxe",
@@ -663,8 +662,7 @@
           "tuples",
           "keyword-lists",
           "typespecs"
-        ],
-        "status": "beta"
+        ]
       },
       {
         "slug": "log-parser",
@@ -679,8 +677,7 @@
           "pattern-matching",
           "nil",
           "if"
-        ],
-        "status": "beta"
+        ]
       },
       {
         "slug": "gotta-snatch-em-all",
@@ -696,8 +693,7 @@
           "tuples",
           "pattern-matching",
           "booleans"
-        ],
-        "status": "beta"
+        ]
       }
     ],
     "practice": [
