@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "jiegillet"
+  ],
+  "files": {
+    "solution": [
+      "lib/gotta_snatch_em_all.ex"
+    ],
+    "test": [
+      "test/gotta_snatch_em_all_test.exs"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ex"
+    ]
+  },
+  "forked_from": [
+    "elm/gotta-snatch-em-all"
+  ],
+  "icon": "character-study",
+  "blurb": "Learn to use sets by playing a vintage trading card game"
+}
