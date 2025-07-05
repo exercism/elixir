@@ -11,8 +11,8 @@
 
 ## 2. Grow the collection
 
-- Use [this `MapSet` function][put]
-- Use [that `MapSet` function][member]
+- Use [this `MapSet` function][put] to add cards to your collection
+- Use [that `MapSet` function][member] to check if you have a specific card in your collection
 
 ## 3. Start trading
 
@@ -27,12 +27,12 @@
 
 ## 5. Cards they don't have
 
-- Use the [`MapSet.difference/2` function][difference]
-- Use the [`MapSet.size/1` function][size]
+- Use [this `MapSet` function][difference] to check differences between collections
+- Use [that `MapSet` function][size] to get the number of cards in a collection
 
 ## 6. Cards they all have
 
-- [This `Enum` function][reduce] will be helpful
+- [This `Enum` function][reduce] will be helpful to go through all of the collections
 - Use pattern matching on the list to differentiate empty and non-empty lists
 - [This `MapSet` function][intersection] will help you keep the common cards
 - [This `MapSet` function][to_list] can create a list
@@ -40,7 +40,7 @@
 
 ## 7. All of the cards
 
-- [This `Enum` function][reduce] will be helpful
+- [This `Enum` function][reduce] will be helpful to go through all of the collections
 - Use [this `MapSet` function][new_empty] as accumulator
 - [This `MapSet` function][union] will help you accumulate all cards
 - [This `MapSet` function][size] will count how many cars you have
