@@ -34,7 +34,7 @@ Not every trade is worth doing, or can be done at all.
 You cannot trade a card you don't have, and you shouldn't trade a card for one that you already have.
 
 Implement `GottaSnatchEmAll.trade_card`, that takes two cards to trade (yours and theirs) and your current collection.
-The return value is a tuple of two values: a `Bool` stating if the trade is possible and worth doing, and the collection you would end up with if you did the trade (even if it's not actually possible).
+The return value is a tuple of two values: a boolean stating if the trade is possible and worth doing, and the collection you would end up with if you did the trade (even if it's not actually possible).
 
 ```elixir
 GottaSnatchEmAll.trade_card("Scientuna", "Newthree", MapSet.new(["Scientuna"]))
