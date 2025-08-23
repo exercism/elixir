@@ -57,7 +57,7 @@ defmodule DotTest do
   end
 
   @tag :pending
-  test "graph with just attribute" do
+  test "graph with one attribute" do
     assert %Graph{attrs: %{foo: 1}} ==
              exprt(
                Dot.graph do
@@ -67,7 +67,7 @@ defmodule DotTest do
   end
 
   @tag :pending
-  test "graph with attrs" do
+  test "graph with many attributes, nodes, and edges" do
     assert %Graph{
              attrs: %{bar: true, foo: 1, title: "Testing Attrs"},
              nodes: %{a: %{color: :green}, b: %{label: "Beta!"}, c: %{}},
@@ -89,40 +89,29 @@ defmodule DotTest do
   end
 
   @tag :pending
-  test "keywords stuck to graph without space" do
+  test "invalid graph attribute syntax: wrong argument type" do
     assert_raise ArgumentError, fn ->
       exprt(
         Dot.graph do
-          graph[[title: "Bad"]]
+          graph("Bad")
         end
       )
     end
   end
 
   @tag :pending
-  test "keywords stuck to node without space" do
+  test "invalid graph attribute syntax: not a call" do
     assert_raise ArgumentError, fn ->
       exprt(
         Dot.graph do
-          a[[label: "Alpha!"]]
+          graph[title: "Bad"]
         end
       )
     end
   end
 
   @tag :pending
-  test "keywords stuck to edge without space" do
-    assert_raise ArgumentError, fn ->
-      exprt(
-        Dot.graph do
-          a -- b[[label: "Bad"]]
-        end
-      )
-    end
-  end
-
-  @tag :pending
-  test "invalid statement: int" do
+  test "invalid node syntax: numerical node name" do
     assert_raise ArgumentError, fn ->
       exprt(
         Dot.graph do
@@ -134,7 +123,92 @@ defmodule DotTest do
   end
 
   @tag :pending
-  test "invalid statement: list" do
+  test "invalid node syntax: wrong argument type" do
+    assert_raise ArgumentError, fn ->
+      exprt(
+        Dot.graph do
+          a("Alpha!")
+        end
+      )
+    end
+  end
+
+  @tag :pending
+  test "invalid node syntax: not a call" do
+    assert_raise ArgumentError, fn ->
+      exprt(
+        Dot.graph do
+          a[label: "Alpha!"]
+        end
+      )
+    end
+  end
+
+  @tag :pending
+  test "invalid node syntax: two attribute lists" do
+    assert_raise ArgumentError, fn ->
+      exprt(
+        Dot.graph do
+          a([color: green], label: "Alpha!")
+        end
+      )
+    end
+  end
+
+  @tag :pending
+  test "invalid node syntax: non-keyword attribute list" do
+    assert_raise ArgumentError, fn ->
+      exprt(
+        Dot.graph do
+          a(["Alpha!", color: green])
+        end
+      )
+    end
+  end
+
+  @tag :pending
+  test "invalid edge syntax: wrong argument type" do
+    assert_raise ArgumentError, fn ->
+      exprt(
+        Dot.graph do
+          a -- b("Bad")
+        end
+      )
+    end
+  end
+
+  @tag :pending
+  test "invalid edge syntax: not a call" do
+    assert_raise ArgumentError, fn ->
+      exprt(
+        Dot.graph do
+          a -- b[label: "Bad"]
+        end
+      )
+    end
+  end
+
+  @tag :pending
+  test "invalid edge syntax: numerical node names" do
+    assert_raise ArgumentError, fn ->
+      exprt(
+        Dot.graph do
+          1 -- b
+        end
+      )
+    end
+
+    assert_raise ArgumentError, fn ->
+      exprt(
+        Dot.graph do
+          a -- 2
+        end
+      )
+    end
+  end
+
+  @tag :pending
+  test "invalid statement: keyword list" do
     assert_raise ArgumentError, fn ->
       exprt(
         Dot.graph do
@@ -160,48 +234,7 @@ defmodule DotTest do
     assert_raise ArgumentError, fn ->
       exprt(
         Dot.graph do
-          Enum.map()
-        end
-      )
-    end
-  end
-
-  @tag :pending
-  test "two attribute lists" do
-    assert_raise ArgumentError, fn ->
-      exprt(
-        Dot.graph do
-          a([color: green][[label: "Alpha!"]])
-        end
-      )
-    end
-  end
-
-  @tag :pending
-  test "non-keyword attribute list" do
-    assert_raise ArgumentError, fn ->
-      exprt(
-        Dot.graph do
-          a(["Alpha!", color: green])
-        end
-      )
-    end
-  end
-
-  @tag :pending
-  test "int edge" do
-    assert_raise ArgumentError, fn ->
-      exprt(
-        Dot.graph do
-          1 -- b
-        end
-      )
-    end
-
-    assert_raise ArgumentError, fn ->
-      exprt(
-        Dot.graph do
-          a -- 2
+          graph()
         end
       )
     end
