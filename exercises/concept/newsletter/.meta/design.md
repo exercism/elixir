@@ -1,5 +1,7 @@
 # Design
 
+Note that the `empty.txt` file must contain at least one whitespace character. If it's completely empty, the Exercism CLI won't download it.
+
 ## Learning objectives
 
 - Know about the `File` module
