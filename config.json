@@ -2628,6 +2628,18 @@
         "difficulty": 6
       },
       {
+        "slug": "camicia",
+        "name": "Camicia",
+        "uuid": "61976949-e1a6-4494-9ca0-d6d771e2e8e8",
+        "practices": [
+
+        ],
+        "prerequisites": [
+          
+        ],
+        "difficulty": 6
+      },
+      {
         "slug": "alphametics",
         "name": "Alphametics",
         "uuid": "7ed99829-acd8-4724-b92f-85146f1709f9",
