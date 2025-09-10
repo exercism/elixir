@@ -66,7 +66,7 @@ defmodule CamiciaTest do
   end
 
   @tag :pending
-  tes "simple loop with decks of 3 cards" do
+  test "simple loop with decks of 3 cards" do
     playerA = ["J", "2", "3"]
     playerB = ["4", "J", "5"]
     expected = {:loop, 8, 3}
