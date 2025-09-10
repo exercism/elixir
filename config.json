@@ -2372,6 +2372,14 @@
         "difficulty": 6
       },
       {
+        "slug": "camicia",
+        "name": "Camicia",
+        "uuid": "61976949-e1a6-4494-9ca0-d6d771e2e8e8",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
         "slug": "game-of-life",
         "name": "Game of Life",
         "uuid": "32d53ab8-abea-4483-a8cb-ee3b908a9dd7",
@@ -2624,18 +2632,6 @@
           "integers",
           "bit-manipulation",
           "bitstrings"
-        ],
-        "difficulty": 6
-      },
-      {
-        "slug": "camicia",
-        "name": "Camicia",
-        "uuid": "61976949-e1a6-4494-9ca0-d6d771e2e8e8",
-        "practices": [
-
-        ],
-        "prerequisites": [
-          
         ],
         "difficulty": 6
       },
