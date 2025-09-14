@@ -16,112 +16,122 @@ defmodule Camicia do
       iex> Camicia.simulate(["J", "2", "3"], ["4", "J", "5"])
       {:loop, 8, 3}
   """
-  @counts %{"J" => 1, "Q" => 2, "K" => 3, "A" => 4}
+  @penalties %{"J" => 1, "Q" => 2, "K" => 3, "A" => 4}
+  @payment_cards Map.keys(@penalties)
 
-  @spec simulate(list, list) :: {:finished | :loop, non_neg_integer(), non_neg_integer()}
+  @spec simulate(list(String.t()), list(String.t())) ::
+          {:finished | :loop, non_neg_integer(), non_neg_integer()}
   def simulate(playerA, playerB) do
-    do_simulate(format_deck(playerA), format_deck(playerB), MapSet.new(), 0, 0, :playerA)
+    initial_state = %{seen: MapSet.new(), cards: 0, tricks: 0, current_player: :playerA}
+    do_simulate(format_deck(playerA), format_deck(playerB), initial_state)
   end
 
-  defp do_simulate([], _playerB, _seen, cards, tricks, _current_player),
+  defp do_simulate([], _playerB, %{cards: cards, tricks: tricks}),
     do: {:finished, cards, tricks}
 
-  defp do_simulate(_playerA, [], _seen, cards, tricks, _current_player),
+  defp do_simulate(_playerA, [], %{cards: cards, tricks: tricks}),
     do: {:finished, cards, tricks}
 
-  defp do_simulate(playerA, playerB, seen, cards, tricks, current_player) do
-    state = {playerA, playerB}
+  defp do_simulate(playerA, playerB, %{
+         seen: seen,
+         cards: cards,
+         tricks: tricks,
+         current_player: current_player
+       }) do
+    hands = {playerA, playerB}
 
-    if MapSet.member?(seen, state) do
+    if MapSet.member?(seen, hands) do
       {:loop, cards, tricks}
     else
-      new_seen = MapSet.put(seen, state)
+      new_seen = MapSet.put(seen, hands)
+      state = %{cards: cards, tricks: tricks, current_player: current_player}
 
-      {winner, loser, new_cards, new_tricks, next_player} =
+      {winner, loser, %{current_player: next_player} = new_state} =
         case current_player do
-          :playerA -> round(playerA, playerB, cards, tricks, current_player)
-          :playerB -> round(playerB, playerA, cards, tricks, current_player)
+          :playerA -> round(playerA, playerB, state)
+          :playerB -> round(playerB, playerA, state)
         end
 
       case next_player do
-        :playerA -> do_simulate(winner, loser, new_seen, new_cards, new_tricks, next_player)
-        :playerB -> do_simulate(loser, winner, new_seen, new_cards, new_tricks, next_player)
+        :playerA -> do_simulate(winner, loser, new_state |> Map.put(:seen, new_seen))
+        :playerB -> do_simulate(loser, winner, new_state |> Map.put(:seen, new_seen))
       end
     end
   end
 
-  defp round(player, opponent, cards, tricks, current_player),
-    do: do_round(player, opponent, cards, tricks, :number, [], current_player)
+  defp round(player, opponent, state),
+    do: do_round(player, opponent, state, %{type: :number, central_pile: []})
 
-  defp do_round([], opponent, cards, tricks, _type, central_pile, current_player) do
-    {opponent ++ Enum.reverse(central_pile), [], cards, tricks + 1, change_player(current_player)}
-  end
-
-  defp do_round([card | rest], opponent, cards, tricks, :number, central_pile, current_player) do
-    case card do
-      "-" ->
-        do_round(
-          opponent,
-          rest,
-          cards + 1,
-          tricks,
-          :number,
-          [card | central_pile],
-          change_player(current_player)
-        )
-
-      payment_card when payment_card in ["J", "Q", "K", "A"] ->
-        count = Map.get(@counts, payment_card)
-
-        do_round(
-          opponent,
-          rest,
-          cards + 1,
-          tricks,
-          {:payment, count},
-          [card | central_pile],
-          change_player(current_player)
-        )
-    end
-  end
-
-  defp do_round(player, opponent, cards, tricks, {:payment, 0}, central_pile, current_player) do
-    {opponent ++ Enum.reverse(central_pile), player, cards, tricks + 1,
-     change_player(current_player)}
+  defp do_round([], opponent, %{cards: cards, tricks: tricks, current_player: current_player}, %{
+         type: _,
+         central_pile: central_pile
+       }) do
+    {opponent ++ Enum.reverse(central_pile), [],
+     %{cards: cards, tricks: tricks + 1, current_player: change_player(current_player)}}
   end
 
   defp do_round(
          [card | rest],
          opponent,
-         cards,
-         tricks,
-         {:payment, count},
-         central_pile,
-         current_player
+         %{cards: cards, tricks: tricks, current_player: current_player},
+         %{type: :number, central_pile: central_pile}
+       ) do
+    new_state = %{cards: cards + 1, tricks: tricks, current_player: change_player(current_player)}
+
+    case card do
+      "-" ->
+        do_round(
+          opponent,
+          rest,
+          new_state,
+          %{type: :number, central_pile: [card | central_pile]}
+        )
+
+      payment_card when payment_card in @payment_cards ->
+        penalty = Map.get(@penalties, payment_card)
+
+        do_round(
+          opponent,
+          rest,
+          new_state,
+          %{type: {:payment, penalty}, central_pile: [card | central_pile]}
+        )
+    end
+  end
+
+  defp do_round(
+         player,
+         opponent,
+         %{cards: cards, tricks: tricks, current_player: current_player},
+         %{type: {:payment, 0}, central_pile: central_pile}
+       ) do
+    {opponent ++ Enum.reverse(central_pile), player,
+     %{cards: cards, tricks: tricks + 1, current_player: change_player(current_player)}}
+  end
+
+  defp do_round(
+         [card | rest],
+         opponent,
+         %{cards: cards, tricks: tricks, current_player: current_player},
+         %{type: {:payment, penalty}, central_pile: central_pile}
        ) do
     case card do
       "-" ->
         do_round(
           rest,
           opponent,
-          cards + 1,
-          tricks,
-          {:payment, count - 1},
-          [card | central_pile],
-          current_player
+          %{cards: cards + 1, tricks: tricks, current_player: current_player},
+          %{type: {:payment, penalty - 1}, central_pile: [card | central_pile]}
         )
 
-      payment_card when payment_card in ["J", "Q", "K", "A"] ->
-        count = Map.get(@counts, payment_card)
+      payment_card when payment_card in @payment_cards ->
+        penalty = Map.get(@penalties, payment_card)
 
         do_round(
           opponent,
           rest,
-          cards + 1,
-          tricks,
-          {:payment, count},
-          [card | central_pile],
-          change_player(current_player)
+          %{cards: cards + 1, tricks: tricks, current_player: change_player(current_player)},
+          %{type: {:payment, penalty}, central_pile: [card | central_pile]}
         )
     end
   end
@@ -129,7 +139,7 @@ defmodule Camicia do
   defp format_deck(deck) do
     Enum.map(deck, fn card ->
       cond do
-        card in ["J", "Q", "K", "A"] -> card
+        card in @payment_cards -> card
         true -> "-"
       end
     end)
