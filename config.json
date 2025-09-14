@@ -2382,11 +2382,15 @@
         ],
         "prerequisites": [
           "strings",
+          "tuples",
           "mapsets",
           "maps",
+          "structs",
           "lists",
           "enum",
           "case",
+          "if",
+          "cond",
           "pattern-matching",
           "recursion",
           "tail-call-recursion"
