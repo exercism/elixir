@@ -21,24 +21,24 @@ defmodule Camicia do
 
   @spec simulate(list(String.t()), list(String.t())) ::
           {:finished | :loop, non_neg_integer(), non_neg_integer()}
-  def simulate(playerA, playerB) do
-    initial_state = %{seen: MapSet.new(), cards: 0, tricks: 0, current_player: :playerA}
-    do_simulate(format_deck(playerA), format_deck(playerB), initial_state)
+  def simulate(player_a, player_b) do
+    initial_state = %{seen: MapSet.new(), cards: 0, tricks: 0, current_player: :player_a}
+    do_simulate(format_deck(player_a), format_deck(player_b), initial_state)
   end
 
-  defp do_simulate([], _playerB, %{cards: cards, tricks: tricks}),
+  defp do_simulate([], _player_b, %{cards: cards, tricks: tricks}),
     do: {:finished, cards, tricks}
 
-  defp do_simulate(_playerA, [], %{cards: cards, tricks: tricks}),
+  defp do_simulate(_player_a, [], %{cards: cards, tricks: tricks}),
     do: {:finished, cards, tricks}
 
-  defp do_simulate(playerA, playerB, %{
+  defp do_simulate(player_a, player_b, %{
          seen: seen,
          cards: cards,
          tricks: tricks,
          current_player: current_player
        }) do
-    hands = {playerA, playerB}
+    hands = {player_a, player_b}
 
     if MapSet.member?(seen, hands) do
       {:loop, cards, tricks}
@@ -48,13 +48,13 @@ defmodule Camicia do
 
       {winner, loser, %{current_player: next_player} = new_state} =
         case current_player do
-          :playerA -> round(playerA, playerB, state)
-          :playerB -> round(playerB, playerA, state)
+          :player_a -> round(player_a, player_b, state)
+          :player_b -> round(player_b, player_a, state)
         end
 
       case next_player do
-        :playerA -> do_simulate(winner, loser, new_state |> Map.put(:seen, new_seen))
-        :playerB -> do_simulate(loser, winner, new_state |> Map.put(:seen, new_seen))
+        :player_a -> do_simulate(winner, loser, new_state |> Map.put(:seen, new_seen))
+        :player_b -> do_simulate(loser, winner, new_state |> Map.put(:seen, new_seen))
       end
     end
   end
@@ -145,6 +145,6 @@ defmodule Camicia do
     end)
   end
 
-  defp change_player(:playerA), do: :playerB
-  defp change_player(:playerB), do: :playerA
+  defp change_player(:player_a), do: :player_b
+  defp change_player(:player_b), do: :player_a
 end

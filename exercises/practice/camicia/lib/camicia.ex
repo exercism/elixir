@@ -19,6 +19,6 @@ defmodule Camicia do
 
   @spec simulate(list(String.t()), list(String.t())) ::
           {:finished | :loop, non_neg_integer(), non_neg_integer()}
-  def simulate(playerA, playerB) do
+  def simulate(player_a, player_b) do
   end
 end
