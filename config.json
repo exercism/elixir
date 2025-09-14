@@ -2375,11 +2375,7 @@
         "slug": "camicia",
         "name": "Camicia",
         "uuid": "61976949-e1a6-4494-9ca0-d6d771e2e8e8",
-        "practices": [
-          "lists",
-          "mapsets",
-          "tail-call-recursion"
-        ],
+        "practices": [],
         "prerequisites": [
           "strings",
           "tuples",
