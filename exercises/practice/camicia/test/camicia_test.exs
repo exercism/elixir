@@ -42,7 +42,7 @@ defmodule CamiciaTest do
   end
 
   @tag :pending
-  test "jack beats king" do
+  test "the queen seduces the king" do
     playerA = ["2", "A", "7", "8", "Q"]
     playerB = ["3", "4", "5", "6", "K"]
     expected = {:finished, 10, 1}
