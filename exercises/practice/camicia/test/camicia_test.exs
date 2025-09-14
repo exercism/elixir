@@ -855,7 +855,7 @@ defmodule CamiciaTest do
   end
 
   @tag :pending
-  test "Kebler 1999" do
+  test "Kleber 1999" do
     playerA = [
       "4",
       "8",
