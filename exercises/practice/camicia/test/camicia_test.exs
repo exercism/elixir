@@ -3,79 +3,79 @@ defmodule CamiciaTest do
 
   # @tag :pending
   test "two cards, one trick" do
-    playerA = ["2"]
-    playerB = ["3"]
+    player_a = ["2"]
+    player_b = ["3"]
     expected = {:finished, 2, 1}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "three cards, one trick" do
-    playerA = ["2", "4"]
-    playerB = ["3"]
+    player_a = ["2", "4"]
+    player_b = ["3"]
     expected = {:finished, 3, 1}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "four cards, one trick" do
-    playerA = ["2", "4"]
-    playerB = ["3", "5", "6"]
+    player_a = ["2", "4"]
+    player_b = ["3", "5", "6"]
     expected = {:finished, 4, 1}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "the ace reigns supreme" do
-    playerA = ["2", "A"]
-    playerB = ["3", "4", "5", "6", "7"]
+    player_a = ["2", "A"]
+    player_b = ["3", "4", "5", "6", "7"]
     expected = {:finished, 7, 1}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "the king beats ace" do
-    playerA = ["2", "A"]
-    playerB = ["3", "4", "5", "6", "K"]
+    player_a = ["2", "A"]
+    player_b = ["3", "4", "5", "6", "K"]
     expected = {:finished, 7, 1}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "the queen seduces the king" do
-    playerA = ["2", "A", "7", "8", "Q"]
-    playerB = ["3", "4", "5", "6", "K"]
+    player_a = ["2", "A", "7", "8", "Q"]
+    player_b = ["3", "4", "5", "6", "K"]
     expected = {:finished, 10, 1}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "the jack betrays the queen" do
-    playerA = ["2", "A", "7", "8", "Q"]
-    playerB = ["3", "4", "5", "6", "K", "9", "J"]
+    player_a = ["2", "A", "7", "8", "Q"]
+    player_b = ["3", "4", "5", "6", "K", "9", "J"]
     expected = {:finished, 12, 1}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "the 10 just wants to put on a show" do
-    playerA = ["2", "A", "7", "8", "Q", "10"]
-    playerB = ["3", "4", "5", "6", "K", "9", "J"]
+    player_a = ["2", "A", "7", "8", "Q", "10"]
+    player_b = ["3", "4", "5", "6", "K", "9", "J"]
     expected = {:finished, 13, 1}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "simple loop with decks of 3 cards" do
-    playerA = ["J", "2", "3"]
-    playerB = ["4", "J", "5"]
+    player_a = ["J", "2", "3"]
+    player_b = ["4", "J", "5"]
     expected = {:loop, 8, 3}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "the story is starting to get a bit complicated" do
-    playerA = [
+    player_a = [
       "2",
       "6",
       "6",
@@ -260,7 +260,7 @@ defmodule CamiciaTest do
       "2"
     ]
 
-    playerB = [
+    player_b = [
       "7",
       "2",
       "10",
@@ -443,36 +443,36 @@ defmodule CamiciaTest do
     ]
 
     expected = {:finished, 361, 1}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "two tricks" do
-    playerA = ["J"]
-    playerB = ["3", "J"]
+    player_a = ["J"]
+    player_b = ["3", "J"]
     expected = {:finished, 5, 2}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "more tricks" do
-    playerA = ["J", "2", "4"]
-    playerB = ["3", "J", "A"]
+    player_a = ["J", "2", "4"]
+    player_b = ["3", "J", "A"]
     expected = {:finished, 12, 4}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "simple loop with decks of 4 cards" do
-    playerA = ["2", "3", "J", "6"]
-    playerB = ["K", "5", "J", "7"]
+    player_a = ["2", "3", "J", "6"]
+    player_b = ["K", "5", "J", "7"]
     expected = {:loop, 16, 4}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "easy card combination" do
-    playerA = [
+    player_a = [
       "4",
       "8",
       "7",
@@ -501,7 +501,7 @@ defmodule CamiciaTest do
       "9"
     ]
 
-    playerB = [
+    player_b = [
       "6",
       "9",
       "4",
@@ -531,12 +531,12 @@ defmodule CamiciaTest do
     ]
 
     expected = {:finished, 40, 4}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "easy card combination, inverted decks" do
-    playerA = [
+    player_a = [
       "3",
       "3",
       "5",
@@ -565,7 +565,7 @@ defmodule CamiciaTest do
       "J"
     ]
 
-    playerB = [
+    player_b = [
       "5",
       "10",
       "8",
@@ -595,12 +595,12 @@ defmodule CamiciaTest do
     ]
 
     expected = {:finished, 40, 4}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "mirrored decks" do
-    playerA = [
+    player_a = [
       "2",
       "A",
       "3",
@@ -629,7 +629,7 @@ defmodule CamiciaTest do
       "9"
     ]
 
-    playerB = [
+    player_b = [
       "6",
       "A",
       "4",
@@ -659,12 +659,12 @@ defmodule CamiciaTest do
     ]
 
     expected = {:finished, 59, 4}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "opposite decks" do
-    playerA = [
+    player_a = [
       "4",
       "A",
       "9",
@@ -693,7 +693,7 @@ defmodule CamiciaTest do
       "3"
     ]
 
-    playerB = [
+    player_b = [
       "10",
       "7",
       "3",
@@ -723,12 +723,12 @@ defmodule CamiciaTest do
     ]
 
     expected = {:finished, 151, 21}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "random decks #1" do
-    playerA = [
+    player_a = [
       "K",
       "10",
       "9",
@@ -757,7 +757,7 @@ defmodule CamiciaTest do
       "9"
     ]
 
-    playerB = [
+    player_b = [
       "6",
       "3",
       "K",
@@ -787,12 +787,12 @@ defmodule CamiciaTest do
     ]
 
     expected = {:finished, 542, 76}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "random decks #2" do
-    playerA = [
+    player_a = [
       "8",
       "A",
       "4",
@@ -821,7 +821,7 @@ defmodule CamiciaTest do
       "9"
     ]
 
-    playerB = [
+    player_b = [
       "10",
       "5",
       "2",
@@ -851,12 +851,12 @@ defmodule CamiciaTest do
     ]
 
     expected = {:finished, 327, 42}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "Kleber 1999" do
-    playerA = [
+    player_a = [
       "4",
       "8",
       "9",
@@ -885,7 +885,7 @@ defmodule CamiciaTest do
       "7"
     ]
 
-    playerB = [
+    player_b = [
       "10",
       "J",
       "3",
@@ -915,12 +915,12 @@ defmodule CamiciaTest do
     ]
 
     expected = {:finished, 5790, 805}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "Collins 2006" do
-    playerA = [
+    player_a = [
       "A",
       "8",
       "Q",
@@ -949,7 +949,7 @@ defmodule CamiciaTest do
       "10"
     ]
 
-    playerB = [
+    player_b = [
       "4",
       "J",
       "A",
@@ -979,12 +979,12 @@ defmodule CamiciaTest do
     ]
 
     expected = {:finished, 6913, 960}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "Mann and Wu 2007" do
-    playerA = [
+    player_a = [
       "K",
       "2",
       "K",
@@ -1013,7 +1013,7 @@ defmodule CamiciaTest do
       "6"
     ]
 
-    playerB = [
+    player_b = [
       "4",
       "5",
       "2",
@@ -1043,12 +1043,12 @@ defmodule CamiciaTest do
     ]
 
     expected = {:finished, 7157, 1007}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "Nessler 2012" do
-    playerA = [
+    player_a = [
       "10",
       "3",
       "6",
@@ -1077,7 +1077,7 @@ defmodule CamiciaTest do
       "4"
     ]
 
-    playerB = [
+    player_b = [
       "10",
       "Q",
       "4",
@@ -1107,12 +1107,12 @@ defmodule CamiciaTest do
     ]
 
     expected = {:finished, 7207, 1015}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "Anderson 2013" do
-    playerA = [
+    player_a = [
       "6",
       "7",
       "A",
@@ -1141,7 +1141,7 @@ defmodule CamiciaTest do
       "3"
     ]
 
-    playerB = [
+    player_b = [
       "4",
       "J",
       "6",
@@ -1171,12 +1171,12 @@ defmodule CamiciaTest do
     ]
 
     expected = {:finished, 7225, 1016}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "Rucklidge 2014" do
-    playerA = [
+    player_a = [
       "8",
       "J",
       "2",
@@ -1205,7 +1205,7 @@ defmodule CamiciaTest do
       "3"
     ]
 
-    playerB = [
+    player_b = [
       "K",
       "7",
       "10",
@@ -1235,12 +1235,12 @@ defmodule CamiciaTest do
     ]
 
     expected = {:finished, 7959, 1122}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "Nessler 2021" do
-    playerA = [
+    player_a = [
       "7",
       "2",
       "3",
@@ -1269,7 +1269,7 @@ defmodule CamiciaTest do
       "J"
     ]
 
-    playerB = [
+    player_b = [
       "3",
       "10",
       "8",
@@ -1299,12 +1299,12 @@ defmodule CamiciaTest do
     ]
 
     expected = {:finished, 7972, 1106}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "Nessler 2022" do
-    playerA = [
+    player_a = [
       "2",
       "10",
       "10",
@@ -1333,7 +1333,7 @@ defmodule CamiciaTest do
       "K"
     ]
 
-    playerB = [
+    player_b = [
       "10",
       "7",
       "6",
@@ -1363,12 +1363,12 @@ defmodule CamiciaTest do
     ]
 
     expected = {:finished, 8344, 1164}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 
   @tag :pending
   test "Casella 2024, first infinite game found" do
-    playerA = [
+    player_a = [
       "2",
       "8",
       "4",
@@ -1397,7 +1397,7 @@ defmodule CamiciaTest do
       "5"
     ]
 
-    playerB = [
+    player_b = [
       "7",
       "7",
       "8",
@@ -1427,6 +1427,6 @@ defmodule CamiciaTest do
     ]
 
     expected = {:loop, 474, 66}
-    assert Camicia.simulate(playerA, playerB) == expected
+    assert Camicia.simulate(player_a, player_b) == expected
   end
 end
