@@ -7,8 +7,28 @@ defmodule WordyTest do
   end
 
   @tag :pending
+  test "just a zero" do
+    assert Wordy.answer("What is 0?") == 0
+  end
+
+  @tag :pending
+  test "just a negative number" do
+    assert Wordy.answer("What is -123?") == -123
+  end
+
+  @tag :pending
   test "addition" do
     assert Wordy.answer("What is 1 plus 1?") == 2
+  end
+
+  @tag :pending
+  test "addition with a left hand zero" do
+    assert Wordy.answer("What is 0 plus 2?") == 2
+  end
+
+  @tag :pending
+  test "addition with a right hand zero" do
+    assert Wordy.answer("What is 3 plus 0?") == 3
   end
 
   @tag :pending
