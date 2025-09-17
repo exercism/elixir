@@ -22,4 +22,4 @@ guess()
 ```
 
 [default-arguments]: https://hexdocs.pm/elixir/modules-and-functions.html#default-arguments
-[function-header]: https://webcf.waybackmachine.org/web/20250125234916/https://inquisitivedeveloper.com/lwm-elixir-25/
+[function-header]: https://web.archive.org/web/20250125234916/https://inquisitivedeveloper.com/lwm-elixir-25/
