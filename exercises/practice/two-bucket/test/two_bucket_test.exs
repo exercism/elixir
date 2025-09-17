@@ -74,6 +74,30 @@ defmodule TwoBucketTest do
   end
 
   @tag :pending
+  test "Measure using bucket one much bigger than bucket two" do
+    bucket_one = 5
+    bucket_two = 1
+    goal = 2
+    start_bucket = :one
+    output = TwoBucket.measure(bucket_one, bucket_two, goal, start_bucket)
+    expected = {:ok, %TwoBucket{bucket_one: goal, bucket_two: 1, moves: 6}}
+
+    assert output == expected
+  end
+
+  @tag :pending
+  test "Measure using bucket one much smaller than bucket two" do
+    bucket_one = 3
+    bucket_two = 15
+    goal = 9
+    start_bucket = :one
+    output = TwoBucket.measure(bucket_one, bucket_two, goal, start_bucket)
+    expected = {:ok, %TwoBucket{bucket_one: 0, bucket_two: goal, moves: 6}}
+
+    assert output == expected
+  end
+
+  @tag :pending
   test "Not possible to reach the goal" do
     bucket_one = 6
     bucket_two = 15
