@@ -21,6 +21,15 @@ defmodule VariableLengthQuantityTest do
     end
 
     @tag :pending
+    test "asymmetric single byte" do
+      integers = [0x53]
+      output = VariableLengthQuantity.encode(integers)
+      expected = <<0x53>>
+
+      assert output == expected
+    end
+
+    @tag :pending
     test "largest single byte" do
       integers = [0x7F]
       output = VariableLengthQuantity.encode(integers)
@@ -43,6 +52,15 @@ defmodule VariableLengthQuantityTest do
       integers = [0x2000]
       output = VariableLengthQuantity.encode(integers)
       expected = <<0xC0, 0x0>>
+
+      assert output == expected
+    end
+
+    @tag :pending
+    test "asymmetric double byte" do
+      integers = [0xAD]
+      output = VariableLengthQuantity.encode(integers)
+      expected = <<0x81, 0x2D>>
 
       assert output == expected
     end
@@ -75,6 +93,15 @@ defmodule VariableLengthQuantityTest do
     end
 
     @tag :pending
+    test "asymmetric triple byte" do
+      integers = [0x1D59C]
+      output = VariableLengthQuantity.encode(integers)
+      expected = <<0x87, 0xAB, 0x1C>>
+
+      assert output == expected
+    end
+
+    @tag :pending
     test "largest triple byte" do
       integers = [0x1FFFFF]
       output = VariableLengthQuantity.encode(integers)
@@ -102,6 +129,15 @@ defmodule VariableLengthQuantityTest do
     end
 
     @tag :pending
+    test "asymmetric quadruple byte" do
+      integers = [0x357704]
+      output = VariableLengthQuantity.encode(integers)
+      expected = <<0x81, 0xD5, 0xEE, 0x4>>
+
+      assert output == expected
+    end
+
+    @tag :pending
     test "largest quadruple byte" do
       integers = [0xFFFFFFF]
       output = VariableLengthQuantity.encode(integers)
@@ -124,6 +160,15 @@ defmodule VariableLengthQuantityTest do
       integers = [0xFF000000]
       output = VariableLengthQuantity.encode(integers)
       expected = <<0x8F, 0xF8, 0x80, 0x80, 0x0>>
+
+      assert output == expected
+    end
+
+    @tag :pending
+    test "asymmetric quintuple byte" do
+      integers = [0x86656105]
+      output = VariableLengthQuantity.encode(integers)
+      expected = <<0x88, 0xB3, 0x95, 0xC2, 0x5>>
 
       assert output == expected
     end
