@@ -26,7 +26,7 @@ defmodule ExercismTestRunner.Mixfile do
     [
       {:dialyxir, "~> 1.3.0", runtime: false},
       {:markdown_code_block_formatter, "~> 0.1.0", runtime: false},
-      {:doctest_formatter, "~> 0.2.0", runtime: false}
+      {:doctest_formatter, "~> 0.4.0", runtime: false}
     ]
   end
 end
