@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-24.04
     strategy:
       matrix:
-        elixir: [1.19.0]
+        elixir: [1.19.1]
         otp: [28.1]
 
     steps:
@@ -84,7 +84,7 @@ jobs:
             otp: '27.0'
           - elixir: '1.18.1'
             otp: '27.2'
-          - elixir: '1.19.0'
+          - elixir: '1.19.1'
             otp: '28.1'
 
     steps:

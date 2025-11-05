@@ -13,7 +13,8 @@ defmodule ExercismTestRunner.Mixfile do
         paths: ["_build"],
         plt_core_path: "priv/plts",
         plt_file: {:no_warn, "priv/plts/eventstore.plt"},
-        ignore_warnings: ".dialyzer_ignore.exs"
+        ignore_warnings: ".dialyzer_ignore.exs",
+        flags: [:no_opaque]
       ]
     ]
   end
