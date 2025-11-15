@@ -1,4 +1,5 @@
 defmodule Clock do
+  @type t() :: %__MODULE__{hour: integer, minute: integer}
   defstruct hour: 0, minute: 0
 
   @doc """
@@ -7,7 +8,7 @@ defmodule Clock do
       iex> Clock.new(8, 9) |> to_string
       "08:09"
   """
-  @spec new(integer, integer) :: Clock
+  @spec new(integer, integer) :: t()
   def new(hour, minute) do
   end
 
@@ -17,7 +18,7 @@ defmodule Clock do
       iex> Clock.new(10, 0) |> Clock.add(3) |> to_string
       "10:03"
   """
-  @spec add(Clock, integer) :: Clock
+  @spec add(t(), integer) :: t()
   def add(%Clock{hour: hour, minute: minute}, add_minute) do
   end
 end
