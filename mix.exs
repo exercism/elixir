@@ -13,7 +13,8 @@ defmodule ExercismTestRunner.Mixfile do
         paths: ["_build"],
         plt_core_path: "priv/plts",
         plt_file: {:no_warn, "priv/plts/eventstore.plt"},
-        ignore_warnings: ".dialyzer_ignore.exs"
+        ignore_warnings: ".dialyzer_ignore.exs",
+        flags: [:no_opaque]
       ]
     ]
   end
@@ -24,9 +25,9 @@ defmodule ExercismTestRunner.Mixfile do
 
   defp deps do
     [
-      {:dialyxir, "~> 1.3.0", runtime: false},
+      {:dialyxir, "~> 1.4.7", runtime: false},
       {:markdown_code_block_formatter, "~> 0.1.0", runtime: false},
-      {:doctest_formatter, "~> 0.2.0", runtime: false}
+      {:doctest_formatter, "~> 0.4.0", runtime: false}
     ]
   end
 end
