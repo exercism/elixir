@@ -68,7 +68,7 @@ MapSet.symmetric_difference(b, a)
 # => MapSet.new([2, 3, 4, 5, 6, 7, 8, 9, 100])
 ```
 
-You can filter and partition sets with `MapSet.filter/2`, `MapSet.reject/2` and `MapSet.split_with/2` (from Elixir 1.15).
+You can filter and partition sets with `MapSet.filter/2`, `MapSet.reject/2` and `MapSet.split_with/2`.
 
 ```elixir
 a = MapSet.new([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
