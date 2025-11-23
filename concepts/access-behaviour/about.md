@@ -6,7 +6,7 @@ The _Access Behaviour_ provides a common interface for retrieving key-based data
 
 The [`Access`][access] module defines the callbacks required for the interface. The [`Map`][map] and [`Keyword`][keyword] modules then implement the required callbacks [`fetch/2`][map-fetch], [`get_and_update/3`][map-get-and-update], and [`pop/2`][map-pop]
 
-To use the behaviour, you may follow a bound variable with _square brackets_ and then use the key to retrieve the value associated with that key. Maps support atom and string keys, while keyword lists only atom keys.
+To use the behaviour, you may follow a bound variable with _square brackets_ and then use the key to retrieve the value associated with that key. Maps support keys of any type, while keyword lists only atom keys.
 
 ```elixir
 # Atom as key
