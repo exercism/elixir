@@ -37,6 +37,16 @@ defmodule IsbnVerifierTest do
   end
 
   @tag :pending
+  test "only one check digit is allowed" do
+    refute IsbnVerifier.isbn?("3-598-21508-96")
+  end
+
+  @tag :pending
+  test "X is not substituted by the value 10" do
+    refute IsbnVerifier.isbn?("3-598-2X507-5")
+  end
+
+  @tag :pending
   test "valid isbn without separating dashes" do
     assert IsbnVerifier.isbn?("3598215088")
   end

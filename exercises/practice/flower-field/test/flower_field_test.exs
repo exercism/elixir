@@ -196,4 +196,12 @@ defmodule FlowerFieldTest do
 
     assert FlowerField.annotate(input) == expected
   end
+
+  @tag :pending
+  test "multiple adjacent flowers" do
+    input = [" ** "]
+    expected = ["1**1"]
+
+    assert FlowerField.annotate(input) == expected
+  end
 end

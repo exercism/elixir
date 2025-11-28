@@ -48,4 +48,31 @@ defmodule SatelliteTest do
     error = {:error, "traversals must contain unique items"}
     assert Satellite.build_tree(preorder, inorder) == error
   end
+
+  @tag :pending
+  test "A degenerate binary tree" do
+    preorder = [:a, :b, :c, :d]
+    inorder = [:d, :c, :b, :a]
+    tree = {{{{{}, :d, {}}, :c, {}}, :b, {}}, :a, {}}
+    assert Satellite.build_tree(preorder, inorder) == {:ok, tree}
+  end
+
+  @tag :pending
+  test "Another degenerate binary tree" do
+    preorder = [:a, :b, :c, :d]
+    inorder = [:a, :b, :c, :d]
+    tree = {{}, :a, {{}, :b, {{}, :c, {{}, :d, {}}}}}
+    assert Satellite.build_tree(preorder, inorder) == {:ok, tree}
+  end
+
+  @tag :pending
+  test "Tree with many more items" do
+    preorder = [:a, :b, :d, :g, :h, :c, :e, :f, :i]
+    inorder = [:g, :d, :h, :b, :a, :e, :c, :i, :f]
+
+    tree =
+      {{{{{}, :g, {}}, :d, {{}, :h, {}}}, :b, {}}, :a, {{{}, :e, {}}, :c, {{{}, :i, {}}, :f, {}}}}
+
+    assert Satellite.build_tree(preorder, inorder) == {:ok, tree}
+  end
 end
