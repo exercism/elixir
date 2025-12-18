@@ -1,0 +1,12 @@
+def convert(number) do
+  pling = if rem(number, 3) == 0, do: "Pling", else: ""
+  plang = if rem(number, 5) == 0, do: "Plang", else: ""
+  plong = if rem(number, 7) == 0, do: "Plong", else: ""
+  result = pling <> plang <> plong
+
+  if result == "" do
+    Integer.to_string(number)
+  else
+    result
+  end
+end
