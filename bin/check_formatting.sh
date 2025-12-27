@@ -31,7 +31,10 @@ done
 echo "Checking for trailing whitespace"
 # git grep returns a 0 status if there is a match
 # so we negate the result for consistency
-! git grep --line-number ' $'
+# binaries and files directly copied from exercism/problem-specifications are ignored
+! git grep -I --line-number ' $' -- . \
+  ':(exclude,glob)exercises/practice/**/.docs/instructions.md' \
+  ':(exclude,glob)exercises/practice/**/.docs/introduction.md'
 GREP_EXIT_CODE="$?"
 
 if [ "$FORMAT_EXIT_CODE" -ne 0 -o "$GREP_EXIT_CODE" -ne 0 ]
