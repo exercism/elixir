@@ -33,6 +33,11 @@ defmodule PerfectNumbersTest do
     test "Large abundant number is classified correctly" do
       assert PerfectNumbers.classify(33_550_335) == {:ok, :abundant}
     end
+
+    @tag :pending
+    test "Perfect square abundant number is classified correctly" do
+      assert PerfectNumbers.classify(196) == {:ok, :abundant}
+    end
   end
 
   describe "Deficient numbers" do
