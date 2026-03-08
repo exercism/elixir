@@ -2,7 +2,7 @@ defmodule LineUpTest do
   use ExUnit.Case
 
   # Names are chosen without Unicode characters to keep the exercise simple.
-  # 
+  #
   # The tests are ordered starting with small regular cases and coming to
   # bigger and irregular cases later on.
   # @tag :pending
