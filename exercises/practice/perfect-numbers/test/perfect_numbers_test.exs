@@ -69,13 +69,13 @@ defmodule PerfectNumbersTest do
 
   describe "Invalid inputs" do
     @tag :pending
-    test "Zero is rejected (not a natural number)" do
+    test "Zero is rejected (as it is not a positive integer)" do
       assert PerfectNumbers.classify(0) ==
                {:error, "Classification is only possible for natural numbers."}
     end
 
     @tag :pending
-    test "Negative integer is rejected (not a natural number)" do
+    test "Negative integer is rejected (as it is not a positive integer)" do
       assert PerfectNumbers.classify(-1) ==
                {:error, "Classification is only possible for natural numbers."}
     end
