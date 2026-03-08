@@ -880,8 +880,6 @@
         "name": "Line-up",
         "uuid": "f633a810-0323-496b-a728-e05f560fe393",
         "practices": [
-          "integers",
-          "strings",
           "cond"
         ],
         "prerequisites": [
