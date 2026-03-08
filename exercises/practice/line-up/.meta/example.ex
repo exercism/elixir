@@ -1,6 +1,7 @@
 defmodule LineUp do
   @doc """
-  Formats an ordinal numeral for a given name and number.
+  Formats a full sentence for a given name and position in the line-up,
+  using the correctly suffixed ordinal numeral.
   """
   @spec format(name :: String.t(), number :: pos_integer()) :: String.t()
   def format(name, number) do
