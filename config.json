@@ -877,7 +877,7 @@
       },
       {
         "slug": "line-up",
-        "name": "Line-up",
+        "name": "Line Up",
         "uuid": "f633a810-0323-496b-a728-e05f560fe393",
         "practices": [
           "cond"
@@ -885,7 +885,8 @@
         "prerequisites": [
           "integers",
           "strings",
-          "cond"
+          "cond",
+          "lists"
         ],
         "difficulty": 2
       },
