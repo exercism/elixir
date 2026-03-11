@@ -15,11 +15,18 @@ SLUG="$1"
 echo "Fetching latest version of configlet..."
 ./bin/fetch-configlet
 
+# Fetch the exercise name from problem-specifications
+echo "Fetching exercise name for $SLUG..."
+NAME=$(curl --silent --location "https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/${SLUG}/metadata.toml" | sed -n 's/^title = "\(.*\)"/\1/p')
+if [ -z "$NAME" ]; then
+    NAME="TODO"
+fi
+
 # Preparing config.json
 echo "Adding instructions and configuration files..."
 UUID=$(bin/configlet uuid)
-jq --arg slug "$SLUG" --arg uuid "$UUID" \
-    '.exercises.practice += [{slug: $slug, name: "TODO", uuid: $uuid, practices: [], prerequisites: [], difficulty: 5}]' \
+jq --arg slug "$SLUG" --arg uuid "$UUID" --arg name "$NAME" \
+    '.exercises.practice += [{slug: $slug, name: $name, uuid: $uuid, practices: [], prerequisites: [], difficulty: 5}]' \
     config.json > config.json.tmp
 mv config.json.tmp config.json
 
