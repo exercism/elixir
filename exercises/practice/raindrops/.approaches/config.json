@@ -1,0 +1,27 @@
+{
+  "introduction": {
+    "authors": [
+      "michalporeba"
+    ]
+  },
+  "approaches": [
+    {
+      "uuid": "fbfbabb4-f4e6-4329-b2f5-a93e3199b809",
+      "slug": "check-every-possibility",
+      "title": "Every Possibility",
+      "blurb": "Check every possibility.",
+      "authors": [
+        "michalporeba"
+      ]
+    },
+    {
+      "uuid": "925ccb59-3414-472b-9054-1cdfc5e44fad",
+      "slug": "step-by-step",
+      "title": "Step By Step",
+      "blurb": "Perform the checks one by one, step by step.",
+      "authors": [
+        "michalporeba"
+      ]
+    }
+  ]
+}
