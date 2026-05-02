@@ -6,7 +6,7 @@ defmodule ConnectTest do
   end
 
   # @tag :pending
-  test "empty board has no winner" do
+  test "an empty board has no winner" do
     board =
       remove_spaces([
         ". . . . .",
@@ -20,15 +20,15 @@ defmodule ConnectTest do
   end
 
   @tag :pending
-  test "1x1 board with black stone" do
+  test "X can win on a 1x1 board" do
     board = ["X"]
-    assert Connect.result_for(board) == :black
+    assert Connect.result_for(board) == :X
   end
 
   @tag :pending
-  test "1x1 board with white stone" do
+  test "O can win on a 1x1 board" do
     board = ["O"]
-    assert Connect.result_for(board) == :white
+    assert Connect.result_for(board) == :O
   end
 
   @tag :pending
@@ -73,7 +73,7 @@ defmodule ConnectTest do
   end
 
   @tag :pending
-  test "black wins crossing from left to right" do
+  test "X wins crossing from left to right" do
     board =
       remove_spaces([
         ". O . .",
@@ -83,11 +83,11 @@ defmodule ConnectTest do
         "    . O X ."
       ])
 
-    assert Connect.result_for(board) == :black
+    assert Connect.result_for(board) == :X
   end
 
   @tag :pending
-  test "white wins crossing from top to bottom" do
+  test "O wins crossing from top to bottom" do
     board =
       remove_spaces([
         ". O . .",
@@ -97,11 +97,11 @@ defmodule ConnectTest do
         "    . O X ."
       ])
 
-    assert Connect.result_for(board) == :white
+    assert Connect.result_for(board) == :O
   end
 
   @tag :pending
-  test "black wins using a convoluted path" do
+  test "X wins using a convoluted path" do
     board =
       remove_spaces([
         ". X X . .",
@@ -111,11 +111,11 @@ defmodule ConnectTest do
         "    O O O O O"
       ])
 
-    assert Connect.result_for(board) == :black
+    assert Connect.result_for(board) == :X
   end
 
   @tag :pending
-  test "black wins using a spiral path" do
+  test "X wins using a spiral path" do
     board =
       remove_spaces([
         "O X X X X X X X X",
@@ -129,6 +129,6 @@ defmodule ConnectTest do
         "        X X X X X X X X O"
       ])
 
-    assert Connect.result_for(board) == :black
+    assert Connect.result_for(board) == :X
   end
 end
