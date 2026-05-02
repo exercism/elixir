@@ -87,6 +87,32 @@ defmodule ConnectTest do
   end
 
   @tag :pending
+  test "X wins with left-hand dead end fork" do
+    board =
+      remove_spaces([
+        ". . X .",
+        " X X . .",
+        "  . X X X",
+        "   O O O O"
+      ])
+
+    assert Connect.result_for(board) == :X
+  end
+
+  @tag :pending
+  test "X wins with right-hand dead end fork" do
+    board =
+      remove_spaces([
+        ". . X X",
+        " X X . .",
+        "  . X X .",
+        "   O O O O"
+      ])
+
+    assert Connect.result_for(board) == :X
+  end
+
+  @tag :pending
   test "O wins crossing from top to bottom" do
     board =
       remove_spaces([
