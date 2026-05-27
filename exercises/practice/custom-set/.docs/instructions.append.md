@@ -1,5 +1,5 @@
 # Instructions append
 
-## Track specific instructions
+## Elixir-specific changes
 
 For this exercise please refrain from using the `MapSet` API.
