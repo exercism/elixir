@@ -16,17 +16,18 @@ defmodule RailFenceCipher do
   Decode a given rail fence ciphertext to the corresponding plaintext
   """
   @spec decode(String.t(), pos_integer) :: String.t()
+  def decode("", _), do: ""
   def decode(str, 1), do: str
 
   def decode(str, rails) do
-    0..(String.length(str) - 1)
+    0..(String.length(str) - 1)//1
     |> Enum.to_list()
     |> fill_fence(rails)
     |> extract_original(str)
   end
 
   defp extract_original(fence, str) do
-    0..(String.length(str) - 1)
+    0..(String.length(str) - 1)//1
     |> Enum.map(fn i ->
       String.at(str, Enum.find_index(fence, &(&1 == i)))
     end)
@@ -34,7 +35,8 @@ defmodule RailFenceCipher do
   end
 
   defp fill_fence(list_chars, rails) do
-    rail_zigzag_indexes = Enum.concat(Enum.to_list(0..(rails - 1)), Enum.to_list((rails - 2)..1))
+    rail_zigzag_indexes =
+      Enum.concat(Enum.to_list(0..(rails - 1)//1), Enum.to_list((rails - 2)..1//-1))
 
     create_empty_fence(rails, length(list_chars))
     |> set_chars_to_fence(list_chars, rail_zigzag_indexes)

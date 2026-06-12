@@ -54,6 +54,6 @@ defmodule PigLatin do
   end
 
   defp move_prefix_to_the_end(string, prefix) do
-    String.slice(string, String.length(prefix)..-1) <> prefix
+    String.slice(string, String.length(prefix)..-1//1) <> prefix
   end
 end
