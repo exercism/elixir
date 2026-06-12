@@ -46,7 +46,7 @@ defmodule BeerSongTest do
   describe "lyrics" do
     @tag :pending
     test "first two verses" do
-      assert BeerSong.lyrics(99..98) == """
+      assert BeerSong.lyrics(99..98//-1) == """
              99 bottles of beer on the wall, 99 bottles of beer.
              Take one down and pass it around, 98 bottles of beer on the wall.
 
@@ -57,7 +57,7 @@ defmodule BeerSongTest do
 
     @tag :pending
     test "last three verses" do
-      assert BeerSong.lyrics(2..0) == """
+      assert BeerSong.lyrics(2..0//-1) == """
              2 bottles of beer on the wall, 2 bottles of beer.
              Take one down and pass it around, 1 bottle of beer on the wall.
 
