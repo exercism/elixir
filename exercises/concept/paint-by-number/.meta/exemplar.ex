@@ -30,7 +30,7 @@ defmodule PaintByNumber do
 
     case picture do
       <<>> -> nil
-      <<pixel_color_index::size(palette_bit_size), _::bitstring>> -> pixel_color_index
+      <<pixel_color_index::size(^palette_bit_size), _::bitstring>> -> pixel_color_index
     end
   end
 
@@ -39,7 +39,7 @@ defmodule PaintByNumber do
 
     case picture do
       <<>> -> <<>>
-      <<_::size(palette_bit_size), rest::bitstring>> -> rest
+      <<_::size(^palette_bit_size), rest::bitstring>> -> rest
     end
   end
 

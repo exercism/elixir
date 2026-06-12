@@ -29,7 +29,7 @@ defmodule Transmission do
   @spec get_parity(bitstring()) :: <<_::1>>
   defp get_parity(data) do
     bit_count = bit_size(data)
-    <<value::size(bit_count)>> = data
+    <<value::size(^bit_count)>> = data
 
     parity_int =
       0..(bit_count - 1)
@@ -71,7 +71,7 @@ defmodule Transmission do
 
   defp finalize(data, acc) when bit_size(data) == 7 do
     bits_count = 8 - rem(bit_size(acc), 8)
-    <<head::size(bits_count), _::bitstring>> = data
+    <<head::size(^bits_count), _::bitstring>> = data
     <<acc::bitstring, head::size(bits_count)>>
   end
 end

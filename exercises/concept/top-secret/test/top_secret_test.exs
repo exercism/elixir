@@ -1,13 +1,16 @@
 defmodule TopSecretTest do
   use ExUnit.Case
 
+  # Maintainer notes:
+  # - in Elixir 1.17, `:...` got [] as an argument list, before that it was nil
+  # - in Elixir 1.20, `:__block__` got the line number in the metadata, before that it was empty
+
   describe "to_ast/1" do
     @tag task_id: 1
     test "handles an empty string" do
       string = ""
-      ast = {:__block__, [], []}
 
-      assert TopSecret.to_ast(string) == ast
+      assert {:__block__, _line_1_or_empty_list, []} = TopSecret.to_ast(string)
     end
 
     @tag task_id: 1
@@ -17,14 +20,12 @@ defmodule TopSecretTest do
       y = x - 2
       """
 
-      ast =
-        {:__block__, [],
-         [
-           {:=, [line: 1], [{:x, [line: 1], nil}, 7]},
-           {:=, [line: 2], [{:y, [line: 2], nil}, {:-, [line: 2], [{:x, [line: 2], nil}, 2]}]}
-         ]}
-
-      assert TopSecret.to_ast(string) == ast
+      assert {:__block__, _line_1_or_empty_list,
+              [
+                {:=, [line: 1], [{:x, [line: 1], nil}, 7]},
+                {:=, [line: 2],
+                 [{:y, [line: 2], nil}, {:-, [line: 2], [{:x, [line: 2], nil}, 2]}]}
+              ]} = TopSecret.to_ast(string)
     end
 
     @tag task_id: 1
@@ -45,7 +46,7 @@ defmodule TopSecretTest do
                  [
                    do: {
                      :__block__,
-                     [],
+                     _line_1_or_empty_list,
                      [
                        {:@, [line: 2],
                         [
