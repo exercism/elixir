@@ -26,7 +26,7 @@ FileSniffer.type_from_extension("txt")
 
 ## 2. Given a binary file, return the expected media type
 
-Implement the `type_from_binary/1` function. It should take a file (binary) and return the media type (string) or nil if the extension does not match with the expected ones.
+Implement the `type_from_binary/1` function. It should take a file (binary) and return the media type (string) or nil if the file signature does not match with the expected ones.
 
 ```elixir
 file = File.read!("application.exe")
