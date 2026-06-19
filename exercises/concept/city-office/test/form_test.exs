@@ -76,7 +76,7 @@ defmodule FormTest do
     end
   end
 
-  defmacrop assert_type({module_name, type_name}, expected_type_definition) do
+  defmacrop assert_type({module_name, type_name}, expected_type_definitions) do
     quote do
       {:ok, types} = Code.Typespec.fetch_types(unquote(module_name))
 
@@ -94,15 +94,11 @@ defmodule FormTest do
 
       actual_type_definition = Macro.to_string(type_definition)
 
-      if is_list(unquote(expected_type_definition)) do
-        if actual_type_definition in unquote(expected_type_definition) do
-          assert true
-        else
-          # we know this will fail at this point, but we're using it to provide a nice failure message
-          assert actual_type_definition == hd(unquote(expected_type_definition))
-        end
+      if actual_type_definition in unquote(expected_type_definitions) do
+        assert true
       else
-        assert actual_type_definition == unquote(expected_type_definition)
+        # we know this will fail at this point, but we're using it to provide a nice failure message
+        assert actual_type_definition == hd(unquote(expected_type_definitions))
       end
     end
   end
@@ -231,10 +227,10 @@ defmodule FormTest do
 
     @tag task_id: 5
     test "has a custom 'address_tuple' type with named arguments" do
-      expected_type_definition =
-        "{street :: String.t(), postal_code :: String.t(), city :: String.t()}"
+      expected_type_definitions =
+        ["{street :: String.t(), postal_code :: String.t(), city :: String.t()}"]
 
-      assert_type({Form, :address_tuple}, expected_type_definition)
+      assert_type({Form, :address_tuple}, expected_type_definitions)
     end
 
     @tag task_id: 5

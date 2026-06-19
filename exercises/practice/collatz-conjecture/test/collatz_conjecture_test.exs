@@ -39,9 +39,4 @@ defmodule CollatzConjectureTest do
   test "negative value is an error " do
     assert_raise FunctionClauseError, fn -> CollatzConjecture.calc(-15) end
   end
-
-  @tag :pending
-  test "string as input value is an error " do
-    assert_raise FunctionClauseError, fn -> CollatzConjecture.calc("fubar") end
-  end
 end

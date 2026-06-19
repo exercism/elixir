@@ -42,7 +42,7 @@ defmodule ListOpsTest do
     @tag :pending
     @tag :slow
     test "huge list" do
-      assert L.reverse(Enum.to_list(1..1_000_000)) == Enum.to_list(1_000_000..1)
+      assert L.reverse(Enum.to_list(1..1_000_000)) == Enum.to_list(1_000_000..1//-1)
     end
   end
 
