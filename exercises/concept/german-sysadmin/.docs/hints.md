@@ -21,7 +21,7 @@
 
 ## 3. Substitute German characters
 
-- There is a [special syntax][syntax-reference-code-points] for getting a character's code point. It can be used in guards and it works for non-Latin letters too.
+- There is a [special syntax][syntax-reference-code-points] for getting a character's code point. It can be used in guards and it works for non-ASCII letters too.
 - There is [a built-in function][kernel-concat-list] that allows you to concatenate two lists.
 
 [syntax-reference-code-points]: https://hexdocs.pm/elixir/syntax-reference.html#integers-in-other-bases-and-unicode-code-points

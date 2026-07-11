@@ -2,7 +2,7 @@
 
 You are working as a system administrator for a big company in Munich, Germany. One of your responsibilities is managing email accounts.
 
-You have been hearing complaints from people saying they are unable to write emails to Mr. Müller. You quickly realize that most of the company uses an old email client that doesn't recognize `müller@firma.de` as a valid email address because of the non-Latin character.
+You have been hearing complaints from people saying they are unable to write emails to Mr. Müller. You quickly realize that most of the company uses an old email client that doesn't recognize `müller@firma.de` as a valid email address because of the non-ASCII character.
 
 Telling people to give up their favorite old email client is a lost battle, so you decide to create sanitized aliases for all email accounts.
 
@@ -26,9 +26,9 @@ Username.sanitize(~c"mark_fischer$$$")
 
 ## 3. Substitute German characters
 
-There are 4 non-Latin characters in the German alphabet, and all of them have commonly-recognized Latin substitutes.
+There are 4 non-ASCII characters in the German alphabet, and all of them have commonly-recognized ASCII substitutes.
 
-| German character | Latin substitute |
+| German character | ASCII substitute |
 | ---------------- | ---------------- |
 | ä                | ae               |
 | ö                | oe               |
