@@ -14,7 +14,7 @@ on:
 
 jobs:
   precheck:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     strategy:
       matrix:
         elixir: [1.20.1]
@@ -71,7 +71,7 @@ jobs:
         run: bin/ci-check.sh
 
   ci:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
 
     strategy:
       matrix:
