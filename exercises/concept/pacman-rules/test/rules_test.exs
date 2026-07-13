@@ -52,8 +52,13 @@ defmodule RulesTest do
     end
 
     @tag task_id: 3
-    test "don't lose if not touching a ghost" do
+    test "don't lose if not touching a ghost with a power pellet active" do
       refute Rules.lose?(true, false)
+    end
+
+    @tag task_id: 3
+    test "don't lose if not touching a ghost without a power pellet active" do
+      refute Rules.lose?(false, false)
     end
   end
 
