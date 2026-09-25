@@ -7,7 +7,7 @@ defmodule WineCellar do
     # Please implement the filter/3 function
   end
 
-  # The functions below do not need to be modified.
+  # The functions below should not be modified.
 
   defp filter_by_year(wines, year)
   defp filter_by_year([], _year), do: []
