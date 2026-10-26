@@ -16,6 +16,11 @@ defmodule BobTest do
   end
 
   @tag :pending
+  test "shouting a statement containing a question mark" do
+    assert Bob.hey("DO LIONS EAT PEOPLE? AHHHHH.") == "Whoa, chill out!"
+  end
+
+  @tag :pending
   test "asking a question" do
     assert Bob.hey("Does this cryogenic chamber make me look fat?") == "Sure."
   end
