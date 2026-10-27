@@ -109,13 +109,13 @@ defmodule LanguageListTest do
     end
 
     @tag task_id: 6
-    test "not a functional language list" do
-      refute LanguageList.functional_list?(["Java", "C", "JavaScript"])
+    test "another functional language list" do
+      assert LanguageList.functional_list?(["Elixir", "Lisp", "OCaml"])
     end
 
     @tag task_id: 6
-    test "a list with only Elixir is a functional language list" do
-      assert LanguageList.functional_list?(["Elixir"])
+    test "not a functional language list" do
+      refute LanguageList.functional_list?(["Java", "C", "JavaScript"])
     end
   end
 end
