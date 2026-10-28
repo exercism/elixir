@@ -150,4 +150,14 @@ defmodule SwiftSchedulingTest do
     output = SwiftScheduling.delivery_date(meeting_date, description)
     assert output == expected_output
   end
+
+  @tag :pending
+  test "Q2 starting in the last month of the second quarter translates to the last workday of the second quarter of this year" do
+    meeting_date = ~N[2019-06-15T09:50:00]
+    description = "Q2"
+    expected_output = ~N[2019-06-28T08:00:00]
+
+    output = SwiftScheduling.delivery_date(meeting_date, description)
+    assert output == expected_output
+  end
 end
