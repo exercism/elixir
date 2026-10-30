@@ -14,7 +14,7 @@ Discounts are modeled as fractional numbers representing percentages, for exampl
 
 ## 1. Calculate the daily rate given an hourly rate
 
-Implement a function called `daily_rate` to calculate the daily rate given an hourly rate as a parameter.
+Implement a function called `daily_rate` to calculate the daily rate given an hourly rate as an argument.
 The contract defines that a day has 8 billable hours.
 
 ```elixir
@@ -38,7 +38,7 @@ The returned value should always be a float, not rounded in any way.
 ## 3. Calculate the monthly rate, given an hourly rate and a discount
 
 Implement a `monthly_rate` function to calculate the discounted monthly rate.
-It takes two parameters, an hourly rate and the discount in percent.
+It takes two arguments, an hourly rate and the discount in percent.
 
 ```elixir
 FreelancerRates.monthly_rate(77, 10.5)
