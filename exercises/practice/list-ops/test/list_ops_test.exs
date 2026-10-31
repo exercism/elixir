@@ -30,8 +30,13 @@ defmodule ListOpsTest do
     end
 
     @tag :pending
-    test "normal list" do
+    test "non-empty even-length list" do
       assert L.reverse([1, 3, 5, 7]) == [7, 5, 3, 1]
+    end
+
+    @tag :pending
+    test "non-empty odd-length list" do
+      assert L.reverse([1, 3, 5, 7, 9, 11, 13]) == [13, 11, 9, 7, 5, 3, 1]
     end
 
     @tag :pending
