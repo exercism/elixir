@@ -1,0 +1,13 @@
+def most_common_word(text) do
+  {counts, best} =
+    text
+    |> String.downcase()
+    |> String.split(" ")
+    |> Enum.reduce({%{}, ""}, fn word, {counts, best} ->
+      counts = Map.update(counts, word, 1, &(&1 + 1))
+      best = if counts[word] > Map.get(counts, best, 0), do: word, else: best
+      {counts, best}
+    end)
+
+  "\"#{best}\" appears #{counts[best]} times"
+end
