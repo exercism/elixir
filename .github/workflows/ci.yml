@@ -121,3 +121,19 @@ jobs:
 
       - name: Run Checks
         run: bin/ci.sh
+
+  all_checks_passing:
+    name: All checks passing
+    needs: [precheck, ci]
+    if: always()
+    runs-on: ubuntu-26.04
+    steps:
+      - name: Check that every Elixir version passed
+        env:
+          PRECHECK_RESULT: ${{ needs.precheck.result }}
+          CI_RESULT: ${{ needs.ci.result }}
+        run: |
+          if [[ "$PRECHECK_RESULT" != "success" || "$CI_RESULT" != "success" ]]; then
+            echo "The exercise tests failed on at least one Elixir version."
+            exit 1
+          fi
