@@ -7,5 +7,5 @@
 checks:
   - configlet / configlet
   - i18n / completeness
-  - Tests
+  - All checks passing
   - Validate required checks
