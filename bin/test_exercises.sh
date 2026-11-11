@@ -80,7 +80,7 @@ do
       mv .meta/example.ex lib/solution.ex
     fi
 
-    # test compilation with --warnings-as-errors flag as the example and test should not raise any
+    # test compilation with --warnings-as-errors flag as the example should not raise any
     set +e
     compiler_results=$(MIX_ENV=test mix compile --force --warnings-as-errors 2>&1)
     compile_exit_code="$?"
@@ -98,7 +98,9 @@ do
 
       # perform unit tests
       set +e
-      test_results=$(mix test --color --no-elixir-version-check --include pending 2> /dev/null)
+      # the earlier mix compile did not catch warnings in *_test.exs files,
+      # so we also run tests with `--warnings-as-errors`
+      test_results=$(mix test --warnings-as-errors --color --no-elixir-version-check --include pending 2>&1)
       test_exit_code="$?"
       set -e
     else
